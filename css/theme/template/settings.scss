@@ -1,60 +1,39 @@
-// Base settings for all themes that can optionally be 
+// Base settings for all themes that can optionally be
 // overridden by the super-theme
 
-// Include theme-specific fonts
-@font-face {
-  font-family: "Lato";
-  src: local("Lato"), url("fonts/Lato/Lato-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato-Regular";
-  src: local("Lato-Regular"), url("fonts/Lato/Lato-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato-Italic";
-  src: local("Lato-Italic"), url("fonts/Lato/Lato-MediumItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Lato-Bold";
-  src: local("Lato-Bold"), url("fonts/Lato/Lato-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: bold; }
-
-@font-face {
-  font-family: "Lato-Black";
-  src: local("Lato-Black"), url("fonts/Lato/Lato-Black.ttf") format("truetype");
-  font-weight: bold;
-  font-style: bold; }
-
 // Background of the presentation
-$backgroundColor: #666b8f;
+$backgroundColor: #2b2b2b;
 
 // Primary/body text
-$mainFont: 'Lato', 'Helvetica', Arial, sans-serif;
+$mainFont: 'Lato', sans-serif;
 $mainFontSize: 36px;
-$mainColor: #fff;
+$mainColor: #eee;
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
 
 // Headings
-$headingFont: 'Lato-Bold', Impact, sans-serif;
-$headingColor: #fff;
-$headingLineHeight: 0.9em;
-$headingLetterSpacing: 0.02em;
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'League Gothic', Impact, sans-serif;
+$headingColor: #eee;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
-$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$headingTextShadow: none;
+$headingFontWeight: normal;
 $heading1TextShadow: $headingTextShadow;
 
+$heading1Size: 3.77em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
+
 // Links and actions
-$linkColor: #F05B62;
+$linkColor: #13DAEC;
 $linkColorHover: lighten( $linkColor, 20% );
 
 // Text selection
-$selectionBackgroundColor: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #FF5E99;
 $selectionColor: #fff;
 
 // Generates the presentation background, can be overridden
