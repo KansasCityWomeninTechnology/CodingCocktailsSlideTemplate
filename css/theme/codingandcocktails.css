@@ -32,19 +32,19 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #666b8f;
-  background: -moz-radial-gradient(center, circle cover, #8e92ac 0%, #666b8f 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #8e92ac), color-stop(100%, #666b8f));
-  background: -webkit-radial-gradient(center, circle cover, #8e92ac 0%, #666b8f 100%);
-  background: -o-radial-gradient(center, circle cover, #8e92ac 0%, #666b8f 100%);
-  background: -ms-radial-gradient(center, circle cover, #8e92ac 0%, #666b8f 100%);
-  background: radial-gradient(center, circle cover, #8e92ac 0%, #666b8f 100%);
+  background: #484e78;
+  background: -moz-radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #8388af), color-stop(100%, #484e78));
+  background: -webkit-radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
+  background: -o-radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
+  background: -ms-radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
+  background: radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
 }
 
 .reveal {
   font-family: "Lato", "Helvetica", Arial, sans-serif;
-  font-size: 36px;
-  font-weight: 200;
+  font-size: 48px;
+  font-weight: 800;
   letter-spacing: -0.02em;
   color: #ffffff; }
 
@@ -77,17 +77,17 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #484e78;
+  color: #d0c675;
   text-decoration: none; }
 
 .reveal a:not(.image):hover {
-  color: #484e78;
+  color: #beb66d;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #01a9b4; }
+  background: #9d81a2; }
 
 /*********************************************
  * IMAGES
@@ -98,14 +98,14 @@ body {
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
-  transition: all .2s linear; 
+  transition: all .2s linear;
   max-width: 100%;
   max-height: 100%;
 }
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #01a9b4;
+  border-color: #9d81a2;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -113,31 +113,31 @@ body {
  *********************************************/
 .reveal .controls button.navigate-left,
 .reveal .controls button.navigate-left.enabled {
-  border-right-color: #01a9b4; }
+  border-right-color: #9d81a2; }
 
 .reveal .controls button.navigate-right,
 .reveal .controls button.navigate-right.enabled {
-  border-left-color: #01a9b4; }
+  border-left-color: #9d81a2; }
 
 .reveal .controls button.navigate-up,
 .reveal .controls button.navigate-up.enabled {
-  border-bottom-color: #01a9b4; }
+  border-bottom-color: #9d81a2; }
 
 .reveal .controls button.navigate-down,
 .reveal .controls button.navigate-down.enabled {
-  border-top-color: #01a9b4; }
+  border-top-color: #9d81a2; }
 
 .reveal .controls button.navigate-left.enabled:hover {
-  border-right-color: #f9b8bb; }
+  border-right-color: #ba99c0; }
 
 .reveal .controls button.navigate-right.enabled:hover {
-  border-left-color: #f9b8bb; }
+  border-left-color: #ba99c0; }
 
 .reveal .controls button.navigate-up.enabled:hover {
-  border-bottom-color: #f9b8bb; }
+  border-bottom-color: #ba99c0; }
 
 .reveal .controls button.navigate-down.enabled:hover {
-  border-top-color: #f9b8bb; }
+  border-top-color: #ba99c0; }
 
 /*********************************************
  * PROGRESS BAR
@@ -146,7 +146,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #01a9b4;
+  background: #9d81a2;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
