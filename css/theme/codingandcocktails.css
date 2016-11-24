@@ -1,30 +1,12 @@
 @font-face {
   font-family: "Lato";
-  src: local("Lato"), url("fonts/Lato/Lato-Light.ttf") format("truetype");
+  src: local("Lato"), url("fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-
-@font-face {
-  font-family: "Lato-Regular";
-  src: local("Lato-Regular"), url("fonts/Lato/Lato-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lato-Italic";
-  src: local("Lato-Italic"), url("fonts/Lato/Lato-MediumItalic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic; }
 
 @font-face {
   font-family: "Lato-Bold";
   src: local("Lato-Bold"), url("fonts/Lato/Lato-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: bold; }
-
-@font-face {
-  font-family: "Lato-Black";
-  src: local("Lato-Black"), url("fonts/Lato/Lato-Black.ttf") format("truetype");
   font-weight: bold;
   font-style: bold; }
 
@@ -44,7 +26,7 @@ body {
 .reveal {
   font-family: "Lato", "Helvetica", Arial, sans-serif;
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.02em;
   color: #ffffff; }
 
@@ -160,6 +142,10 @@ reveal ol, .reveal dl, .reveal ul {
     display: inline-block;
     text-align: left;
     margin: 0 0 0 1em;
+}
+
+.reveal li {
+    margin: 0 0 8px 0;
 }
 
 /*********************************************
