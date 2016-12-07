@@ -1,0 +1,482 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Month - TOPIC - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="TOPIC - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="coding-and-cocktails">
+          <div style="position: absolute;left: 0px; top:0px;">
+            <font style="font-size: 0.6em">
+              <a href="../">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                Back
+              </a>
+            </font>
+          </div>
+                    <img src="images/logo-large.png" alt="Coding &amp; Cocktails" />
+                </section>
+                <section id="architecture">
+                    <h3>Front-End Architecture</h3>
+                    <img src="images/logo.png" alt="Coding &amp; Cocktails" />
+                    <p>Slides available at:
+                        <!-- update links to point to slides and display bitly link -->
+                        <a href="http://bit.ly/CnCArch" target="_blank">http://bit.ly/CnCArch</a>
+                    </p>
+                </section>
+                <section id="kcwit">
+                    <h3>Powered By:</h3>
+                    <a href="http://kcwomenintech.org/" target="_blank"><img src="images/09-sep/kcwit_logo_white.png" alt="Kansas City Women in Technology logo"></a>
+                    <aside class="notes" data-markdown>
+                        - KCWiT is an organization with a goal of increasing the number of women in technology careers in the Kansas City area.
+                        - We aim to do that through several different monthly programs that include:
+                        - CoderDojo: A program for girls and boys in grades K - 12 to learn programming starting with a drag and drop programming language called scratch.
+                        - Coding and Cupcakes: A program for mother-daughter pairs to work together to develop a cupcake website.
+                        - Coding and Cocktails: You’re all here tonight and we’re hoping to introduce you to front-end development concepts over the course of a year.  We chose front-end development because it is an in-demand skillset and is very visual so you can see what you’re building and working on easier.
+                        - TechTalks: A monthly program to bring all the women in tech in KC together to network & socialize.   The next TechTalk is scheduled for Wednesday September 21st at the Plaza Colonade Building where we’ll hear about Effective Communication from Lauren Schieffer.
+                    </aside>
+                </section>
+                <section>
+                    <h3>Our Hosts</h3>
+                    <h2>The Nerdery</h2>
+                    <a href="https://nerdery.com/" target="_blank"><img src="images/Nerdery-logo.png" alt="The Nerdery Logo"></a>
+                </section>
+                <section id="mentors">
+                    <h3>Mentors</h3>
+                    <img src="images/09-sep/mentor.jpg" alt="Women Mentoring" style="height: 80%; width: 80%; margin-bottom: 0;">
+                    <p class="right-align" style="font-size: .3em; margin-top: 0; margin-right: 10%;" ><a href="http://www.wocintechchat.com/">Photo by #WOCinTech Chat</a></p>
+                </section>
+                <section id="objectives">
+                    <h2>What we'll cover</h2>
+                    <ul>
+                        <li>What is Front-End Architecture?</li>
+                        <li>The Structure</li>
+                        <li>Misc Stuff That's Important for Good Architecture </li>
+                        <li>Yeoman</li>
+                    </ul>
+                    <aside class="notes">
+                        Any presentation notes go here
+                    </aside>
+                </section>
+                <section id="slides">
+                    <section>
+                        <h2>Introduction to Front-End Architecture</h2>
+                    </section>
+                    <section>
+                        <h3>What is Front-End Architecture?</h3>
+                        <ul>
+                            <li class="fragment">Good architecture is a fundamental step in building a house. The same applies to applications/websites. Just as the structure for a house varies from the structure of a baseball stadium, different applications/websites can require different structure. </li>
+                            <li class="fragment">Where files &amp; assets go (how they’re organized)</li>
+                        </ul>
+                         <aside class="notes" data-markdown>
+                                - Good architecture is a fundamental step in building a house.
+                                - Same applies to applications/websites. Just as the structure for a house varies from the structure of a baseball stadium, different applications/websites can require different structure.
+                                - We’ll cover basics that can be reused for most of your projects -- and of course you can customize as your project requires.
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Modularity</h3>
+                        <ul>
+                            <li class="fragment">Single Responsibility Principle
+                                <ul>
+                                    <li>Certain sections of code should only be in charge of a single functionality</li>
+                                    <li>Resuseable Code (DRY - Don't Repeat Yourself!)</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Sounds great in theory, but why does it really matter?
+                                <ul>
+                                    <li>Fewer bugs by design</li>
+                                    <li>When there are bugs, they're easier to find, and to fix</li>
+                                    <li>End result? Happy programmers and happy clients</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <aside class="notes" data-markdown>
+                            - Single responsibility principle - a term that is used in all aspects of code, from changing colors of links in CSS to making a footer that appears on every page.
+                            - Using navigation bar on every page
+                            - Why? Copying and Pasting is bad! DRY code!
+                            - Think of the future. Legacy code gets gross quickly
+                    </section>
+                    <section>
+                        <h2>The Structure</h2>
+                        <h3>App Directory</h3>
+                            <ul>
+                                <li class="fragment">Houses your application’s html/css/js code.</li>
+                                    <ul class="fragment">
+                                        <li>Index.html</li>
+                                        <li>Assets</li>
+                                        <li>Dist</li>
+                                    </ul>
+                                <li class="fragment">Unminified, unoptimized, for development</li>
+                            </ul>
+                            <aside class="notes" data-markdown>
+                                    - Remind them that the exact structure will vary based on project.
+                                    -What we’ll cover tonight are basics that can be reused and that apply to our project tonight.
+                                    -`app` is very common name used here.
+                                        -Houses your application’s html/css/js code.
+                                        -Unminified, unoptimized, for development.
+                            </aside>
+                    </section>
+                    <section>
+                        <h2>Index.html</h2>
+                        <ul>
+                            <li class="fragment">The most important page for your site - the Home Page</li>
+                            <li class="fragment">What gets served (without /index.html appended to the end of the url). </li>
+                            <li class="fragment">When you view www.amazon.com, you're viewing amazon.com's index.html file, for example.</li>
+                        </ul>
+                        <aside class="notes" data-markdown>
+                            -Most important single file in the system - may be the only full file in Single Page Apps (covering next week). Can still have partial files</li>
+                            -So in root `app` directory, this is your homepage -- served by server without explicitly adding index.html to URL
+                            - The presentation you’re viewing now -- look at the URL. It doesn’t have index.html but in it, but it’s serving the index.html file to the browser.
+                        </aside>
+                    </section>
+                    </section>
+                    <section>
+                        <h2>Assets</h2>
+                        <ul>
+                            <li>Images</li>
+                            <li>Styles</li>
+                            <li>Scripts</li>
+                            <li>Fonts</li>
+                            <li>Views</li>
+                        </ul>
+                        <aside class="notes">
+                            - Everything varies based on Framework
+                            - Be consistent!
+                            - Remove folders if you don't need them! (Fonts, for example)
+                        </aside>
+                    </section>
+                    <section>
+                            <section>
+                                <h2>Images</h2>
+                                <ul>
+                                    <li>.png or .jpg files</li>
+                                    <li>Can be called <span style="background: #3f3f3f; font-family: Inconsolata;">imgs/</span> or <span style="background: #3f3f3f; font-family: Inconsolata;">images/09-sep/</span></li>
+                                    <li>Can organize it even further into <span style="background: #3f3f3f; font-family: Inconsolata;">images/09-sep/apps</span> or <span style="background: #3f3f3f; font-family: Inconsolata;">images/09-sep/mobile</span> </li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h2>Styles</h2>
+                                <ul>
+                                    <li><span style="background: #3f3f3f; font-family: Inconsolata;">.css</span> files</li>
+                                    <li>Other names: <span style="background: #3f3f3f; font-family: Inconsolata;">`css/`, `scss/`, `style/`, etc.</span></li>
+                                    <li>Can organize further into variables, mixins, app name</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h2>Scripts</h2>
+                                <ul>
+                                    <li><span style="background: #3f3f3f; font-family: Inconsolata;">.js</span> files</li>
+                                    <li>Other names: <span style="background: #3f3f3f; font-family: Inconsolata;">`js/`, `javascript/`, `script/`, etc.</span> </li>
+                                    <li>Can have subfolders for "libraries", like jQuery, Bootstrap, FontAwesome</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h2>Fonts</h2>
+                                <ul>
+                                    <li><span style="background: #3f3f3f; font-family: Inconsolata;">.otf, .ttf</span> files</li>
+                                    <li>May not need this, Google Fonts is so popular and you don't have to host it yourself.</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h2>Views</h2>
+                                <ul>
+                                    <li>Partial <span style="background: #3f3f3f; font-family: Inconsolata;">.html</span> files</li>
+                                    <li>Could be called templates, reusable pieces of code (nav, footer)</li>
+                                </ul>
+                            </section>
+                    </section>
+                    <section>
+                        <h2>Coding Break!</h2>
+                        <h3>Grab another drink, and begin Part I of your worksheet.</h3>
+                    </section>
+                    <section>
+                        <h2>Dist</h2>
+                        <ul>
+                            <li class="fragment">Short for "distribution"</li>
+                            <li class="fragment">Production-ready</li>
+                            <li class="fragment">Files are made to load quickly - they're minified
+                                <ul>
+                                    <li class="fragment">Removes spaces, replaces human-created function names to shorter names. <span style="background: #3f3f3f; font-family: Inconsolata;">getDrink()</span> -> <span style="background: #3f3f3f; font-family: Inconsolata;">x()</span></li>
+                                    <li class="fragment">Not very human readable, but are read quickly by the browser for better performance</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Can be manually created, but usually developers use a tool like Gulp to automate the process.</li>
+                        </ul>
+                        <aside class="notes" data-markdown>
+                            - App is where development goes, Dist is for production-ready files
+                            - Editing these would be a pain since they're not human-friendly
+                            - Better performance
+                            - Won't edit these, likely generated by a build-process such as Gulp
+                            - Run a command in your terminal, depending on which build process you're using, and it does it for you!
+                            - Files are minified for better performance
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>In dist, you have...</h2>
+                        <ul>
+                            <li class="fragment">index.html (dist/index.html)</li>
+                            <li class="fragment">Assets
+                            </li>
+                            <li class="fragment">Views</li>
+                        </ul>
+                        <aside class="notes" data-markdown>
+                            - Index.html will look a lot like your development version but maybe some spaces removed
+                            - Don't edit this file! It will be overwritten when you run your build process. - Always edit the one in your apps directory
+                            - Assets - minified and browser ready.
+                            - Browser can't read SASS or Coffeescript.
+                            - Can vary depending on what you're using. May create full html files by combining your partials
+                        </aside>
+                    </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Architecture is Flexible</h3>
+                    <p>While the basic pieces/ideas are the same, architecture may vary based on:</p>
+                    <ul>
+                        <li class="fragment"><strong>Individual/Team Preferences</strong>
+                            <ul>
+                                <li>Directory naming: <span style="background: #3f3f3f; font-family: Inconsolata;">imgs</span> vs. <span style="background: #3f3f3f; font-family: Inconsolata;">images</span></li>
+                                <li>Organized by section of site or type of asset?
+                                    <ul>
+                                        <li>Probably both, but in what order? <span style="background: #3f3f3f; font-family: Inconsolata;">app/about/css</span> vs. <span style="background: #3f3f3f; font-family: Inconsolata;">app/css/about</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <aside class="notes" data-markdown>
+                        - It doesn't matter what you choose, as long as it's consistent
+                        - Decide, write it down somewhere, and stick with it.
+                    </aside>
+                </section>
+                <section>
+                    <ul>
+                        <li class="fragment"><strong>Project Requirements</strong>
+                            <ul>
+                                <li><strong>Responsiveness</strong> - Supporting mobile &amp; desktop? Other devices?</li>
+                            </ul>
+                        </li>
+                        <li class="fragment"><strong>Tools / Build Process</strong>
+                            <ul>
+                                <li><strong>Preprocessors</strong> (like Sass/Less for CSS) - Use <span style="background: #3f3f3f; font-family: Inconsolata;">scss</span> folder instead of <span style="background: #3f3f3f; font-family: Inconsolata;">css</span></li>
+                                <li><strong>Frameworks</strong> - You’ll want a file structure to complement that framework - i.e. Wordpress has its own style guide and rules to follow</li>
+                            <ul>
+                        </li>
+                    </ul>
+                    <aside class="notes" data-markdown>
+                        - Responsive design - making your web page change to make your website look good on all screensizes and devices
+                        - For responsive, may want images/09-sep/mobile, images/09-sep/desktop separate directories
+                        - Frameworks - you have to follow their structures or else your site may not compile
+                    </aside>
+                </section>
+                <section>
+                    <img src="images/09-sep/wordpress-structure-example.jpg" alt="Example wordpress structure">
+                    <span class="attribution">Screenshot from: <a href="https://wordpress.org/themes/twentysixteen/">the Twenty Sixteen Wordpress Theme</a></span>
+                    <aside class="notes" data-markdown>
+                        - >Wordpress - May notice "style.css" and "screenshot.png" are not where you'd expect.
+                        - These are special files in Wordpress. Screenshot will be the thumbnail when people search or use your theme.
+                        - Style.css is used for every page. May seem overwhelming, but these things are all documented for you when you start using a framework.
+                    </aside>
+                </section>
+            </section>
+            <section>
+                <h2>Other things important for good architecture</h2>
+                <ul>
+                    <li>Documentation</li>
+                    <li>Naming Conventions</li>
+                    <li>Build tools</li>
+                </ul>
+                <aside class="notes" data-markdown>
+                    - Documentation - Helps developers who are new to the project hit the ground running. What's the project about? What are the naming conventions?
+                    - Naming conventions - will you name your pages "blog.html" or "blog-page.html"?
+                    - Things seem insignificant when you first start a project, but once you have a 30 different folders that are all named differently a year down the road, it will cause a lot of confusion
+                    - Build tools - Help simplify and automate the process.>
+                </aside>
+            </section>
+            <section id="slides">
+                <section>
+                    <h3>Setting up your project wearing you out?</h3>
+                    <img src="images/09-sep/yeoman.png" class="yeoman fragment"/>
+                    <h2 class="fragment">Yeoman is here to help!</h2>
+                    </section>
+                <section>
+                    <h2>What is Yeoman?</h2>
+                    <ul>
+                        <li class="fragment">Tool that sets up your project's file stucture</li>
+                        <li class="fragment">Can be used with a variety of languages using generators to create scaffolding</li>
+                        <li class="fragment">Scaffolding is the structure of your project. Differs depending on languages used and requirements of project.</li>
+                        <li class="fragment">Install via NPM <pre><code>npm install -g yo</code></pre></li>
+                        <li class="fragment">Give commands to Yeoman using Yo in the CLI</li>
+                    </ul>
+                    <aside class="notes" data-markdown>
+                        - Yeoman is like a personal assistant. It'll do the boring tasks such as setting up folders and preprocessors for you. But like any good assistant, it'll need exact information in order to properly complete it's task. That's where generators come in.
+                        - Generators are different project structures, called scaffolding, in a variety of lanuages created by other developers. There are currently over 4,000 different generators in the Yeoman to choose from. You can even create your own!
+                        - Yeoman is an npm install, which means that node and npm need to be downloaded on your computer in order to use Yeoman.
+                        - We talked about npm last month, but if you missed it, you can review the presentation at the coding and cocktails website.
+                        - Start working with Yeoman using the yo command in your command line.
+                    </aside>
+                </section>
+                <section>
+                    <h2>Setup Yeoman project using Fountain Webapp Generator</h2>
+                    <video width="800" height="500" controls>
+                        <source src="images/09-sep/yeoman-v2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <aside class="notes">
+                        - Since we are going to be creating a web app, we'll be making our new project using the generator called Fountain Webapp. Each generator comes with it's own features depending on the langauage. We'll talk about Fountain Webapp's features in the next slider.
+                    </aside>
+                </section>
+                <section>
+                    <h2>Fountain Webapp Features</h2>
+                    <ul>
+                        <li class="fragment">Creates file structure for project</li>
+                        <li class="fragment">CSS autoprefixing</li>
+                        <li class="fragment">Compiles SASS</li>
+                        <li class="fragment">Lints scripts</li>
+                        <li class="fragment">Live Reload of project</li>
+                        <li class="fragment">Image Optimization</li>
+                        <li class="fragment">And much more!</li>
+                    </ul>
+                    <aside class="notes" data-markdown>
+                        - Our generator does a lot of cool things for us. As you go through your new project, you'll see that the file structure Sara talked about has been created for us.
+                        - Also, if you are using cool CSS3 functionalities like transitions and animations, webapp will automatically add the prefixes needed to make them work with all browsers.
+                        - It will also compile your SASS file. SASS is a CSS preprocessor that allows developers to use variables and logic in their css. By compiling your SASS automatically, it makes those css variables and logic readable to the browser.
+                        - Javascript not working? Webapp will lint your script, showing you the exact line where the problem is occuring and providing tips on best practices.
+                        - As part of our project, a tool called Gulp has been installed. By running the gulp server, it will automatically reload your project each time you make a change to the css. You'll no longer have to press the reload button to see your changes. Gulp also helps with image optimization and css minifying, which will help your webite load super fast and create a great experience for visitors.
+                        - There are many other things that Gulp can do so feel free to check out the website to learn more!
+                    </aside>
+                </section>
+                <section>
+                    <h2>Helpful commands</h2>
+                    <ul>
+                        <li class="fragment"> To turn on server and view project</li>
+                        <pre class="fragment"><code>npm run serve</pre></code>
+                        <li class="fragment">Compiles and optomizes files to make production ready</li>
+                        <pre class="fragment"><code>npm run build</pre></code>
+                        <li class="fragment">Preview production files</li>
+                        <pre class="fragment"><code>npm run serve:dist</pre></code>
+                        <li class="fragment">For help using Yeoman</li>
+                        <pre class="fragment"><code>yo help</pre></code>
+                        <li class="fragment">For help using generator</li>
+                        <pre class="fragment"><code>yo [generator name] --help</pre></code>
+                        <li class="fragment">Running into errors with yo commands? </li>
+                        <pre class="fragment"><code>yo doctor</pre></code>
+                    </ul>
+                    <aside class="notes" data-markdown>
+                        - To see the project you are working on, you'll need to run npm run serve. This is a server that will be running in the background while you are making changes to the project and updating the files that you are changing accordingly.
+                        - Once you are ready to push your new site live, the npm run build command will use the css you've added and minify it into a smaller file that is difficult to humans to read but allows the browser to run the file faster.
+                        - Sometimes things go wrong during the minification process, which is why you should run the npm run serve:dist command. This command will show you how your site will look when it is live using the minified files.
+                        - If you need help with Yeoman or the generator you can run the command yo help or yo and the name of your generator.
+                        - If you are using yeoman and running into errors you don't understand, you can run yo doctor and that command will troubleshoot issues for you and give you recommendations on how to solve it, such as updating npm or updating yeoman.
+                    </aside>
+                </section>
+                <section data-background="images/09-sep/hurray.gif">
+                </section>
+            </section>
+            <section>
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li>Front-End Architecture</li>
+                    <ul>
+                        <li><a href="https://www.sitepoint.com/good-front-end-architecture/" target="_blank">Sitepoint - Good Front End Architecture</a></li>
+                    </ul>
+                    <li><a href="http://yeoman.io/" target="_blank">Yeoman official site</a></li>
+                    <ul>
+                        <li><a href="http://yeoman.io/authoring/" target="_blank">Create your own generator</a></li>
+                        <li><a href="https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps" target="_blank">Tutorial on creating generators</a></li>
+                    </ul>
+                    <li><a href="http://gulpjs.com/" target="_blank">Gulp official site</a></li>
+                    <ul>
+                        <li><a href="https://css-tricks.com/gulp-for-beginners/" target="_blank">Gulp Beginner Tutorial</a></li>
+                        <li><a href="https://github.com/gulpjs/gulp/tree/master/docs/recipes#recipes" target="_blank">Gulp Recipes</a></li>
+                    </ul>
+                </ul>
+            </section>
+                <section id="review">
+                    <h2>What did we learn?</h2>
+                    <ul>
+                        <li class="fragment">What front end architecture is</li>
+                        <li class="fragment">Recommendations for creating a solid front end architecture</li>
+                        <li class="fragment">Automating your project setup using Yeoman</li>
+                    </ul>
+                </section>
+                <section id="questions">
+                  <h2>Questions?</h2>
+                  <div style = "font-size:1200%; height:100%;" class ="blue">?
+                    <div class ="clear"></div></div>
+                </section>
+                <section id="contact">
+                    <h2>Thank You!</h2>
+                    <h4>Keep in touch!</h4>
+                    <div>
+                        <a style="font-size: 1.2em; font-weight: bold; margin: 15px;" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-twitter fa-lg"></i><a style="font-size: 1.2em; font-weight: bold;" href="https://twitter.com/codecocktailskc" target="_blank">&nbsp;&nbsp;@codecocktailskc</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-facebook fa-lg"></i><a style="font-size: 1.2em; font-weight: bold;" href="https://www.facebook.com/codingandcocktailsKC" target="_blank">&nbsp;&nbsp;facebook.com/codingandcocktailsKC</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-slack fa-lg"></i><a style="font-size: 1.2em; font-weight: bold;" href="https://kcwit.slack.com/" target="_blank">&nbsp;&nbsp;kcwit.slack.com</a>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <p style="font-size: 1.2em; display: inline-block; margin: 10px;">#LadyDevs</h3>
+                        <p style="font-size: 1.2em; display: inline-block; margin: 10px;">#KCWiT</p>
+                        <p style="font-size: 1.2em; display: inline-block; margin: 10px;">#CodingAndCocktailsKC</p>
+                    </div>
+                    <h3 style="margin-top: 20px;"><a href="http://www.eventbrite.com/e/coding-cocktails-october-tickets-21576728576?aff=presentation">Click here to join us next month!</a></h3>
+          </section>
+        </div>
+      </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
