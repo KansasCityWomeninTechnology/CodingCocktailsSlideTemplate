@@ -194,13 +194,31 @@ reveal ol, .reveal dl, .reveal ul {
 /*********************************************
 SNIPPETS
 **********************************************/
+
 .reveal pre {
+	display: block;
+	position: relative;
+	width: 90%;
   margin: 5px 0;
+
+	text-align: left;
+	font-size: 0.55em;
+	font-family: monospace;
+	line-height: 1.2em;
+
+	word-wrap: break-word;
+}
+.reveal pre code {
+  box-shadow: 1px 0px 1px 1px rgba(0,0,0,0.3);
+  background-color: #262626;
+  padding: 10px;
+  text-align: left
 }
 
 .reveal code {
-  padding: 10px;
-  text-align: left
+	font-family: monospace;
+	overflow: auto;
+	max-height: 400px;
 }
 
 /*********************************************
