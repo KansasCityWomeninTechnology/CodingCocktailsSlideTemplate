@@ -36,7 +36,8 @@ body {
   text-shadow: none; }
 
 .reveal p {
-  font-size: 80%; }
+  font-size: 80%;
+  margin: 0 0 8px 0; }
 
 /*********************************************
  * HEADERS
