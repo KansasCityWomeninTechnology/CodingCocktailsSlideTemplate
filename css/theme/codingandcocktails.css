@@ -183,10 +183,12 @@ reveal ol, .reveal dl, .reveal ul {
     display: inline-block;
     text-align: left;
     margin: 0 0 0 1em;
+    list-style: none;
 }
 
 .reveal li {
     margin: 0 0 8px 0;
+    text-align: left;
 }
 
 /*********************************************
