@@ -24,14 +24,6 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/reveal.css"/>
     <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
   </head>
   <body>
     <div class="reveal">
@@ -159,32 +151,42 @@
           <br>
           <p class="fragment">
             Open/Close tags
+            <code>&lt;div&gt;&lt;/div&gt;</code>
           </p>
           <br>
           <p class="fragment">
-            Self-Closing tags
+            Self-Closing tags<br>
+            <!-- <pre> -->
+              <code>&lt;img src="http://heygirl.io/img/gosling-horiz-10.gif" alt="Hey Girl" /&gt;</code>
+            <!-- </pre> -->
           </p>
+
+        </section>
+        <section>
+          <br>
+          <img src="http://heygirl.io/img/gosling-horiz-10.gif" alt="Hey Girl" height="100%" width="100%" />
+          <p>Hey girl</p>
+        </section>
+        <section>
+          <img src="images/01-jan/lyndsey-scott.png" alt="Lyndsey Scott" height="80%" width="80%" />
+          <p>Lyndsey Scott</p>
+        </section>
+        <section>
+          <img src="images/01-jan/code-made-cool.jpg" alt="Code Made Cool" height="90%" />
         </section>
         <section>
           <h1>HTML Syntax</h1>
           <br>
-          <p class="fragment">
+          <p class="fragment" data-fragment-index="0">
             Every HTML page requires 4 tags:
           </p>
-          <br>
-          <pre><code class="hljs">&lt;!DOCTYPE html&gt;</code></pre>
-          <br>
-          <p class="fragment">
-            <code class="xml"><html></code>
-          </p>
-          <br>
-          <p class="fragment">
-            <code class="xml"><head></code>
-          </p>
-          <br>
-          <p class="fragment">
-            <code class="xml"><body></code>
-          </p>
+            <code class="fragment" data-fragment-index="1">&lt;!DOCTYPE html&gt;
+              <div class="fragment" data-fragment-index="2">&lt;html&gt;</div>
+                <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt;</div>
+                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&lt;body&gt;...&lt;/body&gt;</div>
+              <div class="fragment" data-fragment-index="2">&lt;/html&gt;</div>
+            </code>
+          </pre>
         </section>
         <section>
           <h2>Questions?</h2>
