@@ -1,0 +1,1036 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Month - TOPIC - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="TOPIC - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section id="coding-and-cocktails">
+          <div style="position: absolute;left: 0px; top:0px;">
+            <font style="font-size: 0.6em">
+              <a href="../">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                Back
+              </a>
+            </font>
+          </div>
+                    <img src="images/logo-large.png" alt="Coding &amp; Cocktails" />
+                </section>
+                <section id="intro-npm-bower">
+                    <h3>Introduction to NPM &amp; Bower</h3>
+                    <img src="images/logo.png" alt="Coding &amp; Cocktails" />
+                    <p>Slides available at:
+                        <a href="http://kansascitywomenintechnology.github.io/npmAndBower" target="_blank">http://bit.ly/npmBower</a>
+                    </p>
+                </section>
+                <section id="kcwit">
+                    <h3>Powered By:</h3>
+                    <a href="http://kcwomenintech.org/" target="_blank"><img src="images/08-aug/kcwit_logo_white.png" alt="Kansas City Women in Technology logo"></a>
+                </section>
+                <section>
+                    <h3>Our Hosts</h3>
+                    <h2>The Nerdery</h2>
+                    <a href="https://nerdery.com/" target="_blank"><img src="images/Nerdery-logo.png" alt="The Nerdery Logo"></a>
+                </section>
+                <section id="mentors">
+                    <h3>Mentors</h3>
+                    <img src="images/08-aug/mentor.jpg" alt="Women Mentoring" style="height: 80%; width: 80%; margin-bottom: 0;">
+                    <p class="right-align" style="font-size: .3em; margin-top: 0; margin-right: 10%;" ><a href="http://www.wocintechchat.com/">Photo by #WOCinTech Chat</a></p>
+                </section>
+                <section id="last-month">
+                    <h2>Last Month - Programming Fundamentals</h2>
+                    <ul>
+                        <li>Variables, Functions &amp; Comments</li>
+                        <li>Operators (Comparisons), Conditionals (If/Else) &amp; For Loops</li>
+                        <li>Data Types (Strings, Numbers &amp; Booleans)</li>
+                        <li>Data Sets (Arrays &amp; Objects)</li>
+                        <li><a href="http://codingandcocktails.kcwomenintech.org/sessions#programmingFundamentals" target="_blank">Presentation &amp; Worksheet Links</a></li>
+                    </ul>
+                </section>
+                <section id="objectives">
+                    <h2>What we'll cover</h2>
+                    <ul>
+                        <li>Dependencies, Packages &amp; Package Managers
+                            <ul>
+                                <li>what &amp; why</li>
+                            </ul>
+                        </li>
+                        <li>npm Package Manager
+                            <ul>
+                                <li>what, why &amp; how</li>
+                            </ul>
+                        </li>
+                        <li>Bower Package Manager
+                            <ul>
+                                <li>what, why &amp; vs. npm</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <aside class="notes">
+                        TODO: Add Twitter, Instagram? mention
+                    </aside>
+                </section>
+                <section id="dependencies-packages-managers" data-background="https://media.giphy.com/media/X0n5BnMJxLUvC/giphy.gif">
+                    <h1>Dependencies, Packages &amp; Package Managers</h1>
+                </section>
+                <section id="dependencies">
+                    <section>
+                        <h2>What is a dependency?</h2>
+                        <ul>
+                            <li>Asset(s) that are required (used) by other assets
+                                <ul>
+                                    <li>Frameworks/Libraries</li>
+                                    <li>Your own files</li>
+                                    <li>Single file</li>
+                                    <li>Bundle of files (images &amp; code)</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Real World Example: Cookie Dough
+                                <ul>
+                                    <li>Flour, Eggs, Sugar</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Code Example:
+                                <ul>
+                                    <li><a href="http://codepen.io/kaylah/pen/ZOrpAd" target="_blank">Without Dependencies</a></li>
+                                    <li><a href="http://codepen.io/kaylah/pen/VjGKym" target="_blank">With Dependencies</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>All your assets (files) are dependencies that your application needs to run.</li>
+                                <li>Frameworks/Libraries -- don't reinvent the wheel</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Dependencies can have their own dependencies</h2>
+                        <ul>
+                            <li class="fragment">Real World Example: Chocolate Chip Cookies
+                                <ul>
+                                    <li class="fragment">Chocolate Chips</li>
+                                    <li class="fragment">Cookie Dough <span class="fragment">< Flour, Eggs, Sugar</span></li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Code Example: Slideshow w/bxSlider
+                                <ul>
+                                    <li class="fragment">my-slider.js <span class="fragment">< jquery.bxslider.js</span> <span class="fragment">< jQuery.js</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Why use dependencies?</h2>
+                        <blockquote><em>Don't reinvent the wheel.</em></blockquote>
+                        <ul>
+                            <li>Modular, reusable code</li>
+                            <li>Versioned</li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="packages">
+                    <section>
+                        <h1>A package is...</h1>
+                        <p class="fragment">a dependency that can be managed by a package manager.</p>
+                        <p class="fragment"><em>May also be referred to as a module.</em></p>
+                    </section>
+                    <section>
+                        <h2>Types of Packages</h2>
+                        <br />
+                        <ul>
+                            <li>Project Tools <br />
+                                <span class="fragment"><a href="https://www.npmjs.com/package/jquery" target="_blank">jQuery</a></span><span class="fragment">, <a href="https://www.npmjs.com/package/moment" target="_blank">Moment</a></span><span class="fragment">, <a href="https://www.npmjs.com/package/lodash" target="_blank">Lodash</a></span>
+                                <br /><br />
+                            </li>
+                            <li class="fragment">Development Tools<br />
+                                <span class="fragment"><a href="https://www.npmjs.com/package/gulp-cli" target="_blank">Gulp</a></span><span class="fragment">, <a href="https://www.npmjs.com/package/node-sass" target="_blank">Sass</a></span><span class="fragment">, <a href="https://www.npmjs.com/package/yo" target="_blank">Yeoman</a></span>
+                                <br /><br />
+                            </li>
+                            <li class="fragment">Tools for Life<br />
+                                <span class="fragment"><a href="https://www.npmjs.com/package/wallpaper-cli" target="_blank">wallpaper-cli</a></span><span class="fragment">, <a href="https://www.npmjs.com/package/itunes-remote">itunes-remote (mac)</a></span><span class="fragment">,<br /><a href="https://www.npmjs.com/package/is-pokemon-go-up-cli" target="_blank">is-pokemon-go-up-cli</a></span>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="package-managers">
+                    <section>
+                        <h1>A package manager is...</h1>
+                        <p class="fragment">a glorious tool that allows you to manage your application's dependencies.</p>
+                        <ul>
+                            <li class="fragment">Installs packages</li>
+                            <li class="fragment">Upgrades packages</li>
+                            <li class="fragment">Removes packages</li>
+                            <li class="fragment">Manages a package's dependencies</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Manual dependency management</h2>
+                        <video style="width: 90%;" controls>
+                            <source data-src="videos/manage_dependencies_manually.mp4" type="video/mp4" />
+                        </video>
+                        download. add to project. add reference.<br />
+                        oh, dependency updated.<br />
+                        download. add to project. update reference.
+                        <aside class="notes">
+                            Video Time - 1:48
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Use that Package Manager</h2>
+                        <video style="width: 90%;" controls>
+                            <source data-src="videos/manage_dependencies_with_package_manager.mp4" type="video/mp4" />
+                        </video>
+                        download/install. add references. bundle.<br />
+                        oh, dependency updated. install update. bundle.
+                        <aside class="notes">
+                            Video Time - 1:08
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Package Managers For Everything</h2>
+                        <h3>(Or almost)</h3>
+                        <p>Like Windows vs. Mac, what package manager you use is based on your needs and preferences.</p>
+                        <ul>
+                            <li>Different projects</li>
+                            <li>Different languages</li>
+                        </ul>
+                        <aside class="notes">
+                            Package manager for different languages:
+                            <ul>
+                                <li>Maven - Java</li>
+                                <li>Composer - PHP</li>
+                                <li>Gems - Ruby</li>
+                                <li>npm - Node</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+                <section id="break-time" data-background="https://media.giphy.com/media/v36oB9mNXjqDK/giphy.gif">
+                    <h1>Break Time</h1>
+                    <h2>Grab some food &amp; refills</h2>
+                </section>
+                <section id="npm" data-background="https://media.giphy.com/media/xT5LMHOwm0WwXbsUvK/giphy.gif">
+                    <h1>NPM</h1>
+                </section>
+                <section>
+                    <section>
+                        <h2>Wait... Back-up</h2>
+                        <h2 class="fragment">We need to talk about 2 things first.</h2>
+                        <h1 class="fragment">Front-end vs. Back-end</h1>
+                        <h1 class="fragment">Node.js</h1>
+                    </section>
+                    <section>
+                        <h2>Front-end vs. Back-end</h2>
+                        <p>Buying a groupon</p>
+                        <ul>
+                            <li>Front-end
+                                <ul>
+                                    <li class="fragment">Part you see / interact with</li>
+                                </ul>
+                            </li>
+                            <li class="fragment">Back-end
+                                <ul>
+                                    <li class="fragment">Behind the scenes work
+                                    <ul>
+                                        <li class="fragment">Information saved to database (like Excel Spreadsheet on Steroids)</li>
+                                        <li class="fragment">Database lives on server</li>
+                                        <li class="fragment">Next time you login to look at your groupons, data is pulled out of database and sent to the front-end</li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Node.js</h2>
+                        <ul>
+                            <li>Created in 2009 by Ryan Dahl</li>
+                            <li>Open-Source</li>
+                            <li>Back-end JavaScript <em>that is fast</em>
+                                <ul>
+                                    <li>JavaScript runtime</li>
+                                    <li>Built on Chrome's V8 JavaScript Engine</li>
+                                    <li>Written in C++</li>
+                                </ul>
+                            </li>
+                            <li>Cross-platform
+                                <ul>
+                                    <li>Windows, Mac, Linux</li>
+                                </ul>
+                            </li>
+                            <li>More Node during a future session</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>open source - original source code is made freely available and may be redistributed and modified</li>
+                                <li>Normally when we use `JavaScript`, we are referring to JS code that is written for the Front-end and executed by the browser (chrome). Node is server-side JS code.</li>
+                                <li>The description from the Node site is ..
+                                    <ul>
+                                        <li>V8 JavaScript engine was written to make JavaScript in the browser more performant. (Also written in C++.) It takes JavaScript code &amp; compiles it to native machine code (which varies based on machine/platform), so that it can run things faster (and that weren't possible before).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+                <section id="npm-background">
+                    <section>
+                        <h2>What is npm?</h2>
+                        <ul>
+                            <li>Created by Isaac Schlueter in 2009</li>
+                            <li>Open-Source</li>
+                            <li>npm is the default Package Manager for Node
+                                <ul>
+                                    <li>Node is a dependency to use npm<br />
+                                        <em>see what i did there?</em>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Originally for managing dependencies in Node.js applications,
+                                it's expanded for management of:
+                                <ul>
+                                    <li>Web Applications</li>
+                                    <li>Mobile Applications</li>
+                                    <li>Other JavaScript development tools &amp; frameworks</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Why npm?</h2>
+                        <ul>
+                            <li>Comes packaged with Node.js</li>
+                            <li>Epic <a href="https://www.npmjs.com/" target="_blank">Registry</a>
+                                <ul>
+                                    <li>280,000+ packages</li>
+                                </ul>
+                            </li>
+                            <li>> 4 million developers use npm every month</li>
+                            <li>> <em>1 billion</em> packages are downloaded every week</li>
+                            <li>An npm package can contain any asset - HTML, JS, CSS</li>
+                        </ul>
+                        <aside class="notes">
+                            There are no security checks on packages so do some research before using a package the 1st time.
+                        </aside>
+                    </section>
+                </section>
+                <section id="npm-installing">
+                    <section>
+                        <h2>Installing npm</h2>
+                        <ul>
+                            <li>Install Node (<a href="https://nodejs.org/en/download/" target="_blank">use installer</a>)</li>
+                            <li>npm comes with Node, but may be out of date<br />
+                                in CLI enter:
+                                <pre><code class="javascript">npm install npm -g</code></pre>
+                            </li>
+                        </ul>
+                        <p class="disclaimer">* If you receive an access error `EACCES`, when installing globally, check out <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions" target="_blank">this documentation</a> for fixing npm permissions.</p>
+                    </section>
+                </section>
+                <section id="npm-getting-started">
+                    <section>
+                        <h2>Getting Started with npm</h2>
+                        <br />
+                        <ul>
+                            <li>
+                                <pre style="display: inline-block;"><code class="javascript">npm</code></pre><br />
+                                <em>magic keyword to use `npm` in CLI</em>
+                                <br /><br />
+                            </li>
+                            <li>package.json<br />
+                                <em>manifest file listing dependencies &amp; metadata</em>
+                                <br /><br />
+                            </li>
+                            <li>`node_modules`<br />
+                                <em>directory packages install</em>
+                                <br /><br />
+                            </li>
+                        </ul>
+                        <p class="disclaimer">* CLI = Command Line Interface</p>
+                        <aside class="notes">
+                            Git Bash (windows) or iTerm2 (macs)
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Package.json</h2>
+                        <br />
+                        <div class="comparison-view" style="max-height: 85vh;">
+                            <div class="package-json-details">
+                                <ul>
+                                    <li>Create file via CLI
+                                    <pre><code class="javascript">npm init</code></pre>
+                                    </li>
+                                    <li>Must have
+                                        <ul>
+                                            <li><em>name</em>
+                                                <ul>
+                                                    <li>lowercase, -, _, no spaces</li>
+                                                </ul>
+                                            </li>
+                                            <li><em>version</em>
+                                                <ul>
+                                                    <li>x.x.x</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="package-json-example">
+<pre><code class="javascript">{
+  "name": "package-name",
+  "version": "1.0.0"
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Package.json</h2>
+                        <br />
+                        <div class="comparison-view" style="max-height: 60vh;">
+                            <div class="package-json-details" style="margin-right: 4rem;">
+                                <ul>
+                                    <li><em>description</em></li>
+                                    <li><em>homepage</em></li>
+                                    <li><em>author</em></li>
+                                    <li><em>contributors</em></li>
+                                    <li><em>dependencies</em></li>
+                                    <li><em>devDependencies</em></li>
+                                    <li><em>repository</em></li>
+                                    <li><em>main</em></li>
+                                    <li><em>keywords</em></li>
+                                </ul>
+                            </div>
+                            <div class="package-json-example">
+<pre style="height: 100%; overflow: auto; width: 40%;"><code class="javascript">{
+  "name": "package-name",
+  "version": "1.0.0",
+  "description": "Package Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KansasCityWomeninTechnology/npmAndBower.git"
+  },
+  "keywords": [
+    "cocktails",
+    "code",
+    "women",
+    "technology",
+    "kansas",
+    "city"
+  ],
+  "author": "KCWiT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KansasCityWomeninTechnology/npmAndBower/issues"
+  },
+  "homepage": "https://github.com/KansasCityWomeninTechnology/npmAndBower#readme"
+}
+</code></pre>
+                            <p style="font-size: 0.75em; text-align: left;"><em>scroll to see whole example</em></p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section id="npm-installing-packages">
+                    <section>
+                        <h2>Installing npm Packages</h2>
+                        <p><em>CLI vs. package.json</em></p>
+                        <br />
+                        <ul>
+                            <li>Locally
+                                <ul>
+                                    <li class="fragment">Manually specify in package.json
+                                        <pre><code class="javascript">"lodash": "^4.14.1"</code></pre>
+                                    </li>
+                                    <li class="fragment">via CLI
+                                        <pre><code class="javascript">npm install &lt;package&gt;</code></pre>
+                                    </li>
+                                    <li class="fragment">via CLI &amp; save in package.json [`--save`]
+                                        <pre><code class="javascript">npm install &lt;package&gt; --save</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Installing npm Packages</h2>
+                        <p><em>CLI vs. package.json</em></p>
+                        <br />
+                        <ul>
+                            <li>Globally [-g]
+                                <ul>
+                                    <li class="fragment">In CLI, the install command:
+                                        <pre><code class="javascript">npm install &lt;package&gt; -g</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Installing npm Packages</h2>
+                        <p><em>CLI vs. package.json</em></p>
+                        <br />
+                        <ul>
+                            <li>Two dependency types
+                                <ul style="margin-top: 1rem;">
+                                    <li class="fragment">`dependencies`
+                                        <ul>
+                                            <li>production</li>
+                                        </ul>
+                                        <pre><code class="javascript">npm install &lt;package&gt; --save</code></pre>
+                                        <br />
+                                    </li>
+                                    <li class="fragment">`devDependencies`
+                                        <ul>
+                                            <li>development</li>
+                                            <li>testing</li>
+                                        </ul>
+                                        <pre><code class="javascript">npm install &lt;package&gt; --save-dev</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Installing npm Packages</h2>
+                        <p style="margin-bottom: 1rem;"><em>CLI vs. package.json</em></p>
+                        <p>Manually set in package.json</p>
+<pre><code class="javascript">{
+  "name": "package-name",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "^4.14.1",
+    "moment": "^2.14.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
+</code></pre>
+                    </section>
+                </section>
+                <section id="npm-versioning">
+                    <section>
+                        <h2>Versioning - <a href="http://semver.org/" target="_blank">semver</a></h2>
+                        <ul>
+                            <li><span>1</span>.<span>1</span>.<span>1</span><br />
+                                <ul>
+                                    <li>Patch | <em>Bug fixes &amp; minor changes</em>
+                                        <ul>
+                                            <li><strong>1.0</strong> or <strong>1.0.x</strong> or <strong>~1.0.4</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li>Minor | <em>New features, that don't break existing features</em>
+                                        <ul>
+                                            <li><strong>1</strong> or <strong>1.x</strong> or <strong>^1.0.4</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li>Major | <em>Changes that break existing features</em>
+                                        <ul>
+                                            <li><strong>*</strong> or <strong>x</strong></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="disclaimer">* `~` <em>tilde</em> - Allows patch updates within current minor version
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<em>~2.2.3 up to, not including, 2.3.0</em>
+                        </p>
+                        <p class="disclaimer">* `^` <em>caret</em> - Allows minor updates within current major version
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<em>^2.2.3 up to, not including, 3.0 (so 2.9)</em>
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Versioning - Set when installing</h2>
+                        <ul>
+                            <li>Most recent version (default)</li>
+                            <li>Set via CLI
+                                <pre><code class="javascript">npm install &lt;package&gt;@&lt;version&gt;</code></pre>
+                                <pre><code class="javascript">npm install moment@2.14.1</code></pre>
+                            </li>
+                            <li>Set manually in package.json
+<pre><code class="javascript" data-trim>
+  "dependencies" : {
+    "express" : "3.3.2"
+  }</code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Versioning - Shrinkwrap It</h2>
+                        <p><em>Use `<a href="https://docs.npmjs.com/cli/shrinkwrap" target="_blank">npm-shrinkwrap</a>` package</em></p>
+                        <br />
+                        <div style="margin: 0 auto; text-align: left; width: 70%;">
+                            <p>After installing packages, run in CLI</p>
+                            <pre><code class="javascript">npm shrinkwrap</code></pre>
+                            <p>exact package versions are locked down</p>
+                        </div>
+                    </section>
+                </section>
+                <section id="npm-updating-packages">
+                    <section>
+                        <h2>Updating Packages</h2>
+                        <p><em>CLI vs. package.json</em></p>
+                        <br />
+                        <ul>
+                            <li>See which packages are outdated
+                                <pre><code class="javascript">npm outdated</code></pre>
+                            </li>
+                            <li class="fragment">Update all outdated packages
+                                <pre><code class="javascript">npm update</code></pre>
+                                <em>CLI path must be the directory <br />
+                                that has your package.json file</em>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Updating Packages</h2>
+                        <p><em>CLI vs. package.json</em></p>
+                        <br />
+                        <ul>
+                            <li class="fragment">Most recent version
+                                <pre><code class="javascript">npm update &lt;package&gt;</code></pre>
+                            </li>
+                            <li class="fragment">Update global packages
+                                <pre><code class="javascript">npm update -g</code></pre>
+                            </li>
+                            <li class="fragment">Update packages &amp; save in package.json
+                                <pre><code class="javascript">npm update &lt;package&gt; --save</code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Updating Packages</h2>
+                        <p><em>CLI vs. package.json</em></p>
+                        <br />
+                        Manually update in package.json
+                        <div style="align-items: center; display: flex; justify-content: space-between;">
+<pre><code class="javascript">
+ "devDependencies": {
+    "gulp": "^2.8.1"
+  }
+</code></pre>
+to
+<pre><code class="javascript">
+ "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+</code></pre>
+                        </div>
+                        <br />
+                        <p>Remove `node_modules` (delete) &amp; fresh install via CLI</p>
+<pre><code class="javascript">npm install
+</code></pre>
+                    </section>
+                </section>
+                <section id="npm-using-packages">
+                    <section>
+                        <h2>Using packages</h2>
+                        <em>In Node.js Files</em>
+<pre><code class="javascript">//main.js
+var $ = require('jquery');
+
+$(document).ready(function(){
+  $('.button').click(function() {
+    alert('hi ho silver, away');
+  });
+});
+</code></pre>
+                    </section>
+                    <section>
+                        <h2>Using packages</h2>
+                        <em>In Front-End JS Files</em>
+<pre><code class="html">//index.html
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+</code></pre>
+<pre><code class="javascript">//main.js
+$(document).ready(function(){
+  $('.button').click(function() {
+    alert('hi ho silver, away');
+  });
+});
+</code></pre>
+<p class="disclaimer">* Only works for simple apps and dependency management still has manual aspect.</p>
+                    </section>
+                    <section>
+                        <h2>Using packages</h2>
+                        <em>In Front-End JS Files with <a href="http://browserify.org/" target="_blank">Browserify</a></em>
+                        <br /><br />
+                        <ul>
+                            <li>Bundle your files</li>
+                            <li>Handles dependency management for you</li>
+                            <li>4 steps: Install, Include, Require, Bundle</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Using packages</h2>
+                        <em>In Front-End JS Files with <a href="http://browserify.org/" target="_blank">Browserify</a></em>
+                        <br /><br />
+                        <h3 style="margin-bottom: 1.5rem; text-align: left;">Step 1: Install</h3>
+                        <div style="text-align: left;">Install Globally (via CLI) [Personal Projects]
+                                <pre><code class="javascript">npm install browserify -g</code></pre>
+                        </div>
+                        <br />
+                        <div style="text-align: left;">Install for Project Only (via CLI) [Team Projects]
+                                <pre><code class="javascript">npm install browserify --save-dev</code></pre>
+                            </li>
+                        </div>
+                        <aside class="notes">If you install globally, you can use for all your local projects (with 1 install). If you install per project w/ `--save-dev` flag, you have to do it for each project individually, but easier for other developers to get started on your project.</aside>
+                    </section>
+                    <section>
+                        <h2>Using packages</h2>
+                        <em>In Front-End JS Files with <a href="http://browserify.org/" target="_blank">Browserify</a></em>
+<br /><br />
+<h3 style="text-align: left;">Step 2: Include</h3>
+<pre><code class="html">//index.html
+<script src="assets/js/bundle.js"></script>
+</code></pre>
+                    </section>
+                    <section>
+                        <h2>Using packages</h2>
+                        <em>In Front-End JS Files with <a href="http://browserify.org/" target="_blank">Browserify</a></em>
+<br /><br />
+<h3 style="text-align: left;">Step 3: Require</h3>
+<pre><code class="javascript">//main.js
+var $ = require('jquery');
+
+$(document).ready(function(){
+  $('.button').click(function() {
+    alert('hi ho silver, away');
+  });
+});
+</code></pre>
+                    </section>
+                    <section>
+                        <h2>Using packages</h2>
+                        <em>In Front-End JS Files with <a href="http://browserify.org/" target="_blank">Browserify</a></em>
+                        <br /><br />
+                        <h3 style="text-align: left;">Step 4: Bundle</h3>
+                        <pre><code class="javascript">browserify main.js -o bundle.js</code></pre>
+                        <p class="disclaimer">* Have to run `browserify` command for every change in main.js. Use <a href="https://www.npmjs.com/package/watchify" target="_blank">Watchify</a> to handle that for you.</p>
+                    </section>
+                </section>
+                <section id="npm-other-commands">
+                    <section>
+                        <h2>Other npm Commands</h2>
+                        <ul>
+                            <li>Get help (documentation) [--help]
+                                <pre><code class="javascript">npm help</code></pre>
+                                <pre><code class="javascript">npm install --help</code></pre>
+                            </li>
+                            <li>List all packages installed locally*
+                                <pre><code class="javascript">npm ls</code></pre>
+                            </li>
+                            <li>Search for a package
+                                <pre><code class="javascript">npm search &lt;package&gt;</code></pre>
+                            </li>
+                        </ul>
+                        <p class="disclaimer">Add `-g` flag to run command for global packages</p>
+                    </section>
+                    <section>
+                        <h2>Other npm Commands</h2>
+                        <ul>
+                            <li>Uninstall package*
+                                <pre><code class="javascript">npm uninstall &lt;package&gt;</code></pre>
+                            </li>
+                            <li>Register a user with npm registry
+                                <pre><code class="javascript">npm adduser</code></pre>
+                            </li>
+                            <li>Publish a package you created
+                                <pre><code class="javascript">npm publish</code></pre>
+                            </li>
+                        </ul>
+                        <p class="disclaimer">Add `-g` flag to run command for global packages</p>
+                    </section>
+                </section>
+                <section id="bower" data-background="https://media.giphy.com/media/14oc9yS1ru4oNy/giphy.gif">
+                    <h1>Bower</h1>
+                </section>
+                <section>
+                    <section>
+                        <h2>What is Bower?</h2>
+                        <ul>
+                            <li>Created in 2012 by Twitter - Alex MacCaw &amp; Jacob Thornton</li>
+                            <li>Package Manager</li>
+                            <li>Front-End Development Only</li>
+                            <li>Components can contain HTML, CSS, JavaScript, fonts or image files</li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="npm-vs-bower" data-background="http://media4.giphy.com/media/J4Eg2D3TBPiM/200.gif">
+                    <h1>npm vs Bower</h1>
+                </section>
+                <section>
+                    <section>
+                        <h2>Installing the Package Manager</h2>
+                        <br />
+                        <div class="comparison-view">
+                            <div class="npm">
+                                <h3>npm</h3>
+                                <br />
+                                <pre><code class="javascript">npm install npm -g</code></pre>
+                                <br />
+                                <p>Requires</p>
+                                <ul>
+                                    <li>Node</li>
+                                </ul>
+                            </div>
+                            <div class="vs">
+                                <div class="border"></div>
+                                <h3>vs</h3>
+                                <div class="border"></div>
+                            </div>
+                            <div class="bower">
+                                <h3>Bower</h3>
+                                <br />
+                                <pre><code class="javascript">npm install bower -g</code></pre>
+                                <br />
+                                <p>Requires</p>
+                                <ul>
+                                    <li>Node</li>
+                                    <li>npm</li>
+                                    <li>git</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <h2>Installing Packages</h2>
+                            <br />
+                            <div class="comparison-view">
+                                <div class="npm">
+                                    <h3>npm</h3>
+                                    <br />
+                                    <pre><code class="javascript">npm install &lt;package&gt;</code></pre>
+                                    <br />
+                                    <pre class="fragment" data-fragment-index="1"><code class="javascript">npm install &lt;package&gt;@&lt;version&gt;</code></pre>
+                                    <br />
+                                    <p class="fragment" data-fragment-index="2">Installs in `node_modules`</p>
+                                </div>
+                                <div class="vs">
+                                    <div class="border"></div>
+                                    <h3>vs</h3>
+                                    <div class="border"></div>
+                                </div>
+                                <div class="bower">
+                                    <h3>Bower</h3>
+                                    <br />
+                                    <pre><code class="javascript">bower install &lt;package&gt;</code></pre>
+                                    <br />
+                                    <pre class="fragment" data-fragment-index="1"><code class="javascript">bower install &lt;package&gt;#&lt;version&gt;</code></pre>
+                                    <br />
+                                    <p class="fragment" data-fragment-index="2">Installs in `bower_components`</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Installing Packages</h2>
+                        <br />
+                        <div class="comparison-view">
+                            <div class="npm">
+                                <h3>npm</h3>
+                                <br />
+                                <div class="fragment" data-fragment-index="1">
+                                    <p>package.json</p>
+                                    <pre><code class="javascript">npm init</code></pre>
+                                </div>
+                                <br />
+                                <div class="fragment" data-fragment-index="2">
+                                    <p>Save to package.json</p>
+                                    <pre><code class="javascript">npm install &lt;package&gt; --save</code></pre>
+                                </div>
+                            </div>
+                            <div class="vs">
+                                <div class="border"></div>
+                                <h3>vs</h3>
+                                <div class="border"></div>
+                            </div>
+                            <div class="bower">
+                                <h3>Bower</h3>
+                                <br />
+                                <div class="fragment" data-fragment-index="1">
+                                    <p>bower.json</p>
+                                    <pre><code class="javascript">bower init</code></pre>
+                                </div>
+                                <br />
+                                <div class="fragment" data-fragment-index="2">
+                                    <p>Save to bower.json</p>
+                                    <pre><code class="javascript">bower install &lt;package&gt; --save</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Last, but not least</h2>
+                        <br />
+                        <div class="comparison-view">
+                            <div class="npm">
+                                <h3>npm</h3>
+                                <br />
+                                <p>Package <a href="https://www.npmjs.com/" target="_blank">Registry</a></p>
+                                <br />
+                                <p class="fragment" data-fragment-index="1">Front-end &amp; back-end</p>
+                                <br />
+                                <p class="fragment" data-fragment-index="2">Nested dependencies<br />
+                                    <em>Great for back-end. Can cause problems for front-end.</em>
+                                </p>
+                            </div>
+                            <div class="vs">
+                                <div class="border"></div>
+                                <h3>vs</h3>
+                                <div class="border"></div>
+                            </div>
+                            <div class="bower">
+                                <h3>Bower</h3>
+                                <br />
+                                <p>Package <a href="https://bower.io/search/" target="_blank">Registry</a></p>
+                                <br />
+                                <p class="fragment" data-fragment-index="1">Front-end only</p>
+                                <br />
+                                <p class="fragment" data-fragment-index="2">Flat dependencies<br />
+                                    <em>Great for front-end. Makes you choose if there's a conflict.</em>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section id="learn-more">
+                    <h2>Thirsty for More?</h2>
+                    <ul>
+                        <li><a href="https://www.npmjs.com/" target="_blank">npm</a>
+                            <ul>
+                                <li><a href="https://docs.npmjs.com/getting-started" target="_blank">npm - Getting Started</a></li>
+                                <li><a href="http://blog.npmjs.org/post/101775448305/npm-and-front-end-packaging" target="_blank">npm and front-end packaging</a></li>
+                                <li><a href="https://webpack.github.io/" target="_blank">Webpack</a> (alternative to Browserify)
+                                    <ul>
+                                        <li><a href="https://github.com/petehunt/webpack-howto" target="_blank">How-to</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://github.com/sindresorhus/awesome-nodejs" target="_blank">Awesome Node.js</a> (great list of npm packages)</li>
+                            </ul>
+                        </li>
+                        <li><a href="https://bower.io/" target="_blank">Bower</a></li>
+                    </ul>
+                    <aside class="notes">
+                        TODO: ADD MORE INFO &amp; LINKS
+                    </aside>
+                </section>
+                <section id="review">
+                    <h2>Review</h2>
+                    <ul>
+                        <li>Dependencies, Packages &amp; Package Managers
+                            <ul class="fragment">
+                                <li><em>Will Save Your Sanity</em></li>
+                            </ul>
+                        </li>
+                        <li class="fragment">npm as a Package Manager
+                            <ul class="fragment">
+                                <li><em>Will Rock Your Socks Off</em></li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Bower was the First Package Manager for Front-End
+                            <ul class="fragment">
+                                <li><em>But Definitely Not the Last</em></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section id="questions">
+                  <h2>Questions?</h2>
+                  <div style = "font-size:1200%; height:100%; line-height: 100%;" class ="blue">?
+                    <div class ="clear"></div></div>
+                </section>
+                <section id="worksheet-time">
+                    <h1><a href="http://bit.ly/npmWorksheet" target="_blank">Worksheet Time</a></h1>
+                    <a href="http://bit.ly/npmWorksheet" target="_blank">
+                        <img src="images/08-aug/michelle-pumped.gif" style="width: 50%;"/>
+                    </a>
+                </section>
+                <section id="contact">
+                    <h2>Thank You!</h2>
+                    <h4>Keep in touch!</h4>
+                    <div>
+                        <a style="font-size: 1.2em; font-weight: bold; margin: 15px;" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-twitter fa-lg"></i><a style="font-size: 1.2em; font-weight: bold;" href="https://twitter.com/codecocktailskc" target="_blank">&nbsp;&nbsp;@codecocktailskc</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-facebook fa-lg"></i><a style="font-size: 1.2em; font-weight: bold;" href="https://www.facebook.com/codingandcocktailsKC" target="_blank">&nbsp;&nbsp;facebook.com/codingandcocktailsKC</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-slack fa-lg"></i><a style="font-size: 1.2em; font-weight: bold;" href="https://kcwit.slack.com/" target="_blank">&nbsp;&nbsp;kcwit.slack.com</a>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <p style="font-size: 1.2em; display: inline-block; margin: 10px;">#LadyDevs</h3>
+                        <p style="font-size: 1.2em; display: inline-block; margin: 10px;">#KCWiT</p>
+                        <p style="font-size: 1.2em; display: inline-block; margin: 10px;">#CodingAndCocktailsKC</p>
+                    </div>
+                    <h3 style="margin-top: 20px;"><a href="http://www.eventbrite.com/e/coding-cocktails-september-tickets-21575423673?aff=presentation" target="_blank">Click here to join us next month!</a></h3>
+                    <aside class="notes">
+                        Next month: Introduction to Front-End Architecture
+                    </aside>
+          </section>
+        </div>
+      </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
