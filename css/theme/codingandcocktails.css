@@ -35,6 +35,10 @@ body {
   background: #134674;
   text-shadow: none; }
 
+.reveal p {
+  font-size: 80%;
+  margin: 0 0 8px 0; }
+
 /*********************************************
  * HEADERS
  *********************************************/
@@ -179,22 +183,35 @@ reveal ol, .reveal dl, .reveal ul {
     display: inline-block;
     text-align: left;
     margin: 0 0 0 1em;
+    list-style: none;
 }
 
 .reveal li {
     margin: 0 0 8px 0;
+    text-align: left;
 }
 
 /*********************************************
 SNIPPETS
 **********************************************/
-.reveal pre {
-  margin: 5px 0;
-}
 
 .reveal code {
-  padding: 10px;
-  text-align: left
+	display: block;
+	position: relative;
+	width: 90%;
+  margin: 20px 0;
+
+	text-align: left;
+	font-size: 0.55em;
+	font-family: monospace;
+	line-height: 1.2em;
+
+	word-wrap: break-word;
+  box-shadow: 1px 0px 1px 1px rgba(0,0,0,0.3);
+  background-color: #262626;
+  padding: 15px;
+	overflow: auto;
+	border: 1px solid #ddd;
 }
 
 /*********************************************
