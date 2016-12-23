@@ -39,6 +39,22 @@ body {
   font-size: 80%;
   margin: 0 0 8px 0; }
 
+table.paddedTable {
+  border: 1px;
+  border-style: solid;
+  border-collapse: collapse;
+}
+tr.paddedTable {
+  border: 1px;
+  border-style: solid;
+  padding: 10px;
+}
+td.paddedTable {
+  border: 1px;
+  border-style: solid;
+  padding: 10px;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
