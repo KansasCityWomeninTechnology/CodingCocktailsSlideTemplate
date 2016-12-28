@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!doctype html>
 <html>
   <head>
     <title>Coding &amp; Cocktails KC</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="description" content="Coding &amp; Cocktails"/>
     <meta name="author" content="Kansas City Women in Technology"/>
     <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
-    <meta property="og:title" content="TOPIC - Coding &amp; Cocktails KC" />
+    <meta property="og:title" content="Coding &amp; Cocktails KC" />
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
     <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
-    <meta property="og:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta property="og:description" content="Coding &amp; Cocktails"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
     <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
-    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails course."/>
     <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -25,37 +24,45 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/reveal.css"/>
     <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
   </head>
-	<body>
-	<div class="reveal">
-		<div class="slides">
-			<br>
-			<h1>
-				Coding &amp; Cocktails Presentations
-			</h1>
-			<ul style="font-size: 80%;">
-				<a href="01-jan.html"><li>Jan - HTML</li></a>
-				<a href="02-feb.html"><li>Feb - CSS</li></a>
-				<a href="03-mar.html"><li>Mar - Command Line</li></a>
-				<a href="04-apr.html"><li>Apr - Version Control</li></a>
-				<a href="05-may.html"><li>May - CSS Compilers</li></a>
-				<a href="06-jun.html"><li>Jun - DOM Manipulation with jQuery</li></a>
-				<a href="07-jul.html"><li>Jul - Programming Fundamentals with JavaScript</li></a>
-				<a href="08-aug.html"><li>Aug - Package Managers</li></a>
-				<a href="09-sep.html"><li>Sep - Front End Architecture</li></a>
-				<a href="10-oct.html"><li>Oct - Single Page Applications</li></a>
-				<a href="11-nov.html"><li>Nov - Micro-Hackathon</li></a>
-  			<font style="color: #999"><li>Dec - Not a thing</li></font>
-			</ul>
-		</div>
-	</div>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+    			<h3>
+    				Coding &amp; Cocktails Presentations
+    			</h3>
+          <ul style="font-size: 90%">
+    				<a href="01-jan.html"><li>Jan - HTML</li></a>
+    				<font style="color: #999"><li>Feb - CSS</li></font>
+    				<font style="color: #999"><li>Mar - Command Line</li></font>
+    				<font style="color: #999"><li>Apr - Version Control</li></font>
+    				<font style="color: #999"><li>May - CSS Compilers</li></font>
+    				<font style="color: #999"><li>Jun - DOM Manipulation with jQuery</li></font>
+    				<font style="color: #999"><li>Jul - Programming Fundamentals with JavaScript</li></font>
+    				<font style="color: #999"><li>Aug - Package Managers</li></font>
+    				<font style="color: #999"><li>Sep - Front End Architecture</li></font>
+    				<font style="color: #999"><li>Oct - Single Page Applications</li></font>
+    				<font style="color: #999"><li>Nov - Micro-Hackathon</li></font>
+    			</ul>
+        </section>
+      </div>
+    </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
 	</body>
-	</html>
+</html>
