@@ -39,12 +39,12 @@ body {
   font-size: 80%;
   margin: 0 0 8px 0; }
 
-table.paddedTable {
+table.paddedTable, .thickPaddedTable {
   border: 1px;
   border-style: solid;
   border-collapse: collapse;
 }
-tr.paddedTable {
+th.paddedTable {
   border: 1px;
   border-style: solid;
   padding: 5px;
@@ -53,6 +53,17 @@ td.paddedTable {
   border: 1px;
   border-style: solid;
   padding: 5px;
+}
+th.thickPaddedTable {
+  border: 1px;
+  border-style: solid;
+  padding: 25px;
+  background-color: #484e78;
+}
+td.thickPaddedTable {
+  border: 1px;
+  border-style: solid;
+  padding: 25px;
 }
 
 /*********************************************

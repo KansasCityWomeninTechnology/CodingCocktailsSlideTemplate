@@ -44,7 +44,7 @@
             <br><br>
             This presentation: <a href="http://bit.ly/2hxxBC2" target="_blank">http://bit.ly/2hxxBC2</a>
             <br><br>
-            Install the Tools: <a href="http://bit.ly/2gZWd7r" target="_blank">http://bit.ly/2gZWd7r</a>
+            Install the Tools: <a href="http://bit.ly/2hMupzn" target="_blank">http://bit.ly/2hMupzn</a>
           </p>
           <br>
           <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
@@ -110,12 +110,13 @@
             </li>
             <li class="fragment">Attributes</li>
             <li class="fragment">Tables</li>
+            <li class="fragment">Forms</li>
             <li class="fragment">The DOM</li>
           </ol>
         </section>
         <section>
           <h1>The Basics</h1>
-          <img src="images/01-jan/basics.jpg" alt="Basics" height="90%" width="90%"/>
+          <img src="images/01-jan/basics.jpg" alt="Basics" height="80%" width="80%"/>
         </section>
         <section>
           <h1>What is HTML</h1>
@@ -149,11 +150,8 @@
           <br>
           <p class="fragment">
             Self-Closing tags<br>
-            <!-- <pre> -->
               <code>&lt;img src="http://heygirl.io/img/gosling-horiz-10.gif" alt="Hey Girl" /&gt;</code>
-            <!-- </pre> -->
           </p>
-
         </section>
         <section>
           <br>
@@ -186,15 +184,15 @@
           <p class="fragment" data-fragment-index="0">
             A few to get you started...
           </p>
-          <code class="fragment" data-fragment-index="1">&lt;p&gt;This is a paragraph&lt;/p&gt;
-            <div class="fragment" data-fragment-index="2">&lt;h1&gt;This is a header&lt;/h1&gt;</div>
-            <div class="fragment" data-fragment-index="3">&lt;h6&gt;This is a smaller header&lt;/h6&gt;</div>
-            <div class="fragment" data-fragment-index="4">&lt;div&gt;This is a div tag for grouping or positioning&lt;/div&gt;</div>
+          <code class="fragment" data-fragment-index="1">&lt;div&gt;Don't forget the garnish!&lt;/div&gt;
+            <div class="fragment" data-fragment-index="2">&lt;h1&gt;Watermelon Moscow Mule&lt;/h1&gt;</div>
+            <div class="fragment" data-fragment-index="3">&lt;h6&gt;A Fruity Twist on a Classic Cocktail&lt;/h6&gt;</div>
+            <div class="fragment" data-fragment-index="4">&lt;p&gt;This is one of my favorites!&lt;/p&gt;</div>
             <div class="fragment" data-fragment-index="5">
               &lt;ol&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt;Eggs&lt;/li&gt;<br>
-                &nbsp;&nbsp;&lt;li&gt;Butter&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
               &lt;/ol&gt;
             </div>
           </code>
@@ -202,28 +200,28 @@
         <section>
           <div>
             <br>
-            <p>This is a paragraph</p>
-            <h1>This is a header</h1>
-            <h6>This is a smaller header</h6>
-            <div>This is a div tag for grouping or positioning</div><br>
+            <div>Don't forget the garnish!</div>
+            <h1>Watermelon Moscow Mule</h1>
+            <h6>A Fruity Twist on a Classic Cocktail</h6>
+            <p>This is one of my favorites!</p><br>
             <ol>
-              <li>Milk</li>
-              <li>Eggs</li>
-              <li>Butter</li>
+              <li>Watermelon</li>
+              <li>Vodka</li>
+              <li>Lime juice</li>
             </ol>
           </div>
         </section>
         <section>
           <div>
             <br>
-            <p style="font-style: italic;">This is a paragraph</p>
-            <h1 style="color: green">This is a header</h1>
-            <h6 style="font-family: Impact; font-size: 28px;">This is a smaller header</h6>
-            <div style="position: fixed;top: -40px !important;left:-250px !important;">This is a div tag for grouping or positioning</div><br>
-            <ol style="list-style-type: lower-alpha;">
-              <li>Milk</li>
-              <li>Eggs</li>
-              <li>Butter</li>
+            <h1 style="color: pink">Watermelon Moscow Mule</h1>
+            <h6 style="font-family: Impact; font-size: 28px; color: #d4edb6">A Fruity Twist on a Classic Cocktail</h6>
+            <p style="font-size: 20px;">This is one of my favorites!</p>
+            <div style="position: fixed;top: -40px !important;left:-250px !important;font-style: italic;">Don't forget the garnish!</div><br>
+            <ol style="list-style-image: url('images/01-jan/list-item.png');">
+              <li>Watermelon</li>
+              <li>Vodka</li>
+              <li>Lime juice</li>
             </ol>
           </div>
         </section>
@@ -291,17 +289,17 @@
             <code class="fragment" data-fragment-index="1" style="color: green; height: 100%">
               &lt;div&gt;<br>
                 &nbsp;&nbsp;&lt;ol&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Eggs&lt;/li&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Butter&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
                 &nbsp;&nbsp;&lt;/ol&gt;<br>
               &lt;/div&gt;<br>
               <div class="fragment" data-fragment-index="2" style="color: red;">
                 &lt;div&gt;<br>
                   &lt;ol&gt;<br>
-                    &lt;li&gt;Milk&lt;/li&gt;<br>
-                    &lt;li&gt;Eggs&lt;/li&gt;<br>
-                    &lt;li&gt;Butter&lt;/li&gt;<br>
+                    &lt;li&gt;Watermelon&lt;/li&gt;<br>
+                    &lt;li&gt;Vodka&lt;/li&gt;<br>
+                    &lt;li&gt;Lime juice&lt;/li&gt;<br>
                   &lt;/ol&gt;<br>
                 &lt;/div&gt;<br>
               </div>
@@ -412,6 +410,168 @@
           </div>
         </section>
         <section>
+          <h1>Table tags</h1>
+          <div style="width: 450px;">
+            <code class="fragment" data-fragment-index="1">&lt;table&gt;
+              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;tr&gt;</div>
+                <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Ingredient&lt;/th&gt;</div>
+                <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Measurement&lt;/th&gt;</div>
+              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;/tr&gt;</div>
+              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;tr&gt;</div>
+                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Watermelon&lt;/td&gt;</div>
+                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2 slices&lt;/td&gt;</div>
+              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;/tr&gt;</div>
+              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;tr&gt;</div>
+                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Vodka&lt;/td&gt;</div>
+                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1 shot&lt;/td&gt;</div>
+              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;/tr&gt;</div>
+              <div class="fragment" data-fragment-index="1">&lt;/table&gt;</div>
+            </code>
+            <div class="fragment" style="position: fixed; left: 500px; top: 200px;">
+              <table class="thickPaddedTable" style="font-size: 34px;">
+                <tr class="thickPaddedTable">
+                  <th class="thickPaddedTable">Ingredient</th>
+                  <th class="thickPaddedTable">Measurement</th>
+                </tr class="thickPaddedTable">
+                <tr class="thickPaddedTable">
+                  <td class="thickPaddedTable">Watermelon</td>
+                  <td class="thickPaddedTable">2 slices</td>
+                </tr class="thickPaddedTable">
+                <tr class="thickPaddedTable">
+                  <td class="thickPaddedTable">Vodka</td>
+                  <td class="thickPaddedTable">1 shot</td>
+                </tr class="thickPaddedTable">
+              </table>
+            </div>
+            <div class="fragment" style="position: fixed; top: 72px; left: 0px; width: 450px;">
+              <code>&lt;table&gt;
+                <div>&nbsp;&nbsp;&lt;thead&gt;</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Ingredient&lt;/th&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Measurement&lt;/th&gt;</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</div>
+                <div>&nbsp;&nbsp;&lt;/thead&gt;</div>
+                <div>&nbsp;&nbsp;&lt;tbody&gt;</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Watermelon&lt;/td&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2 slices&lt;/td&gt;</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Vodka&lt;/td&gt;</div>
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1 shot&lt;/td&gt;</div>
+                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</div>
+                <div>&nbsp;&nbsp;&lt;/tbody&gt;</div>
+              <div>&lt;/table&gt;</div>
+            </code>
+          </div>
+        </section>
+        <section>
+          <h1>Forms</h1><br>
+          <p class="fragment" data-fragment-index="1">Used to collect user input<br>
+            <img src="images/01-jan/form.png" alt="Form" height="85%" width="85%"/>
+          </p><br>
+          <p class="fragment" data-fragment-index="2">
+            Made up of a tag and some attributes:
+          </p>
+          <code class="fragment" data-fragment-index="3" style="font-size: 22px;">&lt;form action=”submit-form.php” method="POST"&gt;
+            <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&lt;input type="text" id="text_input" placeholder="Name" required/&gt;</div>
+            <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;input type="email" id="text_input" placeholder="name@email.com"/&gt;</div>
+            <div class="fragment" data-fragment-index="6">&nbsp;&nbsp;&lt;select&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Watermelon"&gt;Watermelon&lt;/option&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="Peach"&gt;Peach&lt;/option&gt;<br>
+              &nbsp;&nbsp;&lt;/select&gt;</div>
+            <div class="fragment" data-fragment-index="7">&nbsp;&nbsp;&lt;button type="submit" disabled&gt;Submit&lt;/button&gt;</div>
+            <div class="fragment" data-fragment-index="3">&lt;/form&gt;</div>
+          </code>
+        </section>
+        <section>
+          <h1>Form tags</h1>
+          <img src="images/01-jan/learn.jpg" height="60%" width="60%"/><br><br>
+          <a href="http://codepen.io/kaylah/pen/yVoogz" target="_blank">http://codepen.io/kaylah/pen/yVoogz</a>
+          <div class="fragment" style="position: fixed; left: 0px; top: 90px;">
+            <img src="images/01-jan/codepen.png" height="100%" width="100%"/>
+          </div>
+        </section>
+        <section>
+          <h1><font style="color: #c7bc75">Get</font> vs Post <i>Showdown</i></h1><br>
+          <p class="fragment">Requesting data to use, not changing it</p><br>
+          <p class="fragment">Searching or filtering</p><br>
+          <p class="fragment">http://mymovieform.com?genre=drama</p>
+        </section>
+        <section>
+          <h1>Get vs <font style="color: #c7bc75">Post</font> <i>Showdown</i></h1><br>
+          <p class="fragment">Changing or adding data</p><br>
+          <p class="fragment">Create a calendar event, change password, etc</p><br>
+          <p class="fragment"><img src="images/01-jan/form-data.png"/></p>
+        </section>
+        <section>
+          <img src="images/01-jan/data.jpg" height="80%" width="80%"/>
+        </section>
+        <section><br>
+          <img src="images/01-jan/client-server.png" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>Server side processing</h1><br>
+          <p><img src="images/01-jan/formspree.png" height="85%" width="85%"/></p>
+          <p><a href="https://formspree.io">https://formspree.io</a></p>
+        </section>
+        <section>
+          <h1>Organizing a form</h1><br>
+          <code class="fragment" style="font-size: 22px;">
+            &lt;label <font style="color:#a3a457">for=”question”</font>&gt;Favorite drink?&lt;/label&gt;<br>
+            &lt;input type=”text” name=”question” id=”<font style="color:#a3a457">question</font>” /&gt;<br>
+          </code>
+          <code class="fragment" style="font-size: 22px;">
+            <font style="color:#9d81a2">&lt;fieldset&gt;</font><br>
+              <font style="color:#9d81a2">&nbsp;&nbsp;&lt;legend&gt;</font>Serious Question<font style="color:#9d81a2">&lt;/legend&gt;</font><br>
+              &nbsp;&nbsp;&lt;label <font style="color:#a3a457">for=”question”</font>&gt;Favorite drink?&lt;/label&gt;<br>
+              &nbsp;&nbsp;&lt;input type=”text” name=”question” id=”<font style="color:#a3a457">question</font>” /&gt;<br>
+            <font style="color:#9d81a2">&lt;/fieldset&gt;</font>
+          </code>
+        </section>
+        <section>
+          <h1>The DOM</h1>
+          <img src="images/01-jan/the-dom.jpg" alt="The DOM" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>HTML Syntax (Revisted)</h1><br>
+          <div style="width:350px;">
+            <code class="fragment" data-fragment-index="1">&lt;!DOCTYPE html&gt;
+              <div class="fragment" data-fragment-index="2">&lt;html&gt;</div>
+                <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt;</div>
+                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&lt;body&gt;...&lt;/body&gt;</div>
+              <div class="fragment" data-fragment-index="2">&lt;/html&gt;</div>
+            </code>
+          </div>
+          <div style="position: fixed; bottom: -300px; right: -150px;">
+            <img class="fragment" data-fragment-index="5" src="images/01-jan/anatomy-xml.png" height="45%" width="45%"/>
+          </div>
+        </section>
+        <section>
+          <h1>The Document Object Model</h1>
+          <img src="images/01-jan/dom-model.svg" height="55%" width="55%"/>
+        </section>
+        <section>
+          <h1>What Browsers Do</h1><br>
+          <ol>
+            <li class="fragment">Download the HTML file (Server -> Client)</li>
+            <li class="fragment">Parse the HTML (code -> DOM)</li>
+            <li class="fragment">Load and apply CSS</li>
+            <li class="fragment">Load and apply Javascript</li>
+            <li class="fragment">Render the DOM visually *</li>
+          </ol>
+        </section>
+        <section>
+          <h1>What could possibly go wrong?</h1><br>
+          <ol>
+            <li class="fragment">Can't find HTML file on server</li>
+            <li class="fragment">Parse error: Missing end tag</li>
+            <li class="fragment">Can't find CSS file on server</li>
+            <li class="fragment">Can't find JS file on server</li>
+            <li class="fragment">Parse error in <font style="font-style: italic">those</font> files</li>
+          </ol>
+        </section>
+        <section>
           <h2>Questions?</h2>
           <img src="images/questions.gif" alt="Questions" height="100%" width="100%"/>
         </section>
@@ -423,7 +583,7 @@
           </p>
           <br>
           <p>
-            Install the Tools: <a href="http://bit.ly/2hHvect" target="_blank">http://bit.ly/2hHvect</a>
+            Install the Tools: <a href="http://bit.ly/2hMupzn" target="_blank">http://bit.ly/2hMupzn</a>
           </p>
           <br>
           <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
