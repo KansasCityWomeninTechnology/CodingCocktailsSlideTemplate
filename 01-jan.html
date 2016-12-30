@@ -21,7 +21,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/reveal.css"/>
     <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
   </head>
@@ -44,7 +44,7 @@
             <br><br>
             This presentation: <a href="http://bit.ly/2hxxBC2" target="_blank">http://bit.ly/2hxxBC2</a>
             <br><br>
-            Install the Tools: <a href="http://bit.ly/2hMupzn" target="_blank">http://bit.ly/2hMupzn</a>
+            Install the Tools: <a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a>
           </p>
           <br>
           <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
@@ -151,15 +151,16 @@
           <p class="fragment">
             Self-Closing tags<br>
               <code>&lt;img src="http://heygirl.io/img/gosling-horiz-10.gif" alt="Hey Girl" /&gt;</code>
+              <code class="fragment">&lt;img src="images/01-jan/lyndsey-scott.png" alt="Beauty AND Brains" /&gt;</code>
           </p>
         </section>
         <section>
           <br>
-          <img src="http://heygirl.io/img/gosling-horiz-10.gif" alt="Hey Girl" height="100%" width="100%" />
+          <img src="images/01-jan/gosling.gif" alt="Hey Girl" height="100%" width="100%" />
           <p>Hey girl</p>
         </section>
         <section>
-          <img src="images/01-jan/lyndsey-scott.png" alt="Lyndsey Scott" height="80%" width="80%" />
+          <img src="images/01-jan/lyndsey-scott.png" alt="Beauty AND Brains" height="80%" width="80%" />
           <p>Lyndsey Scott</p>
         </section>
         <section>
@@ -214,10 +215,10 @@
         <section>
           <div>
             <br>
+            <div style="position: fixed;top: 50px; left:0px; font-style: italic; font-size: 22px;">Don't forget the garnish!</div><br>
             <h1 style="color: pink">Watermelon Moscow Mule</h1>
             <h6 style="font-family: Impact; font-size: 28px; color: #d4edb6">A Fruity Twist on a Classic Cocktail</h6>
-            <p style="font-size: 20px;">This is one of my favorites!</p>
-            <div style="position: fixed;top: -40px !important;left:-250px !important;font-style: italic;">Don't forget the garnish!</div><br>
+            <p style="font-size: 32px;">This is one of my favorites!</p>
             <ol style="list-style-image: url('images/01-jan/list-item.png');">
               <li>Watermelon</li>
               <li>Vodka</li>
@@ -242,15 +243,15 @@
             <div class="fragment" data-fragment-index="4">&lt;/a&gt;</div>
           </code>
           <div class="fragment" data-fragment-index="6">
-            <a href="http://pinterest.com" target="_blank"><img src="http://www.thebookwheelblog.com/wp-content/uploads/2014/05/Transparent-Pinterest-Logo-Icon-660x660.png" width="80px" height="80px"/></a>
+            <a href="http://pinterest.com" target="_blank"><img src="images/01-jan/pinterest.png" width="80px" height="80px"/></a>
           </div>
         </section>
         <section>
           <h1></h1><br>
-          <h4 class="fragment" data-fragment-index="0" style="position: fixed; left: -250px; top: 0px;">
+          <h5 data-fragment-index="0" style="position: fixed; left: -120px; top: 0px;">
             <img src="images/01-jan/HTML5.png" /><br>
             New tags. Much cool.
-          </h4>
+          </h5>
           <div style="position: fixed; left: 400px; top: 0px;">
             <p class="fragment" style="text-align: left">Standardized in 2014</p>
             <p class="fragment" style="text-align: left">Made web development <i>easier</i></p>
@@ -307,7 +308,7 @@
         </section>
         <section>
           <h1>Debugging Tools</h1><br>
-          <p class="fragment">Chrome Developer Tools<br>&nbsp;&nbsp;&nbsp;(Ctrl+Shift+I or Option+Shift+I)</p><br>
+          <p class="fragment">Chrome Developer Tools<br>&nbsp;&nbsp;&nbsp;( ctrl + shift + i  /  cmd + opt + i )</p><br>
           <p class="fragment"><a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a></p><br>
           <p class="fragment"><a href="http://www.w3schools.com" target="_blank">W3 Schools ("Try It Yourself")</a></p><br>
           <p class="fragment"><a href="http://codepen.io/" target="_blank">CodePen.io</a></p><br>
@@ -487,7 +488,7 @@
         <section>
           <h1>Form tags</h1>
           <img src="images/01-jan/learn.jpg" height="60%" width="60%"/><br><br>
-          <a href="http://codepen.io/kaylah/pen/yVoogz" target="_blank">http://codepen.io/kaylah/pen/yVoogz</a>
+          <a href="http://codepen.io/CodingCocktailsKC/pen/LbwEGa" target="_blank">http://codepen.io/CodingCocktailsKC/pen/LbwEGa</a>
           <div class="fragment" style="position: fixed; left: 0px; top: 90px;">
             <img src="images/01-jan/codepen.png" height="100%" width="100%"/>
           </div>
@@ -519,13 +520,13 @@
           <h1>Organizing a form</h1><br>
           <code class="fragment" style="font-size: 22px;">
             &lt;label <font style="color:#a3a457">for=”question”</font>&gt;Favorite drink?&lt;/label&gt;<br>
-            &lt;input type=”text” name=”question” id=”<font style="color:#a3a457">question</font>” /&gt;<br>
+            &lt;input type=”text” name=”question” <font style="color:#a3a457">id=”question"</font> /&gt;<br>
           </code>
           <code class="fragment" style="font-size: 22px;">
             <font style="color:#9d81a2">&lt;fieldset&gt;</font><br>
               <font style="color:#9d81a2">&nbsp;&nbsp;&lt;legend&gt;</font>Serious Question<font style="color:#9d81a2">&lt;/legend&gt;</font><br>
               &nbsp;&nbsp;&lt;label <font style="color:#a3a457">for=”question”</font>&gt;Favorite drink?&lt;/label&gt;<br>
-              &nbsp;&nbsp;&lt;input type=”text” name=”question” id=”<font style="color:#a3a457">question</font>” /&gt;<br>
+              &nbsp;&nbsp;&lt;input type=”text” name=”question” <font style="color:#a3a457">id=”question"</font> /&gt;<br>
             <font style="color:#9d81a2">&lt;/fieldset&gt;</font>
           </code>
         </section>
@@ -583,7 +584,7 @@
           </p>
           <br>
           <p>
-            Install the Tools: <a href="http://bit.ly/2hMupzn" target="_blank">http://bit.ly/2hMupzn</a>
+            Install the Tools: <a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a>
           </p>
           <br>
           <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
@@ -595,13 +596,14 @@
           <h1>What's Next</h1>
           <br>
           <ol>
+            <li class="fragment">Find a buddy</li>
             <li class="fragment">Take the Survey</li>
-            <li class="fragment">Join Slack</li>
-            <li class="fragment">Finish tonight's worksheet</li>
-            <li class="fragment">Find an online tutorial on HTML</li>
-            <li class="fragment">Register for next month's event</li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="https://codingandcocktailskc.gitbooks.io/session-1-html/" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=HTML+tutorial" target="_blank">online tutorial on HTML</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
           </ol>
-          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -250px; right: -250px;" />
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -120px;" />
         </section>
       </div>
     </div>
