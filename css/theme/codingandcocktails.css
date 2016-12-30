@@ -65,6 +65,20 @@ td.thickPaddedTable {
   border-style: solid;
   padding: 25px;
 }
+table.tocTable {
+  border: 0px;
+  border-style: solid;
+  border-collapse: collapse;
+  font-size: 36px;
+}
+td.tocTable {
+  border: 0px;
+  border-style: solid;
+  padding: 10px;
+  text-align: left;
+}
+tr.tocTable:nth-child(even) {background: #7a677e}
+tr.tocTable:nth-child(odd) {background: #6c5c70}
 
 /*********************************************
  * HEADERS
