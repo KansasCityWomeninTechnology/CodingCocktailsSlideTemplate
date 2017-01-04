@@ -44,41 +44,34 @@ table.paddedTable, .thickPaddedTable {
   border-style: solid;
   border-collapse: collapse;
 }
-th.paddedTable {
+.paddedTable th, .paddedTable td {
   border: 1px;
   border-style: solid;
   padding: 5px;
 }
-td.paddedTable {
-  border: 1px;
-  border-style: solid;
-  padding: 5px;
-}
-th.thickPaddedTable {
+.thickPaddedTable th, .thickPaddedTable tr, .thickPaddedTable td {
   border: 1px;
   border-style: solid;
   padding: 25px;
+}
+.thickPaddedTable th {
   background-color: #484e78;
 }
-td.thickPaddedTable {
-  border: 1px;
-  border-style: solid;
-  padding: 25px;
-}
 table.tocTable {
-  border: 0px;
   border-style: solid;
   border-collapse: collapse;
-  font-size: 36px;
 }
-td.tocTable {
-  border: 0px;
-  border-style: solid;
-  padding: 10px;
+.tocTable td {
+  padding: 8px;
+  font-size: 36px;
   text-align: left;
 }
-tr.tocTable:nth-child(even) {background: #7a677e}
-tr.tocTable:nth-child(odd) {background: #6c5c70}
+.tocTable tr:nth-child(even) {
+  background: rgba(73, 78, 121, 0.8);
+}
+.tocTable tr:nth-child(odd) {
+  background: rgba(57, 62, 96, 0.8);
+}
 
 /*********************************************
  * HEADERS
