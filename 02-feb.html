@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Feb - Intro to CSS - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails CSS course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="CSS - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails CSS course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails CSS course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div style="position: absolute;left: -80px; top:0px;">
+            <font style="font-size: 0.6em">
+              <a href="http://bit.ly/CnCIndex">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                All Months
+              </a>
+            </font>
+          </div>
+          <h1>While You're Waiting</h1>
+          <p>
+            <br>
+            Wifi: username / password
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCFebSlides">http://bit.ly/CnCFebSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCFebWork">http://bit.ly/CnCFebWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+         <h1>Intro to CSS</h1>
+         <img src="images/logo-large.png" alt="Coding &amp; Cocktails" width="95%" height="95%"/>
+        </section>
+        <section>
+         <h1>Our Host this Evening</h1>
+         <a href="http://www.vml.com" target="_blank"><img src="images/vml-logo.png" alt="VML" width="80%" height="80%" style="padding-top: 30px;"/></a>
+        </section>
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <img src="images/group.png" alt="Cocktails Leadership" height="570"/>
+        </section>
+        <section>
+          <h2>Gabi Dombrowski</h2>
+          <img src="images/gabi.png" alt="Gabi Dombrowski" height="460"/>
+          <h4>Program Director</h4>
+          <p style="font-size: 90%;">TODO</p>
+        </section>
+        <section>
+          <h2>Tamara Copple</h2>
+          <img src="images/tamara.png" alt="Tamara Copple" height="460"/>
+          <h4>Program Co-Director</h4>
+          <p style="font-size: 90%;">Business Analyst - New Directions Behavioral Health</p>
+        </section>
+        <section>
+          <h2>Kayla Hennegin</h2>
+          <img src="images/kayla.png" alt="Kayla Hennegin" height="460"/>
+          <h4>Curriculum Director</h4>
+          <p style="font-size: 90%;">Principal Software Engineer - RMS</p>
+        </section>
+        <section>
+          <h2>Lyndsey Padget</h2>
+          <img src="images/lyndsey.png" alt="Lyndsey Padget" height="460"/>
+          <h4>Presentation Director</h4>
+          <p style="font-size: 90%;">Senior Software Engineer - Freightview</p>
+        </section>
+        <section>
+          <h2>Join us on...</h2>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <div style="position: fixed; left:-250px; width: 1500px;">
+            <img src="images/slack-1.png" width="280" class="fragment"/>
+            <img src="images/slack-2.png" width="280" class="fragment"/>
+            <img src="images/slack-3.png" width="280" class="fragment"/>
+            <img src="images/slack-4.jpg" width="280" class="fragment"/>
+          </div>
+        </section>
+        <section>
+          <h1>Tonight's Agenda: CSS</h1>
+          <ol>
+            <li class="fragment">The Basics
+              <ol style="margin: 0 0 0 60px;" type="a">
+                <li class="fragment">TODO</li>
+              </ol>
+            </li>
+            <li class="fragment">TODO</li>
+          </ol>
+        </section>
+        <section>
+          <h1>The Basics</h1>
+          <br>
+          <img src="images/01-jan/basics.jpg" alt="Basics" height="85%" width="85%"/>
+        </section>
+        <section>
+          <h1>What is CSS?</h1>
+          <br><br>
+          <p class="fragment">
+            <font style="color:#c7bc75">C</font>ascading
+            <font style="color:#c7bc75">S</font>tyle
+            <font style="color:#c7bc75">S</font>heets
+          </p>
+          <br>
+          <p class="fragment">
+            Applies visual affects to the content
+          </p>
+          <br>
+          <p class="fragment">
+            Indicates style (font, color, size)
+          </p>
+        </section>
+        <section>
+          <h2>Questions?</h2>
+          <img src="images/questions.gif" alt="Questions" height="100%" width="100%"/>
+        </section>
+        <section>
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Wifi: username / password
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCFebSlides">http://bit.ly/CnCFebSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCFebWork">http://bit.ly/CnCFebWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol>
+            <li class="fragment">Find a buddy</li>
+            <li class="fragment">Take the <a href="http://bit.ly/CnCFeedback" target="_blank">Survey</a></li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCFebWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=CSS+tutorial" target="_blank">online tutorial on CSS</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -120px;" />
+        </section>
+      </div>
+    </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
