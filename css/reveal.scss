@@ -1409,3 +1409,13 @@ html:-moz-full-screen-ancestor {
 .zoomed .reveal .roll span:after {
 	visibility: hidden;
 }
+
+.abs {
+	position:absolute;
+	top:100px;
+	left:-150px;
+	height: inherit;
+	width: 1200px;
+	margin: 0px;
+	padding: 0px;
+}
