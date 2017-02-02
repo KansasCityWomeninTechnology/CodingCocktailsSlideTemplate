@@ -1,0 +1,1034 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Feb - Intro to CSS - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails CSS course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="CSS - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails CSS course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails CSS course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div style="position: absolute;left: -80px; top:0px;">
+            <font style="font-size: 0.6em">
+              <a href="http://bit.ly/CnCIndex">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                All Months
+              </a>
+            </font>
+          </div>
+          <h1>While You're Waiting</h1>
+          <p>
+            <br>
+            Wifi: username / password
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCFebSlides">http://bit.ly/CnCFebSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCFebWork">http://bit.ly/CnCFebWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+         <h1>Intro to CSS</h1>
+         <img src="images/logo-large.png" alt="Coding &amp; Cocktails" width="95%" height="95%"/>
+        </section>
+        <section>
+         <h1>Our Host this Evening</h1>
+         <a href="http://www.vml.com" target="_blank"><img src="images/vml-logo.png" alt="VML" width="80%" height="80%" style="padding-top: 30px;"/></a>
+        </section>
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <img src="images/group.png" alt="Cocktails Leadership" height="570"/>
+        </section>
+        <section>
+          <h2>Gabi Dombrowski</h2>
+          <img src="images/gabi.jpg" alt="Gabi Dombrowski" height="460"/>
+          <h4>Program Director</h4>
+          <p style="font-size: 90%;">Developer - Alt Legal</p>
+        </section>
+        <section>
+          <h2>Tamara Copple</h2>
+          <img src="images/tamara.png" alt="Tamara Copple" height="460"/>
+          <h4>Program Co-Director</h4>
+          <p style="font-size: 90%;">Business Analyst - New Directions Behavioral Health</p>
+        </section>
+        <section>
+          <h2>Kayla Hennegin</h2>
+          <img src="images/kayla.png" alt="Kayla Hennegin" height="460"/>
+          <h4>Curriculum Director</h4>
+          <p style="font-size: 90%;">Principal Software Engineer - RMS</p>
+        </section>
+        <section>
+          <h2>Lyndsey Padget</h2>
+          <img src="images/lyndsey.png" alt="Lyndsey Padget" height="460"/>
+          <h4>Presentation Director</h4>
+          <p style="font-size: 90%;">Senior Software Engineer - Freightview</p>
+        </section>
+        <section>
+          <h2>Join us on...</h2>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <div style="position: fixed; left:-250px; width: 1500px;">
+            <img src="images/02-feb/slack-1.png" width="280" class="fragment"/>
+            <img src="images/02-feb/slack-2.png" width="280" class="fragment"/>
+            <img src="images/02-feb/slack-3.png" width="280" class="fragment"/>
+            <img src="images/02-feb/slack-4.png" width="280" class="fragment"/>
+          </div>
+        </section>
+        <section>
+            <h2>Laura Wagner</h2>
+            <img src="images/laura.png" alt="Laura Wagner" height="460"/>
+            <h4>Craft Cocktail Extraordinaire</h4>
+          </section>
+        <section>
+          <h1>Tonight's Agenda: CSS</h1>
+          <ol>
+            <li class="fragment">The Basics</li>
+            <li class="fragment">CSS Compilers</li>
+            <li class="fragment">CSS Concepts</li>
+            <li class="fragment">Grouping &amp; Special Selectors</li>
+            <li class="fragment">Boxes</li>
+            <li class="fragment">Layout</li>
+            <li class="fragment">Text</li>
+            <li class="fragment">Media Queries &amp; Responsive Websites</li>
+            <li class="fragment">Organization &amp; Best Practices</li>
+            <li class="fragment">Fun things you can do with CSS3</li>
+            <li class="fragment">Resources</li>
+          </ol>
+        </section>
+        <section>
+          <h1>Disclaimer</h1>
+          <img src="images/02-feb/peter-griffin.gif" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>The Basics</h1>
+          <img src="images/02-feb/basics.jpg" alt="Basics" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>What is CSS?</h1>
+          <br><br>
+          <p class="fragment">
+            <font style="color:#c7bc75">C</font>ascading
+            <font style="color:#c7bc75">S</font>tyle
+            <font style="color:#c7bc75">S</font>heets
+          </p>
+          <br>
+          <p class="fragment">
+            Controls how elements <i>look</i>
+          </p>
+          <br>
+          <p class="fragment">
+            Indicates style (font, color, size)
+          </p>
+          <br>
+          <p class="fragment">
+            CSS3 is the latest version of CSS
+          </p>
+        </section>
+        <section>
+          <h2>Why do we care?</h2>
+					<div class="fragment current-visible abs">
+						<img src="images/02-feb/kim-before-and-after.jpg" height="70%" width="70%"/>
+				  </div>
+					<div class="fragment current-visible abs">
+						<img src="images/02-feb/solo-cup.jpg" height="90%" width="90%"/>
+				  </div>
+					<div class="fragment current-visible abs">
+						<img src="images/02-feb/css-before-and-after.png" height="100%" width="100%"/>
+				  </div>
+					<div class="fragment current-visible abs">
+						<img src="images/02-feb/css-before-and-after-2.png" height="100%" width="100%"/>
+				  </div>
+        </section>
+        <section>
+          <h2>CSS Syntax</h2>
+          <p class="fragment" style="position: relative; left:-100px; width: 1200px;">
+            <code>&lt;img src="images/02-feb/channing.gif" class="awesome" id="vogue"/&gt;</code>
+          </p>
+          <br>
+          <p class="fragment" style="position: relative; left:-100px; width: 1200px; text-align:left; padding-bottom: 10px;">
+            Element<br>
+              <code>img { border: 10px solid black; }</code>
+          </p>
+          <p class="fragment" style="position: relative; left:-100px; width: 1200px; text-align:left; padding-bottom: 10px;">
+            Class<br>
+              <code>.awesome { border-top-color: #666; border-left-color: #999; }</code>
+          </p>
+          <p class="fragment" style="position: relative; left:-100px; width: 1200px; text-align:left; padding-bottom: 10px;">
+            ID<br>
+              <code>#vogue { box-shadow: 0px 15px 15px rgba(0,0,0,0.3); }</code>
+          </p>
+        </section>
+        <section>
+          <h2>How to Vogue</h2>
+          <img src="images/02-feb/channing.gif" height="100%" width="100%" style="border: 10px solid black; border-top-color: #666; border-left-color: #999; box-shadow: 0px 15px 15px rgba(0,0,0,0.3);"/>
+        </section>
+        <section>
+          <h2>Semantic Class Names &amp; IDs</h2>
+          <br>
+          <p class="fragment" style="text-align: left; padding-top: 20px;">
+            Give a name that describes what the element <i>is</i>
+          </p>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            Why?<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Provides clearer meaning<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Makes maintenance easier
+          </p>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            '.white-nav' might sense on desktop...<br>
+            <div class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but not on mobile, when the nav is 'blue'</div>
+          </p>
+        </section>
+        <section>
+          <h2>WAT</h2>
+          <img src="images/02-feb/wat.gif " height="90%" width="90%"/>
+        </section>
+        <section>
+          <h2>Units of Measurement</h2>
+          <p class="fragment" style="text-align: left;">
+            Absolute
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">- Pixels [px]</li>
+              <li class="fragment">- Others... but not as common</li>
+            </ol>
+          </p>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            Relative
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">- Percent [%]</li>
+              <li class="fragment">- rem/em</li>
+              <li class="fragment">- vh/vw</li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h2>
+            <font style="color:red;">C</font><font style="color:orange;">O</font><font style="color:yellow;">L</font><font style="color:lightgreen;">O</font><font style="color:blue;">R</font><font style="color:indigo;">S</font>
+          </h2>
+					<div class="fragment current-visible abs">
+            <img src="images/02-feb/gimp-color-chooser.png" height="65%" width="65%"/>
+				  </div>
+          <div class="fragment current-visible abs">
+            <img src="images/02-feb/hex-explanation.png" height="63%" width="63%"/>
+          </div>
+          <div class="fragment current-visible abs">
+            <code style="background-color:#ff6600">
+                &lt;body bgcolor="#ff6600"&gt;<br>
+                &lt;/body&gt;
+            </code>
+            <code style="background-color:#f60">
+                &lt;body bgcolor="#f60"&gt;<br>
+                &lt;/body&gt;
+            </code>
+            <code style="background-color:orange">
+                &lt;body bgcolor="orange"&gt;<br>
+                &lt;/body&gt;
+            </code>
+            <code style="background-color:white">
+              <font color="black">
+                &lt;font color='chucknorris'&gt;<font color="chucknorris">Redish</font>&lt;/font&gt;<br>
+                &lt;font color='#c00000'&gt;<font color="#c00000">Same as above</font>&lt;/font&gt;<br>
+                &lt;span style="color: chucknorris"&gt;<span style="color:chucknorris">Black</span>&lt;/span&gt;
+              </font>
+            </code>
+          </div>
+        </section>
+        <section>
+          <h2>Properties</h2>
+          <br><br>
+          <p class="fragment">
+            > 300 different properties in CSS
+          </p>
+          <br><br>
+          <p class="fragment">
+            Each has many valid values
+          </p>
+          <br><br>
+          <p class="fragment" style="font-size:85%;">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">developer.mozilla.org/en-US/docs/Web/CSS/Reference</a>
+          </p>
+        </section>
+        <section>
+          <h1>CSS Compilers</h1>
+          <img src="images/02-feb/compilers.gif" alt="Compilers" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>What is a CSS Compiler?</h1>
+          <br><br>
+          <p class="fragment">
+            (a.k.a. pre- and post- processors)
+          </p>
+          <br>
+          <p class="fragment">
+            Allows you to write faster &amp; cleaner CSS
+          </p>
+          <br>
+          <p class="fragment">
+            But Browsers only support CSS...
+          </p>
+          <p class="fragment">
+            so you use a different syntax and compile it!
+          </p>
+        </section>
+        <section>
+          <h1>Pre-processed code -> CSS</h1>
+          <br>
+          <img src="images/02-feb/wonder-woman.gif" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>Why Sass?</h1>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            Several pre-processors to choose from
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">- Less</li>
+              <li class="fragment">- Stylus</li>
+              <li class="fragment">- Sass</li>
+            </ol>
+          </p>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            Each are slightly different (features &amp; syntax)
+          </p>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            Sass is the most common
+          </p>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            Sass offers syntax flexibility based on file ext...
+          </p>
+        </section>
+        <section>
+          <h1>Sass file extensions</h1>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            .sass
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">- No curly braces or semi-colons</li>
+              <li class="fragment">- So indentation is important!</li>
+              <li class="fragment">- Older version of Sass</li>
+            </ol>
+          </p>
+          <br>
+          <p class="fragment" style="text-align: left;">
+            .scss ("Sassy CSS")
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">- Looks more similar to CSS</li>
+              <li class="fragment">- Any file: .css -> .scss</li>
+              <li class="fragment">- Newer version of Sass</li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Sass Superpowers</h1>
+          <br>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">- Variables</li>
+              <li class="fragment">- Nesting</li>
+              <li class="fragment">- Math</li>
+              <li class="fragment">- @import</li>
+              <li class="fragment">- Mixins</li>
+              <li class="fragment">- Minification</li>
+              <li class="fragment">- Loops</li>
+              <li class="fragment">- <font style="color: red;">@extend</font></li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>CSS Concepts</h1>
+          <img src="images/02-feb/concepts.jpg" alt="Concepts" height="62%" width="62%"/>
+        </section>
+        <section>
+          <h1>Something to get you started</h1>
+            <p data-height="600" data-theme-id="0" data-slug-hash="PWjRzG" data-default-tab="result" data-user="CodingCocktailsKC" data-embed-version="2" data-pen-title="CSS Practice" class="codepen">See the Pen <a href="http://codepen.io/CodingCocktailsKC/pen/PWjRzG/">CSS Practice</a> by Coding&CocktailsKC (<a href="http://codepen.io/CodingCocktailsKC">@CodingCocktailsKC</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <h1>Include CSS in your project</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; list-style: none;">
+              <li class="fragment">
+                Link to CSS file
+                <code style="width: 1050px; font-size: 50%;">&lt;link rel="stylesheet" type="text/css" href="mystyles.css" media="screen" /&gt;</code>
+              </li>
+              <li class="fragment">
+                Import a CSS file from another CSS file
+                <code style="font-size: 50%;">@import "newstyles.css";</code>
+              </li>
+              <li class="fragment">
+                Embed the CSS
+                <code style="font-size: 50%;">
+                  &lt;style media="screen" type="text/css"&gt;<br>
+                    ...<br>
+                  &lt;style&gt;
+                </code>
+              </li>
+              <li class="fragment">
+                Add Inline CSS to HTML
+                <code style="font-size: 50%;">&lt;h2 style="color:red;background:black;"&gt;Hello&lt;/h2&gt;</code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Rules for Cascading</h1>
+          <div data-fragment-index="0" style="position: fixed; left: -170px; top: 100px;">
+            <img src="images/02-feb/cascade.jpg" alt="Cascade" height="90%" width="90%"/>
+          </div>
+          <br>
+          <div data-fragment-index="0" style="position: fixed; left: 280px; top: 140px; width: 900px;">
+            <p class="fragment" style="text-align: left;">
+              It's a hierarchy: Order of CSS rules matter
+            </p>
+            <p style="text-align: left;">
+              <ol style="text-align: left; padding-left: 60px; list-style: none;">
+                <li class="fragment">- Source Order (Later rules > earlier rules)</li>
+                <li class="fragment">- Specificity</li>
+                <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Element selectors</li>
+                <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Class selectors</li>
+                <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ID selectors</li>
+                <li class="fragment">- <font style="color: red;">!important</font></li>
+              </ol>
+            </p>
+          </div>
+        </section>
+        <section>
+          <h1>Inheritance, Comments, <br>&amp; Browser Prefixes</h1>
+          <br>
+          <code style="font-size: 54%;" class="fragment">
+            html { font-size: 75%; } /* 75% of default (16px) = 12px */<br><br>
+            h1 { font-size: 300%; } /* 300% of 12px = 36px */<br><br>
+            p { background: inherit; }
+          </code>
+          <br>
+          <code style="font-size: 54%;" class="fragment">
+            -webkit-transition: all 4s ease;<br>
+            -moz-transition: all 4s ease;<br>
+            -ms-transition: all 4s ease;<br>
+            -o-transition: all 4s ease;<br>
+            transition: all 4s ease;
+          </code>
+        </section>
+        <section>
+          <h1>Grouping &amp; Special Selectors</h1>
+          <img src="images/02-feb/groupings-selectors.jpg" alt="Groupings &amp; Selectors" width="100%"/>
+        </section>
+        <section>
+          <h1>Grouping Selectors</h1>
+          <br>
+          <code class="fragment">
+            &lt;h1 id="one" class="two"&gt;This Should Be Red&lt;/h1&gt;<br>
+            #one.two { color: red; }
+          </code>
+          <code class="fragment">
+            &lt;h1 class="three four"&gt;Double Class&lt;/h1&gt;<br>
+            .three.four { color: red; }
+          </code>
+          <code class="fragment">
+            &lt;h1 id="one" class="two"&gt;This Should Be Red&lt;/h1&gt;<br>
+            #one.two { color: red; }
+          </code>
+          <code class="fragment">
+            .snippet#header.code.red { color: red; }
+          </code>
+          <code class="fragment">
+            p, div { font-size: 20px; }
+          </code>
+        </section>
+        <section>
+          <h1>Special Selectors</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                Children
+                <code>div > p { background-color: yellow; }</code>
+              </li>
+              <li class="fragment">
+                Descendant
+                <code>div p { background-color: yellow; }</code>
+              </li>
+              <li class="fragment">
+                Adjacent [Siblings]
+                <code>div + p { background-color: yellow; }</code>
+              </li>
+              <li class="fragment">
+                Attribute
+                <code>a[target="_blank"] { background-color: yellow; }</code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Pseudo Classes</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                <code>
+                  /* unvisited link */<br>
+                  a:link {<br>
+                  &nbsp;&nbsp;color: #FF0000;<br>
+                  }<br>
+                  <br>
+                  /* visited link */<br>
+                  a:visited {<br>
+                  &nbsp;&nbsp;color: #00FF00;<br>
+                  }<br>
+                  <br>
+                  /* mouse over link */<br>
+                  a:hover {<br>
+                  &nbsp;&nbsp;color: #FF00FF;<br>
+                  }<br>
+                  <br>
+                  /* selected link */<br>
+                  a:active {<br>
+                  &nbsp;&nbsp;color: #0000FF;<br>
+                  }
+                </code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Pseudo Elements</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
+              <li class="fragment">
+                Uses double colons
+              </li>
+              <br>
+              <li class="fragment">
+                Introduced in CSS3
+              </li>
+              <br>
+              <li class="fragment">
+                Older browsers only support single colon
+              </li>
+              <br>
+              <li class="fragment">
+                <code>
+                  :before / ::before<br>
+                  :after / ::after<br>
+                  :placeholder / ::placeholder
+                </code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Boxes</h1>
+          <img src="images/02-feb/boxes.jpg" alt="Boxes" height="90%" width="90%"/>
+        </section>
+        <section>
+          <h1>Box Model</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                Height, width, padding, margin
+                <font style="font-size:90%">
+                  <code>
+                    #div1 {<br>
+                    &nbsp;&nbsp;width: 300px;<br>
+                    &nbsp;&nbsp;padding: 25px;<br>
+                    &nbsp;&nbsp;margin: 25px;<br>
+                    }<br><br>
+                    #div2 {<br>
+                    &nbsp;&nbsp;width: 80%;<br>
+                    &nbsp;&nbsp;padding: 60px 0px 25px 0px;<br>
+                    &nbsp;&nbsp;margin: 25px 8px;<br>
+                    }
+                  </code>
+                </font>
+              </li>
+              <br>
+              <li class="fragment">
+                Content
+                <code>#myDiv { content: "Hello world!"; }</code>
+              </li>
+              <br>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Box Effects</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment" style="padding-top: 10px;">
+                Backgrounds
+                <code>body { background-image: url("whatever.png"); }</code>
+              </li>
+              <li class="fragment" style="padding-top: 10px;">
+                Borders
+                <code>
+                  p.dashed {<br>
+                  &nbsp;&nbsp;border-style: dashed;<br>
+                  &nbsp;&nbsp;border-width: 5px;<br>
+                  &nbsp;&nbsp;border-color: red;<br>
+                  }
+                </code>
+              </li>
+              <li class="fragment" style="padding-top: 10px;">
+                Shadows
+                <code>div { box-shadow: 10px 10px 5px #888888; }</code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Layout</h1>
+          <br>
+          <h1 style="position: fixed; top: 100px;"><img src="images/02-feb/layout.jpg" alt="Layout" width="1400px" height="480px"/></h1>
+        </section>
+        <section>
+          <h1>Types of Layouts</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                Display / Inline
+                <code>
+                  { display: inline; }<br>
+                  { visibility: hidden; }
+                </code>
+              </li>
+              <li class="fragment">
+                Padding / Margin
+                <code>{ padding: 25px 50px; }</code>
+              </li>
+              <li class="fragment">
+                Float, Position &amp; Flexbox
+                <font style="font-size:96%"><code>{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
+              </li>
+              <li class="fragment">
+                Z-Index
+                <code>{ z-index: -1; }</code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Text</h1>
+          <img src="images/02-feb/text.jpg" alt="Text" height="75%" width="75%"/>
+        </section>
+        <section>
+          <h1>Common Text CSS Properties</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                color
+                <code>{ color: green; }</code>
+              </li>
+              <li class="fragment">
+                text-align (left, right, center, justify)
+                <code>{ text-align: center; }</code>
+              </li>
+              <li class="fragment">
+                font-size
+                <code>{ font-size: 18px; }</code>
+              </li>
+              <li class="fragment">
+                font-family
+                <code>{ font-family: "Mr Roboto", "Machina", "Impact", "Verdana", "Times"; }</code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>More about Font Family</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br><br>
+              <li class="fragment">
+                What is a Font Stack?
+              </li>
+              <br>
+              <li class="fragment">
+                "Preferred Font",<br>"Next best thing",<br>"Something common and sorta close",<br>"Similar Web-safe",<br>"Generic font"
+              </li>
+              <br>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Font Family Best Practices</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br><br>
+              <li class="fragment">
+                List at least 2-3
+              </li>
+              <br>
+              <li class="fragment">
+                But not more than 6-10
+              </li>
+              <br>
+              <li class="fragment">
+                Wrap font names in quotes
+                <code>
+                  <font style="color: red;">{ font-family: "Mr Roboto", Arial; }</font><br>
+                  <font style="color: green;">{ font-family: "Mr Roboto", "Arial"; }</font>
+                </code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Font Family Resources</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
+              <li class="fragment">
+                Web Safe:<br>
+                  &nbsp;&nbsp;- Arial / Helvetica<br>
+                  &nbsp;&nbsp;- Times New Roman / Times<br>
+                  &nbsp;&nbsp;- Courier New / Courier
+              </li>
+              <br>
+              <li class="fragment">
+                Web Fonts: <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>, <a href="https://typekit.com/" target="_blank">Typekit</a>
+              </li>
+              <br>
+              <li class="fragment">
+                Download: <a href="http://www.1001fonts.com" target="_blank">1001fonts.com</a>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Icons: Font-Awesome</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
+              <li class="fragment">
+                Multiple ways to get Font-Awesome...<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://fontawesome.io/get-started/" target="_blank">download or link to it</a>
+              </li>
+              <br>
+              <li class="fragment">
+                fa-whatever
+                <code>&lt;i class="fa fa-code"&gt;&lt;/i&gt;</code>
+                <p style="font-size: 60px; padding-left: 100px;">
+                  <i class="fa fa-code"></i>
+                </p>
+              </li>
+              <li class="fragment">
+                <code>&lt;i class="fa fa-facebook-official"&gt;&lt;/i&gt;</code>
+                <p style="font-size: 60px; padding-left: 100px;">
+                  <i class="fa fa-facebook-official"></i>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Media Queries &amp;<br>Responsive Websites</h1>
+          <img src="images/02-feb/media-queries.jpg" alt="Media Queries &amp; Responsive Websites" height="95%" width="95%"/>
+        </section>
+        <section>
+          <h1>Media Query Anatomy</h1>
+          <br>
+          <img src="images/02-feb/media-query-anatomy.png" height="100%" width="100%"/>
+          <a href="https://varvy.com/mobile/media-queries.html" target="_blank">varvy.com/mobile/media-queries.html</a>
+        </section>
+        <section>
+          <h1>Responsive Design</h1>
+          <img src="images/02-feb/responsive-example.jpg" height="98%" width="98%"/>
+        </section>
+        <section>
+          <h1>Organization &amp; Best Practices</h1>
+          <img src="images/02-feb/organization.jpg" alt="Organization" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>Remember...</h1>
+					<div class="fragment current-visible abs">
+            <img src="images/02-feb/beware-of-browsers.jpg" height="85%" width="85%"/><br>
+            Browsers treat CSS differently
+          </div>
+          <div class="fragment current-visible abs">
+            <p>
+              <br>
+              specificity wins (ie #myid p > p)
+              <br><br>
+            </p>
+          </div>
+          <div class="fragment current-visible abs">
+            <p>
+              <br>
+              specificity wins (ie #myid p > p)
+              <br><br>
+              <img src="images/02-feb/specificity.jpg" style="margin: 0px;"><br>
+              <font style="font-size: 70%; padding: 0px; margin: 0px;"><a href="http://specificity.keegan.st" target="_blank">specificity.keegan.st</a></font>
+            </p>
+          </div>
+        </section>
+        <section>
+          <h1>Organization</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
+              <li class="fragment">
+                Keep files organized!
+              </li>
+              <li class="fragment" style="color: darkred;">
+                SRSLY.
+              </li>
+              <br>
+              <li class="fragment">
+                Use lowercase &amp; hyphens (<a href="http://getbem.com/" target="_blank">BEM</a> or others?)
+                <code class="fragment">
+                  .myAwesomeDiv { } /* camel case */<br>
+                  .my-awesome-div { } /* kebab case */
+                </code>
+                <code class="fragment">
+                  .block--hidden { }<br>
+                  .block--mod .block__elem { }<br>
+                  .block__elem--mod { }
+                </code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Best Practices</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
+              <li class="fragment">
+                Use spaces
+                <code>
+                  <font style="color: green;">#myDiv {background-color:red; font-size: 14px;}</font><br><br>
+                  <font style="color: red;">#myDiv{background-color:red;font-size:14px;}</font>
+                </code>
+              </li>
+              <br>
+              <li class="fragment">
+                separate rules on new lines
+                <code>
+                  <font style="color: green;">
+                    #myDiv {<br>
+                    &nbsp;&nbsp;background-color:red;<br>
+                    &nbsp;&nbsp;font-size: 14px;<br>
+                    }
+                  </font><br><br>
+                  <font style="color: red;">#myDiv {background-color:red; font-size: 14px;}</font><br>
+                </code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Further Options</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
+              <li class="fragment">
+                Reset / Normalize<br>
+                <font style="font-size: 80%"><a href="https://the-pastry-box-project.net/oli-studholme/2013-june-3" target="_blank">the-pastry-box-project.net/oli-studholme/2013-june-3</a></font>
+              </li>
+              <br><br>
+              <li class="fragment">
+                Use base styles
+                <code>
+                  body, form {<br>
+                  &nbsp;&nbsp;margin: 0;<br>
+                  &nbsp;&nbsp;padding: 0;<br>
+                  }
+                </code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Fun Things you can do with CSS</h1>
+          <img src="images/02-feb/fun.jpg" alt="Fun" height="47%" width="47%"/>
+          <!--
+            This is called the "Wakey, Wakey, Mary, Eggs and Bacey"
+            Served at Chapel Tavern in Reno, Nevada on their "hair of the dog" cocktail menu
+            It comprises a basic Bloody Mary with the addition of:
+            hot sauce, Irish stout, a garnish of pickled vegetables, bacon, quail eggs, and a grilled cheese sandwich
+          -->
+        </section>
+        <section>
+          <h1>Things like this...</h1>
+          <img src="images/02-feb/simpsons.gif" height="100%" width="100%"/>
+          <a href="http://pattle.github.io/simpsons-in-css" target="_blank">
+            pattle.github.io/simpsons-in-css
+          </a>
+        </section>
+        <section>
+          <h1>Or this...</h1>
+          <img src="images/02-feb/wow-js.gif" height="100%" width="100%"/>
+          <a href="http://mynameismatthieu.com/WOW" target="_blank">
+            mynameismatthieu.com/WOW
+          </a>
+        </section>
+        <section>
+          <h1>Or even this...</h1>
+          <img src="images/02-feb/pong.gif" height="74%" width="74%"/>
+          <font style="font-size: 89%">
+            <a href="https://www.sitepoint.com/css3-pong-insane-things-to-do-with-css" target="_blank">
+              sitepoint.com/css3-pong-insane-things-to-do-with-css
+            </a>
+          </font>
+        </section>
+        <section>
+          <h1>Gateway to fun</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
+              <li class="fragment">
+                Manipulations
+                <code>$('#myDiv').addClass('blueBorder');</code>
+              </li>
+              <br>
+              <li class="fragment">
+                Animations
+                <code>
+                  #basicSlider {-webkit-transition: 1s ease-in width;}<br><br>
+                  #myAwesomeSlider {animation: mymove 5s infinite;}<br><br>
+                  @keyframes mymove {<br>
+                  &nbsp;&nbsp;from {top: 0px;}<br>
+                  &nbsp;&nbsp;to {top: 200px;}<br>
+                  }
+                </code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Resources</h1>
+          <br>
+          <p class="fragment">
+            Hone your skills with CSS Diner: <a href="http://flukeout.github.io" target="_blank">flukeout.github.io</a><br>
+          </p>
+          <br>
+          <p class="fragment">
+            Font families with Google fonts: <a href="http://www.google.com/fonts" target="_blank">google.com/fonts</a>
+          </p>
+          <br>
+          <p class="fragment">
+            Flex your Flexbox skills: <br><a href="http://flexboxfroggy.com" target="_blank">flexboxfroggy.com</a>
+          </p>
+          <br>
+          <p class="fragment">
+            Browser Compatibility: <br><a href="http://caniuse.com" target="_blank">caniuse.com</a>
+          </p>
+        </section>
+        <section>
+          <h1>Questions?</h1>
+          <img src="images/02-feb/questions.gif" alt="Questions" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Wifi: username / password
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCFebSlides">http://bit.ly/CnCFebSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCFebWork">http://bit.ly/CnCFebWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol>
+            <li class="fragment">Find a buddy</li>
+            <li class="fragment">Take the <a href="http://bit.ly/CnCFeedback" target="_blank">Survey</a></li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCFebWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=CSS+tutorial" target="_blank">online tutorial on CSS</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -120px;" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="images/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="images/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
+          <br><br>
+          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+        </section>
+      </div>
+    </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
