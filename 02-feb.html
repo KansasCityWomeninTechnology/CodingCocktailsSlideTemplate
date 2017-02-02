@@ -134,6 +134,10 @@
           </ol>
         </section>
         <section>
+          <h1>Disclaimer</h1>
+          <img src="images/02-feb/peter-griffin.gif" height="80%" width="80%"/>
+        </section>
+        <section>
           <h1>The Basics</h1>
           <img src="images/02-feb/basics.jpg" alt="Basics" height="80%" width="80%"/>
         </section>
@@ -379,41 +383,69 @@
         </section>
         <section>
           <h1>Include CSS in your project</h1>
-          <code><!--TODO--></code>
-        </section>
-        <section>
-          <h1>It's a Cascade</h1>
-          <img src="images/02-feb/cascade.jpg" alt="Cascade" height="42%" width="42%"/>
-        </section>
-        <section>
-          <h1>Rules for Cascading</h1>
-          <br>
-          <p class="fragment" style="text-align: left;">
-            It's a hierarchy: Order of CSS rules matter
-          </p>
           <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment">- Source Order</li>
-              <li class="fragment">- Later rules > earlier rules</li>
-              <li class="fragment">- Specificity</li>
-              <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Element selectors</li>
-              <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Class selectors</li>
-              <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ID selectors</li>
-              <li class="fragment">- <font style="color: red;">!important</font></li>
+            <ol style="text-align: left; list-style: none;">
+              <li class="fragment">
+                Link to CSS file
+                <code style="width: 1050px; font-size: 50%;">&lt;link rel="stylesheet" type="text/css" href="mystyles.css" media="screen" /&gt;</code>
+              </li>
+              <li class="fragment">
+                Import a CSS file from another CSS file
+                <code style="font-size: 50%;">@import "newstyles.css";</code>
+              </li>
+              <li class="fragment">
+                Embed the CSS
+                <code style="font-size: 50%;">
+                  &lt;style media="screen" type="text/css"&gt;<br>
+                    ...<br>
+                  &lt;style&gt;
+                </code>
+              </li>
+              <li class="fragment">
+                Add Inline CSS to HTML
+                <code style="font-size: 50%;">&lt;h2 style="color:red;background:black;"&gt;Hello&lt;/h2&gt;</code>
+              </li>
             </ol>
           </p>
         </section>
         <section>
-          <h1>Inheritance</h1>
-          <code><!--TODO--></code>
+          <h1>Rules for Cascading</h1>
+          <div data-fragment-index="0" style="position: fixed; left: -170px; top: 100px;">
+            <img src="images/02-feb/cascade.jpg" alt="Cascade" height="90%" width="90%"/>
+          </div>
+          <br>
+          <div data-fragment-index="0" style="position: fixed; left: 280px; top: 140px; width: 900px;">
+            <p class="fragment" style="text-align: left;">
+              It's a hierarchy: Order of CSS rules matter
+            </p>
+            <p style="text-align: left;">
+              <ol style="text-align: left; padding-left: 60px; list-style: none;">
+                <li class="fragment">- Source Order (Later rules > earlier rules)</li>
+                <li class="fragment">- Specificity</li>
+                <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Element selectors</li>
+                <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Class selectors</li>
+                <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ID selectors</li>
+                <li class="fragment">- <font style="color: red;">!important</font></li>
+              </ol>
+            </p>
+          </div>
         </section>
         <section>
-          <h1>Comments</h1>
-          <code><!--TODO--></code>
-        </section>
-        <section>
-          <h1>Browser Prefixes</h1>
-          <code><!--TODO--></code>
+          <h1>Inheritance, Comments, <br>&amp; Browser Prefixes</h1>
+          <br>
+          <code style="font-size: 54%;" class="fragment">
+            html { font-size: 75%; } /* 75% of default (16px) = 12px */<br><br>
+            h1 { font-size: 300%; } /* 300% of 12px = 36px */<br><br>
+            p { background: inherit; }
+          </code>
+          <br>
+          <code style="font-size: 54%;" class="fragment">
+            -webkit-transition: all 4s ease;<br>
+            -moz-transition: all 4s ease;<br>
+            -ms-transition: all 4s ease;<br>
+            -o-transition: all 4s ease;<br>
+            transition: all 4s ease;
+          </code>
         </section>
         <section>
           <h1>Grouping &amp; Special Selectors</h1>
