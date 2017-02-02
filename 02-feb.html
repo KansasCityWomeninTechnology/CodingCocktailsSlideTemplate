@@ -567,47 +567,112 @@
           <img src="images/02-feb/responsive-example.jpg" height="98%" width="98%"/>
         </section>
         <section>
-          <h1>Organization &amp;Best Practices</h1>
+          <h1>Organization &amp; Best Practices</h1>
           <img src="images/02-feb/organization.jpg" alt="Organization" height="80%" width="80%"/>
         </section>
         <section>
-          <h1>Common Text CSS Properties</h1>
+          <h1>Remember...</h1>
+					<div class="fragment current-visible abs">
+            <img src="images/02-feb/beware-of-browsers.jpg" height="85%" width="85%"/><br>
+            Browsers treat CSS differently
+          </div>
+          <div class="fragment current-visible abs">
+            <p>
+              <br>
+              specificity wins (ie #myid p > p)
+              <br><br>
+            </p>
+          </div>
+          <div class="fragment current-visible abs">
+            <p>
+              <br>
+              specificity wins (ie #myid p > p)
+              <br><br>
+              <img src="images/02-feb/specificity.jpg" style="margin: 0px;"><br>
+              <font style="font-size: 70%; padding: 0px; margin: 0px;"><a href="http://specificity.keegan.st" target="_blank">specificity.keegan.st</a></font>
+            </p>
+          </div>
+        </section>
+        <section>
+          <h1>Organization</h1>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
               <li class="fragment">
-                CSS Reset? / Normalize
-                <code><!--TODO--></code>
+                Keep files organized!
               </li>
+              <li class="fragment" style="color: darkred;">
+                SRSLY.
+              </li>
+              <br>
               <li class="fragment">
-                Base Styles
-                <code><!--TODO--></code>
+                Use lowercase &amp; hyphens (<a href="http://getbem.com/" target="_blank">BEM</a> or others?)
+                <code class="fragment">
+                  .myAwesomeDiv { } /* camel case */<br>
+                  .my-awesome-div { } /* kebab case */
+                </code>
+                <code class="fragment">
+                  .block--hidden { }<br>
+                  .block--mod .block__elem { }<br>
+                  .block__elem--mod { }
+                </code>
               </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Best Practices</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
               <li class="fragment">
-                File Organization
-                <code><!--TODO--></code>
+                Use spaces
+                <code>
+                  <font style="color: green;">#myDiv {background-color:red; font-size: 14px;}</font><br><br>
+                  <font style="color: red;">#myDiv{background-color:red;font-size:14px;}</font>
+                </code>
               </li>
-              <li class="fragment">
-                Lowercase / hyphens (BEM? Or other?)
-                <code><!--TODO--></code>
-              </li>
-              <li class="fragment">
-                space after colon
-                <code><!--TODO--></code>
-              </li>
+              <br>
               <li class="fragment">
                 separate rules on new lines
-                <code><!--TODO--></code>
+                <code>
+                  <font style="color: green;">
+                    #myDiv {<br>
+                    &nbsp;&nbsp;background-color:red;<br>
+                    &nbsp;&nbsp;font-size: 14px;<br>
+                    }
+                  </font><br><br>
+                  <font style="color: red;">#myDiv {background-color:red; font-size: 14px;}</font><br>
+                </code>
               </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Further Options</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
               <li class="fragment">
-                specificity wins (ie #myid p > p)
-                <code><!--TODO--></code>
+                Reset / Normalize<br>
+                <font style="font-size: 80%"><a href="https://the-pastry-box-project.net/oli-studholme/2013-june-3" target="_blank">the-pastry-box-project.net/oli-studholme/2013-june-3</a></font>
+              </li>
+              <br><br>
+              <li class="fragment">
+                Use base styles
+                <code>
+                  body, form {<br>
+                  &nbsp;&nbsp;margin: 0;<br>
+                  &nbsp;&nbsp;padding: 0;<br>
+                  }
+                </code>
               </li>
             </ol>
           </p>
         </section>
         <section>
           <h1>Fun Things you can do with CSS</h1>
-          <img src="images/02-feb/fun.jpg" height="47%" width="47%"/>
+          <img src="images/02-feb/fun.jpg" alt="Fun" height="47%" width="47%"/>
           <!--
             This is called the "Wakey, Wakey, Mary, Eggs and Bacey"
             Served at Chapel Tavern in Reno, Nevada on their "hair of the dog" cocktail menu
@@ -680,11 +745,6 @@
           <p class="fragment">
             Browser Compatibility: <br><a href="http://caniuse.com" target="_blank">caniuse.com</a>
           </p>
-        </section>
-        <section>
-          <h1>One last note</h1>
-          <br>
-          <img src="images/02-feb/beware-of-browsers.jpg" height="100%" width="100%"/>
         </section>
         <section>
           <h1>Questions?</h1>
