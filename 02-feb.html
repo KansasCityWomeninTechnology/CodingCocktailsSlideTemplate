@@ -437,7 +437,12 @@
               </li>
               <li class="fragment">
                 Adjacent [Siblings]
-                <code><!--TODO--></code>
+                <code>
+                  <font style="font-size: 98%">
+                    &lt;img src="photo1.jpg"/&gt;&lt;span class="caption"&gt;Hey&lt;/span&gt;<br>
+                    img + span.caption { font-style: italic; }
+                  </font>
+                </code>
               </li>
               <li class="fragment">
                 Attribute
@@ -455,28 +460,56 @@
           <img src="images/02-feb/boxes.jpg" alt="Boxes" height="90%" width="90%"/>
         </section>
         <section>
-          <h1>Box models</h1>
+          <h1>Box Model</h1>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment">
-                Box Model - content, padding, border, margin
-                <code><!--TODO--></code>
+                Height, width, padding, margin
+                <font style="font-size:90%">
+                  <code>
+                    #div1 {<br>
+                    &nbsp;&nbsp;width: 300px;<br>
+                    &nbsp;&nbsp;padding: 25px;<br>
+                    &nbsp;&nbsp;margin: 25px;<br>
+                    }<br><br>
+                    #div2 {<br>
+                    &nbsp;&nbsp;width: 80%;<br>
+                    &nbsp;&nbsp;padding: 60px 0px 25px 0px;<br>
+                    &nbsp;&nbsp;margin: 25px 8px;<br>
+                    }
+                  </code>
+                </font>
               </li>
+              <br>
               <li class="fragment">
+                Content
+                <code>#myDiv { content: "Hello world!"; }</code>
+              </li>
+              <br>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Box Effects</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment" style="padding-top: 10px;">
                 Backgrounds
-                <code><!--TODO--></code>
+                <code>body { background-image: url("whatever.png"); }</code>
               </li>
-              <li class="fragment">
-                Adjacent [Siblings]
-                <code><!--TODO--></code>
-              </li>
-              <li class="fragment">
+              <li class="fragment" style="padding-top: 10px;">
                 Borders
-                <code><!--TODO--></code>
+                <code>
+                  p.dashed {<br>
+                  &nbsp;&nbsp;border-style: dashed;<br>
+                  &nbsp;&nbsp;border-width: 5px;<br>
+                  &nbsp;&nbsp;border-color: red;<br>
+                  }
+                </code>
               </li>
-              <li class="fragment">
+              <li class="fragment" style="padding-top: 10px;">
                 Shadows
-                <code><!--TODO--></code>
+                <code>div { box-shadow: 10px 10px 5px #888888; }</code>
               </li>
             </ol>
           </p>
@@ -492,19 +525,22 @@
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment">
                 Display / Inline
-                <code><!--TODO--></code>
+                <code>
+                  { display: inline; }<br>
+                  { visibility: hidden; }
+                </code>
               </li>
               <li class="fragment">
                 Padding / Margin
-                <code><!--TODO--></code>
+                <code>{ padding: 25px 50px; }</code>
               </li>
               <li class="fragment">
-                Floating, Positioning &amp; Flexing
-                <code><!--TODO--></code>
+                Float, Position &amp; Flexbox
+                <font style="font-size:96%"><code>{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
               </li>
               <li class="fragment">
                 Z-Index
-                <code><!--TODO--></code>
+                <code>{ z-index: -1; }</code>
               </li>
             </ol>
           </p>
@@ -519,19 +555,20 @@
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment">
                 color
-                <code>{color: green;}</code>
+                <code>{ color: green; }</code>
               </li>
               <li class="fragment">
                 text-align (left, right, center, justify)
-                <code>{text-align: center;}</code>
+                <code>{ text-align: center; }</code>
               </li>
               <li class="fragment">
                 font-size
-                <code>{font-size: 18px;}</code>
+                <code>{ font-size: 18px; }</code>
               </li>
               <li class="fragment">
                 font-family
-                <code>{font-family: Verdana;}</code>
+                <code>{ font-family: Verdana; }</code>
+                <!--TODO need more detail?-->
               </li>
             </ol>
           </p>
