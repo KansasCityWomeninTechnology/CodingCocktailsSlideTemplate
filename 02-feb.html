@@ -130,10 +130,10 @@
             <li class="fragment">CSS Compilers</li>
             <li class="fragment">CSS Concepts</li>
             <li class="fragment">Grouping &amp; Special Selectors</li>
-            <li class="fragment">Boxes</li>
-            <li class="fragment">Layout</li>
             <li class="fragment">Text</li>
             <li class="fragment">Media Queries &amp; Responsive Websites</li>
+            <li class="fragment">Boxes</li>
+            <li class="fragment">Layout</li>
             <li class="fragment">Organization &amp; Best Practices</li>
             <li class="fragment">Fun things you can do with CSS3</li>
             <li class="fragment">Resources</li>
@@ -245,6 +245,10 @@
               <li class="fragment">- rem/em</li>
               <li class="fragment">- vh/vw</li>
             </ol>
+          </p>
+          <br>
+          <p class="fragment" style="text-align:left;">
+            <a href="https://www.sitepoint.com/look-at-length-units-in-css/" target="_blank">sitepoint.com/look-at-length-units-in-css</a>
           </p>
         </section>
         <section>
@@ -371,14 +375,43 @@
           <br>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment">- Variables</li>
-              <li class="fragment">- Nesting</li>
-              <li class="fragment">- Math</li>
-              <li class="fragment">- @import</li>
-              <li class="fragment">- Mixins</li>
-              <li class="fragment">- Minification</li>
-              <li class="fragment">- Loops</li>
-              <li class="fragment">- <font style="color: red;">@extend</font></li>
+              <li class="fragment">Variables - giving styles a name</li>
+              <li class="fragment">Nesting - define styles within another style</li>
+              <li class="fragment">Math - ceiling / floor, rounding, min / max</li>
+              <li class="fragment">@import - link one CSS file to another</li>
+              <li class="fragment">Mixins - perform computations on inputs</li>
+              <li class="fragment">Minification - compress the CSS like a zip</li>
+              <li class="fragment">Loops - repeat color / position changes</li>
+              <li class="fragment"><font style="color: red;">@extend</font> - style A <i>plus</i> style B</li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Sass -> CSS example</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; list-style: none;">
+              <li class="fragment">
+                Sass variable (source)
+                <code style="font-size: 50%;">$secondaryColor: #cb6f10;</code>
+              </li>
+              <li class="fragment">
+                Sass (source)
+                <code style="font-size: 50%;">
+                  lighterDiv {<br>
+                  &nbsp;&nbsp;background-color: $secondaryColor;<br>
+                  &nbsp;&nbsp;border-top: 5px solid lighten($secondaryColor, 20%);<br>
+                  }
+                </code>
+              </li>
+              <li class="fragment">
+                CSS (compiled)
+                <code style="font-size: 50%;">
+                  lighterDiv {<br>
+                  &nbsp;&nbsp;background-color: #cb6f10;<br>
+                  &nbsp;&nbsp;border-top: 5px solid #f1a250;<br>
+                  }
+                </code>
+              </li>
             </ol>
           </p>
         </section>
@@ -473,10 +506,6 @@
             .three.four { color: red; }
           </code>
           <code class="fragment">
-            &lt;h1 id="one" class="two"&gt;This Should Be Red&lt;/h1&gt;<br>
-            #one.two { color: red; }
-          </code>
-          <code class="fragment">
             .snippet#header.code.red { color: red; }
           </code>
           <code class="fragment">
@@ -563,96 +592,8 @@
             </ol>
           </p>
         </section>
-        <section>
-          <h1>Boxes</h1>
-          <img src="images/02-feb/boxes.jpg" alt="Boxes" height="90%" width="90%"/>
-        </section>
-        <section>
-          <h1>Box Model</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment">
-                Height, width, padding, margin
-                <font style="font-size:90%">
-                  <code>
-                    #div1 {<br>
-                    &nbsp;&nbsp;width: 300px;<br>
-                    &nbsp;&nbsp;padding: 25px;<br>
-                    &nbsp;&nbsp;margin: 25px;<br>
-                    }<br><br>
-                    #div2 {<br>
-                    &nbsp;&nbsp;width: 80%;<br>
-                    &nbsp;&nbsp;padding: 60px 0px 25px 0px;<br>
-                    &nbsp;&nbsp;margin: 25px 8px;<br>
-                    }
-                  </code>
-                </font>
-              </li>
-              <br>
-              <li class="fragment">
-                Content
-                <code>#myDiv { content: "Hello world!"; }</code>
-              </li>
-              <br>
-            </ol>
-          </p>
-        </section>
-        <section>
-          <h1>Box Effects</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment" style="padding-top: 10px;">
-                Backgrounds
-                <code>body { background-image: url("whatever.png"); }</code>
-              </li>
-              <li class="fragment" style="padding-top: 10px;">
-                Borders
-                <code>
-                  p.dashed {<br>
-                  &nbsp;&nbsp;border-style: dashed;<br>
-                  &nbsp;&nbsp;border-width: 5px;<br>
-                  &nbsp;&nbsp;border-color: red;<br>
-                  }
-                </code>
-              </li>
-              <li class="fragment" style="padding-top: 10px;">
-                Shadows
-                <code>div { box-shadow: 10px 10px 5px #888888; }</code>
-              </li>
-            </ol>
-          </p>
-        </section>
-        <section>
-          <h1>Layout</h1>
-          <br>
-          <h1><img src="images/02-feb/layout.jpg" alt="Layout" width="1400px" height="480px"/></h1>
-        </section>
-        <section>
-          <h1>Types of Layouts</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment">
-                Display / Inline
-                <code>
-                  { display: inline; }<br>
-                  { visibility: hidden; }
-                </code>
-              </li>
-              <li class="fragment">
-                Padding / Margin
-                <code>{ padding: 25px 50px; }</code>
-              </li>
-              <li class="fragment">
-                Float, Position &amp; Flexbox
-                <font style="font-size:96%"><code>{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
-              </li>
-              <li class="fragment">
-                Z-Index
-                <code>{ z-index: -1; }</code>
-              </li>
-            </ol>
-          </p>
-        </section>
+
+
         <section>
           <h1>Text</h1>
           <img src="images/02-feb/text.jpg" alt="Text" height="75%" width="75%"/>
@@ -767,6 +708,8 @@
             </ol>
           </p>
         </section>
+
+
         <section>
           <h1>Media Queries &amp;<br>Responsive Websites</h1>
           <img src="images/02-feb/media-queries.jpg" alt="Media Queries &amp; Responsive Websites" height="95%" width="95%"/>
@@ -780,6 +723,98 @@
         <section>
           <h1>Responsive Design</h1>
           <img src="images/02-feb/responsive-example.jpg" height="98%" width="98%"/>
+        </section>
+
+
+        <section>
+          <h1>Boxes</h1>
+          <img src="images/02-feb/boxes.jpg" alt="Boxes" height="90%" width="90%"/>
+        </section>
+        <section>
+          <h1>Box Model</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                Height, width, padding, margin
+                <font style="font-size:90%">
+                  <code>
+                    #div1 {<br>
+                    &nbsp;&nbsp;width: 300px;<br>
+                    &nbsp;&nbsp;padding: 25px;<br>
+                    &nbsp;&nbsp;margin: 25px;<br>
+                    }<br><br>
+                    #div2 {<br>
+                    &nbsp;&nbsp;width: 80%;<br>
+                    &nbsp;&nbsp;padding: 60px 0px 25px 0px;<br>
+                    &nbsp;&nbsp;margin: 25px 8px;<br>
+                    }
+                  </code>
+                </font>
+              </li>
+              <br>
+              <li class="fragment">
+                Content
+                <code>#myDiv { content: "Hello world!"; }</code>
+              </li>
+              <br>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Box Effects</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment" style="padding-top: 10px;">
+                Backgrounds
+                <code>body { background-image: url("whatever.png"); }</code>
+              </li>
+              <li class="fragment" style="padding-top: 10px;">
+                Borders
+                <code>
+                  p.dashed {<br>
+                  &nbsp;&nbsp;border-style: dashed;<br>
+                  &nbsp;&nbsp;border-width: 5px;<br>
+                  &nbsp;&nbsp;border-color: red;<br>
+                  }
+                </code>
+              </li>
+              <li class="fragment" style="padding-top: 10px;">
+                Shadows
+                <code>div { box-shadow: 10px 10px 5px #888888; }</code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Layout</h1>
+          <br>
+          <h1><img src="images/02-feb/layout.jpg" alt="Layout" width="1400px" height="480px"/></h1>
+        </section>
+        <section>
+          <h1>Types of Layouts</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                Display / Inline
+                <code>
+                  { display: inline; }<br>
+                  { visibility: hidden; }
+                </code>
+              </li>
+              <li class="fragment">
+                Padding / Margin
+                <code>{ padding: 25px 50px; }</code>
+              </li>
+              <li class="fragment">
+                Float, Position &amp; Flexbox
+                <font style="font-size:96%"><code>{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
+              </li>
+              <li class="fragment">
+                Z-Index
+                <code>{ z-index: -1; }</code>
+              </li>
+            </ol>
+          </p>
         </section>
         <section>
           <h1>Organization &amp; Best Practices</h1>
