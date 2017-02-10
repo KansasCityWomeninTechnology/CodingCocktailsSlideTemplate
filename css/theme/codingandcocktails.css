@@ -48,6 +48,16 @@ table.paddedTable, .thickPaddedTable {
   border-style: solid;
   padding: 5px;
 }
+table.slightlyPaddedTable, .thickPaddedTable {
+  border: 1px;
+  border-style: solid;
+  border-collapse: collapse;
+}
+.slightlyPaddedTable th, .slightlyPaddedTable td {
+  border: 1px;
+  border-style: solid;
+  padding: 10px;
+}
 .thickPaddedTable th, .thickPaddedTable tr, .thickPaddedTable td {
   border: 1px;
   border-style: solid;
