@@ -376,18 +376,42 @@
         <section>
           <h1>Sass Superpowers</h1>
           <br>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment">Variables - giving styles a name</li>
-              <li class="fragment">Nesting - define styles within another style</li>
-              <li class="fragment">Math - ceiling / floor, rounding, min / max</li>
-              <li class="fragment">@import - link one CSS file to another</li>
-              <li class="fragment">Mixins - perform computations on inputs</li>
-              <li class="fragment">Minification - compress the CSS like a zip</li>
-              <li class="fragment">Loops - repeat color / position changes</li>
-              <li class="fragment"><font style="color: red;">@extend</font> - style A <i>plus</i> style B</li>
-            </ol>
-          </p>
+          <div>
+            <table class="slightlyPaddedTable">
+              <tr class="fragment">
+                <td style="text-align: left;">Variables</td>
+                <td style="text-align: left;">giving styles a name</td>
+              </tr>
+              <tr class="fragment">
+                <td style="text-align: left;">Nesting</td>
+                <td style="text-align: left;">define styles within another style</td>
+              </tr>
+              <tr class="fragment">
+                <td style="text-align: left;">Math</td>
+                <td style="text-align: left;">ceiling / floor, rounding, min / max</td>
+              </tr>
+              <tr class="fragment">
+                <td style="text-align: left;">@import</td>
+                <td style="text-align: left;">link one CSS file to another</td>
+              </tr>
+              <tr class="fragment">
+                <td style="text-align: left;">Mixins</td>
+                <td style="text-align: left;">perform computations on inputs</td>
+              </tr>
+              <tr class="fragment">
+                <td style="text-align: left;">Minification</td>
+                <td style="text-align: left;">compress the CSS like a zip</td>
+              </tr>
+              <tr class="fragment">
+                <td style="text-align: left;">Loops</td>
+                <td style="text-align: left;">repeat color / position changes</td>
+              </tr>
+              <tr class="fragment">
+                <td style="text-align: left;"><font style="color: red;">@extend</font></td>
+                <td style="text-align: left;">style A <i>plus</i> style B</td>
+              </tr>
+            </table>
+          </div>
         </section>
         <section>
           <h1>Sass -> CSS example</h1>
@@ -477,12 +501,32 @@
           </div>
         </section>
         <section>
-          <h1>Inheritance, Comments, <br>&amp; Browser Prefixes</h1>
+          <h1>Inheritance</h1>
+          <code style="font-size: 54%;" class="fragment">
+            &lt;div&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;This &lt;em&gt;sentence&lt;/em&gt; will have a 20px<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;font-size&lt;/a&gt;.<br>
+            &nbsp;&nbsp;&lt;/p&gt;<br>
+            &lt;/div&gt;<br>
+          </code>
+          <br>
+          <code style="font-size: 54%; color: green;" class="fragment">
+            div { font-size: 20px; }
+          </code>
+          <br>
+          <code style="font-size: 54%; color: red;" class="fragment">
+            p { font-size: 20px; }<br>
+            em { font-size: 20px; }<br>
+            a  { font-size: 20px; }
+          </code>
+        </section>
+        <section>
+          <h1>Comments, Browser Prefixes</h1>
           <br>
           <code style="font-size: 54%;" class="fragment">
             html { font-size: 75%; } /* 75% of default (16px) = 12px */<br><br>
             h1 { font-size: 300%; } /* 300% of 12px = 36px */<br><br>
-            p { background: inherit; }
           </code>
           <br>
           <code style="font-size: 54%;" class="fragment">
@@ -756,11 +800,17 @@
               </li>
               <br>
               <li class="fragment">
-                Content
-                <code>#myDiv { content: "Hello world!"; }</code>
+                Border-box
+                <code>#div { box-sizing: border-box }</code>
               </li>
               <br>
             </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Box-Sizing</h1>
+          <img src="images/02-feb/border-box.png" height="33%" width="33%"/><br>
+          <a href="https://css-tricks.com/box-sizing/" target="_blank">css-tricks.com/box-sizing</a>
           </p>
         </section>
         <section>
