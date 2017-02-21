@@ -67,12 +67,12 @@ table.slightlyPaddedTable, .thickPaddedTable {
   background-color: #484e78;
 }
 table.tocTable {
-  border-style: solid;
+  border-style: solid 1px;
   border-collapse: collapse;
 }
 .tocTable td {
   padding: 8px;
-  font-size: 36px;
+  font-size: 30px;
   text-align: left;
 }
 .tocTable tr:nth-child(even) {

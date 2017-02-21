@@ -1,354 +1,557 @@
 <!doctype html>
-<html>
-  <head>
-    <title>Jan - Intro to CSS - Coding &amp; Cocktails KC</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
-    <meta name="author" content="Kansas City Women in Technology"/>
-    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
-    <meta property="og:title" content="TOPIC - Coding &amp; Cocktails KC" />
-    <meta property="og:type" content="website"/>
-    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
-    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
-    <meta property="og:description" content="This is the official Coding &amp; Cocktails CSS course."/>
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
-    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
-    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
-    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/reveal.css"/>
-    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section id="coding-and-cocktails">
-          <div style="position: absolute;left: 0px; top:0px;">
-            <font style="font-size: 0.6em">
-              <a href="../">
-                <i class="fa fa-arrow-left fa-sm"></i>
-                Back
-              </a>
-            </font>
-          </div>
-          <img src="images/logo-large.png" alt="Coding &amp; Cocktails" />
-        </section>
-        <section id="intro-to-CSS">
-         <h3>Intro to CSS</h3>
-         <img src="images/logo.png" alt="Coding &amp; Cocktails" />
-         <p>
-          Presentation available at:
-          <a href="http://kansascitywomenintechnology.github.io/IntroToHTMLandCSS" target="_blank">http://kansascitywomenintechnology.github.io/IntroToHTMLAndCSS</a>
-        </p>
-      </section>
-      <section id="LadyDevs">
-        <section>
-          <h3>Meet Some #LadyDevs</h3>
-        </section>
-        <section>
-          <img src="images/02-feb/Laura-Shields2.jpg" alt="Laura Shields" align="middle" height="288" width="288"/>
-          <h4>Laura Shields</h4>
-          <p>Software Engineer, The Nerdery - Chicago</p>
-          <p><em>"Tangible dates lead to tangible results. 'Someday' leads to regret. Plan your dreams now. With spreadsheets."</em></p>
-          <a href="http://blog.nerdery.com/2015/08/profiles-in-nerdery-laura-shields-dinosaur-hunter-2/">Read more about Laura on the Nerdery's Blog!</a>
-        </section>
-        <section>
-          <img src="images/02-feb/ADuncan.jpg" alt="Alisa" align="middle" height="288" width="288"/>
-          <h4>J. Alisa Duncan</h4>
-          <p>Senior Software Engineer, Engaged Technologies - Kansas City</p>
-        </section>
-        <section>
-          <h3>... And Your Mentors for Tonight!</h3>
-          <img src="images/02-feb/MarvelLadies.jpg" alt="Women of Marvel" align "middle">
-        </section>
-      </section>
-      <section id="Agenda/Objectives">
-        <h3>Tonight's Agenda: CSS</h3>
-        <ol>
-          <li class="fragment">Review Last Session</li>
-          <li class="fragment">Overview of CSS
- <!--           <ul>
-              <li>Basic Syntax To Get You Started</li>
-              <li>Best Practices &amp; Conventions</li>
-              <li>Practice Troubleshooting an Existing HTML Page</li>
-            </ul> -->
-          </li>
-          <li class="fragment">Begin Your First Project
-<!--            <ul>
-              <li>Explore Resumes Online for Ideas</li>
-              <li>Use Chrome Developer Tools to Inspect Elements You Like So You Can Incorporate Them!</li>
-              <li>Begin Your Online Portfolio.</li>
-            </ul> -->
-          </ol>
-        </section>
-        <section id="Agenda/Objectives">
-          <h3>Last Time. . . .</h3>
-          <br>
-          <br>
-          <p class="fragment">We talked about tools for your #LadyDev toolbelt:<p>
-            <ol>
-              <li class="fragment">Developer Tools in Chrome - for troubleshooting and exploring elements</li>
-              <li class="fragment">Sublime Text - your text editor</li>
-              <li class="fragment">GitHub - where you can store and share your work</li>
-            </ol>
-            <br>
-            <br>
-            <h5 class="fragment">And so we begin. . . </h5>
-          </section>
-          <section id="HTML Basics">
-            <h3>What is HTML?</h3>
-            <p><strong>H</strong>yper<strong> T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</p>
-            <p>***</p>
-            <p>HTML is used for the placement or meaning of the content - header, paragraph, list versus its <em>style</em> (font, color, font size)</p>
-            <p>***</p>
-            <p>Text is marked with a "tag" that gives it a purpose</p>
-          </section>
-          <section id="Meta Data">
-              <h3>Meta Data</h3>
-              <p>Meta Data is invisible to the reader but gives the browser important information about how to interpret the HTML on the page.</p>
-              <pre><code>&lt;!DOCTYPE html&gt;
-      &lt;html&gt;
-          &lt;head&gt;Meta Data Goes Here &lt;/head&gt;
-          &lt;title&gt;Brower tab title here &lt;/title&gt;
-              &lt;body&gt;
-                &lt;h1&gt;My First Heading&lt;/h1&gt;
-                &lt;p&gt;This is the first paragraph. All visible page content is nested inside the opening and closing body tags.&lt;/p&gt;
+<html lang="en">
 
-              &lt;/body&gt;
-          &lt;/html&gt</code></pre>
-            </section>
+	<head>
+		<meta charset="utf-8">
 
-          <section id="HTML Tags">
-              <section>
-                <h3>Basic Tags</h3>
-                <p>Paragraph:</p><pre><code>&lt;p&gt; content goes here &lt;/p&gt;</code></pre>
-                <p>Headings (1-6):</p><pre><code>&lt;h3&gt; header content goes here &lt;/h3&gt;</code></pre>
-                <p>Ordered lists:</p><pre><code>&lt;ol&gt; <--"ol" designates the start of an ordered list
-                &lt;li&gt;list item 1 here&lt;/li&gt;
-                &lt;li&gt;list item 2 here&lt;/li&gt;
-                &lt;li&gt;list item 3 here&lt;/li&gt;
-                the closing tag marks the end of the list:--> &lt;/ol&gt;</code></pre>
-            </section>
-            <section>
-                <h3>Basic Tags</h3>
-                <p>Hyperlink:</p><pre><code>&lt;a href="www.url.com"&gt; URL Name &lt;/a&gt;</code></pre>
-                <p>Images:</p><pre><code>&lt;img src="location/imgname.jpg" alt="image name"&gt;</code></pre>
-                <p>Image with Hyperlink:</p>
-                <pre><code>&lt;a href="www.URL.com"&gt;&lt;img border="0" src="location/LL-53.jpg" width="300" height="404" alt="Alternate Name"&lt;/a&gt;</code></pre>
-                <p>Note: For details or more examples, start with your handout and then use <a href="http://www.w3schools.com/" target="_blank">W3Schools' tutorial</a> as a desk reference.</p>
-            </section>
-          </section>
-          <section id="inline formatting">
-                <h3>Inline Formatting</h3>
-                <p>Inline formatting specifies the <em>look</em> of the element. While it can be done in HTML, it <em>should</em> be done in CSS whenever possible because it is easier to maintain.</p>
-                <br>
-                <pre><code>&lt;h3 style="color:blue;"&gt; My Title Should Be Blue &lt;/h3&gt;
-                </code></pre>
-                <br>
-                <p>becomes. . . </p>
-                <br>
-                <H3 style="color:blue;"> My Title Should Be Blue </h3>
-          </section>
-          <section id="HTML Best Practices">
-            <section>
-                <h3>Basic HTML Best Practices</h3>
-                <ol>
-                  <li class="fragment">Close every tag you open: &lt;p&gt;&lt;/p&gt;</li>
-                  <li class="fragment">Be case sensitive/be consistent:
-                    <br>
-                    &lt;p&gt;&lt;/p&gt;     not     &lt;H3&gt;&lt;/h3&gt;</li>
-                    <li class="fragment">Indent nested tags (such as when indenting ordered lists):
-                      <pre><code>
-                      &lt;ol&gt;
-                        &lt;li&gt;list item 1.&lt;/li&gt;
-                        &lt;li&gt;list item 2.&lt;/li&gt;
-                      &lt;/ol&gt;;</code></pre>
-                    </li>
-                  </ol>
-            </section>
-            <section>
-                  <h3>Basic HTML Best Practices</h3>
-                  <h5>A Couple of Final Thoughts about HTML . . .</h5>
-                  <br>
-                  <p>Don't try to mash your code together. Use enough line breaks for readability and clarity.</p>
-                  <p align="center">***</p>
-                  <p>Validate often - save your work and see how it looks in-browser as you progress.</p>
-                  <p align="center">***</p>
-                  <p align="center">Next: Debugging!</p>
-            </section>
-          </section>
+        <!-- NOTE: Replace all TOPIC references with the presentation's actual topic -->
 
-            <section id="Debugging">
-                <h3>Debugging Tools and Online Documentation</h3>
-                <p >There are many tools you can use. Some are built into your text editor and some are separate. Here are some resources.</p>
-<!--          <ul>
-              <li>Chrome Developer Tools (Ctrl+Shift+I or Option+Shift+I or F12)</li>
-          </ul>
-          </li>  -->
-            <ul>
-              <li><a href=https://validator.w3.org/> W3C HTML Validator </a> </li>
-              <li><a href=https://developer.mozilla.org/en-US/>Mozilla Developer Network (MDN)</a></li>
-              <li>Chrome Developer Tools (Ctrl+Shift+I or Option+Shift+I)</li>
-              <li>Remember to reach out to mentors through our Slack channel, too!</li>
-            </ul>
-                <h6 class="fragment"> Lets Look at an example:</h6>  <a class="fragment" href="http://www.tiag.com" target="_blank">Told in a Garden</a>
-            </section>
-            <section id="practice">
-                  <h3>Time to Practice!</h3>
-                  <img src="images/02-feb/BWLemStar.jpg" alt="Black Widow" align="middle" height="75%" width="75%"/>
-            </section>
-            <section id="CSS Overview">
-                <h3>CSS Overview</h3>
-                    <p><strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets (CSS)
-                      <br>***</p>
-                    <p>CSS does the heavy lifting with regard to the page formatting.
-                    <br>***</p>
-                    <p>CSS controls how elements <em>look</em>, including font color, size, and other details that pertain to all elements in an HTML document that are the same type.</p>
-            </section>
+		<title>Intro to CSS Compilers - Coding &amp; Cocktails KC</title>
 
-            <section id="syntax basics">
-              <section>
-                <h3>CSS Syntax Basics</h3>
-                 <h5>Vocabulary</h5>
-                    <ol>
-                      <li><u>Element</u> - a bit of HTML to be manipulated, like a paragraph (&lt;p&gt;&lt;/p&gt;)</li>
-                      <li><u>Selector</u> - picks out, or selects, the HTML element to be styled.</li>
-                      <li><u>Property</u> - describes how an element is modified, i.e. color, size, or font</li>
-                      <li><u>Value</u> - the specific application of the property, i.e. red, 12 pt, or Times New Roman</li>
-                    </ol>
-              </section>
-          <section>
-                <h3>Basic CSS Rule Syntax</h3>
-                <img src="images/02-feb/anatomy-of-a-css-rule.gif" alt="CSS Rule Gif" width="65%" height="65%"/>
-                <p>Image Credit:</p> <a href="http://www.learnwebcode.com">LearnWebCode.com</a>
-           </section>
-            <section id="syntax basics2">
-              <section>
-                <h3>CSS Syntax Basics</h3>
-                 <h5>Vocabulary (Continued)</h5>
-                    <ol>
-                      <li><u>Class selector</u> - helps to style different elements in the same way.  Syntax is <em>.class</em></li>
-                      <li><u>ID selector</u> - specifies to an even greater level of detail a specific element. Syntax is <em>#id</em></li>
-                      </ol>
-              </section>
-            </section>
-              <section>
-                    <h3>Selectors</h3>
-                    <img src="images/02-feb/cssGraphicSelectors.png" alt="Graphic Selectors" width="65%" height="65%"/>
-                    <p>Image Credit:</p> <a href="http://www.fiercegirldesign.com">Fiercegirldesign.com</a>
-              </section>
-              <section>
-                    <h3>The Box Model</h3>
-                    <p><u>Box model</u> - a visual frame of reference for margins around elements</p>
-                    <img src="images/02-feb/boxdim.gif" alt="Box Model" align="middle" height="65%" width="65%"</a>
-              </section>
-          </section>
-  <section id="Connecting HTML to CSS">
-    <section>
-      <h3>Connecting Your HTML Code to Your CSS Stylesheet</h3>
-      <p> The Meta Data Section of your HTML doc tells the browser to look for a corresponding stylesheet:</p>
-      <pre><code>
-        &lt;!DOCTYPE html&gt;
-        &lt;html&gt;
-          &lt;head&gt;
-          &lt;link type="text/css" rel="stylesheet" href="stylesheet.css"/&gt;
-            &lt;title&gt;Page Title&lt;/title&gt;
-          &lt;/head&gt;
-          &lt;body&gt;
-          &lt;h3&gt;heading content&lt;/h3&gt;
-          &lt;p&gt;Some Content here&lt;/p&gt;
-          &lt;/body&gt;
-        &lt;/html&gt;
-      </code></pre>
-    </section>
-  </section>
-<section id="Connecting HTML to CSS">
-    <section>
-      <h3>Connecting Your HTML Code to Your CSS Stylesheet</h3>
-      <p> The CSS Stylesheet (href="stylesheet.css" in the previous slide) describes how the heading and paragraph will look:</p>
-      <pre><code>
-body {
-  background-color: #b7d1c4
+		<meta name="description" content="This is the official Coding & Cocktails Intro to CSS Compilers course.">
+		<meta name="author" content="Kansas City Women in Technology">
+        <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development">
+        <meta property="og:title" content="Intro to CSS Compilers - Coding & Cocktails KC" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+        <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+        <meta property="og:description" content="This is the official Coding & Cocktails Intro to CSS Compilers course."/>
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org">
+        <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology">
+        <meta name="twitter:description" content="This is the official Coding & Cocktails Intro to CSS Compilers course.">
+        <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/02-feb.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor--><link rel="stylesheet" href="lib/css/light.css">
+		<!-- dark editor<link rel="stylesheet" href="lib/css/dark.css">-->
+
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section id="coding-and-cocktails">
+                    <img src="images/02-feb/logo-large.png" alt="Coding &amp; Cocktails" />
+                </section>
+				<section id="css-compilers">
+					<h3>Intro to CSS Compilers</h3>
+                    <img src="images/02-feb/logo.png" alt="Coding &amp; Cocktails" />
+                    <p>Slides available at:
+                        <!-- update links to point to slides and display bitly link -->
+                        <a href="http://bit.ly/CSSCmp" target="_blank">bit.ly/CSSCmp</a>
+                    </p>
+				</section>
+                <section>
+                    <h3>Join us on social media:</h3>
+                    <p style="margin-top: 50px; font-size: 2em;">#LadyDevs</h3>
+                    <p style="font-size: 2em;">#KCWiT</p>
+                    <p style="font-size: 2em;">#CodingAndCocktailsKC</p>
+                    <p style="font-size: 2em;"><i class="fa fa-twitter"></i><a href="https://twitter.com/codecocktailskc" target="_blank">&nbsp;&nbsp;@codecocktailskc</a></p>
+                    <p style="font-size: 2em;"><i class="fa fa-facebook"></i><a href="https://www.facebook.com/codingandcocktailsKC" target="_blank">&nbsp;&nbsp;CodingAndCocktailsKC</a></p>
+                </section>
+                <section id="kcwit">
+                    <h3>Powered By:</h3>
+                    <a href="http://kcwomenintech.org/" target="_blank"><img src="css/images/kcwit_logo_white.png" alt="Kansas City Women in Technology logo"></a>
+                </section>
+                <section>
+                    <img src="images/02-feb/kcdc.gif" alt="Kansas City Developer Conference Logo">
+                    <h2><a href="http://www.kcdc.info/#!/" target="_blank">Kansas City Developer Conference</a></h2>
+                    <h3>June 22 - 24, 2016</h3>
+                    <h3>KCWiT 10% off Discount Code: KCWITROCKS</h3>
+                </section>
+                <section id="django-girls">
+                    <a href="https://djangogirls.org/kansascity/" target="_blank"><img src="images/02-feb/logo-transparent.png" alt="Django Girls logo" ></a>
+                    <h3>June 24 - 26, 2016</h3>
+                    <h3><a href="http://kansascitywomenintechnology.github.io/DjangoGirlsKCPresentation/#/intro" target="_blank">Presentation</a></h3>
+                </section>
+                <section>
+                    <h3>Our Hosts</h3>
+                    <h2>The Nerdery</h2>
+                    <a href="https://nerdery.com/" target="_blank"><img src="images/02-feb/Nerdery-logo.png" alt="The Nerdery Logo"></a>
+                </section>
+                <section id="mentors">
+                    <h3>Mentors</h3>
+                    <img src="images/02-feb/Superhero.jpg" alt="Everybody Wants To Be A Star" style="height: 80%; width: 80%;">
+                    <p style="font-size: 0.5em;">Photo by <a href="http://photos.jdhancock.com/" target="_blank">JD Hancock </a><a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">cc</a></p>
+                </section>
+                <section id="review">
+                    <h3>Last Month - Version Control</h3>
+                    <ul>
+                        <li>What Version Control is used for</li>
+                        <li>Creating Repositories</li>
+                        <li>Branching, Merging &amp; Forking</li>
+                        <li>Interaction Through the Command Line</li>
+                        <li><a href="http://codingandcocktails.kcwomenintech.org/sessions#versionControl" target="_blank">Presentation &amp; Worksheet Link</a></li>
+                    </ul>
+                </section>
+                <section id="objectives">
+                    <h2>What we'll cover</h2>
+                    <ul>
+                        <li>Brief CSS Review</li>
+                        <li>What CSS Compilation is and Why We Should Use It</li>
+                        <li>Features of the Sass Preprocessor</li>
+                    </ul>
+
+                </section>
+                <section id="css-review">
+                    <h2>CSS Review</h2>
+                    <section>
+                        <h3>Syntax</h3>
+                        <img src="images/02-feb/anatomy-of-a-css-rule.gif" alt="CSS Rule Anatomy">
+                        <p>Image Credit:</p> <a href="http://www.learnwebcode.com" target="_blank">LearnWebCode.com</a>
+                    </section>
+                    <section>
+                        <h3>Box Model</h3>
+                        <img src="images/02-feb/box-model.png" alt="CSS Box Model" style="margin-top: 50px;">
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Element Selector: <pre><code>h1 { ... }</code></pre></li>
+                            <li>Class selector: <pre><code>.my-class { ... }</code></pre></li>
+                            <li>ID selector: <pre><code>#my-id { ... }</code></pre></li>
+                            <li>Descendant selector: <pre><code>div p { ... }</code></pre></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Properties:
+                                <ul>
+                                    <li>margin</li>
+                                    <li>padding</li>
+                                    <li>border</li>
+                                    <li>font-family</li>
+                                    <li>font-size</li>
+                                    <li>list-style</li>
+                                </ul>
+                            </li>
+                            <li>Remember: The last rule applied wins!</li>
+                            <li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></li>
+                            <li><a href="http://colorhunt.co/" target="_blank">Color Pallette</a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="definition">
+                    <h2>What is a CSS Compiler?</h2>
+                    <section>
+                        <p style="margin-top: 100px;">Taking input (Sass in our case) and converting (or compiling) it into something else (plain old CSS in this case) so it can be understood by a third thing (your browser in this case)</p>
+                        <aside class="notes">
+                            Since your browser is considered to be the processor for your website, Sass is considered a preprocessor because it processes the code before your browser does.
+                        </aside>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Browsers only understand CSS</li>
+                            <li>Helps reduce complexity</li>
+                            <li>Reduce file size through minification</li>
+                            <li><span style="color: #BC2D3A; font-weight: bold;">Warning:</span> Once you start using a preprocessor, only edit pre-compiled files or you will overwrite your work!</li>
+                        </ul>
+                        <aside class="notes">
+                            CSS itself sometimes can make it hard to create clean/reusable code and the more styling you add the more complex your stylesheets become - compilers help with this!
+                            You can’t have some people editing .css and others editing .scss, .css edits will get overwritten with the next compile
+                        </aside>
+                    </section>
+                    <section>
+                        <h6>Preprocessor vs. Postprocessor</h6>
+                        <p>No significant technical distinction</p>
+                        <table style="border-collapse: collapse; border: 1px solid white;">
+                            <thead>
+                                <tr><th style="width: 50%; text-align: center; border: 1px solid white;">Preprocessor</th><th style="width: 50%; text-align: center; border: 1px solid white;">Postprocessor</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td style="border: 1px solid white; padding: 2px;">Sass, Less</td><td style="border: 1px solid white; padding: 2px;">PostCSS, Autoprefixer</td></tr>
+                                <tr><td style="border: 1px solid white; padding: 2px;">Sometimes Own Syntax</td><td style="border: 1px solid white; padding: 2px;">CSS Syntax</td></tr>
+                                <tr><td style="border: 1px solid white; padding: 2px;">Compiles into CSS</td><td style="border: 1px solid white; padding: 2px;">Compiles into CSS</td></tr>
+                                <tr><td style="border: 1px solid white; padding: 2px;"></td><td style="border: 1px solid white; padding: 2px;">Allows use of proposed CSS features or features not yet supported</td></tr>
+                            </tbody>
+                        </table>
+                        <aside class="notes">
+                            add browser prefixes is a common usage for postprocessors
+                        </aside>
+                    </section>
+                </section>
+                <section id="workflow">
+                    <h2>Development Process</h2>
+                    <ul>
+                        <li>Create HTML/Style with Sass</li>
+                        <li>Compile/Build</li>
+                        <li>Deploy &amp; View</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Compiler Options</h2>
+                    <section>
+                        <h3>Sass</h3>
+                        <ul>
+                            <li>Syntactically Awesome Stylesheets</li>
+                            <li>Ruby Sass: Written in Ruby and therefore has a Ruby Dependency</li>
+                            <li>LibSass: Allows Sass to be used outside of Ruby</li>
+                            <li>.scss (SASSy CSS) files vs. .sass files</li>
+                        </ul>
+                        <aside class="notes">
+                            Can get rid of Ruby dependency if using LibSass - this is what will be used with Grunt/Gulp/Webpack
+                            LibSass C/C++ port allows Sass to be used outside of Ruby
+                            .sass is the old version that just uses indenting without curly braces and semi-colons - hard to transfer b/t it &amp; CSS leading to .scss - css syntax with the extra functionality
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Less</h3>
+                        <ul>
+                            <li>Similar but with some slight differences in syntax and functionality
+                                <ul>
+                                    <li>Example: Less uses @ in front of variables, Sass uses $</li>
+                                    <li>Example: Less uses mixin guards where Sass uses if statements</li>
+                                </ul>
+                            </li>
+                            <li>Originally written in Ruby but ported to JavaScript</li>
+                        </ul>
+                        <aside class="notes">
+                            Those are two most popular followed by Stylus but those are not the only options, there are others.  We're going to focus on Sass.
+                            You'll find strong opinions on which is better among the development community but if you focus on learning one it will serve you best
+                            With Twitter's Bootstrap (a popular styling framework) moving to Sass it may gain a slight edge
+                        </aside>
+                    </section>
+                </section>
+                <section>
+                    <h2>Sass</h2>
+                    <ul>
+                        <li>Compilation options:
+                            <ul>
+                                <li>Command Line (Ruby Sass)
+                                    <pre style="margin: 5px;"><code>
+sass inputfile.scss outputfile.css
+                                    </code></pre>
+                                    <pre style="width: 100%; margin: 5px;"><code>
+sass -watch inputfile.scss:outputfile.css
+                                        </code></pre>
+                                </li>
+                                <li>Task Runner (LibSass)
+                                    <ul>
+                                        <li>Gulp</li>
+                                        <li>Grunt</li>
+                                        <li>Webpack</li>
+                                    </ul>
+                                </li>
+                                <li>GUI
+                                    <ul>
+                                        <li><a href="https://incident57.com/codekit/index.html" target="_blank">CodeKit</a></li>
+                                        <li><a href="https://prepros.io/" target="_blank">Prepros</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <aside class="notes">
+                        When it gets old typing in the sass command all the time use watch
+                        May not want to store your CSS file when you're pushing it to version control
+                        Codekit is only on macs.
+                    </aside>
+                </section>
+                <section id="why">
+                    <h2>Why should we use them?</h2>
+                    <ul>
+                        <li>Cleaner &amp; more maintainable code</li>
+                        <li>Follow DRY (Don't Repeat Yourself) principles better</li>
+                        <li>Increase Productivity</li>
+                        <li>Selector nesting for better organization</li>
+                    </ul>
+                    <aside class="notes">
+                        Get more done in more code that is easier to read in less time
+                    </aside>
+                </section>
+                <section id="features">
+                    <h2>Sass Features</h2>
+                    <section>
+                        <ul>
+                            <li>// Single-line comments that don't show in your CSS</li>
+                            <li>/* Also supports multi-line comments that do show in compiled CSS */ </li>
+                            <li>Sourcemap for debugging help</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Variables</h3>
+                        <ul>
+                            <li><pre style="width: 30%;"><code>$my-color: #fff;</code></pre></li>
+                            <li>Use these to help reduce repetition</li>
+                            <li>Easily &amp; quickly change things like colors or font stacks in one place</li>
+                            <li>Don't replace everything, stick to common patterns</li>
+                            <li>Common uses include colors, font-stacks, numbers, layout, font sizing</li>
+                        </ul>
+                        <aside class="notes">
+                            Example: 5px font size don't use the same variable for a 5px border-radius
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Partials</h3>
+                        <ul>
+                            <li>Helpful for organization - keep all like things in one file so there is only one place to make changes</li>
+                            <li>Allow you to import other scss files into each other</li>
+                            <li>Typically start the filename with an _ (Example: _variables.scss) so it doesn't get compiled into it's own CSS file</li>
+                            <li>Bring them into your main file using @import: <pre><code>@import "variables";</code></pre></li>
+                            <li>More advanced projects may have partials for typography, buttons, layout, forms, etc.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3 style="margin-bottom: 5px;">Nesting</h3>
+                        <ul>
+                            <li>Allows for better organization nesting css selectors inside each other</li>
+                            <li>Avoid nesting more than 3 - 4 levels deep</li>
+                            <li><span style="color: #BC2D3A; font-weight: bold;">Debugging Warning: </span>Nesting can "create" selectors in your CSS that don't exist in your scss file making debugging difficult</li>
+                            <pre style="float: left; width: 50%; margin-right: 10px;"><code>.container {
+    margin: 0;
+    padding: 0;
+
+    .item {
+        margin-bottom: 20px;
+        border-top: 2px solid blue;
+    }
+}                           </code></pre>
+                            <pre><code>.container {
+    margin: 0;
+    padding: 0;
 }
 
-h3 {
-  font-family: Verdana;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  color: #acd1b2;
+.container .item {
+    margin-bottom: 20px;
+    border-top: 2px solid blue;
+}                           </code></pre>
+                        </ul>
+                        <aside class="notes">
+                            4 or more levels can create bloated, unnecessary CSS
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Mixins</h3>
+                        <ul>
+                            <li>Reduce repetition</li>
+                            <li>"Function" for your styling</li>
+                            <li>Mixin libraries (<a href="http://bourbon.io/docs/" target="_blank">Bourbon</a> &amp; <a href="http://compass-style.org/" target="_blank">Compass</a>)</li>
+                        </ul>
+                        <aside class="notes">
+                            Define a function for those who may not know
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>Mixin Example</h3>
+                        <pre><code>@mixin link-style ($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &amp;:visited {
+      color: $visit;
+    }
+    &amp;:hover {
+      color: $hover;
+    }
+    &amp;:active {
+      color: $active;
+    }
+  }
+}                       </code></pre>
+                        <pre><code>a {
+    @import link-style(blue, red, darkblue, green);
+    text-decoration: none;
+}</code></pre>
+                    </section>
+                    <section>
+                        <h3>Operations</h3>
+                        <ul>
+                            <li>Allows math operations such as<pre style="display: inline; width: 40%; float: right; margin-top: 5px; margin-bottom: 0;"><code>$my-var*2</code></pre></li>
+                            <li><span style="color: #BC2D3A; font-weight: bold;">Warning:</span> Changes to my-var affect elements styled by $my-var*2 also</li>
+                            <li>String operations <pre><code>$base_string: "Gin";
+$add-on-string: "Tonic";
+p:before {
+    content: $base-string + " and " + $add-on-string; //Gin and Tonic
 }
-      </code></pre>
-    </section>
-  </section>
-  <section id="CSS Practice">
-    <section>
-      <h3>Practice with CSS</h3>
-            <img src="images/02-feb/beach.jpg" alt="Sandra Bullock In The Net">
-    </section>
-  </section>
-  <section id="2016 project">
-    <section>
-      <h3>2016 Coding &amp; Cocktails Project</h3>
-      <img src="images/02-feb/RiveterTech.jpeg" alt="Digital Rosie">
-    </section>
-  </section>
+</code></pre></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Color Functions</h3>
+                        <ul>
+                            <li>Lighten: make the given color lighter <pre><code>lighten(#c0ffee, 20%)</code></pre></li>
+                            <li>Darken: make the given color darker <pre><code>darken(#decaff, 20%)</code></pre></li>
+                            <li>rgba: change the alpha (opacity) value of the color <pre><code>rgba(#f00d1e, 0.5)</code></pre></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6>Advanced: If Statements</h6>
+                        <pre><code>$type: pina-colada;
+p {
+  @if $type == bloody-mary {
+    color: red;
+  } @else if $type == pina-colada {
+    color: white;
+  } @else {
+    color: blue;
+  }
+}                       </code></pre>
+                        <p>Compiles to:</p>
+                        <pre><code>p {
+    color: white;
+}                       </code></pre>
+                    </section>
+                    <section>
+                        <h6>Advanced: Loops</h6>
+                        <p>@for, @while, @each</p>
+                        <pre><code>@for $i from 1 through 3
+    .style-#{$i}
+    width: 10px * $i    </code></pre>
+                        <p>Compiles to:</p>
+                        <pre><code>.style-1 {
+    width: 10px;
+}
+.style-2 {
+    width: 20px;
+}
+.style-3 {
+    width: 30px;
+}                       </code></pre>
+                    </section>
+                    <section>
+                        <h3>Extend</h3>
+                        <ul>
+                            <li>Reduce redundancy</li>
+                            <li>Allows you to utilize styles already given to one selector in another selector</li>
+                        </ul>
+                            <pre><code>.btn {
+    padding:5px;
+    border: 1px solid #666;
+    color:#000;
+    text-decoration:none;
+}
 
-  <section id="Wrap up">
-    <section>
-      <h3>Where Do We Go From Here?</h3>
-      <br>
-      <p><strong>Next month: Introduction To Command Line</strong></p>
-      <p><strong>March: GitHub Basics</strong></p>
-    <br>
-    <h4>In the Mean Time...</h4>
-      <ol>
-        <li>Choose an online tutorial and work through it</li>
-        <li>Work on your web page</li>
-        <li>Join our Slack channel and use it whenever you have questions or get stuck!</li>
-      </ol>
-    </section>
-  </section>
+.btn-warning {
+    @extend .btn
+    background: red;
+}                           </code></pre>
+                    </section>
+                </section>
+                <section id="debugging">
+                    <h2>Debugging</h2>
+                    <ul>
+                        <li>Right click the element you're concerned with
+                            <ul>
+                                <li>Choose inspect</li>
+                                <li>View the styles</li>
+                                <li>The sourcemap will point you to the line in your scss file where the style in question exists.</li>
+                                <img src="images/02-feb/sourcemap.png" alt="scss line number">
+                            </ul>
+                        </li>
+                        <li>Leave CSS expanded during development, minify for production</li>
+                    </ul>
+                </section>
+                <section id="conversion">
+                    <h2>Converting CSS to Sass</h2>
+                    <video width="800" height="500" controls preload>
+                        <source src="images/02-feb/Conversion.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </section>
+                <section id="organization">
+                    <h2>Organization</h2>
+                    <p>Despite Sass being awesome, organization is still important</p>
+                    <pre>stylesheets/
+|
+|-- modules/              # Common modules
+|   |-- _all.scss         # Include to get all modules
+|   |-- _utility.scss     # Module name
+|   |-- _colors.scss      # Etc...
+|-- partials/             # Partials
+|   |-- _base.sass        # imports for all mixins + global project variables
+|   |-- _buttons.scss     # buttons
+|   |-- _figures.scss     # figures
+|   |-- _grids.scss       # grids
+|   |-- _typography.scss  # typography
+|   |-- _reset.scss       # reset
+|-- vendor/               # CSS or Sass from other projects
+|   |-- _colorpicker.scss
+|   |-- _jquery.ui.core.scss
+|   ...
+|
+`-- main.scss            # primary Sass file</pre>
+                    <a href="http://thesassway.com/beginner/how-to-structure-a-sass-project" target="_blank">Sample Structure from The Sass Way</a>
+                </section>
+                <section id="review">
+                    <h2>Review</h2>
+                    <ul>
+                        <li>Defined CSS Compilers</li>
+                        <li>How CSS Compilation fits in the development process</li>
+                        <li>Why we want to use CSS Compilers</li>
+                        <li>Sass features</li>
+                    </ul>
+                    <h3 style="margin-top: 50px;"><a href="http://codingandcocktails.kcwomenintech.org/sessions#cssCompilers" target="_blank">Tonight's Worksheet</a></h3>
+                </section>
+                <section id="questions">
+                  <h2>Questions?</h2>
+                  <div style = "font-size:1200%; height:100%; margin-top:25%" class ="blue">?
+                    <div class ="clear"></div></div>
+                </section>
+                <section id="contact">
+                    <h2>Thank You!</h2>
+                    <h4>Keep in touch!</h4>
+                    <div>
+                        <a href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-twitter"></i><a href="https://twitter.com/codecocktailskc" target="_blank">&nbsp;&nbsp;@codecocktailskc</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-facebook"></i><a href="https://www.facebook.com/codingandcocktailsKC" target="_blank">&nbsp;&nbsp;facebook.com/codingandcocktailsKC</a>
+                    </div>
+                    <div>
+                        <i class="fa fa-slack"></i><a href="https://kcwit.slack.com/" target="_blank">&nbsp;&nbsp;kcwit.slack.com</a>
+                    </div>
+                    <h4 style="margin-top: 2em;"><a href="http://www.eventbrite.com/e/coding-cocktails-may-tickets-21575314346?aff=presentation">Join us again May 14th for an introduction to JavaScript!</a></h4>
+                </section>
+			</div>
+  		<footer>
+        </footer>
+		</div>
 
-  <section id="Questions?">
-    <h2>Questions?</h2>
-    <img src="images/02-feb/Felicity.jpg" alt="Felicity Smoak" align="middle" height="85%" width="85%"/>
-    <!--  <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?-->
-    <div class ="clear"></div></div>
-  </section>
-        </div>
-      </div>
+
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="js/reveal.min.js"></script>
 
 		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: false,
 				history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
+
 		</script>
+
 	</body>
 </html>
