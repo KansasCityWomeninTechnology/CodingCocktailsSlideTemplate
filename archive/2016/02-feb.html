@@ -4,29 +4,27 @@
 	<head>
 		<meta charset="utf-8">
 
-        <!-- NOTE: Replace all TOPIC references with the presentation's actual topic -->
+		<title>Intro to Command Line - Coding & Cocktails KC</title>
 
-		<title>Intro to CSS Compilers - Coding &amp; Cocktails KC</title>
-
-		<meta name="description" content="This is the official Coding & Cocktails Intro to CSS Compilers course.">
+		<meta name="description" content="This is the official Coding & Cocktails Command Line course.">
 		<meta name="author" content="Kansas City Women in Technology">
         <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development">
-        <meta property="og:title" content="Intro to CSS Compilers - Coding & Cocktails KC" />
+        <meta property="og:title" content="Intro to Command Line - Coding & Cocktails KC" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
         <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
-        <meta property="og:description" content="This is the official Coding & Cocktails Intro to CSS Compilers course."/>
+        <meta property="og:description" content="This is the official Coding & Cocktails Command Line course."/>
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org">
         <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology">
-        <meta name="twitter:description" content="This is the official Coding & Cocktails Intro to CSS Compilers course.">
+        <meta name="twitter:description" content="This is the official Coding & Cocktails Command Line course.">
         <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/02-feb.css" id="theme">
+		<link rel="stylesheet" href="css/theme/03-mar.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor--><link rel="stylesheet" href="lib/css/light.css">
@@ -48,458 +46,442 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
                 <section id="coding-and-cocktails">
-                    <img src="images/02-feb/logo-large.png" alt="Coding &amp; Cocktails" />
+                    <img src="images/03-mar/logo-large.png" alt="Coding &amp; Cocktails" />
                 </section>
-				<section id="css-compilers">
-					<h3>Intro to CSS Compilers</h3>
-                    <img src="images/02-feb/logo.png" alt="Coding &amp; Cocktails" />
-                    <p>Slides available at:
-                        <!-- update links to point to slides and display bitly link -->
-                        <a href="http://bit.ly/CSSCmp" target="_blank">bit.ly/CSSCmp</a>
+				<section id="intro-to-web-concepts">
+					<h3>Intro to Command Line</h3>
+                    <img src="images/03-mar/logo.png" alt="Coding &amp; Cocktails" />
+                    <p>
+                        Slides available at:
+                        <a href="http://kansascitywomenintechnology.github.io/CommandLine" target="_blank">http://kansascitywomenintechnology.github.io/CommandLine</a>
                     </p>
 				</section>
-                <section>
-                    <h3>Join us on social media:</h3>
-                    <p style="margin-top: 50px; font-size: 2em;">#LadyDevs</h3>
-                    <p style="font-size: 2em;">#KCWiT</p>
-                    <p style="font-size: 2em;">#CodingAndCocktailsKC</p>
-                    <p style="font-size: 2em;"><i class="fa fa-twitter"></i><a href="https://twitter.com/codecocktailskc" target="_blank">&nbsp;&nbsp;@codecocktailskc</a></p>
-                    <p style="font-size: 2em;"><i class="fa fa-facebook"></i><a href="https://www.facebook.com/codingandcocktailsKC" target="_blank">&nbsp;&nbsp;CodingAndCocktailsKC</a></p>
-                </section>
-                <section id="kcwit">
-                    <h3>Powered By:</h3>
-                    <a href="http://kcwomenintech.org/" target="_blank"><img src="css/images/kcwit_logo_white.png" alt="Kansas City Women in Technology logo"></a>
-                </section>
-                <section>
-                    <img src="images/02-feb/kcdc.gif" alt="Kansas City Developer Conference Logo">
-                    <h2><a href="http://www.kcdc.info/#!/" target="_blank">Kansas City Developer Conference</a></h2>
-                    <h3>June 22 - 24, 2016</h3>
-                    <h3>KCWiT 10% off Discount Code: KCWITROCKS</h3>
-                </section>
-                <section id="django-girls">
-                    <a href="https://djangogirls.org/kansascity/" target="_blank"><img src="images/02-feb/logo-transparent.png" alt="Django Girls logo" ></a>
-                    <h3>June 24 - 26, 2016</h3>
-                    <h3><a href="http://kansascitywomenintechnology.github.io/DjangoGirlsKCPresentation/#/intro" target="_blank">Presentation</a></h3>
-                </section>
-                <section>
-                    <h3>Our Hosts</h3>
-                    <h2>The Nerdery</h2>
-                    <a href="https://nerdery.com/" target="_blank"><img src="images/02-feb/Nerdery-logo.png" alt="The Nerdery Logo"></a>
-                </section>
-                <section id="mentors">
-                    <h3>Mentors</h3>
-                    <img src="images/02-feb/Superhero.jpg" alt="Everybody Wants To Be A Star" style="height: 80%; width: 80%;">
-                    <p style="font-size: 0.5em;">Photo by <a href="http://photos.jdhancock.com/" target="_blank">JD Hancock </a><a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">cc</a></p>
-                </section>
-                <section id="review">
-                    <h3>Last Month - Version Control</h3>
+                <section id="last-month">
+                    <h2>Last Month</h2>
+                    <p>In January we learned about HTML &amp; CSS.  We covered:</p>
                     <ul>
-                        <li>What Version Control is used for</li>
-                        <li>Creating Repositories</li>
-                        <li>Branching, Merging &amp; Forking</li>
-                        <li>Interaction Through the Command Line</li>
-                        <li><a href="http://codingandcocktails.kcwomenintech.org/sessions#versionControl" target="_blank">Presentation &amp; Worksheet Link</a></li>
+                        <li>HTML &amp; CSS Basics</li>
+                        <li>Best Practices</li>
+                        <li>Troubleshooting</li>
                     </ul>
                 </section>
-                <section id="objectives">
+                <section id="topics">
                     <h2>What we'll cover</h2>
                     <ul>
-                        <li>Brief CSS Review</li>
-                        <li>What CSS Compilation is and Why We Should Use It</li>
-                        <li>Features of the Sass Preprocessor</li>
+                        <li>
+                            What is the command line?
+                        </li>
+                        <li>
+                            What is the command line used for?
+                        </li>
+                        <li>
+                            Common Commands &amp; Practice
+                        </li>
                     </ul>
-
+                    <aside class="notes">
+                        Common Commands for moving around the filesystem, creating and deleting files, etc.
+                    </aside>
                 </section>
-                <section id="css-review">
-                    <h2>CSS Review</h2>
+                 <section id="inspiration">
                     <section>
-                        <h3>Syntax</h3>
-                        <img src="images/02-feb/anatomy-of-a-css-rule.gif" alt="CSS Rule Anatomy">
-                        <p>Image Credit:</p> <a href="http://www.learnwebcode.com" target="_blank">LearnWebCode.com</a>
-                    </section>
-                    <section>
-                        <h3>Box Model</h3>
-                        <img src="images/02-feb/box-model.png" alt="CSS Box Model" style="margin-top: 50px;">
-                    </section>
-                    <section>
+                        <h2>But First ...</h2>
+                        <h4>Inspiring Female Developers</h4>
                         <ul>
-                            <li>Element Selector: <pre><code>h1 { ... }</code></pre></li>
-                            <li>Class selector: <pre><code>.my-class { ... }</code></pre></li>
-                            <li>ID selector: <pre><code>#my-id { ... }</code></pre></li>
-                            <li>Descendant selector: <pre><code>div p { ... }</code></pre></li>
+                            <li class="fragment">Katrina Owen<a href="https://twitter.com/kytrinyx" target="_blank">@kytrinyx</a></li>
+                            <li class="fragment">Miral Kotb<a href="https://twitter.com/mkiLuminate" target="_blank">@mkiLuminate</a></li>
                         </ul>
                     </section>
-                    <section>
-                        <ul>
-                            <li>Properties:
-                                <ul>
-                                    <li>margin</li>
-                                    <li>padding</li>
-                                    <li>border</li>
-                                    <li>font-family</li>
-                                    <li>font-size</li>
-                                    <li>list-style</li>
-                                </ul>
-                            </li>
-                            <li>Remember: The last rule applied wins!</li>
-                            <li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></li>
-                            <li><a href="http://colorhunt.co/" target="_blank">Color Pallette</a></li>
-                        </ul>
-                    </section>
-                </section>
-                <section id="definition">
-                    <h2>What is a CSS Compiler?</h2>
-                    <section>
-                        <p style="margin-top: 100px;">Taking input (Sass in our case) and converting (or compiling) it into something else (plain old CSS in this case) so it can be understood by a third thing (your browser in this case)</p>
+                    <section id="Katrina Owen">
+                        <h2>Katrina Owen</h2>
+                        <h4>Exercism.io</h4>
+                        <a href="" target="_blank">
+                            <img src="images/03-mar/katrina.jpg" alt="Katrina Owen">
+                        </a>
+                        <p>
+                            <a href="http://exercism.io/" target="_blank">exercism.io</a>
+                        </p>
                         <aside class="notes">
-                            Since your browser is considered to be the processor for your website, Sass is considered a preprocessor because it processes the code before your browser does.
-                        </aside>
-                    </section>
-                    <section>
-                        <ul>
-                            <li>Browsers only understand CSS</li>
-                            <li>Helps reduce complexity</li>
-                            <li>Reduce file size through minification</li>
-                            <li><span style="color: #BC2D3A; font-weight: bold;">Warning:</span> Once you start using a preprocessor, only edit pre-compiled files or you will overwrite your work!</li>
-                        </ul>
-                        <aside class="notes">
-                            CSS itself sometimes can make it hard to create clean/reusable code and the more styling you add the more complex your stylesheets become - compilers help with this!
-                            You can’t have some people editing .css and others editing .scss, .css edits will get overwritten with the next compile
-                        </aside>
-                    </section>
-                    <section>
-                        <h6>Preprocessor vs. Postprocessor</h6>
-                        <p>No significant technical distinction</p>
-                        <table style="border-collapse: collapse; border: 1px solid white;">
-                            <thead>
-                                <tr><th style="width: 50%; text-align: center; border: 1px solid white;">Preprocessor</th><th style="width: 50%; text-align: center; border: 1px solid white;">Postprocessor</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td style="border: 1px solid white; padding: 2px;">Sass, Less</td><td style="border: 1px solid white; padding: 2px;">PostCSS, Autoprefixer</td></tr>
-                                <tr><td style="border: 1px solid white; padding: 2px;">Sometimes Own Syntax</td><td style="border: 1px solid white; padding: 2px;">CSS Syntax</td></tr>
-                                <tr><td style="border: 1px solid white; padding: 2px;">Compiles into CSS</td><td style="border: 1px solid white; padding: 2px;">Compiles into CSS</td></tr>
-                                <tr><td style="border: 1px solid white; padding: 2px;"></td><td style="border: 1px solid white; padding: 2px;">Allows use of proposed CSS features or features not yet supported</td></tr>
-                            </tbody>
-                        </table>
-                        <aside class="notes">
-                            add browser prefixes is a common usage for postprocessors
-                        </aside>
-                    </section>
-                </section>
-                <section id="workflow">
-                    <h2>Development Process</h2>
-                    <ul>
-                        <li>Create HTML/Style with Sass</li>
-                        <li>Compile/Build</li>
-                        <li>Deploy &amp; View</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Compiler Options</h2>
-                    <section>
-                        <h3>Sass</h3>
-                        <ul>
-                            <li>Syntactically Awesome Stylesheets</li>
-                            <li>Ruby Sass: Written in Ruby and therefore has a Ruby Dependency</li>
-                            <li>LibSass: Allows Sass to be used outside of Ruby</li>
-                            <li>.scss (SASSy CSS) files vs. .sass files</li>
-                        </ul>
-                        <aside class="notes">
-                            Can get rid of Ruby dependency if using LibSass - this is what will be used with Grunt/Gulp/Webpack
-                            LibSass C/C++ port allows Sass to be used outside of Ruby
-                            .sass is the old version that just uses indenting without curly braces and semi-colons - hard to transfer b/t it &amp; CSS leading to .scss - css syntax with the extra functionality
-                        </aside>
-                    </section>
-                    <section>
-                        <h3>Less</h3>
-                        <ul>
-                            <li>Similar but with some slight differences in syntax and functionality
-                                <ul>
-                                    <li>Example: Less uses @ in front of variables, Sass uses $</li>
-                                    <li>Example: Less uses mixin guards where Sass uses if statements</li>
-                                </ul>
-                            </li>
-                            <li>Originally written in Ruby but ported to JavaScript</li>
-                        </ul>
-                        <aside class="notes">
-                            Those are two most popular followed by Stylus but those are not the only options, there are others.  We're going to focus on Sass.
-                            You'll find strong opinions on which is better among the development community but if you focus on learning one it will serve you best
-                            With Twitter's Bootstrap (a popular styling framework) moving to Sass it may gain a slight edge
-                        </aside>
-                    </section>
-                </section>
-                <section>
-                    <h2>Sass</h2>
-                    <ul>
-                        <li>Compilation options:
                             <ul>
-                                <li>Command Line (Ruby Sass)
-                                    <pre style="margin: 5px;"><code>
-sass inputfile.scss outputfile.css
-                                    </code></pre>
-                                    <pre style="width: 100%; margin: 5px;"><code>
-sass -watch inputfile.scss:outputfile.css
-                                        </code></pre>
-                                </li>
-                                <li>Task Runner (LibSass)
-                                    <ul>
-                                        <li>Gulp</li>
-                                        <li>Grunt</li>
-                                        <li>Webpack</li>
-                                    </ul>
-                                </li>
-                                <li>GUI
-                                    <ul>
-                                        <li><a href="https://incident57.com/codekit/index.html" target="_blank">CodeKit</a></li>
-                                        <li><a href="https://prepros.io/" target="_blank">Prepros</a></li>
-                                    </ul>
-                                </li>
+                                <li>Katrina accidently became a developer while pursuing a degree in molecular biology.</li>
+                                <li>She is a backend web developer (ruby)</li>
+                                <li>Created open source education at exercism.io</li>
+                                <li>exercism allows you to work in your local dev environment, get feedback from other learners, see how others solved the exercise.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section id="Miral Kotb">
+                        <h2>Miral Kotb</h2>
+                        <h4>iluminate</h4>
+                        <iframe src="https://player.vimeo.com/video/59143775" width="775" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <p>
+                            <a href="http://iluminate.com/" target="_blank">iluminate.com</a>
+                        </p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Miral combined her passions for dance and computers to create an entertainment experience.</li>
+                                <li>She studied COmputer Science at Columbia University while studying dance at Barnard College.</li>
+                                <li>Had a vision of dancers wearing costumes that illuminated wirelessly and complimented the music and coreography</li>
+                                <li>Showed on America's Got Talent</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+                <section id="what-is-it">
+                    <h2>What is the Command Line?</h2>
+                    <p>Text-based interface to interact with your computer</p>
+                    <p>Enter input and return output</p>
+                    <img src="images/03-mar/commandLine.png" alt="command prompt">
+                    <aside class="notes">
+                        <ul>
+                            <li>Windows typically uses explorer, finder in mac for a visual interaction</li>
+                            <li>Different way to interact with computer</li>
+                            <li>enter commands and computer responds with output</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="what-for">
+                    <h2>What do I use the command line for?</h2>
+                    <h4></h4>
+                    <ul>
+                        <li class="fragment">Navigate the filesystem</li>
+                        <li class="fragment">Run Programs</li>
+                        <li class="fragment">Combine Commands</li>
+                        <li class="fragment">Automate Common Tasks</li>
+                        <li class="fragment">Git</li>
+                        <li class="fragment">Scaffolding Projects</li>
+                        <li class="fragment">Deployment</li>
+                        <li class="fragment">Utilizing Vagrant Environments</li>
+                        <li class="fragment">Installing Programs</li>
+                    </ul>
+                    <aside class="notes">
+                        <ul>
+                            <li>Filesystem refers to folders and files on your computer</li>
+                            <li>What you typically call a folder I'll refer to as a directory</li>
+                            <li>The filesystem is laid out in heirarchical structure - parent and child directories</li>
+                            <li>scaffolding - quick set up of app "skeleton"</li>
+                            <li>Vagrant - quickly set up development environments - type of machine and software - Ask if Jennifer has anything to add about it!!!</li>
+                            <li>NOTE: Job interviews will ask about CL, most places have command line based build processes.</li>
+                            <li>Developers often develop tools for other developers to make development easier... sometimes don't have time or skill to create full GUI environments as these are usually time consuming and require different skill set so will create command line based processes so knowing this tool will be helpful</li>
+                            <li>Npm, bower, webpack, etc</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="how-to-use">
+                    <h2>How do I use the Command Line?</h2>
+                    <section>
+                        <!-- TODO: Point href to correct location -->
+                        <h4>Tools:</h4>
+                        <ul>
+                            <li><strong>Mac:</strong> <a href="https://www.iterm2.com/" target="_blank">iTerm</a>+<a href="https://github.com/robbyrussell/oh-my-zsh#basic-installation" target="_blank">oh-my-zsh</a></li>
+                            <li><strong>Windows:</strong> <a href="https://git-scm.com/downloads" target="_blank">Git Bash</a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="filesystem-navigation">
+                    <h2>Navigating the filesystem</h2>
+                    <section id="navigation">
+                        <h4>Examples:</h4>
+                        <ul>
+                            <li><strong>pwd</strong> - print working directory</li>
+                            <li><strong>cd</strong> - change directory</li>
+                            <li><strong>ls</strong> - list directory contents</li>
+                        </ul>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <p>pwd</p>
+                            <p>ls</p>
+                            <p>cd Documents</p>
+                        </div>
+                        <div class="fragment">
+                            <p><a href="http://man.he.net/" target="_blank">HELP! I don't know what I'm doing!</a></p>
+                            <p>hint: check the online man pages or type "man ls"</p>
+                        </div>
+                        <aside class="notes">
+                            <ul>
+                                <ul>-l displays:
+                                    <li>permissions,</li>
+                                    <li>number of links (number of child directories and files, includes parent and current),</li>
+                                    <li>owner name,</li>
+                                    <li>group name, </li>
+                                    <li>bytes in file,</li>
+                                    <li>date modified,</li>
+                                    <li>file name</li>
+                                </ul>
+                                <li>what if you don't know bytes conversions?</li>
+                                <li>Exit man pages with q, navigate with space for next page, enter for more, arrows</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Shortcuts:</h4>
+                        <div style="width: 48%; margin-right: 2%; float: left; text-align: center;">
+                            <ul style="list-style-type: none;">
+                                <li>Current Directory:</li>
+                                <li>Parent Directory:</li>
+                                <li>Home Directory:</li>
+                                <li>Root Directory:</li>
+                                <li>History:</li>
+                                <li>Previous Command:</li>
+                                <li>Previous Command:</li>
+                                <li>Tab completion</li>
+                            </ul>
+                        </div>
+                        <div style="width: 50%; float: left; text-align: center;">
+                            <ul style="list-style-type: none;">
+                                <li><strong>.</strong></li>
+                                <li><strong>..</strong></li>
+                                <li><strong>~</strong></li>
+                                <li><strong>/</strong></li>
+                                <li><strong>history</strong></li>
+                                <li><strong>!!</strong></li>
+                                <li><strong>&uarr;</strong></li>
+                            </ul>
+                        </div>
+                        <aside class="notes">
+                            <ul>
+                                <li>home directory contains files for user</li>
+                                <li>root directory is highest level directory</li>
+                                <li>handy to know for relative path - these don't include the full path and assume file is on current server (ie. session.html vs http://codingandcocktails.kcwomenintech.org/sessions</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img src="http://i.kinja-img.com/gawker-media/image/upload/s--joy4adtr--/18hi0cra8i3wypng.png" alt="">
+                    </section>
+                </section>
+                <section>
+                    <h2>File Permissions</h2>
+                    <ul>
+                        <li><strong>chown</strong> - Change file owner</li>
+                        <li><strong>chmod</strong> - Permissions are set according to numbers.
+                            <ul class="fragment">
+                                <li>0 = no permissions; cannot read, write, or execute the file</li>
+                                <li>1 = execute only</li>
+                                <li>2 = write only</li>
+                                <li>3 = write and execute (1+2)</li>
+                                <li>4 = read only</li>
+                                <li>5 = read and execute (4+1)</li>
+                                <li>6 = read and write (4+2)</li>
+                                <li>7 = read and write and execute (4+2+1)</li>
                             </ul>
                         </li>
                     </ul>
                     <aside class="notes">
-                        When it gets old typing in the sass command all the time use watch
-                        May not want to store your CSS file when you're pushing it to version control
-                        Codekit is only on macs.
+                        owner   group   world
+                        Read = 4, write = 2, execute = 1, others are combinations.
+                        chmod = change file modes
+                        chown example: chown newuser filename.txt
+                            user:group file
+
                     </aside>
                 </section>
-                <section id="why">
-                    <h2>Why should we use them?</h2>
-                    <ul>
-                        <li>Cleaner &amp; more maintainable code</li>
-                        <li>Follow DRY (Don't Repeat Yourself) principles better</li>
-                        <li>Increase Productivity</li>
-                        <li>Selector nesting for better organization</li>
-                    </ul>
-                    <aside class="notes">
-                        Get more done in more code that is easier to read in less time
-                    </aside>
-                </section>
-                <section id="features">
-                    <h2>Sass Features</h2>
+                <section id="useful-commands">
+                    <h2>More Commands</h2>
                     <section>
-                        <ul>
-                            <li>// Single-line comments that don't show in your CSS</li>
-                            <li>/* Also supports multi-line comments that do show in compiled CSS */ </li>
-                            <li>Sourcemap for debugging help</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Variables</h3>
-                        <ul>
-                            <li><pre style="width: 30%;"><code>$my-color: #fff;</code></pre></li>
-                            <li>Use these to help reduce repetition</li>
-                            <li>Easily &amp; quickly change things like colors or font stacks in one place</li>
-                            <li>Don't replace everything, stick to common patterns</li>
-                            <li>Common uses include colors, font-stacks, numbers, layout, font sizing</li>
-                        </ul>
+                        <h4>Create a new directory</h4>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <p>cd ~</p>
+                            <p>mkdir CodingAndCocktails</p>
+                            <p>ls</p>
+                        </div>
                         <aside class="notes">
-                            Example: 5px font size don't use the same variable for a 5px border-radius
+                            <p>make sure we have windows explorer or mac finder open!!!</p>
                         </aside>
                     </section>
                     <section>
-                        <h3>Partials</h3>
-                        <ul>
-                            <li>Helpful for organization - keep all like things in one file so there is only one place to make changes</li>
-                            <li>Allow you to import other scss files into each other</li>
-                            <li>Typically start the filename with an _ (Example: _variables.scss) so it doesn't get compiled into it's own CSS file</li>
-                            <li>Bring them into your main file using @import: <pre><code>@import "variables";</code></pre></li>
-                            <li>More advanced projects may have partials for typography, buttons, layout, forms, etc.</li>
-                        </ul>
+                        <img style="width: 700px;" src="http://cdn2.everyjoe.com/wp-content/gallery/shocked-baby/surprised-baby-gif-8.jpg" alt="Amazed Baby">
                     </section>
                     <section>
-                        <h3 style="margin-bottom: 5px;">Nesting</h3>
-                        <ul>
-                            <li>Allows for better organization nesting css selectors inside each other</li>
-                            <li>Avoid nesting more than 3 - 4 levels deep</li>
-                            <li><span style="color: #BC2D3A; font-weight: bold;">Debugging Warning: </span>Nesting can "create" selectors in your CSS that don't exist in your scss file making debugging difficult</li>
-                            <pre style="float: left; width: 50%; margin-right: 10px;"><code>.container {
-    margin: 0;
-    padding: 0;
-
-    .item {
-        margin-bottom: 20px;
-        border-top: 2px solid blue;
-    }
-}                           </code></pre>
-                            <pre><code>.container {
-    margin: 0;
-    padding: 0;
-}
-
-.container .item {
-    margin-bottom: 20px;
-    border-top: 2px solid blue;
-}                           </code></pre>
-                        </ul>
-                        <aside class="notes">
-                            4 or more levels can create bloated, unnecessary CSS
-                        </aside>
+                        <h4>Create a new file</h4>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <p>cd CodingAndCocktails</p>
+                            <p>touch myNewFile.txt</p>
+                            <p>ls</p>
+                        </div>
                     </section>
                     <section>
-                        <h3>Mixins</h3>
-                        <ul>
-                            <li>Reduce repetition</li>
-                            <li>"Function" for your styling</li>
-                            <li>Mixin libraries (<a href="http://bourbon.io/docs/" target="_blank">Bourbon</a> &amp; <a href="http://compass-style.org/" target="_blank">Compass</a>)</li>
-                        </ul>
-                        <aside class="notes">
-                            Define a function for those who may not know
-                        </aside>
-                    </section>
-                    <section>
-                        <h3>Mixin Example</h3>
-                        <pre><code>@mixin link-style ($link, $visit, $hover, $active) {
-  a {
-    color: $link;
-    &amp;:visited {
-      color: $visit;
-    }
-    &amp;:hover {
-      color: $hover;
-    }
-    &amp;:active {
-      color: $active;
-    }
-  }
-}                       </code></pre>
-                        <pre><code>a {
-    @import link-style(blue, red, darkblue, green);
-    text-decoration: none;
-}</code></pre>
-                    </section>
-                    <section>
-                        <h3>Operations</h3>
-                        <ul>
-                            <li>Allows math operations such as<pre style="display: inline; width: 40%; float: right; margin-top: 5px; margin-bottom: 0;"><code>$my-var*2</code></pre></li>
-                            <li><span style="color: #BC2D3A; font-weight: bold;">Warning:</span> Changes to my-var affect elements styled by $my-var*2 also</li>
-                            <li>String operations <pre><code>$base_string: "Gin";
-$add-on-string: "Tonic";
-p:before {
-    content: $base-string + " and " + $add-on-string; //Gin and Tonic
-}
-</code></pre></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h3>Color Functions</h3>
-                        <ul>
-                            <li>Lighten: make the given color lighter <pre><code>lighten(#c0ffee, 20%)</code></pre></li>
-                            <li>Darken: make the given color darker <pre><code>darken(#decaff, 20%)</code></pre></li>
-                            <li>rgba: change the alpha (opacity) value of the color <pre><code>rgba(#f00d1e, 0.5)</code></pre></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h6>Advanced: If Statements</h6>
-                        <pre><code>$type: pina-colada;
-p {
-  @if $type == bloody-mary {
-    color: red;
-  } @else if $type == pina-colada {
-    color: white;
-  } @else {
-    color: blue;
-  }
-}                       </code></pre>
-                        <p>Compiles to:</p>
-                        <pre><code>p {
-    color: white;
-}                       </code></pre>
-                    </section>
-                    <section>
-                        <h6>Advanced: Loops</h6>
-                        <p>@for, @while, @each</p>
-                        <pre><code>@for $i from 1 through 3
-    .style-#{$i}
-    width: 10px * $i    </code></pre>
-                        <p>Compiles to:</p>
-                        <pre><code>.style-1 {
-    width: 10px;
-}
-.style-2 {
-    width: 20px;
-}
-.style-3 {
-    width: 30px;
-}                       </code></pre>
-                    </section>
-                    <section>
-                        <h3>Extend</h3>
-                        <ul>
-                            <li>Reduce redundancy</li>
-                            <li>Allows you to utilize styles already given to one selector in another selector</li>
-                        </ul>
-                            <pre><code>.btn {
-    padding:5px;
-    border: 1px solid #666;
-    color:#000;
-    text-decoration:none;
-}
-
-.btn-warning {
-    @extend .btn
-    background: red;
-}                           </code></pre>
-                    </section>
-                </section>
-                <section id="debugging">
-                    <h2>Debugging</h2>
-                    <ul>
-                        <li>Right click the element you're concerned with
-                            <ul>
-                                <li>Choose inspect</li>
-                                <li>View the styles</li>
-                                <li>The sourcemap will point you to the line in your scss file where the style in question exists.</li>
-                                <img src="images/02-feb/sourcemap.png" alt="scss line number">
+                        <h4>Write content to a file</h4>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <ul style="list-style-type: none;">
+                                <li>echo "Old Fashioned</li>
+                                <li>Martini</li>
+                                <li>Mai Tai</li>
+                                <li>Whiskey Sour</li>
+                                <li>Cosmopolitan</li>
+                                <li>Margarita" > myCocktailList.txt</li>
                             </ul>
-                        </li>
-                        <li>Leave CSS expanded during development, minify for production</li>
-                    </ul>
+                        </div>
+                        <aside class="notes">
+                            talk about exiting stuck command with ctrl-c here
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Copy a file</h4>
+                        <p>cp sourceFile destinationFile</p>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <p>cp myCocktailList.txt newCocktails.txt</p>
+                            <p>ls</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Rename or move a file</h4>
+                        <p>mv /path/to/sourceFile /path/to/destinationFile</p>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try renaming!</h4>
+                            <p>mv newCocktails.txt renameCocktails.txt</p>
+                            <p>ls</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Remove a file</h4>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <p>rm renameCocktails.txt</p>
+                            <p>ls</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>View a file</h4>
+                        <p>cat to view entire file</p>
+                        <p>tail -n to view the last n lines</p>
+                        <p>head -n to view the first n lines</p>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <p>cat myCocktailList.txt</p>
+                            <p>tail -2 myCocktailList.txt</p>
+                            <p>head -2 myCocktailList.txt</p>
+                        </div>
+                        <aside class="notes">
+                            tail shows: Cosmopolitan, Margarita
+                            head shows: Old Fashioned, Martini
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Search for a text string</h4>
+                        <p>grep - global regular expression print</p>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <p>grep Mar myCocktailList.txt</p>
+                        </div>
+                        <aside class="notes">
+                            grep shows Margarita &amp; Martini
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Search for files</h4>
+                        <p>find</p>
+                        <br>
+                        <br>
+                        <div class="fragment">
+                            <h4>Try it!</h4>
+                            <p>find . –name "*.txt" –mtime 5</p>
+                        </div>
+                    </section>
                 </section>
-                <section id="conversion">
-                    <h2>Converting CSS to Sass</h2>
-                    <video width="800" height="500" controls preload>
-                        <source src="images/02-feb/Conversion.mov" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <section id="input-output">
+                    <h2>Input and Output</h2>
+                    <section>
+                        <div style="width: 48%; margin-right: 2%; float: left; text-align: center;">
+                            <ul style="list-style-type: none;">
+                                <li>Stdin:</li>
+                                <li>Stdout (redirect):</li>
+                                <li>Stdout (append):</li>
+                                <li>Stderr</li>
+                                <li>Pipe:</li>
+                            </ul>
+                        </div>
+                        <div style="width: 50%; float: left; text-align: center;">
+                            <ul style="list-style-type: none;">
+                                <li>&lt;</li>
+                                <li>&gt;</li>
+                                <li>&gt;&gt;</li>
+                                <li>&nbsp;</li>
+                                <li>|</li>
+                            </ul>
+                        </div>
+                        <aside class="notes">
+                            <ul>
+                                <li>Stdin: data going IN to a program (typically coming from keyboard)</li>
+                                <li>Stdout (file descriptor/indicator to access file: 1): data coming OUT of a program (typically terminal that started program)</li>
+                                <li>Stderr (2): error data coming OUT of a program (normal to be put in same as stdout 2>&1)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <br>
+                        <br>
+                        <h4>Try it!</h4>
+                        <p>grep Mar myCocktailList.txt | wc -w</p>
+                        <p>echo "Bloody Mary" >> myCocktailList.txt</p>
+                        <p>cat myCocktailList.txt</p>
+                    </section>
                 </section>
-                <section id="organization">
-                    <h2>Organization</h2>
-                    <p>Despite Sass being awesome, organization is still important</p>
-                    <pre>stylesheets/
-|
-|-- modules/              # Common modules
-|   |-- _all.scss         # Include to get all modules
-|   |-- _utility.scss     # Module name
-|   |-- _colors.scss      # Etc...
-|-- partials/             # Partials
-|   |-- _base.sass        # imports for all mixins + global project variables
-|   |-- _buttons.scss     # buttons
-|   |-- _figures.scss     # figures
-|   |-- _grids.scss       # grids
-|   |-- _typography.scss  # typography
-|   |-- _reset.scss       # reset
-|-- vendor/               # CSS or Sass from other projects
-|   |-- _colorpicker.scss
-|   |-- _jquery.ui.core.scss
-|   ...
-|
-`-- main.scss            # primary Sass file</pre>
-                    <a href="http://thesassway.com/beginner/how-to-structure-a-sass-project" target="_blank">Sample Structure from The Sass Way</a>
+                <section id="advanced-topics">
+                    <h2>Additional Topics</h2>
+                    <section>
+                        <h4>Editing files in the command line</h4>
+                        <ul>
+                            <li>vi</li>
+                            <li>vim</li>
+                            <li>nano</li>
+                            <li>emacs</li>
+                        </ul>
+                        <div style="margin-top=2em;"><a href="http://vim-adventures.com/" target="_blank">vim-adventures</a></div>
+                    </section>
+                    <section>
+                        <h4>Running Scheduled Tasks with Cron Jobs</h4>
+                        <p>added by editing the cron file</p>
+                        <p>specify the schedule you want to run on and the script or command you want to run</p>
+                        <pre><code>* * * * * <span style="color:red;">command to be executed</span>
+| | | | |_ day of week (0 - 6, 0 = Sunday)
+| | | |___ month (1 - 12)
+| | |_____ day of month (1 - 31)
+| |_______ hour (0 - 23)
+|_________ minute (0 - 59)</code></pre>
+                    </section>
+                    <section>
+                        <video width="800" height="500" controls>
+                            <source src="images/03-mar/cronexample.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </section>
                 </section>
                 <section id="review">
                     <h2>Review</h2>
                     <ul>
-                        <li>Defined CSS Compilers</li>
-                        <li>How CSS Compilation fits in the development process</li>
-                        <li>Why we want to use CSS Compilers</li>
-                        <li>Sass features</li>
+                        <li>What is the command line?</li>
+                        <li>What the command line is used for</li>
+                        <li>Command line tools</li>
+                        <li>Filesystem navigation</li>
+                        <li>Useful commands</li>
+                        <li>Input &amp; Output</li>
                     </ul>
-                    <h3 style="margin-top: 50px;"><a href="http://codingandcocktails.kcwomenintech.org/sessions#cssCompilers" target="_blank">Tonight's Worksheet</a></h3>
                 </section>
                 <section id="questions">
                   <h2>Questions?</h2>
-                  <div style = "font-size:1200%; height:100%; margin-top:25%" class ="blue">?
+                  <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
                     <div class ="clear"></div></div>
                 </section>
                 <section id="contact">
@@ -512,12 +494,12 @@ p {
                         <i class="fa fa-twitter"></i><a href="https://twitter.com/codecocktailskc" target="_blank">&nbsp;&nbsp;@codecocktailskc</a>
                     </div>
                     <div>
-                        <i class="fa fa-facebook"></i><a href="https://www.facebook.com/codingandcocktailsKC" target="_blank">&nbsp;&nbsp;facebook.com/codingandcocktailsKC</a>
+                        <i class="fa fa-facebook"></i><a href="https://www.facebook.com/codingandcocktailsKC" target="_blank">&nbsp;&nbsp;facebook.com/codingandcocktailsKC/</a>
                     </div>
                     <div>
                         <i class="fa fa-slack"></i><a href="https://kcwit.slack.com/" target="_blank">&nbsp;&nbsp;kcwit.slack.com</a>
                     </div>
-                    <h4 style="margin-top: 2em;"><a href="http://www.eventbrite.com/e/coding-cocktails-may-tickets-21575314346?aff=presentation">Join us again May 14th for an introduction to JavaScript!</a></h4>
+                    <h4 style="margin-top: 2em;"><a href="http://www.eventbrite.com/e/coding-cocktails-march-tickets-20155162634?aff=FebPresMar2016">Join us March 12 for an Introduction to Git Github &amp; Version Control!</a></h4>
                 </section>
 			</div>
   		<footer>
