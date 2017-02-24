@@ -10,6 +10,10 @@
   font-weight: bold;
   font-style: bold; }
 
+@font-face {
+  font-family: "Vtks-LongTime";
+  src: local("Vtks-LongTime"), url("fonts/Vtks-LongTime.ttf") format("truetype"); }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -21,6 +25,10 @@ body {
   background: -o-radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
   background: -ms-radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
   background: radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
+}
+
+p.power {
+  font-family: "Vtks-LongTime";
 }
 
 .reveal {
