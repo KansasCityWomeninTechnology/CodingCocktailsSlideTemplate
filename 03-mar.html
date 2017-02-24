@@ -139,157 +139,210 @@
               <li class="fragment">Resources</li>
             </ol>
         </section>
-<!-- TODO start here -->
-                <section>
-                    <h1>What is the command line?</h1>
-                    <br>
-                    <p class="fragment">
-                      <font style="color:#c7bc75">C</font>ommand
-                      <font style="color:#c7bc75">L</font>ine
-                      <font style="color:#c7bc75">I</font>nterface
-                    </p>
-                    <br>
-                    <p class="fragment">Text-based interface<br>to interact with your computer</p>
-                    <br>
-                    <p class="fragment">Enter input and return output</p>
-                    <br>
-                    <img class="fragment" src="images/03-mar/commandLine.png" height="60px">
-                </section>
-                <section>
-                    <h1>Why use the command line?</h1>
-                    <div class="fragment current-visible abs">
-                      <img src="images/03-mar/wonder-woman.gif" height="78%" width="78%"/>
-                      <p class="power" style="font-size: 100px; font-weight: 100;">Power.</p>
-                    </div>
-                    <br>
-                    <p class="fragment">Easily run programs</p>
-                    <br>
-                    <p class="fragment">Write scripts for automated tasks</p>
-                    <br>
-                    <p class="fragment">A single command can run a task<br>that can save you hours</p>
-                    <br>
-                    <p class="fragment current-visible">Running many of these commands together<br>can save you days</p>
-                </section>
-                <section>
-                    <h1>With Great Power...</h1>
-                    <div class="fragment current-visible abs">
-                      <img src="images/03-mar/great-power.jpg" height="62%" width="62%"/>
-                      <p>comes great responsibility</p>
-                    </div>
-                    <br>
-                    <p class="fragment">You can tell the computer to do<br><i>anything</i> that it is capable of</p>
-                    <br>
-                    <p class="fragment">You can erase all of your data<br>with a simple command</p>
-                    <br>
-                    <p class="fragment" style="color: #ba1414;">Make sure you know what a<br>command does before you run it</p>
-                </section>
-                <section>
-                    <h1>How do I use it?</h1>
-                    <div class="fragment">
-                      <br>
-                      <h4>You need a terminal emulator:</h4>
-                      <ul>
-                          <li><strong>Mac:</strong> <a href="https://www.iterm2.com/" target="_blank">iTerm</a> + <a href="https://github.com/robbyrussell/oh-my-zsh#basic-installation" target="_blank">oh-my-zsh</a></li>
-                          <li><strong>Windows:</strong> <a href="https://git-scm.com/downloads" target="_blank">Git Bash</a></li>
-                      </ul>
-                    </div>
-                    <br>
-                    <div style="text-align: left;">
-                      <img class="fragment" src="images/03-mar/cli-syntax1.png" width="100%">
-                      <img class="fragment" src="images/03-mar/cli-syntax2.png" height="48px">
-                      <img class="fragment" src="images/03-mar/cli-syntax3.png" height="48px">
-                    </div>
-                </section>
-                <section>
-                    <h1>Tips to help you</h1>
-                    <!-- TODO make this a table -->
-                    <ol style="list-style-type: disc;">
-                      <li class="fragment">Display usage docs:</li>
-                      <div style="text-align: left">
-                        <img class="fragment" src="images/03-mar/man1.png" height="42px" style="margin-bottom: 0;">
-                        <img class="fragment" src="images/03-mar/man2.png" height="42px" style="margin-top: 0;">
-                      </div>
-                      <li class="fragment">Abort a command:&nbsp;&nbsp;&nbsp;&nbsp;CTRL + C</li>
-                      <li class="fragment">Clear terminal:&nbsp;&nbsp;&nbsp;&nbsp;type 'clear'</li>
-                      <li class="fragment">Buffer recall:&nbsp;&nbsp;&nbsp;&nbsp;up and down arrows</li>
-                      <li class="fragment">History:&nbsp;&nbsp;&nbsp;&nbsp;type 'history'</li>
-                      <li class="fragment">Repeat last command:&nbsp;&nbsp;&nbsp;&nbsp;!!</li>
-                      <li class="fragment">Attempt autocompletion:&nbsp;&nbsp;&nbsp;&nbsp;hit TAB</li>
-                      <li class="fragment">Path population:&nbsp;&nbsp;&nbsp;&nbsp;drag &amp; drop the file</li>
+        <section>
+            <h1>What is the command line?</h1>
+            <br>
+            <p class="fragment">
+              <font style="color:#c7bc75">C</font>ommand
+              <font style="color:#c7bc75">L</font>ine
+              <font style="color:#c7bc75">I</font>nterface
+            </p>
+            <br>
+            <p class="fragment">Text-based interface<br>to interact with your computer</p>
+            <br>
+            <p class="fragment">Enter input and return output</p>
+            <br>
+            <img class="fragment" src="images/03-mar/commandLine.png" height="60px">
+        </section>
+        <section>
+            <h1>Why use the command line?</h1>
+            <div class="fragment current-visible abs">
+              <img src="images/03-mar/wonder-woman.gif" height="78%" width="78%"/>
+              <p class="power" style="font-size: 100px; font-weight: 100;">Power.</p>
+            </div>
+            <br>
+            <p class="fragment">Easily run programs</p>
+            <br>
+            <p class="fragment">Write scripts for automated tasks</p>
+            <br>
+            <p class="fragment">A single command can run a task<br>that can save you hours</p>
+            <br>
+            <p class="fragment current-visible">Running many of these commands together<br>can save you days</p>
+        </section>
+        <section>
+            <h1>With Great Power...</h1>
+            <div class="fragment current-visible abs">
+              <img src="images/03-mar/great-power.jpg" height="62%" width="62%"/>
+              <p>comes great responsibility</p>
+            </div>
+            <br>
+            <p class="fragment">You can tell the computer to do<br><i>anything</i> that it is capable of</p>
+            <br>
+            <p class="fragment">You can erase all of your data<br>with a simple command</p>
+            <br>
+            <p class="fragment" style="color: #ba1414;">Make sure you know what a<br>command does before you run it</p>
+        </section>
+        <section>
+            <h1>How do I use it?</h1>
+            <div class="fragment">
+              <br>
+              <h4>You need a terminal emulator:</h4>
+              <ul>
+                  <li><strong>Mac:</strong> <a href="https://www.iterm2.com/" target="_blank">iTerm</a> + <a href="https://github.com/robbyrussell/oh-my-zsh#basic-installation" target="_blank">oh-my-zsh</a></li>
+                  <li><strong>Windows:</strong> <a href="https://git-scm.com/downloads" target="_blank">Git Bash</a></li>
+              </ul>
+            </div>
+            <br>
+            <div style="text-align: left;">
+              <img class="fragment" src="images/03-mar/cli-syntax1.png" width="100%">
+              <img class="fragment" src="images/03-mar/cli-syntax2.png" height="48px">
+              <img class="fragment" src="images/03-mar/cli-syntax3.png" height="48px">
+            </div>
+        </section>
+        <section>
+            <h1>Tips to help you</h1>
+              <div style="text-align: left;">
+                <p class="fragment">Display usage docs</p>
+                <img class="fragment" src="images/03-mar/man1.png" height="32px" style="margin-top: 0;">
+                <img class="fragment" src="images/03-mar/man2.png" height="32px" style="margin-top: 0;">
+              </div>
+              <div style="align: center;">
+                <table class="slightlyPaddedTable" style="font-size:38px; align: center;">
+                  <tr class="fragment">
+                    <td style="text-align: left;">Abort a command</td>
+                    <td style="text-align: left;">CTRL + C</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td style="text-align: left;">Clear terminal</td>
+                    <td style="text-align: left;">type 'clear'</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td style="text-align: left;">Buffer recall</td>
+                    <td style="text-align: left;">up and down arrows</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td style="text-align: left;">History</td>
+                    <td style="text-align: left;">type 'history'</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td style="text-align: left;">Find prev command</td>
+                    <td style="text-align: left;">CTRL + R</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td style="text-align: left;">Repeat last command</td>
+                    <td style="text-align: left;">!!</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td style="text-align: left;">Attempt autocompletion</td>
+                    <td style="text-align: left;">hit TAB</td>
+                  </tr>
+                  <tr class="fragment">
+                    <td style="text-align: left;">Path population</td>
+                    <td style="text-align: left;">drag &amp; drop the file</td>
+                  </tr>
+                </table>
+              </div>
+          </section>
+          <section>
+            <h1>Basic Commands</h1>
+            <br>
+            <div>
+              <table class="slightlyPaddedTable">
+                <tr class="fragment">
+                  <td style="text-align: left;">pwd</td>
+                  <td style="text-align: left;">print working directory</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">ls</td>
+                  <td style="text-align: left;">list files &amp; directories</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">cd</td>
+                  <td style="text-align: left;">change directory</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">mkdir</td>
+                  <td style="text-align: left;">make directory</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">rmdir</td>
+                  <td style="text-align: left;">remove directory</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">touch</td>
+                  <td style="text-align: left;">create file</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">rm</td>
+                  <td style="text-align: left;">remove a file</td>
+                </tr>
+              </table>
+            </div>
+          </section>
+          <section>
+            <h1>More commands</h1>
+            <br>
+            <div>
+              <table class="slightlyPaddedTable">
+                <tr class="fragment">
+                  <td style="text-align: left;">cp</td>
+                  <td style="text-align: left;">copy file or directory</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">mv</td>
+                  <td style="text-align: left;">rename/move file or directory</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">vim</td>
+                  <td style="text-align: left;">edit a file</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">echo</td>
+                  <td style="text-align: left;">print a message</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">ping</td>
+                  <td style="text-align: left;">check internet status</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">alias</td>
+                  <td style="text-align: left;">make custom shortcuts</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">grep</td>
+                  <td style="text-align: left;">global search</td>
+                </tr>
+              </table>
+            </div>
+          </section>
+          <section>
+            <h1>Additional uses</h1>
+            <br>
+            <ol style="list-style-type: disc;">
+              <li class="fragment">Edit files</li>
+              <li class="fragment">Install &amp; Run Tools</li>
+                <ol style="list-style-type: disc; padding-left: 40px;">
+                  <li class="fragment">curl</li>
+                  <li class="fragment">Package managers</li>
+                    <ol style="list-style-type: disc; padding-left: 40px;">
+                      <li class="fragment">Mac: brew</li>
+                      <li class="fragment">Windows: chocolatey</li>
+                      <li class="fragment">Linux: apt</li>
+                      <li class="fragment">All: npm, yeoman, bower, etc</li>
                     </ol>
-                  </section>
-                  <section>
-                    <h1>Basic Commands</h1>
-                    <br>
-                    <div>
-                      <table class="slightlyPaddedTable">
-                        <tr class="fragment">
-                          <td style="text-align: left;">pwd</td>
-                          <td style="text-align: left;">print working directory</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">ls</td>
-                          <td style="text-align: left;">list files &amp; directories</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">cd</td>
-                          <td style="text-align: left;">change directory</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">mkdir</td>
-                          <td style="text-align: left;">make directory</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">rmdir</td>
-                          <td style="text-align: left;">remove directory</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">touch</td>
-                          <td style="text-align: left;">create file</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">rm</td>
-                          <td style="text-align: left;">remove a file</td>
-                        </tr>
-                      </table>
-                    </div>
-                  </section>
-                  <section>
-                    <h1>More commands</h1>
-                    <br>
-                    <div>
-                      <table class="slightlyPaddedTable">
-                        <tr class="fragment">
-                          <td style="text-align: left;">cp</td>
-                          <td style="text-align: left;">copy file or directory</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">mv</td>
-                          <td style="text-align: left;">rename/move file or directory</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">vim</td>
-                          <td style="text-align: left;">edit a file</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">echo</td>
-                          <td style="text-align: left;">print a message</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">ping</td>
-                          <td style="text-align: left;">check internet status</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">alias</td>
-                          <td style="text-align: left;">make custom shortcuts</td>
-                        </tr>
-                        <tr class="fragment">
-                          <td style="text-align: left;">grep</td>
-                          <td style="text-align: left;">global search</td>
-                        </tr>
-                      </table>
-                    </div>
-                  </section>
+                  <li class="fragment">Build tasks</li>
+                    <ol style="list-style-type: disc; padding-left: 40px;">
+                      <li class="fragment">Sass to CSS</li>
+                      <li class="fragment">Live reload</li>
+                      <li class="fragment">Preparing for production: gulp, grunt, ant</li>
+                    </ol>
+                </ol>
+              <li class="fragment">Git</li>
+              <li class="fragment">Website Deployment</li>
+              <li class="fragment">Run a local server</li>
+              <li class="fragment">Expose that server via tunneling</li>
+            </ol>
+          </section>
 
 
 
