@@ -348,6 +348,8 @@ body {
  *********************************************/
 
 /* prevents flicker in browser for animations */
-.safari * {
-  -webkit-backface-visibility: hidden;
+.safari {
+  h1, li {
+    -webkit-backface-visibility: hidden;
+  }
 }
