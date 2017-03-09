@@ -271,7 +271,8 @@ SNIPPETS
  *********************************************/
 
 /* prevents flicker in browser for animations */
-.safari * {
+.safari h1,
+.safari li {
   -webkit-backface-visibility: hidden;
 }
 
