@@ -343,4 +343,13 @@ body {
 		        transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 	}
 
+/*********************************************
+ * BROWSER SPECIFIC STYLES
+ *********************************************/
 
+/* prevents flicker in browser for animations */
+.safari {
+  h1, li {
+    -webkit-backface-visibility: hidden;
+  }
+}
