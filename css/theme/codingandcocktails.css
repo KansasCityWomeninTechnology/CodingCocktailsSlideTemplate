@@ -267,6 +267,16 @@ SNIPPETS
 }
 
 /*********************************************
+ * BROWSER SPECIFIC STYLES
+ *********************************************/
+
+/* prevents flicker in browser for animations */
+.safari h1,
+.safari li {
+  -webkit-backface-visibility: hidden;
+}
+
+/*********************************************
 * OVERRIDES
 **********************************************/
 .left-align{text-align:left}
