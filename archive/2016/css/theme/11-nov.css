@@ -53,6 +53,14 @@ body {
   background: #134674;
   text-shadow: none; }
 
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
@@ -77,11 +85,11 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #484e78;
+  color: #d0c675;
   text-decoration: none; }
 
 .reveal a:not(.image):hover {
-  color: #484e78;
+  color: #d0c675;
   text-shadow: none;
   border: none; }
 
@@ -98,7 +106,10 @@ body {
   -moz-transition: all .2s linear;
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
-  transition: all .2s linear; }
+  transition: all .2s linear;
+  max-width: 100%;
+  max-height: 100%;
+}
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
@@ -108,32 +119,32 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-.reveal .controls div.left,
-.reveal .controls div.left.enabled {
+.reveal .controls button.navigate-left,
+.reveal .controls button.navigate-left.enabled {
   border-right-color: #01a9b4; }
 
-.reveal .controls div.right,
-.reveal .controls div.right.enabled {
+.reveal .controls button.navigate-right,
+.reveal .controls button.navigate-right.enabled {
   border-left-color: #01a9b4; }
 
-.reveal .controls div.up,
-.reveal .controls div.up.enabled {
+.reveal .controls button.navigate-up,
+.reveal .controls button.navigate-up.enabled {
   border-bottom-color: #01a9b4; }
 
-.reveal .controls div.down,
-.reveal .controls div.down.enabled {
+.reveal .controls button.navigate-down,
+.reveal .controls button.navigate-down.enabled {
   border-top-color: #01a9b4; }
 
-.reveal .controls div.left.enabled:hover {
+.reveal .controls button.navigate-left.enabled:hover {
   border-right-color: #f9b8bb; }
 
-.reveal .controls div.right.enabled:hover {
+.reveal .controls button.navigate-right.enabled:hover {
   border-left-color: #f9b8bb; }
 
-.reveal .controls div.up.enabled:hover {
+.reveal .controls button.navigate-up.enabled:hover {
   border-bottom-color: #f9b8bb; }
 
-.reveal .controls div.down.enabled:hover {
+.reveal .controls button.navigate-down.enabled:hover {
   border-top-color: #f9b8bb; }
 
 /*********************************************
@@ -150,9 +161,36 @@ body {
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
-  /*********************************************
- * MISCELLANEOUS
- *********************************************/
-.my-class {
-  color: yellow;
+/*********************************************
+LISTS
+**********************************************/
+reveal ol, .reveal dl, .reveal ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1em;
 }
+
+/*********************************************
+SNIPPETS
+**********************************************/
+.reveal pre {
+  margin: 5px 0;
+}
+
+.reveal code {
+  padding: 10px;
+  text-align: left
+}
+
+.separate {
+  background: #3f3f3f;
+  font-family: Inconsolata;
+  padding: 2px !important;
+}
+
+/*********************************************
+* OVERRIDES
+**********************************************/
+.left-align{text-align:left}
+.right-align{ text-align:right}
+.blue{color:#01A9B4}
