@@ -1,21 +1,21 @@
 <!doctype html>
 <html>
   <head>
-    <title>Month - TOPIC - Coding &amp; Cocktails KC</title>
+    <title>Month - Front-end Architecture - Coding &amp; Cocktails KC</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front-end Architecture course."/>
     <meta name="author" content="Kansas City Women in Technology"/>
     <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
-    <meta property="og:title" content="TOPIC - Coding &amp; Cocktails KC" />
+    <meta property="og:title" content="Front-end Architecture - Coding &amp; Cocktails KC" />
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
     <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
-    <meta property="og:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Front-end Architecture course."/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
     <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
-    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails TOPIC course."/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Front-end Architecture course."/>
     <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -26,8 +26,15 @@
     <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
   </head>
   <body>
+	<!--
+		NOTES: Search and replace...
+
+			username (wifi username - do NOT check this in!)
+			password (wifi password - do NOT check this in!)
+	-->
     <div class="reveal">
       <div class="slides">
+	  	<!-- Slide to show during check-in and mingling -->
         <section>
           <div style="position: absolute;left: -80px; top:0px;">
             <font style="font-size: 0.6em">
@@ -48,11 +55,11 @@
           <table class="tocTable" style="width: inherit;">
             <tr>
               <td>This presentation</td>
-              <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              <td><a href="http://bit.ly/CnCMaySlides" target="_blank">http://bit.ly/CnCMaySlides</a></td>
             </tr>
               <tr>
                 <td>The worksheet</td>
-                <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                <td><a href="http://bit.ly/CnCMayWork" target="_blank">http://bit.ly/CnCMayWork</a></td>
               </tr>
               <tr>
                 <td>Install the Tools</td>
@@ -66,7 +73,7 @@
           <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
         </section>
         <section>
-         <h1>Intro to Git</h1>
+         <h2>Intro to Front-end Architecture</h2>
          <img src="images/logo-large.png" alt="Coding &amp; Cocktails" width="95%" height="95%"/>
         </section>
         <section>
@@ -111,19 +118,22 @@
           </a>
           <br>
           <div style="position: fixed; left:-250px; width: 1500px;">
-            <img src="images/04-apr/slack-1.jpg" width="280" class="fragment"/>
-            <img src="images/04-apr/slack-2.jpg" width="280" class="fragment"/>
-            <img src="images/04-apr/slack-3.jpg" width="280" class="fragment"/>
-            <img src="images/04-apr/slack-4.jpg" width="280" class="fragment"/>
+            <img src="images/05-may/slack-1.jpg" width="280" class="fragment"/>
+            <img src="images/05-may/slack-2.jpg" width="280" class="fragment"/>
+            <img src="images/05-may/slack-3.jpg" width="280" class="fragment"/>
+            <img src="images/05-may/slack-4.jpg" width="280" class="fragment"/>
           </div>
         </section>
         <section>
             <h2>Our mentors</h2>
-            <img src="images/04-apr/mentors.gif" alt="Mentors" height="80%" width="80%" />
+            <br>
+            <img src="images/05-may/mentors.jpg" alt="Mentors" height="80%" width="80%" />
             <h4>are super heroes!</h4>
         </section>
         <section>
-            <img src="images/04-apr/django-girls.png" height="100%" width="100%"/>
+          <a href="https://djangogirls.org/kansascity/" target="_blank">
+            <img src="images/django-girls.png" height="100%" width="100%"/>
+          </a>
         </section>
         <section>
             <h2>Laura Wagner</h2>
@@ -131,239 +141,45 @@
             <h4>Cocktail Crafter Extraordinaire</h4>
         </section>
         <section>
-          <h2>Tonight's Agenda: Git</h2>
-            <br>
+          <h2>Tonight's Agenda:<br>Front-end Architecture</h2>
             <ol>
               <li class="fragment">Introduction</li>
-              <li class="fragment">Basic Commands/Terms</li>
-              <li class="fragment">Branches</li>
-              <li class="fragment">Organization</li>
-              <li class="fragment">Team Collaboration</li>
-              <li class="fragment">Staging</li>
-              <li class="fragment">Advanced Concepts</li>
-              <li class="fragment">Misc</li>
+              <ol style="list-style-type: lower-alpha; padding-left: 40px;">
+                <li class="fragment">A simple definition</li>
+                <li class="fragment">Why is it important?</li>
+                <li class="fragment">Concepts &amp; Preferences</li>
+              </ol>
+              <li class="fragment">Structure</li>
+              <li class="fragment">Other Important Things</li>
+              <li class="fragment">Scaffolding</li>
+              <ol style="list-style-type: lower-alpha; padding-left: 40px;">
+                <li class="fragment">Generators</li>
+                <li class="fragment">Build tools &amp; scripts</li>
+              </ol>
               <li class="fragment">Resources</li>
             </ol>
         </section>
+		<!-- Title slide for root level outline topics -->
         <section>
           <h1>Introduction</h1>
-          <img src="images/04-apr/introduction.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
+          <img src="images/05-may/TODO.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
         </section>
+		<!-- Introduction slide -->
         <section>
-            <h1>What is git?</h1>
+            <h1>What is it?</h1>
             <br>
             <p class="fragment">
-              Git is not an acronym!
-            </p>
-            <p class="fragment">
-              Git is a type of VCS / SCM
+              TODO
             </p>
             <br>
             <p class="fragment">
-              <font style="color:#c7bc75">V</font>ersion
-              <font style="color:#c7bc75">C</font>ontrol
-              <font style="color:#c7bc75">S</font>system
+              <font style="color:#c7bc75">L</font>augh
+              <font style="color:#c7bc75">O</font>ut
+              <font style="color:#c7bc75">L</font>oud
             </p>
-            <p class="fragment">
-              <font style="color:#c7bc75">S</font>ource
-              <font style="color:#c7bc75">C</font>ontrol
-              <font style="color:#c7bc75">M</font>anagement
-            </p>
-            <br>
-            <p class="fragment">Keeps <i>versions</i> of code</p>
-            <br>
-            <p class="fragment">Facilitates collaboration among a team</p>
-        </section>
-        <section>
-            <h1>Why use git?</h1>
-            <div class="fragment current-visible absCenter">
-              <img src="images/04-apr/beef-trifle.jpg" height="55%" width="55%"/>
-              <p>How not to make a trifle</p>
-              <!--https://www.bustle.com/articles/50944-how-to-make-rachels-thanksgiving-trifle-from-friends-how-to-survive-serving-it-photos -->
-            </div>
-            <br>
-            <p class="fragment">Provides code back-ups you can revert back to</p>
-            <br>
-            <p class="fragment">Helps organize the code over time</p>
-            <br>
-            <p class="fragment">Makes concurrent development possible</p>
-            <br>
-            <p class="fragment">Prevents overwriting each other's code</p>
-            <br>
-        </section>
-        <section>
-            <h1>How do I use it?</h1>
-            <div class="fragment">
-              <br>
-              <p>Just install it (all platforms): <a href="https://git-scm.com/downloads" target="_blank">git</a></p>
-            </div>
-            <br>
-            <div style="position:relative; width:1000px;">
-              <div style="float:left; width:30%;">
-                <img class="fragment" src="images/04-apr/cupcake.jpg" height="400px">
-              </div>
-              <div style="float:right; width:70%;">
-              <br>
-              <p class="fragment" style="text-align:left;padding-left:20px;">Git cloud UI</p>
-              <br>
-              <p class="fragment" style="text-align:left;padding-left:20px;">Sourcetree</p>
-              <br>
-              <p class="fragment" style="text-align:left;padding-left:20px;">Gitkraken</p>
-              <br>
-              <p class="fragment" style="text-align:left;padding-left:20px;">Tower</p>
-            </div>
-        </section>
-        <section>
-          <h1>Basic Commands/Terms</h1>
-          <img src="images/04-apr/basics.jpg" height="87%" width="87%"/>
-        </section>
-        <section>
-					<div>
-						<h2>One Quick Thing...</h2>
-						<div class="fragment current-visible absCenter">
-							<img src="images/04-apr/umbrella.png" height="55%" width="55%">
-						</div>
-						<div class="fragment current-visible absCenter">
-							<img src="images/04-apr/umbrella-2.png" height="55%" width="55%">
-						</div>
-					</div>
-				</section>
-				<section>
-					<div class="fragment current-visible absCenter" data-fragment-index="0">
-						<h2>&nbsp;</h2>
-						<img src="images/04-apr/ninjacat_withfolder.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Init</h2>
-						<img src="images/04-apr/init2.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Clone</h2>
-						<img src="images/04-apr/clone.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Clone</h2>
-						<img src="images/04-apr/clone2.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Fork</h2>
-						<img src="images/04-apr/fork.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Remotes</h2>
-						<img src="images/04-apr/remote.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Remotes</h2>
-						<img src="images/04-apr/remote2.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Pull Request</h2>
-						<img src="images/04-apr/pullrequest.png">
-				    </div>
-				</section>
-				<section>
-						<h1>Branches</h1>
-            <img src="images/04-apr/branches.jpg" height="41%" width="41%"/>
-				</section>
-				<section>
-					<div class="fragment current-visible absCenter">
-						<h2>An Empty Repo...</h2>
-						<br>
-						<img src="images/04-apr/branch.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Master</h2>
-						<br>
-						<img src="images/04-apr/branch2.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Master</h2>
-						<br>
-						<img src="images/04-apr/branch3.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Checkout -b</h2>
-						<br>
-						<img src="images/04-apr/branch4.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Commit</h2>
-						<br>
-						<img src="images/04-apr/branch5.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Merge</h2>
-						<br>
-						<img src="images/04-apr/branch6.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Oh Nohz... Conflictz!</h2>
-						<br>
-						<img src="images/04-apr/branch6a.png">
-				    </div>
-				</section>
-			    <section>
-						<h1>Organization</h1>
-            <img src="images/04-apr/organization.jpg" height="110%" width="110%"/>
-			    </section>
-			    <section>
-					<div class="fragment current-visible absCenter">
-						<h2>Tags</h2>
-						<br>
-						<img src="images/04-apr/branch7.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Hotfixes</h2>
-						<br>
-						<img src="images/04-apr/branch7a.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Gitflow / Hubflow</h2>
-						<br>
-						<img src="images/04-apr/branch8.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Squash</h2>
-						<br>
-						<img src="images/04-apr/branch8_.png">
-				    </div>
-				</section>
-			    <section>
-						<h1>Team Collaboration</h1>
-            <img src="images/04-apr/collaboration.jpg" height="110%" width="110%"/>
-			    </section>
-			    <section>
-					<div class="fragment current-visible absCenter">
-						<h2>Real Life</h2>
-						<br>
-						<img src="images/04-apr/branch9.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Big Picture</h2>
-						<img src="images/04-apr/branch10.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Fetch</h2>
-						<img src="images/04-apr/branch11.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Merge</h2>
-						<img src="images/04-apr/branch12.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Pull = Fetch + Merge</h2>
-						<img src="images/04-apr/highfive.png" height="70%" width="70%">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Branch</h2>
-						<img src="images/04-apr/branch13.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<video controls src="images/04-apr/workflow.mp4" height="80%" width="80%">
-				    </div>
-				</section>
-        <section>
+          </section>
+		  <section>
+		  <!-- break slide -->
           <h1>Things You'll Need</h1>
           <p>
             <br>
@@ -375,11 +191,11 @@
           <table class="tocTable" style="width: inherit;">
             <tr>
               <td>This presentation</td>
-              <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              <td><a href="http://bit.ly/CnCMaySlides" target="_blank">http://bit.ly/CnCMaySlides</a></td>
             </tr>
               <tr>
                 <td>The worksheet</td>
-                <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                <td><a href="http://bit.ly/CnCMayWork" target="_blank">http://bit.ly/CnCMayWork</a></td>
               </tr>
               <tr>
                 <td>Install the Tools</td>
@@ -392,224 +208,21 @@
           <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
           <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
         </section>
-		    <section>
-					<h1>Staging</h1>
-          <img src="images/04-apr/staging.png" height="90%" width="90%"/>
-		    </section>
-				<section>
-					<div class="fragment current-visible absCenter">
-						<h2>The Stage</h2>
-						<img src="images/04-apr/staging1.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Ignored &amp; Untracked</h2>
-						<img src="images/04-apr/staging2.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Add</h2>
-						<img src="images/04-apr/staging3.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Commit</h2>
-						<img src="images/04-apr/staging4.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Modified</h2>
-						<img src="images/04-apr/staging5.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Add</h2>
-						<img src="images/04-apr/staging6.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Commit</h2>
-						<img src="images/04-apr/staging7.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Modified</h2>
-						<img src="images/04-apr/staging5.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Add</h2>
-						<img src="images/04-apr/staging6.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Reset</h2>
-						<img src="images/04-apr/staging5.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Checkout --</h2>
-						<img src="images/04-apr/staging5a.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Modified</h2>
-						<img src="images/04-apr/staging5.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Add</h2>
-						<img src="images/04-apr/staging6.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Commit</h2>
-						<img src="images/04-apr/staging7a.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Reset HEAD~</h2>
-						<img src="images/04-apr/staging6.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Reset HEAD --hard</h2>
-						<img src="images/04-apr/staging5a.png">
-				    </div>
-				</section>
-		    <section>
-					<h1>Advanced concepts</h1>
-          <br>
-          <img src="images/04-apr/advanced.jpg" height="140%" width="140%"/>
-		    </section>
-				<section>
-					<div class="fragment current-visible absCenter">
-						<h2>Merge (revisited)</h2>
-						<br>
-						<img src="images/04-apr/rebase.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Rebase</h2>
-						<br>
-						<img src="images/04-apr/rebase1.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Rebase</h2>
-						<br>
-						<img src="images/04-apr/rebase2.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Rebase (interactive)</h2>
-						<br>
-						<img src="images/04-apr/rebase1.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Rebase (interactive)</h2>
-						<br>
-						<img src="images/04-apr/rebase3.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Rebase (interactive)</h2>
-						<br>
-						<img src="images/04-apr/rebase2.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Cherry Pick</h2>
-						<br>
-						<img src="images/04-apr/cherry-picking.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Cherry Pick</h2>
-						<br>
-						<img src="images/04-apr/cherry-picking2.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Cherry Pick</h2>
-						<br>
-						<img src="images/04-apr/cherry-picking3.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>(Option 1) Reset &amp; Push -f</h2>
-						<br>
-						<img src="images/04-apr/cherry-picking4.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>(Option 2) Revert</h2>
-						<br>
-						<img src="images/04-apr/cherry-picking3a.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>(Option 2) Revert</h2>
-						<br>
-						<img src="images/04-apr/revert.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Bisect</h2>
-						<br>
-						<img src="images/04-apr/bisect.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Bisect</h2>
-						<br>
-						<img src="images/04-apr/bisect0.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Bisect</h2>
-						<br>
-						<img src="images/04-apr/bisect1.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Bisect</h2>
-						<br>
-						<img src="images/04-apr/bisect2.png">
-				    </div>
-				</section>
-        <section>
-          <h1>Misc</h1>
-          <img src="images/04-apr/misc.jpg" height="110%" width="110%"/>
-        </section>
-				<section>
-					<div class="fragment current-visible absCenter">
-						<h2>Status</h2>
-						<img src="images/04-apr/status.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Log</h2>
-						<img src="images/04-apr/log.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Stash</h2>
-						<img src="images/04-apr/stash.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Aliases</h2>
-						<img src="images/04-apr/aliases.png">
-				    </div>
-					<div class="fragment current-visible absCenter">
-						<h2>Diff</h2>
-						<img src="images/04-apr/diff.png">
-				    </div>
-					<div class="fragment current-visible">
-						<h2>Diff</h2>
-						<img src="images/04-apr/atom-compare.gif" height="85%" width="85%">
-            <a href="https://atom.io/packages/compare-files" target="_blank">atom.io/packages/compare-files</a>
-				    </div>
-				</section>
-        <section>
-          <h1>Resources</h1>
-          <img src="images/04-apr/resources.jpg" alt="Resources" height="90%" width="90%"/>
-        </section>
-        <section>
-          <h1>Check these out</h1>
-          <br>
-          <p class="fragment">
-            Git SCM Documentation: <br><font style="font-size: 95%"><a href="https://git-scm.com/doc" target="_blank">git-scm.com/doc</a></font><br>
-          </p>
-          <br>
-          <p class="fragment">
-            Command Cheat Sheet: <br><a href="https://www.git-tower.com/blog/git-cheat-sheet/" target="_blank">git-tower.com/blog/git-cheat-sheet</a>
-          </p>
-          <br>
-          <p class="fragment">
-            Learn Git Branching: <br><a href="http://learngitbranching.js.org/" target="_blank">learngitbranching.js.org</a>
-          </p>
-          <br>
-          <p class="fragment">
-            Atlassian Git Tutorial: <br><a href="https://www.atlassian.com/git/tutorials" target="_blank">atlassian.com/git/tutorials</a>
-          </p>
-          <br>
-          <p class="fragment">
-            Oh Sh!t Git: <br><a href="http://ohshitgit.com" target="_blank">ohshitgit.com</a>
-          </p>
-        </section>
+		<!-- absCenter "fill and replace" slide -->
+		<section>
+			<div class="fragment current-visible absCenter">
+				<h2>TODO</h2>
+				<br>
+				<img src="images/05-may/TODO.png">
+		    </div>
+			<div class="fragment current-visible absCenter">
+				<video controls src="images/04-apr/workflow.mp4" height="80%" width="80%">
+		    </div>
+		</section>
+
         <section>
           <h2>Questions?</h2>
-          <img src="images/04-apr/questions.gif" alt="Questions" height="80%" width="80%"/>
+          <img src="images/05-may/questions.gif" alt="Questions" height="80%" width="80%"/>
         </section>
         <section>
           <h1>Things You'll Need</h1>
@@ -623,11 +236,11 @@
           <table class="tocTable" style="width: inherit;">
             <tr>
               <td>This presentation</td>
-              <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              <td><a href="http://bit.ly/CnCMaySlides" target="_blank">http://bit.ly/CnCMaySlides</a></td>
             </tr>
               <tr>
                 <td>The worksheet</td>
-                <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                <td><a href="http://bit.ly/CnCMayWork" target="_blank">http://bit.ly/CnCMayWork</a></td>
               </tr>
               <tr>
                 <td>Install the Tools</td>
@@ -647,8 +260,8 @@
             <li class="fragment">Find a buddy</li>
             <li class="fragment">Take the <a href="http://bit.ly/CnCFeedback" target="_blank">Survey</a></li>
             <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
-            <li class="fragment">Finish <a href="http://bit.ly/CnCAprWork" target="_blank">tonight's worksheet</a></li>
-            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Git+tutorial" target="_blank">online tutorial on CLI</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCMayWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Front-end Architecture+tutorial" target="_blank">online tutorial on CLI</a></li>
             <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-may-tickets-31953355346?aff=presentation" target="_blank">next month's event</a></li>
           </ol>
           <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -70px;" max-height="60%" max-width="60%"/>
