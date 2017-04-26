@@ -225,105 +225,83 @@
           <img src="images/05-may/TODO.jpg" alt="The Structure" height="75%" width="75%" style="margin-top:30px;"/>
         </section>
         <section>
-          <h3>App Directory</h3>
+          <h2>App Directory</h2>
           <ul>
+            <br><br>
             <li class="fragment">Houses your application’s code</li>
-            <ul class="fragment">
-              <li>Index.html - most important file</li>
-              <li>Assets</li>
-              <ul class="fragment">
-                <li>Images - self explanatory</li>
-                <li>Styles - css, scss, fonts</li>
-                <li>Scripts - javascript (or other language) functionality</li>
-                <li>Fonts - only if serving up the font from your server</li>
-                <li>Views - full or partial markup (ie <a href="http://handlebarsjs.com/" target="_blank">Handlebars</a>)</li>
-              </ul>
-              <li>Dist</li>
-              <ul class="fragment">
-                <li>Minified &amp; optimized, for serving to the browser</li>
-                <li>Created by the build process</li>
-                <li>As a build artifact, 'dist' should not be tracked by version control</li>
-              </ul>
+            <ul style="list-style:disc;">
+              <li class="fragment">Index.html - most important file</li>
+              <li class="fragment">Assets</li>
+              <li class="fragment">Dist</li>
             </ul>
         </section>
-
-          <section>
-          <!-- break slide -->
-              <h1>Things You'll Need</h1>
-              <p>
-                <br>
-                Another drink!
-                <br>
-                <font style="font-size:75%;">Wifi: username / password</font>
-                <br><br>
-              </p>
-              <table class="tocTable" style="width: inherit;">
-                <tr>
-                  <td>This presentation</td>
-                  <td><a href="http://bit.ly/CnCMaySlides" target="_blank">http://bit.ly/CnCMaySlides</a></td>
-                </tr>
-                  <tr>
-                    <td>The worksheet</td>
-                    <td><a href="http://bit.ly/CnCMayWork" target="_blank">http://bit.ly/CnCMayWork</a></td>
-                  </tr>
-                  <tr>
-                    <td>Install the Tools</td>
-                    <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
-                  </tr>
-              </table>
-              <br>
-              <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
-              <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
-              <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
-              <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
-            </section>
-          <section>
-              <h2>Dist</h2>
-              <ul>
-                  <li class="fragment">Short for "distribution"</li>
-                  <li class="fragment">Production-ready</li>
-                  <li class="fragment">Files are made to load quickly - they're minified
-                      <ul>
-                          <li class="fragment">Removes spaces, replaces human-created function names to shorter names. <span style="background: #3f3f3f; font-family: Inconsolata;">getDrink()</span> -> <span style="background: #3f3f3f; font-family: Inconsolata;">x()</span></li>
-                          <li class="fragment">Not very human readable, but are read quickly by the browser for better performance</li>
-                      </ul>
-                  </li>
-                  <li class="fragment">Can be manually created, but usually developers use a tool like Gulp to automate the process.</li>
-              </ul>
-          </section>
-          <section>
-              <h2>In dist, you have...</h2>
-              <ul>
-                  <li class="fragment">index.html (dist/index.html)</li>
-                  <li class="fragment">Assets
-                  </li>
-                  <li class="fragment">Views</li>
-              </ul>
-          </section>
+        <section>
+          <h2>Assets Directory</h2><br><br>
+          <ul style="list-style:disc;">
+            <li class="fragment">Images - self explanatory</li>
+            <li class="fragment">Styles - css, scss, fonts</li>
+            <li class="fragment">Scripts - javascript (or other language) functionality</li>
+            <li class="fragment">Fonts - only if serving up the font from your server</li>
+            <li class="fragment">Views - full or partial markup (ie <a href="http://handlebarsjs.com/" target="_blank">Handlebars</a>)</li>
+          </ul>
         </section>
-
-        <!-- <section>
-            <img src="images/09-sep/wordpress-structure-example.jpg" alt="Example wordpress structure">
-            <span class="attribution">Screenshot from: <a href="https://wordpress.org/themes/twentysixteen/">the Twenty Sixteen Wordpress Theme</a></span>
-        </section> -->
+        <section>
+          <h2>Dist Directory</h2><br><br>
+          <ul style="list-style:disc;">
+            <li class="fragment">Minified &amp; optimized, for serving to the browser</li>
+            <li class="fragment">Created by the build process</li>
+            <li class="fragment">As a build artifact, 'dist' should not be tracked by version control</li>
+          </ul>
+        </section>
+        <section>
+        <!-- break slide -->
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Another drink!
+            <br>
+            <font style="font-size:75%;">Wifi: username / password</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCMaySlides" target="_blank">http://bit.ly/CnCMaySlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCMayWork" target="_blank">http://bit.ly/CnCMayWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
 
         <section>
           <h1>Other Important Things</h1>
           <img src="images/05-may/TODO.jpg" alt="Other things" height="90%" width="90%"/>
         </section>
         <section>
-          <p class="fragment">
-            Documentation
+          <h2>So orgzd. Wow. Much help.</h2>
+          <br><p class="fragment" style="text-align:left;">
+            Documentation:
             <br>
             Helps devs build and understand the project
           </p>
-          <p class="fragment">
-            Naming Conventions
+          <br><p class="fragment" style="text-align:left;">
+            Naming Conventions:
             <br>
             Files &amp; folders follow conventions or are self-describing
           </p>
-          <p class="fragment">
-            Build tools
+          <br><p class="fragment" style="text-align:left;">
+            Build tools:
             <br>
             Simplify proceses (running tests, minifying code, etc)
           </p>
@@ -332,21 +310,21 @@
         <section>
           <h1>Yeoman</h1>
           <img src="images/05-may/yeoman.png" height="90%" width="90%"/>
-          <h2 class="fragment">is here to help!</h2>
+          <h2>is here to help!</h2>
         </section>
         <section>
           <h2>What is Yeoman?</h2>
           <p class="fragment">
-            Scaffolding tool that sets up your project's file stucture
+            Scaffolding tool that sets up your project's file stucture<br><br>
           </p>
           <p class="fragment">
-            Language agnostic (HTML/JS/CSS, Python, C#, Java, PHP, etc
+            Language agnostic<br>(HTML/JS/CSS, Python, C#, Java, PHP, etc<br><br>
           </p>
           <p class="fragment">
-            Scaffolding is the structure of your project. Differs depending on languages used and requirements of project.
+            Scaffolding is the structure of your project. Varies by language &amp; requirements.
           </p>
           <p class="fragment">
-            Install via NPM <pre><code>npm install -g yo</code></pre>
+              <br><code>npm install -g yo</code>
           </p>
           <p class="fragment">
             Use it with 'yo' in the CLI
@@ -355,16 +333,16 @@
         <section>
           <h2>What is a Generator?</h2>
           <p class="fragment">
-            A Yeoman plugin that defines an architecture template
+            <br>A Yeoman plugin that defines an architecture template
           </p>
           <p class="fragment">
-            <a href="http://yeoman.io/generators" target="_blank">4000+ generators available</a>
+            <br><a href="http://yeoman.io/generators" target="_blank">4000+ generators available</a>
           </p>
           <p class="fragment">
-            Install a generator with `npm install -g generator-whatever`
+            <br>Install a generator with <code>npm install -g generator-whatever</code>
           </p>
           <p class="fragment">
-            Can't find a solution for your app?  Create your own!
+            <br>Can't find a solution for your app?<br>Create your own!
           </p>
         </section>
         <section>
@@ -375,8 +353,8 @@
           </video>
         </section>
         <section>
-          <h2>What Does Webapp Give Us?</h2>
-          <ul>
+          <h2>What Does Webapp Give Us?</h2><br>
+          <ul style="list-style:disc;">
             <li class="fragment">Basic File Structure</li>
             <li class="fragment">CSS Autoprefixing</li>
             <li class="fragment">Compiles SASS</li>
@@ -390,12 +368,12 @@
         <section>
           <h2>Webapp uses Gulp</h2>
           <ul>
-              <li class="fragment">Start local server and watch for changes</li>
-              <pre class="fragment"><code>gulp serve</pre></code>
-              <li class="fragment">Compiles and optimizes files to make deployment-ready</li>
-              <pre class="fragment"><code>gulp</pre></code>
-              <li class="fragment">Preview production files</li>
-              <pre class="fragment"><code>gulp serve:dist</pre></code>
+              <li class="fragment">Start local server and watch for changes
+              <code>gulp serve</code></li>
+              <br><li class="fragment">Compiles and optimizes files to make deployment-ready
+              <code>gulp</code></li>
+              <br><li class="fragment">Preview production files
+              <code>gulp serve:dist</code></li>
           </ul>
         </section>
         <section data-background="images/hurray.gif">
@@ -403,12 +381,12 @@
         <section>
           <h2>Need help?</h2>
           <ul>
-              <li class="fragment">With Yeoman</li>
-              <pre class="fragment"><code>yo --help</pre></code>
-              <li class="fragment">Get details on a generator</li>
-              <pre class="fragment"><code>yo webapp --help</pre></code>
-              <li class="fragment">Troubleshoot</li>
-              <pre class="fragment"><code>yo doctor</pre></code>
+              <li class="fragment">With Yeoman
+              <code>yo --help</code></li>
+              <br><li class="fragment">Get details on a generator
+              <code>yo webapp --help</code></li>
+              <br><li class="fragment">Troubleshoot
+              <code>yo doctor</code></li>
           </ul>
         </section>
 
@@ -417,24 +395,21 @@
           <img src="images/05-may/TODO.jpg" alt="Resources" height="90%" width="90%"/>
         </section>
         <section>
-          <p class="fragment">
-            <a href="https://www.sitepoint.com/good-front-end-architecture/" target="_blank">Sitepoint - Good Front End Architecture</a>
-          </p>
-          <br>
-          <p class="fragment">
-            <a href="http://yeoman.io/" target="_blank">Yeoman official site</a>
-            <br>
-            <a href="http://yeoman.io/codelab" target="_blank">Yeoman codelab</a>
-            <a href="http://yeoman.io/authoring/" target="_blank">Create your own generator</a>
-            <a href="https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps" target="_blank">Tutorial on creating generators</a>
-          </p>
-          <br>
-          <p class="fragment">
-            <a href="http://gulpjs.com/" target="_blank">Gulp official site</a>
-            <br>
-            <a href="https://github.com/gulpjs/gulp/tree/master/docs/recipes#recipes" target="_blank">Gulp Recipes</a>
-            <a href="https://css-tricks.com/gulp-for-beginners/" target="_blank">Gulp Beginner Tutorial</a>
-          </p>
+          <h2>Catch you on the front side</h2>
+          <ul style="text-align:left;">
+            <li class="fragment"><br><a href="https://www.sitepoint.com/good-front-end-architecture/" target="_blank">Sitepoint - Good Front End Architecture</a></li>
+            <li class="fragment"><br><a href="http://yeoman.io/" target="_blank">Yeoman official site</a></li>
+            <ul class="fragment" style="list-style:disc;">
+              <li class="fragment"><a href="http://yeoman.io/codelab" target="_blank">Yeoman codelab</a></li>
+              <li class="fragment"><a href="http://yeoman.io/authoring/" target="_blank">Create your own generator</a></li>
+              <li class="fragment"><a href="https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps" target="_blank">Tutorial on creating generators</a></li>
+            </ul>
+            <li class="fragment"><br><a href="http://gulpjs.com/" target="_blank">Gulp official site</a></li>
+            <ul style="list-style:disc;">
+              <li class="fragment"><a href="https://github.com/gulpjs/gulp/tree/master/docs/recipes#recipes" target="_blank">Gulp Recipes</a></li>
+              <li class="fragment"><a href="https://css-tricks.com/gulp-for-beginners/" target="_blank">Gulp Beginner Tutorial</a></li>
+            </ul>
+          </ul>
         </section>
 
         <section>
