@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+  <head>
+    <title>June - jQuery - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails  course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="jQuery - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails jQuery course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails jQuery course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+	<!--
+		NOTES: Search and replace...
+
+			TOPIC (ie Git)
+			TODO (?)
+			MONTHDIR (05-may)
+			MONTH (May)
+
+			username (wifi username - do NOT check this in!)
+			password (wifi password - do NOT check this in!)
+	-->
+    <div class="reveal">
+      <div class="slides">
+	  	<!-- Slide to show during check-in and mingling -->
+        <section>
+          <div style="position: absolute;left: -80px; top:0px;">
+            <font style="font-size: 0.6em">
+              <a href="http://bit.ly/CnCIndex">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                All Junes
+              </a>
+            </font>
+          </div>
+          <h1>While You're Waiting</h1>
+          <p>
+            <br>
+            Grab a drink &amp; get connected.
+            <br>
+            <font style="font-size:75%;">Wifi: username / password</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJuneSlides" target="_blank">http://bit.ly/CnCJuneSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJuneWork" target="_blank">http://bit.ly/CnCJuneWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+         <h1>Intro to JavaScript using jQuery</h1>
+         <img src="images/logo-large.png" alt="Coding &amp; Cocktails" width="95%" height="95%"/>
+        </section>
+        <section>
+         <h1>Our Host this Evening</h1>
+         <a href="http://www.nerdery.com" target="_blank"><img src="images/Nerdery-logo.png" alt="The Nerdery" width="80%" height="80%" style="padding-top: 30px;"/></a>
+        </section>
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <br><br>
+          <div style="position: fixed; left:-200px; width: 1300px">
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Sarah Duitsman</h5>
+              <img src="images/sarah_cropped.png" alt="Sarah Duitsman"/>
+              <p style="font-size: 75%;">Program Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Tamara Copple</h5>
+              <img src="images/tamara_cropped.png" alt="Tamara Copple"/>
+              <p style="font-size: 75%;">Program Co-Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Kayla Hennegin</h5>
+              <img src="images/kayla_cropped.png" alt="Kayla Hennegin"/>
+              <p style="font-size: 75%;">Curriculum Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Gabi Dombrowski</h5>
+              <img src="images/gabi_cropped.jpg" alt="Gabi Dombrowski"/>
+              <p style="font-size: 75%;">Mentor Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Lyndsey Padget</h5>
+              <img src="images/lyndsey_cropped.png" alt="Lyndsey Padget"/>
+              <p style="font-size: 75%;">Presentation Director</p>
+            </span>
+          </div>
+        </section>
+        <section>
+          <h2>Join us on...</h2>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <div style="position: fixed; left:-250px; width: 1500px;">
+            <img src="images/06-june/slack-1.jpg" width="280" class="fragment"/>
+            <img src="images/06-june/slack-2.jpg" width="280" class="fragment"/>
+            <img src="images/06-june/slack-3.jpg" width="280" class="fragment"/>
+            <img src="images/06-june/slack-4.jpg" width="280" class="fragment"/>
+          </div>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="images/06-jun/ironwoman.jpg" alt="Mentors" height="80%" width="80%" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+          <a href="https://djangogirls.org/kansascity/" target="_blank">
+            <img src="images/django-girls.png" height="100%" width="100%"/>
+          </a>
+        </section>
+        <section>
+            <h2>Laura Wagner</h2>
+            <img src="images/laura.png" alt="Laura Wagner" height="460"/>
+            <h4>Cocktail Crafter Extraordinaire</h4>
+        </section>
+
+
+
+
+
+
+
+        <section>
+          <h2>Tonight's Agenda: Intro to JQuery</h2>
+            <br>
+            <ol class="fragment">
+                <ol class="fragment">
+                    <li class="fragment">Introduction</li>
+                      <li class="fragment">Content, Appearance, User Interaction</li>
+                      <li class="fragment">What is JavaScript?</li>
+                      <li class="fragment">Why use jQuery to learn JavaScript?</li>
+                </ol>
+              <li class="fragment">learning JavaScript with JQuery</li>
+              <li class="fragment">Why jQuery?</li>
+              <li class="fragment">jQuery Basics and Syntax</li>
+            </ol>
+        </section>
+		<!-- Title slide for root level outline jQuerys -->
+        <section>
+          <h1>The Role of Javascript in Web Development</h1>
+          <img src="images/06-june/TODO.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
+        </section>
+		<!-- Introduction slide -->
+        <section>
+            <h1>What is it?</h1>
+            <br>
+            <p class="fragment">
+              <p>Javascript is an</p>
+            <br>
+            <p class="fragment">
+              <font style="color:#c7bc75">O</font>bject
+              <font style="color:#c7bc75">O</font>riented
+              <font style="color:#c7bc75">S</font>cripting
+              <font style="color:#c7bc75">L</font>anguage
+            </p>
+            <br>
+            <p class="fragment">Object: Several lines of code working together to perform a single task within a larger program</p>
+          </section>
+		  <section>
+
+
+
+
+
+
+
+
+
+
+
+		  <!-- break slide -->
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Another drink!
+            <br>
+            <font style="font-size:75%;">Wifi: username / password</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJuneSlides" target="_blank">http://bit.ly/CnCJuneSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJuneWork" target="_blank">http://bit.ly/CnCJuneWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+		<!-- absCenter "fill and replace" slide, good for videos and large images -->
+		<section>
+			<div class="fragment current-visible absCenter">
+				<h2>TODO</h2>
+				<br>
+				<img src="images/06-june/TODO.png">
+		    </div>
+			<div class="fragment current-visible absCenter">
+				<video controls src="images/06-june/somevideo.mp4" height="80%" width="80%">
+		    </div>
+		</section>
+
+        <section>
+          <h2>Questions?</h2>
+          <img src="images/06-june/questions.gif" alt="Questions" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Another drink?
+            <br>
+            <font style="font-size:75%;">Wifi: username / password</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJuneSlides" target="_blank">http://bit.ly/CnCJuneSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJuneWork" target="_blank">http://bit.ly/CnCJuneWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol>
+            <li class="fragment">Find a buddy</li>
+            <li class="fragment">Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCJuneWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=jQuery+tutorial" target="_blank">online tutorial on jQuery</a></li>
+            <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-may-tickets-31953355346?aff=presentation" target="_blank">next June's event</a></li>
+          </ol>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -70px;" max-height="60%" max-width="60%"/>
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="images/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="images/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
+          <br><br>
+          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+        </section>
+      </div>
+    </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
