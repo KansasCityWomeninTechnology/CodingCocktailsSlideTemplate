@@ -152,8 +152,8 @@
                 <li>Part 1: Introduction</li>
                 <ul>
                     <li class="fragment">History</li>
-                    <li class="fragment">How JavaScript Caffienates Web Apps</li>
-                    <li class="fragment">Street Cred - Know Your Words</li>
+                    <li class="fragment">How JavaScript Caffeinates Web Apps</li>
+                    <li class="fragment">Street Cred - Know Your Lingo</li>
                 </ul>
             <br>
                 <li class="fragment">Part 2: jQuery Fundamentals</li>
@@ -181,13 +181,17 @@
             <img src="images/06-jun/jisnotjs.png" alt="ItsJavaScriptNotJava" height="100%" width="100%" style="margin-top:30px;"/>
           </section>
           <section>
-              <h1>JavaScript in the Wild</h1>
+              <h1>How JavaScript Caffeinates Web Apps</h1>
+                  <img src="https://media1.giphy.com/media/vASwXhikF0Dug/giphy.gif" alt="JS Powers Web Sites" height="125%" width="125%">
+          </section>
+          <section>
+              <h1>Plugging in: Triggering JS in Your Code</h1>
              <h3>Option 1: The Script Tag</h3>
               <p>(image here)</p>
               <p>Caution: use sparingly</p>
           </section>
           <section>
-              <h1>JavaScript in the Wild</h1>
+              <h1>Plugging in: Triggering JS in Your Code</h1>
               <h3>Option 2:  Best Practice</h3>
               <p>(image here)</p>
               <p>Point to Javascript code within HTML header</p>
@@ -215,9 +219,12 @@
           <section>
               <h1>Knowing the Lingo</h1>
               <h3>Variable</h3>
-              <p>Placeholder to store values / data</p>
-              <code>var myFirstVariable = 'mom';</code>
-              <p>Special cases: Undefined &amp; Null</p>
+              <br>
+              <p class = "fragment">Placeholder to store values / data</p>
+              <code class = "fragment">var variableName = variableValue</code>
+              <br>
+              <code class = "fragment">var myFirstVariable = 'mom';</code>
+              <p class = "fragment">Case Sensitive: &quot;myVariable&quot; is not the same as &quot;MyVariable&quot;</p>
           </section>
           <section>
             <h1>Operators</h1>
@@ -234,33 +241,111 @@
               <p>15 / 2 = 7 with a remainder of 1 (the modulus)</p>
           </section>
           <section>
+              <h1>Adding Strings and Numbers</h1>
+              <p class = "fragment">Add two integers:</p>
+              <code class = "fragment">var thirtyFive = 10 + 25;</code>
+              <p class = "fragment">returns 35</p>
+              <br>
+              <code class = "fragment">var textAndNumberString = ‘happy’ + 35 + ‘birthday’;</code>
+              <p class = "fragment">returns</p>
+              <code class = "fragment">// happy35birthday</code>
+          </section>
+          <section>
+              <h1>What will the following return?</h1>
+              <code>var gotcha = ‘10’ + 25;</code>
+              <p class = "fragment">if you guessed 35. . . </p>
+              <p class = "fragment">Gotcha!</p>
+              <p class = "fragment"> Adding a integer and a string returns a string.</p>
+              <code  class = "fragment">//1025</code>
+          </section>
+          <section>
               <h1>Knowing the Lingo</h1>
               <h3>Functions (aka Methods)</h3>
               <br>
               <ul>
-                  A function <em>does</em> something (verb)</li>
-                  <li>Made up of reusable bits of code</li>
+                  <li>A function performs a task</li>
+                    <br>
                   <li>Parameters: the Mad Libs Concept</li>
-                  <li>It may or may not &quot;return&quot; a value once it is finished</li>
+                    <br>
+                  <li>It may or may not &quot;return&quot; an obvious value once it is finished</li>
               </ul>
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <p>Parts of a Function</p>
+              <br>
+              <code>var functionName = function (optional, parameters, here) {
+  //function logic here
+};</code>
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <p>Name your function ('declare a variable')</p>
+              <code>var orderDrink = function(drinkName)</code>
+              <br>
+              <p>Read as: The variable &quot;orderDrink&quot; is a function with one parameter, called &quot;drinkName&quot;</p>
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <br>
+              <p>Inside the curly braces, is the task that is performed:</p>
+              <code>var orderDrink = function(drinkName) {
+  return 'I would like a ' + drinkName + ' please.';}</code>
+  <br>
+              <p>When you run the code, you decide what the value of the parameter is, and insert it, Mad Libs style!</p>
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <p>finally, &quot;call&quot; the function by telling it what to use for the parameter:</p>
+              <code>orderDrink('gin and tonic');</code>
+          </section>
+          <section>
+          <h1>Functions in the Wild</h1>
+          <p>Put it all together:</p>
+          <img src="images/06-jun/function.png" alt="" height = "175%" width = "175%">
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <p>Put it all together:</p>
+              <img src="images/06-jun/function2exec.png" alt=""  height = "75%" width = "75%">
           </section>
           <section>
             <h1>Knowing the Lingo</h1>
             <h2>Object Oriented Programming</h2>
-            <img src="images/06-jun/legobuildingblocks.png" alt="Lingo1" height="50%" width="50%" style="margin-top:30px;"/>
-            <img src="images/06-jun/ladydevlego.png" alt="LadyDevLego" height="50%" width="50%" style="margin-top:30px;"/>
+<!--            <img src="images/06-jun/legobuildingblocks.png" alt="Lingo1" height="50%" width="50%" style="margin-top:30px;"/>  -->
+            <img src="images/06-jun/ladydevlego.png"  alt="LadyDevLego" height="50%" width="50%" style="margin-top:30px;"/>
           </section>
         <section>
             <h1>Comments: Documenting Your Work</h1>
+            <p>Single Line comments</p>
+            <code>//this is a one line comment</code>
+            <p>Multi line comments</p>
+            <code>/* This is a </code>
+            <code>multi line comment */</code>
         </section>
         <section>
             <h1>Your BFF: Console.log</h1>
+            <br>
+            <p>Access with Command + Option + I on Macs</p>
+            <br>
+            <p>Access with Ctrl + Option + I on Windows</p>
         </section>
+        <section>
+            <img src="images/06-jun/confusing.png" alt=""height = "650px" width = "800
+            px">
+        </section>
+
         <section>
             <h1>Break Time!</h1>
             <br>
+            <ol>
+                <li>Grab something to eat.</li>                
+                <li>Please fill out our survey (the link is in the worksheet)</li>
+                <li>Dive into the worksheet.</li>
+            </ol>
+            <br>
             <h3>When we come back:</h3>
-            <img src="images/06-jun/jQuery-logo.png" alt="jQueryLogo" height="100%" width="100%" style="margin-top:30px;"/>
+            <img src="images/06-jun/jQuery-logo.png" alt="jQueryLogo" height="75%" width="75%" style="margin-top:30px;"/>
         </section>
 
 
