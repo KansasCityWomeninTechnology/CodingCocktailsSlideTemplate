@@ -34,8 +34,8 @@
 			MONTHDIR (05-may)
 			MONTH (May)
 
-			username (wifi username - do NOT check this in!)
-			password (wifi password - do NOT check this in!)
+			nerderypublic (wifi nerderypublic - do NOT check this in!)
+			1234554321 (wifi 1234554321 - do NOT check this in!)
 	-->
     <div class="reveal">
       <div class="slides">
@@ -54,7 +54,7 @@
             <br>
             Grab a drink &amp; get connected.
             <br>
-            <font style="font-size:75%;">Wifi: username / password</font>
+            <font style="font-size:75%;">Wifi: nerderypublic / 1234554321</font>
             <br><br>
           </p>
           <table class="tocTable" style="width: inherit;">
@@ -157,7 +157,7 @@
                 </ul>
                 <li class = "fragment">Part 2: Introduction to jQuery</li>
                 <ul>
-                    <li>What does jQuery have to do with JavaScript?</li>
+                    <li class = "fragment">What does jQuery have to do with JavaScript?</li>
                     <li class = "fragment">Events </li>
                     <li class = "fragment">DOM Manipulation </li>
                     <li class = "fragment">Plugins </li>
@@ -209,13 +209,13 @@
               <h1>Data Types:</h1>
               <h1>Strings, Booleans &amp; Numbers</h1>
               <br>
-              <p class = "fragment">Strings: &quot;Cocktails&quot;</p>
+              <p class = "fragment">Strings: &#39;Cocktails&#39;</p>
               <p class = "fragment">Boolean: True or False</p>
               <p class = "fragment"> Numbers:  5, 11, 635</p>
               <br>
-              <p class = "fragment">&quot;12345&quot; is a string</p>
+              <p class = "fragment">&#39;12345&#39; is a string</p>
               <br>
-              <p class = "fragment">&quot;5&quot; is not the same as 5</p>
+              <p class = "fragment">&#39;5&#39; is not the same as 5</p>
           </section>
           <section>
               <h1>Know the Lingo</h1>
@@ -226,7 +226,7 @@
               <code class = "fragment">var variableName = variableValue</code>
               <br>
               <code class = "fragment">var myFirstVariable = 'mom';</code>
-              <p class = "fragment">Case Sensitive: &quot;myVariable&quot; is not the same as &quot;MyVariable&quot;</p>
+              <p class = "fragment">Case Sensitive: &#39;myVariable&#39; is not the same as &#39;MyVariable&#39;</p>
           </section>
           <section>
             <h1>Operators</h1>
@@ -269,13 +269,14 @@
               <ul>
                   <li class = "fragment">A function performs a task</li>
                     <br>
-                  <li class = "fragment">Parameters: the Mad Libs Concept</li>
+                  <li class = "fragment">Parameters: the Mad Libs concept</li>
                     <br>
-                  <li class = "fragment">It may or may not &quot;return&quot; an obvious value once it is finished</li>
+                  <li class = "fragment">It may or may not &#39;return&#39; an obvious value once it is finished</li>
               </ul>
           </section>
           <section>
               <h1>Functions in the Wild</h1>
+              <br>
               <p>Parts of a Function</p>
               <br>
               <code>var functionName = function (optional, parameters, here) {
@@ -284,15 +285,17 @@
           </section>
           <section>
               <h1>Functions in the Wild</h1>
+              <br>
               <p>Name your function ('declare a variable')</p>
+              <br>
               <code>var orderDrink = function(drinkName)</code>
               <br>
-              <p>Read as: The variable &quot;orderDrink&quot; is a function with one parameter, called &quot;drinkName&quot;</p>
+              <p>Read as: The variable &#39;orderDrink&#39; is a function (aka method) with one parameter, called &#39;drinkName&#39;</p>
           </section>
           <section>
               <h1>Functions in the Wild</h1>
               <br>
-              <p>Inside the curly braces, is the task that is performed:</p>
+              <p>The task is specified inside the curly braces:</p>
               <code>var orderDrink = function(drinkName) {
   return 'I would like a ' + drinkName + ' please.';}</code>
   <br>
@@ -300,7 +303,7 @@
           </section>
           <section>
               <h1>Functions in the Wild</h1>
-              <p>finally, &quot;call&quot; the function by telling it what to use for the parameter:</p>
+              <p>finally, &#39;call&#39; the function by telling it what to use for the parameter:</p>
               <code>orderDrink('gin and tonic');</code>
           </section>
           <section>
@@ -346,92 +349,22 @@
             <br>
             <ol>
                 <li>Grab something to eat.</li>
-                <li>Please fill out our survey (the link is in the worksheet)</li>
+                <li>Find a buddy.</li>
+                <li>Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey </a>(or wait till the end)</li>
                 <li>Dive into the worksheet and practice!</li>
             </ol>
             <br>
             <h3>When we come back:</h3>
             <img src="images/06-jun/jQuery-logo.png" alt="jQueryLogo" height="75%" width="75%" style="margin-top:30px;"/>
         </section>
-<!--        <section>
-            <p class="fragment">
-              <font style="color:#c7bc75">O</font>bject
-              <font style="color:#c7bc75">O</font>riented
-              <font style="color:#c7bc75">S</font>cripting
-              <font style="color:#c7bc75">L</font>anguage
-            </p>
-            <br>
-            <p class="fragment">Object: Several lines of code working together to perform a single task within a larger program</p>
-        </section>   -->
-    <section>
-        <h1>Welcome Back!</h1>
-        <ol>
-        <h2>Part 2: Introduction to jQuery</h2>
-        <br>
-            <ol>
-                <li>What does jQuery have to do with JavaScript?</li>
-                <li>Events </li>
-                <li>DOM Manipulation </li>
-                <li>Plugins </li>
-            </ol>
-        <img src="images/06-jun/jQuery-logo.png" alt="jQueryLogo" height="75%" width="75%" style="margin-top:30px;"/>
-        </ol>
-    </section>
-    <section>
-        <h1>What Does JQuery have to do with JavaScript?</h1>
-        <br>
-        <p>jQuery is a library of pre-fab JS code bits, called plugins.</p>
-    </section>
-    <section>
-        <h1>The Almighty Dollar Sign</h1>
-        <br>
-        <img src="images/06-jun/dollar-sign.png" alt="">
-        <br>
-        <p>(Actually it's just the alias for calling a jQuery method)</p>
-    </section>
-    <section>
-        <p>table of selectors here</p>
-        <table>
-        </table>
-    </section>
-<section>
-    <h1>The
-        <font style="color:#c7bc75">D</font>ocument
-        <font style="color:#c7bc75">O</font>bject
-        <font style="color:#c7bc75">M</font>odel </h1>
-    <br>
-    <p>
-        <font style="color:#c7bc75">A</font>pplication
-        <font style="color:#c7bc75">P</font>rogramming
-        <font style="color:#c7bc75">I</font>nterface </h1>
-    </p>
-    <br>
-
-    <p>Allows programs and scripts to dynamically access and update the content, structure and style of a document</p>
-</section>
-<section>
-    <h1>Events</h1>
-    
-</section>
-
-
-
-
-
-
-
-
-
-
-
         <section>
-		  <!-- break slide -->
+          <!-- break slide -->
           <h1>Things You'll Need</h1>
           <p>
             <br>
             Another drink!
             <br>
-            <font style="font-size:75%;">Wifi: username / password</font>
+            <font style="font-size:75%;">Wifi: nerderypublic / 1234554321</font>
             <br><br>
           </p>
           <table class="tocTable" style="width: inherit;">
@@ -454,21 +387,137 @@
           <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
           <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
         </section>
-		<!-- absCenter "fill and replace" slide, good for videos and large images -->
-		<section>
-			<div class="fragment current-visible absCenter">
-				<h2>TODO</h2>
-				<br>
-				<img src="images/06-june/TODO.png">
-		    </div>
-			<div class="fragment current-visible absCenter">
-				<video controls src="images/06-june/somevideo.mp4" height="80%" width="80%">
-		    </div>
-		</section>
+    <section>
+        <h1>Welcome Back!</h1>
+        <ol>
+        <h2>Part 2: Introduction to jQuery</h2>
+        <br>
+            <ol>
+                <li>What does jQuery have to do with JavaScript?</li>
+                <li>DOM Manipulation </li>
+                <li>Events </li>
+                <li>Plugins </li>
+            </ol>
+        <img src="images/06-jun/jQuery-logo.png" alt="jQueryLogo" height="75%" width="75%" style="margin-top:30px;"/>
+        </ol>
+    </section>
+    <section>
+    <h1>Manipulating the DOM</h1>
+    <br>
+        <h1>The
+            <font style="color:#c7bc75">D</font>ocument
+            <font style="color:#c7bc75">O</font>bject
+            <font style="color:#c7bc75">M</font>odel </h1>
+        <br>
+        <p>HTML is just another kind of document. Your browser parses the pieces to create an object-oriented representation of the page that you can manipulate with JavaScript.</p>
+    </section>
+    <section>
+        <h1>Manipulating the DOM</h1>
+        <br>
+        <img src="images/06-jun/dom-model.png" alt="">
+    </section>
+    <section>
+         <h1>Manipulating the DOM with jQuery</h1>
+         <br>
+         <p>jQuery can detect when the DOM has finished loading the page:</p>
+         <img src="images/06-jun/docready.png" alt="" height = "200%" width = "200%">
+    </section>
+    <section>
+        <h1>Manipulating the DOM with jQuery</h1>
+        <br>
+        <img src="images/06-jun/docready2.png" alt="" height = "200%" width = "200%">
+    </section>
+    <section>
+        <h1>The Almighty Dollar Sign</h1>
+        <br>
+        <p>You call&#42; a jQuery method using the dollar sign</p>
+        <img src="images/06-jun/dollar-sign.png" alt="">
+        <br>
+        <p>&#42; to &#39;call&#39; a method means to tell it to execute its task</p>
+    </section>
+    <section>
+        <h1>jQuery vs. JavaScript</h1>
+        <br>
+        <p>jQuery is a library of pre-fab JS methods (remember those?) that help you write your code faster.</p>
+        <br>
+        <p>These methods provide reusable code that you can &#39;plug-in&#39; to your application</p>
+    </section>
+    <section>
+        <h1>jQuery vs. JavaScript</h1>
+        <br>
+        <h2 class = "fragment">Select the Element &#39;my-id&#39;</h2>
+        <p class = "fragment">using Javascript:</p>
+        <code class = "fragment">document.getElementById('my-id')</code>
+        <br>
+        <p class = "fragment">using jQuery:</p>
+        <code class = "fragment">$('#my-id')</code>
+    </section>
+    <section>
+        <h1>jQuery vs. JavaScript</h1>
+        <br>
+        <h2 class = "fragment">Select the Class Element &#39;my-class&#39;</h2>
+        <p class = "fragment">using Javascript:</p>
+        <code class = "fragment">document.getElementsByClassName('my-class')</code>
+        <br>
+        <p class = "fragment">using jQuery:</p>
+        <code class = "fragment">$('.my-class')</code>
+    </section>
+    <section>
+        <h1>jQuery vs. JavaScript</h1>
+        <br>
+        <h2 class = "fragment">Select Elements With a Specific Attribute Value</h2>
+        <p class = "fragment">using Javascript:</p>
+        <code class = "fragment">document.querySelectorAll('[attribute="value"]');</code>
+        <br>
+        <p class = "fragment">using jQuery:</p>
+        <code class = "fragment">$("[attribute='value']")</code>
+    </section>
+<section>
+    <h1>jQuery Can Help You Build Events</h1>
+    <br>
+    <p class = "fragment">Not this kind. . .</p>
+    <br>
+    <img src="images/06-jun/graduation.png" alt="" class = "fragment">
+    <br>
+</section>
+<section>
+    <h1>jQuery Can Help You Build Events</h1>
+    <br>
+    <p>THIS kind:</p>
+    <br>
+    <img src="images/06-jun/mouse-over.png" alt="">&nbsp;&nbsp;&nbsp;<img src="images/06-jun/mouse-click.png" alt="">
+    <br>
+    <p  class = "fragment">JavaScript can &#39;listen&#39; for the user to interact with the web page by clicking a link, filling out a form, or hovering over a bit of text.</p>
+</section>
+
+
+    <section>
+        <h1>jQuery (or, the Beauty of Plugins)</h1>
+        <br>
+        <p>Observe the box slider:</p>
+        <br>
+        <a href="http://www.unionstation.org/" target="_blank">Union Station Kansas City Web Site</a>
+        <br>
+        <p>The jQuery running it looks something like this:</p>
+        <code>$('.bxslider').bxSlider({infiniteLoop: false, hideControlOnEnd: true});</code>
+        <br>
+        <a href="http://bxslider.com/examples/manual-show-without-infinite-loop" traget = "_blank">Here's how it looks in practice!</href>
+    </section>
+    <section>
+        <h1>Your turn!</h1>
+        <ol>
+            <li>In Chrome, go to <a href="http://www.unionstation.org/" target="_blank">unionstation.org</a></li>
+            <li>On the box slider element, right click and &#39;Inspect&#39; </li>
+        </ol>
+        <br>
+        <p>. . . Do you see something like this?</p>
+                <img src="images/06-jun/boxslidersample.png" alt="inspect element">
+    </section>
 
         <section>
           <h2>Questions?</h2>
-          <img src="images/06-june/questions.gif" alt="Questions" height="80%" width="80%"/>
+          <!--<img src="https://media.giphy.com/media/y65VoOlimZaus/giphy.mp4" alt="Questions" height="80%" width="80%"/>-->
+          <iframe src="https://giphy.com/embed/y65VoOlimZaus" width="480" height="439" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/idk-shrug-power-rangers-y65VoOlimZaus">via GIPHY</a></p>
         </section>
         <section>
           <h1>Things You'll Need</h1>
@@ -476,7 +525,7 @@
             <br>
             Another drink?
             <br>
-            <font style="font-size:75%;">Wifi: username / password</font>
+            <font style="font-size:75%;">Wifi: nerderypublic / 1234554321</font>
             <br><br>
           </p>
           <table class="tocTable" style="width: inherit;">
@@ -503,12 +552,12 @@
           <h1>What's Next</h1>
           <br>
           <ol>
-            <li class="fragment">Find a buddy</li>
-            <li class="fragment">Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
-            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
-            <li class="fragment">Finish <a href="http://bit.ly/CnCJuneWork" target="_blank">tonight's worksheet</a></li>
-            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=jQuery+tutorial" target="_blank">online tutorial on jQuery</a></li>
-            <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-may-tickets-31953355346?aff=presentation" target="_blank">next June's event</a></li>
+            <li>Find a buddy</li>
+            <li>Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
+            <li>Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li>Finish <a href="http://bit.ly/CnCJuneWork" target="_blank">tonight's worksheet</a></li>
+            <li>Find a <a href="http://lmgtfy.com/?q=jQuery+tutorial" target="_blank">jQuery tutorial online</a></li>
+            <li>Register for <a href="https://www.eventbrite.com/e/coding-cocktails-july-tickets-31963282037?aff=erelexpmlt" target="_blank">next month's event</a></li>
           </ol>
           <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -70px;" max-height="60%" max-width="60%"/>
         </section>
