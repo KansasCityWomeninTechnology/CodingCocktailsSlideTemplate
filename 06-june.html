@@ -1,0 +1,596 @@
+<!doctype html>
+<html>
+  <head>
+    <title>June - jQuery - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails  course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="jQuery - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails jQuery course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails jQuery course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+	<!--
+		NOTES: Search and replace...
+
+			TOPIC (ie Git)
+			TODO (?)
+			MONTHDIR (05-may)
+			MONTH (May)
+
+			nerderypublic (wifi nerderypublic - do NOT check this in!)
+			1234554321 (wifi 1234554321 - do NOT check this in!)
+	-->
+    <div class="reveal">
+      <div class="slides">
+	  	<!-- Slide to show during check-in and mingling -->
+        <section>
+          <div style="position: absolute;left: -80px; top:0px;">
+            <font style="font-size: 0.6em">
+              <a href="http://bit.ly/CnCIndex">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                All Junes
+              </a>
+            </font>
+          </div>
+          <h1>While You're Waiting</h1>
+          <p>
+            <br>
+            Grab a drink &amp; get connected.
+            <br>
+            <font style="font-size:75%;">Wifi: nerderypublic / 1234554321</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJuneSlides" target="_blank">http://bit.ly/CnCJuneSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJuneWork" target="_blank">http://bit.ly/CnCJuneWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+         <h1>Intro to JavaScript using jQuery</h1>
+         <img src="images/logo-large.png" alt="Coding &amp; Cocktails" width="95%" height="95%"/>
+        </section>
+        <section>
+         <h1>Our Host this Evening</h1>
+         <a href="http://www.nerdery.com" target="_blank"><img src="images/Nerdery-logo.png" alt="The Nerdery" width="80%" height="80%" style="padding-top: 30px;"/></a>
+        </section>
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <br><br>
+          <div style="position: fixed; left:-200px; width: 1300px">
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Sarah Duitsman</h5>
+              <img src="images/sarah_cropped.png" alt="Sarah Duitsman"/>
+              <p style="font-size: 75%;">Program Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Tamara Copple</h5>
+              <img src="images/tamara_cropped.png" alt="Tamara Copple"/>
+              <p style="font-size: 75%;">Program Co-Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Kayla Hennegin</h5>
+              <img src="images/kayla_cropped.png" alt="Kayla Hennegin"/>
+              <p style="font-size: 75%;">Curriculum Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Gabi Dombrowski</h5>
+              <img src="images/gabi_cropped.jpg" alt="Gabi Dombrowski"/>
+              <p style="font-size: 75%;">Mentor Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Lyndsey Padget</h5>
+              <img src="images/lyndsey_cropped.png" alt="Lyndsey Padget"/>
+              <p style="font-size: 75%;">Presentation Director</p>
+            </span>
+          </div>
+        </section>
+        <section>
+          <h2>Join us on...</h2>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <div style="position: fixed; left:-250px; width: 1500px;">
+            <img src="images/06-jun/slack-1.png" width="280" class="fragment"/>
+            <img src="images/06-jun/slack-2.png" width="280" class="fragment"/>
+            <img src="images/06-jun/slack-3.png" width="280" class="fragment"/>
+            <img src="images/06-jun/slack-4.png" width="280" class="fragment"/>
+          </div>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="images/06-jun/ironwoman.png" alt="Mentors" height="80%" width="80%" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+          <a href="https://djangogirls.org/kansascity/" target="_blank">
+            <img src="images/django-girls.png" height="100%" width="100%"/>
+          </a>
+        </section>
+        <section>
+            <h2>Laura Wagner</h2>
+            <img src="images/laura.png" alt="Laura Wagner" height="460"/>
+            <h4>Cocktail Crafter Extraordinaire</h4>
+        </section>
+
+        <section>
+          <h2>Tonight's Agenda: Intro to JQuery</h2>
+            <br>
+            <ol class = "fragment">
+                <li>Part 1: Introduction to JS</li>
+                <ul>
+                    <li class = "fragment">History</li>
+                    <li class = "fragment">How JS Caffeinates Your Web Site</li>
+                    <li class = "fragment">Street Cred - Know the Lingo</li>
+                </ul>
+                <li class = "fragment">Part 2: Introduction to jQuery</li>
+                <ul>
+                    <li class = "fragment">What does jQuery have to do with JavaScript?</li>
+                    <li class = "fragment">Events </li>
+                    <li class = "fragment">DOM Manipulation </li>
+                    <li class = "fragment">Plugins </li>
+                </ul>
+            </ol>
+        </section>
+		<!-- Title slide for root level outline jQuerys -->
+        <section>
+          <h1>Into the Way Back Machine</h1>
+          <img src="images/06-jun/nineties_sbtb.png" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
+        </section>
+		<!-- Introduction slide -->
+        <section>
+            <h1>The year is 1995 . . .</h1>
+            <br>
+            <p class="fragment">Mocha &#47; LiveScript &#47; JavaScript</p>
+              <br>
+              <p class="fragment"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But mostly remember:</p>
+          </section>
+          <section>
+            <img src="images/06-jun/jisnotjs.png" alt="ItsJavaScriptNotJava" height="100%" width="100%" style="margin-top:30px;"/>
+          </section>
+          <section>
+              <h1>How JavaScript Caffeinates Web Apps</h1>
+                  <img src="https://media1.giphy.com/media/vASwXhikF0Dug/giphy.gif" alt="JS Powers Web Sites" height="125%" width="125%">
+          </section>
+          <section>
+              <h1>Plugging in: Triggering JS in Your Code</h1>
+             <h3>Option 1: The Script Tag</h3>
+              <code></code>
+              <p>Caution: use sparingly</p>
+          </section>
+          <section>
+              <h1>Plugging in: Triggering JS in Your Code</h1>
+              <h3>Option 2:  Best Practice</h3>
+              <p>(image here)</p>
+              <p>Point to Javascript code within HTML header</p>
+          </section>
+          <section>
+              <h1>Basic Syntax</h1>
+              <p>(code example here)</p>
+              <p>This is the spot to discuss syntax</p>
+          </section>
+          <section>
+              <h1>Street Cred: Know the Lingo</h1>
+              <img src="images/06-jun/knowyourlingo.png" alt="KnowYourTerms" height="100%" width="100%" style="margin-top:30px;"/>
+          </section>
+          <section>
+              <h1>Data Types:</h1>
+              <h1>Strings, Booleans &amp; Numbers</h1>
+              <br>
+              <p class = "fragment">Strings: &#39;Cocktails&#39;</p>
+              <p class = "fragment">Boolean: True or False</p>
+              <p class = "fragment"> Numbers:  5, 11, 635</p>
+              <br>
+              <p class = "fragment">&#39;12345&#39; is a string</p>
+              <br>
+              <p class = "fragment">&#39;5&#39; is not the same as 5</p>
+          </section>
+          <section>
+              <h1>Know the Lingo</h1>
+              <br>
+              <h3>Variable</h3>
+              <br>
+              <p class = "fragment">Placeholder to store values / data</p>
+              <code class = "fragment">var variableName = variableValue</code>
+              <br>
+              <code class = "fragment">var myFirstVariable = 'mom';</code>
+              <p class = "fragment">Case Sensitive: &#39;myVariable&#39; is not the same as &#39;MyVariable&#39;</p>
+          </section>
+          <section>
+            <h1>Operators</h1>
+            <img src="images/06-jun/mathoperators.png" alt="math_operators" height="50%" width="50%" style="margin-top:30px;"/>
+          </section>
+          <section>
+              <h1>Examples of Operators</h1>
+              <code>var myAge = 28 + 10; // 38</code>
+              <br>
+              <code>var myDogsAge = 6 * 7; // 42</code>
+              <br>
+              <p>Modulus: The 'remainder' in a division problem</p>
+              <code>var modExample = 15 % 2 = 1</code>
+              <p>15 / 2 = 7 with a remainder of 1 (the modulus)</p>
+          </section>
+          <section>
+              <h1>Adding Strings and Numbers</h1>
+              <p class = "fragment">Add two integers:</p>
+              <code class = "fragment">var thirtyFive = 10 + 25;</code>
+              <p class = "fragment">returns 35</p>
+              <br>
+              <code class = "fragment">var textAndNumberString = ‘happy’ + 35 + ‘birthday’;</code>
+              <p class = "fragment">returns</p>
+              <code class = "fragment">// happy35birthday</code>
+          </section>
+          <section>
+              <h1>What will the following return?</h1>
+              <br>
+              <code>var gotcha = ‘10’ + 25;</code>
+              <p class = "fragment">if you guessed 35. . . </p>
+              <p class = "fragment">Gotcha!</p>
+              <p class = "fragment"> Adding a integer and a string returns a string.</p>
+              <code  class = "fragment">//1025</code>
+          </section>
+          <section>
+              <h1>Know the Lingo</h1>
+              <br>
+              <h3>Functions (aka Methods)</h3>
+              <br>
+              <ul>
+                  <li class = "fragment">A function performs a task</li>
+                    <br>
+                  <li class = "fragment">Parameters: the Mad Libs concept</li>
+                    <br>
+                  <li class = "fragment">It may or may not &#39;return&#39; an obvious value once it is finished</li>
+              </ul>
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <br>
+              <p>Parts of a Function</p>
+              <br>
+              <code>var functionName = function (optional, parameters, here) {
+  //function logic here
+};</code>
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <br>
+              <p>Name your function ('declare a variable')</p>
+              <br>
+              <code>var orderDrink = function(drinkName)</code>
+              <br>
+              <p>Read as: The variable &#39;orderDrink&#39; is a function (aka method) with one parameter, called &#39;drinkName&#39;</p>
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <br>
+              <p>The task is specified inside the curly braces:</p>
+              <code>var orderDrink = function(drinkName) {
+  return 'I would like a ' + drinkName + ' please.';}</code>
+  <br>
+              <p>When you run the code, you decide what the value of the parameter is and insert it, Mad Libs style!</p>
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <p>finally, &#39;call&#39; the function by telling it what to use for the parameter:</p>
+              <code>orderDrink('gin and tonic');</code>
+          </section>
+          <section>
+          <h1>Functions in the Wild</h1>
+          <p>Put it all together:</p>
+          <img src="images/06-jun/function.png" alt="" height = "175%" width = "175%">
+          </section>
+          <section>
+              <h1>Functions in the Wild</h1>
+              <p>Put it all together:</p>
+              <img src="images/06-jun/function2exec.png" alt=""  height = "75%" width = "75%">
+          </section>
+          <section>
+            <h1>Know the Lingo</h1>
+            <h2>Object Oriented Programming</h2>
+<!--            <img src="images/06-jun/legobuildingblocks.png" alt="Lingo1" height="50%" width="50%" style="margin-top:30px;"/>  -->
+            <img src="images/06-jun/ladydevlego.png"  alt="LadyDevLego" height="50%" width="50%" style="margin-top:30px;"/>
+          </section>
+        <section>
+            <h1>Comments: Documenting Your Work</h1>
+            <p>Single Line comments</p>
+            <code>//this is a one line comment</code>
+            <p>Multi line comments</p>
+            <code>/* This is a </code>
+            <code>multi line comment */</code>
+        </section>
+        <section>
+            <h1>Your BFF: Console.log</h1>
+            <br>
+            <p>Access with Command + Option + I on Macs</p>
+            <br>
+            <p>Access with Ctrl + Option + I on Windows</p>
+            <br>
+            <p>Great for troubleshooting / debugging your code by sticking these in your logic</p>
+        </section>
+        <section>
+            <img src="images/06-jun/confusing.png" alt=""height = "650px" width = "800
+            px">
+        </section>
+
+        <section>
+            <h1>Break Time!</h1>
+            <br>
+            <ol>
+                <li>Grab something to eat.</li>
+                <li>Find a buddy.</li>
+                <li>Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey </a>(or wait till the end)</li>
+                <li>Dive into the worksheet and practice!</li>
+            </ol>
+            <br>
+            <h3>When we come back:</h3>
+            <img src="images/06-jun/jQuery-logo.png" alt="jQueryLogo" height="75%" width="75%" style="margin-top:30px;"/>
+        </section>
+        <section>
+          <!-- break slide -->
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Another drink!
+            <br>
+            <font style="font-size:75%;">Wifi: nerderypublic / 1234554321</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJuneSlides" target="_blank">http://bit.ly/CnCJuneSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJuneWork" target="_blank">http://bit.ly/CnCJuneWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+    <section>
+        <h1>Welcome Back!</h1>
+        <ol>
+        <h2>Part 2: Introduction to jQuery</h2>
+        <br>
+            <ol>
+                <li>What does jQuery have to do with JavaScript?</li>
+                <li>DOM Manipulation </li>
+                <li>Events </li>
+                <li>Plugins </li>
+            </ol>
+        <img src="images/06-jun/jQuery-logo.png" alt="jQueryLogo" height="75%" width="75%" style="margin-top:30px;"/>
+        </ol>
+    </section>
+    <section>
+    <h1>Manipulating the DOM</h1>
+    <br>
+        <h1>The
+            <font style="color:#c7bc75">D</font>ocument
+            <font style="color:#c7bc75">O</font>bject
+            <font style="color:#c7bc75">M</font>odel </h1>
+        <br>
+        <p>HTML is just another kind of document. Your browser parses the pieces to create an object-oriented representation of the page that you can manipulate with JavaScript.</p>
+    </section>
+    <section>
+        <h1>Manipulating the DOM</h1>
+        <br>
+        <img src="images/06-jun/dom-model.png" alt="">
+    </section>
+    <section>
+         <h1>Manipulating the DOM with jQuery</h1>
+         <br>
+         <p>jQuery can detect when the DOM has finished loading the page:</p>
+         <img src="images/06-jun/docready.png" alt="" height = "200%" width = "200%">
+    </section>
+    <section>
+        <h1>Manipulating the DOM with jQuery</h1>
+        <br>
+        <img src="images/06-jun/docready2.png" alt="" height = "200%" width = "200%">
+    </section>
+    <section>
+        <h1>The Almighty Dollar Sign</h1>
+        <br>
+        <p>You call&#42; a jQuery method using the dollar sign</p>
+        <img src="images/06-jun/dollar-sign.png" alt="">
+        <br>
+        <p>&#42; to &#39;call&#39; a method means to tell it to execute its task</p>
+    </section>
+    <section>
+        <h1>jQuery vs. JavaScript</h1>
+        <br>
+        <p>jQuery is a library of pre-fab JS methods (remember those?) that help you write your code faster.</p>
+        <br>
+        <p>These methods provide reusable code that you can &#39;plug-in&#39; to your application</p>
+    </section>
+    <section>
+        <h1>jQuery vs. JavaScript</h1>
+        <br>
+        <h2 class = "fragment">Select the Element &#39;my-id&#39;</h2>
+        <p class = "fragment">using Javascript:</p>
+        <code class = "fragment">document.getElementById('my-id')</code>
+        <br>
+        <p class = "fragment">using jQuery:</p>
+        <code class = "fragment">$('#my-id')</code>
+    </section>
+    <section>
+        <h1>jQuery vs. JavaScript</h1>
+        <br>
+        <h2 class = "fragment">Select the Class Element &#39;my-class&#39;</h2>
+        <p class = "fragment">using Javascript:</p>
+        <code class = "fragment">document.getElementsByClassName('my-class')</code>
+        <br>
+        <p class = "fragment">using jQuery:</p>
+        <code class = "fragment">$('.my-class')</code>
+    </section>
+    <section>
+        <h1>jQuery vs. JavaScript</h1>
+        <br>
+        <h2 class = "fragment">Select Elements With a Specific Attribute Value</h2>
+        <p class = "fragment">using Javascript:</p>
+        <code class = "fragment">document.querySelectorAll('[attribute="value"]');</code>
+        <br>
+        <p class = "fragment">using jQuery:</p>
+        <code class = "fragment">$("[attribute='value']")</code>
+    </section>
+<section>
+    <h1>jQuery Can Help You Build Events</h1>
+    <br>
+    <p class = "fragment">Not this kind. . .</p>
+    <br>
+    <img src="images/06-jun/graduation.png" alt="" class = "fragment">
+    <br>
+</section>
+<section>
+    <h1>jQuery Can Help You Build Events</h1>
+    <br>
+    <p>THIS kind:</p>
+    <br>
+    <img src="images/06-jun/mouse-over.png" alt="">&nbsp;&nbsp;&nbsp;<img src="images/06-jun/mouse-click.png" alt="">
+    <br>
+    <p  class = "fragment">JavaScript can &#39;listen&#39; for the user to interact with the web page by clicking a link, filling out a form, or hovering over a bit of text.</p>
+</section>
+
+
+    <section>
+        <h1>jQuery (or, the Beauty of Plugins)</h1>
+        <br>
+        <p>Observe the box slider:</p>
+        <br>
+        <a href="http://www.unionstation.org/" target="_blank">Union Station Kansas City Web Site</a>
+        <br>
+        <p>The jQuery running it looks something like this:</p>
+        <code>$('.bxslider').bxSlider({infiniteLoop: false, hideControlOnEnd: true});</code>
+        <br>
+        <a href="http://bxslider.com/examples/manual-show-without-infinite-loop" traget = "_blank">Here's how it looks in practice!</href>
+    </section>
+    <section>
+        <h1>Your turn!</h1>
+        <ol>
+            <li>In Chrome, go to <a href="http://www.unionstation.org/" target="_blank">unionstation.org</a></li>
+            <li>On the box slider element, right click and &#39;Inspect&#39; </li>
+        </ol>
+        <br>
+        <p>. . . Do you see something like this?</p>
+                <img src="images/06-jun/boxslidersample.png" alt="inspect element">
+    </section>
+
+        <section>
+          <h2>Questions?</h2>
+          <!--<img src="https://media.giphy.com/media/y65VoOlimZaus/giphy.mp4" alt="Questions" height="80%" width="80%"/>-->
+          <iframe src="https://giphy.com/embed/y65VoOlimZaus" width="480" height="439" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/idk-shrug-power-rangers-y65VoOlimZaus">via GIPHY</a></p>
+        </section>
+        <section>
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Another drink?
+            <br>
+            <font style="font-size:75%;">Wifi: nerderypublic / 1234554321</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJuneSlides" target="_blank">http://bit.ly/CnCJuneSlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJuneWork" target="_blank">http://bit.ly/CnCJuneWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol>
+            <li>Find a buddy</li>
+            <li>Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
+            <li>Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li>Finish <a href="http://bit.ly/CnCJuneWork" target="_blank">tonight's worksheet</a></li>
+            <li>Find a <a href="http://lmgtfy.com/?q=jQuery+tutorial" target="_blank">jQuery tutorial online</a></li>
+            <li>Register for <a href="https://www.eventbrite.com/e/coding-cocktails-july-tickets-31963282037?aff=erelexpmlt" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -70px;" max-height="60%" max-width="60%"/>
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="images/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="images/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
+          <br><br>
+          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+        </section>
+      </div>
+    </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
