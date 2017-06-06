@@ -134,12 +134,13 @@
             <img src="images/06-jun/ironwoman.png" alt="Mentors" height="80%" width="80%" />
             <h4>are super heroes!</h4>
         </section>
-        <section>
+
+<!--        <section>
           <a href="https://djangogirls.org/kansascity/" target="_blank">
             <img src="images/django-girls.png" height="100%" width="100%"/>
           </a>
-        </section>
-        <section>
+      </section>  -->
+      <section>
             <h2>Laura Wagner</h2>
             <img src="images/laura.png" alt="Laura Wagner" height="460"/>
             <h4>Cocktail Crafter Extraordinaire</h4>
@@ -176,24 +177,23 @@
             <p class="fragment">Mocha &#47; LiveScript &#47; JavaScript</p>
               <br>
               <p class="fragment"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But mostly remember:</p>
-          </section>
-          <section>
-            <img src="images/06-jun/jisnotjs.png" alt="ItsJavaScriptNotJava" height="100%" width="100%" style="margin-top:30px;"/>
+
+            <img class = "fragment" src="images/06-jun/jisnotjs.png" alt="ItsJavaScriptNotJava" height="50%" width="50%" style="margin-top:30px;"/>
           </section>
           <section>
               <h1>How JavaScript Caffeinates Web Apps</h1>
                   <img src="https://media1.giphy.com/media/vASwXhikF0Dug/giphy.gif" alt="JS Powers Web Sites" height="125%" width="125%">
           </section>
           <section>
-              <h1>Plugging in: Triggering JS in Your Code</h1>
+
+              <h1>Triggering JS in Your Code</h1>
              <h3>Option 1: The Script Tag</h3>
-              <code></code>
+             <a href="http://learn.jquery.com/about-jquery/how-jquery-works/"><img src="images/06-jun/scriptTag.png" alt="" height = "103%"  width = "103%"></a>
               <p>Caution: use sparingly</p>
           </section>
           <section>
-              <h1>Plugging in: Triggering JS in Your Code</h1>
+              <h1>Triggering JS in Your Code</h1>
               <h3>Option 2:  Best Practice</h3>
-              <p>(image here)</p>
               <p>Point to Javascript code within HTML header</p>
           </section>
           <section>
@@ -221,11 +221,19 @@
               <h1>Know the Lingo</h1>
               <br>
               <h3>Variable</h3>
+
+              <p>Placeholder to store values / data</p>
+              <img src="images/06-jun/varcontainer.jpeg" alt="container" height = "75%" width = = "75%">
+          </section>
+          <section>
+              <h1>Know the Lingo</h1>
               <br>
-              <p class = "fragment">Placeholder to store values / data</p>
+              <h3>Variable</h3>
+              <br>
+              <p class = "fragment">Alternatively, think of it as a noun.</p>
               <code class = "fragment">var variableName = variableValue</code>
               <br>
-              <code class = "fragment">var myFirstVariable = 'mom';</code>
+              <code class = "fragment">var leftovers = 'Meatloaf';</code>
               <p class = "fragment">Case Sensitive: &#39;myVariable&#39; is not the same as &#39;MyVariable&#39;</p>
           </section>
           <section>
@@ -258,16 +266,16 @@
               <code>var gotcha = ‘10’ + 25;</code>
               <p class = "fragment">if you guessed 35. . . </p>
               <p class = "fragment">Gotcha!</p>
-              <p class = "fragment"> Adding a integer and a string returns a string.</p>
+              <p class = "fragment"> Adding a integer and a string returns a string, &quot;1025&quot;</p>
               <code  class = "fragment">//1025</code>
           </section>
           <section>
               <h1>Know the Lingo</h1>
               <br>
-              <h3>Functions (aka Methods)</h3>
+              <h3>Methods (aka Functions)</h3>
               <br>
               <ul>
-                  <li class = "fragment">A function performs a task</li>
+                  <li class = "fragment">A method (function) performs a task</li>
                     <br>
                   <li class = "fragment">Parameters: the Mad Libs concept</li>
                     <br>
@@ -275,16 +283,20 @@
               </ul>
           </section>
           <section>
-              <h1>Functions in the Wild</h1>
+              <h1>methods as Tasks: The Coffee Bean Grinder</h1>
+              <img src="images/06-jun/cbgrinder.png" alt="coffee bean grinder" style="margin-top:30px;"/>
+          </section>
+          <section>
+              <h1>Methods in the Wild</h1>
               <br>
-              <p>Parts of a Function</p>
+              <p>Parts of a method</p>
               <br>
               <code>var functionName = function (optional, parameters, here) {
   //function logic here
 };</code>
           </section>
           <section>
-              <h1>Functions in the Wild</h1>
+              <h1>Methods in the Wild</h1>
               <br>
               <p>Name your function ('declare a variable')</p>
               <br>
@@ -293,7 +305,7 @@
               <p>Read as: The variable &#39;orderDrink&#39; is a function (aka method) with one parameter, called &#39;drinkName&#39;</p>
           </section>
           <section>
-              <h1>Functions in the Wild</h1>
+              <h1>Methods in the Wild</h1>
               <br>
               <p>The task is specified inside the curly braces:</p>
               <code>var orderDrink = function(drinkName) {
@@ -302,19 +314,19 @@
               <p>When you run the code, you decide what the value of the parameter is and insert it, Mad Libs style!</p>
           </section>
           <section>
-              <h1>Functions in the Wild</h1>
+              <h1>Methods in the Wild</h1>
               <p>finally, &#39;call&#39; the function by telling it what to use for the parameter:</p>
               <code>orderDrink('gin and tonic');</code>
           </section>
           <section>
-          <h1>Functions in the Wild</h1>
+          <h1>Methods in the Wild</h1>
           <p>Put it all together:</p>
-          <img src="images/06-jun/function.png" alt="" height = "175%" width = "175%">
+          <img src="images/06-jun/function.png" alt="" >
           </section>
           <section>
-              <h1>Functions in the Wild</h1>
+              <h1>Methods in the Wild</h1>
               <p>Put it all together:</p>
-              <img src="images/06-jun/function2exec.png" alt=""  height = "75%" width = "75%">
+              <img src="images/06-jun/function2exec.png" alt="">
           </section>
           <section>
             <h1>Know the Lingo</h1>
@@ -350,7 +362,8 @@
             <ol>
                 <li>Grab something to eat.</li>
                 <li>Find a buddy.</li>
-                <li>Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey </a>(or wait till the end)</li>
+
+    <!--            <li>Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey </a>(or wait till the end)</li> -->
                 <li>Dive into the worksheet and practice!</li>
             </ol>
             <br>
@@ -473,7 +486,7 @@
         <code class = "fragment">$("[attribute='value']")</code>
     </section>
 <section>
-    <h1>jQuery Can Help You Build Events</h1>
+    <h1>jQuery Helps You Build Events</h1>
     <br>
     <p class = "fragment">Not this kind. . .</p>
     <br>
@@ -481,13 +494,13 @@
     <br>
 </section>
 <section>
-    <h1>jQuery Can Help You Build Events</h1>
+    <h1>jQuery Helps You Build Events</h1>
     <br>
     <p>THIS kind:</p>
     <br>
-    <img src="images/06-jun/mouse-over.png" alt="">&nbsp;&nbsp;&nbsp;<img src="images/06-jun/mouse-click.png" alt="">
+    <img src="images/06-jun/mouse-over.png" alt="">&nbsp;&nbsp;&nbsp;<img src="images/06-jun/mouse-click.png" alt=""  height = "30%" width =  = "30%">
     <br>
-    <p  class = "fragment">JavaScript can &#39;listen&#39; for the user to interact with the web page by clicking a link, filling out a form, or hovering over a bit of text.</p>
+    <p  class = "fragment">JavaScript can &#39;listen&#39; for the user to interact with the web page.</p>
 </section>
 
 
@@ -501,7 +514,7 @@
         <p>The jQuery running it looks something like this:</p>
         <code>$('.bxslider').bxSlider({infiniteLoop: false, hideControlOnEnd: true});</code>
         <br>
-        <a href="http://bxslider.com/examples/manual-show-without-infinite-loop" traget = "_blank">Here's how it looks in practice!</href>
+        <a href="http://bxslider.com/examples/manual-show-without-infinite-loop" target="_blank">Here's how it looks in practice!</href>
     </section>
     <section>
         <h1>Your turn!</h1>
@@ -552,7 +565,7 @@
           <h1>What's Next</h1>
           <br>
           <ol>
-            <li>Find a buddy</li>
+            <li>Check on your buddy</li>
             <li>Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
             <li>Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
             <li>Finish <a href="http://bit.ly/CnCJuneWork" target="_blank">tonight's worksheet</a></li>
