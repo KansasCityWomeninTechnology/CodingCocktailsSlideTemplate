@@ -1,0 +1,862 @@
+<!doctype html>
+<html>
+  <head>
+    <title>July - Programming Concepts 102: A deeper dive into JavaScript - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Programming Concepts 102: A deeper dive into JavaScript course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="Programming Concepts 102: A deeper dive into JavaScript - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Programming Concepts 102: A deeper dive into JavaScript course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Programming Concepts 102: A deeper dive into JavaScript course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+  <!--
+    NOTES: Search and replace...
+
+      Programming Concepts 102: A deeper dive into JavaScript (ie Git)
+      TODO (?)
+      07-jul (05-may)
+      July (May)
+
+      username (wifi username - do NOT check this in!)
+      password (wifi password - do NOT check this in!)
+  -->
+    <div class="reveal">
+      <div class="slides">
+      <!-- Slide to show during check-in and mingling -->
+        <section>
+          <div style="position: absolute;left: -80px; top:0px;">
+            <font style="font-size: 0.6em">
+              <a href="http://bit.ly/CnCIndex">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                All Julys
+              </a>
+            </font>
+          </div>
+          <h1>While You're Waiting</h1>
+          <p>
+            <br>
+            Grab a drink &amp; get connected.
+            <br>
+            <font style="font-size:75%;">Wifi: username / password</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJulySlides" target="_blank">http://bit.ly/CnCJulySlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJulyWork" target="_blank">http://bit.ly/CnCJulyWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+         <h1>Intro to Programming Concepts 102: A deeper dive into JavaScript</h1>
+         <img src="images/logo-large.png" alt="Coding &amp; Cocktails" width="95%" height="95%"/>
+        </section>
+        <section>
+         <h1>Our Host this Evening</h1>
+         <a href="http://www.nerdery.com" target="_blank"><img src="images/Nerdery-logo.png" alt="The Nerdery" width="80%" height="80%" style="padding-top: 30px;"/></a>
+        </section>
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <br><br>
+          <div style="position: fixed; left:-200px; width: 1300px">
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Sarah Duitsman</h5>
+              <img src="images/sarah_cropped.png" alt="Sarah Duitsman"/>
+              <p style="font-size: 75%;">Program Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Tamara Copple</h5>
+              <img src="images/tamara_cropped.png" alt="Tamara Copple"/>
+              <p style="font-size: 75%;">Program Co-Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Kayla Hennegin</h5>
+              <img src="images/kayla_cropped.png" alt="Kayla Hennegin"/>
+              <p style="font-size: 75%;">Curriculum Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Gabi Dombrowski</h5>
+              <img src="images/gabi_cropped.jpg" alt="Gabi Dombrowski"/>
+              <p style="font-size: 75%;">Mentor Director</p>
+            </span>
+            <span style="display:inline-block; width:240px; vertical-align:top;" class="fragment">
+              <h5>Lyndsey Padget</h5>
+              <img src="images/lyndsey_cropped.png" alt="Lyndsey Padget"/>
+              <p style="font-size: 75%;">Presentation Director</p>
+            </span>
+          </div>
+        </section>
+        <section>
+          <h2>Join us on...</h2>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <div style="position: fixed; left:-250px; width: 1500px;">
+            <img src="images/07-jul/slack-1.png" width="280" class="fragment"/>
+            <img src="images/07-jul/slack-2.png" width="280" class="fragment"/>
+            <img src="images/07-jul/slack-3.png" width="280" class="fragment"/>
+            <img src="images/07-jul/slack-4.png" width="280" class="fragment"/>
+          </div>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="images/07-jul/EarthGirl.jpg" alt="Mentors" height="80%" width="80%" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+          <a href="https://djangogirls.org/kansascity/" target="_blank">
+            <img src="images/django-girls.png" height="100%" width="100%"/>
+          </a>
+        </section>
+        <section>
+            <h2>Laura Wagner</h2>
+            <img src="images/laura.png" alt="Laura Wagner" height="460"/>
+            <h4>Cocktail Crafter Extraordinaire</h4>
+        </section>
+        <section>
+          <h2>Programming Concepts 102: A deeper dive into JavaScript</h2>
+            <br>
+            <ol class = "fragment">
+                <li>Part 1: Control &amp; Data Structures</li>
+                <ol style="list-style-type: lower-alpha; padding-left: 40px;">
+                    <li class = "fragment">Review</li>
+                    <li class = "fragment">Conditionals</li>
+                    <li class = "fragment">Loops</li>
+                    <li class = "fragment">Arrays</li>
+                    <li class = "fragment">Objects</li>
+                </ol>
+                <li class = "fragment">Part 2: Dynamic Content</li>
+                <ol style="list-style-type: lower-alpha; padding-left: 40px;">
+                    <li class = "fragment">Getting Data from APIs with Fetch</li>
+                    <li class = "fragment">Templates</li>
+                    <li class = "fragment">More Stuff</li>
+                </ol>
+            </ol>
+        </section>
+        <section>
+          <h1>Review</h1>
+          <img src="images/07-jul/TimeforReviewSmall.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:3rem;"/>
+        </section>
+        <section>
+          <h3>Variable</h3>
+          <img src="images/07-jul/varcontainer.jpeg" alt="container" height = "75%" width = = "75%">
+          <p class="fragment">Placeholder to store values / data</p>
+        </section>
+        <section>
+          <h1>Operators</h1>
+          <img src="images/07-jul/mathoperators.png" alt="math_operators" height="25%" width="25%" style="margin-top:1rem;"/>
+          <code class="fragment">var myAge = 28 + 10; // 38</code>
+          <code class="fragment">var modExample = 15 % 2 = 1</code>
+          <p class="fragment">Modulus: The 'remainder' in a division problem</p>
+          <p class="fragment">15 / 2 = 7 with a remainder of 1 (the modulus)</p>
+        </section>
+        <section>
+          <h1>Function</h1>
+          <img src="images/07-jul/function.png" alt="" >
+          <p class="fragment">Performs a task</p>
+          <p class="fragment">Operators are a type of function</p>
+        </section>
+        <section>
+            <h1>Comments</h1>
+            <p class="fragment">Single Line comments</p>
+            <code>//this is a one line comment</code>
+            <p class="fragment">Multi line comments</p>
+            <code>/* This is a
+            <br>multi line comment */</code>
+            <p class="fragment">Does not affect the output of your code! (but makes it easier to understand)</p>
+        </section>
+        <section>
+            <h1>Your BFF: Console.log</h1>
+            <br>
+            <div style="position:relative; width:2000px; left: 50px;">
+              <div style="float:left; width:45%;">
+                <table class="slightlyPaddedTable">
+                  <tr>
+                    <td style="text-align: left;">Windows Key Combination</td>
+                    <td style="text-align: left;">Mac Key Combination</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">cntrl + shift + i</td>
+                    <td style="text-align: left;">cmd + shift + i</td>
+                  </tr>
+                </table>
+            </div> </div>
+            <br>
+            <img src="images/07-jul/blankConsoleLog.png" alt="" height="55%" width="55%" style="margin-top:3rem;">
+        </section>
+        <section>
+            <h1>Your BFF: Console.log</h1>
+            <br>
+            <p class="fragment">Great for troubleshooting / debugging your code by sticking these in your logic</p>
+            <img src="images/07-jul/whileLoop.png" alt="console example">
+        </section>
+    <!-- Title slide for root level outline Programming Concepts 102: A deeper dive into JavaScripts -->
+        <section>
+          <h1>Conditionals</h1>
+          <img src="images/07-jul/conditionals.jpg" alt="Conditionals" height="55%" width="65%" style="margin-top:30px;"/>
+        </section>
+    <!-- Introduction slide -->
+        <section>
+            <h1>Flow Control</h1>
+            <ul style="list-style-type: square; float:left;">
+              <li class="fragment"><font style="color:#c7bc75">J</font>avaScript renders from top to bottom</li>
+              <li class="fragment"><font style="color:#c7bc75">Y</font>ou want to submit a drink order request (form) <font style="color:#c7bc75">ONLY IF</font> the user has entered their name</li>
+              <li class="fragment"><font style="color:#c7bc75">J</font>avaScript conditionals allow you to execute code <font style="color:#c7bc75">CONDITIONALLY</font></li>
+            </ul>
+            <img src="images/07-jul/flowchart.jpg" alt="flowchart" style="float: right;"/>
+            <img class="fragment" src="images/07-jul/betterFlowchart.png" alt="better flowchart" height="55%" width="65%" style="float: left;"/>
+        </section>
+      <section>
+            <h1>If/Else</h1>
+            <pre><code class="fragment">
+              if (expressionInParens) {
+                // logic to execute if expression is true
+              }
+              else {
+                // logic to execute if expression is false
+              }
+            </code></pre>
+            <p class="fragment"><font style="color:#c7bc75">Programming Nugget:</font>
+            `else` is optional. </p>
+            <p class="fragment">It is possible to use an `if () {}` statement by itself.</p>
+        </section>
+        <section>
+            <h1>If/Else Example</h1>
+            <pre><code class="fragment">
+              var usersName = 'Heidi';
+              if (usersName.length > 0) {
+                submitDrinkOrder();
+              }
+              else {
+                alert('Please enter your name 
+                  before submitting your drink order.');
+              }
+            </code></pre>
+        </section>
+        <section>
+            <h1>Falsy Values</h1>
+            <p class="fragment">The following are always FALSE</p>
+            <ul style="list-style-type: square">
+              <li class="fragment">false</li>
+              <li class="fragment">undefined</li>
+              <li class="fragment">null</li>
+              <li class="fragment">0</li>
+              <li class="fragment">NaN</li>
+              <li class="fragment">an empty String: ""</li>
+            </ul>
+            <p class="fragment">any other value is always TRUE</p>
+        </section>
+        <section>
+          <h1>Loops</h1>
+          <img src="images/07-jul/snapLoops.png" alt="Snap Loop" style="float:left;"/>
+          <img src="images/07-jul/dogLoop.jpg" alt="Dog Loop" height="55%" width="65%" style="float:right;"/>
+          <img src="images/07-jul/keanuLoop.jpg" alt="Keanu Loop" height="25%" width="25%" style="float:bottom;"/>
+        </section>
+        <section>
+            <h1>Loops</h1>
+           <ul style="list-style-type: square">
+              <li class="fragment">Repeat some code</li>
+              <li class="fragment">As long as some condition is true</li>
+              <li class="fragment">Different kinds of loops:
+              <ul style="list-style-type: square">
+                <li class="fragment">while</li>
+                <li class="fragment">do...while</li>
+                <li class="fragment">for...in/off/statement</li>
+                <li class="fragment"><font style="color:#c7bc75">for</font></li>
+              </ul>
+              </li>
+            </ul>
+        </section>
+        <section>
+            <h1>for Loop</h1>
+            <pre><code class="fragment">
+              for (initialization; condition; increment) {
+                // code to execute while condition is true
+              }
+            </code></pre>
+            <ul style="list-style-type:square">
+            <li class="fragment"><font style="color:#c7bc75">increment</font> increases the value set in <font style="color:#c7bc75">initialization</font> </li>
+            <li class="fragment">so that eventually the <font style="color:#c7bc75">condition</font> is false &amp; the for loops stop executing </li>
+            <li class="fragment">with a few exceptional cases, you DO want your loop to STOP eventually</li>
+            </ul>
+        </section>
+        <section>
+            <h1>for Loop</h1>
+            <pre><code class="fragment">
+              var numberOfCustomers = 5;
+              for (var i = 0; i < numberOfCustomers; i++) {
+                notifyDrinkIsReady(i);
+              }
+            </code></pre>
+            <p>one of these will never terminate &amp; is an 'infinite loop'
+            <pre><code class="fragment">
+              var numberOfCustomers = 5;
+              for (var i = 0; i < numberOfCustomers;) {
+                notifyDrinkIsReady(i);
+              }
+            </code></pre>
+        </section>
+        <section>
+          <h1>Data Sets</h1>
+          <img src="images/07-jul/datasets.jpg" alt="Datasets" style="float:left;"/>
+          <img src="images/07-jul/dataset-logo.png" alt="Dataset rat logo" height="25%" width="25%" style="float:bottom;"/>
+          <img src="images/07-jul/DefiningDatasets.png" alt="dataset comic" height="15%" width="45%" style="float:bottom;"/>
+        </section>
+        <section>
+          <h1>Data Sets</h1>
+          <ul style="list-style-type:square">
+            <li class="fragment">Data set is made up of: <font style="color:#c7bc75">Strings</font>,<font style="color:#c7bc75">booleans</font> &amp; <font style="color:#c7bc75">numbers</font> </li>
+            <li class="fragment">Sometimes you need data that is grouped/organized</li>
+            <li class="fragment">That's when you need a <font style="color:#c7bc75">data structure</font> like Arrays &amp; Objects</li>
+            <li class="fragment">Utility Libraries (Lodash, Underscore) – great for dealing with Arrays &amp; Objects</li>
+          </ul>
+          <img src="images/07-jul/ObjectandClass.png" alt="array image" height="15%" width="45%" style="float:bottom;"/>
+          <img src="images/07-jul/array.gif" alt="array image" height="15%" width="45%" style="float:bottom;"/>
+        </section>
+        <!-- Arrays -->
+        <section>
+          <h1>Arrays: how to make one</h1>
+          <p class="fragment">When you want a collection of data items or even functions</p>
+          <pre><code class="fragment">
+          var cocktails = ['Code on the Beach', 'jQuery Sour'];
+          var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 
+                  7, 'none of the above'];
+          var anArrayOfBooleans = [true, true, true, false];
+          </code></pre>
+          <p class="fragment">Create a new array with 'new Array()' or just initialize it to '[]' which is an empty array.</p>
+          <pre><code class="fragment">
+          var myNewArray = new Array();
+          var myEmptyArray = [];
+          </code></pre>
+        </section>
+        <section>
+          <h1>Arrays: stuff you can do</h1>
+          <ul style="list-style-type: square">
+          <li class="fragment">You can grab items from the array via their index</li>
+          <li class="fragment">Arrays have a <font style="color:#c7bc75">zero-based index</font></li>
+          <li class="fragment">To get the first item you use 0, to get the last item you subtract 1 from the number of items in the array</li>
+          </ul>
+          <pre><code class="fragment">
+            var first = cocktails[0] 
+            // this will return 'Code on the Beach'
+            var last = cocktails[cocktails.length - 1]; 
+            // returns 'jQuery Sour'
+          </code></pre>
+        </section>
+        <section>
+          <h1>Arrays: stuff you can do</h1>
+          <p class="fragment">You can loop over an array:</p>
+          <pre><code class="fragment">
+            var cocktails = ['Code on the Beach', 'jQuery Sour'];
+            
+            // array 'for loop'
+            cocktails.forEach(function(cocktail,index)){
+              console.log(cocktail,index);
+            }
+
+            // 'Code on the Beach' 0
+            // 'jQuery Sour' 1
+          </code></pre>
+        </section>
+        <section>
+          <h1>Arrays: stuff you can do</h1>
+          <p class="fragment">Add an item to the end of an array:</p>
+          <pre><code class="fragment">
+            cocktails.push('Mojito');
+            // cocktails now looks like this: 
+            // ['Code on the Beach', 'jQuery Sour', 'Mojito']
+          </code></pre>
+          <p class="fragment">Remove an item from the end of an array:</p>
+          <pre><code class="fragment">
+            cocktails.pop();
+            // cocktails now looks like this:
+            // ['Code on the Beach', 'jQuery Sour']
+          </code></pre>
+          <p class="fragment">Last-In-First-Out aka LIFO</p>
+        </section>
+        <section>
+          <h1>Arrays: stuff you can do</h1>
+          <p class="fragment">Add to the beginning of an array</p>
+          <pre><code class="fragment">
+            cocktails.unshift('JavaScriptini');
+            // ['Javascriptini', 'Code on the Beach', 'jQuery Sour']
+          </code></pre>
+          <p class="fragment">Remove from the beginning of an array</p>
+          <pre><code class="fragment">
+            cocktails.shift();
+            // ['Code on the Beach', 'jQuery Sour']
+          </code></pre>
+        </section>
+
+        <!-- Objects -->
+        <section>
+          <h1>Objects</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">Sometimes you have complex data</li>
+            <li class="fragment">Objects allow you to structure &amp; organize this data</li>
+          </ul>
+          <img class="fragment" src="images/07-jul/objects.png" alt="example object" style="float:bottom;"/>
+        </section>
+        <section>
+          <h1>Objects: how to make one</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">Create an object with 'new Object()' or initialize an empty one with '{}'</li>
+            <li class="fragment">Use <font style="color:#c7bc75">JSON (JavaScript Object Notation)</font> to initialize</li>
+            <ul style="list-style-type: square; color:#c7bc75;">
+              <li class="fragment">'key':'value' pairs -- "key" may also be referred to as 'name' or 'property'</li>
+              <li class="fragment">Most API’s are going to be in this format </li>
+              <li class="fragment">Don’t know what API’s are? resource here: http://readwrite.com/2013/09/19/api-defined/)</li>
+            </ul>
+          </ul> 
+        </section>
+        <section>
+          <h1>Objects: how to make one</h1>
+          <pre><code class="fragment">
+            var myObject = {
+              "keyWrappedInQuotes": *,
+              "valueCanBeAString": "string",
+              "valueCanBeANumber’: 3,
+              "valueCanBeABoolean": true,
+              "valueCanBeAnArray": ["Red:, "White", "Sangria"],
+              "valueCanBeAnObject": {
+                "keyInsideChildObject": "is this inception?"
+              }
+              "valueCanBeAFunction": function() {
+                shutTheFrontDoor();
+              }
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h1>Objects: how to get data</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">You can get data from the Object by the key</li>
+            <li class="fragment">Dot Notation</li>
+            <pre><code class="fragment">
+            myObject.valueCanBeAnArray
+            // ['Red', 'White', 'Sangria']
+
+            myObject.valueCanBeAnObject.keyInsideChildObject
+            // 'is this inception?'
+            </code></pre>
+             <li class="fragment">Property name has be alphanumeric, can contain underscores &amp; can't start with a number. No spaces.</li>
+            </ul>
+        </section>
+        <section>
+          <h1>Objects: how to get data</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">You can get data from the Object by the key</li>
+            <li class="fragment">Bracket Notation</li>
+            <pre><code class="fragment">
+myObject['valueCanBeAnArray']
+// ['Red', 'White', 'Sangria']
+myObject['valueCanBeAnObject']['keyInsideChildObject']
+            </code></pre>
+             <li class="fragment">Can be used for property names that don't work with dot notation.</li>
+             <pre><code class="fragment">
+var objectWithSpaces = {"Uptown Funk": "You Up"};
+objectWithSpaces['Uptown Funk'];
+// "You Up"
+             </code></pre>
+            </ul>
+        </section>
+        <section>
+          <h1>Objects: how to get data</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">When you are doing something dynamic like</li>
+            <ul style="list-style-type: square">
+              <li class="fragment">using a for loop to access elements</li>
+              <li class="fragment">passing a property name as a parameter to a function</li>
+            </ul>
+            <li class="fragment">you have to use Bracket Notation</li>
+            <pre><code class="fragment">
+var objectKey = 'Downtown';
+var songLyrics = {"Downtown": 'Banana seat, a canopy on two wheels'};
+songLyrics[objectKey];
+// 'Banana seat, a canopy on two wheels'
+             </code></pre>
+            </ul>
+        </section>
+        <section>
+          <h1>Objects: how to set a value</h1>
+          <pre><code class="fragment">var myFavoriteThings = {};
+myFavoriteThings.animal = 'giraffe';
+console.log(myFavoriteThings);
+// {"animal": 'giraffe'}</code></pre>
+          <pre><code class="fragment">var cocktailsForMenu = [
+  {
+    "name": "Whiskey Sour",
+    "price": "$13"
+  },
+  {
+    "name": "Hug from Ryan Gosling",
+    "price": "$15"
+  }
+]
+cocktailsForMenu[0]['name']
+// 'Whiskey Sour'
+cocktailsForMenu[1].name
+// 'Hug from Ryan Gosling'</code></pre>
+      </section>
+      <section>
+      <!-- break slide -->
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Another drink!
+            <br>
+            <font style="font-size:75%;">Wifi: username / password</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJulySlides" target="_blank">http://bit.ly/CnCJulySlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJulyWork" target="_blank">http://bit.ly/CnCJulyWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <!-- API -->
+        <section>
+          <h1>Fetching with APIs</h1>
+          <img src="images/07-jul/apiCat.jpg" alt="API cat" style="float:center;"/>
+        </section>
+        <section>
+          <h1>Static vs Dynamic Applications</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment" style="color:#c7bc75">Static Application</li>
+            <ul style="list-style-type: square;">
+              <li class="fragment">written in HTML (maybe CSS)</li>
+              <li class="fragment">will only change if you edit the HTML (or CSS) 'by hand'</li>
+            </ul>
+            <li class="fragment" style="color:#c7bc75">Dynamic Application</li>
+            <ul style="list-style-type: square;">
+              <li class="fragment">written in some programming language (JavaScript, PHP, Java ...)</li>
+              <li class="fragment">content is pulled from a database/internet often triggered by user interaction</li>
+              <li class="fragment">client-side JavaScript uses APIs to fetch data from the internet</li>
+            </ul>
+          </ul> 
+        </section>
+         <section>
+          <h1>API</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">Application Programming Interface</li>
+            <li class="fragment">it's the middle-man that allows 2 applications to talk to each other.</li>
+              <li class="fragment">One application makes a request.</li>
+              <li class="fragment">API takes request to other application &amp; gets response.</li>
+              <li class="fragment">API brings response back to original application.</li>
+            </ul>
+          </ul> 
+        </section>
+        <section>
+          <h1>API</h1>
+          <p> Weather REST API</p>
+          <img src="images/07-jul/RestAPI.png" alt="REST API example" style="float:center;"/>
+        </section>
+        <section>
+          <h1>API</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">In a web application...</li>
+            <li class="fragment">API takes request from front end app: 'Get weather in Paris in Celcius'</li>
+            <li class="fragment">API has its own server which will give a response: 'Forecast for Paris: 16 low, 23 high'</li>
+            <li class="fragment">API gives this response to the frond end app</li>
+            <li class="fragment">The front end app displays the response with fancy HTML/CSS</li>
+          </ul>
+        </section>
+        <section>
+          <h1>API: famous examples</h1>
+          <ul style="list-style-type: square;">
+            <li class="fragment">Giphy [Find gifs or stickers]</li>
+            <li class="fragment">NASA Api [for amazing imagery]</li>
+            <li class="fragment">Google Maps [API to display/interact with Google Maps]</li>
+            <li class="fragment">Twitter [to read or send tweets]</li>
+            <li class="fragment">Pinterest [to view pins or add pins]</li>
+            <li class="fragment"><a href="https://github.com/toddmotto/public-apis">Some Public APIs</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>API: Interaction with JavaScript</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">The original way JavaScript interacted with API requests was through `XHR` [XMLHttpRequest].</li>
+            <li class="fragment">Then jQuery came along &amp; provided an easier interaction with `AJAX` [Asynchronous JavaScript &amp; XML].</li>
+            <li class="fragment">ECMAScript 2015 [was ES6] introduced `fetch` a native JS function that is similar to jQuery's AJAX.</li>
+          </ul>
+        </section>
+        <section>
+          <h1>API: fetch</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">That means you can use `fetch` without having to include a BULKY library.</li>
+            <pre><code class="fragment">
+  fetch(url) // URL of API
+  .then(function() {
+    // Code for handling data response from API
+  }
+  .catch(function() {
+    // Code to run if API returns an error
+  });
+
+            </code></pre>
+          </ul>
+        </section>
+        <section>
+          <h1>API: fetch &amp; format with JSON</h1>
+          <ul style="list-style-type: square;">
+            <li class="fragment">There are different formatting methods, but most of the time you are going to want the format in JSON</li>
+            <li class="fragment">APIs may have various options for you to select from. </li>
+            <li class="fragment">For example:`<a href="http://ron-swanson-quotes.herokuapp.com/v2/quotes">http://ron-swanson-quotes.herokuapp.com/v2/quotes</a>` -> returns 1 quote</li>
+            <li class="fragment">`<a href="http://ron-swanson-quotes.herokuapp.com/v2/quotes/5">http://ron-swanson-quotes.herokuapp.com/v2/quotes/5</a>` -> returns 5 quotes</li>
+          </ul>
+        </section>
+        <section>
+          <h1>API: fetch &amp; format with JSON</h1>
+          <pre><code class="fragment">var url = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes';</code></pre>
+          <pre><code class="fragment">fetch(url)
+  .then(function(response){
+    return response.json();
+  })</code></pre>
+          <pre><code class="fragment">.then(function(response){
+    console.log(response);
+    // ["Great job, everyone. The reception will be held in 
+    // each of our individual houses, alone."]
+  })</code></pre>
+<pre><code class="fragment">
+  .catch(function(error){
+    console.log('error');
+  });
+</code></pre>
+        </section>
+
+        <!-- Templates -->
+        <section>
+          <h1>Templates</h1>
+          <img src="images/07-jul/templates.png" alt="template example" style="float:center;"/>
+          <img src="images/07-jul/JavaScriptTheGoodParts.jpg" alt="Javascript the good parts oreily" style="float:center"/>
+        </section>
+        <section>
+          <h1>Templates</h1>
+            <ul style="list-style-type: square;">
+                <li class="fragment">Raw API responses are not very exciting to look at</li>
+                <li class="fragment">We want to make our HTML/CSS markup use dynamic content from the API responses</li>
+                <li class="fragment">A template is a reusable chunk of code used for markup</li>
+                <li class="fragment">It contains placeholders [of variables] for where the dynamic content is populated.</li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: different ways of using them</h1>
+            <ul style="list-style-type: square;">
+            <li class="fragment">Library 
+                <ul style="list-style-type: square;">
+                    <li class="fragment">A library is a set of tools or utilities, helpers, that help you write JavaScript faster but provides more flexibility in terms of architecture</li>
+                    <li class="fragment"><a href="http://handlebarsjs.com/">Handlebars.js</a></li>
+                    <li class="fragment"><a href="https://github.com/janl/mustache.js">Mustache.js</a></li>
+                    <li class="fragment"><a href="http://olado.github.io/doT/index.html">doT.js</a></li>
+                </ul>
+            </li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: different ways of using them</h1>
+            <ul style="list-style-type: square;">
+            <li class="fragment">Framework 
+                <ul style="list-style-type: square;">
+                    <li class="fragment">It provides a full suite of tools &amp; helpers, with a specific structure to how you write your code</li>
+                    <li class="fragment">Frameworks have their own way of templating, that is specific to the framework (covered in Single Page App Session)</li>
+                    <li class="fragment"><a href="https://facebook.github.io/react/">React</a></li>
+                    <li class="fragment"><a href="https://angular.io/">Angular</a></li>
+                </ul>
+            </li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: different ways of using them</h1>
+            <ul style="list-style-type: square;">
+            <li class="fragment">Native JavaScript 
+                <ul style="list-style-type: square;">
+                    <li class="fragment">With ECMAScript 2015, we now have template literals.</li>
+                    <li class="fragment">Provides an alternative to concatenating strings, which allows for us to explore templating with native JS. </li>
+                    <li class="fragment">This is what we'll be using tonight.</li>
+                </ul>
+            </li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: template literals</h1>
+              <ul style="list-style-type: square;">
+                <li class="fragment">Can be multi-line strings wrapped with backticks OR can use expressions with the syntax `${}`. </li>
+                <li class="fragment">Expressions can be variables, data from arrays/objects or even contain logic.</li>
+              </ul>
+              <pre><code class="fragment">var caliberOfDay = 'sunshiney';
+var myMultiLineString = `
+  Hello!  
+  Hope you have a ${caliberOfDay} day!`;
+</code></pre>
+            <p class="fragment">VS</p>
+            <pre><code class="fragment">var myMultiLineString = 'Hello!' + \n
+      'Hope you have a ' + caliberOfDay + ' day!';
+</code></pre>
+        </section>
+        <section>
+          <h1>Templates: template literals</h1>
+          <p class="fragment">Expression with some logic in a template</p>
+          <pre><code class="fragment">`I should drink ${8 - 5} more glasses of water today.`
+// I should drink 3 more glasses of water today.
+</code></pre>
+        </section>
+        <section>
+            <h1>Templates: populating HTML with variables</h1>
+            <ul style="list-style-type: square;">
+                <li class="fragment">Our HTML:
+                    <pre><code class="fragment">
+<div id="intro"></div>
+</code></pre> </li>
+            
+                <li class="fragment"> Our JavaScript
+                    <pre><code class="fragment">var user = {firstName: 'Alice', city: 'Wonderland'};
+var myMarkup = `
+  <div class="character">
+    <p>Hi, I'm ${user.firstName}.</p>
+    <p>I live in ${user.city}.</p>
+  </div>
+`;
+var intro = document.getElementById('intro');
+intro.innerHTML = myMarkup;</code></pre></li>
+            </ul>
+        </section>
+        <section>
+            <h1>Templates: populating HTML with variables</h1>
+            <ul style="list-style-type: square;">
+                <li class="fragment"> Results in HTML DOM
+                    <pre><code class="fragment"><div id="intro">
+  <div class="character">
+    <p>Hi, I'm Alice.</p>
+    <p>I live in Wonderland.</p>
+  </div>
+</div></code></pre></li>
+                <li class="fragment"><a href="https://codepen.io/CodingCocktailsKC/pen/ZyBRbw" target="_blank">Codepen of fetch w/ API &amp; looping through template</a></li>
+            </ul>
+            
+        </section>
+        <section>
+          <h2>Questions?</h2>
+          <div class="current-visible absCenter">
+            <image src="https://media.giphy.com/media/7K3p2z8Hh9QOI/giphy.gif" height="80%" width="80%">
+          </div>
+        </section>
+        <section>
+          <h1>Things You'll Need</h1>
+          <p>
+            <br>
+            Another drink?
+            <br>
+            <font style="font-size:75%;">Wifi: username / password</font>
+            <br><br>
+          </p>
+          <table class="tocTable" style="width: inherit;">
+            <tr>
+              <td>This presentation</td>
+              <td><a href="http://bit.ly/CnCJulySlides" target="_blank">http://bit.ly/CnCJulySlides</a></td>
+            </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJulyWork" target="_blank">http://bit.ly/CnCJulyWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+          </table>
+          <br>
+          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
+          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
+          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
+          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol>
+            <li class="fragment">Find a buddy</li>
+            <li class="fragment">Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCJulyWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=JavaScript+tutorial" target="_blank">online tutorial on JavaScript</a></li>
+            <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-august-tickets-33536480516?aff=presentation" target="_blank">August event</a></li>
+          </ol>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -5rem; right: -8rem;" max-height="60%" max-width="60%"/>
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="images/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="images/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
+          <br><br>
+          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
