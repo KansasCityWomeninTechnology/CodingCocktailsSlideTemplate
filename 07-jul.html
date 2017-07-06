@@ -24,6 +24,11 @@
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/reveal.css"/>
     <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+    <style>
+        code{
+          font-size: 1.5rem !important;
+        }
+    </style>
   </head>
   <body>
   <!--
@@ -45,7 +50,7 @@
             <font style="font-size: 0.6em">
               <a href="http://bit.ly/CnCIndex">
                 <i class="fa fa-arrow-left fa-sm"></i>
-                All Julys
+                All Months
               </a>
             </font>
           </div>
@@ -79,7 +84,7 @@
         </section>
         <section>
          <h1>Intro to Programming Concepts 102: A deeper dive into JavaScript</h1>
-         <img src="images/logo-large.png" alt="Coding &amp; Cocktails" width="95%" height="95%"/>
+         <img src="images/logo-large.png" alt="Coding &amp; Cocktails" width="65%" height="55%"/>
         </section>
         <section>
          <h1>Our Host this Evening</h1>
@@ -119,7 +124,7 @@
         <section>
           <h2>Join us on...</h2>
           <a href="https://kcwit.slack.com" target="_blank" class="fragment">
-            <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
+            <img src="images/slack-logo-white.png" alt="Slack" width="60%" height="40%"/>
           </a>
           <br>
           <div style="position: fixed; left:-250px; width: 1500px;">
@@ -131,13 +136,8 @@
         </section>
         <section>
             <h2>Our mentors</h2>
-            <img src="images/07-jul/EarthGirl.jpg" alt="Mentors" height="80%" width="80%" />
+            <img src="images/07-jul/EarthGirl.jpg" alt="Mentors" height="60%" width="60%" />
             <h4>are super heroes!</h4>
-        </section>
-        <section>
-          <a href="https://djangogirls.org/kansascity/" target="_blank">
-            <img src="images/django-girls.png" height="100%" width="100%"/>
-          </a>
         </section>
         <section>
             <h2>Laura Wagner</h2>
@@ -160,23 +160,22 @@
                 <ol style="list-style-type: lower-alpha; padding-left: 40px;">
                     <li class = "fragment">Getting Data from APIs with Fetch</li>
                     <li class = "fragment">Templates</li>
-                    <li class = "fragment">More Stuff</li>
                 </ol>
             </ol>
         </section>
         <section>
           <h1>Review</h1>
-          <img src="images/07-jul/TimeforReviewSmall.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:3rem;"/>
+          <img src="images/07-jul/TimeforReviewSmall.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:.5rem;"/>
         </section>
         <section>
           <h3>Variable</h3>
-          <img src="images/07-jul/varcontainer.jpeg" alt="container" height = "75%" width = = "75%">
+          <img src="images/07-jul/varcontainer.jpeg" alt="container" height="75%" width="75%">
           <p class="fragment">Placeholder to store values / data</p>
         </section>
         <section>
           <h1>Operators</h1>
-          <img src="images/07-jul/mathoperators.png" alt="math_operators" height="25%" width="25%" style="margin-top:1rem;"/>
-          <code class="fragment">var myAge = 28 + 10; // 38</code>
+          <img src="images/07-jul/mathoperators.png" alt="math_operators" height="25%" width="25%" style="margin-top:.5rem;"/>
+          <code class="fragment">var myAge = 28 + 10 </code>
           <code class="fragment">var modExample = 15 % 2 = 1</code>
           <p class="fragment">Modulus: The 'remainder' in a division problem</p>
           <p class="fragment">15 / 2 = 7 with a remainder of 1 (the modulus)</p>
@@ -224,45 +223,40 @@
     <!-- Title slide for root level outline Programming Concepts 102: A deeper dive into JavaScripts -->
         <section>
           <h1>Conditionals</h1>
-          <img src="images/07-jul/conditionals.jpg" alt="Conditionals" height="55%" width="65%" style="margin-top:30px;"/>
+          <img src="images/07-jul/conditionals.jpg" alt="Conditionals" height="45%" width="65%" style="margin-top:.5rem;"/>
         </section>
     <!-- Introduction slide -->
         <section>
             <h1>Flow Control</h1>
             <ul style="list-style-type: square; float:left;">
-              <li class="fragment"><font style="color:#c7bc75">J</font>avaScript renders from top to bottom</li>
-              <li class="fragment"><font style="color:#c7bc75">Y</font>ou want to submit a drink order request (form) <font style="color:#c7bc75">ONLY IF</font> the user has entered their name</li>
-              <li class="fragment"><font style="color:#c7bc75">J</font>avaScript conditionals allow you to execute code <font style="color:#c7bc75">CONDITIONALLY</font></li>
+              <li class="fragment">JavaScript runs from top to bottom</li>
+                          <img class="fragment" src="images/07-jul/flowchart.jpg" alt="flowchart" style="float: right;"/>
+              <li class="fragment">You want to submit a drink order request (form) <font style="color:#c7bc75">ONLY IF</font> the user has entered their name</li>
             </ul>
-            <img src="images/07-jul/flowchart.jpg" alt="flowchart" style="float: right;"/>
-            <img class="fragment" src="images/07-jul/betterFlowchart.png" alt="better flowchart" height="55%" width="65%" style="float: left;"/>
         </section>
       <section>
             <h1>If/Else</h1>
-            <pre><code class="fragment">
-              if (expressionInParens) {
-                // logic to execute if expression is true
-              }
-              else {
-                // logic to execute if expression is false
-              }
-            </code></pre>
+            <pre><code class="fragment">if (expressionInParens) {
+  // do something if true
+}
+else {
+  // otherwise, do something else
+}</code></pre>
             <p class="fragment"><font style="color:#c7bc75">Programming Nugget:</font>
             `else` is optional. </p>
             <p class="fragment">It is possible to use an `if () {}` statement by itself.</p>
         </section>
         <section>
             <h1>If/Else Example</h1>
-            <pre><code class="fragment">
-              var usersName = 'Heidi';
-              if (usersName.length > 0) {
-                submitDrinkOrder();
-              }
-              else {
-                alert('Please enter your name 
-                  before submitting your drink order.');
-              }
-            </code></pre>
+            <pre>
+            <code class="fragment">var usersName = 'Heidi';
+if (usersName.length > 0) {
+  submitDrinkOrder();
+}
+else {
+  alert('Please enter your name 
+  before submitting your drink order.');
+}</code></pre>
         </section>
         <section>
             <h1>Falsy Values</h1>
@@ -279,9 +273,7 @@
         </section>
         <section>
           <h1>Loops</h1>
-          <img src="images/07-jul/snapLoops.png" alt="Snap Loop" style="float:left;"/>
-          <img src="images/07-jul/dogLoop.jpg" alt="Dog Loop" height="55%" width="65%" style="float:right;"/>
-          <img src="images/07-jul/keanuLoop.jpg" alt="Keanu Loop" height="25%" width="25%" style="float:bottom;"/>
+          <img src="images/07-jul/dogLoop.jpg" alt="Dog Loop" height="50%" width="65%" style="float:center;"/>
         </section>
         <section>
             <h1>Loops</h1>
@@ -292,46 +284,40 @@
               <ul style="list-style-type: square">
                 <li class="fragment">while</li>
                 <li class="fragment">do...while</li>
-                <li class="fragment">for...in/off/statement</li>
-                <li class="fragment"><font style="color:#c7bc75">for</font></li>
+                <li class="fragment">for...in/of/statement</li>
+                <li class="fragment">Today we will learn about the 'for' loop</li>
               </ul>
               </li>
             </ul>
         </section>
         <section>
             <h1>for Loop</h1>
-            <pre><code class="fragment">
-              for (initialization; condition; increment) {
-                // code to execute while condition is true
-              }
+            <pre>
+            <code class="fragment">for (initialization; condition; increment) {
+// code to execute while condition is true
+}
             </code></pre>
             <ul style="list-style-type:square">
             <li class="fragment"><font style="color:#c7bc75">increment</font> increases the value set in <font style="color:#c7bc75">initialization</font> </li>
-            <li class="fragment">so that eventually the <font style="color:#c7bc75">condition</font> is false &amp; the for loops stop executing </li>
+            <li class="fragment">so that eventually the <font style="color:#c7bc75">condition</font> is false &amp; the for loop stop executing </li>
             <li class="fragment">with a few exceptional cases, you DO want your loop to STOP eventually</li>
             </ul>
         </section>
         <section>
             <h1>for Loop</h1>
-            <pre><code class="fragment">
-              var numberOfCustomers = 5;
-              for (var i = 0; i < numberOfCustomers; i++) {
-                notifyDrinkIsReady(i);
-              }
-            </code></pre>
+            <pre><code class="fragment">var numberOfCustomers = 5;
+for (var i = 0; i < numberOfCustomers; i++) {
+  notifyDrinkIsReady(i);
+}</code></pre>
             <p>one of these will never terminate &amp; is an 'infinite loop'
-            <pre><code class="fragment">
-              var numberOfCustomers = 5;
-              for (var i = 0; i < numberOfCustomers;) {
-                notifyDrinkIsReady(i);
-              }
-            </code></pre>
+            <pre><code class="fragment">var numberOfCustomers = 5;
+for (var i = 0; i < numberOfCustomers;) {
+  notifyDrinkIsReady(i);
+}</code></pre>
         </section>
         <section>
           <h1>Data Sets</h1>
-          <img src="images/07-jul/datasets.jpg" alt="Datasets" style="float:left;"/>
-          <img src="images/07-jul/dataset-logo.png" alt="Dataset rat logo" height="25%" width="25%" style="float:bottom;"/>
-          <img src="images/07-jul/DefiningDatasets.png" alt="dataset comic" height="15%" width="45%" style="float:bottom;"/>
+          <img src="images/07-jul/DefiningDatasets.png" alt="dataset comic" height="75%" width="75%" style="float:bottom;"/>
         </section>
         <section>
           <h1>Data Sets</h1>
@@ -339,21 +325,26 @@
             <li class="fragment">Data set is made up of: <font style="color:#c7bc75">Strings</font>,<font style="color:#c7bc75">booleans</font> &amp; <font style="color:#c7bc75">numbers</font> </li>
             <li class="fragment">Sometimes you need data that is grouped/organized</li>
             <li class="fragment">That's when you need a <font style="color:#c7bc75">data structure</font> like Arrays &amp; Objects</li>
-            <li class="fragment">Utility Libraries (Lodash, Underscore) – great for dealing with Arrays &amp; Objects</li>
           </ul>
-          <img src="images/07-jul/ObjectandClass.png" alt="array image" height="15%" width="45%" style="float:bottom;"/>
+<img src="images/07-jul/ObjectandClass.png" alt="array image" height="15%" width="45%" style="float:bottom;"/>
           <img src="images/07-jul/array.gif" alt="array image" height="15%" width="45%" style="float:bottom;"/>
+        </section>
+        <section>
+          <h1>Data Set Libraries</h1>
+          <ul style="list-style-type:square">
+            <li class="fragment">Utility Libraries simplify dealing with Arrays and Objects</li>
+            <li class="fragment"><a href="https://lodash.com">LoDash</a></li>
+            <li class="fragment"><a href="http://underscorejs.org/">UNDERSCORE.js</a></li>
+          </ul>
         </section>
         <!-- Arrays -->
         <section>
           <h1>Arrays: how to make one</h1>
           <p class="fragment">When you want a collection of data items or even functions</p>
-          <pre><code class="fragment">
-          var cocktails = ['Code on the Beach', 'jQuery Sour'];
-          var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 
-                  7, 'none of the above'];
-          var anArrayOfBooleans = [true, true, true, false];
-          </code></pre>
+          <pre><code class="fragment">var cocktails = ['Code on the Beach', 'jQuery Sour'];
+var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 
+  7, 'none of the above'];
+var anArrayOfBooleans = [true, true, true, false];</code></pre>
           <p class="fragment">Create a new array with 'new Array()' or just initialize it to '[]' which is an empty array.</p>
           <pre><code class="fragment">
           var myNewArray = new Array();
@@ -367,56 +358,42 @@
           <li class="fragment">Arrays have a <font style="color:#c7bc75">zero-based index</font></li>
           <li class="fragment">To get the first item you use 0, to get the last item you subtract 1 from the number of items in the array</li>
           </ul>
-          <pre><code class="fragment">
-            var first = cocktails[0] 
-            // this will return 'Code on the Beach'
-            var last = cocktails[cocktails.length - 1]; 
-            // returns 'jQuery Sour'
-          </code></pre>
+          <pre><code class="fragment">var first = cocktails[0] 
+// this will return 'Code on the Beach'
+var last = cocktails[cocktails.length - 1]; 
+// returns 'jQuery Sour'</code></pre>
         </section>
         <section>
           <h1>Arrays: stuff you can do</h1>
           <p class="fragment">You can loop over an array:</p>
-          <pre><code class="fragment">
-            var cocktails = ['Code on the Beach', 'jQuery Sour'];
-            
-            // array 'for loop'
-            cocktails.forEach(function(cocktail,index)){
-              console.log(cocktail,index);
-            }
-
-            // 'Code on the Beach' 0
-            // 'jQuery Sour' 1
-          </code></pre>
+          <pre><code class="fragment">var cocktails = ['Code on the Beach', 'jQuery Sour'];
+// array 'for loop'
+  cocktails.forEach(function(cocktail,index)){
+  console.log(cocktail,index);
+}
+// 'Code on the Beach' 0
+// 'jQuery Sour' 1</code></pre>
         </section>
         <section>
           <h1>Arrays: stuff you can do</h1>
           <p class="fragment">Add an item to the end of an array:</p>
-          <pre><code class="fragment">
-            cocktails.push('Mojito');
-            // cocktails now looks like this: 
-            // ['Code on the Beach', 'jQuery Sour', 'Mojito']
-          </code></pre>
+          <pre><code class="fragment">cocktails.push('Mojito');
+// cocktails now looks like this: 
+// ['Code on the Beach', 'jQuery Sour', 'Mojito']</code></pre>
           <p class="fragment">Remove an item from the end of an array:</p>
-          <pre><code class="fragment">
-            cocktails.pop();
-            // cocktails now looks like this:
-            // ['Code on the Beach', 'jQuery Sour']
-          </code></pre>
+          <pre><code class="fragment">cocktails.pop();
+// cocktails now looks like this:
+// ['Code on the Beach', 'jQuery Sour']</code></pre>
           <p class="fragment">Last-In-First-Out aka LIFO</p>
         </section>
         <section>
           <h1>Arrays: stuff you can do</h1>
           <p class="fragment">Add to the beginning of an array</p>
-          <pre><code class="fragment">
-            cocktails.unshift('JavaScriptini');
-            // ['Javascriptini', 'Code on the Beach', 'jQuery Sour']
-          </code></pre>
+          <pre><code class="fragment">cocktails.unshift('JavaScriptini');
+// ['Javascriptini', 'Code on the Beach', 'jQuery Sour']</code></pre>
           <p class="fragment">Remove from the beginning of an array</p>
-          <pre><code class="fragment">
-            cocktails.shift();
-            // ['Code on the Beach', 'jQuery Sour']
-          </code></pre>
+          <pre><code class="fragment">cocktails.shift();
+// ['Code on the Beach', 'jQuery Sour']</code></pre>
         </section>
 
         <!-- Objects -->
@@ -442,21 +419,19 @@
         </section>
         <section>
           <h1>Objects: how to make one</h1>
-          <pre><code class="fragment">
-            var myObject = {
-              "keyWrappedInQuotes": *,
-              "valueCanBeAString": "string",
-              "valueCanBeANumber’: 3,
-              "valueCanBeABoolean": true,
-              "valueCanBeAnArray": ["Red:, "White", "Sangria"],
-              "valueCanBeAnObject": {
-                "keyInsideChildObject": "is this inception?"
-              }
-              "valueCanBeAFunction": function() {
-                shutTheFrontDoor();
-              }
-            }
-          </code></pre>
+          <pre><code class="fragment">var myObject = {
+  "keyWrappedInQuotes": *,
+  "valueCanBeAString": "string",
+  "valueCanBeANumber’: 3,
+  "valueCanBeABoolean": true,
+  "valueCanBeAnArray": ["Red:, "White", "Sangria"],
+  "valueCanBeAnObject": {
+    "keyInsideChildObject": "is this inception?"
+  }
+  "valueCanBeAFunction": function() {
+    shutTheFrontDoor();
+  }
+}</code></pre>
         </section>
         <section>
           <h1>Objects: how to get data</h1>
@@ -629,16 +604,13 @@ cocktailsForMenu[1].name
           <h1>API: fetch</h1>
           <ul style="list-style-type: square">
             <li class="fragment">That means you can use `fetch` without having to include a BULKY library.</li>
-            <pre><code class="fragment">
-  fetch(url) // URL of API
+            <pre><code class="fragment">fetch(url) // URL of API
   .then(function() {
     // Code for handling data response from API
   }
   .catch(function() {
     // Code to run if API returns an error
-  });
-
-            </code></pre>
+  });</code></pre>
           </ul>
         </section>
         <section>
@@ -689,7 +661,7 @@ cocktailsForMenu[1].name
             <ul style="list-style-type: square;">
             <li class="fragment">Library 
                 <ul style="list-style-type: square;">
-                    <li class="fragment">A library is a set of tools or utilities, helpers, that help you write JavaScript faster but provides more flexibility in terms of architecture</li>
+                    <li class="fragment">A library is a set of tools that help you write JavaScript faster, but provide more flexibility in terms of architecture</li>
                     <li class="fragment"><a href="http://handlebarsjs.com/">Handlebars.js</a></li>
                     <li class="fragment"><a href="https://github.com/janl/mustache.js">Mustache.js</a></li>
                     <li class="fragment"><a href="http://olado.github.io/doT/index.html">doT.js</a></li>
@@ -728,39 +700,40 @@ cocktailsForMenu[1].name
                 <li class="fragment">Can be multi-line strings wrapped with backticks OR can use expressions with the syntax `${}`. </li>
                 <li class="fragment">Expressions can be variables, data from arrays/objects or even contain logic.</li>
               </ul>
-              <pre><code class="fragment">var caliberOfDay = 'sunshiney';
+        </section>
+        <section>
+          <h1>Templates: template literals</h1>
+            <pre><code class="fragment">var caliberOfDay = 'sunshiney';
 var myMultiLineString = `
   Hello!  
   Hope you have a ${caliberOfDay} day!`;
 </code></pre>
             <p class="fragment">VS</p>
             <pre><code class="fragment">var myMultiLineString = 'Hello!' + \n
-      'Hope you have a ' + caliberOfDay + ' day!';
+'Hope you have a ' + caliberOfDay + ' day!';
 </code></pre>
         </section>
         <section>
           <h1>Templates: template literals</h1>
           <p class="fragment">Expression with some logic in a template</p>
-          <pre><code class="fragment">`I should drink ${8 - 5} more glasses of water today.`
-// I should drink 3 more glasses of water today.
+          <pre><code class="fragment">`I should drink ${8 - 5} 
+          more glasses of water today.`
+// I should drink 3 more 
+// glasses of water today.
 </code></pre>
         </section>
         <section>
             <h1>Templates: populating HTML with variables</h1>
             <ul style="list-style-type: square;">
                 <li class="fragment">Our HTML:
-                    <pre><code class="fragment">
-<div id="intro"></div>
-</code></pre> </li>
-            
+                    <pre><code class="fragment"><div id="intro"></div></code></pre> </li>
                 <li class="fragment"> Our JavaScript
                     <pre><code class="fragment">var user = {firstName: 'Alice', city: 'Wonderland'};
 var myMarkup = `
   <div class="character">
     <p>Hi, I'm ${user.firstName}.</p>
     <p>I live in ${user.city}.</p>
-  </div>
-`;
+  </div>`;
 var intro = document.getElementById('intro');
 intro.innerHTML = myMarkup;</code></pre></li>
             </ul>
