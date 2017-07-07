@@ -629,6 +629,9 @@ cocktailsForMenu[1].name
   .then(function(response){
     return response.json();
   })</code></pre>
+        </section>
+        <section>
+        <h1>API: fetch &amp; format with JSON</h1>
           <pre><code class="fragment">.then(function(response){
     console.log(response);
     // ["Great job, everyone. The reception will be held in 
@@ -729,8 +732,7 @@ var myMultiLineString = `
                     <pre><code class="fragment"><div id="intro"></div></code></pre> </li>
                 <li class="fragment"> Our JavaScript
                     <pre><code class="fragment">var user = {firstName: 'Alice', city: 'Wonderland'};
-var myMarkup = `
-  <div class="character">
+var myMarkup = `<div class="character">
     <p>Hi, I'm ${user.firstName}.</p>
     <p>I live in ${user.city}.</p>
   </div>`;
