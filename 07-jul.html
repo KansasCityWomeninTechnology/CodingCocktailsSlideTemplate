@@ -25,8 +25,18 @@
     <link rel="stylesheet" href="css/reveal.css"/>
     <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
     <style>
-        code{
+        code.fragment{
           font-size: 1.5rem !important;
+          width: 100%;
+          margin-right: 0;
+          padding-right: 0;
+          padding-left: .3rem;
+        }
+        pre.fragment{
+          width: 100%;
+          margin-right: 0;
+          padding-right: 0;
+          padding-left: .3rem;
         }
     </style>
   </head>
@@ -235,7 +245,7 @@
             </ul>
         </section>
       <section>
-            <h1>If/Else</h1>
+            <h1>If/Else Pseudo Code</h1>
             <pre><code class="fragment">if (expressionInParens) {
   // do something if true
 }
@@ -258,7 +268,7 @@ else {
   before submitting your drink order.');
 }</code></pre>
         </section>
-        <section>
+<!--         <section>
             <h1>Falsy Values</h1>
             <p class="fragment">The following are always FALSE</p>
             <ul style="list-style-type: square">
@@ -270,10 +280,10 @@ else {
               <li class="fragment">an empty String: ""</li>
             </ul>
             <p class="fragment">any other value is always TRUE</p>
-        </section>
+        </section> -->
         <section>
           <h1>Loops</h1>
-          <img src="images/07-jul/dogLoop.jpg" alt="Dog Loop" height="50%" width="65%" style="float:center;"/>
+          <img src="images/07-jul/dogLoop.jpg" alt="Dog Loop" height="40%" width="55%" style="float:center;"/>
         </section>
         <section>
             <h1>Loops</h1>
@@ -292,16 +302,15 @@ else {
         </section>
         <section>
             <h1>for Loop</h1>
-            <pre>
-            <code class="fragment">for (initialization; condition; increment) {
+            <p class="fragment">Pseudo Code</p>
+            <pre><code class="fragment">for (initialization; condition; increment) {
 // code to execute while condition is true
-}
-            </code></pre>
-            <ul style="list-style-type:square">
-            <li class="fragment"><font style="color:#c7bc75">increment</font> increases the value set in <font style="color:#c7bc75">initialization</font> </li>
-            <li class="fragment">so that eventually the <font style="color:#c7bc75">condition</font> is false &amp; the for loop stop executing </li>
-            <li class="fragment">with a few exceptional cases, you DO want your loop to STOP eventually</li>
-            </ul>
+}</code></pre>
+            <p class="fragment">Example</p>
+            <pre><code class="fragment">var numberOfCustomers = 5;
+for (var i = 0; i < numberOfCustomers; i++) {
+  notifyDrinkIsReady(i);
+}</code></pre>
         </section>
         <section>
             <h1>for Loop</h1>
@@ -316,46 +325,39 @@ for (var i = 0; i < numberOfCustomers;) {
 }</code></pre>
         </section>
         <section>
-          <h1>Data Sets</h1>
-          <img src="images/07-jul/DefiningDatasets.png" alt="dataset comic" height="75%" width="75%" style="float:bottom;"/>
+          <h1>Data Structures</h1>
+          <img src="images/07-jul/DataStructures.jpg" alt="dataset comic" height="75%" width="75%" style="float:bottom;"/>
         </section>
         <section>
-          <h1>Data Sets</h1>
+          <h1>Data Structures</h1>
           <ul style="list-style-type:square">
-            <li class="fragment">Data set is made up of: <font style="color:#c7bc75">Strings</font>,<font style="color:#c7bc75">booleans</font> &amp; <font style="color:#c7bc75">numbers</font> </li>
-            <li class="fragment">Sometimes you need data that is grouped/organized</li>
-            <li class="fragment">That's when you need a <font style="color:#c7bc75">data structure</font> like Arrays &amp; Objects</li>
+            <li class="fragment">When you have a collection of data, you need to organize it</li>
+            <li class="fragment">That's when you need Data Structures like Arrays &amp; Objects</li>
+            <li class="fragment">Data Structures are made up of various variable types, functions, and even other Data Structures</li>
           </ul>
-<img src="images/07-jul/ObjectandClass.png" alt="array image" height="15%" width="45%" style="float:bottom;"/>
-          <img src="images/07-jul/array.gif" alt="array image" height="15%" width="45%" style="float:bottom;"/>
-        </section>
-        <section>
-          <h1>Data Set Libraries</h1>
-          <ul style="list-style-type:square">
-            <li class="fragment">Utility Libraries simplify dealing with Arrays and Objects</li>
-            <li class="fragment"><a href="https://lodash.com">LoDash</a></li>
-            <li class="fragment"><a href="http://underscorejs.org/">UNDERSCORE.js</a></li>
-          </ul>
+<!--           <img src="images/07-jul/ObjectandClass.png" alt="array image" height="15%" width="45%" style="float:bottom;"/> -->
         </section>
         <!-- Arrays -->
         <section>
+          <h1>Arrays</h1>
+          <img src="images/07-jul/array.gif" alt="array image" height="85%" width="95%" style="float:bottom;"/>
+        </section>
+        <section>
           <h1>Arrays: how to make one</h1>
           <p class="fragment">When you want a collection of data items or even functions</p>
-          <pre><code class="fragment">var cocktails = ['Code on the Beach', 'jQuery Sour'];
+          <pre><code class="fragment">var cocktails = ['Code on the Beach', 
+  'jQuery Sour'];
 var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 
   7, 'none of the above'];
-var anArrayOfBooleans = [true, true, true, false];</code></pre>
-          <p class="fragment">Create a new array with 'new Array()' or just initialize it to '[]' which is an empty array.</p>
-          <pre><code class="fragment">
-          var myNewArray = new Array();
-          var myEmptyArray = [];
-          </code></pre>
+var anArrayOfFunctions = [orderDrink, closeTab];</code></pre>
+          <pre><code class="fragment">var myNewArray = new Array();
+var myEmptyArray = [];</code></pre>
         </section>
         <section>
           <h1>Arrays: stuff you can do</h1>
           <ul style="list-style-type: square">
-          <li class="fragment">You can grab items from the array via their index</li>
-          <li class="fragment">Arrays have a <font style="color:#c7bc75">zero-based index</font></li>
+          <li class="fragment">You can grab items from the array using their index</li>
+          <li class="fragment">Arrays have a Zero-Based Index</li>
           <li class="fragment">To get the first item you use 0, to get the last item you subtract 1 from the number of items in the array</li>
           </ul>
           <pre><code class="fragment">var first = cocktails[0] 
@@ -366,7 +368,8 @@ var last = cocktails[cocktails.length - 1];
         <section>
           <h1>Arrays: stuff you can do</h1>
           <p class="fragment">You can loop over an array:</p>
-          <pre><code class="fragment">var cocktails = ['Code on the Beach', 'jQuery Sour'];
+          <pre><code class="fragment">var cocktails = ['Code on the Beach', 
+  'jQuery Sour'];
 // array 'for loop'
   cocktails.forEach(function(cocktail,index)){
   console.log(cocktail,index);
@@ -390,22 +393,28 @@ var last = cocktails[cocktails.length - 1];
           <h1>Arrays: stuff you can do</h1>
           <p class="fragment">Add to the beginning of an array</p>
           <pre><code class="fragment">cocktails.unshift('JavaScriptini');
-// ['Javascriptini', 'Code on the Beach', 'jQuery Sour']</code></pre>
+/* ['Javascriptini', 'Code on the Beach', 
+'jQuery Sour']*/</code></pre>
           <p class="fragment">Remove from the beginning of an array</p>
           <pre><code class="fragment">cocktails.shift();
 // ['Code on the Beach', 'jQuery Sour']</code></pre>
+          <p class="fragment">First-In-First-Out aka FIFO</p>
+        </section>
+        <section>
+          <h1>Data Structure Libraries</h1>
+          <ul style="list-style-type:square">
+            <li class="fragment">Utility Libraries simplify dealing with Arrays and Objects</li>
+            <li class="fragment"><a href="https://lodash.com">LoDash</a></li>
+            <li class="fragment"><a href="http://underscorejs.org/">UNDERSCORE.js</a></li>
+          </ul>
         </section>
 
         <!-- Objects -->
         <section>
           <h1>Objects</h1>
-          <ul style="list-style-type: square">
-            <li class="fragment">Sometimes you have complex data</li>
-            <li class="fragment">Objects allow you to structure &amp; organize this data</li>
-          </ul>
-          <img class="fragment" src="images/07-jul/objects.png" alt="example object" style="float:bottom;"/>
+          <img class="fragment" src="images/07-jul/Objects.jpg" alt="Organization before and after" style="float:bottom;"/>
         </section>
-        <section>
+<!--         <section>
           <h1>Objects: how to make one</h1>
           <ul style="list-style-type: square">
             <li class="fragment">Create an object with 'new Object()' or initialize an empty one with '{}'</li>
@@ -416,54 +425,58 @@ var last = cocktails[cocktails.length - 1];
               <li class="fragment">Don’t know what API’s are? resource here: http://readwrite.com/2013/09/19/api-defined/)</li>
             </ul>
           </ul> 
-        </section>
+        </section> -->
         <section>
           <h1>Objects: how to make one</h1>
-          <pre><code class="fragment">var myObject = {
-  "keyWrappedInQuotes": *,
-  "valueCanBeAString": "string",
-  "valueCanBeANumber’: 3,
-  "valueCanBeABoolean": true,
-  "valueCanBeAnArray": ["Red:, "White", "Sangria"],
-  "valueCanBeAnObject": {
-    "keyInsideChildObject": "is this inception?"
-  }
-  "valueCanBeAFunction": function() {
-    shutTheFrontDoor();
-  }
-}</code></pre>
+          <pre><code class="fragment">var AdaLovelace = {
+  achillesHeel: "Compulsive Gambling",
+  firstName: "Ada",
+  lastName: "Lovelace",
+  children: ["Byron","Ralph","Anne"],
+  dateBorn: "12/10/1815",
+  dateDied: "11/27/1852",
+  father: "Lord Byron",
+  "Likes Programming": true,
+  fullName: function() {
+    return this.firstName+" "+this.lastName;
+  },
+  mentor: "Charles Babbage"
+};</code></pre>
         </section>
         <section>
           <h1>Objects: how to get data</h1>
           <ul style="list-style-type: square">
             <li class="fragment">You can get data from the Object by the key</li>
             <li class="fragment">Dot Notation</li>
-            <pre><code class="fragment">
-            myObject.valueCanBeAnArray
-            // ['Red', 'White', 'Sangria']
-
-            myObject.valueCanBeAnObject.keyInsideChildObject
-            // 'is this inception?'
-            </code></pre>
-             <li class="fragment">Property name has be alphanumeric, can contain underscores &amp; can't start with a number. No spaces.</li>
+            <pre><code class="fragment">console.log(AdaLovelace.children)
+// ['Byron', 'Ralph', 'Anne']</code></pre>
+<pre><code class="fragment">console.log(AdaLovelace.fullName)
+/* function () { return this.firstName + " " 
++ this.lastName; } */</code></pre>
+<pre><code class="fragment">console.log(AdaLovelace.fullName())
+// Ada Lovelace</code></pre>
             </ul>
         </section>
         <section>
           <h1>Objects: how to get data</h1>
+          <ul style="list-style-type: square;">
+          <li class="fragment">Property name has to be alphanumeric (but can contain underscores)
+          <li class="fragment">Can't start with a number. 
+          <li class="fragment">No spaces.</li>
+           <pre><code class="fragment">console.log(AdaLovelace.Likes Programming)
+// syntax error :(</code></pre>
+          </ul>
+        </section>
+        <section>
+          <h1>Objects: how to get data</h1>
           <ul style="list-style-type: square">
-            <li class="fragment">You can get data from the Object by the key</li>
-            <li class="fragment">Bracket Notation</li>
-            <pre><code class="fragment">
-myObject['valueCanBeAnArray']
-// ['Red', 'White', 'Sangria']
-myObject['valueCanBeAnObject']['keyInsideChildObject']
-            </code></pre>
-             <li class="fragment">Can be used for property names that don't work with dot notation.</li>
-             <pre><code class="fragment">
-var objectWithSpaces = {"Uptown Funk": "You Up"};
-objectWithSpaces['Uptown Funk'];
-// "You Up"
-             </code></pre>
+            <li class="fragment">Bracket Notation!</li>
+            <li class="fragment">Can be used for property names that don't work with dot notation.</li>
+            <li class="fragment">You can get data from the Object using the key</li>
+            <pre><code class="fragment">console.log(AdaLovelace['Likes Programming'])
+// true
+console.log(AdaLovelace['children'])
+// ['Byron', 'Ralph', 'Anne']</code></pre>
             </ul>
         </section>
         <section>
@@ -475,34 +488,21 @@ objectWithSpaces['Uptown Funk'];
               <li class="fragment">passing a property name as a parameter to a function</li>
             </ul>
             <li class="fragment">you have to use Bracket Notation</li>
-            <pre><code class="fragment">
-var objectKey = 'Downtown';
-var songLyrics = {"Downtown": 'Banana seat, a canopy on two wheels'};
+            <pre><code class="fragment">var objectKey = 'Downtown';
+var songLyrics = {"Downtown": 
+  'Banana seat, a canopy on two wheels'};
 songLyrics[objectKey];
-// 'Banana seat, a canopy on two wheels'
-             </code></pre>
+// 'Banana seat, a canopy on two wheels'</code></pre>
             </ul>
         </section>
         <section>
           <h1>Objects: how to set a value</h1>
-          <pre><code class="fragment">var myFavoriteThings = {};
-myFavoriteThings.animal = 'giraffe';
-console.log(myFavoriteThings);
-// {"animal": 'giraffe'}</code></pre>
-          <pre><code class="fragment">var cocktailsForMenu = [
-  {
-    "name": "Whiskey Sour",
-    "price": "$13"
-  },
-  {
-    "name": "Hug from Ryan Gosling",
-    "price": "$15"
-  }
-]
-cocktailsForMenu[0]['name']
-// 'Whiskey Sour'
-cocktailsForMenu[1].name
-// 'Hug from Ryan Gosling'</code></pre>
+          <pre><code class="fragment">AdaLovelace.favorite_animal = 'giraffe';
+
+console.log(AdaLovelace.favorite_animal);
+
+/* ... all the stuff we already have in there 
+AND {"favorite_animal": 'giraffe'} */</code></pre>
       </section>
       <section>
       <!-- break slide -->
@@ -568,18 +568,16 @@ cocktailsForMenu[1].name
         </section>
         <section>
           <h1>API</h1>
-          <p> Weather REST API</p>
-          <img src="images/07-jul/RestAPI.png" alt="REST API example" style="float:center;"/>
+            <ul style="list-style-type: square;">
+              <li class="fragment">Most APIs use JSON (JavaScript Object Notation)</li>
+              <li class="fragment">Not just JavaScript APIs!
+              <li class="fragment">'key':'value' pairs -- "key" may also be referred to as 'name' or 'property'</li>
+            </ul>
         </section>
         <section>
           <h1>API</h1>
-          <ul style="list-style-type: square">
-            <li class="fragment">In a web application...</li>
-            <li class="fragment">API takes request from front end app: 'Get weather in Paris in Celcius'</li>
-            <li class="fragment">API has its own server which will give a response: 'Forecast for Paris: 16 low, 23 high'</li>
-            <li class="fragment">API gives this response to the frond end app</li>
-            <li class="fragment">The front end app displays the response with fancy HTML/CSS</li>
-          </ul>
+          <p> Weather REST API</p>
+          <img src="images/07-jul/RestAPI.png" alt="REST API example" style="float:center; background-color: white; width:85%; height: 85%"/>
         </section>
         <section>
           <h1>API: famous examples</h1>
@@ -624,7 +622,8 @@ cocktailsForMenu[1].name
         </section>
         <section>
           <h1>API: fetch &amp; format with JSON</h1>
-          <pre><code class="fragment">var url = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes';</code></pre>
+          <pre><code class="fragment">var url = 
+  'http://ron-swanson-quotes.herokuapp.com/v2/quotes';</code></pre>
           <pre><code class="fragment">fetch(url)
   .then(function(response){
     return response.json();
@@ -634,21 +633,18 @@ cocktailsForMenu[1].name
         <h1>API: fetch &amp; format with JSON</h1>
           <pre><code class="fragment">.then(function(response){
     console.log(response);
-    // ["Great job, everyone. The reception will be held in 
-    // each of our individual houses, alone."]
+    /* ["Great job, everyone. The reception will 
+     be held in each of our 
+     individual houses, alone."]*/
   })</code></pre>
-<pre><code class="fragment">
-  .catch(function(error){
-    console.log('error');
-  });
-</code></pre>
+<pre><code class="fragment">.catch(function(error){
+    console.log('error: '+ error);
+  });</code></pre>
         </section>
-
         <!-- Templates -->
         <section>
           <h1>Templates</h1>
-          <img src="images/07-jul/templates.png" alt="template example" style="float:center;"/>
-          <img src="images/07-jul/JavaScriptTheGoodParts.jpg" alt="Javascript the good parts oreily" style="float:center"/>
+          <img src="images/07-jul/templates.png" alt="template example" style="float:center; width: 100%"/>
         </section>
         <section>
           <h1>Templates</h1>
@@ -657,19 +653,6 @@ cocktailsForMenu[1].name
                 <li class="fragment">We want to make our HTML/CSS markup use dynamic content from the API responses</li>
                 <li class="fragment">A template is a reusable chunk of code used for markup</li>
                 <li class="fragment">It contains placeholders [of variables] for where the dynamic content is populated.</li>
-            </ul>
-        </section>
-        <section>
-          <h1>Templates: different ways of using them</h1>
-            <ul style="list-style-type: square;">
-            <li class="fragment">Library 
-                <ul style="list-style-type: square;">
-                    <li class="fragment">A library is a set of tools that help you write JavaScript faster, but provide more flexibility in terms of architecture</li>
-                    <li class="fragment"><a href="http://handlebarsjs.com/">Handlebars.js</a></li>
-                    <li class="fragment"><a href="https://github.com/janl/mustache.js">Mustache.js</a></li>
-                    <li class="fragment"><a href="http://olado.github.io/doT/index.html">doT.js</a></li>
-                </ul>
-            </li>
             </ul>
         </section>
         <section>
@@ -688,6 +671,19 @@ cocktailsForMenu[1].name
         <section>
           <h1>Templates: different ways of using them</h1>
             <ul style="list-style-type: square;">
+            <li class="fragment">Library 
+                <ul style="list-style-type: square;">
+                    <li class="fragment">A library is a set of tools that help you write JavaScript faster, but provide more flexibility in terms of architecture</li>
+                    <li class="fragment"><a href="http://handlebarsjs.com/">Handlebars.js</a></li>
+                    <li class="fragment"><a href="https://github.com/janl/mustache.js">Mustache.js</a></li>
+                    <li class="fragment"><a href="http://olado.github.io/doT/index.html">doT.js</a></li>
+                </ul>
+            </li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: different ways of using them</h1>
+            <ul style="list-style-type: square;">
             <li class="fragment">Native JavaScript 
                 <ul style="list-style-type: square;">
                     <li class="fragment">With ECMAScript 2015, we now have template literals.</li>
@@ -696,13 +692,6 @@ cocktailsForMenu[1].name
                 </ul>
             </li>
             </ul>
-        </section>
-        <section>
-          <h1>Templates: template literals</h1>
-              <ul style="list-style-type: square;">
-                <li class="fragment">Can be multi-line strings wrapped with backticks OR can use expressions with the syntax `${}`. </li>
-                <li class="fragment">Expressions can be variables, data from arrays/objects or even contain logic.</li>
-              </ul>
         </section>
         <section>
           <h1>Templates: template literals</h1>
