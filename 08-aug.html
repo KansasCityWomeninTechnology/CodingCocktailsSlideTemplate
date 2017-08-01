@@ -200,21 +200,315 @@
           <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
           <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
         </section>
-		<!-- absCenter "fill and replace" slide, good for videos and large images -->
-		<section>
-			<div class="fragment current-visible absCenter">
-				<h2>TODO</h2>
-				<br>
-				<img src="images/08-aug/TODO.png">
-		    </div>
-			<div class="fragment current-visible absCenter">
-				<video controls src="images/08-aug/somevideo.mp4" height="80%" width="80%">
-		    </div>
-		</section>
+        <!-- absCenter "fill and replace" slide, good for videos and large images -->
+        <section>
+          <div class="absCenter">
+            <h1>What is npm?</h1>
+            <img src="images/08-aug/npm.png" alt="npm logo">
+            <p class="fragment">npm package manager</p>
+            </br>
+            <p class="fragment">Manage dependencies, web &amp; mobile applications, and development tools &amp; frameworks</p>
+          </div>
+        </section>
+        <section> 
+            <h1>Why use npm?</h1>
+            <img src="images/08-aug/messy-shelves.jpg" alt="Grocery aisle after tornado" style="height: 8em; margin-top: 1em;">
+        </section>
+        <section>
+          <h1>Why use npm?</h1>
+          <img src="images/08-aug/organized-shelves.jpg" alt="Organized Grocery shelving">
+          <a href="http://www.discountshelving.com/SoftContent/store-type-grocery-store-shelving.aspx" target="_blank" style="font-size: 0.3em; display: block; text-align: right; margin-right: 11em;">Discount Shelving</a>
+        </section>
+        <section>
+          <h1>Getting Started</h1>
+          <h2>Installation</h2>
+          </br>
+          <p>Comes with Node</p>
+          <table class="fragment slightlyPaddedTable" style="margin: 0 auto;">
+            <tr>
+              <th>Operating System</th>
+              <th>Node Installation</th>
+            </tr>
+            <tr>
+              <td>Windows</td>
+              <td><a href="https://nodejs.org/en/download/current/" target="_blank">Download Installer</a></td>
+            </tr>
+            <tr class="fragment">
+              <td>Mac</td>
+              <td>Homebrew</td>
+            </tr>
+          </table>
+          </br>
+          <p class="fragment">Update</p>
+          <pre class="fragment"><code class="javascript" style="margin-left: auto; margin-right: auto;">
+npm install npm -g
+          </code></pre>
+        </section>
+        <section>
+          <h1>npm-cli</h1>
+          <div style="margin-top: 2em;">
+            <img src="images/08-aug/npm-cli.png" alt="npm command line">
+            </br>
+            <p>Tell your CLI (Command Line Interface) to use npm</p>
+          </div>
+        </section> 
+        <section>
+          <h1>package.json</h1>
+          <p>Manifest file for dependencies &amp; metadata</p>
+          </br>
+          <pre class="fragment"><code>npm init</code></pre>
+          </br>
+          <div class="fragment">
+            <p>Required Properties:</p>
+            <ul style="list-style-type: disc">
+              <li>name</li>
+              <li>version</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h1>package.json</h1>
+          <code style="margin-right: auto; margin-left: auto; font-size: 2rem;">{</br>
+            <span class="fragment" style="padding-left: 40px;">"name": "package-name",</span></br>
+            <span class="fragment" style="padding-left: 40px;">"version": "1.0.0",</span></br>
+            <span class="fragment" style="padding-left: 40px;">"description": "An example package.json file.",</span></br>
+            <span class="fragment" style="padding-left: 40px;">"main": "index.js",</span></br>
+            <span class="fragment" style="padding-left: 40px;">"scripts": {</br>
+              <span style="padding-left: 80px;">"test": "echo \"Error: no test specified\" && exit 1"</span></br>
+            <span style="padding-left: 40px;">},</span></span></br>
+            <span class="fragment" style="padding-left: 40px;">"repository": {</br>
+              <span style="padding-left: 80px;">"type": "git",</span></br>
+              <span style="padding-left: 80px;">"url": "git+https://github.com/KansasCityWomeninTechnology/npm.git"</span></br>
+            <span style="padding-left: 40px;">},</span></br>
+          </code>
+        </section>
+        <section>
+          <h1>package.json continued</h1>
+          <code style="margin-right: auto; margin-left: auto; font-size: 2rem;">
+            <span class="fragment" style="padding-left: 40px;">"keywords": [</br>
+              <span style="padding-left: 80px;">"cocktails",</span></br>
+              <span style="padding-left: 80px;">"code",</span></br>
+            <span style="padding-left: 40px;">],</span></br>
+            <span class="fragment" style="padding-left: 40px;">"author": "KCWiT",</span></br>
+            <span class="fragment" style="padding-left: 40px;">"license": "ISC"</span></br>
+            <span class="fragment" style="padding-left: 40px;">"bugs": {</br>
+              <span style="padding-left: 80px;">"url": "https://github.com/KansasCityWomeninTechnology/npm/issues"</span></br>
+            <span style="padding-left: 40px;">},</span></span></br>
+            <span class="fragment" style="padding-left: 40px;">"homepage": "https://github.com/KansasCityWomeninTechnology/npm#readme"</span></br>
+          </code>
+        </section>  
+        <section>
+          <h1>package.json continued</h1>
+          <code style="margin-right: auto; margin-left: auto; font-size: 2rem;">
+            <span class="fragment" style="padding-left: 40px;">"dependencies": {</br>
+              <span style="padding-left: 80px;">"lodash": "^4.17.4"</span></br>
+            <span style="padding-left: 40px;">}</span></br>
+          }</code>
+          <a class="fragment" href="https://codepen.io/CodingCocktailsKC/pen/RgxJyM" target="_blank">Example package.json on CodePen</a>
+        </section> 
+        <section>
+          <h1>node_modules</h2>
+          </br>
+          <p>Directory where packages are installed</p>
+        </section> 
+        <section>
+          <h1>Installing a Package</h1>
+          <p>Manual install in package.json local to project</p>
+          <video width="800" height="500" controls preload autoplay>
+            <source src="images/08-aug/pkg-json-install.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section>
+          <h1>Installing a Package</h1>
+          <p>CLI install local to project</p>
+          <video class="fragment" width="800" height="500" controls preload autoplay>
+            <source src="images/08-aug/cli-install.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section>
+          <h1>Installing a Package</h1>
+          <p>CLI install saved to package.json local to project</p>
+          <video class="fragment" width="800" height="500" controls preload autoplay>
+            <source src="images/08-aug/cli-install-save.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section>
+          <h1>Installing a Package</h1>
+          <p>Global CLI install across all projects</p>
+          <video class="fragment" width="800" height="500" controls preload autoplay>
+            <source src="images/08-aug/cli-install-global.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section>
+          <h1>Dependency Types</h1>
+          <div style="position:relative; left:-200px; width:1350px;">
+            <div style="float:left; width:45%;">
+              <p>devDependencies</p>
+              <img src="images/08-aug/plow-dev.jpg" alt="farm plow">
+              <a href="https://www.flickr.com/photos/stanzebla/22503250446/" target="_blank" style="font-size: 0.3em; display: block; text-align: left; margin-left: 4em;">Source</a>
+            </div>
+            <div style="float:right; width:55%;">
+              <pre class="fragment" style="margin-top: 5em; margin-left: auto; margin-right: auto;"><code class="bash">npm install packageName --save-dev</code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>Dependency Types</h1>
+          <div style="position:relative; left:-200px; width:1350px;">
+            <div style="float:left; width:45%;">
+              <p>dependencies</p>
+              <img src="images/08-aug/corn-production.jpg" alt="cornfield" style="margin-bottom: 5px;">
+              <a href="https://www.flickr.com/photos/16502322@N03/4806634131/" target="_blank" style="font-size: 0.3em; display: block; text-align: left; margin-left: 4em;">Source</a>
+            </div>
+            <div style="float:right; width:55%;">
+              <pre class="fragment" style="margin-top: 5em; margin-left: auto; margin-right: auto;"><code class="bash">npm install packageName --save</code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>Dependency Types</h1>
+          <h2>package.json</h2>
+          <pre class="fragment"><code>{
+  "name": "package-name",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "^4.14.1",
+    "moment": "^2.14.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}</code></pre>
+        </section>
+        <section>
+          <h1>Versioning</h1>
+          <h2><a href="http://semver.org/" target="_blank">Semver</a></h2>
+          <img src="images/08-aug/semver.png" alt="semver major minor patch" style="margin-left: 1em;">
+          <a href="http://javascript.tutorialhorizon.com/2014/09/20/understanding-semver-versioning-for-your-nodejs-packages/" target="_blank" style="font-size: 0.3em; display: block; text-align: center; margin-left: auto; margin-right: auto;">Source</a>
+        </section>
+        <section>
+          <h1>Versioning</h1>
+          </br>
+          <div class="fragment">
+            <p>Allow patch updates</p>
+            <pre><code>~2.2.3</code></pre>
+          </div>
+          </br>
+          <div class="fragment">
+            <p>Allow minor updates</p>
+            <pre class="fragment"><code>^2.2.3</code></pre>
+          </div>
+        </section>
+        <section>
+          <h1>Versioning</h1>
+          </br>
+          <div class="fragment">
+            <p>Specify version at install</p>
+            <pre><code>npm install moment@2.14.1</code></pre>
+          </div>
+          </br>
+          <pre class="fragment"><code>"dependencies" : {
+    "moment" : "2.14.1"
+}</code></pre>
+        </section>
+        <section>
+          <h1>Versioning</h1>
+          <p class="fragment">Shrinkwrap</p>
+          <p class="fragment">npm-shrinkwrap package</p>
+          <pre class="fragment"><code>npm shrinkwrap</code></pre>
+          <p class="fragment">Exact package versions locked down</p>
+        </section>
+        <section>
+          <h1>Updating Packages</h1>
+          <table class="slightlyPaddedTable" style="width: 110%;">
+            <tr class="fragment">
+              <td style="text-align: left; padding: 5px;">Show out of date packages</td>
+              <td style="text-align: left; padding: 5px;"><pre><code>npm outdated</code></pre></td>
+            </tr>
+            <tr class="fragment">
+              <td style="text-align: left; padding: 5px;">Update all outdated packages</td>
+              <td style="text-align: left; padding: 5px;"><pre><code>npm update</code></pre></td>
+            </tr>
+            <tr class="fragment">
+              <td style="text-align: left; padding: 5px;">Update specific package</td>
+              <td style="text-align: left; padding: 5px;"><pre><code>npm update packageName</code></pre></td>
+            </tr>
+            <tr class="fragment">
+              <td style="text-align: left; padding: 5px;">Update global packages</td>
+              <td style="text-align: left; padding: 5px;"><pre><code>npm update -g</code></pre></td>
+            </tr>
+            <tr class="fragment">
+              <td style="text-align: left; padding: 5px;">Save updated versions to package.json</td>
+              <td style="text-align: left; padding: 5px;"><pre><code>npm update packageName --save</code></pre></td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h1>Using Packages</h1>
+          <h2>Node.js files </h2>
+          <pre class="fragment"><code>// main.js
+var $ = require('jquery');
 
+$(document).ready(function(){
+  $('.button').click(function() {
+    alert('hi ho silver, away');
+  });
+});</code></pre>
+        </section>
+        <section>
+          <h1>Using Packages</h1>
+          <h2>Front-end JavaScript files (manual)</h2>
+          <pre class="fragment"><code>// index.html
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="assets/js/main.js"></script></code></pre>
+          <pre class="fragment"><code>//main.js
+$(document).ready(function(){
+  $('.button').click(function() {
+    alert('hi ho silver, away');
+  });
+});</code></pre>
+        </section>
+        <section>
+          <h1>Using Packages</h1>
+          <h2>Front-end JavaScript files (browserify)</h2>
+          <ol>
+            <li class="fragment">Install</li>
+            <li class="fragment">Include</li>
+            <li class="fragment">Require</li>
+            <li class="fragment">Bundle</li>
+          </ol>
+        </section>
+        <section>
+          <h1>Resources</h1>
+          <img src="images/08-aug/resources.jpg" alt="Resources" height="75%" width="75%"/>
+          <a href="https://blog.lib.uiowa.edu/preservation/2011/01/07/10000-page-book-bound-at-conservation-lab/" target="_blank" style="font-size: 0.3em; display: block; text-align: center; margin-left: auto; margin-right: auto;">Source</a>
+        </section>
+        <section>
+          <h1>Take a look!</h1>
+          <p class="fragment">Get started with npm: 
+            </br>
+            <a href="https://docs.npmjs.com/getting-started/what-is-npm" target="_blank">docs.npmjs.com/getting-started/what-is-npm</a>
+          </p>
+          </br>
+          <p class="fragment"><a href="http://blog.npmjs.org/post/101775448305/npm-and-front-end-packaging " target="_blank">merp - this is OLD</a></p>
+          </br>
+          <p class="fragment">What is Webpack?
+            </br> 
+            <a href="https://webpack.js.org/guides/" target="_blank">webpack.js.org/guides</a>
+          </p>
+          </br>
+          <p class="fragment">Need a package to use? 
+            </br>
+            <a href="https://github.com/sindresorhus/awesome-nodejs" target="_blank">github.com/sindresorhus/awesome-nodejs</a>
+          </p>
+        </section>
         <section>
           <h2>Questions?</h2>
-          <img src="images/08-aug/questions.gif" alt="Questions" height="80%" width="80%"/>
+          <img src="images/08-aug/britney.gif" alt="Questions" height="80%" width="80%"/>
         </section>
         <section>
           <h1>Things You'll Need</h1>
@@ -253,10 +547,10 @@
             <li class="fragment">Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
             <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
             <li class="fragment">Finish <a href="http://bit.ly/CnCAugustWork" target="_blank">tonight's worksheet</a></li>
-            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Package Managers+tutorial" target="_blank">online tutorial on Package Managers</a></li>
-            <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-may-tickets-31953355346?aff=presentation" target="_blank">next month's event</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Package Managers+tutorial" target="_blank">online tutorial</a></li>
+            <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-september-tickets-31953355346?aff=presentation" target="_blank">next month's event</a></li>
           </ol>
-          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -70px;" max-height="60%" max-width="60%"/>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -15px; right: -100px;" max-height="60%" max-width="60%"/>
         </section>
         <section>
           <h1>Keep up with us</h1>
