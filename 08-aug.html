@@ -131,13 +131,8 @@
         </section>
         <section>
             <h2>Our mentors</h2>
-            <img src="images/08-aug/TODO.gif" alt="Mentors" height="80%" width="80%" />
+            <img src="images/08-aug/batgirl.gif" alt="Mentors" height="80%" width="80%" />
             <h4>are super heroes!</h4>
-        </section>
-        <section>
-          <a href="https://djangogirls.org/kansascity/" target="_blank">
-            <img src="images/django-girls.png" height="100%" width="100%"/>
-          </a>
         </section>
         <section>
             <h2>Laura Wagner</h2>
@@ -145,33 +140,130 @@
             <h4>Cocktail Crafter Extraordinaire</h4>
         </section>
         <section>
-          <h2>Tonight's Agenda: TODO</h2>
+          <h2>Introduction to Package Managers</h2>
             <br>
             <ol>
-              <li class="fragment">TODO</li>
+              <li class="fragment">Dependencies, Packages &amp; Package Managers</li>
+              <li class="fragment">Frontend vs. Backend Programming</li>
+              <li class="fragment">NPM (package manager)</li>
+              <li class="fragment">Resources</li>
             </ol>
         </section>
 		<!-- Title slide for root level outline topics -->
         <section>
-          <h1>TODO (title slide)</h1>
-          <img src="images/08-aug/TODO.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
+          <h1>Dependencies, Packages &amp; Package Managers</h1>
+          <img src="images/08-aug/beercarry.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
         </section>
 		<!-- Introduction slide -->
         <section>
-            <h1>What is it?</h1>
+            <h1>What is a dependency?</h1>
             <br>
             <p class="fragment">
-              TODO
+              Assets that are required/used by other assets
             </p>
             <br>
+              <ul>
+                <li class="fragment">Frameworks/Libraries<li>
+                <li class="fragment">Your own files<li>
+                <li class="fragment">Single file<li>
+                <li class="fragment">Bundles of files (images &amp; code)<li>
+              </ul>
+            <br>
+            <br>
             <p class="fragment">
-              <font style="color:#c7bc75">L</font>augh
-              <font style="color:#c7bc75">O</font>ut
-              <font style="color:#c7bc75">L</font>oud
+              Dependencies can have their own dependencies
             </p>
           </section>
-		  <section>
-		  <!-- break slide -->
+        <section>
+            <h1>Example</h1>
+            <br>
+            <code class="fragment" style="width: 100%;">
+              <div class="fragment" data-fragment-index="1">&lt;script src="assets/lib/jquery-3.2.1.min.js"&gt;&lt;/script&gt;</div>
+              <div class="fragment" data-fragment-index="2">&lt;script src="assets/lib/jquery.bxslider/jquery.bxslider.min.js"&gt;&lt;/script&gt;</div>
+              <div class="fragment" data-fragment-index="3">&lt;script src="assets/scripts/my-scripts.js"&gt;&lt;/script&gt;</div>
+            </code>
+            <br>
+        </section>
+        <section>
+            <h1>Why use dependencies?</h1>
+            <br>
+            <p class="fragment">
+              Don't reinvent the wheel!
+            </p>
+            <p class="fragment">
+              Modular, reusable code
+            </p>
+            <p class="fragment">
+              Versioned
+            </p>
+            <br>
+          </section>
+        <section>
+            <h1>What is a package?</h1>
+            <br>
+            <p class="fragment">
+              A dependency that can be managed by a package manager
+            </p>
+            <br>
+          </section>
+      <section>
+            <h1>Types of Packages</h1>
+            <br>
+              <ul>
+                <p class="fragment">Project Tools (Frameworks/Libraries)</p>
+                  <ol>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/jquery" target="_blank">jQuery</a></li>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/moment" target="_blank">Moment</a></li>
+                  </ol>
+                </li>
+                <br>
+                <p class="fragment">Development Tools</p>
+                  <ol>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/gulpcli" target="_blank">Gulp</a></li>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/node-sass" target="_blank">Sass</a></li>
+                  </ol>
+                </li>
+                <br>
+                <p class="fragment">Tools for Life</p>
+                  <ol>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/wallpaper-cli" target="_blank">wallpaper-cli</a></li>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/itunes-remote" target="_blank">itunes-remote (mac)</a></li>
+                  </ol>
+                </li>
+              </ul>
+            <br>
+      </section>
+      <section>
+            <h1>What is a package manager?</h1>
+            <br>
+            <p class="fragment">
+              A tool that allows you to manage your project's dependencies
+            </p>
+            <br>
+            <p class="fragment">
+              Install/upgrade/remove packages
+            </p>
+            <p class="fragment">
+              Manages a package's dependencies
+            </p>
+            <p class="fragment">
+              Versioned
+            </p>
+            <br>
+          </section>
+       <section>
+            <h1>What happens if you don't use a package manager?</h1>
+            <br>
+            <ol>
+              <li class="fragment">Download files</li>
+              <li class="fragment">Add files to project architecture</li>
+              <li class="fragment">Add references in code to the files</li>
+            </ol>
+            <br>
+            <p class="fragment"> Update requires re-downloading, re-adding, and updating references!</p>
+            <br>
+          </section>
+      <section>
           <h1>Things You'll Need</h1>
           <p>
             <br>
