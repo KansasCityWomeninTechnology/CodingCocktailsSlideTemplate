@@ -131,13 +131,8 @@
         </section>
         <section>
             <h2>Our mentors</h2>
-            <img src="images/08-aug/TODO.gif" alt="Mentors" height="80%" width="80%" />
+            <img src="images/08-aug/batgirl.gif" alt="Mentors" height="80%" width="80%" />
             <h4>are super heroes!</h4>
-        </section>
-        <section>
-          <a href="https://djangogirls.org/kansascity/" target="_blank">
-            <img src="images/django-girls.png" height="100%" width="100%"/>
-          </a>
         </section>
         <section>
             <h2>Laura Wagner</h2>
@@ -145,33 +140,186 @@
             <h4>Cocktail Crafter Extraordinaire</h4>
         </section>
         <section>
-          <h2>Tonight's Agenda: TODO</h2>
+          <h2>Introduction to Package Managers</h2>
+            <br>
             <br>
             <ol>
-              <li class="fragment">TODO</li>
+              <li class="fragment">Dependencies, Packages &amp; Package Managers</li><br>
+              <li class="fragment">Frontend vs. Backend Programming</li><br>
+              <li class="fragment">NPM (package manager)</li><br>
+              <li class="fragment">Resources</li><br>
             </ol>
         </section>
 		<!-- Title slide for root level outline topics -->
         <section>
-          <h1>TODO (title slide)</h1>
-          <img src="images/08-aug/TODO.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
+          <h1>Dependencies, Packages &amp; Package Managers</h1>
+          <img src="images/08-aug/beer.gif" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
         </section>
 		<!-- Introduction slide -->
         <section>
-            <h1>What is it?</h1>
+            <h1>What is a dependency?</h1>
             <br>
             <p class="fragment">
-              TODO
+              Assets that are required/used by other assets
             </p>
             <br>
+              <ul>
+                <li class="fragment">Frameworks/Libraries<li>
+                <li class="fragment">Your own files<li>
+                <li class="fragment">Single file<li>
+                <li class="fragment">Bundles of files (images &amp; code)<li>
+              </ul>
+            <br>
+            <br>
             <p class="fragment">
-              <font style="color:#c7bc75">L</font>augh
-              <font style="color:#c7bc75">O</font>ut
-              <font style="color:#c7bc75">L</font>oud
+              Dependencies can have their own dependencies
             </p>
           </section>
-		  <section>
-		  <!-- break slide -->
+        <section>
+            <h1>What is a dependency?</h1>
+            <div style="position: fixed; left:-250px; width: 1500px;">
+              <img class="fragment" src="images/08-aug/beeringredients.jpg" height="40%" width="40%" />
+            </div>
+            <br><br><br><br><br><br><br><br>
+            <code class="fragment" style="width: 120%; position: fixed; left: -100px;">
+              <div data-fragment-index="1">&lt;script src="assets/lib/jquery-3.2.1.min.js"&gt;&lt;/script&gt;</div>
+              <div data-fragment-index="2">&lt;script src="assets/lib/jquery.bxslider/jquery.bxslider.min.js"&gt;&lt;/script&gt;</div>
+              <div data-fragment-index="3">&lt;script src="assets/scripts/my-scripts.js"&gt;&lt;/script&gt;</div>
+            </code>
+            <br>
+        </section>
+        <section>
+            <h1>Why use dependencies?</h1>
+            <br>
+            <br>
+            <p class="fragment">
+              Don't reinvent the wheel!
+            </p>
+            <br>
+            <p class="fragment">
+              Modular, reusable code
+            </p>
+            <br>
+            <p class="fragment">
+              Versioned
+            </p>
+            <br>
+          </section>
+        <section>
+            <h1>What is a package?</h1>
+            <br>
+            <p class="fragment">
+              A dependency that can be managed by a package manager
+            </p>
+            <br>
+            <div style="position: fixed; left:-250px; width: 1500px;">
+              <img class="fragment" src="images/08-aug/beerbottles.jpg" height="40%" width="40%" />
+            </div>
+          </section>
+      <section>
+            <h1>Types of Packages</h1>
+            <br>
+              <ul>
+                <p class="fragment">Project Tools (Frameworks/Libraries)</p>
+                  <ol>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/jquery" target="_blank">jQuery</a></li>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/moment" target="_blank">Moment</a></li>
+                  </ol>
+                </li>
+                <br>
+                <p class="fragment">Development Tools</p>
+                  <ol>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/gulpcli" target="_blank">Gulp</a></li>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/node-sass" target="_blank">Sass</a></li>
+                  </ol>
+                </li>
+                <br>
+                <p class="fragment">Tools for Life</p>
+                  <ol>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/wallpaper-cli" target="_blank">wallpaper-cli</a></li>
+                    <li class="fragment"><a href="https://www.npmjs.com/package/itunes-remote" target="_blank">itunes-remote (mac)</a></li>
+                  </ol>
+                </li>
+              </ul>
+            <br>
+      </section>
+      <section>
+            <h1>What is a package manager?</h1>
+            <p class="fragment">
+              A tool that allows you to manage your project's dependencies
+            </p>
+            <br>
+            <p class="fragment">
+              Install/upgrade/remove packages
+            </p>
+            <p class="fragment">
+              Manages a package's dependencies
+            </p>
+            <p class="fragment">
+              Versioned
+            </p>
+            <br>
+          </section>
+      <section>
+            <h1>What is a package manager?</h1>
+            <br>
+            <br>
+            <div style="position: fixed; left:-250px; width: 1500px;">
+              <img class="fragment" src="images/08-aug/beercarry.jpg" height="40%" width="40%" />
+            </div>
+          </section>
+       <section>
+            <h1>What happens if you don't use a package manager?</h1>
+            <br>
+            <ol>
+              <li class="fragment">Download files</li>
+              <li class="fragment">Add files to project architecture</li>
+              <li class="fragment">Add references in code to the files</li>
+            </ol>
+            <br>
+            <p class="fragment"> Update requires re-downloading, re-adding, and updating references!</p>
+            <br>
+          </section>
+      <section>
+            <h1>Which package manager to use?</h1>
+            <br>
+            <p class="fragment">
+              Based on needs and preferences
+            </p>
+            <br>
+            <br>
+            <p class="fragment">
+              Frontend package managers:
+            </p>
+            <br>
+            <ol style="padding-left: 200px;">
+              <li class="fragment"><a href="https://www.npmjs.com/">NPM</a></li>
+              <li class="fragment"><a href="https://bower.io/">Bower</a></li>
+              <li class="fragment"><a href="https://yarnpkg.com/en/">Yarn</a></li>
+            </ol>
+          </section>
+      <section>
+            <h1>Frontend vs Backend Programming</h1>
+            <br>
+            <br>
+            <p class="fragment">
+              The frontend is the part you see and interact with
+            </p>
+            <br>
+            <p class="fragment">
+              The backend is the behind the scenes work
+            </p>
+          </section>
+      <section>
+            <h1>Node.js</h1>
+            <br><br>
+            <ul style="list-style-type: disc">
+              <li class="fragment">Backend JavaScript that is fast</li><br>
+              <li class="fragment">Cross-platform (Windows, Mac, &amp; Linux</li><br>
+              <li class="fragment">More Node in September's session</li><br>
+            </ul>
+          </section>
+      <section>
           <h1>Things You'll Need</h1>
           <p>
             <br>
@@ -210,7 +358,7 @@
             <p class="fragment">Manage dependencies, web &amp; mobile applications, and development tools &amp; frameworks</p>
           </div>
         </section>
-        <section> 
+        <section>
             <h1>Why use npm?</h1>
             <img src="images/08-aug/messy-shelves.jpg" alt="Grocery aisle after tornado" style="height: 8em; margin-top: 1em;">
         </section>
@@ -251,7 +399,7 @@ npm install npm -g
             </br>
             <p>Tell your CLI (Command Line Interface) to use npm</p>
           </div>
-        </section> 
+        </section>
         <section>
           <h1>package.json</h1>
           <p>Manifest file for dependencies &amp; metadata</p>
@@ -296,7 +444,7 @@ npm install npm -g
             <span style="padding-left: 40px;">},</span></span></br>
             <span class="fragment" style="padding-left: 40px;">"homepage": "https://github.com/KansasCityWomeninTechnology/npm#readme"</span></br>
           </code>
-        </section>  
+        </section>
         <section>
           <h1>package.json continued</h1>
           <code style="margin-right: auto; margin-left: auto; font-size: 2rem;">
@@ -305,12 +453,12 @@ npm install npm -g
             <span style="padding-left: 40px;">}</span></br>
           }</code>
           <a class="fragment" href="https://codepen.io/CodingCocktailsKC/pen/RgxJyM" target="_blank">Example package.json on CodePen</a>
-        </section> 
+        </section>
         <section>
           <h1>node_modules</h2>
           </br>
           <p>Directory where packages are installed</p>
-        </section> 
+        </section>
         <section>
           <h1>Installing a Package</h1>
           <p>Manual install in package.json local to project</p>
@@ -489,7 +637,7 @@ $(document).ready(function(){
         </section>
         <section>
           <h1>Take a look!</h1>
-          <p class="fragment">Get started with npm: 
+          <p class="fragment">Get started with npm:
             </br>
             <a href="https://docs.npmjs.com/getting-started/what-is-npm" target="_blank">docs.npmjs.com/getting-started/what-is-npm</a>
           </p>
@@ -497,11 +645,11 @@ $(document).ready(function(){
           <p class="fragment"><a href="http://blog.npmjs.org/post/101775448305/npm-and-front-end-packaging " target="_blank">merp - this is OLD</a></p>
           </br>
           <p class="fragment">What is Webpack?
-            </br> 
+            </br>
             <a href="https://webpack.js.org/guides/" target="_blank">webpack.js.org/guides</a>
           </p>
           </br>
-          <p class="fragment">Need a package to use? 
+          <p class="fragment">Need a package to use?
             </br>
             <a href="https://github.com/sindresorhus/awesome-nodejs" target="_blank">github.com/sindresorhus/awesome-nodejs</a>
           </p>
