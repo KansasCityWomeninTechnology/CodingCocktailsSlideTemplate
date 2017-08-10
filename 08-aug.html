@@ -362,7 +362,7 @@
             <p class="fragment">Manage dependencies &amp; versions</p>
           </div>
         </section>
-        <section> 
+        <section>
           <div class="absCenter">
             <h1>Why use npm?</h1>
             <img src="images/08-aug/packages.jpg" alt="Grocery aisles" style="height: 8em; margin-top: 1em;">
@@ -423,7 +423,6 @@ npm install npm -g
         </section>
         <section>
           <h1>npm Command Line Interface</h1>
-          <img src="images/08-aug/npm-cli.png" alt="npm command line" style="height:75%;">
           <p>Tell your CLI to use npm</p>
           <table class="slightlyPaddedTable" style="width: 115%; margin: 0 auto 0 -55px;">
             <tr class="fragment">
@@ -439,6 +438,10 @@ npm install npm -g
               <td style="text-align: left;"><pre><code style="margin: 5px; padding-right:30px; font-size: 2.2rem;">npm search packageName</code></pre></td>
             </tr>
             <tr class="fragment">
+              <td style="text-align: left;">Install a package</td>
+              <td style="text-align: left;"><pre><code style="margin: 5px; padding-right:30px; font-size: 2.2rem;">npm install packageName</code></pre></td>
+            </tr>
+            <tr class="fragment">
               <td style="text-align: left;">Uninstall a package</td>
               <td style="text-align: left;"><pre><code style="margin: 5px; padding-right:30px; font-size: 2.2rem;">npm uninstall packageName</code></pre></td>
             </tr>
@@ -446,14 +449,22 @@ npm install npm -g
         </section>
         <section>
           <h1>Versioning</h1>
+          <div class="absCenter fragment current-visible">
+            <img src="images/08-aug/champ-beer.png" alt="miller high life bottle">
+          </div>
+          <div class="fragment current-visible absCenter">
+            <img src="images/08-aug/beer-upgrade.png" alt="boulevard tank 7 beer">
+          </div>
+        </section>
+        <section>
+          <h1>Versioning</h1>
           <h2><a href="http://semver.org/" target="_blank">Semver</a></h2>
           <img src="images/08-aug/semver.png" alt="semver major minor patch" style="margin-left: 1em;">
           <a href="http://javascript.tutorialhorizon.com/2014/09/20/understanding-semver-versioning-for-your-nodejs-packages/" target="_blank" style="font-size: 0.3em; display: block; text-align: center; margin-left: auto; margin-right: auto;">Source</a>
-        </section> 
+        </section>
         <section>
           <h1>package.json</h1>
           <p>Manifest file for dependencies &amp; metadata</p>
-          </br>
           <pre class="fragment"><code style="font-size: 2.2rem; margin: 20px auto;">npm init</code></pre>
           </br>
           <div class="fragment">
@@ -464,6 +475,7 @@ npm install npm -g
             </ul>
           </div>
           </br>
+          <a style="display: block; margin-bottom: 0.5em;" class="fragment" href="https://docs.npmjs.com/files/package.json" target="_blank">npm package.json documentation</a>
           <a class="fragment" href="https://codepen.io/CodingCocktailsKC/pen/RgxJyM" target="_blank">Example package.json on CodePen</a>
         </section>
         <section>
@@ -475,7 +487,7 @@ npm install npm -g
             <span class="fragment" style="padding-left: 40px;">"main": "index.js",</span></br>
             <span class="fragment" style="padding-left: 40px;">"scripts": {</br>
               <span style="padding-left: 80px;">"start": "grunt serve"</span></br>
-              <span style="padding-left: 80px;">"test": "mocha"</span></br>
+              <span style="padding-left: 80px;">"cocktail": "echo I need a cocktail!"</span></br>
             <span style="padding-left: 40px;">},</span></span></br>
             <span class="fragment" style="padding-left: 40px;">"repository": {</br>
               <span style="padding-left: 80px;">"type": "git",</span></br>
@@ -507,7 +519,7 @@ npm install npm -g
           <p>Directory where packages are installed</p>
           </br>
           <img src="images/08-aug/cookie-jar.jpg" alt="Cookie jar">
-        </section> 
+        </section>
         <section>
           <h1>Installing a Package</h1>
           <p>Manual install in package.json local to project</p>
@@ -531,47 +543,6 @@ npm install npm -g
             <source src="images/08-aug/cli-install-global.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-        </section>
-        <section>
-          <h1>Dependency Types</h1>
-          <p>devDependencies</p>
-          <div style="position:relative; left:-145px; width:1150px;">
-            <div style="float:left; width:45%;">
-              <img src="images/08-aug/plow-dev.jpg" alt="farm plow">
-              <a href="https://www.flickr.com/photos/stanzebla/22503250446/" target="_blank" style="font-size: 0.3em; display: block; text-align: left; margin-left: 1rem;">Source</a>
-            </div>
-            <div style="float:right; width:55%;">
-              <pre class="fragment" style="margin-top: 12rem; margin-left: auto; margin-right: auto;"><code style="font-size: 2.2rem; padding-right: 125px;">npm install packageName --save-dev</code></pre>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h1>Dependency Types</h1>
-          <p>dependencies</p>
-          <div style="position:relative; left:-145px; width:1150px;">
-            <div style="float:left; width:45%;">
-              <img src="images/08-aug/corn-production.jpg" alt="cornfield">
-              <a href="https://www.flickr.com/photos/16502322@N03/4806634131/" target="_blank" style="font-size: 0.3em; display: block; text-align: left; margin-left: 1rem;">Source</a>
-            </div>
-            <div style="float:right; width:55%;">
-              <pre class="fragment" style="margin-top: 12rem; margin-left: auto; margin-right: auto;"><code style="font-size: 2.2rem;">npm install packageName</code></pre>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h1>Dependency Types</h1>
-          <h2>package.json</h2>
-          <pre class="fragment"><code style="font-size: 2.2rem;">{
-  "name": "package-name",
-  "version": "1.0.0",
-  "dependencies": {
-    "lodash": "^4.14.1",
-    "moment": "^2.14.1"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1"
-  }
-}</code></pre>
         </section>
         <section>
           <h1>Versioning</h1>
@@ -611,7 +582,7 @@ npm install npm -g
           <h1>Updating Packages</h1>
           <table class="slightlyPaddedTable" style="width: 125%; margin-left: -120px;">
             <tr class="fragment">
-              <td style="text-align: left;  vertical-align: middle;">Show out of date packages</td>
+              <td style="text-align: left;  vertical-align: middle;">Show out-of-date packages</td>
               <td style="text-align: left;"><pre><code style="font-size: 2rem; margin: 10px 0; padding-right: 30px;">npm outdated</code></pre></td>
             </tr>
             <tr class="fragment">
@@ -629,16 +600,45 @@ npm install npm -g
           </table>
         </section>
         <section>
-          <h1>Using Packages</h1>
-          <h2>Node.js files </h2>
-          <pre class="fragment"><code style="font-size: 2.2rem;">// main.js
-var $ = require('jquery');
-
-$(document).ready(function(){
-  $('.button').click(function() {
-    alert('Cheers!');
-  });
-});</code></pre>
+          <h1>Dependency Types</h1>
+          <p>devDependencies</p>
+          <div style="position:relative; left:-150px; width:1150px;">
+            <div style="float:left; width:45%;">
+              <img src="images/08-aug/beer-tools.jpg" alt="beer making equipment">
+              <a href="https://www.morebeer.com/products/deluxe-homebrewing-starter-kit.html" target="_blank" style="font-size: 0.3em; display: block; text-align: left; margin-left: 3rem;">Source</a>
+            </div>
+            <div style="float:right; width:55%;">
+              <pre class="fragment" style="margin-top: 12rem; margin-left: auto; margin-right: auto;"><code style="font-size: 2.2rem; padding-right: 125px;">npm install packageName --save-dev</code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>Dependency Types</h1>
+          <p>dependencies</p>
+          <div style="position:relative; left:-90px; width:1150px;">
+            <div style="float:left; width:45%;">
+              <img src="images/08-aug/beer.jpg" alt="beer in glass">
+              <a href="https://www.flickr.com/photos/95875907@N04/15267771970/" target="_blank" style="font-size: 0.3em; display: block; text-align: left; margin-left: 3rem;">Source</a>
+            </div>
+            <div style="float:right; width:55%;">
+              <pre class="fragment" style="margin-top: 12rem; margin-left: auto; margin-right: auto;"><code style="font-size: 2.2rem;">npm install packageName</code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>Dependency Types</h1>
+          <h2>package.json</h2>
+          <pre class="fragment"><code style="font-size: 2.2rem;">{
+  "name": "package-name",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "^4.14.1",
+    "moment": "^2.14.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}</code></pre>
         </section>
         <section>
           <h1>Using Packages</h1>
@@ -646,12 +646,12 @@ $(document).ready(function(){
           <pre class="fragment" style="width: 132%; margin-left: -100px;"><code style="font-size: 2rem;">// index.html
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="assets/js/main.js"></script></code></pre>
-          <pre class="fragment" style="margin-left: 70px;"><code style="font-size: 2rem;">//main.js
-$(document).ready(function(){
-  $('.button').click(function() {
-    alert('Cheers!');
-  });
-});</code></pre>
+          <code class="fragment" style="font-size: 2rem;">//main.js</br>
+<span class="fragment">$(document).ready(function(){</span></br>
+  <span class="fragment" style="padding-left: 40px;">$('.button').click(function() {</span></br>
+    <span class="fragment" style="padding-left: 80px;">alert('Cheers!');</span></br>
+  <span class="fragment" style="padding-left: 40px;">});</br>
+});</span></code>
         </section>
         <section>
           <h1>Using Packages</h1>
@@ -663,31 +663,31 @@ $(document).ready(function(){
           </br>
           <ol style="padding-left: 45%;">
             <li class="fragment">Install</li>
-            <li class="fragment">Include</li>
-            <li class="fragment">Require</li>
-            <li class="fragment">Bundle</li>
+            <li class="fragment">Include Bundle</li>
+            <li class="fragment">Require Packages</li>
+            <li class="fragment">Bundle Packages</li>
           </ol>
         </section>
         <section>
           <h1>Browserify: Install</h1>
           </br>
           <div class="fragment">
-            <p>Personal global install</p>
+            <p>Personal: global install</p>
             <pre><code style="font-size: 2.2rem; margin-left: 35px;">npm install browserify -g</code></pre>
           </div>
           </br>
           <div class="fragment">
-            <p>Team project only install</p>
+            <p>Team: project only install</p>
             <pre><code style="font-size: 2.2rem; margin-left: 35px;">npm install browserify --save-dev</code></pre>
           </div>
         </section>
         <section>
-          <h1>Browserify: Include</h1>
+          <h1>Browserify: Include Bundle</h1>
           <pre class="fragment" style="margin-top: 20%; margin-left: 5%;"><code style="font-size: 2.2rem; padding-right: 8%;">//index.html
-<script src="assets/js/bundle.js"></script></code></pre>
+<script src="bundle.js"></script></code></pre>
         </section>
         <section>
-          <h1>Browserify: Require</h1>
+          <h1>Browserify: Require Packages</h1>
           <pre class="fragment" style="margin-top: 10%; margin-left: 5%;"><code style="font-size: 2.2rem; padding-right: 8%;">//main.js
 var $ = require('jquery');
 
@@ -703,6 +703,12 @@ $(document).ready(function(){
           <pre class="fragment" style="margin-top: 15%; margin-left: 5%;"><code style="font-size: 2.2rem; padding-right: 8%;">browserify main.js -o bundle.js</script></code></pre>
           </br>
           <p class="fragment">Use <a href="https://www.npmjs.com/package/watchify" target="_blank">Watchify</a> while developing</p>
+        </section>
+        <section>
+          <h1>Using Packages</h1>
+          <h2>Node.js (back-end) files</h2>
+          </br>
+          <p>Require packages in back-end files</p>
         </section>
         <section>
           <h1>Resources</h1>
