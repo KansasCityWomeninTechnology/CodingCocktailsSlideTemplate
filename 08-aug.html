@@ -435,7 +435,7 @@ npm install npm -g
             </tr>
             <tr class="fragment">
               <td style="text-align: left;">Search for a package</td>
-              <td style="text-align: left;"><pre><code style="margin: 5px; padding-right:30px; font-size: 2.2rem;">npm search packageName</code></pre></td>
+              <td style="text-align: left;"><pre><code style="margin: 5px; padding-right:30px; font-size: 2.2rem;">npm search searchTerm</code></pre></td>
             </tr>
             <tr class="fragment">
               <td style="text-align: left;">Install a package</td>
@@ -523,25 +523,18 @@ npm install npm -g
         <section>
           <h1>Installing a Package</h1>
           <p>Manual install in package.json local to project</p>
-          <video width="800" height="500" controls preload autoplay>
-            <source src="images/08-aug/manual-install.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <img class="fragment" src="images/08-aug/manual-install.gif" alt="manual package.json edit" style="width: 90%;">
         </section>
         <section>
           <h1>Installing a Package</h1>
           <p>CLI install saved to package.json local to project</p>
-          <video class="fragment" width="800" height="500" controls preload autoplay>
-            <source src="images/08-aug/cli-install-save.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <img class="fragment" src="images/08-aug/cli-install-save.gif" alt="manual package.json edit" style="width: 90%;">
         </section>
         <section>
           <h1>Installing a Package</h1>
           <p>Global CLI install across all projects</p>
           <video class="fragment" width="800" height="500" controls preload autoplay>
             <source src="images/08-aug/cli-install-global.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
         </section>
         <section>
@@ -549,12 +542,14 @@ npm install npm -g
           </br>
           <div class="fragment">
             <p>Allow patch updates</p>
-            <pre><code style="font-size: 2.2rem;">~2.2.3</code></pre>
+            <pre><code style="font-size: 2.2rem;">~2.4.3</code></pre>
+            <code class="fragment" style="font-size: 2.2rem;"><span style="color: #47db30;">2.4.954</span>  <span class="fragment" style="color: red; text-decoration: line-through;">2.5.0</span></code>
           </div>
           </br>
           <div class="fragment">
             <p>Allow minor updates</p>
-            <pre><code style="font-size: 2.2rem;">^2.2.3</code></pre>
+            <pre><code style="font-size: 2.2rem;">^2.4.3</code></pre>
+            <code class="fragment" style="font-size: 2.2rem;"><span style="color: #47db30;">2.35.5</span>  <span class="fragment" style="color: red; text-decoration: line-through;">3.0.0</span></code>
           </div>
         </section>
         <section>
@@ -562,21 +557,48 @@ npm install npm -g
           </br>
           <div class="fragment">
             <p>Specify version at install</p>
-            <pre><code>npm install moment@2.14.1</code></pre>
+            <pre><code style="font-size: 2.2rem;">npm install moment@2.14.1</code></pre>
           </div>
           </br>
-          <pre class="fragment"><code>"dependencies" : {
+          <pre class="fragment"><code style="font-size: 2.2rem;">"dependencies" : {
     "moment" : "2.14.1"
 }</code></pre>
         </section>
         <section>
-          <h1>Versioning</h1>
-          <p class="fragment">Lock Files</p>
-          <p class="fragment">package-lock.json</p>
-          <p class="fragment">npm-shrinkwrap.json</p>
-          <!--TODO: Update this slide!-->
-          <pre class="fragment"><code style="font-size: 2.2rem;">npm shrinkwrap</code></pre>
+          <h1>Versioning: Lock Files</h1>
+          <p>package-lock.json</p>
+          </br>
           <p class="fragment">Exact package versions locked down</p>
+          </br>
+          <p class="fragment"><a href="https://docs.npmjs.com/files/package-locks">npm package lock documentation</a></p>
+          </br>
+          <pre class="fragment"><code style="font-size: 2.2rem; margin: 0 auto;">npm install moment --no-shrinkwrap</code></pre>
+          </br>
+          <p class="fragment" style="color: red;">Be careful with manual updates to package.json!</p>
+        </section>
+        <section>
+          <h1>Versioning: Lock Files</h1>
+          <p>package-lock.json</p>
+          <pre class="fragment"><code style="font-size: 2rem; padding-right: 250px; margin-left: -2em;">{
+  "name": "package-name",
+  "version": "1.0.0",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "moment": {
+      "version": "2.18.1",
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.18.1.tgz",
+      "integrity": "sha1-w2GT3Tzhwu7SrbfIAtu8d6gbHA8="
+    }
+  }
+}</code></pre>
+        </section>
+        <section>
+          <h1>Versioning: Lock Files</h1>
+          <pre><code style="font-size: 2.2rem;">npm shrinkwrap</code></pre>
+          <p class="fragment">npm-shrinkwrap.json</p>
+          </br>
+          <img class="fragment fade-in" src="images/08-aug/priority.png" alt="priority stamp">
         </section>
         <section>
           <h1>Updating Packages</h1>
@@ -601,19 +623,6 @@ npm install npm -g
         </section>
         <section>
           <h1>Dependency Types</h1>
-          <p>devDependencies</p>
-          <div style="position:relative; left:-150px; width:1150px;">
-            <div style="float:left; width:45%;">
-              <img src="images/08-aug/beer-tools.jpg" alt="beer making equipment">
-              <a href="https://www.morebeer.com/products/deluxe-homebrewing-starter-kit.html" target="_blank" style="font-size: 0.3em; display: block; text-align: left; margin-left: 3rem;">Source</a>
-            </div>
-            <div style="float:right; width:55%;">
-              <pre class="fragment" style="margin-top: 12rem; margin-left: auto; margin-right: auto;"><code style="font-size: 2.2rem; padding-right: 125px;">npm install packageName --save-dev</code></pre>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h1>Dependency Types</h1>
           <p>dependencies</p>
           <div style="position:relative; left:-90px; width:1150px;">
             <div style="float:left; width:45%;">
@@ -622,6 +631,19 @@ npm install npm -g
             </div>
             <div style="float:right; width:55%;">
               <pre class="fragment" style="margin-top: 12rem; margin-left: auto; margin-right: auto;"><code style="font-size: 2.2rem;">npm install packageName</code></pre>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>Dependency Types</h1>
+          <p>devDependencies</p>
+          <div style="position:relative; left:-150px; width:1150px;">
+            <div style="float:left; width:45%;">
+              <img src="images/08-aug/beer-tools.jpg" alt="beer making equipment">
+              <a href="https://www.morebeer.com/products/deluxe-homebrewing-starter-kit.html" target="_blank" style="font-size: 0.3em; display: block; text-align: left; margin-left: 3rem;">Source</a>
+            </div>
+            <div style="float:right; width:55%;">
+              <pre class="fragment" style="margin-top: 12rem; margin-left: auto; margin-right: auto;"><code style="font-size: 2.2rem; padding-right: 125px;">npm install packageName --save-dev</code></pre>
             </div>
           </div>
         </section>
@@ -645,7 +667,7 @@ npm install npm -g
           <h2>Front-end JavaScript files (manual)</h2>
           <pre class="fragment" style="width: 132%; margin-left: -100px;"><code style="font-size: 2rem;">// index.html
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="assets/js/main.js"></script></code></pre>
+<script src="main.js"></script></code></pre>
           <code class="fragment" style="font-size: 2rem;">//main.js</br>
 <span class="fragment">$(document).ready(function(){</span></br>
   <span class="fragment" style="padding-left: 40px;">$('.button').click(function() {</span></br>
@@ -661,7 +683,7 @@ npm install npm -g
           </br>
           <p class="fragment">Handle dependency management</p>
           </br>
-          <ol style="padding-left: 45%;">
+          <ol style="padding-left: 35%;">
             <li class="fragment">Install</li>
             <li class="fragment">Include Bundle</li>
             <li class="fragment">Require Packages</li>
@@ -672,12 +694,12 @@ npm install npm -g
           <h1>Browserify: Install</h1>
           </br>
           <div class="fragment">
-            <p>Personal: global install</p>
+            <p>Personal Projects: global install</p>
             <pre><code style="font-size: 2.2rem; margin-left: 35px;">npm install browserify -g</code></pre>
           </div>
           </br>
           <div class="fragment">
-            <p>Team: project only install</p>
+            <p>Team Projects: project-only install</p>
             <pre><code style="font-size: 2.2rem; margin-left: 35px;">npm install browserify --save-dev</code></pre>
           </div>
         </section>
@@ -700,9 +722,18 @@ $(document).ready(function(){
         </section>
         <section>
           <h1>Browserify: Bundle</h1>
-          <pre class="fragment" style="margin-top: 15%; margin-left: 5%;"><code style="font-size: 2.2rem; padding-right: 8%;">browserify main.js -o bundle.js</script></code></pre>
+          <pre class="fragment" style="margin-left: 5%;"><code style="font-size: 2.2rem; padding-right: 8%;">browserify main.js -o bundle.js</script></code></pre>
           </br>
           <p class="fragment">Use <a href="https://www.npmjs.com/package/watchify" target="_blank">Watchify</a> while developing</p>
+          </br>
+          <p class="fragment">package.json</p>
+          <pre class="fragment"><code style="font-size: 2.2rem; margin: 0 auto; padding-right: 100px;">{
+  "name": "my-package",
+  "version": "1.0.0",
+  "scripts": {
+    "bundle": "browserify main.js -o bundle.js"
+  }
+}</code></pre>
         </section>
         <section>
           <h1>Using Packages</h1>
