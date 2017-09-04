@@ -260,9 +260,65 @@
           </div>
         </section>
         <section>
+            <h1>RESTful vs "RESTish"</h1>
+						<img src="images/09-sep/restish.png" height="60%" width="60%">
+        </section>
+        <section>
             <h1>Request</h1>
             <br>
-            <p class="fragment">TODO</p><br>
+            <p class="fragment">
+              <font style="color:#c7bc75">C</font>reate
+              <font style="color:#c7bc75">R</font>etrieve
+              <font style="color:#c7bc75">U</font>pdate
+              <font style="color:#c7bc75">D</font>elete
+            </p><br>
+            <p class="fragment">Front end <---> API <---> server <font style="color:#c7bc75"><---></font> database</p><br>
+            <div>
+              <table class="slightlyPaddedTable">
+                <tr class="fragment">
+                  <td style="text-align: left;">Create</td>
+                  <td style="text-align: left;">POST</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">Retrieve</td>
+                  <td style="text-align: left;">GET</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">Update</td>
+                  <td style="text-align: left;">PUT</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">Update</td>
+                  <td style="text-align: left;">PATCH</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">Delete</td>
+                  <td style="text-align: left;">DELETE</td>
+                </tr>
+              </table>
+            </div>
+        </section>
+        <section>
+            <h1>Paths, Routes &amp; Endpoints</h1>
+            <code class="fragment" style="font-size: 50%;">https://api.example.com/v1/users/<font style="color:#c7bc75">6437</font>
+              <br>
+              https://api.example.com/v1/users?<font style="color:#c7bc75">role=admin</font>&<font style="color:#c7bc75">active</font><br>
+              \________________________/\____/ \______________________/<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server URL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endpoint&nbsp;&nbsp;&nbsp;&nbsp;params (optional)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path/route
+            </code>
+            <p class="fragment" style="text-align: left; padding-left: 30px;">Path parameters:
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">- after a noun, separated by /</li>
+              <li class="fragment">- change the route</li>
+            </ol>
+            </p><br>
+            <p class="fragment" style="text-align: left; padding-left: 30px;">Query parameters:
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">- start with ?, each separated by &amp;</li>
+              <li class="fragment">- do not affect the endpoint</li>
+            </ol>
+           </p>
         </section>
         <section>
             <h1>Response</h1>
