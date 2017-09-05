@@ -280,7 +280,7 @@
             </code>
         </section>
         <section>
-            <h1>The Methods</h1><br>
+            <h1>The Methods</h1>
             <p class="fragment">
               <font style="color:#c7bc75">C</font>reate
               <font style="color:#c7bc75">R</font>etrieve
@@ -290,7 +290,7 @@
             <p class="fragment">Front end <---> API <---> server <font style="color:#c7bc75"><---></font> database</p><br>
             <!-- TODO center this table? -->
             <div>
-              <table class="slightlyPaddedTable">
+              <table class="slightlyPaddedTable" style="width:100%">
                 <tr class="fragment">
                   <td style="text-align: left;">Create</td>
                   <td style="text-align: left;">POST</td>
@@ -300,11 +300,15 @@
                   <td style="text-align: left;">GET</td>
                 </tr>
                 <tr class="fragment">
+                  <td style="text-align: left;">Retrieve*</td>
+                  <td style="text-align: left;">HEAD</td>
+                </tr>
+                <tr class="fragment">
                   <td style="text-align: left;">Update</td>
                   <td style="text-align: left;">PUT</td>
                 </tr>
                 <tr class="fragment">
-                  <td style="text-align: left;">Update</td>
+                  <td style="text-align: left;">Update*</td>
                   <td style="text-align: left;">PATCH</td>
                 </tr>
                 <tr class="fragment">
@@ -312,6 +316,85 @@
                   <td style="text-align: left;">DELETE</td>
                 </tr>
               </table>
+            </div>
+        </section>
+        <section>
+            <h1>Response</h1>
+            <p class="fragment" style="text-align: left; padding-left: 30px;">Status code</p>
+            <p class="fragment" style="text-align: left; padding-left: 30px;">Headers</p>
+            <p class="fragment" style="text-align: left; padding-left: 30px;">Payload (aka body)</p>
+            <code class="fragment" style="font-size: 50%;">201 CREATED<br><br>
+              Content-Type: application/json<br>
+              Location: http://api.example.com/v1/cocktails/martini/99<br><br>
+              {<br>
+              &nbsp;&nbsp;id: '99',<br>
+              &nbsp;&nbsp;shaken: true,<br>
+              &nbsp;&nbsp;oliveCount: 2<br>
+              }
+            </code>
+        </section>
+        <section>
+            <h1>Wait, what?  (PUT vs PATCH)</h1>
+            <br>
+            <p class="fragment" style="text-align: left; padding-left: 30px;">PUT
+            <code style="font-size: 50%;">PUT http://api.example.com/v1/cocktails/martini/99<br><br>
+              {<br>
+              &nbsp;&nbsp;shaken: false,<br>
+              &nbsp;&nbsp;oliveCount: 2<br>
+              }
+            </code></p>
+            <p class="fragment" style="text-align: left; padding-left: 30px;">PATCH
+            <code style="font-size: 50%;">PATCH http://api.example.com/v1/cocktails/martini/99<br><br>
+              {<br>
+              &nbsp;&nbsp;shaken: false<br>
+              }
+            </code></p>
+        </section>
+        <section>
+            <h1>Response: Status Codes</h1>
+            <div>
+              <table class="slightlyPaddedTable">
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: #bed646;">200</td>
+                  <td style="text-align: left; background-color: #bed646;">Success</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: #bed646;">201</td>
+                  <td style="text-align: left; background-color: #bed646;">Created</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: orange;">304</td>
+                  <td style="text-align: left; background-color: orange;">Not modified</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: red;">400</td>
+                  <td style="text-align: left; background-color: red;">Bad request</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: red;">401</td>
+                  <td style="text-align: left; background-color: red;">Unauthorized</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: red;">403</td>
+                  <td style="text-align: left; background-color: red;">Forbidden</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: red;">404</td>
+                  <td style="text-align: left; background-color: red;">Not found</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: red;">409</td>
+                  <td style="text-align: left; background-color: red;">Conflict</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left; background-color: darkred;">500</td>
+                  <td style="text-align: left; background-color: darkred;">Internal server error</td>
+                </tr>
+              </table>
+            </div>
+            <div class="fragment" style="position: fixed; right: -240px; top: 140px;">
+              <img src="images/09-sep/cats.png" height="62%" width="62%"/>
+              <p><a href="https://http.cat/" target="_blank">https://http.cat</a></p><br>
             </div>
         </section>
         <section>
@@ -388,85 +471,44 @@
             <p class="fragment" style="text-align: left; padding-left: 30px;">Control CORS strictness on the server</p><br>
         </section>
         <section>
-            <h1>Response</h1>
-            <p class="fragment" style="text-align: left; padding-left: 30px;">Status code</p>
-            <p class="fragment" style="text-align: left; padding-left: 30px;">Headers</p>
-            <p class="fragment" style="text-align: left; padding-left: 30px;">Payload (aka body)</p>
-            <code class="fragment" style="font-size: 50%;">201 CREATED<br><br>
-              Content-Type: application/json<br>
-              Location: http://api.example.com/v1/cocktails/martini/007<br><br>
-              {<br>
-              &nbsp;&nbsp;id: "007",<br>
-              &nbsp;&nbsp;shaken: true,<br>
-              &nbsp;&nbsp;oliveCount: 2<br>
-              }
-            </code>
-        </section>
-        <section>
-            <h1>Response: Status Codes</h1>
-            <div>
-              <table class="slightlyPaddedTable">
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: #bed646;">200</td>
-                  <td style="text-align: left; background-color: #bed646;">Success</td>
-                </tr>
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: #bed646;">201</td>
-                  <td style="text-align: left; background-color: #bed646;">Created</td>
-                </tr>
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: orange;">304</td>
-                  <td style="text-align: left; background-color: orange;">Not modified</td>
-                </tr>
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: red;">400</td>
-                  <td style="text-align: left; background-color: red;">Bad request</td>
-                </tr>
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: red;">401</td>
-                  <td style="text-align: left; background-color: red;">Unauthorized</td>
-                </tr>
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: red;">403</td>
-                  <td style="text-align: left; background-color: red;">Forbidden</td>
-                </tr>
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: red;">404</td>
-                  <td style="text-align: left; background-color: red;">Not found</td>
-                </tr>
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: red;">409</td>
-                  <td style="text-align: left; background-color: red;">Conflict</td>
-                </tr>
-                <tr class="fragment">
-                  <td style="text-align: left; background-color: darkred;">500</td>
-                  <td style="text-align: left; background-color: darkred;">Internal server error</td>
-                </tr>
-              </table>
-            </div>
-            <div class="fragment" style="position: fixed; right: -240px; top: 140px;">
-              <img src="images/09-sep/cats.png" height="62%" width="62%"/>
-              <p><a href="https://http.cat/" target="_blank">https://http.cat</a></p><br>
-            </div>
-        </section>
-        <section>
             <h1>Documentation</h1>
             <br>
             <p class="fragment">Important, so you know what's available</p><br>
             <p class="fragment">Tools for documentation:<br><a href="https://apiblueprint.org/" target="_blank">API Blueprint</a>, <a href="https://swagger.io/" target="_blank">Swagger</a>, <a href="https://apiary.io/" target="_blank">Apiary</a></p><br>
-            <p class="fragment">Examples: <a href="https://developers.giphy.com/docs/" target="_blank">Giphy</a>, <a href="https://dev.twitter.com/rest/public" target="_blank">Twitter</a>, <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a></p><br>
+            <p class="fragment">Examples: <a href="https://developers.giphy.com/docs/" target="_blank">Giphy</a>, <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a>, <a href="https://dev.twitter.com/rest/public" target="_blank">Twitter</a></p><br>
             <p class="fragment"><a href="https://cocktail-trivia-api.herokuapp.com/" target="_blank">Interactive API docs for tonight</a></p><br>
             <p class="fragment">A "pure" REST API would<br>provide its endpoints at the root</p><br>
         </section>
         <section>
-          <h1>Tools</h1>
-          <!-- TODO not done
-          <p class="fragment">PostMan - A <font style="color:#c7bc75">G</font>raphical <font style="color:#c7bc75">U</font>ser <font style="color:#c7bc75">I</font>nterface for interacting with APIs</p><br>
-          <p class="fragment">cURL</p><br>
-          <p class="fragment">Chrome Dev Tools</p><br>
-          <p class="fragment">Express</p><br>
-          <p class="fragment">Heroku</p>
-          -->
+          <h1>Tools</h1><br>
+          <p class="fragment"><a href="https://www.getpostman.com/" target="_blank">PostMan</a><br>A <font style="color:#c7bc75">G</font>raphical <font style="color:#c7bc75">U</font>ser <font style="color:#c7bc75">I</font>nterface<br>for interacting with APIs</p><br>
+          <p class="fragment"><a href="http://www.codingpedia.org/ama/how-to-test-a-rest-api-from-command-line-with-curl/" target="_blank">cURL</a><br>Send API calls via<br><font style="color:#c7bc75">C</font>ommand <font style="color:#c7bc75">L</font>ine <font style="color:#c7bc75">I</font>nterface</p><br>
+          <p class="fragment">Chrome Dev Tools<br>(network tab)</p><br>
+        </section>
+        <section>
+          <h1>Express</h1>
+          <p class="fragment" style="text-align: left;">Node.js framework for quickly creating an API</p><br>
+          <p class="fragment" style="text-align: left;">.use for middleware when path is matched</p>
+          <p class="fragment" style="text-align: left;">.[verb] defines the functionality</p>
+          <code class="fragment">
+            app.use('/admin*', function (req, res, next) {<br>
+            &nbsp;&nbsp;if (!userIsAdmin) { res.sendStatus(403); }<br>
+            &nbsp;&nbsp;else { next(); }<br>
+            });<br>
+          </code>
+          <code class="fragment">
+            app.get('/user/:id', function (req, res, next) {<br>
+            &nbsp;&nbsp;var user = { id: '123', firstName: 'Bob' };
+            &nbsp;&nbsp;res.send(user);<br>
+            });<br>
+          </code>
+        </section>
+        <section>
+          <h1>Heroku</h1><br>
+          <p class="fragment">Cloud platform that supports Node.js</p><br>
+          <p class="fragment">Small, lightweight containers called dynos</p><br>
+          <p class="fragment">Free tier sleeps after 30 mins of inactivity</p><br>
+          <p class="fragment">Deploy via <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">Heroku CLI</a> and/or <a href="https://devcenter.heroku.com/articles/git" target="_blank">git</a></p>
         </section>
         <section>
           <h1>More Resources</h1><br>
@@ -516,10 +558,10 @@
             <li class="fragment">Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
             <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
             <li class="fragment">Finish <a href="http://bit.ly/CnCSepWork" target="_blank">tonight's worksheet</a></li>
-            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Nodejs+API+tutorial" target="_blank">online tutorial on Node.js &amp; APIs</a></li>
-            <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-may-tickets-31953355346?aff=presentation" target="_blank">next month's event</a></li>
+            <li class="fragment">Find a <a href="http://lmgtfy.com/?q=Nodejs+API+tutorial" target="_blank">tutorial on Node.js &amp; APIs</a></li>
+            <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-october-tickets-37229892611?aff=erelexpmlt" target="_blank">next month's event</a></li>
           </ol>
-          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -70px;" max-height="60%" max-width="60%"/>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -100px;" max-height="60%" max-width="60%"/>
         </section>
         <section>
           <h1>Keep up with us</h1>
