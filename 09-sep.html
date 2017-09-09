@@ -463,7 +463,7 @@
             <h1><font style="color:#c7bc75">C</font>ross-<font style="color:#c7bc75">O</font>rigin <font style="color:#c7bc75">R</font>esource <font style="color:#c7bc75">S</font>haring</h1>
             <p class="fragment" style="text-align: left; padding-left: 30px;">A policy that ensures content is loaded from the same origin <font class="fragment">(protocol, host, port)</font></p>
             <img class="fragment" src="images/09-sep/origins.png" height="85%" width="85%" style="margin-top:10px;"/>
-            <code class="fragment" style="font-size: 50%; background: none; border: 0px; box-shadow: none; margin-top:0px; margin-left: 30px; color: darkred;">No 'Access-Control-Allow-Origin' header is<br>present on the requested resource.</code>
+            <code class="fragment" style="font-size: 50%; background: lightgray; border: 0px; box-shadow: none; margin-top:0px; margin-left: 30px; color: darkred;">No 'Access-Control-Allow-Origin' header is<br>present on the requested resource.</code>
             <p class="fragment" style="text-align: left; padding-left: 30px;">Control CORS strictness on the server</p><br>
         </section>
         <section>
@@ -493,7 +493,7 @@
             });<br>
           </code>
           <code class="fragment">
-            app.get('/user/:id', function (req, res, next) {<br>
+            apiRouter.get('/user/:id', function (req, res, next) {<br>
             &nbsp;&nbsp;var user = { id: '123', firstName: 'Bob' };
             &nbsp;&nbsp;res.send(user);<br>
             });<br>
@@ -508,8 +508,8 @@
         </section>
         <section>
           <h1>More Resources</h1><br>
-          <p class="fragment"><a href="https://cocktail-trivia-api.herokuapp.com/" target="_blank">Tutorial creating API &amp; using MongoDB</a></p><br>
-          <p class="fragment"><a href="https://cocktail-trivia-api.herokuapp.com/" target="_blank">Codecademy tracks for using APIs</a></p><br>
+          <p class="fragment"><a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4" target="_blank">Tutorial creating API &amp; using MongoDB</a></p><br>
+          <p class="fragment"><a href="https://www.codecademy.com/apis" target="_blank">Codecademy tracks for using APIs</a></p><br>
           <p class="fragment"><a href="http://graphql.org/" target="_blank">GraphQL [Facebook]</a></p><br>
           <p class="fragment"><a href="https://netflix.github.io/falcor/" target="_blank">Falcor [Netflix]</a></p>
         </section>
