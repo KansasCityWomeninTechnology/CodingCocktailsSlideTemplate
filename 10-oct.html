@@ -119,7 +119,7 @@
           <br>
           <div style="position: fixed; left:-250px; width: 1500px;">
             <img src="images/10-oct/slack-1.jpg" width="280" class="fragment"/>
-            <img src="images/10-oct/slack-2.png" width="280" class="fragment"/>
+            <img src="images/10-oct/slack-2.jpg" width="280" class="fragment"/>
             <img src="images/10-oct/slack-3.jpg" width="280" class="fragment"/>
             <img src="images/10-oct/slack-4.jpg" width="280" class="fragment"/>
           </div>
@@ -135,30 +135,96 @@
             <h4>Cocktail Crafter Extraordinaire</h4>
         </section>
         <section>
-          <h2>Tonight's Agenda: TODO</h2>
+          <h2>Tonight's Agenda: SPAs</h2>
             <br>
             <ol>
-              <li class="fragment">TODO</li>
+              <li class="fragment">
+                Introduction
+                <ol style="list-style-type: lower-alpha; padding-left: 40px;">
+                  <li class="fragment">What is a SPA?</li>
+                  <li class="fragment">How is it different from a plain old web site?</li>
+                  <li class="fragment">What is AJAX and how does it relate?</li>
+                  <li class="fragment">SPAs: pros &amp; cons</li>
+                  <li class="fragment">Other considerations</li>
+                </ol>
+              </li>
+              <li class="fragment">SPA frameworks &amp; libraries</li>
+              <li class="fragment">...but srsly, Angular</li>
+              <li class="fragment">Resources</li>
             </ol>
         </section>
 		<!-- Title slide for root level outline topics -->
         <section>
-          <h1>TODO (title slide)</h1>
-          <img src="images/10-oct/TODO.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:30px;"/>
+          <h1>Introduction</h1>
+          <img src="images/10-oct/spa.jpg" alt="Introduction" height="85%" width="85%" style="margin-top:30px;"/>
         </section>
 		<!-- Introduction slide -->
         <section>
-            <h1>What is it?</h1>
+            <h1>What is a SPA?</h1>
             <br>
             <p class="fragment">
-              TODO
+              <font style="color:#c7bc75">S</font>ingle
+              <font style="color:#c7bc75">P</font>age
+              <font style="color:#c7bc75">A</font>pplication
             </p>
             <br>
-            <p class="fragment">
-              <font style="color:#c7bc75">L</font>augh
-              <font style="color:#c7bc75">O</font>ut
-              <font style="color:#c7bc75">L</font>oud
+            <p class="fragment">Single index.html page</p><br>
+            <p class="fragment">Dynamically updates the page<br>based on user interaction<br><div class="fragment">(without reloading the entire page!)</div></p><br>
+            <p class="fragment">Better User Experience</p>
+          </section>
+          <section>
+            <h1>SPA vs 'conventional' website</h1>
+            <img src="images/10-oct/spa_vs_conventional.png" height="95%" width="95%" style="margin-top:30px;"/>
+          </section>
+          <section>
+            <h1>'conventional' website</h1>
+            <br><br>
+            <p class="fragment">Different HTML pages (files)</p><br>
+            <p class="fragment">Each URL serves up a different page</p><br>
+            <p class="fragment">Files might share/import resources<br><div class="fragment">...but that's as good as it gets</div></p><br>
+          </section>
+          <section>
+            <h1>SPA</h1>
+            <p class="fragment">You use them everyday<div class="fragment">...but you probably don't know it!</div></p><br>
+            <p class="fragment">Every URL updates a portion of the page</p><br>
+            <p class="fragment">Obvious: Pages with scrollable sections</p><br>
+            <p class="fragment">Less obvious: The URL changes but it's still served from a single index.html file</p><br>
+            <p class="fragment">More app-like: Behaves more like an app on your PC or phone</p>
+          </section>
+          <section>
+            <h1>AJAX &amp; Single Page Apps</h1>
+            <br>
+            <p class="fragment"><i>Asynchronous</i> JavaScript and JSON (or XML)</p><br>
+            <p class="fragment">Data is exchanged between browser and server to <i>in the background</i></p><br>
+            <p class="fragment">Requires Javascript to be enabled in the browser (like SPAs in general)</p><br>
+            <p class="fragment">SPAs require the brower to retain a single page<br>even when you need server communication</p>
+          </section>
+          <section>
+            <h2>Synchronous vs Asynchronous</h2>
+            <p class="fragment">Python (sync)
+              <code style="font-size: 50%;">
+                import requests<br><br>
+
+                r = requests.get('https://api.github.com/events')<br>
+                print(r.text)<br>
+                print("I come after the request")<br>
+              </code>
             </p>
+            <br>
+            <p class="fragment">Javascript (async)
+              <code>
+                var xhttp = new XMLHttpRequest();<br>
+                xhttp.onreadystatechange = function() { ... };<br>
+                xhttp.open("GET", "https://api.github.com/events", true);<br>
+                xhttp.send();<br>
+                console.log('I come after the request');
+              </code>
+            </p>
+          </section>
+          <section>
+            <h1>An async exercise</h1>
+            <img class="fragment" src="images/10-oct/solo.jpg" height="41%" width="41%" style="padding-bottom: 100px;"/>
+            <img class="fragment" src="images/10-oct/solo_cup.jpg" height="41%" width="41%"/>
           </section>
 		  <section>
 		  <!-- break slide -->
