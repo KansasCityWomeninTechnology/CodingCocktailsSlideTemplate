@@ -144,7 +144,7 @@
                   <li class="fragment">What is a SPA?</li>
                   <li class="fragment">How is it different from a plain old web site?</li>
                   <li class="fragment">What is AJAX and how does it relate?</li>
-                  <li class="fragment">SPAs: pros &amp; cons</li>
+                  <li class="fragment">The cons of an SPA</li>
                   <li class="fragment">Other considerations</li>
                 </ol>
               </li>
@@ -226,6 +226,84 @@
             <img class="fragment" src="images/10-oct/solo.jpg" height="41%" width="41%" style="padding-bottom: 100px;"/>
             <img class="fragment" src="images/10-oct/solo_cup.jpg" height="41%" width="41%"/>
           </section>
+          <section>
+            <h1>Single Page Application Cons</h1><br>
+            <p class="fragment">Anyone browsing without Javascript enabled will not get all the functionality</p><br>
+            <p class="fragment">Search Engine Optimization (SEO)</p>
+            <p class="fragment">A data or Javascript error can mean<br>you have no content for bots to crawl!</p><br>
+            <p class="fragment">Workarounds:<br>
+            <p class="fragment">- direct bots to prerendered content<br>
+            <div class="fragment">- implement cache with <a href="http://prerender.io" target="_blank">prerender.io</a></div></p>
+          </section>
+          <section>
+            <h1>Other considerations</h1>
+            <img src="images/10-oct/thinking.gif" height="100%" width="100%" style="margin-top:30px;"/>
+          </section>
+          <section>
+              <h2>Modularity</h2>
+              <p class="fragment" style="text-align:left;">Make reusable pieces (components) that can be accessed across page
+              <div style="text-align: left;">
+                <ul class="fragment" style="text-align:left;">
+                    <li>- Header/Navigation Bar</li>
+                    <li>- Footer</li>
+                    <li>- Date Picker</li>
+                    <li>- Slideshow</li>
+                </ul>
+              </div>
+              </p><br>
+              <p class="fragment" style="text-align:left;">Make custom HTML elements with their own HTML tags &amp; styles/scripting.
+                <code style="font-size: 50%;">
+                  &lt;order-form&gt;&lt;/order-form&gt;
+                </code>
+              <p>
+          </section>
+          <section>
+              <h2>Routing</h2>
+              <ul>
+                  <li>Most SPA Frameworks/libraries include routing functionality</li>
+                  <li class="fragment">Routing allows navigation from one view to another</li>
+                  <div class="fragment">
+                      <li>"Virtual" Pages</li>
+                      <li><pre><code class="bash">http://www.example.com/about</code></pre></li>
+                      <li><pre><code class="bash">http://www.example.com/#/about</code></pre></li>
+                  </div>
+                  <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_bank">HTML5 History API</a> - Use back &amp; forward buttons</li>
+              </ul>
+          </section>
+          <section>
+              <h2>Frameworks &amp; Libraries</h2>
+              <p>What's the difference?</p>
+              <ul>
+                  <li>A library is a set of related functions that you can call<br>
+                      <ul class="fragment">
+                          <li><a href="http://momentjs.com/" target="_blank">Moment</a></li>
+                          <li><a href="https://lodash.com/" target="_blank">Lodash</a></li>
+                          <li><a href="https://d3js.org/" target="_blank">D3</a></li>
+                          <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+                      </ul>
+                  </li>
+                  <li class="fragment">A framework imposes structure to your code and describes how your code should be written <br>
+                      <ul class="fragment">
+                          <li><a href="https://angularjs.org/" target="_blank">Angular</a></li>
+                          <li><a href="http://backbonejs.org/" target="_blank">Backbone</a></li>
+                      </ul>
+                  </li>
+                  <li class="fragment">Library: Here's my number - so call me, maybe?</li>
+                  <li class="fragment">Framework: Don't call us, we'll call you</li>
+              </ul>
+          </section>
+          <section>
+              <h2>SPA Frameworks &amp; Libraries</h2>
+              <img style="height: 140px;" src="images/10-oct/angular.png" alt="Angular JS Logo">
+              <img style="height: 100px;" src="images/10-oct/backbone.png" alt="Backbone JS Logo">
+              <img style="width: 300px;" src="images/10-oct/ember.png" alt="Ember JS Logo">
+              <img style="width: 200px;" src="images/10-oct/p-logo.png" alt="Polymer JS Logo">
+              <img style="height: 100px;" src="images/10-oct/aurelia-logo.svg" alt="Aurelia JS Logo">
+              <img style="width: 150px;" src="images/10-oct/logo.svg" alt="React JS Logo">
+              <img style="width: 400px;" src="images/10-oct/meteor-logo.svg" alt="Meteor JS Logo">
+              <p>And More!</p>
+          </section>
+      </section>
 		  <section>
 		  <!-- break slide -->
           <h1>Things You'll Need</h1>
