@@ -173,10 +173,6 @@
             <p class="fragment">Better User Experience</p>
           </section>
           <section>
-            <h1>SPA vs 'conventional' website</h1>
-            <img src="images/10-oct/spa_vs_conventional.png" height="95%" width="95%" style="margin-top:30px;"/>
-          </section>
-          <section>
             <h1>'conventional' website</h1>
             <br><br>
             <p class="fragment">Different HTML pages (files)</p><br>
@@ -184,7 +180,7 @@
             <p class="fragment">Files might share/import resources<br><div class="fragment">...but that's as good as it gets</div></p><br>
           </section>
           <section>
-            <h1>SPA</h1>
+            <h1>Single Page Application</h1>
             <p class="fragment">You use them everyday<div class="fragment">...but you probably don't know it!</div></p><br>
             <p class="fragment">Every URL updates a portion of the page</p><br>
             <p class="fragment">Obvious: Pages with scrollable sections</p><br>
@@ -192,11 +188,15 @@
             <p class="fragment">More app-like: Behaves more like an app on your PC or phone</p>
           </section>
           <section>
+            <h1>SPA vs 'conventional' website</h1>
+            <img src="images/10-oct/spa_vs_conventional.png" height="95%" width="95%" style="margin-top:30px;"/>
+          </section>
+          <section>
             <h1>AJAX &amp; Single Page Apps</h1>
             <br>
             <p class="fragment"><i>Asynchronous</i> JavaScript and JSON (or XML)</p><br>
             <p class="fragment">Data is exchanged between browser and server to <i>in the background</i></p><br>
-            <p class="fragment">Requires Javascript to be enabled in the browser (like SPAs in general)</p><br>
+            <p class="fragment">Requires JavaScript to be enabled in the browser (like SPAs in general)</p><br>
             <p class="fragment">SPAs require the brower to retain a single page<br>even when you need server communication</p>
           </section>
           <section>
@@ -211,7 +211,7 @@
               </code>
             </p>
             <br>
-            <p class="fragment">Javascript (async)
+            <p class="fragment">JavaScript (async)
               <code>
                 var xhttp = new XMLHttpRequest();<br>
                 xhttp.onreadystatechange = function() { ... };<br>
@@ -228,9 +228,9 @@
           </section>
           <section>
             <h1>Single Page Application Cons</h1><br>
-            <p class="fragment">Anyone browsing without Javascript enabled will not get all the functionality</p><br>
+            <p class="fragment">Anyone browsing without JavaScript enabled will not get all the functionality</p><br>
             <p class="fragment">Search Engine Optimization (SEO)</p>
-            <p class="fragment">A data or Javascript error can mean<br>you have no content for bots to crawl!</p><br>
+            <p class="fragment">A data or JavaScript error can mean<br>you have no content for bots to crawl!</p><br>
             <p class="fragment">Workarounds:<br>
             <p class="fragment">- direct bots to prerendered content<br>
             <div class="fragment">- implement cache with <a href="http://prerender.io" target="_blank">prerender.io</a></div></p>
@@ -355,8 +355,146 @@
           <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
         </section>
         <section>
-          <h2>TODO Angular here</h2>
+          <h1>Time to get Angular</h1>
+          <img src="images/10-oct/angular_fashion.jpg" height="43%" width="43%" style="margin-top:10px;"/>
         </section>
+        <section>
+            <h1>Choosing a framework/library</h1>
+            <img src="images/10-oct/venn_diagram.png" height="85%" width="85%" style="margin-top:30px;"/>
+        </section>
+        <section>
+            <h1>Why did we choose Angular?</h1><br>
+            <p class="fragment">CLI helps scaffold our project quickly</p><br>
+            <p class="fragment">Angular is very opinionated<br><span class="fragment">so this reduces architectural decisions</span></p><br>
+            <p class="fragment">Good <a href="https://angular.io/docs" target="_blank">documentation</a></p><br>
+            <p class="fragment">Angular.js -> Angular 2 -> Angular (v4.4.4)</p>
+         </section>
+        <section>
+            <h1>Angular uses TypeScript</h1><br>
+            <p class="fragment">Made by Microsoft</p><br>
+            <p class="fragment"><span class="separate">.ts</span> file extensions instead of <span class="separate">.js</span></p><br>
+            <p class="fragment">Compiles into JavaScript</p><br>
+            <p class="fragment">Makes writing JavaScript easier</p><br>
+            <p class="fragment">Can write JavaScript in a TypeScript file<br><span class="fragment">(but not the other way around!)</span></p>
+        </section>
+        <section>
+            <h1>Why Use TypeScript?</h1>
+            <p class="fragment">
+              JavaScript is loosely typed<br>a variable's value is flexible
+              <code class="javascript">var drink = "Tom Collins";<br>drink = 3;</code>
+            </p>
+            <br>
+            <p class="fragment">
+              TypeScript provides static "types"<br>(number, string, boolean, etc)<br>for JavaScript<br>
+              <code class="typescript">var drink = "Mojito";<br>drink = true;  //ERROR!</code>
+              a variable's value is enforced
+            </p>
+        </section>
+        <section>
+            <h1>More Typescript Examples</h1>
+            <br><br>
+            <p class="fragment">
+              <a href="https://www.typescriptlang.org/play/index.html#src=function%20order(drink)%20%7B%0D%0A%20%20%20%20return%20%22I'd%20like%20a%20%22%20%2B%20drink%3B%0D%0A%7D%0D%0A%0D%0Avar%20cocktail%20%3D%20%22Missouri%20Mule%22%3B%0D%0A%0D%0Adocument.body.innerHTML%20%3D%20order(cocktail)%3B" target="_blank">a standard JavaScript example</a>
+            </p>
+            <br>
+            <p class="fragment">
+              <a href="https://www.typescriptlang.org/play/index.html#src=function%20order(drink%3A%20string)%20%7B%0D%0A%20%20%20%20return%20%22I'd%20like%20a%20%22%20%2B%20drink%3B%0D%0A%7D%0D%0A%0D%0Avar%20cocktail%20%3D%20%22Missouri%20Mule%22%3B%0D%0A%0D%0Adocument.body.innerHTML%20%3D%20order(cocktail)%3B" target="_blank">a Typescript axample with correct type</a>
+            </p>
+            <br>
+            <p class="fragment">
+              <a href="https://www.typescriptlang.org/play/index.html#src=function%20order(drink%3A%20string)%20%7B%0D%0A%20%20%20%20return%20%22I'd%20like%20a%20%22%20%2B%20drink%3B%0D%0A%7D%0D%0A%0D%0Avar%20cocktail%20%3D%20%5B%22Missouri%20Mule%22%2C%20%22Mojito%22%5D%3B%0D%0A%0D%0Adocument.body.innerHTML%20%3D%20order(cocktail)%3B" target="_blank">a Typescript axample with <font style="color:darkred">incorrect</font> type</a><br>
+              Hover over the underlined `cocktail`<br>to see error message
+            </p>
+        </section>
+        <section>
+            <h1>Angular2 Building Blocks</h1>
+            <br>
+            <p class="fragment" style="padding-top: 15px;">Modules</p>
+            <p class="fragment" style="padding-top: 15px;">Components</p>
+            <p class="fragment" style="padding-top: 15px;">Routing</p>
+            <p class="fragment" style="padding-top: 15px;">Templates</p>
+            <p class="fragment" style="padding-top: 15px;">Data Binding</p>
+            <p class="fragment" style="padding-top: 15px;">Directives</p>
+            <p class="fragment" style="padding-top: 15px;">Services</p>
+        </section>
+        <section>
+            <h1>Fitting it all together</h1>
+            <img src="images/10-oct/arch.png" alt="Angular2 Architecture">
+        </section>
+        <section>
+            <h1>Angular CLI</h1>
+            <h4>(Command Line Interface)</h4>
+            <br>
+            <p class="fragment">Check out the documentation <a href="https://github.com/angular/angular-cli" target="_blank">here</a></p><br>
+            <p class="fragment">CLI does things the "right" way<br>according to Angular style guide</p><br>
+            <p class="fragment">
+              Install via npm
+              <code class="bash">npm install -g angular-cli</code>
+            </p>
+        </section>
+        <section>
+            <h1>What can we do with the CLI?</h1>
+            <br>
+            <p class="fragment">
+              Create a new project
+              <code class="bash">ng new PROJECT-NAME-HERE --routing</code>
+            </p>
+            <br>
+            <p class="fragment">
+              Serve your project<br>(so we can see it in the browser)
+              <code class="bash">ng serve</code>
+            </p>
+        </section>
+        <section>
+            <h1>What can we do with the CLI?</h1>
+            <br>
+            <p>Scaffold components, services, directives, etc.</p>
+            <br>
+            <p class="fragment">
+              Component
+              <code class="bash">ng generate component MY-NEW-COMPONENT</code>
+              <code class="bash">ng g component MY-NEW-COMPONENT</code>
+            </p>
+            <br>
+            <p class="fragment">
+              Service
+              <code class="bash">ng g service MY-NEW-SERVICE</code>
+            </p>
+        </section>
+        <section>
+            <h1>CLI Scaffolding</h1>
+            <video width="100%" height="100%" controls preload>
+                <source src="images/10-oct/scaffold.mov" type="video/mp4">
+            </video>
+        </section>
+        <section>
+            <h1>What can we do with the CLI?</h1>
+            <br>
+            <p class="fragment">
+              Build: create dist directory w/ build artifacts
+              <code class="bash">ng build</code>
+            </p>
+            <br>
+            <p class="fragment">
+              Install angular-cli-ghpages (one time only)
+              <code class="bash">npm install -g angular-cli-ghpages</code>
+            </p>
+            <br>
+            <p class="fragment">
+              Build to your GitHub repo
+              <code class="bash">ng build --prod --base-href "https://yourusername.github.io/reponame/"</code>
+            </p>
+            <br>
+            <p class="fragment">
+              And deploy!
+              <code class="bash">angular-cli-ghpages</code>
+            </p>
+        </section>
+
+
+
+
+
         <section>
           <h1>More Resources</h1><br>
 
@@ -369,10 +507,10 @@
           <br>
           <p><a href="http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html" target="_blank">Dependency injection</a></p>
           <br>
-          <p><a href=" https://www.typescriptlang.org" target="_blank">TypeScript</a></p>
+          <p><a href=" https://www.typescriptlang.org" target="_blank">typescriptlang.org</a></p>
         </section>
         <section>
-          <h2>Questions?</h2>
+          <h1>Questions?</h1>
           <img src="images/10-oct/questions.gif" alt="Questions" height="100%" width="100%"/>
         </section>
         <section>
