@@ -145,11 +145,12 @@
                   <li class="fragment">How is it different from a plain old web site?</li>
                   <li class="fragment">What is AJAX and how does it relate?</li>
                   <li class="fragment">The cons of an SPA</li>
-                  <li class="fragment">Other considerations</li>
                 </ol>
               </li>
+              <li class="fragment">Other considerations</li>
               <li class="fragment">SPA frameworks &amp; libraries</li>
               <li class="fragment">...but srsly, Angular</li>
+              <li class="fragment">Angular Building Blocks</li>
               <li class="fragment">Resources</li>
             </ol>
         </section>
@@ -490,6 +491,319 @@
               <code class="bash">angular-cli-ghpages</code>
             </p>
         </section>
+        <section>
+            <h2>Angular Building Blocks</h2>
+            <img src="images/10-oct/assembly.jpg" height="90%" width="90%">
+        </section>
+        <section>
+            <h3>Modules</h3>
+            <br><br>
+            <p class="fragment">Organizes your app into<br>related sections of functionality</p><br>
+            <p class="fragment">Root module is the very top<br>small apps only need one</p><br>
+            <p class="fragment">Larger apps may have feature modules - each related to specific workflow/capabilities</p>
+        </section>
+        <section>
+          <h1>Components</h1>
+          <br>
+          <p class="fragment">Every app has at least one root</p>
+          <p class="fragment">Application is a tree of components</p>
+          <img class="fragment" src="images/10-oct/component_tree.png" alt="component tree" width="65%" height="65%" />
+          <p class="fragment">Each component contains:<br>template, data, behavior</p>
+        </section>
+
+
+
+
+
+
+  <section>
+    <h1>Components</h1>
+      <br>
+      <code class="html">
+        &lt;cocktail-list&gt;&lt;/cocktail-list&gt;
+      </code>
+      <br>
+      <code class="typescript">
+        @Component({<br>
+        &nbsp;&nbsp;selector: 'app-quiz',<br>
+        &nbsp;&nbsp;templateUrl: './quiz.component.html',<br>
+        &nbsp;&nbsp;styleUrls: ['./quiz.component.css']<br>
+        })
+      </code>
+  </section>
+  <section>
+    <h1>Components</h1>
+    <img style="display: block; margin: 15px auto;" src="images/10-oct/component.png" alt="Component Code Structure">
+  </section>
+
+
+<section id="templates">
+  <section>
+    <h1>Templates</h1>
+      <p>Written in HTML</p><br>
+      <div class="fragment">
+        <p>Cannot use:</p><br>
+        <p><code class="html">&lt;script&gt;&lt;html&gt;&lt;body&gt;&lt;base&gt;</code></p><br>
+      </div>
+      <p class="fragment">Template specified in *.component.ts file
+          <div class="fragment">
+            <p>Multi-line Inline Template</p><br>
+            <p><code class="typescript">template: `&lt;div&gt;
+&lt;p&gt;Hey, my name's Microsoft. Can I crash at your place tonight?&lt;/p&gt;
+&lt;p&gt;{{myObviousAnswer}}&lt;/p&gt;
+&lt;/div&gt;`</code></p><br>
+          </div>
+          <div class="fragment">
+            <p>Individual HTML File</p><br>
+            <p><code class="typescript">templateUrl: './header.component.html'</code></p><br>
+          </div>
+      </p><br>
+  </section>
+  <section>
+    <h1>Templates</h1>
+      <p class="fragment">Add a component to your template:</p><br>
+      <div class="fragment">
+        <p>In the *.component.ts file a selector is defined in the component's metadata:</p><br>
+        <code class="typescript data-noescape">@Component({</code>
+        <code class="typescript fragment">  selector: 'app-quiz',</code>
+<code class="typescript fragment">  templateUrl: './quiz.component.html',
+styleUrls: ['./quiz.component.css']
+})</code>
+      </div>
+      <p class="fragment">Add the selector to the parent component's template (app.component.ts):
+        <code class="html">&lt;app-quiz&gt;&lt;/app-quiz&gt;</code></p><br>
+      <p class="fragment">That markup in the parent template gets replaced with the contents of quiz.component.html</p><br>
+  </section>
+  <section>
+    <h1>Interpolation</h1>
+    <p>An expression that Angular evaluates and converts to a string.  Surrounded by double curly braces: <span class="separate">{{ }}</span></p>
+    <code class="typescript fragment">{{3 + 5}} // 8</code>
+      <code class="html fragment">&lt;p&gt;My age is {{getMyAge() - 5}}&lt;/p&gt; &lt;!-- My age is 21 --&gt;</code>
+  </section>
+  <section>
+    <h1>Special syntax</h1>
+    <h4>Property Binding</h4>
+    <p>Add a class to an element when the expression is <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy" target="_blank">truthy</a></p>
+    <code class="html fragment">&lt;li [class.ready]="orderIsReady"&gt;Margarita&lt;/li&gt;</code>
+    <code class="html fragment">&lt;!-- orderIsReady = true --&gt;
+&lt;li class="ready"&gt;Margarita&lt;/li&gt;</code>
+    <code class="html fragment">&lt;!-- orderIsReady = false --&gt;
+&lt;li&gt;Margarita&lt;/li&gt;</code>
+  </section>
+</section>
+<section id="data-binding">
+  <section>
+    <h1>Data Binding</h1>
+    <p>Pass data around your application in either one-direction (from the component to the view) or bi-direction (back and forth between the logic &amp; component for live browser updates)</p>
+  </section>
+  <section>
+    <h1>Data Binding</h1>
+      <div class="fragment">
+        <p><span class="separate">{{ }}</span> data is sent to the view from the component
+          <ul>
+            <p>This is typically where you'd use text in HTML</p><br>
+          </ul>
+        </p><br>
+        <code>&lt;p&gt;My dog's name is {{user.dogsName}}&lt;/p&gt;</code>
+      </div>
+      <div class="fragment">
+        <p><span class="separate">[ ]</span> is a value taken from the component and displayed in the view
+          <ul>
+            <p>This is typically seen on attributes in HTML template elements</p><br>
+          </ul>
+        </p><br>
+        <code>&lt;input [value]="user.firstName"&gt;</code>
+      </div>
+  </section>
+  <section>
+    <h1>Data Binding</h1>
+      <div class="fragment">
+        <p><span class="separate">( )</span> is a value taken from the view and passed to the component
+          <ul>
+            <p>This is typically seen on attributes in template elements</p><br>
+            <p>Another way to think of this is that it would be data from user interaction with the page</p><br>
+          </ul>
+        </p><br>
+        <code>&lt;button (click)="delete()"&gt;Delete&lt;/button&gt;</code>
+      </div>
+      <div class="fragment">
+        <p><span class="separate">[( )]</span> is a 2-way (bi-directional) way to share data (aka data bind)
+          <ul>
+            <p>Takes data from the view and passes it to the component</p><br>
+            <p>AND Takes data from the component and passes it to the view</p><br>
+          </ul>
+        </p><br>
+        <code>&lt;input [(ngModel)]="user.dogsName"&gt;</code>
+      </div>
+  </section>
+</section>
+<section id="break-2" data-background-image="images/10-oct/break.gif">
+  <h1>Sometimes you just need a break!</h1>
+</section>
+<section id="component-data">
+  <section>
+    <h1>Adding Data to a Component</h1>
+      <div>
+        <p>Start with a model
+          <ul>
+            <p>A model is a structured way of representing an object</p><br>
+            <p>Here we'll build out a navigation component</p><br>
+          </ul>
+        </p><br>
+      </div>
+      <p class="fragment">Since TypeScript adds those static types it will need to know what type of data to expect</p><br>
+      <p class="fragment">Add your model in navigation-item.model.ts</p><br>
+      <p class="fragment"><code class="typescript">export class NavigationItem {
+path: string;
+name: string;
+}</code></p><br>
+  </section>
+  <section>
+    <h1>Adding Data to a Component</h1>
+      <pd>Next, we add (or import) the model to our header/navigation component</p><br>
+      <p class="fragment">Add the import statement to header.component.ts</p><br>
+      <p class="fragment"><code class="typescript">import { NavigationItem } from './navigation-item.model';</code></p><br>
+  </section>
+  <section>
+    <h1>Adding Data to a Component</h1>
+      <p>Add navigation items to component lifecycle hook OnInit</p><br>
+      <p class="fragment">OnInit is a method run shortly after the component is created</p><br>
+      <p class="fragment">OnInit is often the place where you fetch initial data, perform complex initializations after construction to keep the component itself simpler, or set up the component after input properties are set</p><br>
+      <p class="fragment"><code class="typescript">export class HeaderComponent implements OnInit {
+navigationItems: NavigationItem[];
+}</code></p><br>
+      <p class="fragment"><code class="typescript">ngOnInit() {
+this.navigationItems = [
+{ 'path': '/about', 'name': 'About' },
+{ 'path': '/services', 'name': 'Services' },
+{ 'path': '/contact', 'name': 'Contact' }
+];
+}</code></p><br>
+  </section>
+  <section>
+    <h1>Adding Data to a Component</h1>
+      <p>Finally we need our template (the HTML)</p><br>
+      <p class="fragment">Remember, this can be either inline -OR- in a separate .html file!</p><br>
+      <p class="fragment"><code class="html">&lt;ul&gt;
+&lt;li *ngFor="let navigationItem of navigationItems"&gt;
+{{navigationItem.name}}
+&lt;/li&gt;
+&lt;/ul&gt;</code></p><br>
+  </section>
+</section>
+<section id="directives">
+  <section>
+    <h1>Attribute Directives</h1>
+      <p>Dynamically applies attribute values to HTML based on data</p><br>
+      <p class="fragment">This can change the appearance or behavior of that element</p><br>
+      <p class="fragment">NgClass is one of the more commonly used attribute directives to dynamically apply class names to your elements</p><br>
+      <p class="fragment"><code class="html">&lt;li [ngClass]="{'ready': orderIsReady}"&gt;
+Margarita
+&lt;/li&gt;</code>
+      </p><br>
+      <div class="fragment">
+        <p>When orderIsReady is falsy: <code class="javascript">var orderIsReady = false;</code></p><br>
+        <p><code class="html">&lt;li&gt;Margarita&lt;/li&gt;</code></p><br>
+      </div>
+      <div class="fragment">
+        <p>When orderIsReady is truthy: <code class="javascript">var orderIsReady = true;</code></p><br>
+        <p><code class="html">&lt;li class="ready"&gt;Margarita&lt;/li&gt;</code></p><br>
+      </div>
+  </section>
+  <section>
+    <h1>Structure Directives</h1>
+      <p>Replaces markup in the DOM (Document Object Model)</p><br>
+      <p class="fragment">NgFor is one of the more common to repeat markup from data in arrays</p><br>
+      <p class="fragment"><code class="javascript">var Drinks =  ['Margarita', 'Cosmopolitan', 'Long Island', 'Beer'];</code></p><br>
+      <p class="fragment"><code class="html">&lt;ul&gt;
+&lt;li *ngFor="let drink of drinks"&gt;
+{{drink}}
+&lt;/li&gt;
+&lt;/ul&gt;</code></p><br>
+  </section>
+</section>
+<section id="Services">
+  <section>
+    <h2>Services</h2>
+      <p class="fragment">In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.</p><br>
+      <p class="fragment">Useful for things you want to reuse and there is only 1 of. Like the menu bar.</p><br>
+  </section>
+  <section>
+    <h2>Services</h2>
+      <p class="fragment">$http is a service, $location is too and $timeout</p><br>
+      <p class="fragment">The functionality of the above can be done without angular, but why? when angular can do it for you.</p><br>
+      <p class="fragment">When making a SPA, it's best to let the framework handle it for you.</p><br>
+  </section>
+  <section>
+    <h2>Services</h2>
+      <div>
+        <p class="fragment">Create a service using the CLI:</p><br>
+        <p class="fragment"><code>ng generate service header</code></p><br>
+        <p class="fragment">Now we have 'header.service.ts'!</p><br>
+      </div>
+  </section>
+  <section>
+    <h2>Add stuff to Header/Nav Service</h2>
+      <div class="fragment">
+      <p>In the 'header.service.ts' file we just generated:</p><br>
+      <p><code data-trim data-noescape>
+import {Injectable} from '@angular/core';
+
+@Injectable()
+
+export class HeaderService {
+constructor() { }
+getNavItems() {
+<mark>return [
+{ 'path': '/about', 'name': 'About' },
+{ 'path': '/services', 'name': 'Services' },
+{ 'path': '/contact', 'name': 'Contact' }
+]</mark>
+}
+}
+      </code></p><br>
+      </div>
+  </section>
+  <section>
+    <h2>In `header.component.ts`</h2>
+      <p class="fragment"><code>import { HeaderService } from './header.service';</code></p><br>
+  </section>
+  <section>
+    <h2>In `header.component.ts`</h2>
+      <p class="fragment">Add `HeaderService` to `providers` in `@Component` metadata:
+        <code data-trim data-noescape>providers: [<mark>HeaderService</mark>]</code>
+      </p><br>
+  </section>
+  <section>
+    <h2>In `header.component.ts`</h2>
+      <p class="fragment"> Add service as argument to `constructor`:
+        <code data-trim data-noescape>constructor(<mark>private headerService: HeaderService</mark>) { }</code>
+      </p><br>
+  </section>
+  <section>
+    <h2>In `header.component.ts`</h2>
+      <p class="fragment">Update `ngOnInit()` to use method from `headerService`</p><br>
+      <p class="fragment"> Replace
+        <code data-trim data-noescape>
+getNavItems() {
+<mark>return [
+{ 'path': '/about', 'name': 'About' },
+{ 'path': '/services', 'name': 'Services' },
+{ 'path': '/contact', 'name': 'Contact' }
+]</mark>
+}
+        </code>
+      </p><br>
+      <p class="fragment"> With
+        <code data-trim data-noescape>
+ngOnInit() {
+this.navigationItems = <mark>this.headerService.getNavItems()</mark>;
+}
+        </code>
+      </p><br>
+  </section>
+</section>
+
 
 
 
