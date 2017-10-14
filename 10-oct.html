@@ -86,6 +86,12 @@
          <a href="http://www.nerdery.com" target="_blank"><img src="images/Nerdery-logo.png" alt="The Nerdery" width="80%" height="80%" style="padding-top: 30px;"/></a>
         </section>
         <section>
+         <h1>Our Sponsors</h1>
+         <br><br>
+         <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/10-oct/google_fiber.png" width="50%" height="50%" style="vertical-align: middle;"/></a>
+         &nbsp;&nbsp;<a href="http://www.dstsystems.com/" target="_blank"><img src="images/10-oct/dst.svg" width="40%" height="40%" style="vertical-align: middle;"/></a>
+        </section>
+        <section>
           <h1>Meet the C&amp;C #LadyDevs</h1>
           <br><br>
           <div style="position: fixed; left:-200px; width: 1300px">
@@ -145,11 +151,12 @@
                   <li class="fragment">How is it different from a plain old web site?</li>
                   <li class="fragment">What is AJAX and how does it relate?</li>
                   <li class="fragment">The cons of an SPA</li>
-                  <li class="fragment">Other considerations</li>
                 </ol>
               </li>
+              <li class="fragment">Other considerations</li>
               <li class="fragment">SPA frameworks &amp; libraries</li>
-              <li class="fragment">...but srsly, Angular</li>
+              <li class="fragment">...but srsly, Angular<span class="fragment"> (+ Typescript and the CLI)</span></li>
+              <li class="fragment">Angular Building Blocks</li>
               <li class="fragment">Resources</li>
             </ol>
         </section>
@@ -173,10 +180,6 @@
             <p class="fragment">Better User Experience</p>
           </section>
           <section>
-            <h1>SPA vs 'conventional' website</h1>
-            <img src="images/10-oct/spa_vs_conventional.png" height="95%" width="95%" style="margin-top:30px;"/>
-          </section>
-          <section>
             <h1>'conventional' website</h1>
             <br><br>
             <p class="fragment">Different HTML pages (files)</p><br>
@@ -184,7 +187,7 @@
             <p class="fragment">Files might share/import resources<br><div class="fragment">...but that's as good as it gets</div></p><br>
           </section>
           <section>
-            <h1>SPA</h1>
+            <h1>Single Page Application</h1>
             <p class="fragment">You use them everyday<div class="fragment">...but you probably don't know it!</div></p><br>
             <p class="fragment">Every URL updates a portion of the page</p><br>
             <p class="fragment">Obvious: Pages with scrollable sections</p><br>
@@ -192,11 +195,15 @@
             <p class="fragment">More app-like: Behaves more like an app on your PC or phone</p>
           </section>
           <section>
+            <h1>SPA vs 'conventional' website</h1>
+            <img src="images/10-oct/spa_vs_conventional.png" height="95%" width="95%" style="margin-top:30px;"/>
+          </section>
+          <section>
             <h1>AJAX &amp; Single Page Apps</h1>
             <br>
             <p class="fragment"><i>Asynchronous</i> JavaScript and JSON (or XML)</p><br>
-            <p class="fragment">Data is exchanged between browser and server to <i>in the background</i></p><br>
-            <p class="fragment">Requires Javascript to be enabled in the browser (like SPAs in general)</p><br>
+            <p class="fragment">Data is exchanged between browser and server <i>in the background</i></p><br>
+            <p class="fragment">Requires JavaScript to be enabled in the browser (like SPAs in general)</p><br>
             <p class="fragment">SPAs require the brower to retain a single page<br>even when you need server communication</p>
           </section>
           <section>
@@ -211,7 +218,7 @@
               </code>
             </p>
             <br>
-            <p class="fragment">Javascript (async)
+            <p class="fragment">JavaScript (async): use xhttp or fetch
               <code>
                 var xhttp = new XMLHttpRequest();<br>
                 xhttp.onreadystatechange = function() { ... };<br>
@@ -228,9 +235,9 @@
           </section>
           <section>
             <h1>Single Page Application Cons</h1><br>
-            <p class="fragment">Anyone browsing without Javascript enabled will not get all the functionality</p><br>
+            <p class="fragment">Anyone browsing without JavaScript enabled will not get all the functionality</p><br>
             <p class="fragment">Search Engine Optimization (SEO)</p>
-            <p class="fragment">A data or Javascript error can mean<br>you have no content for bots to crawl!</p><br>
+            <p class="fragment">A data or JavaScript error can mean<br>you have no content for bots to crawl!</p><br>
             <p class="fragment">Workarounds:<br>
             <p class="fragment">- direct bots to prerendered content<br>
             <div class="fragment">- implement cache with <a href="http://prerender.io" target="_blank">prerender.io</a></div></p>
@@ -355,11 +362,360 @@
           <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
         </section>
         <section>
-          <h2>TODO Angular here</h2>
+          <h1>Time to get Angular</h1>
+          <img src="images/10-oct/angular_fashion.jpg" height="43%" width="43%" style="margin-top:10px;"/>
+        </section>
+        <section>
+            <h1>Choosing a framework/library</h1>
+            <img src="images/10-oct/venn_diagram.png" height="85%" width="85%" style="margin-top:30px;"/>
+        </section>
+        <section>
+            <h1>Why did we choose Angular?</h1><br>
+            <p class="fragment">CLI helps scaffold our project quickly</p><br>
+            <p class="fragment">Angular is very opinionated<br><span class="fragment">so this reduces architectural decisions</span></p><br>
+            <p class="fragment">Good <a href="https://angular.io/docs" target="_blank">documentation</a></p><br>
+            <p class="fragment">Angular.js -> Angular 2 -> Angular (v4.4.4)</p>
+         </section>
+        <section>
+            <h1>Angular uses TypeScript</h1><br>
+            <p class="fragment">Made by Microsoft</p><br>
+            <p class="fragment"><span class="separate">.ts</span> file extensions instead of <span class="separate">.js</span></p><br>
+            <p class="fragment">Compiles into JavaScript</p><br>
+            <p class="fragment">Makes writing JavaScript easier</p><br>
+            <p class="fragment">Can write JavaScript in a TypeScript file<br><span class="fragment">(but not the other way around!)</span></p>
+        </section>
+        <section>
+            <h1>Why Use TypeScript?</h1>
+            <p class="fragment">
+              JavaScript is loosely typed<br>a variable's value is flexible
+              <code class="javascript">var drink = "Tom Collins";<br>drink = 3;</code>
+            </p>
+            <br>
+            <p class="fragment">
+              TypeScript provides static "types"<br>(number, string, boolean, etc)<br>for JavaScript<br>
+              <code class="typescript">var drink = "Mojito";<br>drink = true;  //ERROR!</code>
+              a variable's value is enforced
+            </p>
+        </section>
+        <section>
+            <h1>More Typescript Examples</h1>
+            <br><br>
+            <p class="fragment">
+              <a href="https://www.typescriptlang.org/play/index.html#src=function%20order(drink)%20%7B%0D%0A%20%20%20%20return%20%22I'd%20like%20a%20%22%20%2B%20drink%3B%0D%0A%7D%0D%0A%0D%0Avar%20cocktail%20%3D%20%22Missouri%20Mule%22%3B%0D%0A%0D%0Adocument.body.innerHTML%20%3D%20order(cocktail)%3B" target="_blank">a standard JavaScript example</a>
+            </p>
+            <br>
+            <p class="fragment">
+              <a href="https://www.typescriptlang.org/play/index.html#src=function%20order(drink%3A%20string)%20%7B%0D%0A%20%20%20%20return%20%22I'd%20like%20a%20%22%20%2B%20drink%3B%0D%0A%7D%0D%0A%0D%0Avar%20cocktail%20%3D%20%22Missouri%20Mule%22%3B%0D%0A%0D%0Adocument.body.innerHTML%20%3D%20order(cocktail)%3B" target="_blank">a Typescript axample with correct type</a>
+            </p>
+            <br>
+            <p class="fragment">
+              <a href="https://www.typescriptlang.org/play/index.html#src=function%20order(drink%3A%20string)%20%7B%0D%0A%20%20%20%20return%20%22I'd%20like%20a%20%22%20%2B%20drink%3B%0D%0A%7D%0D%0A%0D%0Avar%20cocktail%20%3D%20%5B%22Missouri%20Mule%22%2C%20%22Mojito%22%5D%3B%0D%0A%0D%0Adocument.body.innerHTML%20%3D%20order(cocktail)%3B" target="_blank">a Typescript axample with <font style="color:darkred">incorrect</font> type</a><br>
+              Hover over the underlined `cocktail`<br>to see error message
+            </p>
+        </section>
+        <section>
+            <h1>Angular CLI</h1>
+            <h4>(Command Line Interface)</h4>
+            <br>
+            <p class="fragment">Check out the documentation <a href="https://github.com/angular/angular-cli" target="_blank">here</a></p><br>
+            <p class="fragment">CLI does things the "right" way<br>according to Angular style guide</p><br>
+            <p class="fragment">
+              Install via npm
+              <code class="bash">npm install -g angular-cli</code>
+            </p>
+        </section>
+        <section>
+            <h1>What can we do with the CLI?</h1>
+            <br>
+            <p class="fragment">
+              Create a new project
+              <code class="bash">ng new PROJECT-NAME-HERE --routing</code>
+            </p>
+            <br>
+            <p class="fragment">
+              Serve your project<br>(so we can see it in the browser)
+              <code class="bash">ng serve</code>
+            </p>
+        </section>
+        <section>
+            <h1>What can we do with the CLI?</h1>
+            <br>
+            <p>Scaffold components, services, directives, etc.</p>
+            <br>
+            <p class="fragment">
+              Component
+              <code class="bash">ng generate component MY-NEW-COMPONENT</code>
+              <code class="bash">ng g component MY-NEW-COMPONENT</code>
+            </p>
+            <br>
+            <p class="fragment">
+              Service
+              <code class="bash">ng g service MY-NEW-SERVICE</code>
+            </p>
+        </section>
+        <section>
+            <h1>CLI Scaffolding</h1>
+            <video width="100%" height="100%" controls preload>
+                <source src="images/10-oct/scaffold.mov" type="video/mp4">
+            </video>
+        </section>
+        <section>
+            <h1>What can we do with the CLI?</h1>
+            <br>
+            <p class="fragment">
+              Build: create dist directory w/ build artifacts
+              <code class="bash">ng build</code>
+            </p>
+            <br>
+            <p class="fragment">
+              Install angular-cli-ghpages (one time only)
+              <code class="bash">npm install -g angular-cli-ghpages</code>
+            </p>
+            <br>
+            <p class="fragment">
+              Build to your GitHub repo
+              <code class="bash">ng build --prod --base-href "https://yourusername.github.io/reponame/"</code>
+            </p>
+            <br>
+            <p class="fragment">
+              And deploy!
+              <code class="bash">angular-cli-ghpages</code>
+            </p>
+        </section>
+        <section>
+          <h1>Angular Building Blocks</h1>
+          <img src="images/10-oct/assembly.jpg" height="90%" width="90%">
+        </section>
+        <section>
+            <h1>Angular2 Building Blocks</h1>
+            <br>
+            <p class="fragment" style="padding-top: 15px;">Modules</p>
+            <p class="fragment" style="padding-top: 15px;">Components</p>
+            <p class="fragment" style="padding-top: 15px;">Routing</p>
+            <p class="fragment" style="padding-top: 15px;">Templates</p>
+            <p class="fragment" style="padding-top: 15px;">Data Binding</p>
+            <p class="fragment" style="padding-top: 15px;">Directives</p>
+            <p class="fragment" style="padding-top: 15px;">Services</p>
+        </section>
+        <section>
+            <h1>Fitting it all together</h1>
+            <img src="images/10-oct/arch.png" alt="Angular2 Architecture">
+        </section>
+        <section>
+          <h1>Modules</h1>
+          <br><br>
+          <p class="fragment">Organizes your app into<br>related sections of functionality</p><br>
+          <p class="fragment">Root module is the very top<br>small apps only need one</p><br>
+          <p class="fragment">Larger apps may have feature modules - each related to specific workflow/capabilities</p>
+        </section>
+        <section>
+          <h1>Components</h1>
+          <br>
+          <p class="fragment">Every app has at least one root</p>
+          <p class="fragment">Application is a tree of components</p>
+          <img class="fragment" src="images/10-oct/component_tree.png" alt="component tree" width="65%" height="65%" />
+          <p class="fragment">Each component contains:<br>template, data, behavior</p>
+        </section>
+        <section>
+          <h1>Components</h1>
+          <img src="images/10-oct/component.png" height="46%" width="46%">
+          <code class="html">
+            &lt;quiz&gt;&lt;/quiz&gt;
+          </code>
+          <code class="typescript">
+            @Component({<br>
+            &nbsp;&nbsp;selector: 'app-quiz',<br>
+            &nbsp;&nbsp;templateUrl: './quiz.component.html',<br>
+            &nbsp;&nbsp;styleUrls: ['./quiz.component.css']<br>
+            })
+          </code>
+        </section>
+        <section>
+          <h1>Lifecycle of a Component</h1><br>
+          <p class="fragment">"Hooks" are events that signal a change in the component's lifecycle</p><br>
+          <p class="fragment" style="text-align: left;">Main lifecycle hook is ngOnInit</p> 
+          <ul>
+            <li class="fragment" style="text-align: left;">called once shortly after Angular creates the component</li>
+            <li class="fragment" style="text-align: left;">commonly used for fetching the initial data needed for the component</li>
+          </ul>
+          <br>
+          <br>
+          <p class="fragment">Read more <a href="https://angular.io/guide/lifecycle-hooks" target="_blank">here</a></p>
+        </section>
+        <section>
+            <h1>Routing</h1><br>
+            <p class="fragment">Tells your application what to display for a URL</p><br>
+            <p class="fragment">Main homepage route is '/'</p><br>
+            <p class="fragment">Angular CLI adds the homepage route</p>
+            <p class="fragment">...but we have to add the other routes</p><br>
+            <p class="fragment">Other route examples:<br>'/about' or '/profile/:username'</p><br>
+            <p class="fragment">View more on routing <a href="https://angular.io/guide/router" target="_blank">here</a></p>
+        </section>
+        <section>
+          <code style="font-size: 0.45em; margin: 0;">
+import { NgModule } from '@angular/core';<br>
+import { Routes, RouterModule } from '@angular/router';<br>
+import { UserProfileComponent } from './profile/profile.component';<br>
+import { AllMeetupsComponent } from './meetups/meetups.component';<br>
+import { LocalMeetupsComponent } from './local/local.component';<br>
+import { HomeComponent } from './home/home.component';<br>
+import { PageNotFoundComponent } from './404/404.component';<br><br>
+const routes: Routes = [<br>
+&nbsp;&nbsp;{ path: 'profile/:username', component: UserProfileComponent },<br>
+&nbsp;&nbsp;{ path: 'meetups', component: AllMeetupsComponent},<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;path: 'meetups-local',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;component: LocalMeetupsComponent,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data: { zipcode: 64155 }<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;{ path: '', component: HomeComponent },<br>
+&nbsp;&nbsp;{ path: '**', component: PageNotFoundComponent }<br>
+];<br><br>
+@NgModule({<br>
+&nbsp;&nbsp;imports: [RouterModule.forRoot(routes)],<br>
+&nbsp;&nbsp;exports: [RouterModule]<br>
+})<br>
+export class AppRoutingModule { }
+          </code>
+        </section>
+        <section>
+          <p class="fragment">
+            Use routerLink in HTML to navigate to a route
+            <code>
+              &lt;a routerLink="/contact-us"&gt;Contact Page&lt;/a&gt;
+            </code>
+          </p>
+          <br>
+          <p class="fragment">
+            Add a class when the link is active
+            <code style="font-size: 0.45em; margin: 0;">
+              &lt;a routerLink=&quot;/contact-us&quot; routerLinkActive=&quot;active&quot;&gt;Contact Page&lt;/a&gt;
+            </code>
+          </p>
+          <br>
+          <p class="fragment">
+            Navigate in JavaScript (TypeScript)
+            <code>
+              this.router.navigate(['/profile', user.name]);
+            </code>
+          </p>
+          <br>
+          <p class="fragment">
+            SwitchMap gets ahold of variables from the URL
+            <code>
+              profile/:username
+            </code>
+          </p>
+        </section>
+        <section>
+          <h1>Templates are written in HTML</h1>
+          <div class="fragment">
+            <p>
+              Cannot use:
+              <code class="html">&lt;script&gt;&lt;html&gt;&lt;body&gt;&lt;base&gt;</code>
+            </p>
+            <br>
+            <p class="fragment">
+              In the *.component.ts file, multi-line / inline:<br>
+              <code class="typescript" style="font-size: 0.45em;">template: `&lt;div&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;Hey, my name's Microsoft. Can I crash at your place tonight?&lt;/p&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;{{myObviousAnswer}}&lt;/p&gt;<br>
+    &lt;/div&gt;`</code>
+            </p><br>
+            <p class="fragment">
+              ...or in a separate HTML file:
+              <code class="typescript">templateUrl: './header.component.html'</code>
+            </p>
+        </section>
+      <section>
+        <h1>Interpolation</h1>
+        <p class="fragment">An expression that Angular evaluates and converts to a string.</p><br>
+        <p class="fragment">Surrounded by double curly braces: {{ }}</p><br>
+        <code class="typescript fragment">{{valueHere}}</code>
+        <code class="typescript fragment">{{animal.name}}</code>
+        <code class="typescript fragment">{{3 + 5}}</code>
+        <code class="html fragment">&lt;p&gt;My age is {{getMyAge() - 5}}&lt;/p&gt;<br>&lt;!-- My age is 21 --&gt;</code>
+      </section>
+      <section>
+        <h1>Data Binding</h1>
+        <br>
+        <p class="fragment">Pass data around your application in either:
+          <ul>
+            <li class="fragment" style="padding-left: 20px;">- one-direction (component -> view)</li>
+            <li class="fragment" style="padding-left: 20px;">- bi-direction (logic <-> component)</li>
+          </ul>
+        </p>
+        <br><br>
+        <p class="fragment">The way data is <i>bound</i> depends on syntax</p>
+      </section>
+      <section>
+        <h1>Data Binding</h1>
+          <br>
+          <p class="fragment">
+            {{ }} data is sent to the view from the component
+          </p>
+          <code class="fragment">&lt;p&gt;My dog's name is {{user.dogsName}}&lt;/p&gt;</code>
+          <p class="fragment">
+            This is typically where you'd use text in HTML
+          </p>
+          <br>
+          <p class="fragment">
+            [ ] is a value taken from the component<br>and displayed in the view
+          </p>
+          <code class="fragment">&lt;input [value]="user.firstName"&gt;</code>
+          <p class="fragment">
+            This is typically seen on attributes<br>in HTML template elements
+          </p>
+      </section>
+      <section>
+        <h1>Data Binding</h1>
+          <p class="fragment">
+            ( ) is a value taken from the view and passed to the component (user interaction w/ the page)
+          </p>
+          <code class="fragment">&lt;button (click)="delete()"&gt;Delete&lt;/button&gt;</code>
+          <p class="fragment">
+            This is typically seen on attributes<br>in template elements
+          </p>
+          <br>
+          <p class="fragment">
+            [( )] is a bi-directional way to bind (share) data
+          </p>
+          <code class="fragment">&lt;input [(ngModel)]="user.dogsName"&gt;</code>
+          <p class="fragment">
+            Takes data from the view and passes it to the component (&amp; vice versa)
+          </p>
+      </section>
+      <section>
+        <h1>Adding data to a component</h1><br>
+        <p class="fragment">Start with a model: a structured way of representing an object</p><br>
+        <p class="fragment">Import the model to the component</p><br>
+        <p class="fragment">Setup or fetch initial data in OnInit, one of the component's lifecycle hooks</p><br>
+        <p class="fragment">Finally, write HTML for the template</p>
+      </section>
+      <section>
+        <h1>Attribute Directives</h1>
+        <br>
+        <p class="fragment">Dynamically applies attribute values<br>to HTML based on data</p><br>
+        <p class="fragment">Changes the appearance/behavior<br>of that element</p><br>
+        <p class="fragment">NgClass and NgFor are commonly used attribute directives</p><br>
+        <p class="fragment">Replaces markup in the DOM</p>
+      </section>
+      <section>
+        <h1>Services</h1>
+        <br>
+        <p class="fragment">A function or object that is available for<br>(and limited to) your Angular app</p><br>
+        <p class="fragment">Singular, reusable things like the menu bar</p><br>
+        <p class="fragment">$http, $location, and $timeout<br>are common services</p><br>
+        <p class="fragment">Use the CLI to make a service for you:<br>
+          <code class="fragment">ng generate service header</code>
+        </p>
+      </section>
+        <section>
+          <h1>You've gotta start somewhere</h1>
+          <img src="images/10-oct/assembly2.jpg" height="100%" width="100%"/>
         </section>
         <section>
           <h1>More Resources</h1><br>
-
           <p><a href="https://medium.com/@gajus/pre-rendering-spa-for-seo-and-improved-perceived-page-loading-speed-47075aa16d24" target="_blank">Another pre-render SEO solution</a></p>
           <br>
           <p><a href="https://angular.io" target="_blank">Angular.io</a></p>
@@ -369,10 +725,10 @@
           <br>
           <p><a href="http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html" target="_blank">Dependency injection</a></p>
           <br>
-          <p><a href=" https://www.typescriptlang.org" target="_blank">TypeScript</a></p>
+          <p><a href=" https://www.typescriptlang.org" target="_blank">typescriptlang.org</a></p>
         </section>
         <section>
-          <h2>Questions?</h2>
+          <h1>Questions?</h1>
           <img src="images/10-oct/questions.gif" alt="Questions" height="100%" width="100%"/>
         </section>
         <section>
@@ -383,7 +739,7 @@
             <li class="fragment">Take the <a href="http://bit.ly/CnCPostSurvey" target="_blank">Survey</a></li>
             <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
             <li class="fragment">Finish <a href="http://bit.ly/CnCOctWork" target="_blank">tonight's worksheet</a></li>
-            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Single Page Applications+tutorial" target="_blank">online tutorial on </a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Single Page Applications+tutorial" target="_blank">online tutorial</a></li>
             <li class="fragment">Register for <a href="https://www.eventbrite.com/e/coding-cocktails-november-tickets-37230099229" target="_blank">next month's event</a></li>
           </ol>
           <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: fixed; bottom: -150px; right: -70px;" max-height="60%" max-width="60%"/>
