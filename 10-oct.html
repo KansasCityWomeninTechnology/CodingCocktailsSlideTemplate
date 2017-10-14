@@ -601,52 +601,36 @@ export class AppRoutingModule { }
             </code>
           </p>
         </section>
-
-
-
-<section id="templates">
-  <section>
-    <h1>Templates</h1>
-      <p>Written in HTML</p><br>
-      <div class="fragment">
-        <p>Cannot use:</p><br>
-        <p><code class="html">&lt;script&gt;&lt;html&gt;&lt;body&gt;&lt;base&gt;</code></p><br>
-      </div>
-      <p class="fragment">Template specified in *.component.ts file
+        <section>
+          <h1>Templates are written in HTML</h1>
           <div class="fragment">
-            <p>Multi-line Inline Template</p><br>
-            <p><code class="typescript">template: `&lt;div&gt;
-&lt;p&gt;Hey, my name's Microsoft. Can I crash at your place tonight?&lt;/p&gt;
-&lt;p&gt;{{myObviousAnswer}}&lt;/p&gt;
-&lt;/div&gt;`</code></p><br>
-          </div>
-          <div class="fragment">
-            <p>Individual HTML File</p><br>
-            <p><code class="typescript">templateUrl: './header.component.html'</code></p><br>
-          </div>
-      </p><br>
-  </section>
-  <section>
-    <h1>Templates</h1>
-      <p class="fragment">Add a component to your template:</p><br>
-      <div class="fragment">
-        <p>In the *.component.ts file a selector is defined in the component's metadata:</p><br>
-        <code class="typescript data-noescape">@Component({</code>
-        <code class="typescript fragment">  selector: 'app-quiz',</code>
-<code class="typescript fragment">  templateUrl: './quiz.component.html',
-styleUrls: ['./quiz.component.css']
-})</code>
-      </div>
-      <p class="fragment">Add the selector to the parent component's template (app.component.ts):
-        <code class="html">&lt;app-quiz&gt;&lt;/app-quiz&gt;</code></p><br>
-      <p class="fragment">That markup in the parent template gets replaced with the contents of quiz.component.html</p><br>
-  </section>
-  <section>
-    <h1>Interpolation</h1>
-    <p>An expression that Angular evaluates and converts to a string.  Surrounded by double curly braces: <span class="separate">{{ }}</span></p>
-    <code class="typescript fragment">{{3 + 5}} // 8</code>
-      <code class="html fragment">&lt;p&gt;My age is {{getMyAge() - 5}}&lt;/p&gt; &lt;!-- My age is 21 --&gt;</code>
-  </section>
+            <p>
+              Cannot use:
+              <code class="html">&lt;script&gt;&lt;html&gt;&lt;body&gt;&lt;base&gt;</code>
+            </p>
+            <br>
+            <p class="fragment">
+              In the *.component.ts file, multi-line / inline:<br>
+              <code class="typescript" style="font-size: 0.45em;">template: `&lt;div&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;Hey, my name's Microsoft. Can I crash at your place tonight?&lt;/p&gt;<br>
+    &nbsp;&nbsp;&lt;p&gt;{{myObviousAnswer}}&lt;/p&gt;<br>
+    &lt;/div&gt;`</code>
+            </p><br>
+            <p class="fragment">
+              ...or in a separate HTML file:
+              <code class="typescript">templateUrl: './header.component.html'</code>
+            </p>
+        </section>
+      <section>
+        <h1>Interpolation</h1>
+        <p class="fragment">An expression that Angular evaluates and converts to a string.</p><br>
+        <p class="fragment">Surrounded by double curly braces: {{ }}</p><br>
+        <code class="typescript fragment">{{valueHere}}</code>
+        <code class="typescript fragment">{{animal.name}}</code>
+        <code class="typescript fragment">{{3 + 5}}</code>
+        <code class="html fragment">&lt;p&gt;My age is {{getMyAge() - 5}}&lt;/p&gt;<br>&lt;!-- My age is 21 --&gt;</code>
+      </section>
+
   <section>
     <h1>Special syntax</h1>
     <h4>Property Binding</h4>
@@ -657,7 +641,13 @@ styleUrls: ['./quiz.component.css']
     <code class="html fragment">&lt;!-- orderIsReady = false --&gt;
 &lt;li&gt;Margarita&lt;/li&gt;</code>
   </section>
-</section>
+
+
+
+
+
+
+
 <section id="data-binding">
   <section>
     <h1>Data Binding</h1>
