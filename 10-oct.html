@@ -510,31 +510,98 @@
           <img class="fragment" src="images/10-oct/component_tree.png" alt="component tree" width="65%" height="65%" />
           <p class="fragment">Each component contains:<br>template, data, behavior</p>
         </section>
+        <section>
+          <h1>Components</h1>
+            <img src="images/10-oct/component.png" height="46%" width="46%">
+            <code class="html">
+              &lt;quiz&gt;&lt;/quiz&gt;
+            </code>
+            <code class="typescript">
+              @Component({<br>
+              &nbsp;&nbsp;selector: 'app-quiz',<br>
+              &nbsp;&nbsp;templateUrl: './quiz.component.html',<br>
+              &nbsp;&nbsp;styleUrls: ['./quiz.component.css']<br>
+              })
+            </code>
+        </section>
+        <section>
+          <h1>Lifecycle of a Component</h1><br>
+          <p class="fragment">"Hooks" are events that signal a change in the component's lifecycle</p><br>
+          <p class="fragment" style="text-align: left;">Main lifecycle hook is ngOnInit</p> 
+          <ul>
+            <li class="fragment" style="text-align: left;">called once shortly after Angular creates the component</li>
+            <li class="fragment" style="text-align: left;">commonly used for fetching the initial data needed for the component</li>
+          </ul>
+          <br>
+          <br>
+          <p class="fragment">Read more <a href="https://angular.io/guide/lifecycle-hooks" target="_blank">here</a></p>
+        </section>
+        <section>
+            <h1>Routing</h1><br>
+            <p class="fragment">Tells your application what to display for a URL</p><br>
+            <p class="fragment">Main homepage route is '/'</p><br>
+            <p class="fragment">Angular CLI adds the homepage route</p>
+            <p class="fragment">...but we have to add the other routes</p><br>
+            <p class="fragment">Other route examples:<br>'/about' or '/profile/:username'</p><br>
+            <p class="fragment">View more on routing <a href="https://angular.io/guide/router" target="_blank">here</a></p>
+        </section>
+        <section>
+          <code style="font-size: 0.45em; margin: 0;">
+import { NgModule } from '@angular/core';<br>
+import { Routes, RouterModule } from '@angular/router';<br>
+import { UserProfileComponent } from './profile/profile.component';<br>
+import { AllMeetupsComponent } from './meetups/meetups.component';<br>
+import { LocalMeetupsComponent } from './local/local.component';<br>
+import { HomeComponent } from './home/home.component';<br>
+import { PageNotFoundComponent } from './404/404.component';<br><br>
+const routes: Routes = [<br>
+&nbsp;&nbsp;{ path: 'profile/:username', component: UserProfileComponent },<br>
+&nbsp;&nbsp;{ path: 'meetups', component: AllMeetupsComponent},<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;path: 'meetups-local',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;component: LocalMeetupsComponent,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data: { zipcode: 64155 }<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;{ path: '', component: HomeComponent },<br>
+&nbsp;&nbsp;{ path: '**', component: PageNotFoundComponent }<br>
+];<br><br>
+@NgModule({<br>
+&nbsp;&nbsp;imports: [RouterModule.forRoot(routes)],<br>
+&nbsp;&nbsp;exports: [RouterModule]<br>
+})<br>
+export class AppRoutingModule { }
+          </code>
+        </section>
+        <section>
+          <p class="fragment">
+            Use routerLink in HTML to navigate to a route
+            <code>
+              &lt;a routerLink="/contact-us"&gt;Contact Page&lt;/a&gt;
+            </code>
+          </p>
+          <br>
+          <p class="fragment">
+            Add a class when the link is active
+            <code style="font-size: 0.45em; margin: 0;">
+              &lt;a routerLink=&quot;/contact-us&quot; routerLinkActive=&quot;active&quot;&gt;Contact Page&lt;/a&gt;
+            </code>
+          </p>
+          <br>
+          <p class="fragment">
+            Navigate in JavaScript (TypeScript)
+            <code>
+              this.router.navigate(['/profile', user.name]);
+            </code>
+          </p>
+          <br>
+          <p class="fragment">
+            SwitchMap gets ahold of variables from the URL
+            <code>
+              profile/:username
+            </code>
+          </p>
+        </section>
 
-
-
-
-
-
-  <section>
-    <h1>Components</h1>
-      <br>
-      <code class="html">
-        &lt;cocktail-list&gt;&lt;/cocktail-list&gt;
-      </code>
-      <br>
-      <code class="typescript">
-        @Component({<br>
-        &nbsp;&nbsp;selector: 'app-quiz',<br>
-        &nbsp;&nbsp;templateUrl: './quiz.component.html',<br>
-        &nbsp;&nbsp;styleUrls: ['./quiz.component.css']<br>
-        })
-      </code>
-  </section>
-  <section>
-    <h1>Components</h1>
-    <img style="display: block; margin: 15px auto;" src="images/10-oct/component.png" alt="Component Code Structure">
-  </section>
 
 
 <section id="templates">
