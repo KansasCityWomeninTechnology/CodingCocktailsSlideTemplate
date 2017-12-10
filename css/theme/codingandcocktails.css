@@ -31,10 +31,24 @@ p.power {
   font-family: "Vtks-LongTime";
 }
 
+img.teammembers {
+  margin: 5px 0 0 0 !important;
+}
+h6.teammembers {
+  font-size: 0.48em !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+p.teammembers {
+  font-size: 0.42em !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
 .reveal {
   font-family: "Lato", "Helvetica", Arial, sans-serif;
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.02em;
   color: #ffffff; }
 
