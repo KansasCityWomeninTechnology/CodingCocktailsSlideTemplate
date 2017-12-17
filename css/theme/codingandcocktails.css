@@ -15,6 +15,38 @@
   src: local("Vtks-LongTime"), url("fonts/Vtks-LongTime.ttf") format("truetype"); }
 
 /*********************************************
+ * REVEAL.JS - Override the CSS layout https://github.com/hakimel/reveal.js/issues/180
+ *********************************************/
+.reveal .slides {
+  background-color: orange;
+  height: 100% !important;
+  top: 0 !important;
+  margin-top: 16px !important;
+}
+
+.reveal .slides>section {
+  background-color: blue;
+  height:100% !important;
+}
+
+.reveal .slides>section>section {
+  background-color: brown;
+  height:100% !important;
+}
+
+div.fill {
+  background-color: green;
+  height:88%;
+  align: center;
+}
+
+table.fill {
+  background-color: yellow;
+  width:90%;
+  margin: 0 auto;
+}
+
+/*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
@@ -29,6 +61,12 @@ body {
 
 p.power {
   font-family: "Vtks-LongTime";
+}
+
+span.teammembers {
+  display: inline-block;
+  /*width: 246px;*/
+  vertical-align: top;
 }
 
 img.teammembers {
@@ -108,7 +146,7 @@ table.tocTable {
  * HEADERS
  *********************************************/
 .reveal h1 {
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
   font-size: 1.1em;
@@ -159,6 +197,12 @@ table.tocTable {
   font-size: 0.6em;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+
+.reveal p {
+  color: #ffffff;
+  font-family: "Lato-Bold", Impact, sans-serif;
+  font-size: 0.8em;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 /*********************************************
