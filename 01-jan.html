@@ -68,9 +68,12 @@
            <img src="images/logo-large.png" alt="Coding &amp; Cocktails"/>
          </div>
         </section>
-
-<!-- TODO: sponsors slide -->
-
+        <section>
+         <h1>Our Sponsors</h1>
+         <br><br>
+         <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/google_fiber.png" width="45%" style="vertical-align:middle;"/></a>
+         <a href="http://www.dstsystems.com/" target="_blank"><img src="images/dst.svg" width="35%" style="vertical-align:middle;"/></a>
+        </section>
         <section>
          <h1>Our Host this Evening</h1>
          <div class="fill-row">
@@ -130,33 +133,44 @@
           </div>
           <div>
         </section>
-
-<!-- TODO: managing expectations slide.  Also rework the agenda below -->
-
+        <section>
+          <div style="margin-bottom: 20px;"></div>
+          <p class="fragment current-visible" style="margin-top: 300px;">Why are you here?</p>
+          <img src="images/01-jan/guitar-1.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-2.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-3.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-4.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-5.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-6.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-7.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-8.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-9.jpg" class="fragment current-visible" height="90%"/>
+          <img src="images/01-jan/guitar-10.jpg" class="fragment current-visible" height="90%"/>
+        </section>
         <section>
           <h1>Tonight's Agenda: HTML</h1>
-          <ol>
+          <ol style="margin-left: 40px;">
             <li class="fragment">The Basics
               <ol style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">What is HTML</li>
-                <li class="fragment">Syntax</li>
-                <li class="fragment">Tags</li>
-                <li class="fragment">HTML5</li>
-                <li class="fragment">Standards &amp; Best Practices</li>
-                <li class="fragment">Debugging</li>
+                <li class="fragment">What is HTML &amp; How do you write it?</li>
+                <li class="fragment">Syntax &amp; Structure</li>
+                <li class="fragment">Tags (old and new)</li>
               </ol>
             </li>
             <li class="fragment">Attributes</li>
-            <li class="fragment">Tables</li>
+            <li class="fragment">Standards &amp; Best Practices</li>
+            <li class="fragment">Inspecting Source</li>
+            <li class="fragment">Images</li>
             <li class="fragment">Forms</li>
+            <li class="fragment">Tables</li>
             <li class="fragment">The DOM</li>
           </ol>
         </section>
 
-<!-- parts 1-2 -->
+<!-- part 1-->
         <section>
           <h1>The Basics</h1>
-          <img src="images/01-jan/basics.jpg" height="84%" alt="Basics"/>
+          <img src="images/01-jan/basics.jpg" height="80%" alt="Basics"/>
         </section>
         <section>
           <h1>What is HTML?</h1>
@@ -169,6 +183,10 @@
           </p>
           <br>
           <p class="fragment">
+            Most fundamental building block of web pages
+          </p>
+          <br>
+          <p class="fragment">
             Describes how the content is displayed
           </p>
           <br>
@@ -177,15 +195,51 @@
           </p>
         </section>
         <section>
-          <h1>HTML Syntax</h1>
+          <h1>How do you write HTML?</h1>
           <br><br>
+          <p class="fragment">
+            Create a .html file
+          </p>
+          <br>
+          <p class="fragment">
+            HTML is a markup language
+          </p>
+          <br>
+          <p class="fragment">
+            Markup and code is written/edited<br>in an IDE (like Atom)
+          </p>
+          <br>
+          <p class="fragment">
+            <font style="color:#c7bc75">I</font>ntegrated
+            <font style="color:#c7bc75">D</font>evelopment
+            <font style="color:#c7bc75">E</font>nvironment
+          </p>
+        </section>
+        <section>
+          <h1>Why use an IDE?</h1>
+          <br><br>
+          <p class="fragment">
+            Syntax highlighting helps you "see" the code<br>with colors &amp; other visual cues
+          </p>
+          <br>
+          <p class="fragment">
+            Linters help you avoid mistakes<br>by highlighting them
+          </p>
+          <br>
+          <p class="fragment">
+            Auto-complete "guesses"<br>what you might want to type next
+          </p>
+        </section>
+        <section>
+          <h1>HTML Syntax</h1>
+          <br>
           <p class="fragment">
             HTML is a standard set of "tags"
           </p>
           <br><br>
           <p class="fragment">
             Open/Close tags
-            <code>&lt;div&gt;&lt;/div&gt;</code>
+            <code>&lt;p&gt;Hey girl&lt;/p&gt;</code>
           </p>
           <br>
           <p class="fragment">
@@ -195,8 +249,8 @@
         </section>
         <section>
           <br>
-          <img src="images/01-jan/gosling.gif" alt="Hey Girl" height="76%"/>
           <p>Hey girl</p>
+          <img src="images/01-jan/gosling.gif" alt="Hey Girl" height="76%"/>
         </section>
         <section>
           <h1>HTML Structure</h1>
@@ -205,13 +259,14 @@
             Every HTML page requires 4 tags:
           </p>
           <br>
-            <code class="fragment" data-fragment-index="1">&lt;!DOCTYPE html&gt;
+          <div class="fill-row" style="align-items: flex-start;">
+            <code class="fragment" data-fragment-index="1" style="flex: none; flex-basis: 50%; vertical-align: top;">&lt;!DOCTYPE html&gt;
               <div class="fragment" data-fragment-index="2">&lt;html&gt;</div>
                 <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt;</div>
                 <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&lt;body&gt;...&lt;/body&gt;</div>
               <div class="fragment" data-fragment-index="2">&lt;/html&gt;</div>
             </code>
-          </pre>
+          </div>
         </section>
         <section>
           <h1>HTML Tags</h1><br>
@@ -223,11 +278,17 @@
               <div class="fragment" data-fragment-index="3">&lt;h6&gt;A Fruity Twist on a Classic Cocktail&lt;/h6&gt;</div>
               <div class="fragment" data-fragment-index="4">&lt;p&gt;This is one of my favorites!&lt;/p&gt;</div>
               <div class="fragment" data-fragment-index="5">
-                &lt;ol&gt;<br>
-                  &nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
-                  &nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
-                  &nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
-                &lt;/ol&gt;
+                &lt;div&gt;<br>
+                <div class="fragment" data-fragment-index="6">
+                  &nbsp;&nbsp;&lt;ol&gt;<br>
+                  <div class="fragment" data-fragment-index="7">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
+                  </div>
+                  &nbsp;&nbsp;&lt;/ol&gt;<br>
+                </div>
+                &lt;/div&gt;<br>
               </div>
             </code>
         </section>
@@ -238,37 +299,17 @@
             <h1>Watermelon Moscow Mule</h1>
             <h6>A Fruity Twist on a Classic Cocktail</h6>
             <p>This is one of my favorites!</p><br>
-            <ol>
-              <li>Watermelon</li>
-              <li>Vodka</li>
-              <li>Lime juice</li>
-            </ol>
+            <div>
+              <ol>
+                <li>Watermelon</li>
+                <li>Vodka</li>
+                <li>Lime juice</li>
+              </ol>
+            </div>
           </div>
         </section>
         <section>
-          <div>
-            <br>
-            <div style="position: fixed;top: 50px; left:0px; font-style: italic; font-size: 22px; background-color: hotpink;">Don't forget the garnish!</div><br>
-            <h1 style="color: hotpink">Watermelon Moscow Mule</h1>
-            <h6 style="font-family: Impact; font-size: 48px; color: #d4edb6">A Fruity Twist on a Classic Cocktail</h6>
-            <p style="font-size: 32px;">This is one of my favorites!</p>
-            <ol style="list-style-image: url('images/list-item.png');">
-              <li>Watermelon</li>
-              <li>Vodka</li>
-              <li>Lime juice</li>
-            </ol>
-          </div>
-        </section>
-
-
-
-<!-- part 3 -->
-
-        <section>
-          <h1>HTML Tags</h1><br>
-          <p class="fragment" data-fragment-index="0">
-            A few more...
-          </p>
+          <h1>A few more...</h1><br>
           <code class="fragment" data-fragment-index="1">&lt;a href="http://www.pinterest.com" target="_blank"&gt;
             <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;Go to Pinterest</div>
             <div class="fragment" data-fragment-index="1">&lt;/a&gt;</div>
@@ -311,10 +352,144 @@
             </div>
           </div>
         </section>
-<!-- TODO: need part 4 ? -->
-<!-- part 5 -->
+<!-- break slide -->
         <section>
-          <h1>Debugging Tools</h1><br><br>
+          <h1 class="break">Do the Worksheet: Part 1</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCJanSlides" target="_blank">http://bit.ly/CnCJanSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCJanWork" target="_blank">http://bit.ly/CnCJanWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line">
+              <span class="row-line"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+          </div>
+        </section>
+<!-- part 2 -->
+        <section>
+          <h1>HTML Tags (Revisited)</h1><br>
+          <p class="fragment" data-fragment-index="0">
+            These tags got you started...
+          </p>
+            <code class="fragment" style="width: 100%;" data-fragment-index="1">&lt;div&gt;Don't forget the garnish!&lt;/div&gt;
+              <div class="fragment" data-fragment-index="2">&lt;h1&gt;Watermelon Moscow Mule&lt;/h1&gt;</div>
+              <div class="fragment" data-fragment-index="3">&lt;h6&gt;A Fruity Twist on a Classic Cocktail&lt;/h6&gt;</div>
+              <div class="fragment" data-fragment-index="4">&lt;p&gt;This is one of my favorites!&lt;/p&gt;</div>
+              <div class="fragment" data-fragment-index="5">
+                &lt;div&gt;<br>
+                <div class="fragment" data-fragment-index="6">
+                  &nbsp;&nbsp;&lt;ol&gt;<br>
+                  <div class="fragment" data-fragment-index="7">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
+                  </div>
+                  &nbsp;&nbsp;&lt;/ol&gt;<br>
+                </div>
+                &lt;/div&gt;<br>
+              </div>
+            </code>
+        </section>
+        <section>
+          <div>
+            <br>
+            <div>Don't forget the garnish!</div>
+            <h1>Watermelon Moscow Mule</h1>
+            <h6>A Fruity Twist on a Classic Cocktail</h6>
+            <p>This is one of my favorites!</p><br>
+            <div>
+              <ol>
+                <li>Watermelon</li>
+                <li>Vodka</li>
+                <li>Lime juice</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <br>
+            <div style="position: fixed;top: 50px; left:0px; font-style: italic; font-size: 22px; background-color: hotpink;">Don't forget the garnish!</div><br>
+            <h1 style="color: hotpink">Watermelon Moscow Mule</h1>
+            <h6 style="font-family: Impact; font-size: 48px; color: #d4edb6">A Fruity Twist on a Classic Cocktail</h6>
+            <p style="font-size: 32px;margin-bottom: 20px;">This is one of my favorites!</p>
+            <div style="background-color:lightpink; padding: 2px 80px;">
+              <ol style="list-style-image: url('images/list-item.png'); ">
+                <li>Watermelon</li>
+                <li>Vodka</li>
+                <li>Lime juice</li>
+              </ol>
+            </div>
+          </div>
+          <br><code class="fragment" style="width: 100%;">&lt;h1 class="fancy-title"&gt;Watermelon Moscow Mule&lt;/h1&gt;</code>
+        </section>
+        <section>
+          <h1>Attributes</h1><br>
+          <p class="fragment">Values added to HTML elements<br>that configure the element</p><br>
+          <p class="fragment">Only in the opening tag</p><br>
+          <code class="fragment">&lt;a <font style="color:#a3a457">href</font>="tiag.com"&gt;&lt;/a&gt;<br>
+            <div class="fragment">&lt;img <font style="color:#a3a457">src</font>="images/whatevs.gif"/&gt;</div>
+            <div class="fragment">&lt;header <font style="color:#a3a457">class</font>="site-header"&gt;&lt;/header&gt;</div>
+          </code>
+          <br>
+          <p class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank"><font style="font-size: 36px">https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes</font></a></p>
+        </section>
+        <section>
+          <h1>Best Practices &amp; Standards</h1><br>
+          <p class="fragment" data-fragment-index="0">
+            Don't forget the following...
+          </p>
+          <code class="fragment" data-fragment-index="1">&lt;!--
+            <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;This is a comment</div>
+            <div class="fragment" data-fragment-index="1">--&gt;</div>
+          </code>
+          <div style="padding-top: 30px;">
+            <code class="fragment" data-fragment-index="3" style="color: green;">&lt;p&gt;&lt;/p&gt;<div class="fragment" data-fragment-index="4" style="color: red;">&lt;P&gt;&lt;/P&gt;</div></code>
+          </div>
+          <div style="padding-top: 30px;">
+            <code class="fragment" data-fragment-index="5" style="color: green;">&lt;p&gt;A whole paragraph!&lt;/p&gt;<div class="fragment" data-fragment-index="6" style="color: red;">&lt;p&gt;Ruh roh, now everything's a paragraph</div></code>
+          </div>
+        </section>
+        <section>
+            <h1>More Good Things</h1><br>
+            <p class="fragment" data-fragment-index="0">
+              Indentation FTW
+            </p>
+            <code class="fragment" data-fragment-index="1" style="color: green;">
+              &lt;div&gt;<br>
+                &nbsp;&nbsp;&lt;ol&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;/ol&gt;<br>
+              &lt;/div&gt;<br>
+              <div class="fragment" data-fragment-index="2" style="color: red;">
+                &lt;div&gt;<br>
+                  &lt;ol&gt;<br>
+                    &lt;li&gt;Watermelon&lt;/li&gt;<br>
+                    &lt;li&gt;Vodka&lt;/li&gt;<br>
+                    &lt;li&gt;Lime juice&lt;/li&gt;<br>
+                  &lt;/ol&gt;<br>
+                &lt;/div&gt;<br>
+              </div>
+          </code>
+        </section>
+        <section>
+          <h1>Debugging Tools</h1><br>
           <p class="fragment">Chrome Developer Tools</p>
           <p class="fragment" style="font-size: 6.5vh;">( ctrl + shift + i  /  cmd + opt + i )</p><br>
           <p class="fragment"><a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a></p><br>
@@ -327,30 +502,79 @@
           <img src="images/01-jan/screen2.png" class="fragment" width="88%"/>
           <p class="fragment">A good example: <a href="http://www.tiag.com" target="_blank">tiag.com</a></p>
         </section>
+<!-- break slide -->
         <section>
-          <h1>When you're stuck</h1><br><br>
-          <p class="fragment">Use a validator</p><br>
-          <p class="fragment">Look for missing end tags (indent!)</p><br>
-          <p class="fragment">Peers, co-workers, KCWiT Slack</p><br>
-          <p class="fragment"><a href="http://stackoverflow.com" target="_blank"/>stackoverflow.com</a></p><br>
+          <h1 class="break">Do the Worksheet: Part 2</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCJanSlides" target="_blank">http://bit.ly/CnCJanSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCJanWork" target="_blank">http://bit.ly/CnCJanWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line">
+              <span class="row-line"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+          </div>
         </section>
+<!-- break slide -->
         <section>
-          <br>
-          <img src="images/01-jan/not-worthy.gif" height="80%" />
-          <p>The Google</p>
+          <h1 class="break">Do the Worksheet: Part 2</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCJanSlides" target="_blank">http://bit.ly/CnCJanSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCJanWork" target="_blank">http://bit.ly/CnCJanWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line">
+              <span class="row-line"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+          </div>
         </section>
-
-
-
-
-
-
-<!-- part 6-7 -->
+<!-- part 3 -->
         <section>
           <h1>Images</h1>
           <br>
           <p class="fragment">
             <code class="fragment">&lt;img src="images/lyndsey-scott.png" alt="Beauty AND Brains" /&gt;</code>
+          </p>
+          <br>
+          <p class="fragment">
+            Alt tags for accessibility and SEO
+          </p>
+          <br>
+          <p class="fragment">
+            Accessibility removes barriers that prevent interaction with (or access to) web sites by people with disabilities.
+          </p><br>
+          <p class="fragment">
+            <font style="color:#c7bc75">S</font>earch
+            <font style="color:#c7bc75">E</font>ngine
+            <font style="color:#c7bc75">O</font>ptimization
           </p>
         </section>
         <section>
@@ -361,137 +585,6 @@
         <section>
           <img src="images/01-jan/code-made-cool.jpg" alt="Code Made Cool" height="90%" />
         </section>
-        <section>
-          <h1>Tables</h1><br>
-          <p class="fragment">Headers, columns, rows<br>(like an excel spreadsheet)</p>
-          <p class="fragment"><img src="images/01-jan/spreadsheet.jpg" width="70%"/></p>
-        </section>
-        <section>
-          <h1>The Dark Ages</h1>
-          <p class="fragment" style="font-size:6.5vh;">Prior to CSS, &lt;table&gt; elements<br>were used to create layout</p>
-          <img class="fragment" height="70%" src="images/01-jan/the-horror.gif"/>
-        </section>
-        <section>
-          <h1>A Table Layout</h1>
-          <img src="images/01-jan/nested-table.png" height="80%"/>
-        </section>
-        <section>
-          <h4>What <i>Should</i> You use Tables for?</h4>
-          <br>
-          <p class="fragment">HTML Emails</p>
-          <br>
-          <p class="fragment" style="margin-bottom: 40px;">Tabular Data</p>
-          <div class="fragment">
-            <table class="paddedTable" style="font-size: 3.8vh; margin: 0 auto;">
-              <tr>
-                <td>City</td>
-                <td>Gender Pay Gap</td>
-                <td>Income After Housing Cost</td>
-                <td>Tech Jobs Filled by Women</td>
-                <td>3 yr Tech Employment Growth</td>
-                <td>Index</td>
-              </tr>
-              <tr>
-                <td>Washington<br>DC</td>
-                <td>99.3%</td>
-                <td>$59,704</td>
-                <td>40.4%</td>
-                <td>16%</td>
-                <td>91.98</td>
-              </tr>
-              <tr>
-                <td>Kansas City<br>MO</td>
-                <td>100.8%</td>
-                <td>$57,219</td>
-                <td>33.6%</td>
-                <td>-3%</td>
-                <td>78.70</td>
-              </tr>
-              <tr>
-                <td>Detroit<br>MI</td>
-                <td>122.8%</td>
-                <td>$42,569</td>
-                <td>44.5%</td>
-                <td>32%</td>
-                <td>76.94</td>
-              </tr>
-              <tr>
-                <td>Baltimore<br>MD</td>
-                <td>90.1%</td>
-                <td>$56,089</td>
-                <td>31.2%</td>
-                <td>7%</td>
-                <td>73.18</td>
-              </tr>
-              <tr>
-                <td>Indianapolis<br>IN</td>
-                <td>100.8%</td>
-                <td>$50,161</td>
-                <td>29.4%</td>
-                <td>7%</td>
-                <td>71.93</td>
-              </tr>
-            </table>
-            <p style="font-size: 28px"><br><a href="https://smartasset.com/mortgage/best-cities-for-women-in-tech-2016">https://smartasset.com/mortgage/best-cities-for-women-in-tech-2016</a></p>
-          </div>
-        </section>
-        <!-- <section>
-          <h1>Table tags</h1>
-          <div style="width: 550px;">
-            <code class="fragment" data-fragment-index="1">&lt;table&gt;
-              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;tr&gt;</div>
-                <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Ingredient&lt;/th&gt;</div>
-                <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Measurement&lt;/th&gt;</div>
-              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;/tr&gt;</div>
-              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;tr&gt;</div>
-                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Watermelon&lt;/td&gt;</div>
-                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2 slices&lt;/td&gt;</div>
-              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;/tr&gt;</div>
-              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;tr&gt;</div>
-                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Vodka&lt;/td&gt;</div>
-                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1 shot&lt;/td&gt;</div>
-              <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;/tr&gt;</div>
-              <div class="fragment" data-fragment-index="1">&lt;/table&gt;</div>
-            </code>
-            <div class="fragment" style="position: fixed; left: 500px; top: 200px;">
-              <table class="thickPaddedTable" style="font-size: 34px;">
-                <tr>
-                  <th>Ingredient</th>
-                  <th>Measurement</th>
-                </tr>
-                <tr>
-                  <td>Watermelon</td>
-                  <td>2 slices</td>
-                </tr>
-                <tr>
-                  <td>Vodka</td>
-                  <td>1 shot</td>
-                </tr>
-              </table>
-            </div>
-            <div class="fragment" style="position: fixed; top: 72px; left: 0px; width: 450px;">
-              <code>&lt;table&gt;
-                <div>&nbsp;&nbsp;&lt;thead&gt;</div>
-                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Ingredient&lt;/th&gt;</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Measurement&lt;/th&gt;</div>
-                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</div>
-                <div>&nbsp;&nbsp;&lt;/thead&gt;</div>
-                <div>&nbsp;&nbsp;&lt;tbody&gt;</div>
-                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Watermelon&lt;/td&gt;</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;2 slices&lt;/td&gt;</div>
-                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</div>
-                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Vodka&lt;/td&gt;</div>
-                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1 shot&lt;/td&gt;</div>
-                  <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</div>
-                <div>&nbsp;&nbsp;&lt;/tbody&gt;</div>
-              <div>&lt;/table&gt;</div>
-            </code>
-          </div>
-        </section> -->
-<!-- part 8 -->
         <section>
           <h1>Forms</h1>
           <p class="fragment" data-fragment-index="1" style="margin-top:16px;">Used to collect user input<br>
@@ -517,13 +610,13 @@
           <a href="http://codepen.io/CodingCocktailsKC/pen/LbwEGa" target="_blank">http://codepen.io/CodingCocktailsKC/pen/LbwEGa</a>
         </section>
         <section>
-          <h1><font style="color: #c7bc75">Get</font> vs Post <i>Showdown</i></h1><br><br>
+          <h1><font style="color: #d0c88b">Get</font> vs Post</h1><br><br>
           <p class="fragment">Requesting data to use, not changing it</p><br>
           <p class="fragment">Searching or filtering</p><br>
           <p class="fragment">http://mymovieform.com?genre=drama</p>
         </section>
         <section>
-          <h1>Get vs <font style="color: #c7bc75">Post</font> <i>Showdown</i></h1><br>
+          <h1>Get vs <font style="color: #d0c88b">Post</font></h1><br>
           <p class="fragment">Changing or adding data</p><br>
           <p class="fragment">Create a calendar event, change password, etc</p><br>
           <p class="fragment"><img src="images/01-jan/form-data.png" width="60%"/></p>
@@ -553,6 +646,111 @@
               &nbsp;&nbsp;&lt;input type=”text” name=”question” <font style="color:#a3a457">id=”question"</font> /&gt;<br>
             <font style="color:#9d81a2">&lt;/fieldset&gt;</font>
           </code>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet: Part 3</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCJanSlides" target="_blank">http://bit.ly/CnCJanSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCJanWork" target="_blank">http://bit.ly/CnCJanWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line">
+              <span class="row-line"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+          </div>
+        </section>
+<!-- part 4 -->
+        <section>
+          <h1>Tables</h1>
+          <img src="images/01-jan/tablecloth.gif" alt="Tables" width="80%"/>
+        </section>
+        <section>
+          <h1>Just Like a Spreadsheet</h1><br>
+          <p class="fragment">Headers, columns, rows</p>
+          <p class="fragment"><img src="images/01-jan/spreadsheet.jpg" width="80%"/></p>
+        </section>
+        <section>
+          <h1>The Dark Ages</h1>
+          <p class="fragment" style="font-size:6.2vh;">Prior to CSS, &lt;table&gt; elements were used to create layout</p>
+          <img class="fragment" height="70%" src="images/01-jan/the-horror.gif"/>
+        </section>
+        <section>
+          <h1>A Table Layout</h1>
+          <img src="images/01-jan/nested-table.png" height="80%"/>
+        </section>
+        <section>
+          <h4>What <i>Should</i> You use Tables for?</h4>
+          <br>
+          <p class="fragment">HTML Emails &amp; Tabular Data</p>
+          <br><br>
+          <div class="fragment">
+            <table class="paddedTable" style="font-size: 3.4vh; margin: 0 auto;">
+              <tr>
+                <td>City</td>
+                <td>Gender Pay Gap</td>
+                <td>Income After Housing Cost</td>
+                <td>Tech Jobs Filled by Women</td>
+                <td>4 yr Tech Employment Growth</td>
+                <td>Index</td>
+              </tr>
+              <tr>
+                <td>Washington<br>DC</td>
+                <td>94.8%</td>
+                <td>$56,416</td>
+                <td>41.0%</td>
+                <td>17%</td>
+                <td>88.18</td>
+              </tr>
+              <tr>
+                <td>Kansas City<br>MO</td>
+                <td>103.4%</td>
+                <td>$59,416</td>
+                <td>30.3%</td>
+                <td>10%</td>
+                <td>83.18</td>
+              </tr>
+              <tr>
+                <td>Baltimore<br>MD</td>
+                <td>88.4%</td>
+                <td>$55,364</td>
+                <td>32.5%</td>
+                <td>22%</td>
+                <td>81.53</td>
+              </tr>
+              <tr>
+                <td>Indianapolis<br>IN</td>
+                <td>102.2%</td>
+                <td>$51,393</td>
+                <td>28.5%</td>
+                <td>11%</td>
+                <td>73.65</td>
+              </tr>
+              <tr>
+                <td>New Orleans<br>LA</td>
+                <td>99.8%</td>
+                <td>$40,355</td>
+                <td>34.6%</td>
+                <td>32%</td>
+                <td>73.40</td>
+              </tr>
+            </table>
+            <p style="font-size: 28px"><br><a href="https://smartasset.com/mortgage/best-cities-women-in-tech-2017">https://smartasset.com/mortgage/best-cities-women-in-tech-2017</a></p>
+          </div>
         </section>
         <section>
           <h1>The DOM</h1>
@@ -596,15 +794,47 @@
             <li class="fragment">Parse error in <font style="font-style: italic">those</font> files</li>
           </ol>
         </section>
-<!--
-
-parts 9 and 10 and 11?
-
--->
-
-
-
-
+        <section>
+          <h1>When you're stuck</h1><br>
+          <p class="fragment">Pay attention to your IDE<br>(syntax highlighting and linter warnings)</p><br>
+          <p class="fragment">Use a validator</p><br>
+          <p class="fragment">Look for missing end tags (indent!)</p><br>
+          <p class="fragment">Peers, co-workers, KCWiT Slack</p><br>
+          <p class="fragment"><a href="http://stackoverflow.com" target="_blank"/>stackoverflow.com</a></p><br>
+        </section>
+        <section>
+          <br>
+          <img src="images/01-jan/not-worthy.gif" height="75%" />
+          <p>The Google</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet: Part 4</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCJanSlides" target="_blank">http://bit.ly/CnCJanSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCJanWork" target="_blank">http://bit.ly/CnCJanWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line">
+              <span class="row-line"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+          </div>
+        </section>
+<!-- end -->
         <section>
           <h1>Questions?</h1>
           <img src="images/01-jan/questions.gif" alt="Questions" height="80%" />
@@ -612,7 +842,7 @@ parts 9 and 10 and 11?
         <section>
           <h1>What's Next</h1>
           <br>
-          <ol class="normal" style="float: left;">
+          <ol class="normal">
             <li class="fragment">Find a buddy</li>
             <li class="fragment">Take the <a href="http://bit.ly/CnCFeedback" target="_blank">Survey</a></li>
             <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
@@ -620,7 +850,7 @@ parts 9 and 10 and 11?
             <li class="fragment">Find an <a href="http://lmgtfy.com/?q=HTML+tutorial" target="_blank">online tutorial on HTML</a></li>
             <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
           </ol>
-          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="float: right;" />
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; bottom: 0px; right: 0px;" height="300vh" />
         </section>
       </div>
     </div>

@@ -47,6 +47,13 @@ div.fill-col {
   justify-content: space-evenly;
 }
 
+.fragment.current-visible.visible:not(.current-fragment) {
+    display: none;
+    height:0px;
+    line-height: 0px;
+    font-size: 0px;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -321,6 +328,10 @@ ol.normal {
 }
 ol.normal li {
   font-size: 8.5vh;
+}
+
+h1.break {
+  color: #a3a552;
 }
 
 /*********************************************
