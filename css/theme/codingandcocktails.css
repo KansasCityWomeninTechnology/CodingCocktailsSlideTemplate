@@ -18,25 +18,21 @@
  * REVEAL.JS - Override the CSS layout https://github.com/hakimel/reveal.js/issues/180
  *********************************************/
 .reveal .slides {
-  background-color: orange;
   height: 100% !important;
   top: 0 !important;
   margin-top: 0 !important;
 }
 
 .reveal .slides>section {
-  background-color: blue;
   height:100% !important;
 }
 
 .reveal .slides>section>section {
-  background-color: brown;
   height:100% !important;
 }
 
 div.fill-row {
   height: 96%;
-  background-color: green;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -46,7 +42,6 @@ div.fill-row {
 
 div.fill-col {
   height: 90%;
-  background-color: yellow;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -72,7 +67,6 @@ p.power {
 div.row-line {
   padding: 20px;
   height: auto;
-  background-color: green;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -320,6 +314,13 @@ reveal ol, .reveal dl, .reveal ul {
     font-size: 7vh;
     margin: 0 0 8px 0;
     text-align: left;
+}
+
+ol.normal {
+  margin-left: 40px;
+}
+ol.normal li {
+  font-size: 8.5vh;
 }
 
 /*********************************************
