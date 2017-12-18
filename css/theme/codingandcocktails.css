@@ -15,6 +15,46 @@
   src: local("Vtks-LongTime"), url("fonts/Vtks-LongTime.ttf") format("truetype"); }
 
 /*********************************************
+ * REVEAL.JS - Override the CSS layout https://github.com/hakimel/reveal.js/issues/180
+ *********************************************/
+.reveal .slides {
+  height: 100% !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.reveal .slides>section {
+  height:100% !important;
+}
+
+.reveal .slides>section>section {
+  height:100% !important;
+}
+
+div.fill-row {
+  height: 96%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+div.fill-col {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.fragment.current-visible.visible:not(.current-fragment) {
+    display: none;
+    height:0px;
+    line-height: 0px;
+    font-size: 0px;
+}
+
+/*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
@@ -31,10 +71,45 @@ p.power {
   font-family: "Vtks-LongTime";
 }
 
+div.row-line {
+  padding: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+span.row-line {
+  flex: none;
+  flex-basis: 23%;
+  vertical-align: top;
+}
+
+span.teammembers {
+  flex: none;
+  flex-basis: 21%;
+  vertical-align: top;
+}
+
+img.teammembers {
+  margin: 5px 0 0 0 !important;
+}
+h6.teammembers {
+  font-size: 0.52em !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+p.teammembers {
+  font-size: 0.46em !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
 .reveal {
   font-family: "Lato", "Helvetica", Arial, sans-serif;
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.02em;
   color: #ffffff; }
 
@@ -42,9 +117,6 @@ p.power {
   color: white;
   background: #134674;
   text-shadow: none; }
-
-.reveal p {
-  margin: 0 0 8px 0; }
 
 table.paddedTable, .thickPaddedTable {
   border: 1px;
@@ -80,7 +152,7 @@ table.tocTable {
 }
 .tocTable td {
   padding: 8px;
-  font-size: 30px;
+  font-size: 0.9em;
   text-align: left;
 }
 .tocTable tr:nth-child(even) {
@@ -94,58 +166,66 @@ table.tocTable {
  * HEADERS
  *********************************************/
 .reveal h1 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 1.1em;
+  font-size: 11vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h2 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 1.0em;
+  font-size: 10.5vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h3 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.9em;
+  font-size: 9vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h4 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.8em;
+  font-size: 7.5vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h5 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.7em;
+  font-size: 6vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h6 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.6em;
+  font-size: 4.5vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+
+.reveal p {
+  color: #ffffff;
+  font-family: "Lato-Bold", Impact, sans-serif;
+  font-size: 7.5vh;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
 
 /*********************************************
  * LINKS
@@ -238,8 +318,20 @@ reveal ol, .reveal dl, .reveal ul {
 }
 
 .reveal li {
+    font-size: 7vh;
     margin: 0 0 8px 0;
     text-align: left;
+}
+
+ol.normal {
+  margin-left: 40px;
+}
+ol.normal li {
+  font-size: 8.5vh;
+}
+
+h1.break {
+  color: #a3a552;
 }
 
 /*********************************************
@@ -253,7 +345,7 @@ SNIPPETS
   margin: 20px 0;
 
 	text-align: left;
-	font-size: 0.55em;
+	font-size: 4vh;
 	font-family: monospace;
   font-weight: normal;
 	line-height: 1.2em;
