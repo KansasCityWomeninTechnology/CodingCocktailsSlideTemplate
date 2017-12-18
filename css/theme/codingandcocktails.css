@@ -21,7 +21,7 @@
   background-color: orange;
   height: 100% !important;
   top: 0 !important;
-  margin-top: 16px !important;
+  margin-top: 0 !important;
 }
 
 .reveal .slides>section {
@@ -34,16 +34,22 @@
   height:100% !important;
 }
 
-div.fill {
+div.fill-row {
+  height: 96%;
   background-color: green;
-  height:88%;
-  align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-table.fill {
+div.fill-col {
+  height: 90%;
   background-color: yellow;
-  width:90%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 /*********************************************
@@ -63,9 +69,25 @@ p.power {
   font-family: "Vtks-LongTime";
 }
 
+div.row-line {
+  padding: 20px;
+  height: auto;
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+span.row-line {
+  flex: none;
+  flex-basis: 23%;
+  vertical-align: top;
+}
+
 span.teammembers {
-  display: inline-block;
-  /*width: 246px;*/
+  flex: none;
+  flex-basis: 21%;
   vertical-align: top;
 }
 
@@ -73,12 +95,12 @@ img.teammembers {
   margin: 5px 0 0 0 !important;
 }
 h6.teammembers {
-  font-size: 0.48em !important;
+  font-size: 0.52em !important;
   text-align: center !important;
   margin: 0 !important;
 }
 p.teammembers {
-  font-size: 0.42em !important;
+  font-size: 0.46em !important;
   text-align: center !important;
   margin: 0 !important;
 }
@@ -94,9 +116,6 @@ p.teammembers {
   color: white;
   background: #134674;
   text-shadow: none; }
-
-.reveal p {
-  margin: 0 0 8px 0; }
 
 table.paddedTable, .thickPaddedTable {
   border: 1px;
@@ -132,7 +151,7 @@ table.tocTable {
 }
 .tocTable td {
   padding: 8px;
-  font-size: 30px;
+  font-size: 0.9em;
   text-align: left;
 }
 .tocTable tr:nth-child(even) {
@@ -146,55 +165,55 @@ table.tocTable {
  * HEADERS
  *********************************************/
 .reveal h1 {
-  margin: 0 0 10px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 1.1em;
+  font-size: 11vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h2 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 1.0em;
+  font-size: 10.5vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h3 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.9em;
+  font-size: 9vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h4 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.8em;
+  font-size: 7.5vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h5 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.7em;
+  font-size: 6vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 .reveal h6 {
-  margin: 0 0 20px 0;
+  margin: 6px 0 6px 0;
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.6em;
+  font-size: 4.5vh;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
@@ -202,8 +221,10 @@ table.tocTable {
 .reveal p {
   color: #ffffff;
   font-family: "Lato-Bold", Impact, sans-serif;
-  font-size: 0.8em;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  font-size: 7.5vh;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
 
 /*********************************************
  * LINKS
@@ -296,6 +317,7 @@ reveal ol, .reveal dl, .reveal ul {
 }
 
 .reveal li {
+    font-size: 7vh;
     margin: 0 0 8px 0;
     text-align: left;
 }
@@ -311,7 +333,7 @@ SNIPPETS
   margin: 20px 0;
 
 	text-align: left;
-	font-size: 0.55em;
+	font-size: 4vh;
 	font-family: monospace;
   font-weight: normal;
 	line-height: 1.2em;
