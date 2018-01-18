@@ -103,6 +103,10 @@ span.row-line-slack {
   vertical-align: top;
 }
 
+#intro-logo {
+  height:83%;
+}
+
 span.teammembers {
   flex: none;
   flex-basis: 21%;
