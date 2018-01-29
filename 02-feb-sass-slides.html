@@ -1,0 +1,140 @@
+<section>
+  <h1>CSS Compilers</h1>
+  <img src="images/02-feb/compilers.gif" alt="Compilers"/>
+</section>
+<section>
+  <h1>What is a CSS Compiler?</h1>
+  <br><br>
+  <p class="fragment">
+    (a.k.a. pre- and post- processors)
+  </p>
+  <br>
+  <p class="fragment">
+    Allows you to write faster &amp; cleaner CSS
+  </p>
+  <br>
+  <p class="fragment">
+    But Browsers only support CSS...
+  </p>
+  <p class="fragment">
+    so you use a different syntax and compile it!
+  </p>
+</section>
+<section>
+  <h1>Pre-processed code -> CSS</h1>
+  <br>
+  <img src="images/02-feb/wonder-woman.gif"/>
+</section>
+<section>
+  <h1>Why Sass?</h1>
+  <br>
+  <p class="fragment" style="text-align: left;">
+    Several pre-processors to choose from
+    <ol style="text-align: left; padding-left: 60px; list-style: none;">
+      <li class="fragment">- Less</li>
+      <li class="fragment">- Stylus</li>
+      <li class="fragment">- Sass</li>
+    </ol>
+  </p>
+  <br>
+  <p class="fragment" style="text-align: left;">
+    Each are slightly different (features &amp; syntax)
+  </p>
+  <br>
+  <p class="fragment" style="text-align: left;">
+    Sass is the most common
+  </p>
+  <br>
+  <p class="fragment" style="text-align: left;">
+    Sass offers syntax flexibility based on file ext...
+  </p>
+</section>
+<section>
+  <h1>Sass file extensions</h1>
+  <br>
+  <p class="fragment" style="text-align: left;">
+    .sass
+    <ol style="text-align: left; padding-left: 60px; list-style: none;">
+      <li class="fragment">- No curly braces or semi-colons</li>
+      <li class="fragment">- So indentation is important!</li>
+      <li class="fragment">- Older version of Sass</li>
+    </ol>
+  </p>
+  <br>
+  <p class="fragment" style="text-align: left;">
+    .scss ("Sassy CSS")
+    <ol style="text-align: left; padding-left: 60px; list-style: none;">
+      <li class="fragment">- Looks more similar to CSS</li>
+      <li class="fragment">- Any file: .css -> .scss</li>
+      <li class="fragment">- Newer version of Sass</li>
+    </ol>
+  </p>
+</section>
+<section>
+  <h1>Sass Superpowers</h1>
+  <div>
+    <table class="slightlyPaddedTable">
+      <tr class="fragment">
+        <td style="text-align: left;">Variables</td>
+        <td style="text-align: left;">giving styles a name</td>
+      </tr>
+      <tr class="fragment">
+        <td style="text-align: left;">Nesting</td>
+        <td style="text-align: left;">define styles within another style</td>
+      </tr>
+      <tr class="fragment">
+        <td style="text-align: left;">Math</td>
+        <td style="text-align: left;">ceiling / floor, rounding, min / max</td>
+      </tr>
+      <tr class="fragment">
+        <td style="text-align: left;">@import</td>
+        <td style="text-align: left;">link one CSS file to another</td>
+      </tr>
+      <tr class="fragment">
+        <td style="text-align: left;">Mixins</td>
+        <td style="text-align: left;">perform computations on inputs</td>
+      </tr>
+      <tr class="fragment">
+        <td style="text-align: left;">Minification</td>
+        <td style="text-align: left;">compress the CSS like a zip</td>
+      </tr>
+      <tr class="fragment">
+        <td style="text-align: left;">Loops</td>
+        <td style="text-align: left;">repeat color / position changes</td>
+      </tr>
+      <tr class="fragment">
+        <td style="text-align: left;"><font style="color: red;">@extend</font></td>
+        <td style="text-align: left;">style A <i>plus</i> style B</td>
+      </tr>
+    </table>
+  </div>
+</section>
+<section>
+  <h1>Sass -> CSS example</h1>
+  <p style="text-align: left;">
+    <ol style="text-align: left; list-style: none;">
+      <li class="fragment">
+        Sass variable (source)
+        <code style="font-size: 50%;">$secondaryColor: #cb6f10;</code>
+      </li>
+      <li class="fragment">
+        Sass (source)
+        <code style="font-size: 50%;">
+          lighterDiv {<br>
+          &nbsp;&nbsp;background-color: $secondaryColor;<br>
+          &nbsp;&nbsp;border-top: 5px solid lighten($secondaryColor, 20%);<br>
+          }
+        </code>
+      </li>
+      <li class="fragment">
+        CSS (compiled)
+        <code style="font-size: 50%;">
+          lighterDiv {<br>
+          &nbsp;&nbsp;background-color: #cb6f10;<br>
+          &nbsp;&nbsp;border-top: 5px solid #f1a250;<br>
+          }
+        </code>
+      </li>
+    </ol>
+  </p>
+</section>
