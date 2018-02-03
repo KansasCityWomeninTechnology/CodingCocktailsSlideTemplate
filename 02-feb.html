@@ -170,7 +170,7 @@
 <!-- part 1 -->
         <section>
           <h1>Disclaimer</h1>
-          <img src="images/02-feb/peter-griffin.gif"/>
+          <img src="images/02-feb/peter-griffin.gif" height="480px"/>
         </section>
         <section>
           <h1>What is CSS?</h1>
@@ -434,6 +434,7 @@
           <h1>Normalization</h1>
           <p class="fragment">Ensures settings are the same across browsers</p>
           <p class="fragment">"levels the playing field" for consistent styling</p>
+          <a class="fragment" href="https://the-pastry-box-project.net/oli-studholme/2013-june-3" target="_blank">reset vs normalization</a><br>
           <img src="images/02-feb/waterbed.jpg" class="fragment">
         </section>
         <section>
@@ -696,7 +697,7 @@
           </p>
         </section>
         <section>
-          <h1>Layouts</h1>
+          <h1>Layout-related styles</h1>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment">
@@ -709,15 +710,35 @@
                 Padding / Margin
                 <code class="smaller-code">{ padding: 25px 50px; }</code>
               </li>
-              <li class="fragment"> <!-- TODO MOve flex part -->
-                Float, Position &amp; Flexbox
-                <font style="font-size:96%"><code class="smaller-code">{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
+              <li class="fragment">
+                Float, Position - <a href="https://www.w3.org/Style/Examples/007/menus.en.html" target="_blank">see an example</a>
+                <font style="font-size:96%"><code class="smaller-code">{ float: right; position: absolute; }</code></font>
               </li>
               <li class="fragment">
                 Z-Index
                 <code class="smaller-code">{ z-index: 10; }</code>
               </li>
             </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Layout systems</h1>
+          <p class="fragment">
+            Flexbox<br>
+            1-dimensional layout system (row or column)<br>
+            <a href="https://codepen.io/CodingCocktailsKC/pen/YYBezJ" target="_blank">example</a> - <a href="http://flexboxfroggy.com/" target="_blank">interactive tutorial</a>
+          </p>
+          <br>
+          <p class="fragment">
+            CSS Grid<br>
+            2-dimensional layout system (rows &amp; columns)
+            <a href="https://codepen.io/CodingCocktailsKC/pen/vpbdYQ" target="_blank">example</a> - <a href="http://cssgridgarden.com/" target="_blank">interactive tutorial</a>
+          </p>
+          <br>
+          <p class="fragment">
+            Other resources<br>
+            <a href="https://cssgrid.io/" target="_blank">cssgrid.io</a><br>
+            <a href="https://gridbyexample.com/examples/" target="_blank">gridbyexample.com/examples</a>
           </p>
         </section>
 <!-- break slide -->
@@ -785,9 +806,12 @@
           <h1>More about Font Family</h1>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <br><br>
+              <br>
               <li class="fragment">
                 What is a Font Stack?
+              </li>
+              <li class="fragment">
+                <a href="https://www.smashingmagazine.com/2009/09/complete-guide-to-css-font-stacks/" target="_blank">Complete Guide to CSS Font Stacks</a>
               </li>
               <br>
               <li class="fragment">
@@ -909,35 +933,37 @@
             </div>
           </div>
         </section>
-        <!-- part 3 -->
-
-
+<!-- part 3 -->
+        <section>
+          <h4>Precompilers, Best Practices, Etc</h4>
+          <img src="images/02-feb/simpsons.gif" height="450px"/>
+          <p style="font-size: 3vh;">
+            <a href="http://pattle.github.io/simpsons-in-css" target="_blank">
+              pattle.github.io/simpsons-in-css
+            </a>
+          </p>
+        </section>
         <section>
           <h1>Best Practices</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <br>
-              <li class="fragment">
-                Use spaces
-                <code>
-                  <font style="color: green;">#myDiv {background-color:red; font-size: 14px;}</font><br><br>
-                  <font style="color: red;">#myDiv{background-color:red;font-size:14px;}</font>
-                </code>
-              </li>
-              <br>
-              <li class="fragment">
-                separate rules on new lines
-                <code>
-                  <font style="color: green;">
-                    #myDiv {<br>
-                    &nbsp;&nbsp;background-color:red;<br>
-                    &nbsp;&nbsp;font-size: 14px;<br>
-                    }
-                  </font><br><br>
-                  <font style="color: red;">#myDiv {background-color:red; font-size: 14px;}</font><br>
-                </code>
-              </li>
-            </ol>
+          <p class="fragment" style="text-align:left;">
+            Use spaces
+            <code>
+              <font style="color: green;">#myDiv {background-color:red; font-size: 14px;}</font><br><br>
+              <font style="color: red;">#myDiv{background-color:red;font-size:14px;}</font>
+            </code>
+          </p>
+          <p class="fragment" style="text-align:left;">
+            separate rules on new lines
+            <code>
+              <font style="color: green;">
+                #myDiv {<br>
+                &nbsp;&nbsp;background-color:red;<br>
+                &nbsp;&nbsp;font-size: 14px;<br>
+                }
+              </font>
+              <br><br>
+              <font style="color: red;">#myDiv {background-color:red; font-size: 14px;}</font><br>
+            </code>
           </p>
         </section>
         <section>
@@ -954,11 +980,11 @@
               <br>
               <li class="fragment">
                 Use lowercase &amp; hyphens (<a href="http://getbem.com/" target="_blank">BEM</a> or others?)
-                <code class="fragment">
+                <code>
                   .myAwesomeDiv { } /* camel case */<br>
                   .my-awesome-div { } /* kebab case */
                 </code>
-                <code class="fragment">
+                <code>
                   .block--hidden { }<br>
                   .block--mod .block__elem { }<br>
                   .block__elem--mod { }
@@ -969,160 +995,30 @@
         </section>
         <section>
           <h1>Remember...</h1>
-          <div class="fragment current-visible abs">
+          <div class="fragment current-visible">
             <img src="images/02-feb/beware-of-browsers.jpg"/><br>
             Browsers treat CSS differently
           </div>
           <div class="fragment current-visible abs">
             <p>
-              <br>
               specificity wins (ie #myid p > p)
-              <br><br>
-            </p>
-          </div>
-          <div class="fragment current-visible abs">
-            <p>
               <br>
-              specificity wins (ie #myid p > p)
-              <br><br>
               <img src="images/02-feb/specificity.jpg" style="margin: 0px;"><br>
               <font style="font-size: 70%; padding: 0px; margin: 0px;"><a href="http://specificity.keegan.st" target="_blank">specificity.keegan.st</a></font>
             </p>
           </div>
         </section>
         <section>
-          <h1>Further Options</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <br>
-              <li class="fragment">
-                Reset / Normalize<br>
-                <font style="font-size: 80%"><a href="https://the-pastry-box-project.net/oli-studholme/2013-june-3" target="_blank">the-pastry-box-project.net/oli-studholme/2013-june-3</a></font>
-              </li>
-              <br><br>
-              <li class="fragment">
-                Use base styles
-                <code> <!-- TODO change this example to link -->
-                  body, form {<br>
-                  &nbsp;&nbsp;margin: 0;<br>
-                  &nbsp;&nbsp;padding: 0;<br>
-                  }
-                </code>
-              </li>
-            </ol>
-          </p>
-        </section>
-        <section>
-          <h1>Fun Things you can do with CSS</h1>
-          <img src="images/02-feb/fun.jpg" alt="Fun"/>
-          <!--
-            This is called the "Wakey, Wakey, Mary, Eggs and Bacey"
-            Served at Chapel Tavern in Reno, Nevada on their "hair of the dog" cocktail menu
-            It comprises a basic Bloody Mary with the addition of:
-            hot sauce, Irish stout, a garnish of pickled vegetables, bacon, quail eggs, and a grilled cheese sandwich
-          -->
-        </section>
-        <section>
-          <h1>Things like this...</h1>
+          <h2>You can do awesome<br>things with CSS!</h2>
           <br>
-          <img src="images/02-feb/ball-bounce.gif"/>
-          <br>
+          <img src="images/02-feb/ball-bounce.gif"/><br>
           <a href="http://jsfiddle.net/yZyaa/" target="_blank">
             jsfiddle.net/yZyaa
           </a>
         </section>
         <section>
-          <h1>Or this...</h1>
-          <img src="images/02-feb/wow-js.gif"/>
-          <a href="http://mynameismatthieu.com/WOW" target="_blank">
-            mynameismatthieu.com/WOW
-          </a>
-        </section>
-        <section>
-          <h1>Or even this...</h1>
-          <img src="images/02-feb/pong.gif"/>
-          <font style="font-size: 89%">
-            <a href="https://www.sitepoint.com/css3-pong-insane-things-to-do-with-css" target="_blank">
-              sitepoint.com/css3-pong-insane-things-to-do-with-css
-            </a>
-          </font>
-        </section>
-        <section>
-          <h1>Or...OMG...this?</h1>
-          <img src="images/02-feb/simpsons.gif"/>
-          <a href="http://pattle.github.io/simpsons-in-css" target="_blank">
-            pattle.github.io/simpsons-in-css
-          </a>
-        </section>
-        <section>
-          <h1>Gateway to fun</h1> <!-- TODO remove this, don't need to get into it -->
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <br>
-              <li class="fragment">
-                Manipulations
-                <code>$('#myDiv').addClass('blueBorder');</code>
-              </li>
-              <br>
-              <li class="fragment">
-                Animations
-                <code>
-                  #basicSlider {-webkit-transition: 1s ease-in width;}<br><br>
-                  #myAwesomeSlider {animation: mymove 5s infinite;}<br><br>
-                  @keyframes mymove {<br>
-                  &nbsp;&nbsp;from {top: 0px;}<br>
-                  &nbsp;&nbsp;to {top: 200px;}<br>
-                  }
-                </code>
-              </li>
-            </ol>
-          </p>
-        </section>
-        <section>
-          <h1>Resources</h1>
-          <br>
-          <p class="fragment">
-            Font families with Google fonts: <a href="http://www.google.com/fonts" target="_blank">google.com/fonts</a>
-          </p>
-          <br>
-          <p class="fragment">
-            Flex your Flexbox skills: <br><a href="http://flexboxfroggy.com" target="_blank">flexboxfroggy.com</a>
-          </p>
-          <br>
-          <p class="fragment">
-            Browser Compatibility: <br><a href="http://caniuse.com" target="_blank">caniuse.com</a>
-          </p>
-        </section>
-        <section>
           <h1>Questions?</h1>
-          <img src="images/02-feb/questions.gif" alt="Questions"/>
-        </section>
-        <section>
-          <h1>Things You'll Need</h1>
-          <p>
-            <br>
-            Wifi: username / password
-            <br><br>
-          </p>
-          <table class="tocTable" style="width: inherit;">
-            <tr>
-              <td>This presentation</td>
-              <td><a href="http://bit.ly/CnCFebSlides" target="_blank">http://bit.ly/CnCFebSlides</a></td>
-            </tr>
-              <tr>
-                <td>The worksheet</td>
-                <td><a href="http://bit.ly/CnCFebWork" target="_blank">http://bit.ly/CnCFebWork</a></td>
-              </tr>
-              <tr>
-                <td>Install the Tools</td>
-                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
-              </tr>
-          </table>
-          <br>
-          <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png" width="200"/></a>
-          <a href="https://atom.io/" target="_blank"><img src="images/atom.png" width="200"/></a>
-          <a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png" width="200"/></a>
-          <a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png" width="200" style="margin: 0 0 25px 10px"/></a>
+          <img src="images/02-feb/questions.gif" alt="Questions" height="500px"/>
         </section>
         <section>
           <h1>What's Next</h1>
