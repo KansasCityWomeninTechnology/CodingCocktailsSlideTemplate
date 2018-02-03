@@ -167,6 +167,7 @@
             <li class="fragment">Precompilers, Best Practices &amp; Fun things</li>
           </ol>
         </section>
+<!-- part 1 -->
         <section>
           <h1>Disclaimer</h1>
           <img src="images/02-feb/peter-griffin.gif"/>
@@ -380,62 +381,27 @@
         </section>
         <section>
           <h1>Hone your CSS skills</h1>
-          <br>
           <p class="fragment">
             <br>
-            In addition to the worksheet,<br>
-            try CSS Diner!<br><br>
+            After the worksheet, try CSS Diner!<br>
+            <img src="images/02-feb/css-diner.png"><br>
             <a href="http://flukeout.github.io" target="_blank">flukeout.github.io</a>
-          </p>
-        </section>
-
-
-
-        <section>
-          <h1>Something to get you started</h1>
-            <p data-height="600" data-theme-id="0" data-slug-hash="PWjRzG" data-default-tab="result" data-user="CodingCocktailsKC" data-embed-version="2" data-pen-title="CSS Practice" class="codepen">See the Pen <a href="http://codepen.io/CodingCocktailsKC/pen/PWjRzG/">CSS Practice</a> by Coding&CocktailsKC (<a href="http://codepen.io/CodingCocktailsKC">@CodingCocktailsKC</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-        </section>
-        <section>
-          <h1>Include CSS in your project</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; list-style: none;">
-              <li class="fragment">
-                Link to CSS file
-                <code style="width: 1050px; font-size: 50%;">&lt;link rel="stylesheet" type="text/css" href="mystyles.css" media="screen" /&gt;</code>
-              </li>
-              <li class="fragment">
-                Import a CSS file from another CSS file
-                <code style="font-size: 50%;">@import "newstyles.css";</code>
-              </li>
-              <li class="fragment">
-                Embed the CSS
-                <code style="font-size: 50%;">
-                  &lt;style media="screen" type="text/css"&gt;<br>
-                    ...<br>
-                  &lt;style&gt;
-                </code>
-              </li>
-              <li class="fragment">
-                Add Inline CSS to HTML
-                <code style="font-size: 50%;">&lt;h2 style="color:red;background:black;"&gt;Hello&lt;/h2&gt;</code>
-              </li>
-            </ol>
           </p>
         </section>
         <section>
           <h1>Rules for Cascading</h1>
-          <div data-fragment-index="0" style="position: fixed; left: -170px; top: 100px;">
+          <div data-fragment-index="0" style="position: fixed; left: -50px;">
             <img src="images/02-feb/cascade.jpg" alt="Cascade"/>
           </div>
           <br>
-          <div data-fragment-index="0" style="position: fixed; left: 280px; top: 140px; width: 900px;">
+          <div data-fragment-index="0" style="position: fixed; left: 320px; top: 100px; width: 700px;">
             <p class="fragment" style="text-align: left;">
-              It's a hierarchy: Order of CSS rules matter
+              It's a hierarchy:<br>Order of CSS rules matter
             </p>
+            <br>
             <p style="text-align: left;">
-              <ol style="text-align: left; padding-left: 60px; list-style: none;">
-                <li class="fragment">- Source Order (Later rules > earlier rules)</li>
+              <ol style="text-align: left; padding-left: 20px; list-style: none;">
+                <li class="fragment">- Source Order<br><span style="font-size:5.5vh">&nbsp;&nbsp;&nbsp;(Later rules > earlier rules)</span></li>
                 <li class="fragment">- Specificity</li>
                 <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Element selectors</li>
                 <li class="fragment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Class selectors</li>
@@ -455,11 +421,9 @@
             &nbsp;&nbsp;&lt;/p&gt;<br>
             &lt;/div&gt;<br>
           </code>
-          <br>
           <code style="font-size: 54%; color: green;" class="fragment">
             div { font-size: 20px; }
           </code>
-          <br>
           <code style="font-size: 54%; color: red;" class="fragment">
             p { font-size: 20px; }<br>
             em { font-size: 20px; }<br>
@@ -467,30 +431,83 @@
           </code>
         </section>
         <section>
-          <h1>Comments, Browser Prefixes</h1>
+          <h1>Normalization</h1>
+          <p class="fragment">Ensures settings are the same across browsers</p>
+          <p class="fragment">"levels the playing field" for consistent styling</p>
+          <img src="images/02-feb/waterbed.jpg" class="fragment">
+        </section>
+        <section>
+          <h3>Comments</h3>
           <br>
           <code style="font-size: 54%;" class="fragment">
-            html { font-size: 75%; } /* 75% of default (16px) = 12px */<br><br>
-            h1 { font-size: 300%; } /* 300% of 12px = 36px */<br><br>
+            html { font-size: 75%; } /* 75% of default (16px) = 12px */
           </code>
-          <br>
           <code style="font-size: 54%;" class="fragment">
-            transition: all 4s ease; <!-- TODO make this its own fragment -->
-            -webkit-transition: all 4s ease;<br>
-            -moz-transition: all 4s ease;<br>
-            -ms-transition: all 4s ease;<br>
-            -o-transition: all 4s ease;<br>
+            h1 { font-size: 300%; } /* 300% of 12px = 36px */
+          </code>
+          <code style="font-size: 54%;" class="fragment">
+            h1 {<br>
+            &nbsp;&nbsp;//font-size: 12px;<br>
+            &nbsp;&nbsp;color: orange;<br>
+            }
           </code>
         </section>
         <section>
-          <h1>Grouping &amp; Special Selectors</h1>
-          <img src="images/02-feb/groupings-selectors.jpg" alt="Groupings &amp; Selectors" width="100%"/>
+          <h3>Browser Prefixes</h3>
+          <br>
+          <code style="font-size: 54%;">
+            <span class="fragment">transition: all 4s ease;</span><br>
+            <span class="fragment">
+              -webkit-transition: all 4s ease;<br>
+              -moz-transition: all 4s ease;<br>
+              -ms-transition: all 4s ease;<br>
+              -o-transition: all 4s ease;
+            </span>
+          </code>
+          <br>
+          <p class="fragment">
+            How do I know if I need a prefix?<br>
+            <a href="https://caniuse.com/" target="_blank">caniuse.com</a>
+          </p>
         </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet: Part 1</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+              <tr>
+                <td>View these slides</td>
+                <td><a href="http://bit.ly/CnCFebSlides" target="_blank">http://bit.ly/CnCFebSlides</a></td>
+              </tr>
+                <tr>
+                  <td>Do the worksheet</td>
+                  <td><a href="http://bit.ly/CnCFebWork" target="_blank">http://bit.ly/CnCFebWork</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 2 -->
         <section>
           <h1>Grouping Selectors</h1>
-          <br>
           <code class="fragment">
-            &lt;h1 id="one" class="two"&gt;This Should Be Red&lt;/h1&gt;<br>
+            &lt;h1 id="one" class="two"&gt;First id, then class&lt;/h1&gt;<br>
             #one.two { color: red; }
           </code>
           <code class="fragment">
@@ -498,31 +515,34 @@
             .three.four { color: red; }
           </code>
           <code class="fragment">
+            &lt;p id="header.code.red" class="snippet"&gt;First class, then id&lt;/p&gt;<br>
             .snippet#header.code.red { color: red; }
           </code>
           <code class="fragment">
+            &lt;p&gt;stuff&lt;/p&gt;<br>
+            &lt;div&gt;blah&lt;/div&gt;<br>
             p, div { font-size: 20px; }
           </code>
         </section>
         <section>
-          <h1>Special Selectors</h1>
+          <h2>Special Selectors</h2>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment">
                 Children (direct)
-                <code>ul > li { background-color: yellow; }</code>
+                <code style="font-size: 3.0vh;">ul > li { background-color: yellow; }</code>
               </li>
               <li class="fragment">
                 Descendant (any)
-                <code>ul li { background-color: yellow; }</code>
+                <code style="font-size: 3.0vh;">ul li { background-color: yellow; }</code>
               </li>
               <li class="fragment">
                 Adjacent (immediate sibling)
-                <code>div + p { background-color: yellow; }</code>
+                <code style="font-size: 3.0vh;">div + p { background-color: yellow; }</code>
               </li>
               <li class="fragment">
                 Attribute
-                <code>a[target="_blank"] { background-color: yellow; }</code>
+                <code style="font-size: 3.0vh;">a[target="_blank"] { background-color: yellow; }</code>
               </li>
             </ol>
           </p>
@@ -532,7 +552,7 @@
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment">
-                <code>
+                <code style="font-size: 3.4vh;">
                   /* unvisited link */<br>
                   a:link {<br>
                   &nbsp;&nbsp;color: #FF0000;<br>
@@ -584,8 +604,164 @@
             </ol>
           </p>
         </section>
-
-
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet: Part 2</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+              <tr>
+                <td>View these slides</td>
+                <td><a href="http://bit.ly/CnCFebSlides" target="_blank">http://bit.ly/CnCFebSlides</a></td>
+              </tr>
+                <tr>
+                  <td>Do the worksheet</td>
+                  <td><a href="http://bit.ly/CnCFebWork" target="_blank">http://bit.ly/CnCFebWork</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 3 -->
+        <section>
+          <h1>Boxes</h1>
+          <img src="images/02-feb/boxes.jpg" alt="Boxes"/>
+        </section>
+        <section>
+          <h1>Box Model</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                Height, width, padding, margin
+                <font style="font-size:90%">
+                  <code>
+                    #div1 {<br>
+                    &nbsp;&nbsp;width: 300px;<br>
+                    &nbsp;&nbsp;padding: 25px;<br>
+                    &nbsp;&nbsp;margin: 25px;<br>
+                    }<br><br>
+                    #div2 {<br>
+                    &nbsp;&nbsp;width: 80%;<br>
+                    &nbsp;&nbsp;padding: 60px 0px 25px 0px;<br>
+                    &nbsp;&nbsp;margin: 25px 8px;<br>
+                    }
+                  </code>
+                </font>
+              </li>
+              <li class="fragment">
+                Border-box
+                <code>#div { box-sizing: border-box }</code>
+              </li>
+              <br>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Box-Sizing</h1>
+          <img src="images/02-feb/border-box.png"/><br>
+          <a href="https://css-tricks.com/box-sizing/" target="_blank">css-tricks.com/box-sizing</a>
+          </p>
+        </section>
+        <section>
+          <h1>Box Effects</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment" style="padding-top: 10px;">
+                Backgrounds
+                <code>body { background-image: url("whatever.png"); }</code>
+              </li>
+              <li class="fragment" style="padding-top: 10px;">
+                Borders
+                <code>
+                  p.dashed {<br>
+                  &nbsp;&nbsp;border-style: dashed;<br>
+                  &nbsp;&nbsp;border-width: 5px;<br>
+                  &nbsp;&nbsp;border-color: red;<br>
+                  }
+                </code>
+              </li>
+              <li class="fragment" style="padding-top: 10px;">
+                Shadows
+                <code>div { box-shadow: 10px 10px 5px #888888; }</code>
+              </li>
+            </ol>
+          </p>
+        </section>
+        <section>
+          <h1>Layouts</h1>
+          <p style="text-align: left;">
+            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <li class="fragment">
+                Display / Inline
+                <code>
+                  { display: inline; }<br>
+                  { visibility: hidden; }
+                </code>
+              </li>
+              <li class="fragment">
+                Padding / Margin
+                <code>{ padding: 25px 50px; }</code>
+              </li>
+              <li class="fragment"> <!-- TODO MOve flex part -->
+                Float, Position &amp; Flexbox
+                <font style="font-size:96%"><code>{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
+              </li>
+              <li class="fragment">
+                Z-Index
+                <code>{ z-index: 10; }</code>
+              </li>
+            </ol>
+          </p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet: Part 3</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+              <tr>
+                <td>View these slides</td>
+                <td><a href="http://bit.ly/CnCFebSlides" target="_blank">http://bit.ly/CnCFebSlides</a></td>
+              </tr>
+                <tr>
+                  <td>Do the worksheet</td>
+                  <td><a href="http://bit.ly/CnCFebWork" target="_blank">http://bit.ly/CnCFebWork</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 3 -->
         <section>
           <h1>Text</h1>
           <img src="images/02-feb/text.jpg" alt="Text"/>
@@ -700,8 +876,6 @@
             </ol>
           </p>
         </section>
-
-
         <section>
           <h1>Media Queries &amp;<br>Responsive Websites</h1>
           <img src="images/02-feb/media-queries.jpg" alt="Media Queries &amp; Responsive Websites"/>
@@ -716,130 +890,69 @@
           <h1>Responsive Design</h1>
           <img src="images/02-feb/responsive-example.jpg"/>
         </section>
-
-
+<!-- break slide -->
         <section>
-          <h1>Boxes</h1>
-          <img src="images/02-feb/boxes.jpg" alt="Boxes"/>
+          <h1 class="break">Do the Worksheet: Part 4</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+              <tr>
+                <td>View these slides</td>
+                <td><a href="http://bit.ly/CnCFebSlides" target="_blank">http://bit.ly/CnCFebSlides</a></td>
+              </tr>
+                <tr>
+                  <td>Do the worksheet</td>
+                  <td><a href="http://bit.ly/CnCFebWork" target="_blank">http://bit.ly/CnCFebWork</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
         </section>
+        <!-- part 3 -->
+
+
         <section>
-          <h1>Box Model</h1>
+          <h1>Best Practices</h1>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <br>
               <li class="fragment">
-                Height, width, padding, margin
-                <font style="font-size:90%">
-                  <code>
-                    #div1 {<br>
-                    &nbsp;&nbsp;width: 300px;<br>
-                    &nbsp;&nbsp;padding: 25px;<br>
-                    &nbsp;&nbsp;margin: 25px;<br>
-                    }<br><br>
-                    #div2 {<br>
-                    &nbsp;&nbsp;width: 80%;<br>
-                    &nbsp;&nbsp;padding: 60px 0px 25px 0px;<br>
-                    &nbsp;&nbsp;margin: 25px 8px;<br>
+                Use spaces
+                <code>
+                  <font style="color: green;">#myDiv {background-color:red; font-size: 14px;}</font><br><br>
+                  <font style="color: red;">#myDiv{background-color:red;font-size:14px;}</font>
+                </code>
+              </li>
+              <br>
+              <li class="fragment">
+                separate rules on new lines
+                <code>
+                  <font style="color: green;">
+                    #myDiv {<br>
+                    &nbsp;&nbsp;background-color:red;<br>
+                    &nbsp;&nbsp;font-size: 14px;<br>
                     }
-                  </code>
-                </font>
-              </li>
-              <br>
-              <li class="fragment">
-                Border-box
-                <code>#div { box-sizing: border-box }</code>
-              </li>
-              <br>
-            </ol>
-          </p>
-        </section>
-        <section>
-          <h1>Box-Sizing</h1>
-          <img src="images/02-feb/border-box.png"/><br>
-          <a href="https://css-tricks.com/box-sizing/" target="_blank">css-tricks.com/box-sizing</a>
-          </p>
-        </section>
-        <section>
-          <h1>Box Effects</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment" style="padding-top: 10px;">
-                Backgrounds
-                <code>body { background-image: url("whatever.png"); }</code>
-              </li>
-              <li class="fragment" style="padding-top: 10px;">
-                Borders
-                <code>
-                  p.dashed {<br>
-                  &nbsp;&nbsp;border-style: dashed;<br>
-                  &nbsp;&nbsp;border-width: 5px;<br>
-                  &nbsp;&nbsp;border-color: red;<br>
-                  }
+                  </font><br><br>
+                  <font style="color: red;">#myDiv {background-color:red; font-size: 14px;}</font><br>
                 </code>
               </li>
-              <li class="fragment" style="padding-top: 10px;">
-                Shadows
-                <code>div { box-shadow: 10px 10px 5px #888888; }</code>
-              </li>
             </ol>
           </p>
-        </section>
-        <section>
-          <h1>Layout</h1>
-          <br>
-          <h1><img src="images/02-feb/layout.jpg" alt="Layout" width="1400px" height="480px"/></h1>
-        </section>
-        <section>
-          <h1>youts</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment">
-                Display / Inline
-                <code>
-                  { display: inline; }<br>
-                  { visibility: hidden; }
-                </code>
-              </li>
-              <li class="fragment">
-                Padding / Margin
-                <code>{ padding: 25px 50px; }</code>
-              </li>
-              <li class="fragment"> <!-- TODO MOve flex part -->
-                Float, Position &amp; Flexbox
-                <font style="font-size:96%"><code>{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
-              </li>
-              <li class="fragment">
-                Z-Index
-                <code>{ z-index: 10; }</code>
-              </li>
-            </ol>
-          </p>
-        </section>
-        <section>
-          <h1>Organization &amp; Best Practices</h1>
-          <img src="images/02-feb/organization.jpg" alt="Organization"/>
-        </section>
-        <section>
-          <h1>Remember...</h1>
-          <div class="fragment current-visible abs">
-            <img src="images/02-feb/beware-of-browsers.jpg"/><br>
-            Browsers treat CSS differently
-          </div>
-          <div class="fragment current-visible abs">
-            <p>
-              <br>
-              specificity wins (ie #myid p > p)
-              <br><br>
-            </p>
-          </div>
-          <div class="fragment current-visible abs">
-            <p>
-              <br>
-              specificity wins (ie #myid p > p)
-              <br><br>
-              <img src="images/02-feb/specificity.jpg" style="margin: 0px;"><br>
-              <font style="font-size: 70%; padding: 0px; margin: 0px;"><a href="http://specificity.keegan.st" target="_blank">specificity.keegan.st</a></font>
-            </p>
-          </div>
         </section>
         <section>
           <h1>Organization</h1>
@@ -869,32 +982,27 @@
           </p>
         </section>
         <section>
-          <h1>Best Practices</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
+          <h1>Remember...</h1>
+          <div class="fragment current-visible abs">
+            <img src="images/02-feb/beware-of-browsers.jpg"/><br>
+            Browsers treat CSS differently
+          </div>
+          <div class="fragment current-visible abs">
+            <p>
               <br>
-              <li class="fragment">
-                Use spaces
-                <code>
-                  <font style="color: green;">#myDiv {background-color:red; font-size: 14px;}</font><br><br>
-                  <font style="color: red;">#myDiv{background-color:red;font-size:14px;}</font>
-                </code>
-              </li>
+              specificity wins (ie #myid p > p)
+              <br><br>
+            </p>
+          </div>
+          <div class="fragment current-visible abs">
+            <p>
               <br>
-              <li class="fragment">
-                separate rules on new lines
-                <code>
-                  <font style="color: green;">
-                    #myDiv {<br>
-                    &nbsp;&nbsp;background-color:red;<br>
-                    &nbsp;&nbsp;font-size: 14px;<br>
-                    }
-                  </font><br><br>
-                  <font style="color: red;">#myDiv {background-color:red; font-size: 14px;}</font><br>
-                </code>
-              </li>
-            </ol>
-          </p>
+              specificity wins (ie #myid p > p)
+              <br><br>
+              <img src="images/02-feb/specificity.jpg" style="margin: 0px;"><br>
+              <font style="font-size: 70%; padding: 0px; margin: 0px;"><a href="http://specificity.keegan.st" target="_blank">specificity.keegan.st</a></font>
+            </p>
+          </div>
         </section>
         <section>
           <h1>Further Options</h1>
