@@ -505,6 +505,10 @@
         </section>
 <!-- part 2 -->
         <section>
+          <h2>Selectors &amp; Pseudo Things</h2>
+          <img src="images/02-feb/groupings-selectors.jpg" alt="Groupings &amp; Selectors"/>
+        </section>
+        <section>
           <h1>Grouping Selectors</h1>
           <code class="fragment">
             &lt;h1 id="one" class="two"&gt;First id, then class&lt;/h1&gt;<br>
@@ -639,41 +643,30 @@
         </section>
 <!-- part 3 -->
         <section>
-          <h1>Boxes</h1>
+          <h1>Box Model &amp; Layout</h1>
           <img src="images/02-feb/boxes.jpg" alt="Boxes"/>
         </section>
         <section>
           <h1>Box Model</h1>
-          <p style="text-align: left;">
-            <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <li class="fragment">
-                Height, width, padding, margin
-                <font style="font-size:90%">
-                  <code>
-                    #div1 {<br>
-                    &nbsp;&nbsp;width: 300px;<br>
-                    &nbsp;&nbsp;padding: 25px;<br>
-                    &nbsp;&nbsp;margin: 25px;<br>
-                    }<br><br>
-                    #div2 {<br>
-                    &nbsp;&nbsp;width: 80%;<br>
-                    &nbsp;&nbsp;padding: 60px 0px 25px 0px;<br>
-                    &nbsp;&nbsp;margin: 25px 8px;<br>
-                    }
-                  </code>
-                </font>
-              </li>
-              <li class="fragment">
-                Border-box
-                <code>#div { box-sizing: border-box }</code>
-              </li>
-              <br>
-            </ol>
-          </p>
+          <p class="fragment" style="text-align: left;">Height, width, padding, margin</p>
+          <code class="fragment" class="smaller-code">
+            #div1 {<br>
+            &nbsp;&nbsp;width: 300px;<br>
+            &nbsp;&nbsp;padding: 25px;<br>
+            &nbsp;&nbsp;margin: 25px;<br>
+            }<br><br>
+            #div2 {<br>
+            &nbsp;&nbsp;width: 80%;<br>
+            &nbsp;&nbsp;padding: 60px 0px 25px 0px;<br>
+            &nbsp;&nbsp;margin: 25px 8px;<br>
+            }
+          </code>
+          <p class="fragment" style="text-align: left;">Border-box</p>
+          <code class="fragment" class="smaller-code">#div { box-sizing: border-box }</code>
         </section>
         <section>
           <h1>Box-Sizing</h1>
-          <img src="images/02-feb/border-box.png"/><br>
+          <img src="images/02-feb/border-box.png" height="500px"/><br>
           <a href="https://css-tricks.com/box-sizing/" target="_blank">css-tricks.com/box-sizing</a>
           </p>
         </section>
@@ -683,11 +676,11 @@
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment" style="padding-top: 10px;">
                 Backgrounds
-                <code>body { background-image: url("whatever.png"); }</code>
+                <code class="smaller-code">body { background-image: url("whatever.png"); }</code>
               </li>
               <li class="fragment" style="padding-top: 10px;">
                 Borders
-                <code>
+                <code class="smaller-code">
                   p.dashed {<br>
                   &nbsp;&nbsp;border-style: dashed;<br>
                   &nbsp;&nbsp;border-width: 5px;<br>
@@ -697,7 +690,7 @@
               </li>
               <li class="fragment" style="padding-top: 10px;">
                 Shadows
-                <code>div { box-shadow: 10px 10px 5px #888888; }</code>
+                <code class="smaller-code">div { box-shadow: 10px 10px 5px #888888; }</code>
               </li>
             </ol>
           </p>
@@ -708,22 +701,21 @@
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment">
                 Display / Inline
-                <code>
-                  { display: inline; }<br>
-                  { visibility: hidden; }
+                <code class="smaller-code">
+                  { display: inline; visibility: hidden; }
                 </code>
               </li>
               <li class="fragment">
                 Padding / Margin
-                <code>{ padding: 25px 50px; }</code>
+                <code class="smaller-code">{ padding: 25px 50px; }</code>
               </li>
               <li class="fragment"> <!-- TODO MOve flex part -->
                 Float, Position &amp; Flexbox
-                <font style="font-size:96%"><code>{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
+                <font style="font-size:96%"><code class="smaller-code">{ float: right; position: absolute; flex-wrap: nowrap; }</code></font>
               </li>
               <li class="fragment">
                 Z-Index
-                <code>{ z-index: 10; }</code>
+                <code class="smaller-code">{ z-index: 10; }</code>
               </li>
             </ol>
           </p>
@@ -763,28 +755,28 @@
         </section>
 <!-- part 3 -->
         <section>
-          <h1>Text</h1>
-          <img src="images/02-feb/text.jpg" alt="Text"/>
+          <p class="fancy">Text &amp; Media Queries</p>
+          <img src="images/02-feb/media-queries.jpg" alt="Media Queries &amp; Responsive Websites"/>
         </section>
         <section>
-          <h1>Common Text CSS Properties</h1>
+          <h3>Common Text CSS Properties</h3>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <li class="fragment">
                 color
-                <code>{ color: green; }</code>
+                <code class="smaller-code">{ color: green; }</code>
               </li>
               <li class="fragment">
                 text-align (left, right, center, justify)
-                <code>{ text-align: center; }</code>
+                <code class="smaller-code">{ text-align: center; }</code>
               </li>
               <li class="fragment">
                 font-size
-                <code>{ font-size: 18px; }</code>
+                <code class="smaller-code">{ font-size: 18px; }</code>
               </li>
               <li class="fragment">
                 font-family
-                <code>{ font-family: "Mr Roboto", "Machina", "Impact", "Verdana", "Times"; }</code>
+                <code class="smaller-code">{ font-family: "Mr Roboto", "Machina", "Impact", "Verdana", "Times"; }</code>
               </li>
             </ol>
           </p>
@@ -806,10 +798,10 @@
           </p>
         </section>
         <section>
-          <h1>Font Family Best Practices</h1>
+          <h2>Font Family Best Practices</h2>
           <p style="text-align: left;">
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
-              <br><br>
+              <br>
               <li class="fragment">
                 List at least 2-3
               </li>
@@ -856,15 +848,14 @@
             <ol style="text-align: left; padding-left: 60px; list-style: none;">
               <br>
               <li class="fragment">
-                Multiple ways to get Font-Awesome...<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://fontawesome.io/get-started/" target="_blank">download or link to it</a>
+                Ways to get Font-Awesome: <a href="http://fontawesome.io/get-started/" target="_blank">download or link to it</a>
               </li>
               <br>
               <li class="fragment">
                 fa-whatever
-                <code>&lt;i class="fa fa-code"&gt;&lt;/i&gt;</code>
+                <code>&lt;i class="fa fa-bicycle"&gt;&lt;/i&gt;</code>
                 <p style="font-size: 60px; padding-left: 100px;">
-                  <i class="fa fa-code"></i>
+                  <i class="fa fa-bicycle"></i>
                 </p>
               </li>
               <li class="fragment">
@@ -877,12 +868,7 @@
           </p>
         </section>
         <section>
-          <h1>Media Queries &amp;<br>Responsive Websites</h1>
-          <img src="images/02-feb/media-queries.jpg" alt="Media Queries &amp; Responsive Websites"/>
-        </section>
-        <section>
           <h1>Media Query Anatomy</h1>
-          <br>
           <img src="images/02-feb/media-query-anatomy.png"/>
           <a href="https://varvy.com/mobile/media-queries.html" target="_blank">varvy.com/mobile/media-queries.html</a>
         </section>
