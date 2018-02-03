@@ -14,6 +14,10 @@
   font-family: "Vtks-LongTime";
   src: local("Vtks-LongTime"), url("fonts/Vtks-LongTime.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "Liar-Script";
+  src: local("Liar-Script"), url("fonts/Liar-Script.ttf") format("truetype"); }
+
 /*********************************************
  * REVEAL.JS - Override the CSS layout https://github.com/hakimel/reveal.js/issues/180
  *********************************************/
@@ -67,8 +71,14 @@ body {
   background: radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
 }
 
+p.fancy {
+  font-family: "Liar-Script" !important;
+  padding-top: 16px !important;
+  font-size: 10vh !important;
+}
+
 p.power {
-  font-family: "Vtks-LongTime";
+  font-family: "Vtks-LongTime" !important;
 }
 
 div.row-line-tools {
@@ -101,6 +111,10 @@ span.row-line-slack {
   flex: none;
   flex-basis: 23%;
   vertical-align: top;
+}
+
+#intro-logo {
+  height:83%;
 }
 
 span.teammembers {
@@ -391,6 +405,10 @@ SNIPPETS
   padding: 15px;
 	overflow: auto;
 	border: 1px solid #ddd;
+}
+
+.smaller-code {
+  font-size: 3.2vh !important;
 }
 
 /*********************************************
