@@ -454,6 +454,21 @@ SNIPPETS
   margin: 0.5rem 2.5rem;
 }
 
+div.fill-row.team {
+  flex-wrap: nowrap;
+}
+
+span.teammembers {
+  flex-basis: 17%;
+}
+
+.teammembers:nth-child(odd) {
+  margin-top: -6rem;
+}
+.teammembers:nth-child(even) {
+  margin-top: 5rem;
+}
+
 /*********************************************
 * CSS SLIDE EXAMPLES
 **********************************************/
