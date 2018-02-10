@@ -476,6 +476,24 @@ span.teammembers {
   display: flex;
   justify-content: center;
 }
+.pseudo-classes {
+  background: #000;
+  display: inline-block;
+  padding: 5px 10px !important;
+}
+.pseudo-classes a {
+  color: #f00 !important;
+  transition: color 2s;
+}
+.pseudo-classes a:hover {
+  color: #f0f !important;
+}
+.pseudo-classes a:visited {
+  color: #0f0 !important;;
+}
+.pseudo-classes a:active {
+  color: #00f !important;;
+}
 .pseudo-example:before {
   content: '↞♥⤛ ';
   font-size: 3rem;
