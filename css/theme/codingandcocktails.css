@@ -427,3 +427,45 @@ SNIPPETS
 .left-align{text-align:left}
 .right-align{ text-align:right}
 .blue{color:#01A9B4}
+
+.team.fill-row {justify-content: center;}
+
+.flexy-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flexy-center.column {
+  flex-direction: column;
+}
+
+.flexy-center code {
+  min-width: 40vw;
+}
+
+.inline-bullet-list {
+  display: flex;
+  padding: 0;
+}
+
+.inline-bullet-list li {
+  list-style: disc outside none;
+  margin: 0.5rem 2.5rem;
+}
+
+/*********************************************
+* CSS SLIDE EXAMPLES
+**********************************************/
+.cascading {
+  display: flex;
+  justify-content: center;
+}
+.pseudo-example:before {
+  content: '↞♥⤛ ';
+  font-size: 3rem;
+}
+.pseudo-example::after {
+  content: ' ⤜♥↠';
+  font-size: 3rem;
+}
