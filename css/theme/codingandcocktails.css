@@ -61,7 +61,7 @@ div.fill-col {
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-body {
+html, body {
   background: #484e78;
   background: -moz-radial-gradient(center, circle cover, #8388af 0%, #484e78 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #8388af), color-stop(100%, #484e78));
