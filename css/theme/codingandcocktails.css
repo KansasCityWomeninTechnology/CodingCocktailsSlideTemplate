@@ -489,10 +489,10 @@ span.teammembers {
   color: #f0f !important;
 }
 .pseudo-classes a:visited {
-  color: #0f0 !important;;
+  color: #0f0 !important;
 }
 .pseudo-classes a:active {
-  color: #00f !important;;
+  color: #00f !important;
 }
 .pseudo-example:before {
   content: '↞♥⤛ ';
