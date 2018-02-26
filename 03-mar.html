@@ -86,13 +86,7 @@
          <h1>Our Sponsors</h1>
          <br><br>
          <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/google_fiber.png" width="45%" style="vertical-align:middle;"/></a>
-         <a href="http://www.dstsystems.com/" target="_blank"><img src="images/dst.svg" width="35%" style="vertical-align:middle;"/></a>
-        </section>
-        <section>
-         <h1>Our Host this Evening</h1>
-         <div class="fill-row">
-           <a href="http://www.nerdery.com" target="_blank"><img src="images/Nerdery-logo.png" alt="The Nerdery" /></a>
-         </div>
+         <a href="http://www.nerdery.com" target="_blank"><img src="images/Nerdery-logo.png" width="35%" style="vertical-align:middle;" alt="The Nerdery"/></a>
         </section>
         <section>
           <h1>Meet the C&amp;C #LadyDevs</h1> <!-- TODO: Styling -->
@@ -123,7 +117,7 @@
               <p class="teammembers">Mentor Director</p>
             </span>
             <span class="fragment teammembers">
-              <img src="images/melissa_cropped.jpg" alt="Melissa Arroyo" class="teammembers" />
+              <img src="images/melissa_cropped.jpg" alt="Melissa Arroyo" class="teammembers" style="margin-top: -10rem !important;" />
               <h6 class="teammembers">Melissa Arroyo</h6>
               <p class="teammembers">Marketing Director</p>
             </span>
@@ -134,7 +128,7 @@
           <a href="https://kcwit.slack.com" target="_blank" class="fragment">
             <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
           </a>
-          <div class="row-line-slack"> <!-- TODO: Update Images -->
+          <div class="row-line-slack"> 
             <span class="row-line-slack"><img src="images/03-mar/slack-1.png" class="fragment"/></span>
             <span class="row-line-slack"><img src="images/03-mar/slack-2.png" class="fragment"/></span>
             <span class="row-line-slack"><img src="images/03-mar/slack-3.png" class="fragment"/></span>
@@ -154,21 +148,27 @@
         </section>
         <section>
           <h1>Tonight's Agenda: Command Line</h1>
-          <ol style="margin-left: 40px;">
-            <li class="fragment">Introduction</li>
-              <ol style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">What is it?</li>
-                <li class="fragment">Why use it?</li>
-                <li class="fragment">How do you use it?</li>
-              </ol>
-            <li class="fragment">Basic Commands</li>
-            <li class="fragment">Redirection &amp; Piping</li>
-            <li class="fragment">Editing Files</li>
-            <li class="fragment">Advanced Concepts</li>
-            <li class="fragment">Helpful Tips</li>
-            <li class="fragment">Scripts</li>
-            <li class="fragment">Permissions</li>
-          </ol>
+          <div style="float:left; width:50%;">
+            <ol style="margin-left: 40px;">
+              <li class="fragment">Introduction</li>
+                <ol style="margin: 0 0 0 60px;" type="a">
+                  <li class="fragment">What is it?</li>
+                  <li class="fragment">Why use it?</li>
+                  <li class="fragment">How do you use it?</li>
+                </ol>
+              <li class="fragment">Basic Commands</li>
+              <li class="fragment">Redirection &amp; Piping</li>
+              <li class="fragment">Editing Files</li>
+              <li class="fragment">Advanced Concepts</li>
+              <li class="fragment">Helpful Tips</li>
+            </ol>
+          </div>
+          <div style="float:right; width:50%;">
+            <ol style="margin-left: 40px;" start="7">
+              <li class="fragment">Scripts</li>
+              <li class="fragment">Permissions</li>
+            </ol>
+          </div>
         </section>
 <!-- part 1-->        
         <section>
@@ -192,8 +192,8 @@
         </section>
         <section>
             <h1>Why use the command line?</h1>
-            <div class="fragment current-visible abs">  <!-- TODO lasso instead -->
-              <img src="images/03-mar/wonder-woman.gif" height="78%" width="78%"/> <!-- TODO img placement & sizing -->
+            <div class="fragment current-visible">
+              <img src="images/03-mar/wonder-woman.gif" height="78%" width="78%"/>
               <p class="power" style="font-size: 100px; font-weight: 100;">Power.</p>
             </div>
             <br>
@@ -207,8 +207,8 @@
         </section>
         <section>
             <h1>With Great Power...</h1>
-            <div class="fragment current-visible abs">
-              <img src="images/03-mar/great-power.jpg" height="62%" width="62%"/> <!-- TODO img placement & sizing -->
+            <div class="fragment current-visible">
+              <img src="images/03-mar/great-power.jpg" height="62%" width="62%"/>
               <p>comes great responsibility</p>
             </div>
             <br>
@@ -316,7 +316,7 @@
 <!-- break slide -->
         <section>
           <h1>Screen Layout</h1>
-          <!-- TODO: Make Video -->
+          <img src="images/03-mar/screenLayout.png" alt="Split Screen Workspace" class="fragment" width="80%">
         </section>
         <section>
           <h1 class="break">Do the Worksheet: Part 1</h1>
@@ -350,8 +350,8 @@
             </div>
           </div>
         </section>
-<!-- part 2--> 
-        <section>
+<!-- part 2 --> 
+        <section> <!-- TODO: Section image if time -->
           <h1>Redirection &amp; Piping</h1>
           <div>
             <div style="float:left; width:45%; padding-top:175px;">
@@ -370,11 +370,11 @@
                 </tr>
               </table>
             </div>
-            <div style="float:right; width:55%; padding-top:75px;">
+              <div style="float:right; width:55%; padding-top:75px;"> <!-- TODO: New Video -->
               <img class="fragment" src="images/03-mar/redirection-piping.gif">
             </div>
         </section>
-        <section>
+        <section> <!-- TODO: Better section image if time -->
           <h1>Editing Files</h1>
           <p>Terminal Based Text Editors</p>
           <img src="images/03-mar/vimlogo.png" alt="Vim" height="70%">
@@ -389,11 +389,11 @@
                   <td style="text-align: left;">open file for editing</td>
                 </tr>
                 <tr class="fragment">
-                  <td style="text-align: left;">arrow keys</td>
-                  <td style="text-align: left;">move through file (read only)</td>
+                  <td style="text-align: left;">&uarr;, &darr;, &larr;, &rarr;</td>
+                  <td style="text-align: left;">move through file</td>
                 </tr>
                 <tr class="fragment">
-                  <td style="text-align: left;">shift + i</td>
+                  <td style="text-align: left;">i</td>
                   <td style="text-align: left;">insert mode</td>
                 </tr>
                 <tr class="fragment">
@@ -402,7 +402,11 @@
                 </tr>
                 <tr class="fragment">
                   <td style="text-align: left;">:wq</td>
-                  <td style="text-align: left;">save changes (write quit)</td>
+                  <td style="text-align: left;">save changes</td>
+                </tr>
+                <tr class="fragment">
+                  <td style="text-align: left;">:q!</td>
+                  <td style="text-align: left;">quit (without saving)</td>
                 </tr>
               </table>
             </div>
@@ -444,49 +448,71 @@
           </div>
         </section>
 <!-- part 3-->
+        <section> <!-- TODO: Section image if time -->
+          <h1>Advanced Concepts</h1>
+          <br>
+          <p class="fragment">Environment Variables</p>
+          <br>
+          <code class="fragment">export MYVAR=value</code>
+          <br>
+          <p class="fragment">Environment variables can remain persistent if stored to your .bash_profile</p>
+        </section>
         <section>
           <h1>Advanced Concepts</h1>
+          <br>
+          <p class="fragment">Aliases</p>
+          <br>
+          <div class="fragment">
+            <p>Create an alias</p>
+            <code>alias documents='cd ~/Documents'</code>
+          </div>
+          <div class="fragment">
+            <p>Use an alias</p>
+            <code>documents</code>
+          </div>
+          <br>
+          <p class="fragment">Aliases can remain persistent if stored to your .bash_profile</p>
         </section>
         <section>
           <h1>Helpful Tips</h1>
-          <img src="images/03-mar/helpful-tips.jpg" alt="Helpful Tips" height="85%" width="85%"/>
+          <img src="images/03-mar/helpful-tips.jpg" alt="Helpful Tips" height="80%" width="80%"/>
         </section>
         <section>
           <h1>Tips to help you</h1>
-            <div style="text-align: left;">
+            <div>
               <p class="fragment">Display usage docs</p>
-              <img class="fragment" src="images/03-mar/man1.png" height="32px" style="margin-top: 0;">
-              <img class="fragment" src="images/03-mar/man2.png" height="32px" style="margin-top: 0;">
+              <img class="fragment" src="images/03-mar/man1.png" height="32px">
+              <img class="fragment" src="images/03-mar/man2.png" height="32px">
             </div>
-            <div >
-              <table class="slightlyPaddedTable" style="font-size:38px; align: center;">
+            <div>
+              <table class="slightlyPaddedTable" style="font-size:38px; margin: 0 auto;">
                 <tr class="fragment">
-                  <td style="text-align: left;">Abort a command</td>
                   <td style="text-align: left;">CTRL + C</td>
+                  <td style="text-align: left;">Abort a command</td>
                 </tr>
                 <tr class="fragment">
-                  <td style="text-align: left;">Clear terminal</td>
                   <td style="text-align: left;"><code style="margin:0;">clear</code></td>
+                  <td style="text-align: left;">Clear terminal</td>
                 </tr>
                 <tr class="fragment">
-                  <td style="text-align: left;">Buffer recall</td>
-                  <td style="text-align: left;">up and down arrows</td>
+                  <td style="text-align: left;">&uarr;, &darr;</td>
+                  <td style="text-align: left;">Scroll through commands in buffer</td>
                 </tr>
                 <tr class="fragment">
-                  <td style="text-align: left;">History</td>
                   <td style="text-align: left;"><code style="margin:0;">history</code></td>
+                  <td style="text-align: left;">Show command history</td>
                 </tr>
                 <tr class="fragment">
-                  <td style="text-align: left;">Find prev command</td>
                   <td style="text-align: left;">CTRL + R</td>
+                  <td style="text-align: left;">Find prev command</td>
                 </tr>
                 <tr class="fragment">
-                  <td style="text-align: left;">Repeat last command</td>
                   <td style="text-align: left;">!!</td>
+                  <td style="text-align: left;">Repeat last command</td>
                 </tr>
                 <tr class="fragment">
+                  <td style="text-align: left;">TAB key</td>
                   <td style="text-align: left;">Attempt autocompletion</td>
-                  <td style="text-align: left;">hit TAB</td>
                 </tr>
                 <tr class="fragment">
                   <td style="text-align: left;">Path population</td>
@@ -565,7 +591,56 @@
         </section>
         <section>
           <h1>Permissions</h1>
+          <br>
+          <ol style="list-style-type: disc;">
+            <li class="fragment">Every file has permissions</li>
+            <li class="fragment">Who gets permissions?</li>
+              <ol style="list-style-type: disc; padding-left: 40px;">
+                <li class="fragment">u (File owner)</li>
+                <li class="fragment">g (File owner's group)</li>
+                <li class="fragment">o (Other / everyone else)</li>
+                <li class="fragment">a (all)</li>
+              </ol>
+            <li class="fragment">sudo</li>
+            <ol style="list-style-type: disc; padding-left: 40px;">
+              <li class="fragment">execute commands with greater privileges</li>
+            </ol>
+          </ol>
         </section>
+        <section>
+          <h1>Permissions</h1>
+          <br>
+          <table class="slightlyPaddedTable" style="font-size:4rem; margin: 0 auto;">
+              <tr class="fragment">
+                <td style="text-align: left;">r (read)</td>
+                <td style="text-align: left;">read, open, view, copy the file</td>
+              </tr>
+              <tr class="fragment">
+                <td style="text-align: left;">w (write)</td>
+                <td style="text-align: left;">write, change, delete, save the file</td>
+              </tr>
+              <tr class="fragment">
+                  <td style="text-align: left;">x (execute)</td>
+                  <td style="text-align: left;">run the file</td>
+                </tr>
+          </table>
+          <br>
+          <p class="fragment">View permissions:</p>
+          <code class="fragment">ls -l</code>
+        </section>
+        <section>
+          <h1>Permissions</h1>
+          <br>
+          <p class="fragment">Changing Permissions</p>
+          <pre><code class="fragment">&rarr; chmod o+x myfile.txt</code></pre>
+          <br>
+          <pre><code class="fragment">&rarr; chmod -v g+x myfile.txt
+mode  of  'myfile.txt'  changed  to  0754  (rwxr-xr--)</code></pre>
+          <br>
+          <code class="fragment">&rarr; chmod 744 myfile.txt</code></pre>
+        </section>
+
+        
 <!-- break slide -->
         <section>
           <h1 class="break">Do the Worksheet: Part 4</h1>
@@ -602,29 +677,59 @@
 <!-- end -->
         <section>
           <h1>Additional Uses</h1>
-          <br>
-          <img src="images/03-mar/additional-uses.jpg" alt="Additional Uses" height="100%" width="100%"/>
+          <img src="images/03-mar/additional-uses.jpg" alt="Additional Uses" height="80%" width="80%"/>
         </section>
         <section>
           <h1>Additional uses</h1>
+          <p>Install &amp; Run Tools</p>
+          <div style="float:left; width:50%; margin-top:1rem;">
+            <ol style="list-style-type: disc; font-size: 80%; ">
+              <li class="fragment">curl</li>
+              <li class="fragment">Package managers</li>
+                <ol style="list-style-type: disc; padding-left: 40px;">
+                  <li class="fragment">brew</li>
+                  <li class="fragment">chocolatey</li>
+                  <li class="fragment">apt</li>
+                  <li class="fragment">yeoman</li>
+                  <li class="fragment">npm</li>
+                </ol>
+            </ol>
+        </div>
+        <div style="float:right; width:50%; margin-top:1rem;">
           <ol style="list-style-type: disc; font-size: 80%;">
-            <li class="fragment">Edit files</li>
-            <li class="fragment">Install &amp; Run Tools</li>
-              <ol style="list-style-type: disc; padding-left: 40px;">
-                <li class="fragment">curl</li>
-                <li class="fragment">Package managers: brew, chocolatey, apt, yeoman, npm...</li>
-                <li class="fragment">Build tasks</li>
-                  <ol style="list-style-type: disc; padding-left: 40px;">
-                    <li class="fragment">Sass to CSS</li>
-                    <li class="fragment">Live reload</li>
-                    <li class="fragment">Preparing for production: gulp, grunt, ant</li>
-                  </ol>
-              </ol>
-            <li class="fragment">Git</li>
-            <li class="fragment">Website Deployment</li>
-            <li class="fragment">Run a local server</li>
-            <li class="fragment">Expose that server via tunneling</li>
+              <li class="fragment">Build tasks</li>
+                <ol style="list-style-type: disc; padding-left: 40px;">
+                  <li class="fragment">Sass to CSS</li>
+                  <li class="fragment">Live reload</li>
+                  <li class="fragment">Minification</li>
+                  <li class="fragment">Uglify</li>
+                </ol>
+              <li class="fragment">Git</li>
+            </ol>
           </ol>
+        </div>
+        </section>
+        <section>
+          <h1>Additional uses</h1>
+          <br>
+          <div style="margin-left:3rem;">
+            <ol style="list-style-type: disc; font-size: 80%;">
+              <li class="fragment">Run a local server</li>
+              <ol style="list-style-type: disc; padding-left: 40px;">
+                <li class="fragment">What is a port?</li>
+                <li class="fragment">Local web server</li>
+                <li class="fragment">Local Tunnel</li>
+              </ol>
+              <li class="fragment">Website Deployment</li>
+              <ol style="list-style-type: disc; padding-left: 40px;">
+                <li class="fragment">GitHub Pages</li>
+                <li class="fragment">Heroku</li>
+                <li class="fragment">CodeAnywhere</li>
+                <li class="fragment">AWS</li>
+                <li class="fragment">Now</li>
+              </ol>
+            </ol>
+          </div>
         </section>
         <section>
           <h1>Questions?</h1>
@@ -653,7 +758,7 @@
           <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
           <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
           <br><br>
-          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
         </section>
       </div>
     </div>
