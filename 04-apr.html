@@ -143,10 +143,10 @@
             <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
           </a>
           <div class="row-line-slack">
-            <span class="row-line-slack"><img src="images/04-apr/slack-1.png" alt="#djangogirlskc - Django Girls Omaha" class="fragment" style="height: 400px; width: 400px"/></span>
-            <span class="row-line-slack"><img src="images/04-apr/slack-2.png" alt="#events - Black Panther Outing" class="fragment" style="height: 400px; width: 400px"//></span>
-            <span class="row-line-slack"><img src="images/04-apr/slack-3.jpg" alt="#diy - Mopaca 2018" class="fragment" style="height: 400px; width: 400px"//></span>
-            <span class="row-line-slack"><img src="images/04-apr/slack-4.gif" alt="#ladybosses - Little Girl Makes Box Jump" class="fragment" style="height: 400px; width: 400px"//></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-1.png" alt="#djangogirlskc - Django Girls Omaha" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-2.png" alt="#events - Black Panther Outing" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-3.jpg" alt="#diy - Mopaca 2018" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-4.gif" alt="#ladybosses - Little Girl Makes Box Jump" class="fragment" style="height: 300px; width: 300px"/></span>
           </div>
           <div>
         </section>
@@ -195,7 +195,7 @@
           <h1>What is Version Control?</h1>
           <br><br>
           <div style="display: inline-flex">
-            <img src="images/04-apr/versioncontrol.png" alt="Version Control" width="50%" style="padding-right: 50px;"/>
+            <img class="fragment" src="images/04-apr/versioncontrol.png" alt="Version Control" width="50%" style="padding-right: 50px;"/>
             <div style="flex-direction: column; justify-content: space-between;">
               <p class="fragment">An utility that tracks changes in files</p>
               <br><br>
@@ -262,9 +262,11 @@
             <p class="fragment">Concurrently work on code</p>
             <p class="fragment">Work without a network connection</p>
             <p class="fragment">Fast</p>
-            <p class="fragment">Branches*</p>
-            <p class="fragment">Staging area*</p>
-            <p class="fragment">Stashing*</p>
+            <div class="fragment">
+              <p>Branches*</p>
+              <p>Staging area*</p>
+              <p>Stashing*</p>
+            </div>
           </ul>
         </section>
         <section>
@@ -284,7 +286,8 @@
         </section>
 <!-- break slide -->
         <section>
-          <h1 class="break">Do the Worksheet: Part "Inspect A Repo"</h1>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Inspect a Repo</h4>
           <div class="fill-col">
             <p>Wifi: username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
@@ -332,7 +335,7 @@
           <br>
           <p class="fragment">Git Term: <span style="color:#c7bc75">origin</span></p>
           <br>
-          <p class="fragment">When the clone is pulled down to your machine, it keeps a reference to the parent, which the default term in git is `origin`</p>
+          <p class="fragment">When the clone is pulled down to your machine, it keeps a reference to the parent, which the default term in git is <span style="color:#c7bc75">origin</span></p>
         </section>
         <section>
           <h3>Essential Git Commands</h3>
@@ -383,7 +386,8 @@
         </section>
 <!-- break slide -->
         <section>
-          <h1 class="break">Do the Worksheet: Part "Create A Repo"</h1>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Create A Repo</h4>
           <div class="fill-col">
             <p>Wifi: username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
@@ -428,9 +432,7 @@
           <br><br>
           <p class="fragment">Git Term: <span style="color:#c7bc75">remote</span></p>
           <br>
-          <div class="fragment">
-            <p class="fragment">Where your code is stored</p>
-          </div>
+          <p class="fragment">Where your code is stored</p>
           <div class="fragment">
             <br>
             <p>The path of where the code came from [<span style="color:#c7bc75">origin</span>]</p>
@@ -465,7 +467,7 @@
         </section>
         <section>
           <br>
-          <img src="images/04-apr/pushing-changes.mov" alt="Editing a File & Pushing Changes" height="90%" />
+          <img src="images/04-apr/pushing-changes.gif" alt="Editing a File & Pushing Changes" height="90%" />
         </section>
         <section>
           <br>
@@ -479,7 +481,8 @@
         </section>
 <!-- break slide -->
         <section>
-          <h1 class="break">Do the Worksheet: Part "Editing Files"</h1>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Editing Files</h4>
           <div class="fill-col">
             <p>Wifi: username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
@@ -516,7 +519,7 @@
           <img src="images/04-apr/teamwork.gif" style="height: 70%;" alt="Teamwork">
         </section>
         <section>
-          <h3 class="fragment">Branches</h3>
+          <h3>Branches</h3>
           <br>
           <p class="fragment">A branch is a pointer to a commit</p>
           <br>
@@ -527,6 +530,8 @@
         <section>
           <br>
           <img src="images/04-apr/git-branch.svg" style="width: 90%; align-items: right;" alt="Git Branch">
+          <br>
+          <a href="https://www.atlassian.com/git/tutorials/using-branches" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
         </section>
         <section>
           <h3>Pull Requests</h3>
@@ -540,6 +545,7 @@
           <br><br><br>
           <ol style="padding-left: 50px;">
             <li class="fragment">Open pull request</li>
+            <li class="fragment">Comments, suggstions, approval (optional)</li>
             <li class="fragment">Merge pull request</li>
             <li class="fragment">Delete associated branch (optional)</li>
           </ol>
@@ -563,7 +569,8 @@
         </section>
 <!-- break slide -->
         <section>
-          <h1 class="break">Do the Worksheet: Part "Collaborating With Others"</h1>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Collaborating With Others</h4>
           <div class="fill-col">
             <p>Wifi: username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
@@ -620,62 +627,34 @@
           <p class="fragment">Like pop, but doesn't remove it from the stash list</p>
         </section>
         <section>
-          <h3>Merge vs Rebase</h3>
-          <br>
-          <p>DESCRIPTION</p>
+          <h3>Merge</h3>
+          <img src="images/04-apr/merge.svg" alt="Merge" />
+          <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
+        </section>
+        <section>
+          <h3>Rebase</h3>
+          <img src="images/04-apr/rebase.svg" alt="Rebase" />
+          <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
+        </section>
+        <section>
+          <h3>When Not to Rebase</h3>
+          <img src="images/04-apr/when-not-rebase.svg" alt="When Not to Rebase" />
+          <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
         </section>
         <section>
           <h3>Oops!</h3>
           <br>
-          <ul>
-            <li class="fragment"><code>git reset head ~</code></li>
-            <p class="fragment">Last commit back to staging</p>
-            <br>
-            <li class="fragment"><code>git reset head --hard</code></li>
-            <p class="fragment">DESCRIPTION</p>
-            <br>
-            <li class="fragment"><code>git revert</code></li>
-            <p class="fragment">Adds a new commit that undoes the commit you specify</p>
-          </ul>
-        </section>
-        <section>
-          <br><br>
-          <h1>What we'll do:</h1>
-          <br><br>
-          <p>Merge branches and create a pull request.</p>
-        </section>
-<!-- break slide -->
-        <section>
-          <h1 class="break">Do the Worksheet: Part "Collaborating With Others"</h1>
-          <div class="fill-col">
-            <p>Wifi: username / password</p>
-            <table class="tocTable" style="margin: 0 auto;">
-              <tr>
-                <td>This presentation</td>
-                <td><a href="http://bit.ly/CnCMONTHSlides" target="_blank">http://bit.ly/CnCMONTHSlides</a></td>
-              </tr>
-                <tr>
-                  <td>The worksheet</td>
-                  <td><a href="http://bit.ly/CnCMONTHWork" target="_blank">http://bit.ly/CnCMONTHWork</a></td>
-                </tr>
-                <tr>
-                  <td>Install the Tools</td>
-                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
-                </tr>
-            </table>
-            <div class="row-line-tools">
-              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
-              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
-              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
-              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
-            </div>
-            <div class="license-container">
-              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
-              <p class="license-text">
-                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-              </p>
-            </div>
+          <div class="fragment">
+            <p><code>git reset HEAD~</code></p>
+            <p class="fragment"><code>git commit --amend</code></p>
+            <p>Last commit back to staging</p>
           </div>
+          <br>
+          <p class="fragment"><code>git reset HEAD --hard</code></p>
+          <p class="fragment">Reset staging and the working directory to the most recent commit</p>
+          <br>
+          <p class="fragment"><code>git revert [commit ID]</code></p>
+          <p class="fragment">Adds a new commit that undoes the commit you specify</p>
         </section>
 <!-- end -->
         <section>
