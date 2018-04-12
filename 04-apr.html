@@ -64,7 +64,7 @@
               </tr>
                 <tr>
                   <td>The worksheet</td>
-                  <td><a href="http://bit.ly/CnCMONTHWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
                 </tr>
             </table>
             <div class="row-line-tools">
@@ -197,7 +197,7 @@
           <div style="display: inline-flex">
             <img class="fragment" src="images/04-apr/versioncontrol.png" alt="Version Control" width="50%" style="padding-right: 50px;"/>
             <div style="flex-direction: column; justify-content: space-between;">
-              <p class="fragment">An utility that tracks changes in files</p>
+              <p class="fragment">A utility that tracks changes in files</p>
               <br><br>
               <ul>
                 <li class="fragment" style="list-style-type: disc;">Reference past changes</li>
@@ -229,14 +229,14 @@
           <h3>Types of Version Control</h3>
           <br><br>
           <div class="fragment">
-            <p style="color:#c7bc75">Centralized</p>
+            <p>Centralized</p>
             <ul>
                 <li style="list-style-type: disc;">Focuses on synchronizing, tracking, and backing up files</li>
             </ul>
           <div>
           <br><br>
           <div class="fragment">
-            <p style="color:#c7bc75">Distributed</p>
+            <p>Distributed</p>
             <ul>
                 <li style="list-style-type: disc;">Focuses on sharing changes; every change has a guid or unique id (easy to track)</li>
                 <li style="list-style-type: disc;">Recording and applying a change are separate steps</li>
@@ -246,7 +246,7 @@
         <section>
           <h3>Types of Version Control</h3>
           <img src="images/04-apr/version-control-types.svg" alt="Version Control Types" height="80%" />
-          <a href="https://www.atlassian.com/git/tutorials/why-git" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
+          <a href="https://www.atlassian.com/git/tutorials/why-git" style="font-size: 20px;" target="_blank">Credit: Atlassian Git Tutorial</a>
         </section>
         <section>
           <h3>Git</h3>
@@ -293,11 +293,11 @@
             <table class="tocTable" style="margin: 0 auto;">
               <tr>
                 <td>This presentation</td>
-                <td><a href="http://bit.ly/CnCMONTHSlides" target="_blank">http://bit.ly/CnCMONTHSlides</a></td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
               </tr>
                 <tr>
                   <td>The worksheet</td>
-                  <td><a href="http://bit.ly/CnCMONTHWork" target="_blank">http://bit.ly/CnCMONTHWork</a></td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
                 </tr>
                 <tr>
                   <td>Install the Tools</td>
@@ -333,9 +333,9 @@
           <br><br>
           <code class="fragment">git clone [url]</code>
           <br>
-          <p class="fragment">Git Term: <span style="color:#c7bc75">origin</span></p>
+          <p class="fragment">Git Term: origin</p>
           <br>
-          <p class="fragment">When the clone is pulled down to your machine, it keeps a reference to the parent, which the default term in git is <span style="color:#c7bc75">origin</span></p>
+          <p class="fragment">When the clone is pulled down to your machine, it keeps a reference to the parent, which the default term in git is origin</p>
         </section>
         <section>
           <h3>Essential Git Commands</h3>
@@ -348,17 +348,19 @@
         </section>
         <section>
           <h3>Making Changes Locally</h3>
-          <br><br>
+          <br>
           <p class="fragment"><code>git status</code></p>
           <p class="fragment">Shows information about status, including <span style="color: lime;">staged</span> and <span style="color: red;">unstaged</span> changes</p>
           <br>
-          <p class="fragment"><code>git add</code></p>
-          <p class="fragment">Add a file (untracked or modified) to staging</p>
+          <p class="fragment"><code>git add [filename]</code></p>
+          <p class="fragment"><code>git add [dir]</code></p>
+          <p class="fragment"><code>git add .</code></p>
+          <p class="fragment">Add a file or directory (untracked or modified) to staging</p>
         </section>
         <section>
           <h3>Making Changes Locally</h3>
           <br><br>
-          <p class="fragment">Git Term: <span style="color:#c7bc75">staging</span></p>
+          <p class="fragment">Git Term: staging</p>
           <br><br>
           <p class="fragment">A file named index in your local .git repo</p>
           <br>
@@ -393,11 +395,11 @@
             <table class="tocTable" style="margin: 0 auto;">
               <tr>
                 <td>This presentation</td>
-                <td><a href="http://bit.ly/CnCMONTHSlides" target="_blank">http://bit.ly/CnCMONTHSlides</a></td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
               </tr>
                 <tr>
                   <td>The worksheet</td>
-                  <td><a href="http://bit.ly/CnCMONTHWork" target="_blank">http://bit.ly/CnCMONTHWork</a></td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
                 </tr>
                 <tr>
                   <td>Install the Tools</td>
@@ -430,13 +432,13 @@
         <section>
           <h3>Pushing Changes to Remote</h3>
           <br><br>
-          <p class="fragment">Git Term: <span style="color:#c7bc75">remote</span></p>
+          <p class="fragment">Git Term: remote</p>
           <br>
           <p class="fragment">Where your code is stored</p>
           <div class="fragment">
             <br>
-            <p>The path of where the code came from [<span style="color:#c7bc75">origin</span>]</p>
-            <p>The path where the code is going [<span style="color:#c7bc75">upstream</span>]</p>
+            <p>The path of where the code came from [origin]</p>
+            <p>The path where the code is going [upstream]</p>
           </div>
         </section>
         <section>
@@ -463,7 +465,7 @@
           <h3>Pushing Changes</h3>
           <br>
           <p class="fragment"><code>git push</code></p>
-          <p class="fragment">Updates remote refs using local refs and sends necessary objects</p>
+          <p class="fragment">Updates remote using local and sends necessary objects</p>
         </section>
         <section>
           <br>
@@ -488,11 +490,11 @@
             <table class="tocTable" style="margin: 0 auto;">
               <tr>
                 <td>This presentation</td>
-                <td><a href="http://bit.ly/CnCMONTHSlides" target="_blank">http://bit.ly/CnCMONTHSlides</a></td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
               </tr>
                 <tr>
                   <td>The worksheet</td>
-                  <td><a href="http://bit.ly/CnCMONTHWork" target="_blank">http://bit.ly/CnCMONTHWork</a></td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
                 </tr>
                 <tr>
                   <td>Install the Tools</td>
@@ -576,11 +578,11 @@
             <table class="tocTable" style="margin: 0 auto;">
               <tr>
                 <td>This presentation</td>
-                <td><a href="http://bit.ly/CnCMONTHSlides" target="_blank">http://bit.ly/CnCMONTHSlides</a></td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
               </tr>
                 <tr>
                   <td>The worksheet</td>
-                  <td><a href="http://bit.ly/CnCMONTHWork" target="_blank">http://bit.ly/CnCMONTHWork</a></td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
                 </tr>
                 <tr>
                   <td>Install the Tools</td>
@@ -646,13 +648,15 @@
         </section>
         <section>
           <h3>Oops!</h3>
+          <br><br>
+          <p class="fragment"><code>git reset HEAD~</code></p>
+          <p class="fragment">Last commit back to staging</p>
           <br>
-          <div class="fragment">
-            <p><code>git reset HEAD~</code></p>
-            <p class="fragment"><code>git commit --amend</code></p>
-            <p>Last commit back to staging</p>
-          </div>
-          <br>
+          <p class="fragment"><code>git commit --amend</code></p>
+        </section>
+        <section>
+          <h3>Oops!</h3>
+          <br><br>
           <p class="fragment"><code>git reset HEAD --hard</code></p>
           <p class="fragment">Reset staging and the working directory to the most recent commit</p>
           <br>
@@ -671,7 +675,7 @@
             <li class="fragment">Find a buddy</li>
             <li class="fragment">Take <a href="http://bit.ly/CnCFeedback" target="_blank">the quiz</a></li>
             <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
-            <li class="fragment">Finish <a href="http://bit.ly/CnCMONTHWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCAprWork" target="_blank">tonight's worksheet</a></li>
             <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Version+Control+tutorial" target="_blank">online tutorial on Version Control</a></li>
             <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
           </ol>
