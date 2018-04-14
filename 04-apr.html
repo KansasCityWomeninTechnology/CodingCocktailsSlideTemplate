@@ -227,26 +227,29 @@
         </section>
         <section>
           <h3>Types of Version Control</h3>
-          <br><br>
-          <div class="fragment">
-            <p>Centralized</p>
-            <ul>
-                <li style="list-style-type: disc;">Focuses on synchronizing, tracking, and backing up files</li>
-            </ul>
-          <div>
-          <br><br>
-          <div class="fragment">
-            <p>Distributed</p>
-            <ul>
-                <li style="list-style-type: disc;">Focuses on sharing changes; every change has a guid or unique id (easy to track)</li>
-                <li style="list-style-type: disc;">Recording and applying a change are separate steps</li>
-            </ul>
-          </div>
+          <img src="images/04-apr/version-control-types.svg" alt="Version Control Types" height="80%" />
+          <br>
+          <a href="https://www.atlassian.com/git/tutorials/why-git" style="font-size: 20px;" target="_blank">Credit: Atlassian Git Tutorial</a>
         </section>
         <section>
-          <h3>Types of Version Control</h3>
-          <img src="images/04-apr/version-control-types.svg" alt="Version Control Types" height="80%" />
-          <a href="https://www.atlassian.com/git/tutorials/why-git" style="font-size: 20px;" target="_blank">Credit: Atlassian Git Tutorial</a>
+          <h3>Terms of Version Control</h3>
+          <br>
+          <h5 style="list-style-type: disc;">Cloning</h5>
+          <br>
+          <img src="images/04-apr/clone.svg" alt="Clone" height="70%" />
+        </section>
+        <section>
+          <h3>Terms of Version Control</h3>
+          <br>
+          <h5 style="list-style-type: disc;">Pulling/Pushing</h5>
+          <br>
+            <img src="images/04-apr/push_pull.svg" alt="Push and Pull" width="100%" />
+        </section>
+        <section>
+          <h3>Terms of Version Control</h3>
+          <br>
+          <h5 style="list-style-type: disc;">Commiting</h5>
+          <img src="images/04-apr/commit.svg" alt="Commit" height="70%" />
         </section>
         <section>
           <h3>Git</h3>
@@ -262,12 +265,19 @@
             <p class="fragment">Concurrently work on code</p>
             <p class="fragment">Work without a network connection</p>
             <p class="fragment">Fast</p>
+            <p class="fragment">Branches</p>
             <div class="fragment">
-              <p>Branches*</p>
               <p>Staging area*</p>
               <p>Stashing*</p>
             </div>
           </ul>
+        </section>
+        <section>
+          <h3>Branches</h3>
+          <br><br><br>
+          <img src="images/04-apr/git-branch_simple.svg" style="width: 90%; align-items: right;" alt="Git Branch">
+          <br>
+          <a href="https://www.atlassian.com/git/tutorials/using-branches" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
         </section>
         <section>
           <img src="images/04-apr/gitkraken01.png" alt="GitKraken 01" height="95%" />
@@ -321,12 +331,10 @@
 <!-- part 2-->
         <section>
           <h1>Creating a Repo &amp; Adding New Files</h1>
-          <br><br>
-          <ul>
-            <li class="fragment" style="list-style-type: disc;">GitKraken GUI</li>
-            <li class="fragment" style="list-style-type: disc;"><code style="width: 25%;">git init</code></li>
-            <li class="fragment" style="list-style-type: disc;">Create a repo at GitHub.com &amp; clone (most common)</li>
-          </ul>
+          <br>
+          <code style="width: 25%;">git init</code>
+          <a href="https://www.gitkraken.com/" target="_blank"><img class="fragment" src="images/04-apr/gitkraken-logo.png" alt="GitKraken" style="height: 25%"/></a>
+          <a href="https://www.github.com/" target="_blank"><img class="fragment" src="images/04-apr/github-logo.png" alt="GitHub" style="height: 30%"/></a>
         </section>
         <section>
           <h3>Cloning a Repository</h3>
@@ -359,13 +367,23 @@
         </section>
         <section>
           <h3>Making Changes Locally</h3>
-          <br><br>
+          <br>
           <p class="fragment">Git Term: staging</p>
-          <br><br>
-          <p class="fragment">A file named index in your local .git repo</p>
           <br>
-          <p class="fragment">If you want to ignore certain files, you can add them to .gitignore</p>
+          <div class="fragment" style="display: inline-flex; height: 70%; width: 80%">
+            <div>
+              <img src="images/04-apr/index.png" />
+            </div>
+            <div style="display: inline-flex; align-items: center;">
+              <p>Tracks all your saved changes</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Ignoring Local Changes</h3>
           <br>
+          <h5>.gitignore</h5>
+          <img src="images/04-apr/gitignore.png" />
         </section>
         <section>
           <h3>Making Changes Locally</h3>
@@ -435,8 +453,8 @@
           <p class="fragment">Git Term: remote</p>
           <br>
           <p class="fragment">Where your code is stored</p>
+          <br><br>
           <div class="fragment">
-            <br>
             <p>The path of where the code came from [origin]</p>
             <p>The path where the code is going [upstream]</p>
           </div>
@@ -528,12 +546,6 @@
           <p class="fragment"><code>git checkout -b [new-branch-name]</code></p>
           <br>
           <p class="fragment"><code>git checkout [existing-branch-name]</code></p>
-        </section>
-        <section>
-          <br>
-          <img src="images/04-apr/git-branch.svg" style="width: 90%; align-items: right;" alt="Git Branch">
-          <br>
-          <a href="https://www.atlassian.com/git/tutorials/using-branches" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
         </section>
         <section>
           <h3>Pull Requests</h3>
