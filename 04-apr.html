@@ -360,7 +360,7 @@
           <p class="fragment"><code>git status</code></p>
           <p class="fragment">Shows information about status, including <span style="color: lime;">staged</span> and <span style="color: red;">unstaged</span> changes</p>
           <br>
-          <p class="fragment"><code>git add [filename]</code></p>
+          <p class="fragment"><code>git add [filepath]</code></p>
           <p class="fragment"><code>git add [dir]</code></p>
           <p class="fragment"><code>git add .</code></p>
           <p class="fragment">Add a file or directory (untracked or modified) to staging</p>
@@ -443,7 +443,7 @@
           <h1>Editing Files &amp; Pushing Changes</h1>
           <br><br>
           <p class="fragment"><code>git diff</code></p>
-          <p class="fragment"><code>git diff [filename.txt]</code></p>
+          <p class="fragment"><code>git diff [filepath]</code></p>
           <p class="fragment"><code>git difftool</code></p>
           <p class="fragment"><code>git diff --staged</code></p>
         </section>
@@ -464,6 +464,9 @@
           <br><br>
           <p class="fragment"><code>git merge</code></p>
           <p class="fragment">Take the code that has diverged from origin and apply it (merge) it back into the parent branch</p>
+          <br>
+          <p class="fragment"><code>git merge [branch name]</code></p>
+          <p class="fragment">Take the code from [branch name] that has diverged from origin and apply it (merge) it back into the parent branch</p>
         </section>
         <section>
           <h3>Merge Conflict</h3>
@@ -497,7 +500,7 @@
           <br><br>
           <h1>What we'll do:</h1>
           <br><br>
-          <p>Edit a file and pushes the changes.</p>
+          <p>Edit a file and push changes.</p>
         </section>
 <!-- break slide -->
         <section>
@@ -559,7 +562,8 @@
           <br><br><br>
           <ol style="padding-left: 50px;">
             <li class="fragment">Open pull request</li>
-            <li class="fragment">Comments, suggstions, approval (optional)</li>
+            <li class="fragment">Add reviewers (optional)</li>
+            <li class="fragment">Comments, suggestions, approval (optional)</li>
             <li class="fragment">Merge pull request</li>
             <li class="fragment">Delete associated branch (optional)</li>
           </ol>
