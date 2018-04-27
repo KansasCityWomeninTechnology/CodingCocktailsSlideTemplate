@@ -25,24 +25,23 @@
     <link rel="stylesheet" href="css/reveal.css"/>
     <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
   </head>
-
   <body>
-	<!--
-		NOTES: Search and replace...
-			TODO (?)
+    <!--
+      NOTES: Search and replace...
+        TODO (?)
 
-			username (wifi username - do NOT check this in!)
-			password (wifi password - do NOT check this in!)
-	-->
+        username (wifi username - do NOT check this in!)
+        password (wifi password - do NOT check this in!)
+    -->
     <div class="reveal">
       <div class="slides">
-	  	<!-- Slide to show during check-in and mingling -->
+      <!-- Slide to show during check-in and mingling -->
         <section>
           <div style="position: absolute; left: -50px; top:0px;">
             <font style="font-size: 0.5em">
               <a href="http://bit.ly/CnCIndex">
                 <i class="fa fa-arrow-left fa-sm"></i>
-                All Months
+                  All Months
               </a>
             </font>
           </div>
@@ -78,20 +77,20 @@
           </div>
         </section>
         <section>
-         <h1>Intro to Front End Architecture</h1>
-           <img src="images/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+          <h1>Intro to Front End Architecture</h1>
+          <img src="images/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
         </section>
         <section>
-         <h1>Our Sponsors</h1>
-         <br><br><br>
-         <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/google_fiber.png" width="60%" style="vertical-align:middle;"/></a>
-         <a href="https://corporate.americancentury.com/en.html" target="_blank"><img src="images/aci_horiz_grn_blk_rgb.gif" width="60%" style="vertical-align:middle;"/></a>
+          <h1>Our Sponsors</h1>
+          <br><br><br>
+          <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/google_fiber.png" width="60%" style="vertical-align:middle;"/></a>
+          <a href="https://corporate.americancentury.com/en.html" target="_blank"><img src="images/aci_horiz_grn_blk_rgb.gif" width="60%" style="vertical-align:middle;"/></a>
         </section>
         <section>
-         <h1>Our Host this Evening</h1>
-         <div class="fill-row"> <!-- TODO: Logo coloring -->
+          <h1>Our Host this Evening</h1>
+          <div class="fill-row"> <!-- TODO: Logo coloring -->
             <a href="https://www.smg.com/" target="_blank"><img src="images/smg-logo.png" alt="Service Management Group" /></a>
-         </div>
+          </div>
         </section>
         <section>
           <h1>Meet the C&amp;C #LadyDevs</h1>
@@ -149,31 +148,123 @@
         <section>
           <h1>Tonight's Agenda: Front End Architecture</h1>
           <ol style="margin-left: 40px;">
-            <li class="fragment">The Basics
-              <ol style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">What is Front End Architecture &amp; How do you write it?</li>
-              </ol>
-            </li>
-            <li class="fragment">More things</li>
+            <li class="fragment">Introduction</li>
+            <ol style="margin: 0 0 0 60px;" type="a">
+                <li class="fragment">What is it?</li>
+                <li class="fragment">Why is it important?</li>
+                <li class="fragment">Concepts &amp; Preferences</li>
+            </ol>
+            <li class="fragment">The Structure</li>
+            <li class="fragment">Other Important Things</li>
+            <li class="fragment">Scaffolding with Yeoman</li>
+            <ol style="list-style-type: lower-alpha; padding-left: 40px;">
+                <li class="fragment">Generators</li>
+                <li class="fragment">Build tools &amp; scripts</li>
+            </ol>
+            <li class="fragment">Resources</li> <!-- TODO: Doesn't show -->
           </ol>
         </section>
-<!-- part 1-->
+  <!-- part 1-->
         <section>
-          <h1>The Basics</h1>
-          <img src="images/05-may/basics.jpg" height="80%" alt="Basics"/>
+          <h1>Introduction</h1>
+          <img src="images/05-may/introduction.jpg" height="80%" alt="Introduction"/>
         </section>
         <section>
-          <h1>What is LOL?</h1>
-          <br><br>
+          <h1>What is it?</h1>
+          <br>
           <p class="fragment">
-            <font style="color:#c7bc75">L</font>augh
-            <font style="color:#c7bc75">O</font>out
-            <font style="color:#c7bc75">L</font>oud
+            Architecture is conceptual...<br>
+            <font class="fragment">
+              how files are organized
+            </font>
+          </p><br>
+          <p class="fragment">
+            Building a house requires good architecture...<br>
+            <font class="fragment">
+              the same applies to apps/sites
+            </font>
+          </p>
+          <br>
+          <p class="fragment">
+            A toolshed is not like a baseball stadium...<br>
+            <font class="fragment">
+              different apps/sites require different structures
+            </font>
           </p>
         </section>
-<!-- break slide -->
         <section>
-          <h1 class="break">Do the Worksheet: Part n</h1>
+          <h1>Why is it important?</h1>
+          <br>
+          <p class="fragment">
+            Promotes code reuse<br>
+            <font style="color:#c7bc75">D</font>on't
+            <font style="color:#c7bc75">R</font>epeat
+            <font style="color:#c7bc75">Y</font>ourself!
+          </p>
+          <br>
+          <p class="fragment">
+            Single Responsibility Principle:<br>chunks of code that do one thing
+          </p>
+          <br>
+          <p class="fragment">
+            These chunks are called modules/components
+          </p>
+          <br>
+          <p class="fragment">
+            Easier to maintain over time<br>(happy devs, happy clients, cost savings)
+          </p>
+        </section>
+        <section>
+          <h1>Concepts &amp; Preferences</h1>
+          <p class="fragment" style="text-align:left;">
+            <br>Architecture can vary based on...<br><br>
+          </p>
+          <ul style="list-style:disc; margin-left: 40px;">
+            <li class="fragment">Project requirements (responsiveness, flexibility, release/sales strategy)</li>
+            <li class="fragment">Technologies chosen (SASS/Less, Framework guides &amp; best practices)</li>
+            <li class="fragment">Team preferences ('imgs' vs 'images', 'app/about/css' vs 'app/css/about', dashes vs underscores)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>The Structure</h1>
+          <img src="images/05-may/the-structure.jpg" alt="The Structure" height="75%" width="75%" style="margin-top:30px;"/>
+        </section>
+        <section>
+          <h1>Ahh... that's more like it</h1>
+          <img src="images/05-may/the-structure2.jpg" alt="The Structure" height="80%" width="60%" style="margin-top:30px;"/>
+        </section>
+        <section>
+          <h2>App Directory</h2>
+          <ul>
+            <br><br>
+            <li class="fragment">Houses your application’s code</li>
+            <ul style="list-style:disc; margin-left: 40px;">
+              <li class="fragment">Index.html - most important file</li>
+              <li class="fragment">Assets</li>
+              <li class="fragment">Dist</li>
+            </ul>
+        </section>
+        <section>
+          <h2>Assets Directory</h2><br><br>
+          <ul style="list-style:disc; margin-left: 40px;">
+            <li class="fragment">Images - self explanatory</li>
+            <li class="fragment">Styles - css, scss</li>
+            <li class="fragment">Scripts - javascript (or other language) functionality</li>
+            <li class="fragment">Fonts - only if serving up the font from your server</li>
+            <li class="fragment">Views - full or partial markup (ie <a href="http://handlebarsjs.com/" target="_blank">Handlebars</a>)</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Dist Directory</h2><br><br>
+          <ul style="list-style:disc;">
+            <li class="fragment">Minified &amp; optimized, for serving to the browser</li>
+            <li class="fragment">Created by the build process</li>
+            <li class="fragment">As a build artifact, 'dist' should not be tracked by version control</li>
+          </ul>
+        </section>
+  <!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet: Part 1</h1>
           <div class="fill-col">
             <p>Wifi: username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
@@ -204,7 +295,145 @@
             </div>
           </div>
         </section>
-<!-- end -->
+  <!-- Section 2 -->
+        <section>
+          <h1>Other Important Things</h1>
+          <img src="images/05-may/other-things.jpg" alt="Other things" height="75%" width="75%"/>
+        </section>
+        <section>
+          <h1>It's not about you</h1>
+          <img src="images/05-may/other-things2.jpg" alt="Other things" height="75%" width="75%"/>
+        </section>
+        <section>
+          <h2>So orgzd. Wow. Much help.</h2>
+          <p class="fragment" style="text-align:left;">
+            Documentation:
+            <br>
+            Helps devs build and understand the project
+          </p>
+          <br><p class="fragment" style="text-align:left;">
+            Naming Conventions:
+            <br>
+            Files &amp; folders follow conventions or are self-describing
+          </p>
+          <br><p class="fragment" style="text-align:left;">
+            Build tools:
+            <br>
+            Simplify proceses (running tests, minifying code, etc)
+          </p>
+        </section>
+        <section>
+          <h1>Scaffolding with Yeoman</h1>
+          <img src="images/05-may/yeoman.png" height="50%" width="30%"/>
+          <h2>Yeoman is here to help!</h2>
+        </section>
+        <section>
+          <h2>What is Yeoman?</h2>
+          <p class="fragment">
+            Scaffolding tool that sets up your project's file stucture<br><br>
+          </p>
+          <p class="fragment">
+            Language agnostic<br>(HTML/JS/CSS, Python, C#, Java, PHP, etc)<br><br>
+          </p>
+          <p class="fragment">
+            Scaffolding is the structure of your project. Varies by language &amp; requirements.
+          </p>
+          <p class="fragment">
+              <br><code>npm install -g yo</code>
+          </p>
+          <p class="fragment">
+            Use it with 'yo' in the CLI
+          </p>
+        </section>
+        <section>
+          <h2>What is a Generator?</h2>
+          <p class="fragment">
+            <br>A Yeoman plugin that defines an architecture template
+          </p>
+          <p class="fragment">
+            <br><a href="http://yeoman.io/generators" target="_blank">4000+ generators available</a>
+          </p>
+          <p class="fragment">
+            <br>Install a generator with <code>npm install -g generator-whatever</code>
+          </p>
+          <p class="fragment">
+            <br>Can't find a solution for your app?<br>Create your own!
+          </p>
+        </section>
+        <section>
+          <h2>A Yeoman project using Webapp Generator</h2>
+          <video width="800" height="500" controls> <!-- TODO: move to vimeo / setup for local hosting/autoplay -->
+            <source src="images/05-may/yeoman-ang2-fountain.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section>
+          <h2>What Does Webapp Give Us?</h2><br>
+          <ul style="list-style:disc;">
+            <li class="fragment">Basic File Structure</li>
+            <li class="fragment">CSS Autoprefixing</li>
+            <li class="fragment">Compiles SASS</li>
+            <li class="fragment">Live Reload of project</li>
+            <li class="fragment">Lints scripts</li>
+            <li class="fragment">Image Optimization</li>
+            <li class="fragment">Creates a 'dist' folder on command</li>
+            <li class="fragment">And more...</li>
+          </ul>
+        </section>
+        <section>
+          <h2>This Webapp uses Gulp</h2>
+          <ul>
+              <li class="fragment">Start local server and watch for changes
+              <code>gulp serve</code></li>
+              <br><li class="fragment">Compiles and optimizes files to make deployment-ready
+              <code>gulp</code></li>
+              <br><li class="fragment">Preview production files
+              <code>gulp serve:dist</code></li>
+          </ul>
+        </section>
+        <section>
+          <h2>...but npm is the starting point</h2>
+          <ul>
+              <li class="fragment" style="align:left;">npm run ____
+              <code>npm run serve</code></li>
+          </ul>
+          <br>
+          <img class="fragment" src="images/05-may/npm-scripts.png">
+        </section>
+        <section>
+          <h2>Need help?</h2>
+          <ul>
+              <li class="fragment">With Yeoman
+              <code>yo --help</code></li>
+              <br><li class="fragment">Get details on a generator
+              <code>yo webapp --help</code></li>
+              <br><li class="fragment">Troubleshoot
+              <code>yo doctor</code></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Resources</h1>
+          <img src="images/05-may/resources.jpg" alt="Resources" height="75%" width="65%"/><br>
+          <a href="http://danielleguentherphotography.com" target="_blank"><font style="font-size:22px; vertical-align: top;">Danielle Guenther Photography</font></a>
+        </section>
+        <section>
+          <h2>Catch you on the front side</h2>
+          <ul style="text-align:left;">
+            <li class="fragment"><br><a href="https://www.sitepoint.com/good-front-end-architecture/" target="_blank">Sitepoint - Good Front End Architecture</a></li>
+            <li class="fragment"><br><a href="http://yeoman.io/" target="_blank">Yeoman official site</a></li>
+            <ul class="fragment" style="list-style:disc;">
+              <li class="fragment"><a href="http://yeoman.io/codelab" target="_blank">Yeoman codelab</a></li>
+              <li class="fragment"><a href="http://yeoman.io/authoring/" target="_blank">Create your own generator</a></li>
+              <li class="fragment"><a href="https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps" target="_blank">Tutorial on creating generators</a></li>
+            </ul>
+            <li class="fragment"><br><a href="http://gulpjs.com/" target="_blank">Gulp official site</a></li>
+            <ul style="list-style:disc;"> <!-- TODO: Doesn't fit -->
+              <li class="fragment"><a href="https://github.com/gulpjs/gulp/tree/master/docs/recipes#recipes" target="_blank">Gulp Recipes</a></li>
+              <li class="fragment"><a href="https://css-tricks.com/gulp-for-beginners/" target="_blank">Gulp Beginner Tutorial</a></li>
+            </ul>
+          </ul>
+        </section>
+  <!-- end -->
         <section>
           <h1>Questions?</h1>
           <img src="images/05-may/questions.gif" alt="Questions" height="80%" />
@@ -232,27 +461,31 @@
           <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
           <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
           <br><br>
-          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+          <div class="fragment">
+            <p>#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT</p>
+            <br>
+            <p>#CodingAndCocktailsKC</p>
+          </div>
         </section>
       </div>
     </div>
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         width: '100%',
         height: '100%',
-				history: true,
+        history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
 	</body>
 </html>
