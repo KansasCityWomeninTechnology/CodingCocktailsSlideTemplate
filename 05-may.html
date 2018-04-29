@@ -1,0 +1,619 @@
+<!doctype html>
+<html>
+  <head>
+    <title>May - Front End Architecture - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="Front End Architecture - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+    <!--
+      NOTES: Search and replace...
+        TODO (?)
+
+        username (wifi username - do NOT check this in!)
+        password (wifi password - do NOT check this in!)
+    -->
+    <div class="reveal">
+      <div class="slides">
+      <!-- Slide to show during check-in and mingling -->
+        <section>
+          <div style="position: absolute; left: -50px; top:0px;">
+            <font style="font-size: 0.5em">
+              <a href="http://bit.ly/CnCIndex">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                  All Months
+              </a>
+            </font>
+          </div>
+          <h1>While You're Waiting</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCMaySlides" target="_blank">http://bit.ly/CnCMaySlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCMayWork" target="_blank">http://bit.ly/CnCMayWork</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>Intro to Front End Architecture</h1>
+          <img src="images/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+        </section>
+        <section>
+          <h1>Our Sponsors</h1>
+          <br><br><br>
+          <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/google_fiber.png" width="60%" style="vertical-align:middle;"/></a>
+          <a href="https://corporate.americancentury.com/en.html" target="_blank"><img src="images/aci_horiz_grn_blk_rgb.gif" width="60%" style="vertical-align:middle;"/></a>
+        </section>
+        <section>
+          <h1>Our Host this Evening</h1>
+          <div class="fill-row">
+            <a href="https://www.smg.com/" target="_blank"><img src="images/smg-logo.png" alt="Service Management Group" /></a>
+          </div>
+        </section>
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <div class="fill-row" style="height:90%;"> <!-- TODO: Fix this styling for good -->
+            <span class="fragment teammembers">
+              <img src="images/sarah_cropped.png" alt="Sarah Duitsman" class="teammembers" />
+              <h6 class="teammembers">Sarah Duitsman</h6>
+              <p class="teammembers">Program Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/kayla_cropped.png" alt="Kayla Hennegin" class="teammembers" />
+              <h6 class="teammembers">Kayla Hennegin</h6>
+              <p class="teammembers">Curriculum Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/alisa_cropped.jpg" alt="Alisa Duncan" class="teammembers" />
+              <h6 class="teammembers">Alisa Duncan</h6>
+              <p class="teammembers">Technical Materials Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/gabi_cropped.jpg" alt="Gabi Dombrowski" class="teammembers" />
+              <h6 class="teammembers">Gabi Dombrowski</h6>
+              <p class="teammembers">Mentor Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/melissa_cropped.jpg" alt="Melissa Arroyo" class="teammembers" />
+              <h6 class="teammembers">Melissa Arroyo</h6>
+              <p class="teammembers">Marketing Director</p>
+            </span>
+          </div>
+        </section>
+        <section>
+          <h1>Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <div class="row-line-slack">
+            <span class="row-line-slack fragment">
+              <a href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
+                <img src="images/05-may/slack-genx.jpg" alt="Carolyn Westhoff" />
+              </a>
+              <p class="slack-label">#generation-x</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="images/05-may/slack-tabletop.jpg"/>
+              <p class="slack-label">#tabletop</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="images/05-may/slack-movies.gif"/>
+              <p class="slack-label">#movies</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="images/05-may/slack-catsdoggos.jpg"/>
+              <p class="slack-label">#cats_and_doggos</p>
+            </span>
+          </div>
+          <div>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="images/05-may/mentors.jpg" alt="Mentors" height="70%" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+            <h2>Logistics &amp; Libations</h2>
+            <img src="images/libations.jpg" alt="Laura Wagner" height="70%" />
+            <h4>founded by Laura Wagner</h4>
+        </section>
+        <section>
+          <h1>Tonight's Agenda: Front End Architecture</h1>
+          <div style="margin-top: 1em;">
+            <div style="float:left; width:50%;">
+              <ol style="margin-left: 40px;">
+                <li class="fragment">Introduction</li>
+                <ol style="margin: 0 0 0 60px;" type="a">
+                    <li class="fragment">What is it?</li>
+                    <li class="fragment">Why is it important?</li>
+                    <li class="fragment">Concepts &amp; Preferences</li>
+                </ol>
+                <li class="fragment">The Structure</li>
+                <li class="fragment">Other Important Things</li>
+              </ol>
+            </div>
+            <div style="float:right; width:50%;">
+              <ol style="margin-left: 40px;" start="4">
+                <li class="fragment">Scaffolding with Yeoman</li>
+                <ol style="list-style-type: lower-alpha; padding-left: 40px;">
+                    <li class="fragment">Generators</li>
+                    <li class="fragment">Build tools &amp; scripts</li>
+                </ol>
+                <li class="fragment">Resources</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+  <!-- part 1-->
+        <section>
+          <h1>Introduction</h1>
+          <img src="images/05-may/introduction.jpg" height="80%" alt="Introduction"/>
+        </section>
+        <section>
+          <h1>What is it?</h1>
+          <br>
+          <p class="fragment">
+            Architecture is conceptual...<br>
+            <font class="fragment">
+              how files are organized
+            </font>
+          </p><br>
+          <p class="fragment">
+            Building a house requires good architecture...<br>
+            <font class="fragment">
+              the same applies to apps/sites
+            </font>
+          </p>
+        </section>
+        <section>
+          <h1>What is it?</h1>
+          <br>
+          <p class="fragment">
+            A toolshed is not like a baseball stadium...<br>
+          </p>
+          <img src="images/05-may/shed.jpg" alt="Shed" class="fragment current-visible">
+          <img src="images/05-may/baseball-stadium.jpg" alt="Baseball Stadium" class="fragment">
+          <p class="fragment">
+            different apps/sites require different structures
+          </p>
+        </section>
+        <section>
+          <h1>Why is it important?</h1>
+          <br>
+          <p class="fragment">
+            Promotes code reuse<br>
+            <font style="color:#c7bc75">D</font>on't
+            <font style="color:#c7bc75">R</font>epeat
+            <font style="color:#c7bc75">Y</font>ourself!
+          </p>
+          <br>
+          <img src="images/05-may/repetition.jpg" alt="Beach Umbrellas Repeated" class="fragment">
+        </section>
+        <section>
+          <h1>Why is it important?</h1>
+          <br>
+          <p class="fragment">
+            Single Responsibility Principle:<br>chunks of code that do one thing
+          </p>
+          <br>
+          <img src="images/05-may/multiple-responsibilities.jpg" alt="Swiss Army Knife" class="fragment current-visible">
+          <br>
+          <img src="images/05-may/bread-knife.jpeg" alt="Bread and Knife on Cutting Board" class="fragment current-visible">
+        </section>
+        <section>
+          <h1>Why is it important?</h1>
+          <p class="fragment">
+            These chunks are called modules/components
+          </p>
+          <br>
+          <p class="fragment">
+            Easier to maintain over time<br>(happy devs, happy clients, cost savings)
+          </p>
+          <img src="images/05-may/kcwit-home.png" alt="KCWiT Homepage" class="fragment current-visible">
+          <img src="images/05-may/kcwit-opportunities.png" alt="KCWiT Leadership Opportunities" class="fragment">
+        </section>
+        <section>
+          <h1>Concepts &amp; Preferences</h1>
+          <p style="margin-left: 40px;">
+            <br>Architecture can vary based on:<br><br>
+          </p>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Project requirements:</li>
+            <ul>
+              <li class="fragment" type="disc">responsiveness</li>
+              <li class="fragment" type="disc">flexibility</li>
+              <li class="fragment" type="disc">release/sales strategy</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>Concepts &amp; Preferences</h1>
+          <p style="margin-left: 40px;">
+            <br>Architecture can vary based on:<br><br>
+          </p>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Technologies chosen:</li>
+            <ul>
+              <li class="fragment" type="disc">SASS/Less</li>
+              <li class="fragment" type="disc">Framework guides<br>&amp; best practices</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>Concepts &amp; Preferences</h1>
+          <p style="margin-left: 40px;">
+            <br>Architecture can vary based on:<br><br>
+          </p>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Team preferences:</li>
+            <ul>
+              <li class="fragment" type="disc">'imgs' vs 'images'</li>
+              <li class="fragment" type="disc">'app/about/css' vs 'app/css/about'</li>
+              <li class="fragment" type="disc">dashed-names vs underscore_names</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>The Structure</h1>
+          <img src="images/05-may/the-structure.jpg" alt="The Structure" height="75%" width="75%" style="margin-top:30px;"/>
+        </section>
+        <section>
+          <h1>Ahh... that's more like it</h1>
+          <img src="images/05-may/the-structure2.jpg" alt="The Structure" height="80%" width="55%" style="margin-top:30px;"/>
+        </section>
+        <section>
+          <h2>App Directory</h2>
+          <img src="images/05-may/app-dir.png" alt="app directory" class="fragment">
+          <p class="fragment" style="margin-top: 0.5em;">Houses your application's code</p>
+          <ul style="list-style:disc; margin-top: 1em;">
+            <li class="fragment">index.html - most important file</li>
+            <li class="fragment">Assets directory</li>
+            <li class="fragment">Dist directory</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Assets Directory</h2><br>
+          <div style="float:left; width:50%;">
+            <ul style="list-style:disc; margin-left: 40px;">
+              <li class="fragment">Images directory</li>
+              <ul style="list-style:disc;">
+                <li class="fragment">Self explanatory</li>
+              </ul>
+              <li class="fragment">CSS/Styles directory</li>
+              <ul style="list-style:disc;">
+                <li class="fragment">CSS</li>
+                <li class="fragment">SCSS</li>
+              </ul>
+              <li class="fragment">JS/Scripts directory</li>
+              <ul style="list-style:disc;">
+                <li class="fragment">JavaScript functionality</li>
+              </ul>
+            </ul>
+          </div>
+          <div style="float:right; width:50%;">
+            <ul style="list-style:disc; margin-left: 40px;">
+              <li class="fragment">Fonts directory</li>
+              <ul style="list-style:disc;">
+                <li class="fragment">Only if serving the<br>font from your server</li>
+              </ul>
+              <li class="fragment">Views directory</li>
+              <ul style="list-style:disc;">
+                <li class="fragment">Full or partial markup<br>(ie <a href="http://handlebarsjs.com/" target="_blank">Handlebars</a>)</li>
+              </ul>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>Dist Directory</h2><br>
+          <ul style="list-style:disc;">
+            <li class="fragment">HTML/CSS/JS that gets served to the brower</li>
+            <li class="fragment">Minified &amp; optimized code</li>
+            <p class="fragment current-visible">
+              <br>
+              <code style="display: inline;">myVeryLongFunctionName</code> => <code style="display: inline;">r</code>
+            </p>
+            <p class="fragment current-visible">
+              <br>
+              Removes extra spaces and lines
+              <br>
+              Reduces readability &amp; improves performance
+            </p>
+            <img src="images/05-may/minification.png" alt="" class="fragment current-visible">
+            <li class="fragment">Created by the build process</li>
+            <li class="fragment">Remember Git &amp; Version Control?<br>As a build artifact, the 'dist' directory should not be tracked by version control</li>
+          </ul>
+        </section>
+  <!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet: Part 1</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCMaySlides" target="_blank">http://bit.ly/CnCMaySlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCMayWork" target="_blank">http://bit.ly/CnCMayWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+  <!-- Section 2 -->
+        <section>
+          <h1>Other Important Things</h1>
+          <img src="images/05-may/other-things.jpg" alt="Other things" height="75%" width="75%"/>
+        </section>
+        <section>
+          <h1>It's not about you</h1>
+          <img src="images/05-may/other-things2.jpg" alt="Other things" height="75%" width="75%"/>
+        </section>
+        <section>
+          <h2>So orgzd. Wow. Much help.</h2>
+          <p class="fragment">Documentation:</p>
+          <img src="images/05-may/grandmas-recipe.jpg" alt="Grandmas recipe card" class="fragment" style="height: 50%;">
+          <p class="fragment">Helps others build and understand the project</p>
+        </section>
+        <section>
+          <h2>Helpful Conventions</h2>
+          <p class="fragment">Naming Conventions:</p>
+          <img src="images/05-may/dewey.jpg" alt="Dewey Decimal System" class="fragment">
+          <p class="fragment">Files &amp; folders follow conventions<br>or are self-describing</p>
+        </section>
+        <section>
+          <h2>Helpful Conventions</h2>
+          <p class="fragment">Build tools:</p>
+          <img src="images/05-may/coffee-tools.jpg" alt="Aeropress Coffee Setup" class="fragment">
+          <p class="fragment">
+            Simplify proceses<br>(running tests, minifying code, etc)
+          </p>
+        </section>
+        <section>
+          <h1>Scaffolding with Yeoman</h1>
+          <img src="images/05-may/yeoman.png" height="50%" width="30%"/>
+          <h2>Yeoman is here to help!</h2>
+        </section>
+        <section>
+          <h2>What is Yeoman?</h2>
+          <div class="fragment current-visible">
+            <br>
+            <p>
+              Scaffolding tool that sets up your project's file stucture<br>
+            </p>
+            <img src="images/05-may/cake.jpg" alt="Wedding Cake Structure">
+          </div>
+          <div class="fragment current-visible">
+            <br>
+            <p>
+              Language agnostic<br>(HTML/JS/CSS, Python, C#, Java, PHP, etc)<br><br>
+            </p>
+            <img src="images/05-may/language.png" alt="Hello Wordcloud">
+          </div>
+        </section>
+        <section>
+          <h2>How to use Yeoman?</h2>
+          <br>
+          <p class="fragment">
+            Scaffolding builds the structure of your project.
+          </p>
+          <br>
+          <p class="fragment">Varies by language &amp; requirements.</p>
+          <p class="fragment">
+              <br><code style="margin: 0 auto;">npm install -g yo</code>
+          </p>
+          <br>
+          <p class="fragment">
+            Type 'yo' in your Terminal (Cmder or iTerm2)
+          </p>
+        </section>
+        <section>
+          <h2>What is a Generator?</h2>
+          <p class="fragment">
+            <br>A Yeoman plugin that defines an architecture template
+          </p>
+          <p class="fragment">
+            <br><a href="http://yeoman.io/generators" target="_blank">7000+ generators available</a>
+          </p>
+          <p class="fragment">
+            <br>Install a generator with <code style="margin: 1em auto;">npm install -g generator-whatever</code>
+          </p>
+          <p class="fragment">
+            Can't find a solution for your app?<br>Create your own!
+          </p>
+        </section>
+        <section>
+          <h2>A Yeoman project using Webapp Generator</h2>
+          <video width="800" height="500" controls autoplay> <!-- TODO: move to vimeo / setup for local hosting/autoplay -->
+            <source src="images/05-may/yeoman-ang2-fountain.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <section>
+          <h2>What Does Fountain-Webapp Give Us?</h2><br>
+          <ul style="list-style:disc;">
+            <li class="fragment">Basic File Structure</li>
+            <li class="fragment">CSS Autoprefixing</li>
+            <li class="fragment">Compiles SASS</li>
+            <li class="fragment">Live Reload of project</li>
+            <li class="fragment">Lints scripts</li>
+            <li class="fragment">Image Optimization</li>
+            <li class="fragment">Creates a 'dist' folder on command</li>
+            <li class="fragment">And more...</li>
+          </ul>
+        </section>
+        <section>
+          <h2>This Webapp uses Gulp</h2>
+          <ul>
+              <li class="fragment">Start local server and watch for changes
+              <code>gulp serve</code></li>
+              <br><li class="fragment">Compiles and optimizes files to make deployment-ready
+              <code>gulp</code></li>
+              <br><li class="fragment">Preview production files
+              <code>gulp serve:dist</code></li>
+          </ul>
+        </section>
+        <section>
+          <h2>...but npm is the starting point</h2>
+          <ul>
+              <li class="fragment" style="align:left;">npm run ____
+              <code>npm run serve</code></li>
+          </ul>
+          <br>
+          <img class="fragment" src="images/05-may/npm-scripts.png">
+        </section>
+        <section>
+          <h2>Need help?</h2>
+          <ul>
+              <li class="fragment">With Yeoman
+              <code>yo --help</code></li>
+              <br><li class="fragment">Get details on a generator
+              <code>yo webapp --help</code></li>
+              <br><li class="fragment">Troubleshoot
+              <code>yo doctor</code></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Resources</h1>
+          <img src="images/05-may/resources.jpg" alt="Resources" height="75%" width="65%"/><br>
+          <a href="http://danielleguentherphotography.com" target="_blank"><font style="font-size:22px; vertical-align: top;">Danielle Guenther Photography</font></a>
+        </section>
+        <section>
+          <h2>Catch you on the front side</h2>
+          <div class="fragment">
+            <br><a href="https://www.sitepoint.com/good-front-end-architecture/" target="_blank">Sitepoint - Good Front End Architecture</a>
+          </div>
+          <div style="float:left; width:50%;">
+            <ul style="text-align:left;">
+              <li class="fragment"><br><a href="http://yeoman.io/" target="_blank">Yeoman official site</a></li>
+              <ul class="fragment" style="list-style:disc;">
+                <li class="fragment"><a href="http://yeoman.io/codelab" target="_blank">Yeoman codelab</a></li>
+                <li class="fragment"><a href="http://yeoman.io/authoring/" target="_blank">Create your own generator</a></li>
+                <li class="fragment"><a href="https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps" target="_blank">Tutorial on creating generators</a></li>
+              </ul>
+            </ul>
+          </div>
+          <div style="float:right; width:50%;">
+            <ul style="text-align:left;">
+              <li class="fragment"><br><a href="http://gulpjs.com/" target="_blank">Gulp official site</a></li>
+              <ul style="list-style:disc;">
+                <li class="fragment"><a href="https://github.com/gulpjs/gulp/tree/master/docs/recipes#recipes" target="_blank">Gulp Recipes</a></li>
+                <li class="fragment"><a href="https://css-tricks.com/gulp-for-beginners/" target="_blank">Gulp Beginner Tutorial</a></li>
+              </ul>
+            </ul>
+          </div> 
+        </section>
+  <!-- end -->
+        <section>
+          <h1>Questions?</h1>
+          <img src="images/05-may/noidea.gif" alt="Questions" height="80%" />
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol class="normal">
+            <li class="fragment">Find a friend</li>
+            <li class="fragment">Take <a href="https://goo.gl/forms/ZyU38HqGap9r071y1" target="_blank">the quiz</a></li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCMayWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Front+End+Architecture+tutorial" target="_blank">online tutorial on Front End Architecture</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 100px; right: 0px;" height="300vh" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="images/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="images/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
+          <br><br>
+          <div class="fragment">
+            <p>#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT</p>
+            <br>
+            <p>#CodingAndCocktailsKC</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+	</body>
+</html>
