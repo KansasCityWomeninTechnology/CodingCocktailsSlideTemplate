@@ -107,10 +107,15 @@ div.row-line-slack {
   justify-content: space-evenly;
   align-items: flex-end;
 }
+
 span.row-line-slack {
   flex: none;
   flex-basis: 23%;
   vertical-align: top;
+}
+
+.slack-label {
+  font-size: 0.5em !important;
 }
 
 #intro-logo {
