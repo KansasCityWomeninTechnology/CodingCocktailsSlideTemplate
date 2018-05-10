@@ -122,20 +122,16 @@ span.row-line-slack {
   height:75%;
 }
 
-span.teammembers {
-  flex: none;
-  flex-basis: 21%;
-  vertical-align: top;
-}
-
 img.teammembers {
   margin: 5px 0 0 0 !important;
 }
+
 h6.teammembers {
   font-size: 0.52em !important;
   text-align: center !important;
   margin: 0 !important;
 }
+
 p.teammembers {
   font-size: 0.46em !important;
   text-align: center !important;
