@@ -1,0 +1,809 @@
+<!doctype html>
+<html>
+  <head>
+    <title>April - Version Control - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Version Control course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="Version Control - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Version Control course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Version Control course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+
+  <body>
+	<!--
+		NOTES: Search and replace...
+
+			Version Control (ie Git)
+			TODO (?)
+			MONTHDIR (05-aug)
+			MONTH (Aug)
+
+			username (wifi username - do NOT check this in!)
+			password (wifi password - do NOT check this in!)
+	-->
+    <div class="reveal">
+      <div class="slides">
+	  	<!-- Slide to show during check-in and mingling -->
+        <section>
+          <div style="position: absolute; left: -50px; top:0px;">
+            <font style="font-size: 0.5em">
+              <a href="http://bit.ly/CnCIndex">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                All Months
+              </a>
+            </font>
+          </div>
+          <h1>While You're Waiting</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+         <h1>Intro to Version Control</h1>
+         <div class="fill-row">
+           <img src="images/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+         </div>
+        </section>
+        <section>
+         <h1>Our Sponsors</h1>
+         <br><br><br>
+         <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/google_fiber.png" width="60%" style="vertical-align:middle;"/></a>
+         <a href="https://corporate.americancentury.com/en.html" target="_blank"><img src="images/aci_horiz_grn_blk_rgb.gif" width="60%" style="vertical-align:middle;"/></a>
+        </section>
+        <section>
+         <h1>Our Host this Evening</h1>
+         <div class="fill-row">
+           <a href="http://www.nerdery.com" target="_blank"><img src="images/Nerdery-logo.png" alt="The Nerdery" /></a>
+         </div>
+        </section>
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <br>
+          <div style="height: 35%; display: inline-flex;">
+            <span style="justify-content: space-around;" class="fragment">
+              <img src="images/sarah_cropped.png" alt="Sarah Duitsman" style="width: 60%;" />
+              <h6 class="teammembers">Sarah Duitsman</h6>
+              <p class="teammembers">Program Director</p>
+            </span>
+            <!-- <span style="justify-content: space-around;" class="fragment">
+              <img src="images/kelly_cropped.jpg" alt="Kelly Winzer" style="width: 60%;" />
+              <h6 class="teammembers">Kelly Winzer</h6>
+              <p class="teammembers">Program Co-Director</p>
+            </span> -->
+            <span style="justify-content: space-around;" class="fragment">
+              <img src="images/kayla_cropped.png" alt="Kayla Hennegin" style="width: 60%;" />
+              <h6 class="teammembers">Kayla Hennegin</h6>
+              <p class="teammembers">Curriculum Director</p>
+            </span>
+          </div>
+          <div style="height: 35%; display: inline-flex;">
+            <span style="justify-content: space-around;" class="fragment">
+              <img src="images/alisa_cropped.jpg" alt="Alisa Duncan" style="width: 60%;" />
+              <h6 class="teammembers">Alisa Duncan</h6>
+              <p class="teammembers">Technical Materials Director</p>
+            </span>
+            <span style="justify-content: space-around;" class="fragment">
+              <img src="images/gabi_cropped.jpg" alt="Gabi Dombrowski" style="width: 60%;" />
+              <h6 class="teammembers">Gabi Dombrowski</h6>
+              <p class="teammembers">Mentor Director</p>
+            </span>
+            <span style="justify-content: space-around;" class="fragment">
+              <img src="images/melissa_cropped.jpg" alt="Melissa Arroyo" style="width: 60%;" />
+              <h6 class="teammembers">Melissa Arroyo</h6>
+              <p class="teammembers">Marketing Director</p>
+            </span>
+          </div>
+        </section>
+        <section>
+          <h1>Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <div class="row-line-slack">
+            <span class="row-line-slack"><img src="images/04-apr/slack-1.png" alt="#djangogirlskc - Django Girls Omaha" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-2.png" alt="#events - Black Panther Outing" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-3.jpg" alt="#diy - Mopaca 2018" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-4.gif" alt="#ladybosses - Little Girl Makes Box Jump" class="fragment" style="height: 300px; width: 300px"/></span>
+          </div>
+          <div>
+        </section>
+        <section>
+          <h2>KC Women In Technology Job Board</h2>
+          <a href="http://kcwomenintech.org/jobs/" target="_blank" style="font-size: 72px;">
+            <img src="images/04-apr/job-board.png" alt="KC Women In Technology Job Board" width="60%"/>
+            http://kcwomenintech.org/jobs/
+          </a>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="images/04-apr/mentors.gif" alt="Mentors" height="70%" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+            <h2>Logistics &amp; Libations</h2>
+            <img src="images/libations.jpg" alt="Laura Wagner" height="70%" />
+            <h4>founded by Laura Wagner</h4>
+        </section>
+        <section>
+          <h1>Tonight's Agenda: <span style="color:#c7bc75">Version Control</span></h1>
+          <ol style="margin-left: 40px;">
+            <br><br>
+            <li class="fragment">Review / More in-depth DOM</li>
+            <br>
+            <li class="fragment">Registering Event Handlers</li>
+            <br>
+            <li class="fragment">Objects & Demystifying This</li>
+            <br>
+            <li class="fragment">Fetching Data</li>
+            <br>
+            <li class="fragment">Templates</li>
+            <br>
+            <li class="fragment">Buzz words</li>
+          </ol>
+        </section>
+<!-- part 1 - Review / More in-depth DOM -->
+        <section>
+          <h1>Review</h1>
+          <img src="images/07-jul/TimeforReviewSmall.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:.5rem;"/>
+        </section>
+        <section>
+          <h3>Variable</h3>
+          <img src="images/07-jul/varcontainer.jpeg" alt="container" height="75%" width="75%">
+          <p class="fragment">Placeholder to store values / data</p>
+        </section>
+        <section>
+          <h1>Operators</h1>
+          <img src="images/07-jul/mathoperators.png" alt="math_operators" height="25%" width="25%" style="margin-top:.5rem;"/>
+          <code class="fragment">var myAge = 28 + 10 </code>
+          <code class="fragment">var modExample = 15 % 2 = 1</code>
+          <p class="fragment">Modulus: The 'remainder' in a division problem</p>
+          <p class="fragment">15 / 2 = 7 with a remainder of 1 (the modulus)</p>
+        </section>
+        <section>
+          <h1>Function</h1>
+          <img src="images/07-jul/function.png" alt="" >
+          <p class="fragment">Performs a task</p>
+          <p class="fragment">Operators are a type of function</p>
+        </section>
+        <section>
+            <h1>Comments</h1>
+            <p class="fragment">Single Line comments</p>
+            <code>//this is a one line comment</code>
+            <p class="fragment">Multi line comments</p>
+            <code>/* This is a
+            <br>multi line comment */</code>
+            <p class="fragment">Does not affect the output of your code! (but makes it easier to understand)</p>
+        </section>
+        <section>
+            <h1>Your BFF: Console.log</h1>
+            <br>
+            <div style="position:relative; width:2000px; left: 50px;">
+              <div style="float:left; width:45%;">
+                <table class="slightlyPaddedTable">
+                  <tr>
+                    <td style="text-align: left;">Windows Key Combination</td>
+                    <td style="text-align: left;">Mac Key Combination</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left;">cntrl + shift + i</td>
+                    <td style="text-align: left;">cmd + shift + i</td>
+                  </tr>
+                </table>
+            </div> </div>
+            <br>
+            <img src="images/07-jul/blankConsoleLog.png" alt="" height="55%" width="55%" style="margin-top:3rem;">
+        </section>
+        <section>
+            <h1>Your BFF: Console.log</h1>
+            <br>
+            <p class="fragment">Great for troubleshooting / debugging your code by sticking these in your logic</p>
+            <img src="images/07-jul/whileLoop.png" alt="console example">
+        </section>
+        <section>
+          <h1>DOM</h1>
+          <!--  TODO: ADD MORE DOM -->
+        </section>
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Create a brand new repo and commit a change.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Create A Repo</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+            </div>
+        </section>
+<!-- part 2 - Registering Event Handlers -->
+
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Edit a file and pushes the changes.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Editing Files</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 3 - Objects & Demystifying This -->
+        <section>
+          <h1>Objects</h1>
+          <img class="fragment" src="images/07-jul/Objects.jpg" alt="Organization before and after" style="float:bottom;"/>
+        </section>
+        <!--         <section>
+          <h1>Objects: how to make one</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">Create an object with 'new Object()' or initialize an empty one with '{}'</li>
+            <li class="fragment">Use <font style="color:#c7bc75">JSON (JavaScript Object Notation)</font> to initialize</li>
+            <ul style="list-style-type: square; color:#c7bc75;">
+              <li class="fragment">'key':'value' pairs -- "key" may also be referred to as 'name' or 'property'</li>
+              <li class="fragment">Most API’s are going to be in this format </li>
+              <li class="fragment">Don’t know what API’s are? resource here: http://readwrite.com/2013/09/19/api-defined/)</li>
+            </ul>
+          </ul>
+        </section> -->
+        <section>
+          <h1>Objects: how to make one</h1>
+          <pre><code class="fragment">var AdaLovelace = {
+        achillesHeel: "Compulsive Gambling",
+        firstName: "Ada",
+        lastName: "Lovelace",
+        children: ["Byron","Ralph","Anne"],
+        dateBorn: "12/10/1815",
+        dateDied: "11/27/1852",
+        father: "Lord Byron",
+        "Likes Programming": true,
+        fullName: function() {
+        return this.firstName+" "+this.lastName;
+        },
+        mentor: "Charles Babbage"
+        };</code></pre>
+        </section>
+        <section>
+          <h1>Objects: how to get data</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">You can get data from the Object by the key</li>
+            <li class="fragment">Dot Notation</li>
+            <pre><code class="fragment">console.log(AdaLovelace.children)
+        // ['Byron', 'Ralph', 'Anne']</code></pre>
+        <pre><code class="fragment">console.log(AdaLovelace.fullName)
+        /* function () { return this.firstName + " "
+        + this.lastName; } */</code></pre>
+        <pre><code class="fragment">console.log(AdaLovelace.fullName())
+        // Ada Lovelace</code></pre>
+            </ul>
+        </section>
+        <section>
+          <h1>Objects: how to get data</h1>
+          <ul style="list-style-type: square;">
+          <li class="fragment">Property name has to be alphanumeric (but can contain underscores)
+          <li class="fragment">Can't start with a number.
+          <li class="fragment">No spaces.</li>
+           <pre><code class="fragment">console.log(AdaLovelace.Likes Programming)
+        // syntax error :(</code></pre>
+          </ul>
+        </section>
+        <section>
+          <h1>Objects: how to get data</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">Bracket Notation!</li>
+            <li class="fragment">Can be used for property names that don't work with dot notation.</li>
+            <li class="fragment">You can get data from the Object using the key</li>
+            <pre><code class="fragment">console.log(AdaLovelace['Likes Programming'])
+        // true
+        console.log(AdaLovelace['children'])
+        // ['Byron', 'Ralph', 'Anne']</code></pre>
+            </ul>
+        </section>
+        <section>
+          <h1>Objects: how to get data</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">When you are doing something dynamic like</li>
+            <ul style="list-style-type: square">
+              <li class="fragment">using a for loop to access elements</li>
+              <li class="fragment">passing a property name as a parameter to a function</li>
+            </ul>
+            <li class="fragment">you have to use Bracket Notation</li>
+            <pre><code class="fragment">var objectKey = 'Downtown';
+        var songLyrics = {"Downtown":
+        'Banana seat, a canopy on two wheels'};
+        songLyrics[objectKey];
+        // 'Banana seat, a canopy on two wheels'</code></pre>
+            </ul>
+        </section>
+        <section>
+          <h1>Objects: how to set a value</h1>
+          <pre><code class="fragment">AdaLovelace.favorite_animal = 'giraffe';
+
+        console.log(AdaLovelace.favorite_animal);
+
+        /* ... all the stuff we already have in there
+        AND {"favorite_animal": 'giraffe'} */</code></pre>
+        </section>
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Create a branch, complete a merge, open a pull request, and fork a repo.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Collaborating With Others</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--  TODO: THIS -->
+<!-- part 4 - Fetching Data -->
+        <section>
+          <h1>Fetching with APIs</h1>
+          <img src="images/07-jul/apiCat.jpg" alt="API cat" style="float:center;"/>
+        </section>
+        <section>
+          <h1>Static vs Dynamic Applications</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment" style="color:#c7bc75">Static Application</li>
+            <ul style="list-style-type: square;">
+              <li class="fragment">written in HTML (maybe CSS)</li>
+              <li class="fragment">will only change if you edit the HTML (or CSS) 'by hand'</li>
+            </ul>
+            <li class="fragment" style="color:#c7bc75">Dynamic Application</li>
+            <ul style="list-style-type: square;">
+              <li class="fragment">written in some programming language (JavaScript, PHP, Java ...)</li>
+              <li class="fragment">content is pulled from a database/internet often triggered by user interaction</li>
+              <li class="fragment">client-side JavaScript uses APIs to fetch data from the internet</li>
+            </ul>
+          </ul>
+        </section>
+         <section>
+          <h1>API</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">Application Programming Interface</li>
+            <li class="fragment">it's the middle-man that allows 2 applications to talk to each other.</li>
+              <li class="fragment">One application makes a request.</li>
+              <li class="fragment">API takes request to other application &amp; gets response.</li>
+              <li class="fragment">API brings response back to original application.</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>API</h1>
+            <ul style="list-style-type: square;">
+              <li class="fragment">Most APIs use JSON (JavaScript Object Notation)</li>
+              <li class="fragment">Not just JavaScript APIs!
+              <li class="fragment">'key':'value' pairs -- "key" may also be referred to as 'name' or 'property'</li>
+            </ul>
+        </section>
+        <section>
+          <h1>API</h1>
+          <p> Weather REST API</p>
+          <img src="images/07-jul/RestAPI.png" alt="REST API example" style="float:center; background-color: white; width:85%; height: 85%"/>
+        </section>
+        <section>
+          <h1>API: famous examples</h1>
+          <ul style="list-style-type: square;">
+            <li class="fragment">Giphy [Find gifs or stickers]</li>
+            <li class="fragment">NASA Api [for amazing imagery]</li>
+            <li class="fragment">Google Maps [API to display/interact with Google Maps]</li>
+            <li class="fragment">Twitter [to read or send tweets]</li>
+            <li class="fragment">Pinterest [to view pins or add pins]</li>
+            <li class="fragment"><a href="https://github.com/toddmotto/public-apis">Some Public APIs</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>API: Interaction with JavaScript</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">The original way JavaScript interacted with API requests was through `XHR` [XMLHttpRequest].</li>
+            <li class="fragment">Then jQuery came along &amp; provided an easier interaction with `AJAX` [Asynchronous JavaScript &amp; XML].</li>
+            <li class="fragment">ECMAScript 2015 [was ES6] introduced `fetch` a native JS function that is similar to jQuery's AJAX.</li>
+          </ul>
+        </section>
+        <section>
+          <h1>API: fetch</h1>
+          <ul style="list-style-type: square">
+            <li class="fragment">That means you can use `fetch` without having to include a BULKY library.</li>
+            <pre><code class="fragment">fetch(url) // URL of API
+        .then(function() {
+        // Code for handling data response from API
+        }
+        .catch(function() {
+        // Code to run if API returns an error
+        });</code></pre>
+          </ul>
+        </section>
+        <section>
+          <h1>API: fetch &amp; format with JSON</h1>
+          <ul style="list-style-type: square;">
+            <li class="fragment">There are different formatting methods, but most of the time you are going to want the format in JSON</li>
+            <li class="fragment">APIs may have various options for you to select from. </li>
+            <li class="fragment">For example:`<a href="http://ron-swanson-quotes.herokuapp.com/v2/quotes">http://ron-swanson-quotes.herokuapp.com/v2/quotes</a>` -> returns 1 quote</li>
+            <li class="fragment">`<a href="http://ron-swanson-quotes.herokuapp.com/v2/quotes/5">http://ron-swanson-quotes.herokuapp.com/v2/quotes/5</a>` -> returns 5 quotes</li>
+          </ul>
+        </section>
+        <section>
+          <h1>API: fetch &amp; format with JSON</h1>
+          <pre><code class="fragment">var url =
+        'http://ron-swanson-quotes.herokuapp.com/v2/quotes';</code></pre>
+          <pre><code class="fragment">fetch(url)
+        .then(function(response){
+        return response.json();
+        })</code></pre>
+        </section>
+        <section>
+        <h1>API: fetch &amp; format with JSON</h1>
+          <pre><code class="fragment">.then(function(response){
+        console.log(response);
+        /* ["Great job, everyone. The reception will
+        be held in each of our
+        individual houses, alone."]*/
+        })</code></pre>
+        <pre><code class="fragment">.catch(function(error){
+        console.log('error: '+ error);
+        });</code></pre>
+        </section>
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Create a branch, complete a merge, open a pull request, and fork a repo.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Collaborating With Others</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 5 - Templates -->
+        <section>
+          <h1>Templates</h1>
+          <img src="images/07-jul/templates.png" alt="template example" style="float:center; width: 100%"/>
+        </section>
+        <section>
+          <h1>Templates</h1>
+            <ul style="list-style-type: square;">
+                <li class="fragment">Raw API responses are not very exciting to look at</li>
+                <li class="fragment">We want to make our HTML/CSS markup use dynamic content from the API responses</li>
+                <li class="fragment">A template is a reusable chunk of code used for markup</li>
+                <li class="fragment">It contains placeholders [of variables] for where the dynamic content is populated.</li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: different ways of using them</h1>
+            <ul style="list-style-type: square;">
+            <li class="fragment">Framework
+                <ul style="list-style-type: square;">
+                    <li class="fragment">It provides a full suite of tools &amp; helpers, with a specific structure to how you write your code</li>
+                    <li class="fragment">Frameworks have their own way of templating, that is specific to the framework (covered in Single Page App Session)</li>
+                    <li class="fragment"><a href="https://facebook.github.io/react/">React</a></li>
+                    <li class="fragment"><a href="https://angular.io/">Angular</a></li>
+                </ul>
+            </li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: different ways of using them</h1>
+            <ul style="list-style-type: square;">
+            <li class="fragment">Library
+                <ul style="list-style-type: square;">
+                    <li class="fragment">A library is a set of tools that help you write JavaScript faster, but provide more flexibility in terms of architecture</li>
+                    <li class="fragment"><a href="http://handlebarsjs.com/">Handlebars.js</a></li>
+                    <li class="fragment"><a href="https://github.com/janl/mustache.js">Mustache.js</a></li>
+                    <li class="fragment"><a href="http://olado.github.io/doT/index.html">doT.js</a></li>
+                </ul>
+            </li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: different ways of using them</h1>
+            <ul style="list-style-type: square;">
+            <li class="fragment">Native JavaScript
+                <ul style="list-style-type: square;">
+                    <li class="fragment">With ECMAScript 2015, we now have template literals.</li>
+                    <li class="fragment">Provides an alternative to concatenating strings, which allows for us to explore templating with native JS. </li>
+                    <li class="fragment">This is what we'll be using tonight.</li>
+                </ul>
+            </li>
+            </ul>
+        </section>
+        <section>
+          <h1>Templates: template literals</h1>
+            <pre><code class="fragment">var caliberOfDay = 'sunshiney';
+        var myMultiLineString = `
+        Hello!
+        Hope you have a ${caliberOfDay} day!`;
+        </code></pre>
+            <p class="fragment">VS</p>
+            <pre><code class="fragment">var myMultiLineString = 'Hello!' + \n
+        'Hope you have a ' + caliberOfDay + ' day!';
+        </code></pre>
+        </section>
+        <section>
+          <h1>Templates: template literals</h1>
+          <p class="fragment">Expression with some logic in a template</p>
+          <pre><code class="fragment">`I should drink ${8 - 5}
+          more glasses of water today.`
+        // I should drink 3 more
+        // glasses of water today.
+        </code></pre>
+        </section>
+        <section>
+            <h1>Templates: populating HTML with variables</h1>
+            <ul style="list-style-type: square;">
+                <li class="fragment">Our HTML:
+                    <pre><code class="fragment"><div id="intro"></div></code></pre> </li>
+                <li class="fragment"> Our JavaScript
+                    <pre><code class="fragment">var user = {firstName: 'Alice', city: 'Wonderland'};
+        var myMarkup = `<div class="character">
+        <p>Hi, I'm ${user.firstName}.</p>
+        <p>I live in ${user.city}.</p>
+        </div>`;
+        var intro = document.getElementById('intro');
+        intro.innerHTML = myMarkup;</code></pre></li>
+            </ul>
+        </section>
+        <section>
+            <h1>Templates: populating HTML with variables</h1>
+            <ul style="list-style-type: square;">
+                <li class="fragment"> Results in HTML DOM
+                    <pre><code class="fragment"><div id="intro">
+        <div class="character">
+        <p>Hi, I'm Alice.</p>
+        <p>I live in Wonderland.</p>
+        </div>
+        </div></code></pre></li>
+                <li class="fragment"><a href="https://codepen.io/CodingCocktailsKC/pen/ZyBRbw" target="_blank">Codepen of fetch w/ API &amp; looping through template</a></li>
+            </ul>
+
+        </section>
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Create a branch, complete a merge, open a pull request, and fork a repo.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Collaborating With Others</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 5 - buzz words -->
+
+<!-- end -->
+        <section>
+          <h1>Questions?</h1>
+          <img src="images/04-apr/questions.gif" alt="Questions" height="80%" />
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol class="normal">
+            <li class="fragment">Find a buddy</li>
+            <li class="fragment">Take <a href="http://bit.ly/CnCFeedback" target="_blank">the quiz</a></li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCAprWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Version+Control+tutorial" target="_blank">online tutorial on Version Control</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; bottom: 0px; right: 0px;" height="300vh" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="images/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="images/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
+          <br><br>
+          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+        </section>
+      </div>
+    </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
