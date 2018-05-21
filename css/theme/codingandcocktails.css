@@ -119,7 +119,8 @@ span.row-line-slack {
 }
 
 #intro-logo {
-  height:75%;
+  height:68%;
+  margin-bottom: auto;
 }
 
 img.teammembers {
