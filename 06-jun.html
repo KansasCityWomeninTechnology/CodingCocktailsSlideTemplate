@@ -35,6 +35,7 @@
   MONTHDIR (05-aug)
   MONTH (Aug)
 
+  network (wifi network name - do NOT check this in!)
   username (wifi username - do NOT check this in!)
   password (wifi password - do NOT check this in!)
 -->
@@ -52,7 +53,7 @@
       </div>
       <h1>While You're Waiting</h1>
       <div class="fill-col">
-        <p>Wifi: username / password</p>
+        <p >Wifi: network<br>username / password</p>
         <table class="tocTable" style="margin: 0 auto;">
           <tr>
             <td>Install the Tools</td>
@@ -91,14 +92,14 @@
     <section>
       <h1>Our Sponsors</h1>
       <br><br><br>
-      <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/google_fiber.png" width="60%" style="vertical-align:middle;"/></a>
-      <a href="https://corporate.americancentury.com/en.html" target="_blank"><img src="images/aci_horiz_grn_blk_rgb.gif" width="60%" style="vertical-align:middle;"/></a>
+      <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/GoogleFiberLogo.svg" width="60%" style="vertical-align:middle;"/></a>
+      <a href="https://corporate.americancentury.com/en.html" target="_blank"><img src="images/aci.gif" width="60%" style="vertical-align:middle;"/></a>
     </section>
     <section>
       <h1>Our Host this Evening</h1>
       <div class="fill-row">
         <a href="https://www.smg.com/" target="_blank">
-          <img src="images/smg-logo.png" alt="Service Management Group"/>
+          <img src="images/smg-logo.png" alt="Service Management Group" style="margin-top: -5em;"/>
         </a>
       </div>
     </section>
@@ -372,7 +373,7 @@
       <h1 class="break">Do the Worksheet:</h1>
       <h4 style="color: #e5dfb3;"><!-- TODO: UPDATE WITH WORKSHEET SECTION NAME --></h4>
       <div class="fill-col">
-        <p>Wifi: username / password</p>
+        <p >Wifi: network<br>username / password</p>
         <table class="tocTable" style="margin: 0 auto;">
           <tr>
             <td>This presentation</td>
@@ -582,7 +583,7 @@
           <h1 class="break">Do the Worksheet:</h1>
           <h4 style="color: #e5dfb3;">Create A Repo</h4>
           <div class="fill-col">
-            <p>Wifi: username / password</p>
+            <p >Wifi: network<br>username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
               <tr>
                 <td>This presentation</td>
@@ -613,58 +614,54 @@
         </section>
 <!-- part 3 -->
         <section>
-          <h1>Data Structures</h1>
-          <img src="images/07-jul/DataStructures.jpg" alt="dataset comic" height="75%" width="75%" style="float:bottom;"/>
-        </section>
-        <section>
-          <h1>Data Structures</h1>
-          <ul style="list-style-type:square">
-            <li class="fragment">When you have a collection of data, you need to organize it</li>
-            <li class="fragment">That's when you need Data Structures like Arrays &amp; Objects</li>
-            <li class="fragment">Data Structures are made up of various variable types, functions, and even other Data Structures</li>
-          </ul>
-        <!--           <img src="images/07-jul/ObjectandClass.png" alt="array image" height="15%" width="45%" style="float:bottom;"/> -->
+          <h1>Arrays & Loops</h1>
+          <img src="images/06-jun/fruit_array.png" alt="Array of Fruit" style="margin-top: 25%;" class="fragment current-visible"/>
+          <img src="images/06-jun/corgi.gif" alt="Corgi looping on a Merry-Go-Round" style="margin-top: 15%;" width="900px" class="fragment current-visible">
         </section>
         <!-- Arrays -->
         <section>
           <h1>Arrays</h1>
-          <img src="images/07-jul/array.gif" alt="array image" height="85%" width="95%" style="float:bottom;"/>
+          <img src="images/06-jun/list.jpg" alt="List" class="fragment current-visible" style="margin-top:20%;">
+          <div class="fragment current-visible">
+              <img src="images/06-jun/fruit_array.png" alt="Array of Fruit" style="margin-top: 10%;"/>
+              <code style="width: 98%;">var fruit = ['Apple','Strawberry','Blackberry','Raspberry','Cherry','Blueberry'];</code>
+          </div>
+          <code class="fragment current-visible" style="width: 100%; margin-top: 25%;">var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 7, 'none of the above'];</code>
         </section>
         <section>
-          <h1>Arrays: how to make one</h1>
-          <p class="fragment">When you want a collection of data items or even functions</p>
-          <pre><code class="fragment">var cocktails = ['Code on the Beach',
-        'jQuery Sour'];
-        var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6,
-        7, 'none of the above'];
-        var anArrayOfFunctions = [orderDrink, closeTab];</code></pre>
-          <pre><code class="fragment">var myNewArray = new Array();
-        var myEmptyArray = [];</code></pre>
+          <h1>Creating Arrays</h1>
+          <pre><code class="fragment" style="width: 98%; margin-top: 15%;">var myNewArray = new Array();
+
+var myEmptyArray = [];
+
+var myFilledArray = ['is','not','empty'];</code></pre>
+        </section>
+        <section>
+          <h1>Arrays are tricksy</h1>
+          <br>
+          <p>Zero-based Index</p>
+          <img src="images/06-jun/array.gif" alt="array image" height="30%"  style="margin-top: 10%;" />
+        </section>
+        <section> <!-- TODO: fragments on code sections -->
+          <h1>Accessing Array Data</h1>
+          <pre><code style="width: 98%; margin-top: 10%;">var fruit = ['Apple','Strawberry','Blackberry'];
+
+var first = fruit[0];
+// 'Apple'
+
+var last = fruit[fruit.length-1];
+// 'Blackberry'
+          </code></pre>
         </section>
         <section>
           <h1>Arrays: stuff you can do</h1>
-          <ul style="list-style-type: square">
-          <li class="fragment">You can grab items from the array using their index</li>
-          <li class="fragment">Arrays have a Zero-Based Index</li>
-          <li class="fragment">To get the first item you use 0, to get the last item you subtract 1 from the number of items in the array</li>
+          <ul style="list-style-type: disc; margin-top: 10%;">
+          <li class="fragment">Add items to array</li>
+          <li class="fragment">Remove items from array</li>
+          <li class="fragment">Loop through array items</li>
           </ul>
-          <pre><code class="fragment">var first = cocktails[0]
-        // this will return 'Code on the Beach'
-        var last = cocktails[cocktails.length - 1];
-        // returns 'jQuery Sour'</code></pre>
-        </section>
-        <section>
-          <h1>Arrays: stuff you can do</h1>
-          <p class="fragment">You can loop over an array:</p>
-          <pre><code class="fragment">var cocktails = ['Code on the Beach',
-        'jQuery Sour'];
-        // array 'for loop'
-        cocktails.forEach(function(cocktail,index)){
-        console.log(cocktail,index);
-        }
-        // 'Code on the Beach' 0
-        // 'jQuery Sour' 1</code></pre>
-        </section>
+        </section> 
+        <!-- TODO: Start back here -->
         <section>
           <h1>Arrays: stuff you can do</h1>
           <p class="fragment">Add an item to the end of an array:</p>
@@ -745,7 +742,8 @@
           <h1 class="break">Do the Worksheet:</h1>
           <h4 style="color: #e5dfb3;">Collaborating With Others</h4>
           <div class="fill-col">
-            <p>Wifi: username / password</p>
+            <p>Wifi: SMG-Guest</p>
+            <p>username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
               <tr>
                 <td>This presentation</td>
