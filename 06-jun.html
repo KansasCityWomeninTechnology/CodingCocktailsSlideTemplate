@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="css/reveal.css"/>
   <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/monokai-sublime.css">
+  <style>.green{background-color: green; color: white;}</style>
 </head>
 
 <body>
@@ -371,7 +374,7 @@
 <!-- break slide -->
     <section>
       <h1 class="break">Do the Worksheet:</h1>
-      <h4 style="color: #e5dfb3;"><!-- TODO: UPDATE WITH WORKSHEET SECTION NAME --></h4>
+      <h4 style="color: #e5dfb3;">Introduction to JavaScript</h4>
       <div class="fill-col">
         <p >Wifi: network<br>username / password</p>
         <table class="tocTable" style="margin: 0 auto;">
@@ -581,7 +584,7 @@
 <!-- break slide -->
         <section>
           <h1 class="break">Do the Worksheet:</h1>
-          <h4 style="color: #e5dfb3;">Create A Repo</h4>
+          <h4 style="color: #e5dfb3;">Working with functions</h4>
           <div class="fill-col">
             <p>Wifi: network<br>username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
@@ -615,8 +618,7 @@
 <!-- part 3 -->
         <section>
           <h1>Arrays &amp; Loops</h1>
-          <img src="images/06-jun/fruit_array.png" alt="Array of Fruit" style="margin-top: 25%;" class="fragment current-visible"/>
-          <img src="images/06-jun/corgi.gif" alt="Corgi looping on a Merry-Go-Round" style="margin-top: 15%;" width="900px" class="fragment current-visible">
+          <img src="images/06-jun/fruit_array.png" alt="Array of Fruit" style="margin-top: 25%;" />
         </section>
         <!-- Arrays -->
         <section>
@@ -624,126 +626,165 @@
           <img src="images/06-jun/list.jpg" alt="List" class="fragment current-visible" style="margin-top:20%;">
           <div class="fragment current-visible">
               <img src="images/06-jun/fruit_array.png" alt="Array of Fruit" style="margin-top: 10%;"/>
-              <code style="width: 98%;">var fruit = ['Apple','Strawberry','Blackberry','Raspberry','Cherry','Blueberry'];</code>
+              <pre><code class="hljs js" style="width: 98%;">var fruit = ['Apple','Strawberry','Blackberry','Raspberry',
+'Cherry','Blueberry'];</code></pre>
           </div>
-          <code class="fragment current-visible" style="width: 100%; margin-top: 25%;">var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 7, 'none of the above'];</code>
+          <pre><code class="fragment current-visible hljs js" style="width: 103%; margin-top: 25%; margin-left: -3%;">var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 7, 'none of the above'];</code></pre>
         </section>
         <section>
-          <h1>Creating Arrays</h1>
-          <pre><code class="fragment" style="width: 98%; margin-top: 15%;">var myNewArray = new Array();
+          <h3>Creating Arrays</h3>
+          <pre><code class="fragment hljs js" style="width: 98%; margin-top: 15%;">var myNewArray = new Array();
 
 var myEmptyArray = [];
 
 var myFilledArray = ['is','not','empty'];</code></pre>
         </section>
         <section>
-          <h1>Arrays are tricksy</h1>
+          <h3>Arrays are tricksy</h3>
           <br>
           <p>Zero-based Index</p>
           <img src="images/06-jun/array.gif" alt="array image" height="30%"  style="margin-top: 10%;" />
         </section>
         <section> <!-- TODO: fragments on code sections -->
-          <h1>Accessing Array Data</h1>
-          <pre><code style="width: 98%; margin-top: 10%;">var fruit = ['Apple','Strawberry','Blackberry'];
+          <h3>Accessing Array Data</h3>
+          <pre><code class="hljs js" style="width: 98%; margin-top: 5%;">var fruit = ['Apple','Strawberry','Blackberry'];
 
 var first = fruit[0];
 // 'Apple'
+
+var length = fruit.length;
+// 3
 
 var last = fruit[fruit.length-1];
 // 'Blackberry'
           </code></pre>
         </section>
         <section>
-          <h1>Arrays: stuff you can do</h1>
-          <ul style="list-style-type: disc; margin-top: 10%;">
-          <li class="fragment">Add items to array</li>
-          <li class="fragment">Remove items from array</li>
-          <li class="fragment">Loop through array items</li>
-          </ul>
-        </section> 
-        <!-- TODO: Start back here -->
-        <section>
-          <h1>Arrays: stuff you can do</h1>
-          <p class="fragment">Add an item to the end of an array:</p>
-          <pre><code class="fragment">cocktails.push('Mojito');
-        // cocktails now looks like this:
-        // ['Code on the Beach', 'jQuery Sour', 'Mojito']</code></pre>
-          <p class="fragment">Remove an item from the end of an array:</p>
-          <pre><code class="fragment">cocktails.pop();
-        // cocktails now looks like this:
-        // ['Code on the Beach', 'jQuery Sour']</code></pre>
-          <p class="fragment">Last-In-First-Out aka LIFO</p>
+          <h3>Arrays: stuff you can do</h3>
+          <p>Add item to beginning of array</p>
+          <pre><code class="hljs js">// Create the Array
+var fruit = ['Apple','Pear','Kiwi'];
+
+// Add item 'Banana' to beginning of array
+fruit.unshift('Banana');
+
+// View the contents of the array
+// stored in the fruit variable
+console.log(fruit);
+// ['Banana','Apple','Pear','Kiwi']</code></pre>
         </section>
         <section>
-          <h1>Arrays: stuff you can do</h1>
-          <p class="fragment">Add to the beginning of an array</p>
-          <pre><code class="fragment">cocktails.unshift('JavaScriptini');
-        /* ['Javascriptini', 'Code on the Beach',
-        'jQuery Sour']*/</code></pre>
-          <p class="fragment">Remove from the beginning of an array</p>
-          <pre><code class="fragment">cocktails.shift();
-        // ['Code on the Beach', 'jQuery Sour']</code></pre>
-          <p class="fragment">First-In-First-Out aka FIFO</p>
+          <h3>Arrays: stuff you can do</h3>
+          <p>Add item to end of array</p>
+          <pre><code class="hljs js">// Create the Array
+var fruit = ['Apple','Strawberry','Kiwi'];
+
+// Add item 'Cherry' to end of array
+fruit.push('Cherry');
+
+// View array contents
+console.log(fruit);
+// ['Apple','Strawberry','Kiwi','Cherry']</code></pre>
+        </section>
+        <section>
+          <h3>Arrays: stuff you can do</h3>
+          <p>Remove item from start of array</p>
+          <pre><code class="hljs js">// Create an Array
+var fruit = ['Apple','Peach','Pear'];
+              
+// Remove item from beginning of array
+var item = fruit.shift();
+// 'Apple'
+
+// View array contents
+console.log(fruit);
+// ['Peach','Pear']
+
+var length = fruit.length;
+// 2</code></pre>
+        </section>
+        <section>
+          <h3>Arrays: stuff you can do</h3>
+          <p>Remove item from end of array</p>
+          <pre><code class="hljs js">// Create an Array
+var fruit = ['Apple','Peach','Pineapple'];
+              
+// Remove item from end of array
+var item = fruit.pop();
+// 'Pineapple'
+
+// View array contents
+console.log(fruit);
+// ['Apple', 'Peach']
+
+var length = fruit.length;
+// 2</code></pre>
         </section>
         <section>
           <h1>Loops</h1>
-          <img src="images/07-jul/dogLoop.jpg" alt="Dog Loop" height="40%" width="55%" style="float:center;"/>
+          <img src="images/06-jun/corgi.gif" alt="Corgi looping on a Merry-Go-Round" style="margin-top: 15%;" width="900px">
         </section>
         <section>
-            <h1>Loops</h1>
-           <ul style="list-style-type: square">
-              <li class="fragment">Repeat some code</li>
-              <li class="fragment">As long as some condition is true</li>
-              <li class="fragment">Different kinds of loops:
-              <ul style="list-style-type: square">
-                <li class="fragment">while</li>
-                <li class="fragment">do...while</li>
-                <li class="fragment">for...in/of/statement</li>
-                <li class="fragment">Today we will learn about the 'for' loop</li>
-              </ul>
-              </li>
-            </ul>
-        </section>
-        <section>
-            <h1>for Loop</h1>
-            <p class="fragment">Pseudo Code</p>
-            <pre><code class="fragment">for (initialization; condition; increment) {
-        // code to execute while condition is true
-        }</code></pre>
-            <p class="fragment">Example</p>
-            <pre><code class="fragment">var numberOfCustomers = 5;
-        for (var i = 0; i < numberOfCustomers; i++) {
-        notifyDrinkIsReady(i);
-        }</code></pre>
-        </section>
-        <section>
-            <h1>for Loop</h1>
-            <pre><code class="fragment">var numberOfCustomers = 5;
-        for (var i = 0; i < numberOfCustomers; i++) {
-        notifyDrinkIsReady(i);
-        }</code></pre>
-            <p>one of these will never terminate &amp; is an 'infinite loop'
-            <pre><code class="fragment">var numberOfCustomers = 5;
-        for (var i = 0; i < numberOfCustomers;) {
-        notifyDrinkIsReady(i);
-        }</code></pre>
-        </section>
-        <section>
-          <h1>Data Structure Libraries</h1>
-          <ul style="list-style-type:square">
-            <li class="fragment">Utility Libraries simplify dealing with Arrays and Objects</li>
-            <li class="fragment"><a href="https://lodash.com">LoDash</a></li>
-            <li class="fragment"><a href="http://underscorejs.org/">UNDERSCORE.js</a></li>
+          <h1>Loops</h1>
+          <p>What is a loop?</p>
+          <p class="fragment">Repeat some code as long as some condition is true</p>
+          <br>
+          <p class="fragment">Types of loops:</p>
+          <ul class="fragment" style="list-style-type: disc;">
+            <li>for</li>
+            <li>for...in</li>
+            <li>for...of</li>
+            <li>while</li>
+            <li>do...while</li>
           </ul>
         </section>
+        <section>
+            <h1>for Loop</h1>
+            <pre><code class="hljs js" style="width: 98%;">for (initialization; condition; increment) {
+  // code to execute while condition is true
+}</code></pre>
+            <p class="fragment">Example</p>
+            <pre><code class="fragment hljs js">var numberOfCustomers = 5;
 
+for (var i = 0; i < numberOfCustomers; i++) {
+  notifyDrinkIsReady(i);
+}</code></pre>
+        </section>
+        <section>
+            <h1>for Loop</h1>
+            <pre><code class="fragment hljs js">var numberOfCustomers = 5;
+for (var i = 0; i < numberOfCustomers; i++) {
+  notifyDrinkIsReady(i);
+}</code></pre>
+            <p>one of these will never terminate &amp; is an 'infinite loop'
+            <pre><code class="fragment hljs js">var numberOfCustomers = 5;
+for (var i = 0; i < numberOfCustomers;) {
+  notifyDrinkIsReady(i);
+}</code></pre>
+        </section>
+        <section>
+          <h1>foreach</h1>
+          <br>
+          <p>An array method that executes a given function once for each array element</p>
+          <br>
+          <pre><code class="js fragment">// Create array
+var drinks = ['martini', 'soda', 'coffee'];
+
+// loop using forEach
+drinks.forEach(function(drink) {
+  console.log(drink);
+});
+// martini
+// soda
+// coffee
+          </code></pre> 
+        </section>
 <!-- break slide -->
         <section>
           <h1 class="break">Do the Worksheet:</h1>
-          <h4 style="color: #e5dfb3;">Collaborating With Others</h4>
+          <h4 style="color: #e5dfb3;">Arrays</h4>
           <div class="fill-col">
             <p>Wifi: network<br>username / password</p>
-            <p>username / password</p>
             <table class="tocTable" style="margin: 0 auto;">
               <tr>
                 <td>This presentation</td>
@@ -775,25 +816,107 @@ var last = fruit[fruit.length-1];
 <!-- part 4 -->
         <section>
           <h1>Events</h1>
+          <br>
+          <img src="images/06-jun/events.jpg" alt="Event with confetti">
         </section>
-
+        <section>
+          <h1>Events</h1>
+          <br>
+          <p>What is an event?</p>
+          <p class="fragment">When the user (or the browser) interacts with or manipulates the DOM</p>
+          <br>
+          <p class="fragment">Application can listen for events...</p>
+          <p class="fragment">and make something happen when an event occurs</p>
+        </section>
+        <section>
+          <h1>Events</h1>
+          <br>
+          <p>Types of events</p>
+          <ul class="fragment" style="list-style-type: disc;">
+            <li>click</li>
+            <li>mouseover</li>
+            <li>keydown</li>
+            <li>load</li>
+            <li>and <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">many more!</a></li>
+          </ul>
+          <br>
+          <p class="fragment">Handle events with an event handler</p>
+        </section>
+        <section>
+          <h6>HTML</h6>
+          <pre><code class="html" style="width: 98%;"><button id="my-button">Click me!</button></code></pre>
+          <h6 class="fragment">CSS</h6>
+          <pre><code class="fragment css" style="width: 98%;">.green {
+  background-color: green;
+  color: white;
+}</code></pre>
+          <h6 class="fragment">JavaScript</h6>
+          <pre><code class="fragment js" style="width: 98%;">document.addEventListener("DOMContentLoaded", 
+function (event) {
+  document.getElementById('my-button').onclick = 
+  function() {
+    document.getElementById('my-button')
+    .classList.toggle('green');
+  };
+});</code></pre>
+        </section>
+        <section>
+          <h4>Events</h4>
+          <br>
+          <br>
+          <button id="green-button" style="padding: 100px; font-size: 48px; border-radius: 5%;">Click me!</button>
+        </section>
 <!-- end -->
         <section>
           <h1>Questions?</h1>
-          <img src="images/04-apr/questions.gif" alt="Questions" height="80%" />
+          <img src="images/06-jun/questions.gif" alt="Questions" height="80%" />
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Events</h4>
+          <div class="fill-col">
+            <p>Wifi: network<br>username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCJunSlides" target="_blank">http://bit.ly/CnCJunSlides</a></td>
+              </tr>
+              <tr>
+                <td>The worksheet</td>
+                <td><a href="http://bit.ly/CnCJunWork" target="_blank">http://bit.ly/CnCJunWork</a></td>
+              </tr>
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
         </section>
         <section>
           <h1>What's Next</h1>
           <br>
           <ol class="normal">
-            <li class="fragment">Find a buddy</li>
-            <li class="fragment">Take <a href="http://bit.ly/CnCFeedback" target="_blank">the quiz</a></li>
+            <li class="fragment">Find a friend</li>
+            <li class="fragment">Take <a href="https://goo.gl/forms/LmTx8rxTCLH95VGO2" target="_blank">the quiz</a></li>
             <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
             <li class="fragment">Finish <a href="http://bit.ly/CnCJunWork" target="_blank">tonight's worksheet</a></li>
-            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=JavaScript+tutorial" target="_blank">online tutorial on Version Control</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=JavaScript+tutorial" target="_blank">online tutorial on JavaScript</a></li>
             <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
           </ol>
-          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; bottom: 0px; right: 0px;" height="300vh" />
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
         </section>
         <section>
           <h1>Keep up with us</h1>
@@ -805,7 +928,11 @@ var last = fruit[fruit.length-1];
           <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/meetup.png" width="190"/></a>
           <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/twitter.png" width="150"/></a>
           <br><br>
-          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+          <div class="fragment">
+            <p>#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT</p>
+            <br>
+            <p>#CodingAndCocktailsKC</p>
+          </div>
         </section>
       </div>
     </div>
@@ -826,6 +953,14 @@ var last = fruit[fruit.length-1];
         { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
       ]
     });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+
+        document.getElementById('green-button').onclick = function() {
+          document.getElementById('green-button').classList.toggle('green');
+        };
+      });
     </script>
   </body>
   </html>
