@@ -762,78 +762,83 @@ var myFilledArray = ['is','not','empty'];</code></pre>
       <section>
         <!-- TODO: fragments on code sections -->
         <h3>Accessing Array Data</h3>
-        <pre><code class="hljs js" style="width: 98%; margin-top: 5%;">var fruit = ['Apple','Strawberry','Blackberry'];
-
+        <pre><code class="hljs js" style="width: 98%; margin-top: 5%;" data-noescape>var fruit = ['Apple','Strawberry','Blackberry'];
+        <span class="fragment">
+// Grab first item and display         
 var first = fruit[0];
+console.log(first);
 // 'Apple'
-
+        </span><span class="fragment">
+// Check array length and display
 var length = fruit.length;
+console.log(length);
 // 3
-
+        </span><span class="fragment">
+// Grab last item and display
 var last = fruit[fruit.length-1];
-// 'Blackberry'
-          </code></pre>
+console.log(last);
+// 'Blackberry'</span></code></pre>
       </section>
       <section>
         <h3>Arrays: stuff you can do</h3>
         <p>Add item to beginning of array</p>
-        <pre><code class="hljs js">// Create the Array
+        <pre><code class="hljs js" data-noescape>// Create the Array
 var fruit = ['Apple','Pear','Kiwi'];
-
+          <span class="fragment">
 // Add item 'Banana' to beginning of array
 fruit.unshift('Banana');
-
+          </span><span class="fragment">
 // View the contents of the array
 // stored in the fruit variable
 console.log(fruit);
-// ['Banana','Apple','Pear','Kiwi']</code></pre>
+// ['Banana','Apple','Pear','Kiwi']</span></code></pre>
       </section>
       <section>
         <h3>Arrays: stuff you can do</h3>
         <p>Add item to end of array</p>
-        <pre><code class="hljs js">// Create the Array
+        <pre><code class="hljs js" data-noescape>// Create the Array
 var fruit = ['Apple','Strawberry','Kiwi'];
-
+          <span class="fragment">
 // Add item 'Cherry' to end of array
 fruit.push('Cherry');
-
+          </span><span class="fragment">
 // View array contents
 console.log(fruit);
-// ['Apple','Strawberry','Kiwi','Cherry']</code></pre>
+// ['Apple','Strawberry','Kiwi','Cherry']</span></code></pre>
       </section>
       <section>
         <h3>Arrays: stuff you can do</h3>
         <p>Remove item from start of array</p>
-        <pre><code class="hljs js">// Create an Array
+        <pre><code class="hljs js" data-noescape>// Create an Array
 var fruit = ['Apple','Peach','Pear'];
-              
+          <span class="fragment">
 // Remove item from beginning of array
 var item = fruit.shift();
 // 'Apple'
-
+          </span><span class="fragment">
 // View array contents
 console.log(fruit);
 // ['Peach','Pear']
-
+          </span><span class="fragment">
 var length = fruit.length;
-// 2</code></pre>
+// 2</span></code></pre>
       </section>
       <section>
         <h3>Arrays: stuff you can do</h3>
         <p>Remove item from end of array</p>
-        <pre><code class="hljs js">// Create an Array
+        <pre><code class="hljs js" data-noescape>// Create an Array
 var fruit = ['Apple','Peach','Pineapple'];
-              
+          <span class="fragment">
 // Remove item from end of array
 var item = fruit.pop();
 // 'Pineapple'
-
+          </span><span class="fragment">
 // View array contents
 console.log(fruit);
 // ['Apple', 'Peach']
-
+          </span><span class="fragment">
 var length = fruit.length;
-// 2</code></pre>
+// 2</span></code></pre>
       </section>
       <section>
         <h1>Loops</h1>
@@ -855,25 +860,25 @@ var length = fruit.length;
       </section>
       <section>
         <h1>for Loop</h1>
-        <pre><code class="hljs js" style="width: 98%;">for (initialization; condition; increment) {
-  // code to execute while condition is true
+        <pre><code class="hljs js" style="width: 98%;" data-noescape>for (initialization; <span class="fragment">condition;</span> <span class="fragment">increment</span>) {<span class="fragment">
+  // code to execute while condition is true</span>
 }</code></pre>
         <p class="fragment">Example</p>
-        <pre><code class="fragment hljs js">var numberOfCustomers = 5;
-
-for (var i = 0; i < numberOfCustomers; i++) {
-  notifyDrinkIsReady(i);
-}</code></pre>
+        <pre><code class="fragment hljs js" style="width: 98%;" data-noescape>var numberOfCustomers = 5;
+          <span class="fragment">
+for (<span class="fragment">var i = 0;</span> <span class="fragment">i < numberOfCustomers;</span> <span class="fragment">i++</span>) {
+  <span class="fragment">notifyDrinkIsReady(i);</span>
+}</span></code></pre>
       </section>
       <section>
         <h1>for Loop</h1>
         <br>
-        <pre><code class="fragment hljs js" style="width: 98%;">var numberOfCustomers = 5;
+        <pre><code class="hljs js" style="width: 98%;">var numberOfCustomers = 5;
 for (var i = 0; i < numberOfCustomers; i++) {
   notifyDrinkIsReady(i);
 }</code></pre>
         <p>one of these will never terminate &amp; is an 'infinite loop'
-          <pre><code class="fragment hljs js" style="width: 98%;">var numberOfCustomers = 5;
+          <pre><code class="hljs js" style="width: 98%;">var numberOfCustomers = 5;
 for (var i = 0; i < numberOfCustomers;) {
   notifyDrinkIsReady(i);
 }</code></pre>
@@ -883,16 +888,16 @@ for (var i = 0; i < numberOfCustomers;) {
         <br>
         <p>An array method that executes a given function once for each array element</p>
         <br>
-        <pre><code class="js fragment">// Create array
+        <pre><code class="js fragment" data-noescape>// Create array
 var drinks = ['martini', 'soda', 'coffee'];
-
+<span class="fragment">
 // loop using forEach
 drinks.forEach(function(drink) {
   console.log(drink);
 });
 // martini
 // soda
-// coffee</code></pre>
+// coffee</span></code></pre>
       </section>
       <!-- break slide -->
       <section>
@@ -995,14 +1000,14 @@ drinks.forEach(function(drink) {
   color: white;
 }</code></pre>
         <h6 class="fragment">JavaScript</h6>
-        <pre><code class="fragment js" style="width: 98%;">document.addEventListener("DOMContentLoaded", 
-function (event) {
-  document.getElementById('my-button').onclick = 
+        <pre><code class="fragment js" style="width: 98%;" data-noescape>document.addEventListener("DOMContentLoaded", 
+function (event) { <span class="fragment">
+  document.getElementById('my-button').onclick = </span><span class="fragment">
   function() {
     document.getElementById('my-button')
     .classList.toggle('green');
   };
-});</code></pre>
+});</span></span></code></pre>
       </section>
       <section>
         <h4>Events</h4>
