@@ -409,8 +409,7 @@
         <p class="fragment">returns 35</p>
         <br>
         <code class="fragment">var textAndNumberString = ‘happy’ + 35 + ‘birthday’;</code>
-        <p class="fragment">returns</p>
-        <code class="fragment">happy35birthday</code>
+        <p class="fragment">returns happy35birthday</code>
       </section>
       <section>
         <h1>What will the following return?</h1>
@@ -418,8 +417,8 @@
         <code>var gotcha = ‘10’ + 25;</code>
         <p class="fragment">if you guessed 35. . . </p>
         <p class="fragment">Gotcha!</p>
+        <br>
         <p class="fragment"> Adding a integer and a string returns a string, &#39;1025&#39;</p>
-        <code class="fragment">&#39;1025&#39;</code>
       </section>
       <section>
         <br>
@@ -497,31 +496,46 @@
         <h3>Functions</h3>
         <br>
         <ul>
+          <li class="fragment">Alternatively, think of it as a verb.</li>
+          <br>
           <li class="fragment">A function performs a task</li>
           <br>
-          <li class="fragment">Parameters: the Mad Libs concept</li>
-          <br>
-          <li class="fragment">It may or may not &#39;return&#39; an obvious value once it is finished</li>
+          <li class="fragment">Functions are also referred to as methods</li>
         </ul>
       </section>
       <section>
-        <h1>Functions as Tasks: The Coffee Bean Grinder</h1>
-        <img src="images/06-jun/cbgrinder.png" alt="coffee bean grinder" style="margin-top:30px;" />
+          <h1>Functions as Tasks: The Coffee Bean Grinder</h1>
+          <img src="images/06-jun/cbgrinder.png" alt="coffee bean grinder" style="margin-top:30px;" />
+          <p class="fragment">Take input, process input, return output</p>
+        </section>
+      <section>
+        <h3>Functions</h3>
+        <br>
+        <p class="fragment">
+          Reusable Code
+        </p>
+        <br>
+        <p class="fragment">
+            <font style="color:#c7bc75">Programming Nugget:</font><br>
+            DRY programming – <font style="color:#c7bc75">D</font>on’t <font style="color:#c7bc75">R</font>epeat <font style="color:#c7bc75">Y</font>ourself
+        </p>
       </section>
       <section>
-        <h1>Functions in the Wild</h1>
+        <h3>Functions in the Wild</h3>
         <br>
         <p>Parts of a function</p>
         <br>
-        <code>var functionName = function (optional, parameters, here){<br>&nbsp;&nbsp;&nbsp;//function logic here <br>};
-      </code>
+        <pre><code class="hljs js" style="width: 98%;" data-noescape>var functionName = <span class="fragment">
+  function (<span class="fragment">optional, parameters</span>) {<span class="fragment">
+    //function logic here</span>
+  };</span></code></pre>
       </section>
       <section>
-        <h1>functions in the Wild</h1>
+        <h3>functions in the Wild</h3>
         <br>
-        <p>Name your function ('declare a variable')</p>
+        <p>Name your function<br>(declare a variable)</p>
         <br>
-        <code>var orderDrink = function(drinkName)</code>
+        <pre><code class="hljs js">var orderDrink = function(drinkName) {};</code></pre>
         <br>
         <p>Read as: The variable &#39;orderDrink&#39; is a function with one parameter, called &#39;drinkName&#39;</p>
       </section>
@@ -529,99 +543,137 @@
         <h3>functions in the Wild</h3>
         <br>
         <p>The task is specified inside the curly braces:</p>
-        <code>var orderDrink = function(drinkName) {<br>&nbsp;&nbsp;&nbsp;return 'I would like a ' + drinkName + ' please.'
-        <br>};</code>
+        <pre><code class="js">var orderDrink = function(drinkName) {
+  return 'I would like a ' + drinkName + 
+    ' please.';
+};</code></pre>
         <br>
-        <p>When you run the code, you decide what the value of the parameter is and insert it, Mad Libs style!</p>
+        <p style="font-size: 1.2em;" class="fragment">When you run the code, you decide what the value of the parameter (drinkName) is and insert it, Mad Libs style!</p>
       </section>
       <section>
-        <h1>Functions in the Wild</h1>
+        <h3>Functions in the Wild</h3>
         <br>
         <br>
-        <p>finally, &#39;call&#39; the function by telling it what to use for the parameter:</p>
+        <p>Call the function by telling it what to use for the parameter:</p>
         <br>
-        <code>orderDrink('gin and tonic');</code>
+        <pre><code class="hljs js">orderDrink('gin and tonic');</code>
       </section>
       <section>
-        <h1>Functions in the Wild</h1>
-        <p>Put it all together:</p>
-        <img src="images/06-jun/function.png" alt="">
-      </section>
-      <section>
-        <h1>Functions in the Wild</h1>
+        <h3>Functions in the Wild</h3>
         <p>Put it all together:</p>
         <img src="images/06-jun/function2exec.png" alt="">
       </section>
       <section>
+        <h3>Functions in the wild</h3>
+        <br>
+        <p>Function with no parameters</p>
+        <br>
+        <pre><code class="hljs js">function orderMyFavoriteDrink() {
+  return 'I want a margarita.';
+};</code></pre>
+<br>
+<pre><code class="hljs js">orderMyFavoriteDrink();
+//'I want a margarita.'</code></pre>
+      </section>
+      <section>
+        <h3>Function Return Values</h3>
+        <br>
+        <p class="fragment">Return is optional</p>
+        <br>
+        <p class="fragment">Without return, undefined is returned</p>
+        <br>
+        <p class="fragment">Allows JS engine to know function is done executing</p>
+      </section>
+      <section>
+        <h3>Function Return Values</h3>
+        <br>
+        <pre><code class="hljs js">var drink; // declares variable but doesn't set
+
+function setDrink (cocktail) {
+  drink = cocktail;
+}
+            
+setDrink('martini');
+// undefined is returned but drink variable is now set 
+// to 'martini'</code></pre>
+      </section>
+      <section>
         <h1>Native Functions</h1>
-        <ul>
-          <li class="fragment">Alert</li>
-          <!--  TODO: POPULATE ALERT -->
-        </ul>
+        <br>
+        <p>Alert</p>
+        <br>
+        <p class="fragment">Display alert along with ok button</p>
+        <br>
+        <img class="fragment" src="images/06-jun/alert.png" alt="Alert Box">
       </section>
       <section>
         <h1>Conditionals</h1>
-        <img src="images/06-jun/" alt="Conditionals" height="45%" width="65%" style="margin-top:.5rem;" />
-        <!-- TODO: Replace Image -->
+        <img src="images/06-jun/success.jpg" alt="Conditionals" height="62%" />
+        <pre><code class="hljs js">if (at first you dont succeed) {
+  // try, try again!
+}</code></pre>
       </section>
-      <!-- Introduction slide -->
       <section>
         <h1>Flow Control</h1>
-        <ul style="list-style-type: square; float:left;">
-          <li class="fragment">JavaScript runs from top to bottom</li>
-          <img class="fragment" src="images/07-jul/flowchart.jpg" alt="flowchart" style="float: right;" />
-          <li class="fragment">You want to submit a drink order request (form)
+        <br>
+        <ul style="list-style-type: disc; float:left;">
+          <div class="fragment">
+              <img src="images/07-jul/flowchart.jpg" alt="flowchart" width="30%" style="float: right;" />
+              <li>JavaScript runs from top to bottom</li>
+          </div>
+          <li class="fragment">Example: Submit a drink order (form)
             <font style="color:#c7bc75">ONLY IF</font> the user has entered their name</li>
         </ul>
       </section>
       <section>
-        <h1>If/Else Pseudo Code</h1>
-        <pre><code class="fragment">if (expressionInParens) {
-      // do something if true
-      }
-      else {
-      // otherwise, do something else
-      }</code></pre>
+        <h1>If/Else</h1>
+        <br>
+        <pre><code class="fragment hljs js" data-noescape>if (<span class="fragment">expressionInParens</span>) {<span class="fragment">
+  // do something if expression is true</span>
+} <span class="fragment">else {<span class="fragment">
+  // otherwise if expression is false, do something else</span>
+};</span></code></pre>
+        <br>
         <p class="fragment">
-          <font style="color:#c7bc75">Programming Nugget:</font>
+          <font style="color:#c7bc75">Programming Nugget:</font><br>
           `else` is optional. </p>
+        <br>
         <p class="fragment">It is possible to use an `if () {}` statement by itself.</p>
       </section>
       <section>
         <h1>If/Else Example</h1>
-        <pre>
-          <code class="fragment">var usersName = 'Heidi';
-      if (usersName.length > 0) {
-      submitDrinkOrder();
-      }
-      else {
-      alert('Please enter your name
-      before submitting your drink order.');
-      }</code></pre>
+        <br>
+        <pre><code class="fragment hljs js" data-noescape>var usersName = 'Heidi';
+
+if (usersName.length > 0) {<span class="fragment">
+  submitDrinkOrder();</span>
+} <span class="fragment">else {
+  alert('Please enter your name
+    before submitting your drink order.');
+}</span></code></pre>
       </section>
-      <!--         <section>
+        <section>
           <h1>Falsy Values</h1>
+          <br>
           <p class="fragment">The following are always FALSE</p>
-          <ul style="list-style-type: square">
-            <li class="fragment">false</li>
-            <li class="fragment">undefined</li>
-            <li class="fragment">null</li>
-            <li class="fragment">0</li>
-            <li class="fragment">NaN</li>
-            <li class="fragment">an empty String: ""</li>
+          <br>
+          <ul style="list-style-type: disc" class="fragment">
+            <li>false</li>
+            <li>undefined</li>
+            <li>null</li>
+            <li>0</li>
+            <li>NaN</li>
+            <li>"" (an empty string)</li>
           </ul>
+          <br>
+          <br>
           <p class="fragment">any other value is always TRUE</p>
-      </section> -->
+      </section>
       <section>
         <h1>Debugging</h1>
-        <!--  TODO: DEBUGGING -->
+        <br>
+        <img src="images/06-jun/bug.jpg" alt="Ladybug">
       </section>
-      <!--          <section>
-      <h1>Know the Lingo</h1>
-      <h2>Object Oriented Programming</h2>
-      <img src="images/06-jun/legobuildingblocks.png" alt="Lingo1" height="50%" width="50%" style="margin-top:30px;"/>
-      <img src="images/06-jun/ladydevlego.png"  alt="LadyDevLego" height="50%" width="50%" style="margin-top:30px;"/>
-    </section>-->
       <section>
         <h1>Comments: Documenting Your Work</h1>
         <p>Single Line comments</p>
@@ -631,7 +683,7 @@
         <br>multi line comment */</code>
       </section>
       <section>
-        <h1>Your BFF: Console.log</h1>
+        <h1>Browser Developer Tools</h1>
         <br>
         <table class="slightlyPaddedTable" style="margin-left: 5%;">
           <tr>
@@ -649,15 +701,36 @@
       <section>
         <h1>Your BFF: Console.log</h1>
         <br>
-        <p>Great for troubleshooting / debugging your code by sticking these in your logic</p>
-        <img src="images/06-jun/whileLoop.png" alt="console example">
+        <p>Great for troubleshooting / debugging</p>
+        <br>
+        <pre><code class="hljs js">var name = 'Ada Lovelace';
+console.log(name);</code></pre>
+        <pre><code class="fragment hljs js">var getSquareFeet = function(height, width) {
+  return height * width;
+};
+console.log(getSquareFeet(10, 15));</code></pre>
+        <pre><code class="fragment hljs js">console.log('name: ', name);
+console.log('square feet: ', getSquareFeet(13, 20);</code></pre>
       </section>
       <section>
-        <img src="images/06-jun/whileLoopResults.png" alt="console example">
+        <h1>Debugger</h1>
+        <br>
+        <p>Step through code in dev tools</p>
+        <br>
+        <pre><code class="hljs js">const myFunction = function (parameter) {
+  debugger;
+  counter = counter + 1;
+  if (counter <= 3) {
+    alert(parameter);
+  } else {
+    alert("Too many!");
+  }
+};</code></pre>
+<!-- TODO: Add context here -->
       </section>
       <section>
-        <img src="images/06-jun/confusing.png" alt="" height="650px" width="800
-        px">
+        <h1>Questions?</h1>
+        <img src="images/06-jun/confusing.png" alt="" height="650px" width="800px">
       </section>
       <section>
         <br>
