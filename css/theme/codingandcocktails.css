@@ -430,6 +430,11 @@ SNIPPETS
 .right-align{ text-align:right}
 .blue{color:#01A9B4}
 
+.green{
+  background-color: green; 
+  color: white;
+}
+
 .team.fill-row {justify-content: center;}
 
 .flexy-center {
