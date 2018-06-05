@@ -134,9 +134,9 @@
       </section>
       <section>
         <h1>Our Host this Evening</h1>
-        <div class="fill-row">
+        <div class="fill-row" style="height: 75%;">
           <a href="https://www.smg.com/" target="_blank">
-            <img src="images/smg-logo.png" alt="Service Management Group" style="margin-top: -5em;" />
+            <img src="images/smg-logo.png" alt="Service Management Group" />
           </a>
         </div>
       </section>
@@ -169,7 +169,7 @@
             <p class="teammembers">Marketing Director</p>
           </span>
           <span class="fragment teammembers">
-            <img src="images/kallie.jpeg" alt="Kallie Riff" class="teammembers" />
+            <img src="images/kallie.jpeg" alt="Kallie Riff" class="teammembers" width="216px"/>
             <h6 class="teammembers">Kallie Riff</h6>
             <p class="teammembers">Presentation Director</p>
           </span>
@@ -394,13 +394,15 @@
       </section>
       <section>
         <h1>Examples of Operators</h1>
-        <code>var myAge = 28 + 10; // 38</code>
+        <pre><code class="hljs js">var myAge = 28 + 10; // 38</code></pre>
         <br>
-        <code>var myDogsAge = 6 * 7; // 42</code>
+        <pre><code class="fragment hljs js">var myDogsAge = 6 * 7; // 42</code></pre>
         <br>
-        <p>Modulus: The 'remainder' in a division problem</p>
-        <code>var modExample = 15 % 2 = 1</code>
-        <p>15 / 2 = 7 with a remainder of 1 (the modulus)</p>
+        <div class="fragment">
+          <p>Modulus: The 'remainder' in a division problem</p>
+          <pre><code class="hljs js">var modExample = 15 % 2 // 1</code></pre>
+          <p>15 / 2 = 7 with a remainder of 1 (the modulus)</p>
+        </div>
       </section>
       <section>
         <h1>Adding Strings and Numbers</h1>
@@ -516,7 +518,7 @@
         </p>
         <br>
         <p class="fragment">
-            <font style="color:#c7bc75">Programming Nugget:</font><br>
+            <font style="font-style: italic;">Programming Nugget:</font><br>
             DRY programming – <font style="color:#c7bc75">D</font>on’t <font style="color:#c7bc75">R</font>epeat <font style="color:#c7bc75">Y</font>ourself
         </p>
       </section>
@@ -599,12 +601,11 @@ setDrink('martini');
       </section>
       <section>
         <h1>Native Functions</h1>
-        <br>
-        <p>Alert</p>
+        <h3>Alert</h3>
         <br>
         <p class="fragment">Display alert along with ok button</p>
         <br>
-        <img class="fragment" src="images/06-jun/alert.png" alt="Alert Box">
+        <img class="fragment" src="images/06-jun/alert.gif" alt="Alert Box">
       </section>
       <section>
         <h1>Conditionals</h1>
@@ -621,8 +622,9 @@ setDrink('martini');
               <img src="images/07-jul/flowchart.jpg" alt="flowchart" width="30%" style="float: right;" />
               <li>JavaScript runs from top to bottom</li>
           </div>
+          <br>
           <li class="fragment">Example: Submit a drink order (form)
-            <font style="color:#c7bc75">ONLY IF</font> the user has entered their name</li>
+            <font style="font-style: italic;">ONLY IF</font> the user has entered their name</li>
         </ul>
       </section>
       <section>
@@ -635,7 +637,7 @@ setDrink('martini');
 };</span></code></pre>
         <br>
         <p class="fragment">
-          <font style="color:#c7bc75">Programming Nugget:</font><br>
+          <font style="font-style: italic;">Programming Nugget:</font><br>
           `else` is optional. </p>
         <br>
         <p class="fragment">It is possible to use an `if () {}` statement by itself.</p>
@@ -950,7 +952,7 @@ for (<span class="fragment">var i = 0;</span> <span class="fragment">i < numberO
 for (var i = 0; i < numberOfCustomers; i++) {
   notifyDrinkIsReady(i);
 }</code></pre>
-        <p>one of these will never terminate &amp; is an 'infinite loop'
+        <p>Which of these is an 'infinite loop'?
           <pre><code class="hljs js" style="width: 98%;">var numberOfCustomers = 5;
 for (var i = 0; i < numberOfCustomers;) {
   notifyDrinkIsReady(i);
@@ -1047,11 +1049,15 @@ drinks.forEach(function(drink) {
         <br>
         <p class="fragment">Application can listen for events...</p>
         <p class="fragment">and make something happen when an event occurs</p>
+        <br>
+        <p class="fragment">Handle events with... </p>
+        <p class="fragment">an event handler</p>
       </section>
       <section>
         <h1>Events</h1>
         <br>
         <p>Types of events</p>
+        <br>
         <ul class="fragment" style="list-style-type: disc;">
           <li>click</li>
           <li>mouseover</li>
@@ -1062,7 +1068,6 @@ drinks.forEach(function(drink) {
           </li>
         </ul>
         <br>
-        <p class="fragment">Handle events with an event handler</p>
       </section>
       <section>
         <h6>HTML</h6>
