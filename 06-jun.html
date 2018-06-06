@@ -258,11 +258,14 @@
       <section>
         <h3>Wait, isn't it something like Java?</h3>
         <br>
+        <br>
         <p class="fragment"> Rule #1 </p>
         <img class="fragment" src="images/06-jun/jisnotjs.png" alt="ItsJavaScriptNotJava" height="50%" style="margin-top:30px;" />
       </section>
       <section>
         <h3>I know what it's not now...cool</h3>
+        <br>
+        <br>
         <p>So, what is it?</p>
         <br>
         <p>Mocha &#47; LiveScript &#47; JavaScript</p>
@@ -271,6 +274,8 @@
       </section>
       <section>
         <h1>What is JavaScript?</h1>
+        <br>
+        <br>
         <br>
         <div style="display: inline-flex">
           <div style="flex-direction: column; justify-content: space-between;">
@@ -293,6 +298,8 @@
         <br>
         <div style="display: inline-flex">
           <div style="flex-direction: column; justify-content: space-between;">
+            <br>
+            <br>
             <br>
             <p class="fragment">Demo time!</p>
             <br>
@@ -325,9 +332,10 @@
         <p>HTML is just another kind of document.</p>
       </section>
       <section>
+        <br>
         <h1>Basic Syntax</h1>
         <br>
-        <img src="images/06-jun/syntax.png" alt="">
+        <img src="images/06-jun/basicSyntax.png" alt="" height="50%">
       </section>
       <section>
         <h1>Linting</h1>
@@ -335,8 +343,9 @@
         <ul>
           <li class="fragment">Checks syntax</li>
           <li class="fragment">Prevents errors</li>
-          <!--  OR USE AN IMAGE & TALK ABOUT IT? -->
         </ul>
+        <img class="fragment" src="images/06-jun/linting.png" alt="" height="50%">
+
       </section>
       <section>
         <h2>Triggering JS in Your Code</h2>
@@ -545,8 +554,8 @@
         <h3>functions in the Wild</h3>
         <br>
         <p>The task is specified inside the curly braces:</p>
-        <pre><code class="js">var orderDrink = function(drinkName) {
-  return 'I would like a ' + drinkName + 
+        <pre><code class="js" data-noescape>var orderDrink = function(drinkName) {
+  return 'I would like a ' + drinkName +
     ' please.';
 };</code></pre>
         <br>
@@ -594,9 +603,9 @@
 function setDrink (cocktail) {
   drink = cocktail;
 }
-            
+
 setDrink('martini');
-// undefined is returned but drink variable is now set 
+// undefined is returned but drink variable is now set
 // to 'martini'</code></pre>
       </section>
       <section>
@@ -672,17 +681,17 @@ if (usersName.length > 0) {<span class="fragment">
           <p class="fragment">any other value is always TRUE</p>
       </section>
       <section>
-        <h1>Debugging</h1>
-        <br>
-        <img src="images/06-jun/bug.jpg" alt="Ladybug">
-      </section>
-      <section>
         <h1>Comments: Documenting Your Work</h1>
         <p>Single Line comments</p>
         <code>//this is a one line comment</code>
         <p>Multi line comments</p>
         <code>/* This is a
         <br>multi line comment */</code>
+      </section>
+      <section>
+        <h1>Debugging</h1>
+        <br>
+        <img src="images/06-jun/bug.jpg" alt="Ladybug">
       </section>
       <section>
         <h1>Browser Developer Tools</h1>
@@ -817,7 +826,7 @@ console.log('square feet: ', getSquareFeet(13, 20);</code></pre>
           <pre><code class="hljs js" style="width: 98%;">var fruit = ['Apple','Strawberry','Blackberry',
   'Raspberry','Cherry','Blueberry'];</code></pre>
         </div>
-        <pre><code class="fragment current-visible hljs js" style="width: 103%; margin-top: 25%; margin-left: -3%;">var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 7, 
+        <pre><code class="fragment current-visible hljs js" style="width: 103%; margin-top: 25%; margin-left: -3%;">var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 7,
   'none of the above'];</code></pre>
       </section>
       <section>
@@ -839,7 +848,7 @@ var myFilledArray = ['is','not','empty'];</code></pre>
         <h3>Accessing Array Data</h3>
         <pre><code class="hljs js" style="width: 98%; margin-top: 5%;" data-noescape>var fruit = ['Apple','Strawberry','Blackberry'];
         <span class="fragment">
-// Grab first item and display         
+// Grab first item and display
 var first = fruit[0];
 console.log(first);
 // 'Apple'
@@ -1078,7 +1087,7 @@ drinks.forEach(function(drink) {
   color: white;
 }</code></pre>
         <h6 class="fragment">JavaScript</h6>
-        <pre><code class="fragment js" style="width: 98%;" data-noescape>document.addEventListener("DOMContentLoaded", 
+        <pre><code class="fragment js" style="width: 98%;" data-noescape>document.addEventListener("DOMContentLoaded",
 function (event) { <span class="fragment">
   document.getElementById('my-button').onclick = </span><span class="fragment">
   function() {
