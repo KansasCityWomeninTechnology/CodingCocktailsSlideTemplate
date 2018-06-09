@@ -251,11 +251,6 @@
       </section>
       <!-- part 1-->
       <section>
-        <h3>How JavaScript Charges Up Web Apps</h3>
-        <br>
-        <img src="https://media1.giphy.com/media/vASwXhikF0Dug/giphy.gif" alt="JS Powers Web Sites" width="90%">
-      </section>
-      <section>
         <h3>Wait, isn't it something like Java?</h3>
         <br>
         <br>
@@ -320,6 +315,11 @@
         <h1>Client-side (mostly)</h1>
         <br>
         <img class="fragment" src="images/06-jun/client-server.png" alt="mouse trap objects" width="70%" style="padding:auto;" />
+      </section>
+      <section>
+        <h3>How JavaScript Charges Up Web Apps</h3>
+        <br>
+        <img src="https://media1.giphy.com/media/vASwXhikF0Dug/giphy.gif" alt="JS Powers Web Sites" width="90%">
       </section>
       <section>
         <h3>Manipulating the DOM</h3>
@@ -554,9 +554,9 @@
         <h3>functions in the Wild</h3>
         <br>
         <p>The task is specified inside the curly braces:</p>
-        <pre><code class="js" data-noescape>var orderDrink = function(drinkName) {
+        <pre><code class="js" data-noescape>var orderDrink = function(drinkName) {<span class="fragment">
   return 'I would like a ' + drinkName +
-    ' please.';
+    ' please.';</span>
 };</code></pre>
         <br>
         <p style="font-size: 1.2em;" class="fragment">When you run the code, you decide what the value of the parameter (drinkName) is and insert it, Mad Libs style!</p>
@@ -620,7 +620,7 @@ setDrink('martini');
         <h1>Conditionals</h1>
         <img src="images/06-jun/success.jpg" alt="Conditionals" height="62%" />
         <pre><code class="hljs js">if (at first you dont succeed) {
-  // try, try again!
+   return "try, try again!"
 }</code></pre>
       </section>
       <section>
@@ -694,6 +694,20 @@ if (usersName.length > 0) {<span class="fragment">
         <img src="images/06-jun/bug.jpg" alt="Ladybug">
       </section>
       <section>
+        <h1>Your BFF: Console.log</h1>
+        <br>
+        <p>Great for troubleshooting / debugging</p>
+        <br>
+        <pre><code class="hljs js">var name = 'Ada Lovelace';
+console.log(name);</code></pre>
+        <pre><code class="fragment hljs js">var getSquareFeet = function(height, width) {
+  return height * width;
+};
+console.log(getSquareFeet(10, 15));</code></pre>
+        <pre><code class="fragment hljs js">console.log('name: ', name);
+console.log('square feet: ', getSquareFeet(13, 20);</code></pre>
+      </section>
+      <section>
         <h1>Browser Developer Tools</h1>
         <br>
         <table class="slightlyPaddedTable" style="margin-left: 5%;">
@@ -710,34 +724,9 @@ if (usersName.length > 0) {<span class="fragment">
         <img src="images/06-jun/blankConsoleLog.png" alt="">
       </section>
       <section>
-        <h1>Your BFF: Console.log</h1>
+        <h1>Debugging</h1>
         <br>
-        <p>Great for troubleshooting / debugging</p>
-        <br>
-        <pre><code class="hljs js">var name = 'Ada Lovelace';
-console.log(name);</code></pre>
-        <pre><code class="fragment hljs js">var getSquareFeet = function(height, width) {
-  return height * width;
-};
-console.log(getSquareFeet(10, 15));</code></pre>
-        <pre><code class="fragment hljs js">console.log('name: ', name);
-console.log('square feet: ', getSquareFeet(13, 20);</code></pre>
-      </section>
-      <section>
-        <h1>Debugger</h1>
-        <br>
-        <p>Step through code in dev tools</p>
-        <br>
-        <pre><code class="hljs js">const myFunction = function (parameter) {
-  debugger;
-  counter = counter + 1;
-  if (counter <= 3) {
-    alert(parameter);
-  } else {
-    alert("Too many!");
-  }
-};</code></pre>
-<!-- TODO: Add context here -->
+        <h3>DUN DUN DUNNNNNN... DEMO Again!</h3>
       </section>
       <section>
         <h1>Questions?</h1>
