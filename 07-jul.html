@@ -200,6 +200,12 @@
           <img src="images/07-jul/TimeforReviewSmall.jpg" alt="Introduction" height="75%" width="75%" style="margin-top:.5rem;"/>
         </section>
         <section>
+          <h3>This stuff is hard!</h3>
+          <br>
+          <p class="fragment">Don't be discouraged if you lag behind. You might not finish everything this evening. This is difficult material and will take time
+          to understand. We are here (and on Slack after the session) to help!</p>
+        </section>
+        <section>
           <h3>Variable</h3>
           <img src="images/07-jul/varcontainer.jpeg" alt="container" height="75%" width="75%">
           <p class="fragment">Placeholder to store values / data</p>
@@ -207,18 +213,21 @@
         <section>
           <h3>Variable</h3>
           <br>
+          <code class="fragment">var iAmTheLegacyWayOfDoingThings = "But I still work";</code>
           <br>
-          <code class="fragment">var iAmTheLegacyWayOfDoingThings = "But I still work"</code>
+          <code class="fragment">let youCanChangeMe = "I'm pretty flexible";</code>
           <br>
-          <code class="fragment">let youCanChangeMe = "I'm pretty flexible"</code>
+          <code class="fragment">let iAmANumber = 5;</code>
           <br>
-          <code class="fragment">const I_STAY_THE_SAME = "All the time....mostly"</code>
+          <code class="fragment">let iAmABoolean = true;</code>
+          <br>
+          <code class="fragment">const I_STAY_THE_SAME = "All the time....mostly";</code>
         </section>
         <section>
           <h1>Operators</h1>
           <img src="images/07-jul/mathoperators.png" alt="math_operators" height="25%" width="25%" style="margin-top:.5rem;"/>
-          <code class="fragment">let myAge = 28 + 10 </code>
-          <code class="fragment">let modExample = 15 % 2 = 1</code>
+          <code class="fragment">let myAge = 28 + 10; </code>
+          <code class="fragment">let modExample = 15 % 2 = 1;</code>
           <p class="fragment">Modulus: The 'remainder' in a division problem</p>
           <p class="fragment">15 / 2 = 7 with a remainder of 1 (the modulus)</p>
         </section>
@@ -261,10 +270,92 @@
             <img src="images/07-jul/blankConsoleLog.png" alt="" height="55%" width="55%" style="margin-top:3rem;">
         </section>
         <section>
-            <h1>Your BFF: Console.log</h1>
+            <h1>Your BFFs: Console.log and Debugger</h1>
             <br>
             <p class="fragment">Great for troubleshooting / debugging your code by sticking these in your logic</p>
             <img src="images/07-jul/whileLoop.png" alt="console example">
+            <p class="fragment">Use the debugger keyword to halt your code in a specific spot.</p>
+        </section>
+        <!-- Arrays -->
+        <section>
+          <h1>Arrays</h1>
+          <img src="images/06-jun/list.jpg" alt="List" class="fragment current-visible" style="margin-top:15%;">
+          <div class="fragment current-visible">
+            <img src="images/06-jun/fruit_array.png" alt="Array of Fruit" style="margin-top: 15%;" />
+            <pre><code class="hljs js" style="width: 98%;">var fruit = ['Apple','Strawberry','Blackberry',
+    'Raspberry','Cherry','Blueberry'];</code></pre>
+          </div>
+          <pre><code class="fragment current-visible hljs js" style="width: 103%; margin-top: 25%; margin-left: -3%;">var drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 7,
+    'none of the above'];</code></pre>
+        </section>
+        <section>
+          <h3>Creating Arrays</h3>
+          <pre><code class="fragment hljs js" style="width: 98%; margin-top: 15%;">var myNewArray = new Array();
+
+var myEmptyArray = [];
+
+var myFilledArray = ['is','not','empty'];</code></pre>
+        </section>
+        <section>
+          <h3>Arrays are tricksy</h3>
+          <br>
+          <p>Zero-based Index</p>
+          <img src="images/06-jun/array.gif" alt="array image" height="30%" style="margin-top: 10%;" />
+        </section>
+        <section>
+          <h3>Accessing Array Data</h3>
+          <pre><code class="hljs js" style="width: 98%; margin-top: 5%;" data-noescape>var fruit = ['Apple','Strawberry','Blackberry'];
+          <span class="fragment">
+  // Grab first item and display
+  var first = fruit[0];
+  console.log(first);
+  // 'Apple'
+          </span><span class="fragment">
+  // Check array length and display
+  var length = fruit.length;
+  console.log(length);
+  // 3
+          </span><span class="fragment">
+  // Grab last item and display
+  var last = fruit[fruit.length-1];
+  console.log(last);
+  // 'Blackberry'</span></code></pre>
+        </section>
+        <section>
+          <h3>Arrays: stuff you can do</h3>
+          <p>Add item to beginning of array</p>
+          <br>
+          <pre><code class="hljs js" data-noescape>// Create the Array
+  var fruit = ['Apple','Pear','Kiwi'];
+            </span><span class="fragment">
+  // View the contents of the array
+  // stored in the fruit variable
+  console.log(fruit);
+  // ['Banana','Apple','Pear','Kiwi']</span></code></pre>
+        </section>
+        <section>
+          <h1>Scope</h1>
+          <br>
+          <p>Imagine you are standing on a mountain...</p>
+          <img src="images/07-jul/scopeMountain.png" alt="">
+          <br>
+        </section>
+        <section>
+          <h1>Window</h1>
+          <br>
+          <br>
+          <p class="fragment">Is the top of the mountain</p>
+          <br>
+          <br>
+          <ul>
+            <li class="fragment">Holds the
+                        <font style="color:#c7bc75">D</font>ocument
+                        <font style="color:#c7bc75">O</font>bject
+                        <font style="color:#c7bc75">M</font>odel </h5></li>
+            <li class="fragment">Global Object that has access to all other globals</li>
+
+          </ul>
+          <br>
         </section>
         <section>
           <h1>DOM</h1>
@@ -287,7 +378,7 @@
               <code class="fragment">document.getElementById('button');</code>
               <br>
               <code class="fragment">let aNewPieceOfDOM = document.createDocumentFragment();</code>
-              <code class="fragment">var newDiv = document.createElement("div");</code>
+              <code class="fragment">let newDiv = document.createElement("div");</code>
               <code class="fragment">aNewPieceOfDOM.append(newDiv);</code>
             </p>
         </section>
@@ -334,14 +425,39 @@
             </div>
         </section>
 <!-- part 2 - Registering Event Handlers -->
-
+        <section>
+          <h1>Events</h1>
+          <br>
+          <br>
+            <p class="fragment">Thing that happen on the page</p>
+            <p class="fragment">Triggered autonomously (in code)</p>
+            <p class="fragment">Triggered by the user</p>
+        </section>
+        <section>
+          <h1>Parts of Events</h1>
+          <br>
+          <br>
+            <h3 class="fragment">Event Listener</h3>
+            <h3 class="fragment">Event Handler</h3>
+            <img class="fragment" src="images/07-jul/clickEventExample.png" alt="">
+        </section>
+        <section>
+          <h1>Types of Events</h1>
+          <br>
+          <br>
+            <ul>
+              <li>click</li>
+              <li>hover</li>
+              <li>scroll</li>
+              <li>resize</li>
+            </ul>
+        </section>
         <section>
           <br><br>
           <h1>What we'll do:</h1>
           <br><br>
           <p>Add an event listener</p>
           <br><br>
-          <p>Build on to the DOM </p>
         </section>
 <!-- break slide -->
         <section>
@@ -397,19 +513,18 @@
         <section>
           <h1>Objects: how to make one</h1>
           <pre><code class="fragment">var AdaLovelace = {
-        achillesHeel: "Compulsive Gambling",
-        firstName: "Ada",
-        lastName: "Lovelace",
-        children: ["Byron","Ralph","Anne"],
-        dateBorn: "12/10/1815",
-        dateDied: "11/27/1852",
-        father: "Lord Byron",
+        "achillesHeel": "Compulsive Gambling",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "children": ["Byron","Ralph","Anne"],
+        "dateBorn": "12/10/1815",
+        "dateDied": "11/27/1852",
+        "father": "Lord Byron",
         "Likes Programming": true,
-        fullName: function() {
-        return this.firstName+" "+this.lastName;
-        },
-        mentor: "Charles Babbage"
-        };</code></pre>
+        "fullName": function() {
+        return this.firstName + " " + this.lastName;
+        }
+      };</code></pre>
         </section>
         <section>
           <h1>Objects: how to get data</h1>
@@ -427,6 +542,7 @@
         </section>
         <section>
           <h1>Objects: how to get data</h1>
+          <br>
           <ul style="list-style-type: square;">
           <li class="fragment">Property name has to be alphanumeric (but can contain underscores)
           <li class="fragment">Can't start with a number.
@@ -437,6 +553,7 @@
         </section>
         <section>
           <h1>Objects: how to get data</h1>
+          <br>
           <ul style="list-style-type: square">
             <li class="fragment">Bracket Notation!</li>
             <li class="fragment">Can be used for property names that don't work with dot notation.</li>
@@ -449,6 +566,7 @@
         </section>
         <section>
           <h1>Objects: how to get data</h1>
+          <br>
           <ul style="list-style-type: square">
             <li class="fragment">When you are doing something dynamic like</li>
             <ul style="list-style-type: square">
@@ -471,6 +589,21 @@
 
         /* ... all the stuff we already have in there
         AND {"favorite_animal": 'giraffe'} */</code></pre>
+        </section>
+        <section>
+          <h1>Keyword This</h1>
+          <br>
+          <p class="fragment">A reference value that changes based on context and cannot be assigned to different value</p>
+          <br>
+          <p class="fragment">Global level: window</p>
+          <br>
+          <p class="fragment">Inside an object: the object</p>
+          <br>
+          <p class="fragment">Events: Event Object</p>
+          <br>
+          <p class="fragment">Arrow function: window</p>
+          <br>
+          <p class="fragment">This can also be used to help debug! Try entering this in the console.</p>
         </section>
         <section>
           <br><br>
@@ -516,7 +649,6 @@
             </div>
           </div>
         </section>
-        <!--  TODO: THIS -->
 <!-- part 4 - Fetching Data -->
         <section>
           <h1>Fetching with APIs</h1>
@@ -541,27 +673,13 @@
         </section>
          <section>
           <h1>API</h1>
-          <ul style="list-style-type: square">
-            <li class="fragment">Application Programming Interface</li>
-            <li class="fragment">it's the middle-man that allows 2 applications to talk to each other.</li>
-              <li class="fragment">One application makes a request.</li>
-              <li class="fragment">API takes request to other application &amp; gets response.</li>
-              <li class="fragment">API brings response back to original application.</li>
-            </ul>
-          </ul>
-        </section>
-        <section>
-          <h1>API</h1>
-            <ul style="list-style-type: square;">
-              <li class="fragment">Most APIs use JSON (JavaScript Object Notation)</li>
-              <li class="fragment">Not just JavaScript APIs!
-              <li class="fragment">'key':'value' pairs -- "key" may also be referred to as 'name' or 'property'</li>
-            </ul>
-        </section>
-        <section>
-          <h1>API</h1>
-          <p> Weather REST API</p>
-          <img src="images/07-jul/RestAPI.png" alt="REST API example" style="float:center; background-color: white; width:85%; height: 85%"/>
+          <h5>
+          <font style="color:#c7bc75">A</font>pplication
+          <font style="color:#c7bc75">P</font>rogramming
+          <font style="color:#c7bc75">I</font>nterface </h5>
+          <br>
+          <br>
+          <iframe src="https://giphy.com/embed/csTg49UY90f0Q" width="860" height="440" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/csTg49UY90f0Q"></a></p>
         </section>
         <section>
           <h1>API: famous examples</h1>
@@ -603,7 +721,7 @@
         <section>
           <h1>API: fetch &amp; format with JSON</h1>
           <ul style="list-style-type: square;">
-            <li class="fragment">There are different formatting methods, but most of the time you are going to want the format in JSON</li>
+            <li class="fragment">There are different formatting methods - text, JSON, & BLOB</li>
             <li class="fragment">APIs may have various options for you to select from. </li>
             <li class="fragment">For example:`<a href="http://ron-swanson-quotes.herokuapp.com/v2/quotes">http://ron-swanson-quotes.herokuapp.com/v2/quotes</a>` -> returns 1 quote</li>
             <li class="fragment">`<a href="http://ron-swanson-quotes.herokuapp.com/v2/quotes/5">http://ron-swanson-quotes.herokuapp.com/v2/quotes/5</a>` -> returns 5 quotes</li>
