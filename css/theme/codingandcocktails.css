@@ -431,7 +431,7 @@ SNIPPETS
 .blue{color:#01A9B4}
 
 .green{
-  background-color: green; 
+  background-color: green;
   color: white;
 }
 
@@ -470,10 +470,11 @@ span.teammembers {
 }
 
 .teammembers:nth-child(odd) {
-  margin-top: -6rem;
+  margin-top: -10rem;
 }
 .teammembers:nth-child(even) {
-  margin-top: 5rem;
+  margin-top: 10rem;
+  padding:8px;
 }
 
 /*********************************************
