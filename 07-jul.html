@@ -173,11 +173,16 @@
           <a href="https://kcwit.slack.com" target="_blank" class="fragment">
             <img src="images/slack-logo-white.png" alt="Slack" width="60%"/>
           </a>
-          <div class="row-line-slack">
-            <span class="row-line-slack"><img src="images/04-apr/slack-1.png" alt="#djangogirlskc - Django Girls Omaha" class="fragment" /></span>
-            <span class="row-line-slack"><img src="images/04-apr/slack-2.png" alt="#events - Black Panther Outing" class="fragment" /></span>
-            <span class="row-line-slack"><img src="images/04-apr/slack-3.jpg" alt="#diy - Mopaca 2018" class="fragment" /></span>
-            <span class="row-line-slack"><img src="images/04-apr/slack-4.gif" alt="#ladybosses - Little Girl Makes Box Jump" class="fragment" style="height: 300px; width: 300px"/></span>
+          <div class="row-line-slack fragment">
+            <span class="row-line-slack"><img src="images/07-jul/announcements.png" alt="#announcements - LC101KC" class="" />
+              <p class="slack-label ">#announcements</p>
+            </span>
+            <span class="row-line-slack"><img src="images/07-jul/events.png" alt="#events - Grants & Scholarships" class="" />
+              <p class="slack-label ">#events</p>
+            </span>
+            <span class="row-line-slack"><img src="images/07-jul/tabletop.png" alt="#tabletop-games - RPG DnD" class="" />
+              <p class="slack-label ">#tabletop-games</p>
+            </span>
           </div>
           <div>
         </section>
@@ -272,13 +277,52 @@
           <br>
           <br>
           <p class="fragment">Perform a task</p>
-          <img class="fragment" src="images/07-jul/function.png" alt="" height= "50%" width = "50%">
+          <img class="fragment" src="images/07-jul/function.png" alt="Example of function">
         </section>
         <section>
             <h3>Conditional Statements</h3>
             <br>
             <p>Help you complete tasks inside or outside functions</p>
             <img src="images/07-jul/conditionalstatement.png" alt="conditional statement example">
+        </section>
+        <section>
+          <h1>Loops</h1>
+          <p>What is a loop?</p>
+          <p class="fragment">Repeat some code as long as some condition is true</p>
+          <br>
+          <p class="fragment">Types of loops:</p>
+          <ul class="fragment" style="list-style-type: disc;">
+            <li>for</li>
+            <li>for...in</li>
+            <li>for...of</li>
+            <li>while</li>
+            <li>do...while</li>
+          </ul>
+        </section>
+        <section>
+          <h1>for Loop</h1>
+          <pre><code class="hljs js" style="width: 98%;" data-noescape>for (initialization; <span class="fragment">condition;</span> <span class="fragment">increment</span>) {<span class="fragment">
+    // code to execute while condition is true</span>
+  }</code></pre>
+          <p class="fragment">Example</p>
+          <pre><code class="fragment hljs js" style="width: 98%;" data-noescape>var numberOfCustomers = 5;
+            <span class="fragment">
+  for (<span class="fragment">var i = 0;</span> <span class="fragment">i < numberOfCustomers;</span> <span class="fragment">i++</span>) {
+    <span class="fragment">notifyDrinkIsReady(i);</span>
+  }</span></code></pre>
+        </section>
+        <section>
+          <h1>for Loop</h1>
+          <br>
+          <pre><code class="hljs js" style="width: 98%;">var numberOfCustomers = 5;
+  for (var i = 0; i < numberOfCustomers; i++) {
+    notifyDrinkIsReady(i);
+  }</code></pre>
+          <p>Which of these is an 'infinite loop'?
+            <pre><code class="hljs js" style="width: 98%;">var numberOfCustomers = 5;
+  for (var i = 0; i < numberOfCustomers;) {
+    notifyDrinkIsReady(i);
+  }</code></pre>
         </section>
         <section>
             <h3>Your BFFs: Console.log and Debugger</h3>
@@ -361,6 +405,22 @@ var myFilledArray = ['is','not','empty'];</code></pre>
   // stored in the fruit variable
   console.log(fruit);
   // ['Banana','Apple','Pear','Kiwi']</span></code></pre>
+        </section>
+        <section>
+          <h1>foreach</h1>
+          <br>
+          <p>An array method that executes a given function once for each array element</p>
+          <br>
+          <pre><code class="js fragment" data-noescape>// Create array
+  var drinks = ['martini', 'soda', 'coffee'];
+  <span class="fragment">
+  // loop using forEach
+  drinks.forEach(function(drink) {
+    console.log(drink);
+  });
+  // martini
+  // soda
+  // coffee</span></code></pre>
         </section>
         <section>
           <h1>Scope</h1>
@@ -463,9 +523,10 @@ var myFilledArray = ['is','not','empty'];</code></pre>
           <h1>Parts of Events</h1>
           <br>
           <br>
-            <h3 class="fragment">Event Listener</h3>
-            <h3 class="fragment">Event Handler</h3>
-            <img class="fragment" src="images/07-jul/clickEventExample.png" alt="">
+          <h3 class="fragment">Event Target</h3>
+          <h3 class="fragment">Event Listener</h3>
+          <h3 class="fragment">Event Handler</h3>
+          <img class="fragment" src="images/07-jul/clickEventExample.png" alt="">
         </section>
         <section>
           <h1>Types of Events</h1>
@@ -587,7 +648,7 @@ var myFilledArray = ['is','not','empty'];</code></pre>
           <h1>Objects: how to get data</h1>
           <br>
           <ul style="list-style-type: square">
-            <li class="fragment">Bracket Notation</li>
+            <p class="fragment">Bracket Notation</p>
             <li class="fragment">Can be used for property names that don't work with dot notation</li>
             <li class="fragment">You can get data from the Object using the key</li>
             <pre><code class="fragment">console.log(AdaLovelace['Likes Programming'])
@@ -619,11 +680,28 @@ console.log(AdaLovelace.favorite_animal);
           <br>
           <p class="fragment">Global level: window</p>
           <br>
-          <p class="fragment">Inside an object: the object</p>
-          <br>
           <p class="fragment">Events: Event Object</p>
           <br>
           <p class="fragment">Arrow function: window</p>
+          <br>
+          <p class="fragment">Inside an object: the object</p>
+        </section>
+        <section>
+          <h1>Objects & this</h1>
+          <br>
+          <pre><code class="fragment">var AdaLovelace = {
+        "achillesHeel": "Compulsive Gambling",
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "children": ["Byron","Ralph","Anne"],
+        "dateBorn": "12/10/1815",
+        "dateDied": "11/27/1852",
+        "father": "Lord Byron",
+        "Likes Programming": true,
+        "fullName": function() {
+        return this.firstName + " " + this.lastName;
+        }
+      };</code></pre>
         </section>
         <section>
           <br><br>
@@ -679,11 +757,11 @@ console.log(AdaLovelace.favorite_animal);
           <!-- Make this less wordy... -->
           <h3>Static vs Dynamic Applications</h3>
           <ul style="list-style-type: square">
-            <li class="fragment" style="color:#c7bc75">Static Application</li>
+            <p class="fragment" style="color:#c7bc75">Static Application</p>
             <ul style="list-style-type: square;">
               <li class="fragment">written in HTML (maybe CSS)</li>
             </ul>
-            <li class="fragment" style="color:#c7bc75">Dynamic Application</li>
+            <p class="fragment" style="color:#c7bc75">Dynamic Application</p>
             <ul style="list-style-type: square;">
               <li class="fragment">written in some programming language (JavaScript, PHP, Java ...)</li>
               <li class="fragment">content is pulled from a database/internet often triggered by user interaction</li>
@@ -703,7 +781,6 @@ console.log(AdaLovelace.favorite_animal);
         </section>
         <section>
           <p><a href="https://github.com/toddmotto/public-apis">Some Public APIs</a></p>
-            <!-- TODO This kinda looks bad still.... Fix it later...-->
             <div class="row-line-tools">
               <img class="row-line-tools" src="images/07-jul/googleMap.png" alt="Google Maps logo"/>
               <img class="row-line-tools" src="images/07-jul/twitter.png" alt="Twitter logo"/>
@@ -854,9 +931,10 @@ console.log(AdaLovelace.favorite_animal);
         <section>
           <h1>Templates: template literals</h1>
             <pre><code class="fragment">var caliberOfDay = 'sunshiney';
-        var myMultiLineString = `
-        Hello!
-        Hope you have a ${caliberOfDay} day!`;
+
+var myMultiLineString = `
+Hello!
+Hope you have a ${caliberOfDay} day!`;
         </code></pre>
             <p class="fragment">VS</p>
             <pre><code class="fragment">var myMultiLineString = 'Hello!' + \n
@@ -873,18 +951,21 @@ console.log(AdaLovelace.favorite_animal);
         </code></pre>
         </section>
         <section>
-            <h1>Templates: populating HTML with variables</h1>
+            <h3>Templates: populating HTML with variables</h3>
             <ul style="list-style-type: square;">
                 <li class="fragment">Our HTML:
                     <pre><code class="fragment"><div id="intro"></div></code></pre> </li>
                 <li class="fragment"> Our JavaScript
                     <pre><code class="fragment">var user = {firstName: 'Alice', city: 'Wonderland'};
-        var myMarkup = `<div class="character">
-        <p>Hi, I'm ${user.firstName}.</p>
-        <p>I live in ${user.city}.</p>
-        </div>`;
-        var intro = document.getElementById('intro');
-        intro.innerHTML = myMarkup;</code></pre></li>
+
+var myMarkup = `<div class="character">
+<p>Hi, I'm ${user.firstName}.</p>
+<p>I live in ${user.city}.</p>
+</div>`;
+
+var intro = document.getElementById('intro');
+
+intro.innerHTML = myMarkup;</code></pre></li>
             </ul>
         </section>
         <section>
@@ -892,11 +973,11 @@ console.log(AdaLovelace.favorite_animal);
             <ul style="list-style-type: square;">
                 <li class="fragment"> Results in HTML DOM
                     <pre><code class="fragment"><div id="intro">
-        <div class="character">
-        <p>Hi, I'm Alice.</p>
-        <p>I live in Wonderland.</p>
-        </div>
-        </div></code></pre></li>
+    <div class="character">
+      <p>Hi, I'm Alice.</p>
+      <p>I live in Wonderland.</p>
+    </div>
+</div></code></pre></li>
                 <li class="fragment"><a href="https://codepen.io/CodingCocktailsKC/pen/ZyBRbw" target="_blank">Codepen of fetch w/ API &amp; looping through template</a></li>
             </ul>
 
@@ -960,7 +1041,7 @@ console.log(AdaLovelace.favorite_animal);
               <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a>
             </li>
             <li class="fragment">Finish
-              <a href="http://bit.ly/CnCJunWork" target="_blank">tonight's worksheet</a>
+              <a href="http://bit.ly/CnCJulWork" target="_blank">tonight's worksheet</a>
             </li>
             <li class="fragment">Find a
               <a href="http://lmgtfy.com/?q=JavaScript+tutorial" target="_blank"> tutorial on JavaScript</a>
