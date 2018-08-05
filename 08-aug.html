@@ -221,9 +221,10 @@
             </div>
             <br><br><br><br><br><br><br><br>
             <code class="fragment" style="width: 120%; position: fixed; left: -100px;">
-              <div data-fragment-index="1">&lt;script src="assets/lib/jquery-3.2.1.min.js"&gt;&lt;/script&gt;</div>
-              <div data-fragment-index="2">&lt;script src="assets/lib/jquery.bxslider/jquery.bxslider.min.js"&gt;&lt;/script&gt;</div>
-              <div data-fragment-index="3">&lt;script src="assets/scripts/my-scripts.js"&gt;&lt;/script&gt;</div>
+
+              <div data-fragment-index="1">&lt;script src="moment.js"&gt;&lt;/script&gt;</div>
+              <div data-fragment-index="2">&lt;script src="moment-timezone-with-data.js"&gt;&lt;/script&gt;</div>
+              <div data-fragment-index="3">&lt;script src="assets/scripts/my-travel-journal.js"&gt;&lt;/script&gt;</div>
             </code>
             <br>
         </section>
@@ -260,7 +261,7 @@
               <ul>
                 <p class="fragment">Project Tools (Frameworks/Libraries)</p>
                   <ol>
-                    <li class="fragment" style="position: relative; left:150px;"><a href="https://www.npmjs.com/package/jquery" target="_blank">jQuery</a></li>
+                    <li class="fragment" style="position: relative; left:150px;"><a href="https://www.npmjs.com/package/lodash" target="_blank">lodash</a></li>
                     <li class="fragment" style="position: relative; left:150px;"><a href="https://www.npmjs.com/package/moment" target="_blank">Moment</a></li>
                   </ol>
                 </li><br>
@@ -401,16 +402,19 @@
               <th></th>
               <th>2016</th>
               <th>2017</th>
+              <th>2018</th>
             </tr>
             <tr>
               <td>Packages Available</td>
               <td>280,000+</td>
               <td>475,000+</td>
+              <td>700,000+</td>
             </tr>
             <tr class="fragment">
               <td>Developers Using Monthly</td>
               <td>4 million+</td>
               <td>7 million+</td>
+              <td>Oodles</td>
             </tr>
             <tr class="fragment">
               <td>Packages Downloaded Weekly</td>
@@ -662,7 +666,8 @@
         </section>
         <section>
           <h1>Updating Packages</h1>
-          <table class="slightlyPaddedTable" style="width: 125%; margin-left: -120px;">
+        </br>
+          <table class="slightlyPaddedTable" style="width: 90%;">
             <tr class="fragment">
               <td style="text-align: left;  vertical-align: middle;">Show out-of-date packages</td>
               <td style="text-align: left;"><pre><code style="font-size: 2rem; margin: 10px 0; padding-right: 30px;">npm outdated</code></pre></td>
@@ -725,15 +730,14 @@
         <section>
           <h1>Using Packages</h1>
           <h2>Front-end JavaScript files (manual)</h2>
-          <pre class="fragment" style="width: 132%; margin-left: -100px;"><code style="font-size: 2rem;">// index.html
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="main.js"></script></code></pre>
-          <code class="fragment" style="font-size: 2rem;">//main.js</br>
-<span class="fragment">$(document).ready(function(){</span></br>
-  <span class="fragment" style="padding-left: 40px;">$('.button').click(function() {</span></br>
-    <span class="fragment" style="padding-left: 80px;">alert('Cheers!');</span></br>
-  <span class="fragment" style="padding-left: 40px;">});</br>
-});</span></code>
+          <pre class="fragment" ><code style="font-size: 2rem;">// index.html
+<script src="node_modules/moment/moment.js"></script>
+<script src="assets/js/main.js"></script></code></pre>
+<code class="fragment">//main.js</br>
+<span class="fragment">let todaysDate = moment().format('MMMM Do YYYY');</span></br></br>
+<span class="fragment">alert(todaysDate);</span></br></br>
+<span class="fragment">// August 11th, 2018</span></br>
+</code>
         </section>
         <section>
           <h1>Using Packages</h1>
@@ -771,13 +775,12 @@
         <section>
           <h1>Browserify: Require Packages</h1>
           <pre class="fragment" style="margin-top: 10%; margin-left: 5%;"><code style="font-size: 2.2rem; padding-right: 8%;">//main.js
-var $ = require('jquery');
+var moment = require('moment');
 
-$(document).ready(function(){
-  $('.button').click(function() {
-    alert('cheers!');
-  });
-});
+let todaysDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+alert(todaysDate);
+// August 11th, 2018
 </code></pre>
         </section>
         <section>
