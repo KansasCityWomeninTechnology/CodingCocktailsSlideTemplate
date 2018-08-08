@@ -261,7 +261,7 @@
               <ul>
                 <p class="fragment">Project Tools (Frameworks/Libraries)</p>
                   <ol>
-                    <li class="fragment" style="position: relative; left:150px;"><a href="https://www.npmjs.com/package/lodash" target="_blank">lodash</a></li>
+                    <li class="fragment" style="position: relative; left:150px;"><a href="https://www.npmjs.com/package/chartjs" target="_blank">Chart.js</a></li>
                     <li class="fragment" style="position: relative; left:150px;"><a href="https://www.npmjs.com/package/moment" target="_blank">Moment</a></li>
                   </ol>
                 </li><br>
@@ -632,11 +632,13 @@
           <h1>Versioning: Lock Files</h1>
           <p>package-lock.json</p>
           </br>
-          <p class="fragment">Exact package versions locked down</p>
+          <p class="fragment">Exact package versions locked down?</p>
+          <p class="fragment">No! The package-lock file will be synced up with changes made to package.json unless...</p>
           </br>
           <p class="fragment"><a href="https://docs.npmjs.com/files/package-locks">npm package lock documentation</a></p>
           </br>
           <pre class="fragment"><code style="font-size: 2.2rem; margin: 0 auto;">npm install moment --no-shrinkwrap</code></pre>
+          <pre class="fragment"><code style="font-size: 2.2rem; margin: 0 auto;">npm install moment --no-save</code></pre>
           </br>
           <p class="fragment" style="color: red;">Be careful with manual updates to package.json!</p>
         </section>
