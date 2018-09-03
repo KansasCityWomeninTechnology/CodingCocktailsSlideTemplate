@@ -477,6 +477,25 @@ span.teammembers {
   padding:8px;
 }
 
+.new-team {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 200px;
+  margin: 5px 30px !important;
+}
+
+.team-member > p {
+  font-size: 0.6em;
+  margin-left: 15px;
+  text-align: center;
+}
+
 /*********************************************
 * CSS SLIDE EXAMPLES
 **********************************************/
