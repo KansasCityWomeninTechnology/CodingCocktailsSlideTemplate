@@ -242,10 +242,8 @@
                 <font style="color:#c7bc75">P</font>rogramming
                 <font style="color:#c7bc75">I</font>nterface
               </p>
-              <br>
               <p class="fragment">A service to go between two different programs</p><br>
-              <p class="fragment">aka Middleware*</p><br>
-              <p class="fragment">Can directly interact with storage (a database)</p><br>
+              <p class="fragment">Can directly interact with the database</p><br>
               <p class="fragment">Can be defined in many ways</p>
               <p class="fragment">
                 <font style="color:#c7bc75">H</font>yper
@@ -262,13 +260,13 @@
           </section>
           <section>
             <h1>SOAP</h1>
-            <div data-fragment-index="0" style="position: fixed; left: -200px; top: 110px;">
+            <div data-fragment-index="0" style="position: fixed; left: -500px; top: 110px;">
               <img src="images/09-sep/envelopes.jpeg" height="75%" width="75%"/>
             </div>
             <br>
-            <div data-fragment-index="0" style="position: fixed; left: 300px; top: 140px; width: 900px;">
+            <div data-fragment-index="0" style="position: fixed; left: 50px; top: 140px; width: 900px;">
               <p style="text-align: left;">
-                <ol style="text-align: left; padding-left: 60px; list-style: none;">
+                <ol style="text-align: left; padding-left: 10px; list-style: none;">
                   <li class="fragment">
                     <font style="color:#c7bc75">S</font>imple
                     <font style="color:#c7bc75">O</font>bject
@@ -288,11 +286,11 @@
           </section>
           <section>
             <h1>REST</h1>
-            <div data-fragment-index="0" style="position: fixed; left: -310px; top: 110px;">
+            <div data-fragment-index="0" style="position: fixed; left: -570px; top: 110px;">
               <img src="images/09-sep/postcards.jpeg" height="62%" width="62%"/>
             </div>
             <br>
-            <div data-fragment-index="0" style="position: fixed; left: 320px; top: 140px; width: 900px;">
+            <div data-fragment-index="0" style="position: fixed; left: 50px; top: 140px; width: 900px;">
               <p style="text-align: left;">
                 <ol style="text-align: left; padding-left: 60px; list-style: none;">
                   <li class="fragment">
@@ -302,7 +300,7 @@
                   </li><br>
                   <li class="fragment">A newer, flexible architectural <i>style</i></li><br>
                   <li class="fragment">More than 70% of <i>public</i> APIs</li><br>
-                  <li class="fragment">Supports many formats (XML, JSON)</li><br>
+                  <li class="fragment">Supports many formats</li><br>
                   <li class="fragment">GET, POST, PUT, DELETE</li><br>
                 </ol>
               </p>
@@ -388,6 +386,10 @@
                 &nbsp;&nbsp;oliveCount: 2<br>
                 }
               </code></p>
+          </section>
+          <section>
+              <h1>Wait, what?  (PUT vs PATCH)</h1>
+              <br>
               <p class="fragment" style="text-align: left; padding-left: 30px;">PATCH
               <code style="font-size: 50%;">PATCH http://api.example.com/v1/cocktails/martini/99<br><br>
                 {<br>
@@ -419,6 +421,13 @@
                     <td style="text-align: left; background-color: red;">401</td>
                     <td style="text-align: left; background-color: red;">Unauthorized</td>
                   </tr>
+                </table>
+              </div>
+          </section>
+          <section>
+              <h1>Response: Status Codes</h1>
+              <div>
+                <table class="slightlyPaddedTable">
                   <tr class="fragment">
                     <td style="text-align: left; background-color: red;">403</td>
                     <td style="text-align: left; background-color: red;">Forbidden</td>
@@ -437,10 +446,6 @@
                   </tr>
                 </table>
               </div>
-              <div class="fragment" style="position: fixed; right: -240px; top: 140px;">
-                <img src="images/09-sep/cats.png" height="62%" width="62%"/>
-                <p><a href="https://http.cat/" target="_blank">https://http.cat</a></p><br>
-              </div>
           </section>
           <section>
               <h1>Paths, Routes &amp; Endpoints</h1>
@@ -456,7 +461,7 @@
                 <li class="fragment">- after a noun, separated by /</li>
                 <li class="fragment">- change the route</li>
               </ol>
-              </p><br>
+              </p>
               <p class="fragment" style="text-align: left; padding-left: 30px;">Query parameters:
               <ol style="text-align: left; padding-left: 60px; list-style: none;">
                 <li class="fragment">- start with ?, each separated by &amp;</li>
@@ -498,8 +503,8 @@
             </section>
           <section>
               <h2>Authentication &amp; Authorization</h2><br>
-              <p class="fragment" style="text-align: left; padding-left: 30px;">authentication proves <i>who you are</i></p><br>
-              <ol style="text-align: left; padding-left: 60px; list-style: none;">
+              <p class="fragment" style="text-align: left; padding-left: 30px;">Authentication proves <i>who you are</i></p><br>
+              <ol style="text-align: left; list-style: none;">
                 <li class="fragment">- HTTP Basic Authentication</li>
                 <li class="fragment">- Cookies</li>
                 <li class="fragment">- Tokens / JWT (<font style="color:#c7bc75">J</font>SON <font style="color:#c7bc75">W</font>eb <font style="color:#c7bc75">T</font>oken)</li>
@@ -508,22 +513,31 @@
                 <li class="fragment">- OAuth</li>
               </ol>
               <br>
-              <p class="fragment" style="text-align: left; padding-left: 30px;">authorization determines<i>what you can do</i></p><br>
+          </section>
+          <section>
+              <h2>Authentication &amp; Authorization</h2><br>
+              <br>
+              <p class="fragment">Authorization determines</p>
+              <p class="fragment"><i>what you can do</i></p><br>
           </section>
           <section>
               <h1><font style="color:#c7bc75">C</font>ross-<font style="color:#c7bc75">O</font>rigin <font style="color:#c7bc75">R</font>esource <font style="color:#c7bc75">S</font>haring</h1>
-              <p class="fragment" style="text-align: left; padding-left: 30px;">A policy that ensures content is loaded from the same origin <font class="fragment">(protocol, host, port)</font></p>
-              <img class="fragment" src="images/09-sep/origins.png" height="85%" width="85%" style="margin-top:10px;"/>
-              <code class="fragment" style="font-size: 50%; background: lightgray; border: 0px; box-shadow: none; margin-top:0px; margin-left: 30px; color: darkred;">No 'Access-Control-Allow-Origin' header is<br>present on the requested resource.</code>
-              <p class="fragment" style="text-align: left; padding-left: 30px;">Control CORS strictness on the server</p><br>
+              <p class="fragment" style="text-align: left; padding-left: 30px;">A policy that ensures content is loaded from the same origin
+                <font class="fragment">(protocol, host, port)</font></p>
+              <img class="fragment" src="images/09-sep/origins.png"/>
+          </section>
+          <section>
+              <h1><font style="color:#c7bc75">C</font>ross-<font style="color:#c7bc75">O</font>rigin <font style="color:#c7bc75">R</font>esource <font style="color:#c7bc75">S</font>haring</h1>
+              <br><code class="fragment" style="font-size: 50%; background: lightgray; border: 0px; box-shadow: none; margin-top:0px; margin-left: 30px; color: darkred;">No 'Access-Control-Allow-Origin' header is<br>present on the requested resource.</code>
+              <br><p class="fragment" style="text-align: left; padding-left: 30px;">Control CORS strictness on the server</p><br>
           </section>
           <section>
               <h1>Documentation</h1>
               <br>
-              <p class="fragment">Important, so you know what's available</p><br>
+              <p class="fragment">Important, so you know what's available</p>
               <p class="fragment">Tools for documentation:<br><a href="https://apiblueprint.org/" target="_blank">API Blueprint</a>, <a href="https://swagger.io/" target="_blank">Swagger</a>, <a href="https://apiary.io/" target="_blank">Apiary</a></p><br>
               <p class="fragment">Examples: <a href="https://developers.giphy.com/docs/" target="_blank">Giphy</a>, <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a>, <a href="https://dev.twitter.com/rest/public" target="_blank">Twitter</a></p><br>
-              <p class="fragment"><a href="https://cocktail-trivia-api.herokuapp.com/" target="_blank">Interactive API docs for tonight</a></p><br>
+              <p class="fragment"><a href="https://cocktail-trivia-api.herokuapp.com/" target="_blank">Interactive API docs for tonight</a></p>
               <p class="fragment">A "pure" REST API would<br>provide its endpoints at the root</p><br>
           </section>
           <section>
@@ -536,13 +550,17 @@
             <h1>Express</h1>
             <p class="fragment" style="text-align: left;">Node.js framework for quickly creating an API</p><br>
             <p class="fragment" style="text-align: left;">.use for middleware when path is matched</p>
-            <p class="fragment" style="text-align: left;">.[verb] defines the functionality</p>
             <code class="fragment">
               app.use('/admin*', function (req, res, next) {<br>
               &nbsp;&nbsp;if (!userIsAdmin) { res.sendStatus(403); }<br>
               &nbsp;&nbsp;else { next(); }<br>
               });<br>
             </code>
+          </section>
+          <section>
+            <h1>Express</h1>
+            <p class="fragment" style="text-align: left;">Node.js framework for quickly creating an API</p><br>
+            <p class="fragment" style="text-align: left;">.[verb] defines the functionality</p>
             <code class="fragment">
               apiRouter.get('/user/:id', function (req, res, next) {<br>
               &nbsp;&nbsp;var user = { id: '123', firstName: 'Bob' };
@@ -611,7 +629,7 @@
             <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Node+Server-side+APIs+tutorial" target="_blank">online tutorial on Server-side APIs</a></li>
             <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
           </ol>
-          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 100px; right: 0px;" height="300vh" />
+          <img src="images/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 100px; right: 0px;" height="250vh" />
         </section>
         <section>
           <h1>Keep up with us</h1>
