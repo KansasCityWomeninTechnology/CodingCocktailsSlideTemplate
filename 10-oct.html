@@ -246,30 +246,7 @@
             </section>
             <section>
               <h2>Synchronous vs Asynchronous</h2>
-              <p class="fragment">Python (sync)
-                <code style="font-size: 50%;">
-                  import requests<br><br>
-  
-                  r = requests.get('https://api.github.com/events')<br>
-                  print(r.text)<br>
-                  print("I come after the request")<br>
-                </code>
-              </p>
-              <br>
-              <p class="fragment">JavaScript (async): use xhttp or fetch
-                <code>
-                  var xhttp = new XMLHttpRequest();<br>
-                  xhttp.onreadystatechange = function() { ... };<br>
-                  xhttp.open("GET", "https://api.github.com/events", true);<br>
-                  xhttp.send();<br>
-                  console.log('I come after the request');
-                </code>
-              </p>
-            </section>
-            <section>
-              <h1>An async exercise</h1>
-              <img class="fragment" src="images/10-oct/solo.jpg" height="41%" width="41%" style="padding-bottom: 100px;"/>
-              <img class="fragment" src="images/10-oct/solo_cup.jpg" height="41%" width="41%"/>
+              <p class="fragment">Going to add an example/exercise here that is more descriptive than code</p>
             </section>
             <section>
               <h1>Single Page Application Cons</h1><br>
@@ -415,7 +392,6 @@
               <p class="fragment">CLI helps scaffold our project quickly</p><br>
               <p class="fragment">Angular is very opinionated<br><span class="fragment">so this reduces architectural decisions</span></p><br>
               <p class="fragment">Good <a href="https://angular.io/docs" target="_blank">documentation</a></p><br>
-              <p class="fragment">Angular.js -> Angular 2 -> Angular (v6.1.10)</p>
            </section>
           <section>
               <h1>Angular uses TypeScript</h1><br>
@@ -528,7 +504,7 @@
             <img src="images/10-oct/assembly.jpg" height="90%" width="90%">
           </section>
           <section>
-              <h1>Angular Building Blocks</h1>
+              <h1>Angular2 Building Blocks</h1>
               <br>
               <p class="fragment" style="padding-top: 15px;">Modules</p>
               <p class="fragment" style="padding-top: 15px;">Components</p>
@@ -540,7 +516,7 @@
           </section>
           <section>
               <h1>Fitting it all together</h1>
-              <img src="images/10-oct/arch.png" alt="Angular Architecture">
+              <img src="images/10-oct/arch.png" alt="Angular2 Architecture">
           </section>
           <section>
             <h1>Modules</h1>
@@ -574,7 +550,7 @@
           <section>
             <h1>Lifecycle of a Component</h1><br>
             <p class="fragment">"Hooks" are events that signal a change in the component's lifecycle</p><br>
-            <p class="fragment" style="text-align: left;">Main lifecycle hook is ngOnInit</p> 
+            <p class="fragment" style="text-align: left;">Main lifecycle hook is ngOnInit</p>
             <ul>
               <li class="fragment" style="text-align: left;">called once shortly after Angular creates the component</li>
               <li class="fragment" style="text-align: left;">commonly used for fetching the initial data needed for the component</li>
@@ -593,62 +569,6 @@
               <p class="fragment">View more on routing <a href="https://angular.io/guide/router" target="_blank">here</a></p>
           </section>
           <section>
-            <code style="font-size: 0.45em; margin: 0;">
-  import { NgModule } from '@angular/core';<br>
-  import { Routes, RouterModule } from '@angular/router';<br>
-  import { UserProfileComponent } from './profile/profile.component';<br>
-  import { AllMeetupsComponent } from './meetups/meetups.component';<br>
-  import { LocalMeetupsComponent } from './local/local.component';<br>
-  import { HomeComponent } from './home/home.component';<br>
-  import { PageNotFoundComponent } from './404/404.component';<br><br>
-  const routes: Routes = [<br>
-  &nbsp;&nbsp;{ path: 'profile/:username', component: UserProfileComponent },<br>
-  &nbsp;&nbsp;{ path: 'meetups', component: AllMeetupsComponent},<br>
-  &nbsp;&nbsp;{<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;path: 'meetups-local',<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;component: LocalMeetupsComponent,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;data: { zipcode: 64155 }<br>
-  &nbsp;&nbsp;},<br>
-  &nbsp;&nbsp;{ path: '', component: HomeComponent },<br>
-  &nbsp;&nbsp;{ path: '**', component: PageNotFoundComponent }<br>
-  ];<br><br>
-  @NgModule({<br>
-  &nbsp;&nbsp;imports: [RouterModule.forRoot(routes)],<br>
-  &nbsp;&nbsp;exports: [RouterModule]<br>
-  })<br>
-  export class AppRoutingModule { }
-            </code>
-          </section>
-          <section>
-            <p class="fragment">
-              Use routerLink in HTML to navigate to a route
-              <code>
-                &lt;a routerLink="/contact-us"&gt;Contact Page&lt;/a&gt;
-              </code>
-            </p>
-            <br>
-            <p class="fragment">
-              Add a class when the link is active
-              <code style="font-size: 0.45em; margin: 0;">
-                &lt;a routerLink=&quot;/contact-us&quot; routerLinkActive=&quot;active&quot;&gt;Contact Page&lt;/a&gt;
-              </code>
-            </p>
-            <br>
-            <p class="fragment">
-              Navigate in JavaScript (TypeScript)
-              <code>
-                this.router.navigate(['/profile', user.name]);
-              </code>
-            </p>
-            <br>
-            <p class="fragment">
-              switchMap gets ahold of variables from the URL
-              <code>
-                profile/:username
-              </code>
-            </p>
-          </section>
-          <section>
             <h1>Templates are written in HTML</h1>
             <div class="fragment">
               <p>
@@ -657,14 +577,7 @@
               </p>
               <br>
               <p class="fragment">
-                In the *.component.ts file, multi-line / inline:<br>
-                <code class="typescript" style="font-size: 0.45em;">template: `&lt;div&gt;<br>
-      &nbsp;&nbsp;&lt;p&gt;Hey, my name's Microsoft. Can I crash at your place tonight?&lt;/p&gt;<br>
-      &nbsp;&nbsp;&lt;p&gt;{{myObviousAnswer}}&lt;/p&gt;<br>
-      &lt;/div&gt;`</code>
-              </p><br>
-              <p class="fragment">
-                ...or in a separate HTML file:
+                 In a separate HTML file:
                 <code class="typescript">templateUrl: './header.component.html'</code>
               </p>
           </section>
@@ -699,14 +612,6 @@
             <p class="fragment">
               This is typically where you'd use text in HTML
             </p>
-            <br>
-            <p class="fragment">
-              [ ] is a value taken from the component<br>and displayed in the view
-            </p>
-            <code class="fragment">&lt;input [value]="user.firstName"&gt;</code>
-            <p class="fragment">
-              This is typically seen on attributes<br>in HTML template elements
-            </p>
         </section>
         <section>
           <h1>Data Binding</h1>
@@ -717,14 +622,6 @@
             <p class="fragment">
               This is typically seen on attributes<br>in template elements
             </p>
-            <br>
-            <p class="fragment">
-              [( )] is a bi-directional way to bind (share) data
-            </p>
-            <code class="fragment">&lt;input [(ngModel)]="user.dogsName"&gt;</code>
-            <p class="fragment">
-              Takes data from the view and passes it to the component (&amp; vice versa)
-            </p>
         </section>
         <section>
           <h1>Adding data to a component</h1><br>
@@ -734,19 +631,11 @@
           <p class="fragment">Finally, write HTML for the template</p>
         </section>
         <section>
-          <h1>Attribute Directives</h1>
-          <br>
-          <p class="fragment">Dynamically applies attribute values<br>to HTML based on data</p><br>
-          <p class="fragment">Changes the appearance/behavior<br>of that element</p><br>
-          <p class="fragment">NgClass and NgFor are commonly used attribute directives</p><br>
-          <p class="fragment">Replaces markup in the DOM</p>
-        </section>
-        <section>
           <h1>Services</h1>
           <br>
-          <p class="fragment">A function or object that is available for<br>(and limited to) your Angular app</p><br>
-          <p class="fragment">Singular, reusable things like the menu bar</p><br>
-          <!-- <p class="fragment">$http, $location, and $timeout<br>are common services</p><br>  This is AngularJS -->
+          <p class="fragment">A reuseable chunk of code that provides a specific service to our code</p><br>
+          <p class="fragment">A service that fetches usernames</p><br>
+          <p class="fragment">A service that performs a complicated search algorithm</p><br>
           <p class="fragment">Use the CLI to make a service for you:<br>
             <code class="fragment">ng generate service header</code>
           </p>
