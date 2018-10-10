@@ -162,13 +162,13 @@
           </a>
         </section>
         <section>
-            <h2>Our mentors</h2>
-            <img src="images/10-oct/mentors.jpg" alt="Mentors" height="70%" />
-            <h4>are super heroes!</h4>
+            <h2>Super Heroes</h2>
+            <img src="images/10-oct/mentors.gif" alt="Mentors" height="50%" />
+            <h4>our mentors are!</h4>
         </section>
         <section>
             <h2>Logistics &amp; Libations</h2>
-            <img src="images/libations.jpg" alt="Laura Wagner" height="70%" />
+            <img src="images/libations.jpg" alt="Laura Wagner" height="60%" />
             <h4>founded by Laura Wagner</h4>
         </section>
         <section>
@@ -184,13 +184,18 @@
                     <li class="fragment">The cons of an SPA</li>
                   </ol>
                 </li>
-                <li class="fragment">Other considerations</li>
-                <li class="fragment">SPA frameworks &amp; libraries</li>
-                <li class="fragment">...but srsly, Angular<span class="fragment"> (+ Typescript and the CLI)</span></li>
-                <li class="fragment">Angular Building Blocks</li>
-                <li class="fragment">Resources</li>
-              </ol>
           </section>
+          <section>
+              <h2>Tonight's Agenda: SPAs</h2>
+                <br>
+                <ol start="2">
+                  <li class="fragment">Other considerations</li>
+                  <li class="fragment">SPA frameworks &amp; libraries</li>
+                  <li class="fragment">...but srsly, Angular<span class="fragment"> (+ Typescript and the CLI)</span></li>
+                  <li class="fragment">Angular Building Blocks</li>
+                  <li class="fragment">Resources</li>
+                </ol>
+            </section>
         <section>
           <h3>This stuff is hard!</h3>
           <br>
@@ -200,8 +205,8 @@
         </section>
       <!-- Title slide for root level outline topics -->
           <section>
-            <h1>Introduction</h1>
-            <img src="images/10-oct/spa.jpg" alt="Introduction" height="85%" width="85%" style="margin-top:30px;"/>
+            <h1>SPA Introduction</h1>
+            <img src="images/10-oct/spa.jpg" alt="Introduction" height="75%" width="85%" style="margin-top:30px;"/>
           </section>
       <!-- Introduction slide -->
           <section>
@@ -225,70 +230,76 @@
               <p class="fragment">Files might share/import resources<br><div class="fragment">...but that's as good as it gets</div></p><br>
             </section>
             <section>
-              <h1>Single Page Application</h1>
-              <p class="fragment">You use them everyday<div class="fragment">...but you probably don't know it!</div></p><br>
-              <p class="fragment">Every URL updates a portion of the page</p><br>
-              <p class="fragment">Obvious: Pages with scrollable sections</p><br>
-              <p class="fragment">Less obvious: The URL changes but it's still served from a single index.html file</p><br>
-              <p class="fragment">More app-like: Behaves more like an app on your PC or phone</p>
+              <h1>Single Page Application</h1><br>
+              <p class="fragment">You probably use them everyday<div class="fragment">...but you might not even know it!</div></p><br>
+              <p class="fragment">Every URL updates a portion of the page. Behaves more like an app on your PC or phone</p><br>
             </section>
             <section>
-              <h1>SPA vs 'conventional' website</h1>
-              <img src="images/10-oct/spa_vs_conventional.png" height="95%" width="95%" style="margin-top:30px;"/>
+            <h1>Single Page Application</h1><br>
+            <p class="fragment">Obvious: Pages with scrollable sections</p><br>
+            <p class="fragment">Less obvious: The URL changes but it's still served from a single index.html file</p>
+          </section>
+            <section>
+              <img src="images/10-oct/spa_vs_conventional.png" height="85%" width="95%" style="margin-top:50px;"/>
             </section>
             <section>
               <h1>AJAX &amp; Single Page Apps</h1>
               <br>
               <p class="fragment"><i>Asynchronous</i> JavaScript and JSON (or XML)</p><br>
-              <p class="fragment">Data is exchanged between browser and server <i>in the background</i></p><br>
-              <p class="fragment">Requires JavaScript to be enabled in the browser (like SPAs in general)</p><br>
-              <p class="fragment">SPAs require the browser to retain a single page<br>even when you need server communication</p>
+              <div class="fragment">Data is exchanged between browser and server <i>in the background</i></pdiv><br><br>
+              <div class="fragment">Requires JavaScript to be enabled in the browser (like SPAs in general)</div><br>
+              <div class="fragment">AJAX allows our application to retain a single page while making calls to the server</div>
             </section>
             <section>
-              <h2>Synchronous vs Asynchronous</h2>
-              <p class="fragment">Going to add an example/exercise here that is more descriptive than code</p>
+              <h2>Synchronous vs Asynchronous</h2><br>
+              <p class="fragment">Synchronous: Code is executed in order and waits until previous action completes before moving to next action</p><br>
+              <p class="fragment">Asynchronous: Code is executed, but doesn't wait for previous actions to complete</p>
             </section>
+            <section>
+              <h1>Single Page Application Cons</h1><br><br>
+              <p class="fragment">Anyone browsing with JavaScript disabled will not get all the functionality</p><br>
+              </section>
             <section>
               <h1>Single Page Application Cons</h1><br>
-              <p class="fragment">Anyone browsing without JavaScript enabled will not get all the functionality</p><br>
-              <p class="fragment">Search Engine Optimization (SEO)</p>
-              <p class="fragment">A data or JavaScript error can mean<br>you have no content for bots to crawl!</p><br>
-              <p class="fragment">Workarounds:<br>
-              <p class="fragment">- direct bots to prerendered content<br>
-              <div class="fragment">- implement cache with <a href="http://prerender.io" target="_blank">prerender.io</a></div></p>
+              <p class="fragment">Search Engine Optimization (SEO)</p><br>
+              <p class="fragment">A data or JavaScript error can mean you have no content for bots to crawl!</p><br>
+              <div class="fragment">Direct bots to prerendered content<br>
+              <div class="fragment">Implement cache with <a href="http://prerender.io" target="_blank">prerender.io</a></div></p>
             </section>
             <section>
               <h1>Other considerations</h1>
-              <img src="images/10-oct/thinking.gif" height="100%" width="100%" style="margin-top:30px;"/>
+              <img src="images/10-oct/thinking.gif" height="60%" width="100%" style="margin-top:30px;"/>
             </section>
             <section>
-                <h1>Modularity</h1>
-                <p class="fragment" style="text-align:left;">Make reusable pieces (components) that can be accessed across page
-                <div style="text-align: left;">
-                  <ul class="fragment" style="text-align:left;">
+                <h1>Modularity</h1><br>
+                <p class="fragment">Make reusable pieces (components) that can be accessed across page
+                  <ul class="fragment" ><br><br>
                       <li>- Header/Navigation Bar</li>
                       <li>- Footer</li>
                       <li>- Date Picker</li>
                       <li>- Slideshow</li>
                   </ul>
-                </div>
                 </p><br>
-                <p class="fragment" style="text-align:left;">Make custom HTML elements with their own HTML tags &amp; styles/scripting.
-                  <code style="font-size: 50%;">
-                    &lt;order-form&gt;&lt;/order-form&gt;
-                  </code>
-                <p>
             </section>
             <section>
-                <h1>Routing</h1>
+                <h1>Modularity</h1><br><br>
+                <p class="fragment" style="text-align:left;">Make custom HTML elements with their own HTML tags &amp; styles/scripting.</p>
+                <br>
+                  <code class="fragment">
+                    &lt;order-form&gt;&lt;/order-form&gt;
+                  </code>
+
+            </section>
+            <section>
+                <h1>Routing</h1><br>
                 <ul>
                     <p class="fragment">Most SPA frameworks/libraries include routing functionality</p><br>
-                    <p class="fragment">Routing allows navigation from one view to another.  These are "virtual pages"...<br>
+                    <div class="fragment">Routing allows navigation from one view to another.  These are "virtual pages"...<br>
                       <div class="fragment">
                           <code class="bash">http://www.example.com/about</code>
                           <code class="bash">http://www.example.com/#/about</code>
                       </div>
-                    </p><br>
+                    </div><br>
                     <p class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank">HTML5 History API</a><br>for back and forward buttons</p>
                 </ul>
             </section>
@@ -301,28 +312,31 @@
             </section>
             <section>
                 <h1>Frameworks &amp; Libraries</h1>
-                <h4>What's the difference?</h4>
-                <ul>
-                    <li class="fragment">Library: a set of functions that you can call<br>
-                        <ul class="fragment">
+                <h4>What's the difference?</h4><br>
+                    <p class="fragment">Library:<br> A set of functions that you can call<br><br>
+                        <ul class="fragment" >
                             <li>- <a href="http://momentjs.com/" target="_blank">Moment</a></li>
                             <li>- <a href="https://lodash.com/" target="_blank">Lodash</a></li>
                             <li>- <a href="https://d3js.org/" target="_blank">D3</a></li>
                             <li>- <a href="https://jquery.com/" target="_blank">jQuery</a></li>
                         </ul>
-                    </li><br>
-                    <li class="fragment">Framework: imposes structure to your code<br>&amp; describes how your code should be written <br>
-                        <ul class="fragment">
+                    </p><br>
+
+            </section>
+            <section>
+                <h1>Frameworks &amp; Libraries</h1>
+                <h4>What's the difference?</h4><br>
+                    <p class="fragment">Framework:<br> Imposes structure to your code<br>&amp; describes how your code should be written <br>
+                        <br><ul class="fragment">
                             <li>- <a href="https://angularjs.org/" target="_blank">Angular</a></li>
                             <li>- <a href="http://backbonejs.org/" target="_blank">Backbone</a></li>
                         </ul>
-                    </li>
-                </ul>
+                    </p>
             </section>
             <section>
                 <h1>But then...</h1>
                 <h2>What's a platform?</h2>
-                <img src="images/10-oct/platform.jpg" height="65%" width="65%" style="margin-top:30px;"/>
+                <img src="images/10-oct/platform.jpg" height="25%" width="35%" style="margin-top:30px;"/>
                 <p class="fragment">A framework and then some<span class="fragment">: could include CLI tools, bundles of libraries, virtual environments, language packs, or more.</span></p>
             </section>
             <section>
@@ -332,7 +346,7 @@
             </section>
             <section>
                 <p>Frameworks be like...</p>
-                <a href="https://memegenerator.net/Joseph-Ducreux" target="_blank"><img src="images/10-oct/joseph-ducreux.jpg" height="55%" width="55%" style="margin-top:30px;"/></a>
+                <a href="https://memegenerator.net/Joseph-Ducreux" target="_blank"><img src="images/10-oct/joseph-ducreux.jpg" height="65%" width="55%" style="margin-top:30px;"/></a>
                 <p>"Don't call me, I'll call you"</p>
             </section>
             <section>
@@ -348,7 +362,7 @@
             </section>
         </section>
         <section>
-            <h1 class="break">Do the Worksheet: Part n</h1>
+            <h3 class="break">Do the Worksheet</h3>
             <div class="fill-col">
               <p>Wifi: username / password</p>
               <table class="tocTable" style="margin: 0 auto;">
@@ -356,14 +370,14 @@
                   <td>This presentation</td>
                   <td><a href="http://bit.ly/CnCOctSlides" target="_blank">http://bit.ly/CnCOctSlides</a></td>
                 </tr>
-                  <tr>
-                    <td>The worksheet</td>
-                    <td><a href="http://bit.ly/CnCOctWork" target="_blank">http://bit.ly/CnCOctWork</a></td>
-                  </tr>
-                  <tr>
-                    <td>Install the Tools</td>
-                    <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
-                  </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCOctWork" target="_blank">http://bit.ly/CnCOctWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
               </table>
               <div class="row-line-tools">
                 <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/chrome.png"/></a></span>
@@ -380,12 +394,12 @@
             </div>
           </section>
           <section>
-            <h1>Time to get Angular</h1>
-            <img src="images/10-oct/angular_fashion.jpg" height="43%" width="43%" style="margin-top:10px;"/>
+            <h1>Time to get Angular</h1><br>
+            <img src="images/10-oct/angular_fashion.jpg" height="60%" width="43%" style="margin-top:10px;"/>
           </section>
           <section>
-              <h1>Choosing a framework/library</h1>
-              <img src="images/10-oct/venn_diagram.png" height="85%" width="85%" style="margin-top:30px;"/>
+              <h2>Choosing a framework or library</h2>
+              <img src="images/10-oct/venn_diagram.png" height="55%" width="75%" style="margin-top:30px;"/>
           </section>
           <section>
               <h1>Why did we choose Angular?</h1><br>
@@ -398,21 +412,24 @@
               <p class="fragment">Made by Microsoft</p><br>
               <p class="fragment"><span class="separate">.ts</span> file extensions instead of <span class="separate">.js</span></p><br>
               <p class="fragment">Compiles into JavaScript</p><br>
-              <p class="fragment">Makes writing JavaScript easier</p><br>
               <p class="fragment">Can write JavaScript in a TypeScript file<br><span class="fragment">(but not the other way around!)</span></p>
           </section>
           <section>
-              <h1>Why Use TypeScript?</h1>
+              <h1>Why Use TypeScript?</h1><br>
               <p class="fragment">
-                JavaScript is loosely typed<br>a variable's value is flexible
-                <code class="javascript">var drink = "Tom Collins";<br>drink = 3;</code>
-              </p>
+                JavaScript is loosely typed<br>a variable's value is flexible<br>
+              </p><br>
+                <code class="javascript fragment">var drink = "Tom Collins";<br>drink = 3;</code>
+              <br>
+          </section>
+          <section>
+              <h1>Why Use TypeScript?</h1>
               <br>
               <p class="fragment">
-                TypeScript provides static "types"<br>(number, string, boolean, etc)<br>for JavaScript<br>
-                <code class="typescript">var drink = "Mojito";<br>drink = true;  //ERROR!</code>
-                a variable's value is enforced
+                TypeScript provides static "types" (number, string, boolean, etc) for JavaScript
               </p>
+              <code class="typescript fragment">var drink = "Mojito";<br>drink = true;  //ERROR!<br> drink="Long Island";</code>
+              <p class="fragment">A variable's type is enforced, but not the value.</p>
           </section>
           <section>
               <h1>More Typescript Examples</h1>
@@ -427,7 +444,7 @@
               <br>
               <p class="fragment">
                 <a href="https://www.typescriptlang.org/play/index.html#src=function%20order(drink%3A%20string)%20%7B%0D%0A%20%20%20%20return%20%22I'd%20like%20a%20%22%20%2B%20drink%3B%0D%0A%7D%0D%0A%0D%0Avar%20cocktail%20%3D%20%5B%22Missouri%20Mule%22%2C%20%22Mojito%22%5D%3B%0D%0A%0D%0Adocument.body.innerHTML%20%3D%20order(cocktail)%3B" target="_blank">a Typescript example with <font style="color:darkred">incorrect</font> type</a><br>
-                Hover over the underlined `cocktail`<br>to see error message
+                Hover over the underlined `cocktail`to see error message
               </p>
           </section>
           <section>
@@ -459,16 +476,16 @@
               <br>
               <p>Scaffold components, services, directives, etc.</p>
               <br>
-              <p class="fragment">
+              <div class="fragment">
                 Component
                 <code class="bash">ng generate component MY-NEW-COMPONENT</code>
                 <code class="bash">ng g component MY-NEW-COMPONENT</code>
-              </p>
+              </div>
               <br>
-              <p class="fragment">
+              <div class="fragment">
                 Service
                 <code class="bash">ng g service MY-NEW-SERVICE</code>
-              </p>
+              </div>
           </section>
           <section>
               <h1>CLI Scaffolding</h1>
@@ -488,6 +505,9 @@
                 Install angular-cli-ghpages (one time only)
                 <code class="bash">npm install -g angular-cli-ghpages</code>
               </p>
+          </section>
+          <section>
+              <h1>What can we do with the CLI?</h1>
               <br>
               <p class="fragment">
                 Build to your GitHub repo
@@ -501,7 +521,7 @@
           </section>
           <section>
             <h1>Angular Building Blocks</h1>
-            <img src="images/10-oct/assembly.jpg" height="90%" width="90%">
+            <img src="images/10-oct/assembly.jpg" height="70%" width="90%">
           </section>
           <section>
               <h1>Angular2 Building Blocks</h1>
@@ -515,8 +535,8 @@
               <p class="fragment" style="padding-top: 15px;">Services</p>
           </section>
           <section>
-              <h1>Fitting it all together</h1>
-              <img src="images/10-oct/arch.png" alt="Angular2 Architecture">
+              <h1>Fitting it all together</h1><br>
+              <img src="images/10-oct/arch.png" height="60%" width="60%" alt="Angular2 Architecture">
           </section>
           <section>
             <h1>Modules</h1>
@@ -529,13 +549,13 @@
             <h1>Components</h1>
             <br>
             <p class="fragment">Every app has at least one root</p>
-            <p class="fragment">Application is a tree of components</p>
-            <img class="fragment" src="images/10-oct/component_tree.png" alt="component tree" width="65%" height="65%" />
+            <div class="fragment">Application is a tree of components</div>
+            <img class="fragment" src="images/10-oct/component_tree.png" alt="component tree" width="65%" height="45%" />
             <p class="fragment">Each component contains:<br>template, data, behavior</p>
           </section>
           <section>
             <h1>Components</h1>
-            <img src="images/10-oct/component.png" height="46%" width="46%">
+            <img src="images/10-oct/component.png" height="26%" width="36%">
             <code class="html">
               &lt;app-quiz&gt;&lt;/app-quiz&gt;
             </code>
@@ -550,42 +570,37 @@
           <section>
             <h1>Lifecycle of a Component</h1><br>
             <p class="fragment">"Hooks" are events that signal a change in the component's lifecycle</p><br>
-            <p class="fragment" style="text-align: left;">Main lifecycle hook is ngOnInit</p>
-            <ul>
-              <li class="fragment" style="text-align: left;">called once shortly after Angular creates the component</li>
-              <li class="fragment" style="text-align: left;">commonly used for fetching the initial data needed for the component</li>
-            </ul>
-            <br>
-            <br>
+            <p class="fragment" style="text-align: left;">Main lifecycle hook is ngOnInit</p><br>
+              <div class="fragment" style="text-align: left;">- Called once shortly after Angular creates the component</div>
+              <br><div class="fragment" style="text-align: left;">- Commonly used for fetching the initial data needed for the component</div>
+
             <p class="fragment">Read more <a href="https://angular.io/guide/lifecycle-hooks" target="_blank">here</a></p>
           </section>
           <section>
               <h1>Routing</h1><br>
-              <p class="fragment">Tells your application what to display for a URL</p><br>
-              <p class="fragment">Main homepage route is '/'</p><br>
-              <p class="fragment">Angular CLI adds the homepage route</p>
-              <p class="fragment">...but we have to add the other routes</p><br>
+              <h4 class="fragment">Tells your application what to display for a URL</h4><br>
+              <p class="fragment">Main homepage route is '/' and is created by Angular CLI</p><br>
+              <div class="fragment">...but we have to add the other routes</div><br>
               <p class="fragment">Other route examples:<br>'/about' or '/profile/:username'</p><br>
-              <p class="fragment">View more on routing <a href="https://angular.io/guide/router" target="_blank">here</a></p>
+              <div class="fragment">View more on routing <a href="https://angular.io/guide/router" target="_blank">here</a></div>
           </section>
           <section>
-            <h1>Templates are written in HTML</h1>
+            <h1>Templates are HTML</h1><br>
             <div class="fragment">
               <p>
-                Cannot use:
+                Tags we can't use:
                 <code class="html">&lt;script&gt;&lt;html&gt;&lt;body&gt;&lt;base&gt;</code>
               </p>
               <br>
               <p class="fragment">
-                 In a separate HTML file:
+                 Tell your TypeScript @Component code that your html template lives in a separate HTML file:
                 <code class="typescript">templateUrl: './header.component.html'</code>
               </p>
           </section>
         <section>
-          <h1>Interpolation</h1>
-          <p class="fragment">An expression that Angular evaluates and converts to a string.</p><br>
-          <p class="fragment">Surrounded by double curly braces: {{ }}</p><br>
-          <code class="typescript fragment">{{valueHere}}</code>
+          <h1>Interpolation</h1><br>
+          <p class="fragment">An expression that Angular evaluates and converts to a string.</p>
+          <p class="fragment">Surrounded by double curly braces: {{  }}</p><br>
           <code class="typescript fragment">{{animal.name}}</code>
           <code class="typescript fragment">{{3 + 5}}</code>
           <code class="html fragment">&lt;p&gt;My age is {{getMyAge() - 5}}&lt;/p&gt;<br>&lt;!-- My age is 21 --&gt;</code>
@@ -593,56 +608,58 @@
         <section>
           <h1>Data Binding</h1>
           <br>
-          <p class="fragment">Pass data around your application in either:
+          <p class="fragment">Pass data around your application<br><br>
+          <p class="fragment">The way data is <i>bound</i> depends on syntax</p><br>
             <ul>
-              <li class="fragment" style="padding-left: 20px;">- one-direction (component -> view)</li>
-              <li class="fragment" style="padding-left: 20px;">- bi-direction (logic <-> component)</li>
+              <li class="fragment" style="padding-left: 20px;">Component to the view using {{}} </li><br>
+              <li class="fragment" style="padding-left: 20px;">View to component ()</li><br>
             </ul>
           </p>
           <br><br>
-          <p class="fragment">The way data is <i>bound</i> depends on syntax</p>
         </section>
         <section>
           <h1>Data Binding</h1>
             <br>
             <p class="fragment">
               {{ }} data is sent to the view from the component
-            </p>
+            </p><br>
             <code class="fragment">&lt;p&gt;My dog's name is {{user.dogsName}}&lt;/p&gt;</code>
-            <p class="fragment">
+            <br><p class="fragment">
               This is typically where you'd use text in HTML
             </p>
         </section>
         <section>
-          <h1>Data Binding</h1>
+          <h1>Data Binding</h1><br>
             <p class="fragment">
               ( ) is a value taken from the view and passed to the component (user interaction w/ the page)
-            </p>
+            </p><br>
             <code class="fragment">&lt;button (click)="delete()"&gt;Delete&lt;/button&gt;</code>
-            <p class="fragment">
+            <br><p class="fragment">
               This is typically seen on attributes<br>in template elements
             </p>
         </section>
         <section>
           <h1>Adding data to a component</h1><br>
-          <p class="fragment">Start with a model: a structured way of representing an object</p><br>
-          <p class="fragment">Import the model to the component</p><br>
-          <p class="fragment">Setup or fetch initial data in OnInit, one of the component's lifecycle hooks</p><br>
-          <p class="fragment">Finally, write HTML for the template</p>
+          <ul>
+          <li class="fragment">Start with a model: a structured way of representing an object</li><br>
+          <li class="fragment">Import the model to the component</li><br>
+          <li class="fragment">Setup or fetch initial data in OnInit, one of the component's lifecycle hooks</li><br>
+          <li class="fragment">Finally, write HTML for the template</li><br>
+        </ul>
         </section>
         <section>
           <h1>Services</h1>
           <br>
-          <p class="fragment">A reuseable chunk of code that provides a specific service to our code</p><br>
-          <p class="fragment">A service that fetches usernames</p><br>
-          <p class="fragment">A service that performs a complicated search algorithm</p><br>
+          <p class="fragment">A reuseable chunk of code that provides a specific service</p><br>
+          <div class="fragment">A service that fetches usernames</div><br>
+          <div class="fragment">A service that performs a complicated search algorithm</div><br>
           <p class="fragment">Use the CLI to make a service for you:<br>
             <code class="fragment">ng generate service header</code>
           </p>
         </section>
           <section>
             <h1>You've gotta start somewhere</h1>
-            <img src="images/10-oct/assembly2.jpg" height="100%" width="100%"/>
+            <img src="images/10-oct/assembly2.jpg" height="65%" width="100%"/>
           </section>
           <section>
             <h1>More Resources</h1><br>
