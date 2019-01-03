@@ -1,0 +1,730 @@
+<!doctype html>
+<html>
+  <head>
+    <title>April - Version Control - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Version Control course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="Version Control - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Version Control course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Version Control course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/reveal.css"/>
+    <link rel="stylesheet" href="css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+
+  <body>
+	<!--
+		NOTES: Search and replace...
+
+			Version Control (ie Git)
+			TODO (?)
+			MONTHDIR (05-aug)
+			MONTH (Aug)
+
+			username (wifi username - do NOT check this in!)
+			password (wifi password - do NOT check this in!)
+	-->
+    <div class="reveal">
+      <div class="slides">
+	  	<!-- Slide to show during check-in and mingling -->
+        <section>
+          <div style="position: absolute; left: -50px; top:0px;">
+            <font style="font-size: 0.5em">
+              <a href="http://bit.ly/CnCIndex">
+                <i class="fa fa-arrow-left fa-sm"></i>
+                All Months
+              </a>
+            </font>
+          </div>
+          <h1>While You're Waiting</h1>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>Install the Tools</td>
+                <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+              </tr>
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/shared/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/shared/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/shared/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/shared/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+         <h1>Intro to Version Control</h1>
+         <div class="fill-row">
+           <img src="images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+         </div>
+        </section>
+        <section>
+         <h1>Our Sponsors</h1>
+         <br><br><br>
+         <a href="https://fiber.google.com/cities/kansascity/" target="_blank"><img src="images/shared/google_fiber.png" width="60%" style="vertical-align:middle;"/></a>
+         <a href="https://corporate.americancentury.com/en.html" target="_blank"><img src="images/shared/aci.gif" width="60%" style="vertical-align:middle;"/></a>
+        </section>
+        <section>
+         <h1>Our Host this Evening</h1>
+         <div class="fill-row">
+           <a href="http://www.nerdery.com" target="_blank"><img src="images/shared/Nerdery-logo.png" alt="The Nerdery" /></a>
+         </div>
+        </section>
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <div class="fill-row team" style="height:90%;">
+            <span class="fragment teammembers">
+              <img src="images/shared/sarah_cropped.png" alt="Sarah Duitsman" class="teammembers" />
+              <h6 class="teammembers">Sarah Duitsman</h6>
+              <p class="teammembers">Program Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/kelly_cropped.jpg" alt="Kelly Winzer" class="teammembers" />
+              <h6 class="teammembers">Kelly Winzer</h6>
+              <p class="teammembers">Program Co-Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/shared/kayla_cropped.png" alt="Kayla Hennegin" class="teammembers" />
+              <h6 class="teammembers">Kayla Hennegin</h6>
+              <p class="teammembers">Curriculum Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/shared/alisa_cropped.jpg" alt="Alisa Duncan" class="teammembers" />
+              <h6 class="teammembers">Alisa Duncan</h6>
+              <p class="teammembers">Technical Materials Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/shared/gabi_cropped.jpg" alt="Gabi Dombrowski" class="teammembers" />
+              <h6 class="teammembers">Gabi Dombrowski</h6>
+              <p class="teammembers">Mentor Director</p>
+            </span>
+            <span class="fragment teammembers">
+              <img src="images/shared/melissa_cropped.jpg" alt="Melissa Arroyo" class="teammembers" />
+              <h6 class="teammembers">Melissa Arroyo</h6>
+              <p class="teammembers">Marketing Director</p>
+            </span>
+          </div>
+        </section>
+        <section>
+          <h1>Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="images/shared/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <div class="row-line-slack">
+            <span class="row-line-slack"><img src="images/04-apr/slack-1.png" alt="#djangogirlskc - Django Girls Omaha" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-2.png" alt="#events - Black Panther Outing" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-3.jpg" alt="#diy - Mopaca 2018" class="fragment" /></span>
+            <span class="row-line-slack"><img src="images/04-apr/slack-4.gif" alt="#ladybosses - Little Girl Makes Box Jump" class="fragment" style="height: 300px; width: 300px"/></span>
+          </div>
+          <div>
+        </section>
+        <section>
+          <h2>Django Girls KC</h2>
+          <a href="https://djangogirls.org/kansascity/" target="_blank" style="font-size: 72px;">
+            <img src="images/04-apr/DjangoGirls.jpg" alt="Django Girls KC" width="70%"/>
+            https://djangogirls.org/kansascity/
+          </a>
+          <div>
+        </section>
+        <section>
+          <h2>KC Women In Technology Job Board</h2>
+          <a href="http://kcwomenintech.org/jobs/" target="_blank" style="font-size: 72px;">
+            <img src="images/04-apr/job-board.png" alt="KC Women In Technology Job Board" width="60%"/>
+            http://kcwomenintech.org/jobs/
+          </a>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="images/04-apr/mentors.gif" alt="Mentors" height="70%" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+            <h2>Logistics &amp; Libations</h2>
+            <img src="images/shared/libations.jpg" alt="Laura Wagner" height="70%" />
+            <h4>founded by Laura Wagner</h4>
+        </section>
+        <section>
+          <h1>Tonight's Agenda: <span style="color:#c7bc75">Version Control</span></h1>
+          <ol style="margin-left: 40px;">
+            <br><br>
+            <li class="fragment">What is Version Control &amp; why are we using Git?</li>
+            <br>
+            <li class="fragment">Creating a repo &amp; adding new files</li>
+            <br>
+            <li class="fragment">Editing a file &amp; pushing local changes</li>
+            <br>
+            <li class="fragment">Collaborating with others</li>
+            <br>
+            <li class="fragment">Real life usage</li>
+          </ol>
+        </section>
+<!-- part 1-->
+        <section>
+          <h1>What is Version Control?</h1>
+          <br><br>
+          <div style="display: inline-flex">
+            <img class="fragment" src="images/04-apr/versioncontrol.png" alt="Version Control" width="50%" style="padding-right: 50px;"/>
+            <div style="flex-direction: column; justify-content: space-between;">
+              <p class="fragment">A utility that tracks changes in files</p>
+              <br><br>
+              <ul>
+                <li class="fragment" style="list-style-type: disc;">Reference past changes</li>
+                <li class="fragment" style="list-style-type: disc;">Restore previous versions</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Why use Version Control?</h3>
+          <br><br>
+          <p class="fragment">Changes to source code are recorded</p>
+          <br>
+          <p class="fragment">If a mistake is made, you can rollback changes</p>
+          <br><br><br>
+          <ul>
+            <li class="fragment" style="list-style-type: disc;">Version History in Google Docs</li>
+            <li class="fragment" style="list-style-type: disc;">Time Machine on MacOS</li>
+            <li class="fragment" style="list-style-type: disc;">Undo in any text editor/processor</li>
+          </ul>
+          <br>
+        </section>
+        <section>
+          <h3>History of Version Control</h3>
+          <br>
+          <img src="images/04-apr/XEROX_6016.jpg" alt="XEROX 6016 Memorywriter Word Processor" height="80%" />
+        </section>
+        <section>
+          <h3>Types of Version Control</h3>
+          <img src="images/04-apr/version-control-types.svg" alt="Version Control Types" height="80%" />
+          <br>
+          <a href="https://www.atlassian.com/git/tutorials/why-git" style="font-size: 20px;" target="_blank">Credit: Atlassian Git Tutorial</a>
+        </section>
+        <section>
+          <h3>Terms of Version Control</h3>
+          <br>
+          <h5 style="list-style-type: disc;">Cloning</h5>
+          <br>
+          <img src="images/04-apr/clone.svg" alt="Clone" height="70%" />
+        </section>
+        <section>
+          <h3>Terms of Version Control</h3>
+          <br>
+          <h5 style="list-style-type: disc;">Pulling/Pushing</h5>
+          <br>
+            <img src="images/04-apr/push_pull.svg" alt="Push and Pull" width="100%" />
+        </section>
+        <section>
+          <h3>Terms of Version Control</h3>
+          <br>
+          <h5 style="list-style-type: disc;">Commiting</h5>
+          <img src="images/04-apr/commit.svg" alt="Commit" height="70%" />
+        </section>
+        <section>
+          <h3>Git</h3>
+          <br><br>
+          <div style="font-size: 72px;">
+            <font style="color:#c7bc75">D</font>istributed
+            <font style="color:#c7bc75">V</font>ersion
+            <font style="color:#c7bc75">C</font>ontrol
+            <font style="color:#c7bc75">S</font>ystem
+          </div>
+          <br><br><br>
+          <ul>
+            <p class="fragment">Concurrently work on code</p>
+            <p class="fragment">Work without a network connection</p>
+            <p class="fragment">Fast</p>
+            <p class="fragment">Branches</p>
+            <div class="fragment">
+              <p>Staging area*</p>
+              <p>Stashing*</p>
+            </div>
+          </ul>
+        </section>
+        <section>
+          <h3>Branches</h3>
+          <br><br><br>
+          <img src="images/04-apr/git-branch_simple.svg" style="width: 90%; align-items: right;" alt="Git Branch">
+          <br>
+          <a href="https://www.atlassian.com/git/tutorials/using-branches" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
+        </section>
+        <section>
+          <img src="images/04-apr/gitkraken01.png" alt="GitKraken 01" height="95%" />
+        </section>
+        <section>
+          <img src="images/04-apr/gitkraken02.png" alt="GitKraken 02" height="95%" />
+        </section>
+        <section>
+          <img src="images/04-apr/gitkraken03.png" alt="GitKraken 03" height="95%" />
+        </section>
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Clone a repo from Github using GitKraken &amp; see the tree visualization of commits and branches from collaborators.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Inspect a Repo</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/shared/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/shared/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/shared/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/shared/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 2-->
+        <section>
+          <h1>Creating a Repo &amp; Adding New Files</h1>
+          <br>
+          <code class="fragment" style="width: 25%;">git init</code>
+          <a href="https://www.gitkraken.com/" target="_blank"><img class="fragment" src="images/04-apr/gitkraken-logo.png" alt="GitKraken" style="height: 25%"/></a>
+          <a href="https://www.github.com/" target="_blank"><img class="fragment" src="images/04-apr/github-logo.png" alt="GitHub" style="height: 30%"/></a>
+        </section>
+        <section>
+          <h3>Cloning a Repository</h3>
+          <br><br>
+          <code class="fragment">git clone [url]</code>
+          <br>
+          <p class="fragment">Git Term: origin</p>
+          <br>
+          <p class="fragment">When the clone is pulled down to your machine, it keeps a reference to the parent, which the default term in git is origin</p>
+        </section>
+        <section>
+          <h3>Essential Git Commands</h3>
+          <br><br>
+          <p class="fragment"><code>git pull</code></p>
+          <p class="fragment">Fetches and merges: Updates references &amp; merges those updates into your local repo</p>
+          <br>
+          <p class="fragment"><code>git fetch</code></p>
+          <p class="fragment">Updates references in your local repo, but does not change any files</p>
+        </section>
+        <section>
+          <h3>Making Changes Locally</h3>
+          <br>
+          <p class="fragment"><code>git status</code></p>
+          <p class="fragment">Shows information about status, including <span style="color: lime;">staged</span> and <span style="color: red;">unstaged</span> changes</p>
+          <br>
+          <p class="fragment"><code>git add [filepath]</code></p>
+          <p class="fragment"><code>git add [dir]</code></p>
+          <p class="fragment"><code>git add .</code></p>
+          <p class="fragment">Add a file or directory (untracked or modified) to staging</p>
+        </section>
+        <section>
+          <h3>Making Changes Locally</h3>
+          <br>
+          <p class="fragment">Git Term: staging</p>
+          <br>
+          <div class="fragment" style="display: inline-flex; height: 70%; width: 80%">
+            <div>
+              <img src="images/04-apr/index.png" />
+            </div>
+            <div style="display: inline-flex; align-items: center;">
+              <p>Tracks all your saved changes</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3>Ignoring Local Changes</h3>
+          <br>
+          <h5>.gitignore</h5>
+          <img src="images/04-apr/gitignore.png" />
+        </section>
+        <section>
+          <h3>Making Changes Locally</h3>
+          <br><br>
+          <p class="fragment"><code>git reset</code></p>
+          <p class="fragment">Resets (undoes) a `git add`</p>
+          <br>
+          <p class="fragment"><code>git commit -m "[message]"</code></p>
+          <p class="fragment">Stores your current contents of the index in a new commit</p>
+        </section>
+        <section>
+          <br>
+          <img src="images/04-apr/pretty-colors.gif" alt="Making Changes Locally" height="90%" />
+        </section>
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Create a brand new repo and commit a change.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Create A Repo</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/shared/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/shared/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/shared/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/shared/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 3-->
+        <section>
+          <h1>Editing Files &amp; Pushing Changes</h1>
+          <br><br>
+          <p class="fragment"><code>git diff</code></p>
+          <p class="fragment"><code>git diff [filepath]</code></p>
+          <p class="fragment"><code>git difftool</code></p>
+          <p class="fragment"><code>git diff --staged</code></p>
+        </section>
+        <section>
+          <h3>Pushing Changes to Remote</h3>
+          <br><br>
+          <p class="fragment">Git Term: remote</p>
+          <br>
+          <p class="fragment">Where your code is stored</p>
+          <br><br>
+          <div class="fragment">
+            <p>The path of where the code came from [origin]</p>
+            <p>The path where the code is going [upstream]</p>
+          </div>
+        </section>
+        <section>
+          <h3>Merging Branches</h3>
+          <br><br>
+          <p class="fragment"><code>git merge</code></p>
+          <p class="fragment">Take the code that has diverged from origin and apply it (merge) it back into the parent branch</p>
+          <br>
+          <p class="fragment"><code>git merge [branch name]</code></p>
+          <p class="fragment">Take the code from [branch name] that has diverged from origin and apply it (merge) it back into the parent branch</p>
+        </section>
+        <section>
+          <h3>Merge Conflict</h3>
+          <br>
+          <img src="images/04-apr/merge-conflict.png" alt="Merge Conflict" height="75%" />
+        </section>
+        <section>
+          <h3>Rebase and History</h3>
+          <br><br>
+            <p class="fragment"><code>git rebase -i HEAD~4</code></p>
+            <p class="fragment">Apply the last 4 commits, "squashed" as 1 commit</p>
+            <br>
+            <p class="fragment"><code>git log</code></p>
+            <p class="fragment">Shows commit history</p>
+        </section>
+        <section>
+          <h3>Pushing Changes</h3>
+          <br>
+          <p class="fragment"><code>git push</code></p>
+          <p class="fragment">Updates remote using local and sends necessary objects</p>
+        </section>
+        <section>
+          <br>
+          <img src="images/04-apr/pushing-changes.gif" alt="Editing a File & Pushing Changes" height="90%" />
+        </section>
+        <section>
+          <br>
+            <img src="images/04-apr/dance-party.gif" alt="Dance Party" height="90%" />
+        </section>
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Edit a file and push changes.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Editing Files</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/shared/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/shared/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/shared/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/shared/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 4-->
+        <section>
+          <h1>Collaborating with Others</h1>
+          <img src="images/04-apr/teamwork.gif" style="height: 70%;" alt="Teamwork">
+        </section>
+        <section>
+          <h3>Branches</h3>
+          <br>
+          <p class="fragment">A branch is a pointer to a commit</p>
+          <br>
+          <p class="fragment"><code>git checkout -b [new-branch-name]</code></p>
+          <br>
+          <p class="fragment"><code>git checkout [existing-branch-name]</code></p>
+        </section>
+        <section>
+          <h3>Pull Requests</h3>
+          <br><br>
+          <p class="fragment">Allows teammates to review your code changes &amp; easily make comments/suggestions</p>
+          <br>
+          <p class="fragment">Allows reviewers to approve, comment, or request changes to the overall PR</p>
+        </section>
+        <section>
+          <h3>Pull Request Steps</h3>
+          <br><br><br>
+          <ol style="padding-left: 50px;">
+            <li class="fragment">Open pull request</li>
+            <li class="fragment">Add reviewers (optional)</li>
+            <li class="fragment">Comments, suggestions, approval (optional)</li>
+            <li class="fragment">Merge pull request</li>
+            <li class="fragment">Delete associated branch (optional)</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Fork &amp; Clone</h3>
+          <br><br>
+          <p class="fragment">For when you want to work on a repo without affecting the original repo</p>
+          <br><br>
+          <ol style="padding-left: 50px;">
+            <li class="fragment">Fork a repo online at Github.com</li>
+            <br>
+            <li class="fragment"><code>git clone [fork_url]</code></li>
+          </ol>
+        </section>
+        <section>
+          <br><br>
+          <h1>What we'll do:</h1>
+          <br><br>
+          <p>Create a branch, complete a merge, open a pull request, and fork a repo.</p>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1 class="break">Do the Worksheet:</h1>
+          <h4 style="color: #e5dfb3;">Collaborating With Others</h4>
+          <div class="fill-col">
+            <p>Wifi: username / password</p>
+            <table class="tocTable" style="margin: 0 auto;">
+              <tr>
+                <td>This presentation</td>
+                <td><a href="http://bit.ly/CnCAprSlides" target="_blank">http://bit.ly/CnCAprSlides</a></td>
+              </tr>
+                <tr>
+                  <td>The worksheet</td>
+                  <td><a href="http://bit.ly/CnCAprWork" target="_blank">http://bit.ly/CnCAprWork</a></td>
+                </tr>
+                <tr>
+                  <td>Install the Tools</td>
+                  <td><a href="http://bit.ly/CnCTheTools" target="_blank">http://bit.ly/CnCTheTools</a></td>
+                </tr>
+            </table>
+            <div class="row-line-tools">
+              <span class="row-line-tools"><a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank"><img src="images/shared/chrome.png"/></a></span>
+              <span class="row-line-tools"><a href="https://atom.io/" target="_blank"><img src="images/shared/atom.png"/></a></span>
+              <span class="row-line-tools"><a href="https://git-scm.com/downloads" target="_blank"><img src="images/shared/git.png"/></a></span>
+              <span class="row-line-tools"><a href="https://www.iterm2.com/" target="_blank"><img src="images/shared/terminal.png"/></a></span>
+            </div>
+            <div class="license-container">
+              <img src="images/license_chooser_cc.png" class="license-img" /><img src="images/license_chooser_by.png" class="license-img" /><img src="images/license_chooser_sa.png" class="license-img" />
+              <p class="license-text">
+                All slides in this presentation are licensed by <a href="http://kcwomenintech.org/" target="_blank">http://kcwomenintech.org</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+<!-- part 5-->
+        <section>
+          <h1>Real Life Usage</h1>
+          <img src="images/04-apr/mindblown.gif" style="height: 80%;" alt="Mind Blown">
+        </section>
+        <section>
+          <h3>Real Life Usage</h3>
+          <br><br>
+            <p class="fragment">Different teams have different strategies</p>
+            <br><br>
+            <p class="fragment">Tags (like a bookmark)</p>
+            <br>
+            <p class="fragment"><code>git tag [tagname] -a</code></p>
+            <p class="fragment"><code>git push origin --tags</code></p>
+            <p class="fragment"><code>git tag</code></p>
+        </section>
+        <section>
+          <h3>Stash It</h3>
+          <br>
+          <p class="fragment"><code>git stash</code></p>
+          <p class="fragment">Keeps local changes (without staging)</p>
+          <p class="fragment"><code>git stash list</code></p>
+          <p class="fragment">List all stashed changes</p>
+          <p class="fragment"><code>git stash pop</code></p>
+          <p class="fragment">Remove top stash and apply it</p>
+          <p class="fragment"><code>git stash apply</code></p>
+          <p class="fragment">Like pop, but doesn't remove it from the stash list</p>
+        </section>
+        <section>
+          <h3>Merge</h3>
+          <img src="images/04-apr/merge.svg" alt="Merge" />
+          <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
+        </section>
+        <section>
+          <h3>Rebase</h3>
+          <img src="images/04-apr/rebase.svg" alt="Rebase" />
+          <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
+        </section>
+        <section>
+          <h3>When Not to Rebase</h3>
+          <img src="images/04-apr/when-not-rebase.svg" alt="When Not to Rebase" />
+          <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" style="font-size: 20px;">Credit: Atlassian Git Tutorial</a>
+        </section>
+        <section>
+          <h3>Oops!</h3>
+          <br><br>
+          <p class="fragment"><code>git reset HEAD~</code></p>
+          <p class="fragment">Last commit back to staging</p>
+          <br>
+          <p class="fragment"><code>git commit --amend</code></p>
+        </section>
+        <section>
+          <h3>Oops!</h3>
+          <br><br>
+          <p class="fragment"><code>git reset HEAD --hard</code></p>
+          <p class="fragment">Reset staging and the working directory to the most recent commit</p>
+          <br>
+          <p class="fragment"><code>git revert [commit ID]</code></p>
+          <p class="fragment">Adds a new commit that undoes the commit you specify</p>
+        </section>
+<!-- end -->
+        <section>
+          <h1>Questions?</h1>
+          <img src="images/04-apr/questions.gif" alt="Questions" height="80%" />
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol class="normal">
+            <li class="fragment">Find a buddy</li>
+            <li class="fragment">Take <a href="http://bit.ly/CnCFeedback" target="_blank">the quiz</a></li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/CnCAprWork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Version+Control+tutorial" target="_blank">online tutorial on Version Control</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; bottom: 0px; right: 0px;" height="300vh" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="images/shared/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="images/shared/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="images/shared/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="images/shared/twitter.png" width="150"/></a>
+          <br><br>
+          <p class="fragment">#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#CodingAndCocktailsKC</p>
+        </section>
+      </div>
+    </div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
