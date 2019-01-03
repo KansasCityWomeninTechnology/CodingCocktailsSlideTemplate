@@ -81,6 +81,10 @@ p.power {
   font-family: "Vtks-LongTime" !important;
 }
 
+td.disabled-link {
+  color: #999;
+}
+
 div.row-line-tools {
   padding: 0 0 105px 0;
   height: auto;
@@ -90,6 +94,7 @@ div.row-line-tools {
   justify-content: center;
   align-items: flex-end;
 }
+
 span.row-line-tools {
   flex: none;
   flex-basis: 15%;
