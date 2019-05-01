@@ -187,7 +187,7 @@
             <!--CONTENT BELOW HERE-->
             <section>
                 <h3>Tonight's Agenda:
-                    <span style="color:#c7bc75">New Kids on the JavaScript Block</span>
+                    <span style="color:#c7bc75">The Liquor - JavaScript Introduction</span>
                 </h3>
                 <ol style="margin-left: 40px;">
                     <br>
@@ -333,7 +333,10 @@
                 <h3>Variable</h3>
                 <br>
                 <p class="fragment">Alternatively, think of it as a noun.</p>
-                <code class="fragment">var variableName = variableValue</code>
+                <pre><code class="fragment">var variableName = variableValue;
+let variableName = variableValue;
+const variableName = vairableValue;
+                </code></pre>
                 <br>
                 <code class="fragment">var leftovers = 'Meatloaf';</code>
                 <p class="fragment">Case Sensitive: &#39;myVariable&#39; is not the same as &#39;MyVariable&#39;</p>
@@ -344,14 +347,17 @@
             </section>
             <section>
                 <h1>Examples of Operators</h1>
-                <pre><code class="hljs js">var myAge = 28 + 10; // 38</code></pre>
+                <pre><code class="hljs js">var myAge = 28 + 10; </code></pre>
+                <p class="fragment">returns 38</p>
                 <br>
-                <pre><code class="fragment hljs js">var myDogsAge = 6 * 7; // 42</code></pre>
+                <pre><code class="fragment hljs js">var myDogsAge = 6 * 7; </code></pre>
+                <p class="fragment">returns 42</p>
                 <br>
                 <div class="fragment">
                     <p>Modulus: The 'remainder' in a division problem</p>
-                    <pre><code class="hljs js">var modExample = 15 % 2 // 1</code></pre>
+                    <pre><code class="hljs js">var modExample = 15 % 2;</code></pre>
                     <p>15 / 2 = 7 with a remainder of 1 (the modulus)</p>
+                    <p class="fragment">returns 1</p>
                 </div>
             </section>
             <section>
@@ -373,10 +379,66 @@
                 <p class="fragment"> Adding a integer and a string returns a string, &#39;1025&#39;</p>
             </section>
             <section>
+                <h1>Comparisons</h1>
+                <br>
+                <table class="slightlyPaddedTable">
+                    <tr>
+                        <td>Comparison</td>
+                        <td>English</td>
+                        <td>Example: All evaluate to true</td>
+                    </tr>
+                    <tr>
+                        <td>== </td>
+                        <td>loose equality</td>
+                        <td>2 == "2"</td>
+                    </tr>
+                    <tr>
+                        <td>=== </td>
+                        <td>strict equality: value and type</td>
+                        <td>2 === 2</td>
+                    </tr>
+                    <tr>
+                        <td>!= </td>
+                        <td>does not equal</td>
+                        <td>2 != 5</td>
+                    </tr>
+                    <tr>
+                        <td>!==  </td>
+                        <td>strict inequality: value and type</td>
+                        <td>0 !== " "</td>
+                    </tr>
+                    <tr>
+                        <td> > </td>
+                        <td>greater than </td>
+                        <td>5 > 2</td>
+                    </tr>
+                    <tr>
+                        <td> < </td>
+                        <td>less than</td>
+                        <td>2 < 5</td>
+                    </tr>
+                    <tr>
+                        <td>>=  </td>
+                        <td>greater than or equal to</td>
+                        <td> legal drinking age >= 21 </td>
+                    </tr>
+                    <tr>
+                        <td><=  </td>
+                        <td>less than or equal to</td>
+                        <td> not legal drinking age <= 20 </td>
+                    </tr>
+                    <tr>
+                        <td>? </td>
+                        <td>ternary</td>
+                        <td>(age > 21) ? "Drink" : "No drinks for you"</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
                 <h1>Next</h1>
                 <br><br><br><br>
                 <ul>
-                    <li class="fragment" style="list-style-type: disc;">Setting Variables</li>
+                    <li class="fragment" style="list-style-type: disc;">Setting variables</li>
                     <li class="fragment" style="list-style-type: disc;">Using comparisons & equality</li>
                 </ul>
             </section>
@@ -626,7 +688,7 @@ console.log('square feet: ', getSquareFeet(13, 20);</code></pre>
                         <td style="text-align: left;">Mac Key Combination</td>
                     </tr>
                     <tr>
-                        <td style="text-align: left;">ctrl + shift + i</td>
+                        <td style="text-align: left;">F12</td>
                         <td style="text-align: left;">cmd + option + i</td>
                     </tr>
                 </table>
@@ -892,7 +954,7 @@ drinks.forEach(function(drink) {
             <div class="flexy-center">
                 <ol>
                 <li class="fragment">Find a buddy</li>
-                <li class="fragment">Take <a href="http://bit.ly/CnCRocksQuiz" target="_blank">the quiz</a></li>
+                <li class="fragment">Take <a href="https://goo.gl/forms/LmTx8rxTCLH95VGO2" target="_blank">the quiz</a></li>
                 <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
                 <li class="fragment">Finish <a href="http://bit.ly/cncjavascriptwork" target="_blank">tonight's worksheet</a></li>
                 <li class="fragment">Share your work on Slack</a></li>
