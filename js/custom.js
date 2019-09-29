@@ -11,14 +11,17 @@ injectHTMLString = (stringHTML, elementID) => {
 };
 
 createLeadershipSlide = fetch('../shared/leadership-slide.html')
-    .then((response) => response.text())
-    .then((stringHTML) => injectHTMLString(stringHTML, 'leadership-section'));
+  .then((response) => response.text())
+  .then((stringHTML) => injectHTMLString(stringHTML, 'leadership-section'));
     
 createHostSlide = fetch('../shared/host-slide.html')
-.then((response) => response.text())
-.then((stringHTML) => injectHTMLString(stringHTML, 'host-section'));
+  .then((response) => response.text())
+  .then((stringHTML) => injectHTMLString(stringHTML, 'host-section'));
 
 createSponsorSlide = fetch('../shared/sponsor-slide.html')
-.then((response) => response.text())
-.then((stringHTML) => injectHTMLString(stringHTML, 'sponsor-section'));
+  .then((response) => response.text())
+  .then((stringHTML) => injectHTMLString(stringHTML, 'sponsor-section'));
 
+createDrinksSlide = fetch('../shared/drink-slide.html')
+  .then((response) => response.text())
+  .then((stringHTML) => injectHTMLString(stringHTML, 'drink-section'));
