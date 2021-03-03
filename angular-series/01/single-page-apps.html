@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SPA Day - Intro to Single Page Applications - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="Front End Architecture - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/css/reveal.css"/>
+    <link rel="stylesheet" href="/css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+      <!-- Slide to show during check-in and mingling -->
+        <section>
+          <h3>SPA Day - Intro to Single Page Applications</h3>
+          <img src="/images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+        </section>
+        <!-- These sections are auto loaded from js/custom.js --> 
+        <section id="leadership-section"></section>
+        <section>
+          <h1>Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="/images/shared/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <br>
+          <div class="row-line-slack" style="margin-left: -0.5em;">
+            <span class="row-line-slack fragment">
+              <a href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
+                <img src="/images/slack-previews/slack-genx.jpg" alt="Carolyn Westhoff" />
+              </a>
+              <p class="slack-label">#generation-x</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-tabletop.jpg"/>
+              <p class="slack-label">#tabletop</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-movies.gif"/>
+              <p class="slack-label">#movies</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-catsdoggos.jpg"/>
+              <p class="slack-label">#cats_and_doggos</p>
+            </span>
+          </div>
+          <div>
+        </section>
+        <section>
+          <h2>KC Women In Technology Job Board</h2>
+          <a href="http://kcwomenintech.org/jobs/" target="_blank" style="font-size: 72px;">
+            <img src="/images/shared/job-board.png" alt="KC Women In Technology Job Board" width="60%"/>
+            kcwomenintech.org/jobs
+          </a>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="/images/10-oct/wonder-woman.jpg" alt="Mentors" height="70%" style="margin: 15px auto;" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+          <h2>Tonight's Agenda: SPAs</h2>
+            <br>
+                <li class="fragment">What is a SPA?</li>
+                <li class="fragment">How is it different from a plain old web site?</li>
+                <li class="fragment">Angular</li>
+                <li class="fragment">Angular CLI</li>
+                <li class="fragment">Angular Building Blocks</li>
+        </section>
+        <section>
+          <h3>This stuff is a challenge!</h3>
+          <br>
+          <p class="fragment">
+            Don’t be discouraged if you don’t finish each worksheet section before the next presentation section begins. We cover a lot of difficult material that will take time to understand. We are here (and on Slack after the session) to help!
+          </p>
+        </section> 
+  <!-- part 1-->
+        <section>
+          <h1>SPA Introduction</h1>
+          <img src="../../images/10-oct/spa.jpg" alt="Introduction" height="75%" width="85%" style="margin-top:30px;"/>
+        </section>
+<!-- Introduction slide -->
+        <section>
+            <h1>What is a SPA?</h1>
+            <br>
+            <p class="fragment">
+              <font style="color:#c7bc75">S</font>ingle
+              <font style="color:#c7bc75">P</font>age
+              <font style="color:#c7bc75">A</font>pplication
+            </p>
+            <br>
+            <p class="fragment">Single index.html page</p><br>
+            <p class="fragment">Dynamically updates the page<br>based on user interaction<br><div class="fragment">(without reloading the entire page!)</div></p><br>
+            <p class="fragment">Better User Experience</p>
+        </section>
+        <section>
+          <h1>'conventional' website</h1>
+          <br><br>
+          <p class="fragment">Different HTML pages (files)</p><br>
+          <p class="fragment">Each URL serves up a different page</p><br>
+          <p class="fragment">Files might share/import resources<br><div class="fragment">...but that's as good as it gets</div></p><br>
+        </section>
+        <section>
+          <h1>Single Page Application</h1><br>
+          <p class="fragment">You probably use them everyday<div class="fragment">...but you might not even know it!</div></p><br>
+          <p class="fragment">Every URL updates a portion of the page. Behaves more like an app on your PC or phone</p><br>
+        </section>
+        <section>
+          <h1>Single Page Application</h1><br>
+          <p class="fragment">Obvious: Pages with scrollable sections</p><br>
+          <p class="fragment">Less obvious: The URL changes but it's still served from a single index.html file</p>
+        </section>
+        <section>
+          <img src="../../images/10-oct/spa-vs-traditional.jpeg" height="85%" width="95%" style="margin-top:50px;"/>
+        </section>
+        <section>
+          <h1>Modularity</h1><br>
+          <p class="fragment">Make reusable pieces (components) that can be accessed across page
+            <ul class="fragment" ><br><br>
+                <li>- Header/Navigation Bar</li>
+                <li>- Footer</li>
+                <li>- Date Picker</li>
+                <li>- Slideshow</li>
+            </ul>
+          </p><br>
+        </section>
+        <section>
+            <h1>Modularity</h1><br><br>
+            <p class="fragment" style="text-align:left;">Make custom HTML elements with their own HTML tags &amp; styles/scripting.</p>
+            <br>
+              <code class="fragment">
+                &lt;order-form&gt;&lt;/order-form&gt;
+              </code>
+        </section>
+        <section>
+          <h1>Time to get Angular</h1><br>
+          <img src="../../images/10-oct/angular_fashion.jpg" height="60%" width="35%" style="margin-top:10px;"/>
+        </section>
+        <section>
+            <h2>Choosing a framework or library</h2>
+            <img src="../../images/10-oct/venn_diagram.png" height="60%" width="50%" style="margin-top:30px;"/>
+        </section>
+        <section>
+            <h1>Why did we choose Angular?</h1><br>
+            <p class="fragment">CLI helps scaffold our project quickly</p><br>
+            <p class="fragment">Angular is very opinionated<br><span class="fragment">so this reduces architectural decisions</span></p><br>
+            <p class="fragment">Good <a href="https://angular.io/docs" target="_blank">documentation</a></p><br>
+         </section>
+        <section>
+          <h1>Angular uses TypeScript</h1><br>
+          <p class="fragment">Made by Microsoft</p><br>
+          <p class="fragment"><span class="separate">.ts</span> file extensions instead of <span class="separate">.js</span></p><br>
+          <p class="fragment">Transpiles into JavaScript</p><br>
+          <p class="fragment">Can write JavaScript in a TypeScript file<br><span class="fragment">(but not the other way around!)</span></p>
+        </section>
+        <section>
+            <h1>Why Use TypeScript?</h1><br>
+            <p class="fragment">
+              JavaScript is loosely typed<br>a variable's value is flexible<br>
+            </p><br>
+              <code class="javascript fragment">var drink = "Tom Collins";<br>drink = 3;</code>
+            <br>
+        </section>
+        <section>
+            <h1>Why Use TypeScript?</h1>
+            <br>
+            <p class="fragment">
+              TypeScript provides static "types" (number, string, boolean, etc) for JavaScript
+            </p>
+            <code class="typescript fragment">var drink = "Mojito";<br>drink = true;  //ERROR!<br> drink="Long Island";</code>
+            <p class="fragment">A variable's type is enforced, but not the value.</p>
+        </section>
+        <section>
+          <h1>Angular CLI</h1>
+          <h4>(Command Line Interface)</h4>
+          <br>
+          <p class="fragment">Check out the documentation <a href="https://github.com/angular/angular-cli/wiki" target="_blank">here</a></p><br>
+          <p class="fragment">CLI does things the "right" way<br>according to Angular style guide</p><br>
+          <p class="fragment">
+            Install via npm
+            <code class="bash">npm install -g @angular/cli</code>
+          </p>
+      </section>
+      <section>
+          <h1>What can we do with the CLI?</h1>
+          <br>
+          <p class="fragment">
+            Create a new project
+            <code class="bash">ng new PROJECT-NAME-HERE --routing</code>
+          </p>
+          <br>
+          <p class="fragment">
+            Serve your project<br>(so we can see it in the browser)
+            <code class="bash">ng serve</code>
+          </p>
+      </section>
+      <section>
+          <h1>What can we do with the CLI?</h1>
+          <br>
+          <p>Scaffold components, services, directives, etc.</p>
+          <br>
+          <div class="fragment">
+            Component
+            <code class="bash">ng generate component MY-NEW-COMPONENT</code>
+            <code class="bash">ng g component MY-NEW-COMPONENT</code>
+          </div>
+          <br>
+          <div class="fragment">
+            Service
+            <code class="bash">ng g service MY-NEW-SERVICE</code>
+          </div>
+      </section>
+      <section>
+          <h1>CLI Scaffolding</h1>
+          <video width="100%" height="100%" controls preload>
+              <source src="../../images/10-oct/scaffold.mov" type="video/mp4">
+          </video>
+      </section>
+      <section>
+          <h1>What can we do with the CLI?</h1>
+          <br>
+          <p class="fragment">
+            Build: create dist directory w/ build artifacts
+            <code class="bash">ng build</code>
+          </p>
+          <br>
+          <p class="fragment">
+            Install angular-cli-ghpages (one time only)
+            <code class="bash">npm install -g angular-cli-ghpages</code>
+          </p>
+      </section>
+      <section>
+          <h1>What can we do with the CLI?</h1>
+          <br>
+          <p class="fragment">
+            Build to your GitHub repo
+            <code class="bash">ng build --prod --base-href "https://yourusername.github.io/reponame/"</code>
+          </p>
+          <br>
+          <p class="fragment">
+            And deploy!
+            <code class="bash">angular-cli-ghpages</code>
+          </p>
+      </section>
+      <section>
+        <h1>Angular Building Blocks</h1>
+        <img src="../../images/10-oct/assembly.jpg" height="70%" width="80%">
+      </section>
+      <section>
+          <h1>Angular Building Blocks</h1>
+          <br>
+          <p class="fragment" style="padding-top: 15px;">Modules</p>
+          <p class="fragment" style="padding-top: 15px;">Components</p>
+          <p class="fragment" style="padding-top: 15px;">Routing</p>
+          <p class="fragment" style="padding-top: 15px;">Templates</p>
+          <p class="fragment" style="padding-top: 15px;">Data Binding</p>
+          <p class="fragment" style="padding-top: 15px;">Directives</p>
+          <p class="fragment" style="padding-top: 15px;">Services</p>
+      </section>
+      <section>
+          <h1>Fitting it all together</h1><br>
+          <img src="../../images/10-oct/arch.png" height="60%" width="60%" alt="Angular Architecture">
+      </section>
+<!-- break slide -->
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol class="normal">
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Install the <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Tools</a></li>
+            <li class="fragment">Do <a href="https://kansascitywomenintechnology.github.io/cocktails-worksheets/#/spa/" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Single+Page+App+tutorial" target="_blank">online tutorial on Single Page Apps</a></li>
+            <li class="fragment">Take <a href="https://forms.gle/RsVzHeF1LV7NoyjP6" target="_blank">the quiz</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="/images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="/images/shared/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="/images/shared/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="/images/shared/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="/images/shared/twitter.png" width="150"/></a>
+          <br><br>
+          <div class="fragment">
+            <p>#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT</p>
+            <br>
+            <p>#CodingAndCocktailsKC</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="/lib/js/head.min.js"></script>
+    <script src="/js/reveal.js"></script>
+    <script src="/js/custom.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+	</body>
+</html>
