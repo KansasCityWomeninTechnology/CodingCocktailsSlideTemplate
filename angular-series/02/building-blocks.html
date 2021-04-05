@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Playing with Blocks - Angular Components - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="Front End Architecture - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/css/reveal.css"/>
+    <link rel="stylesheet" href="/css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+      <!-- Slide to show during check-in and mingling -->
+        <section>
+          <h3>Playing with blocks - Angular Components</h3>
+          <img src="/images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+        </section>
+        <!-- These sections are auto loaded from js/custom.js --> 
+        <section id="leadership-section"></section>
+        <section>
+          <h1>Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="/images/shared/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <br>
+          <div class="row-line-slack" style="margin-left: -0.5em;">
+            <span class="row-line-slack fragment">
+              <a href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
+                <img src="/images/slack-previews/slack-genx.jpg" alt="Carolyn Westhoff" />
+              </a>
+              <p class="slack-label">#generation-x</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-tabletop.jpg"/>
+              <p class="slack-label">#tabletop</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-movies.gif"/>
+              <p class="slack-label">#movies</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-catsdoggos.jpg"/>
+              <p class="slack-label">#cats_and_doggos</p>
+            </span>
+          </div>
+          <div>
+        </section>
+        <section>
+          <h2>KC Women In Technology Job Board</h2>
+          <a href="http://kcwomenintech.org/jobs/" target="_blank" style="font-size: 72px;">
+            <img src="/images/shared/job-board.png" alt="KC Women In Technology Job Board" width="60%"/>
+            kcwomenintech.org/jobs
+          </a>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="/images/10-oct/wonder-woman.jpg" alt="Mentors" height="70%" style="margin: 15px auto;" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+          <h2>Tonight's Agenda: Angular Components</h2>
+            <br>
+            <li class="fragment">Recap</li>
+            <li class="fragment">Modules</li>
+            <li class="fragment">Components</li>
+            <li class="fragment">Routing</li>
+        </section>
+        <section>
+          <h3>This stuff is a challenge!</h3>
+          <br>
+          <p class="fragment">
+            Don’t be discouraged if you don’t finish each worksheet section before the next presentation section begins. We cover a lot of difficult material that will take time to understand. We are here (and on Slack after the session) to help!
+          </p>
+        </section> 
+  <!-- part 1-->
+      <section>
+        <h1>Angular Building Blocks</h1>
+        <img src="../../images/10-oct/assembly.jpg" height="70%" width="80%">
+      </section>
+      <section>
+          <h1>Angular Building Blocks</h1>
+          <br>
+          <p class="fragment" style="padding-top: 15px;">Modules</p>
+          <p class="fragment" style="padding-top: 15px;">Components</p>
+          <p class="fragment" style="padding-top: 15px;">Routing</p>
+          <p class="fragment" style="padding-top: 15px;">Templates</p>
+          <p class="fragment" style="padding-top: 15px;">Data Binding</p>
+          <p class="fragment" style="padding-top: 15px;">Directives</p>
+          <p class="fragment" style="padding-top: 15px;">Services</p>
+      </section>
+      <section>
+        <h1>Modules</h1>
+        <br><br>
+        <p class="fragment">Organizes your app into<br>related sections of functionality</p><br>
+        <p class="fragment">Root module is the very top<br>small apps only need one</p><br>
+        <p class="fragment">Larger apps may have feature modules - each related to specific workflow/capabilities</p>
+      </section>
+      <section>
+        <h1>Components</h1>
+        <br>
+        <p class="fragment">Every app has at least one root</p>
+        <div class="fragment">Application is a tree of components</div>
+        <img class="fragment" src="../../images/10-oct/component_tree.png" alt="component tree" width="65%" height="45%" />
+        <p class="fragment">Each component contains:<br>template, data, behavior</p>
+      </section>
+      <section>
+        <h1>Components</h1>
+        <img src="../../images/10-oct/component.png" height="26%" width="36%">
+        <code class="html">
+          &lt;app-quiz&gt;&lt;/app-quiz&gt;
+        </code>
+        <code class="typescript">
+          @Component({<br>
+          &nbsp;&nbsp;selector: 'app-quiz',<br>
+          &nbsp;&nbsp;templateUrl: './quiz.component.html',<br>
+          &nbsp;&nbsp;styleUrls: ['./quiz.component.css']<br>
+          })
+        </code>
+      </section>
+      <section>
+        <h1>Lifecycle of a Component</h1><br>
+        <p class="fragment">"Hooks" are events that signal a change in the component's lifecycle</p><br>
+        <p class="fragment" style="text-align: left;">Main lifecycle hook is ngOnInit</p><br>
+          <div class="fragment" style="text-align: left;">- Called once shortly after Angular creates the component</div>
+          <br><div class="fragment" style="text-align: left;">- Commonly used for fetching the initial data needed for the component</div>
+
+        <p class="fragment">Read more <a href="https://angular.io/guide/lifecycle-hooks" target="_blank">here</a></p>
+      </section>
+      <section>
+          <h1>Routing</h1><br>
+          <h4 class="fragment">Tells your application what to display for a URL</h4><br>
+          <p class="fragment">Main homepage route is '/' and is created by Angular CLI</p><br>
+          <div class="fragment">...but we have to add the other routes</div><br>
+          <p class="fragment">Other route examples:<br>'/about' or '/profile/:username'</p><br>
+          <div class="fragment">View more on routing <a href="https://angular.io/guide/router" target="_blank">here</a></div>
+      </section>
+<!-- break slide -->
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol class="normal">
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Do <a href="https://kansascitywomenintechnology.github.io/cocktails-worksheets/#/spa/2component/" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Single+Page+App+tutorial" target="_blank">online tutorial on Single Page Apps</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="/images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="/images/shared/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="/images/shared/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="/images/shared/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="/images/shared/twitter.png" width="150"/></a>
+          <br><br>
+          <div class="fragment">
+            <p>#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT</p>
+            <br>
+            <p>#CodingAndCocktailsKC</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="/lib/js/head.min.js"></script>
+    <script src="/js/reveal.js"></script>
+    <script src="/js/custom.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+	</body>
+</html>
