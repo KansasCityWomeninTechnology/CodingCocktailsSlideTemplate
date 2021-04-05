@@ -105,6 +105,7 @@
           <p class="fragment" style="padding-top: 15px;">Templates</p>
           <p class="fragment" style="padding-top: 15px;">Data Binding</p>
           <p class="fragment" style="padding-top: 15px;">Directives</p>
+          <p class="fragment" style="padding-top: 15px;">Pipes</p>
           <p class="fragment" style="padding-top: 15px;">Services</p>
       </section>
       <section>
@@ -120,19 +121,19 @@
         <p class="fragment">Every app has at least one root</p>
         <div class="fragment">Application is a tree of components</div>
         <img class="fragment" src="../../images/10-oct/component_tree.png" alt="component tree" width="65%" height="45%" />
-        <p class="fragment">Each component contains:<br>template, data, behavior</p>
+        <p class="fragment">Each component contains:<br>template, data, behavior, styles</p>
       </section>
       <section>
         <h1>Components</h1>
-        <img src="../../images/10-oct/component.png" height="26%" width="36%">
+        <img src="../../images/10-oct/component.png" height="20%" width="20%">
         <code class="html">
-          &lt;app-quiz&gt;&lt;/app-quiz&gt;
+          &lt;app-trivia&gt;&lt;/app-trivia&gt;
         </code>
         <code class="typescript">
           @Component({<br>
-          &nbsp;&nbsp;selector: 'app-quiz',<br>
-          &nbsp;&nbsp;templateUrl: './quiz.component.html',<br>
-          &nbsp;&nbsp;styleUrls: ['./quiz.component.css']<br>
+          &nbsp;&nbsp;selector: 'app-trivia',<br>
+          &nbsp;&nbsp;templateUrl: './trivia.component.html',<br>
+          &nbsp;&nbsp;styleUrls: ['./trivia.component.css']<br>
           })
         </code>
       </section>
