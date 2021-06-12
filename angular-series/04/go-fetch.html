@@ -81,7 +81,6 @@
             <br><br><br><br><br>
             <li class="fragment">APIs</li>
             <li class="fragment">Services</li>
-            <li class="fragment">HTTP fetch</li>
         </section>
         <section>
           <h3>This stuff is a challenge!</h3>
@@ -129,7 +128,7 @@
           <div class="fragment">A service that fetches usernames</div><br>
           <div class="fragment">A service that performs a complicated search algorithm</div><br>
           <p class="fragment">Use the CLI to make a service for you:<br>
-            <code class="fragment">ng generate service header</code>
+            <code class="fragment">ng generate service drinks</code>
           </p>
         </section>
         <section>
@@ -156,8 +155,8 @@
             
               constructor(private http: HttpClient) { }
             
-              getDrinks(): Observable<Drink[]> {
-                return this.http.get<Drink[]>('app/drink-menu.json');
+              getDrinks(): Observable&lt;Drink[]&gt {
+                return this.http.get&lt;Drink[]&gt('app/drink-menu.json');
               }
             }
           </code></pre>
@@ -166,7 +165,7 @@
           <h1>The Component</h1>
           <pre><code  style="font-size: 50%;">
             class DrinkComponent {
-              public drinks: Observable<Drink[]>;
+              public drinks: Observable&lt;Drink[]&gt;
            
               constructor(private drinkService: DrinkService) {
                this.drinks = this.drinkService.getDrinks();
