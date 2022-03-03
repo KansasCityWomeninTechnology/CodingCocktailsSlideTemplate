@@ -1,0 +1,668 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Front End Architecture And Introduction to HTML - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="Front End Architecture - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/css/reveal.css"/>
+    <link rel="stylesheet" href="/css/theme/codingandcocktails.css" id="theme"/>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>HTML And Front-end Architecture</h3>
+          <img src="/images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+        </section>
+        <section>
+          <h1>Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="/images/shared/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <br>
+          <div class="row-line-slack" style="margin-left: -0.5em;">
+            <span class="row-line-slack fragment">
+              <a href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
+                <img src="/images/slack-previews/slack-genx.jpg" alt="Carolyn Westhoff" />
+              </a>
+              <p class="slack-label">#generation-x</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-tabletop.jpg"/>
+              <p class="slack-label">#tabletop</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-movies.gif"/>
+              <p class="slack-label">#movies</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="/images/slack-previews/slack-catsdoggos.jpg"/>
+              <p class="slack-label">#cats_and_doggos</p>
+            </span>
+          </div>
+          <div>
+        </section>
+        <section>
+          <h2>KC Women In Technology Job Board</h2>
+          <a href="http://kcwomenintech.org/jobs/" target="_blank" style="font-size: 72px;">
+            <img src="/images/shared/job-board.png" alt="KC Women In Technology Job Board" width="60%"/>
+            kcwomenintech.org/jobs
+          </a>
+        </section>
+        <section>
+            <h2>Our mentors</h2>
+            <img src="/images/10-oct/mentors.gif" alt="Mentors" height="70%" style="margin: 15px auto;" />
+            <h4>are super heroes!</h4>
+        </section>
+        <section>
+          <h1>Tonight's Agenda: HTML</h1>
+          <br>
+          <ol style="margin-left: 40px;">
+            <li class="fragment">The Basics
+              <ol style="margin: 0 0 0 60px;" type="a">
+                <li class="fragment">What makes a website?</li>
+                <li class="fragment">What is HTML &amp; How do you write it?</li>
+                <li class="fragment">Syntax &amp; Structure</li>
+                <li class="fragment">Tags (old and new)</li>
+              </ol>
+            </li>
+            <li class="fragment">Attributes & Images</li>
+            <li class="fragment">Standards, Best Practices, &amp; Debugging</li>
+            <li class="fragment">The DOM</li>
+          </ol>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Tonight's Agenda: Front-end Architecture</h1>
+          <br>
+          <div style="margin-top: 0.5em;">
+            <div style="float:left; width:50%;">
+              <ol style="margin-left: 50px;">
+                <li class="fragment">Introduction</li>
+                <ol style="margin: 0 0 0 60px;" type="a">
+                    <li class="fragment">What is it?</li>
+                    <li class="fragment">Concepts &amp; Preferences</li>
+                <li class="fragment">The Structure</li>
+                <li class="fragment">Other Important Things</li>
+              </ol>
+            </div>
+          </section>
+          <section>
+            <h1>What Makes a Website?</h1>
+            <br>
+            <br>
+            <p class="fragment">
+              HTML
+            </p>
+            <br>
+            <p class="fragment">
+              CSS (Cascading Style Sheet)
+            </p>
+            <br>
+            <p class="fragment">
+              JavaScript
+            </p>
+            <br>
+            <p class="fragment">
+              Other Assets - Images, Video, Audio
+            </p>
+          </section>
+        <section>
+          <h1>What is HTML?</h1>
+          <br><br>
+          <p class="fragment">
+            <font style="color:#c7bc75">H</font>yper
+            <font style="color:#c7bc75">T</font>ext
+            <font style="color:#c7bc75">M</font>arkup
+            <font style="color:#c7bc75">L</font>anguage
+          </p>
+          <br>
+          <p class="fragment">
+            Most fundamental building block of web pages
+          </p>
+          <br>
+          <p class="fragment">
+            Describes how the content is displayed
+          </p>
+          <br>
+          <p class="fragment">
+            Indicates structure & meaning, not style (font, color, size)
+          </p>
+        </section>
+        <section>
+          <h1>How do you write HTML?</h1>
+          <br><br>
+          <p class="fragment">
+            Create a .html file - index.html is the start
+          </p>
+          <br>
+          <p class="fragment">
+            HTML is a markup language
+          </p>
+          <br>
+          <p class="fragment">
+            Markup and code is written/edited<br>in an IDE (like VS Code)
+          </p>
+          <br>
+          <p class="fragment">
+            <font style="color:#c7bc75">I</font>ntegrated
+            <font style="color:#c7bc75">D</font>evelopment
+            <font style="color:#c7bc75">E</font>nvironment
+          </p>
+        </section>
+        <section>
+          <h1>Why use an IDE?</h1>
+          <br><br>
+          <p class="fragment">
+            Syntax highlighting helps you "see" the code<br>with colors &amp; other visual cues
+          </p>
+          <br>
+          <p class="fragment">
+            Linters help you avoid mistakes<br>by highlighting them
+          </p>
+          <br>
+          <p class="fragment">
+            Auto-complete "guesses"<br>what you might want to type next
+          </p>
+        </section>
+        <section>
+          <h1>HTML Syntax</h1>
+          <br>
+          <p class="fragment">
+            HTML is a standard set of "tags"
+          </p>
+          <br><br>
+          <p class="fragment">
+            Open/Close tags
+            <code style="width:75%;margin: 0 auto;">&lt;p&gt;Hey girl&lt;/p&gt;</code>
+          </p>
+          <br>
+          <p class="fragment">
+            Self-Closing tags<br>
+            <code style="width:75%;margin: 0 auto;">&lt;img src="/images/ryan-gosling.gif" height="460px" /&gt;</code>
+          </p>
+        </section>
+        <section>
+          <br>
+          <p>Hey girl</p>
+          <img src="/images/html-session/gosling.gif" alt="Hey Girl" height="76%"/>
+        </section>
+        <section>
+          <h1>HTML Structure</h1>
+          <br><br>
+          <p class="fragment" data-fragment-index="0">
+            Every HTML page requires 4 tags:
+          </p>
+          <br>
+          <div class="fill-row" style="align-items: flex-start;">
+            <code class="fragment" data-fragment-index="1" style="flex: none; flex-basis: 50%; vertical-align: top;">&lt;!DOCTYPE html&gt;
+              <div class="fragment" data-fragment-index="2">&lt;html&gt;</div>
+                <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt;</div>
+                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&lt;body&gt;...&lt;/body&gt;</div>
+              <div class="fragment" data-fragment-index="2">&lt;/html&gt;</div>
+            </code>
+          </div>
+        </section>
+        <section>
+          <h1>HTML Content Tags</h1><br>
+          <p class="fragment" data-fragment-index="0">
+            Live inside the 
+          </p>
+            <code class="fragment" data-fragment-index="1" style="flex: none; flex-basis: 50%; vertical-align: top;">
+                <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&lt;body&gt;...&lt;/body&gt;</div>
+            </code>
+          <ul>
+            <li class="fragment">Gives your site strucutre and meaning
+            </li>
+            <ul>
+                <li class="fragment">Headings & Paragraphs</li>
+                <li class="fragment">Images, Video, Audio</li>
+            <li class="fragment">Interactive Elements - Button, Hyperlinks, Input</li>
+            <li class="fragment">Organization</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>HTML Tags</h1><br>
+          <p class="fragment" data-fragment-index="0">
+            A few to start...
+          </p>
+          <br>
+            <code class="fragment"  style="width:75%;margin: 0 auto;" data-fragment-index="1">&lt;div&gt;Don't forget the garnish!&lt;/div&gt;
+              <div class="fragment" data-fragment-index="2">&lt;h1&gt;Watermelon Moscow Mule&lt;/h1&gt;</div>
+              <div class="fragment" data-fragment-index="3">&lt;h6&gt;A Fruity Twist on a Classic Cocktail&lt;/h6&gt;</div>
+              <div class="fragment" data-fragment-index="4">&lt;p&gt;This is one of my favorites!&lt;/p&gt;</div>
+              <div class="fragment" data-fragment-index="5">
+                &lt;div&gt;<br>
+                <div class="fragment" data-fragment-index="6">
+                  &nbsp;&nbsp;&lt;ol&gt;<br>
+                  <div class="fragment" data-fragment-index="7">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
+                  </div>
+                  &nbsp;&nbsp;&lt;/ol&gt;<br>
+                </div>
+                &lt;/div&gt;<br>
+              </div>
+            </code>
+        </section>
+        <section>
+          <div>
+            <br>
+            <div>Don't forget the garnish!</div>
+            <h1>Watermelon Moscow Mule</h1>
+            <h6>A Fruity Twist on a Classic Cocktail</h6>
+            <p>This is one of my favorites!</p><br>
+            <div>
+              <ol>
+                <li>Watermelon</li>
+                <li>Vodka</li>
+                <li>Lime juice</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1>A few more...</h1><br>
+          <code class="fragment" data-fragment-index="1" style="width:75%;margin: 0 auto;">&lt;a href="http://www.pinterest.com" target="_blank"&gt;
+            <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;Go to Pinterest</div>
+            <div class="fragment" data-fragment-index="1">&lt;/a&gt;</div>
+          </code>
+          <div class="fragment" data-fragment-index="3">
+            <a href="http://pinterest.com" target="_blank">Go to Pinterest</a>
+          </div>
+          <br>
+          <code class="fragment" data-fragment-index="4" style="width:75%;margin: 0 auto;">&lt;a href="http://www.pinterest.com" target="_blank"&gt;
+            <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;img src="/images/pinterest-logo.png"/&gt;</div>
+            <div class="fragment" data-fragment-index="4">&lt;/a&gt;</div>
+          </code>
+          <div class="fragment" data-fragment-index="6">
+            <a href="http://pinterest.com" target="_blank"><img src="/images/html-session/pinterest.png" width="80px" height="80px"/></a>
+          </div>
+          </section>
+<!-- part 2 -->
+        <section>
+          <h1>HTML Tags</h1><br>
+          <p class="fragment" data-fragment-index="0">
+            These tags got you started...
+          </p>
+          <br>
+            <code class="fragment" style="width: 75%; margin: 0 auto;" data-fragment-index="1">&lt;div&gt;Don't forget the garnish!&lt;/div&gt;
+              <div data-fragment-index="2">&lt;h1&gt;Watermelon Moscow Mule&lt;/h1&gt;</div>
+              <div data-fragment-index="3">&lt;h6&gt;A Fruity Twist on a Classic Cocktail&lt;/h6&gt;</div>
+              <div data-fragment-index="4">&lt;p&gt;This is one of my favorites!&lt;/p&gt;</div>
+              <div data-fragment-index="5">
+                &lt;div&gt;<br>
+                <div data-fragment-index="6">
+                  &nbsp;&nbsp;&lt;ol&gt;<br>
+                  <div data-fragment-index="7">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
+                  </div>
+                  &nbsp;&nbsp;&lt;/ol&gt;<br>
+                </div>
+                &lt;/div&gt;<br>
+              </div>
+            </code>
+        </section>
+        <section>
+          <div>
+            <br>
+            <div>Don't forget the garnish!</div>
+            <h1>Watermelon Moscow Mule</h1>
+            <h6>A Fruity Twist on a Classic Cocktail</h6>
+            <p>This is one of my favorites!</p><br>
+            <div>
+              <ol>
+                <li>Watermelon</li>
+                <li>Vodka</li>
+                <li>Lime juice</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <br>
+            <div style="position: fixed;top: 50px; left:0px; font-style: italic; font-size: 22px; background-color: hotpink;">Don't forget the garnish!</div><br>
+            <h1 style="color: hotpink">Watermelon Moscow Mule</h1>
+            <h6 style="font-family: Impact; font-size: 48px; color: #d4edb6">A Fruity Twist on a Classic Cocktail</h6>
+            <p style="font-size: 32px;margin-bottom: 20px;">This is one of my favorites!</p>
+            <div style="background-color:lightpink; padding: 2px 80px;">
+              <ol style="list-style-image: url('/images/list-item.png'); ">
+                <li>Watermelon</li>
+                <li>Vodka</li>
+                <li>Lime juice</li>
+              </ol>
+            </div>
+          </div>
+          <br><code class="fragment" style="width: 100%;">&lt;h1 class="fancy-title"&gt;Watermelon Moscow Mule&lt;/h1&gt;</code>
+        </section>
+        <section>
+          <h1>Semantic HTML</h1><br>
+          <p class="fragment">Organization and meaning of content</p><br>
+          <code class="fragment" style="width: 75%; margin: 0 auto;" data-fragment-index="1">
+            <div data-fragment-index="2">&lt;q cite="https://www.goodreads.com/book/show/17851885-i-am-malala"&gt;<br>
+              We realize the importance of our voices only when we are silenced.<br></div>
+              &lt;/q&gt;<br>
+          </code><br>
+          <ul>
+            <li class="fragment" style="list-style-type: disc;">Search engines and discoverability (SEO)
+            </li>
+            <li class="fragment" style="list-style-type: disc;">Accessibility and inclusive websites</li>
+            <li class="fragment" style="list-style-type: disc;">Organize code
+            </li>
+        </ul>
+        </section>
+        <section>
+          <h1>Best Practices &amp; Standards</h1><br>
+          <p class="fragment" data-fragment-index="0">
+            Don't forget the following...
+          </p>
+          <code class="fragment" data-fragment-index="1" style="width:75%; margin: 0 auto;">&lt;!--
+            <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;This is a comment</div>
+            <div class="fragment" data-fragment-index="1">--&gt;</div>
+          </code>
+          <div style="padding-top: 30px;">
+            <code class="fragment" data-fragment-index="3" style="color: green; width:75%; margin: 0 auto;">&lt;p&gt;&lt;/p&gt;<div class="fragment" data-fragment-index="4" style="color: red;">&lt;P&gt;&lt;/P&gt;</div></code>
+          </div>
+          <div style="padding-top: 30px;">
+            <code class="fragment" data-fragment-index="5" style="color: green; width:75%; margin: 0 auto;">&lt;p&gt;A whole paragraph!&lt;/p&gt;<div class="fragment" data-fragment-index="6" style="color: red;">&lt;p&gt;Ruh roh, now everything's a paragraph</div></code>
+          </div>
+        </section>
+        <section>
+            <h1>More Good Things</h1><br>
+            <p class="fragment" data-fragment-index="0">
+              Indentation FTW
+            </p>
+            <code class="fragment" data-fragment-index="1" style="color: green; width:60%; margin: 0 auto;">
+              &lt;div&gt;<br>
+                &nbsp;&nbsp;&lt;ol&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;/ol&gt;<br>
+              &lt;/div&gt;<br>
+              <div class="fragment" data-fragment-index="2" style="color: red;">
+                &lt;div&gt;<br>
+                  &lt;ol&gt;<br>
+                    &lt;li&gt;Watermelon&lt;/li&gt;<br>
+                    &lt;li&gt;Vodka&lt;/li&gt;<br>
+                    &lt;li&gt;Lime juice&lt;/li&gt;<br>
+                  &lt;/ol&gt;<br>
+                &lt;/div&gt;<br>
+              </div>
+          </code>
+        </section>
+        <section>
+          <h1>Debugging Tools</h1><br>
+          <p class="fragment">Chrome Developer Tools</p>
+          <p class="fragment" style="font-size: 6.5vh;">(Win) F12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Mac) cmd + opt + i</p><br>
+          <p class="fragment"><a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a></p><br>
+          <p class="fragment"><a href="http://www.w3schools.com" target="_blank">W3 Schools ("Try It Yourself")</a></p><br>
+          <p class="fragment"><a href="http://codepen.io/" target="_blank">CodePen.io</a></p><br>
+          <p class="fragment"><a href="https://developer.mozilla.org/en-US" target="_blank">Mozilla Developer Network (MDN)</a></p><br>
+        </section>
+        <section>
+          <h1>Inspect Source</h1>
+          <img src="/images/html-session/screen2.png" width="80%"/>
+          <p>A good example: <a href="http://weavegotchacovered.com/" target="_blank">weavegotchacovered.com</a></p>
+        </section>
+        <section>
+          <h1>Attributes</h1><br>
+          <p class="fragment">Values added to HTML elements<br>that configure the element</p><br>
+          <p class="fragment">Only in the opening tag of element</p><br>
+          <code class="fragment" style="width:60%;margin: 0 auto;">&lt;a <font style="color:#a3a457">href</font>="tiag.com"&gt;&lt;/a&gt;<br>
+            <div class="fragment">&lt;p <font style="color:#a3a457">id</font>="#hot-toddy&gt;&lt;/p&gt;</div>
+            <div class="fragment">&lt;header <font style="color:#a3a457">class</font>="site-header"&gt;&lt;/header&gt;</div>
+            <div class="fragment">&lt;a <font style="color:#a3a457">href</font>="https://google.com"&gt;Link to google&lt;/a&gt;</div>
+            <div class="fragment">&lt;p <font style="color:#a3a457">data-menuItem</font>="3"&gt;Hot Toddy&lt;/p&gt;</div>
+          </code>
+          <br>
+          <p class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank"><font style="font-size: 36px">https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes</font></a></p>
+        </section>
+        <section>
+          <h1>Paths</h1><br><br>
+          <p class="fragment">The location or address of a thing on a website</p><br>
+          <p class="fragment">Can be expressed two ways that the browser will understand</p><br>
+        </section>
+        <section>
+          <h1>Relative Paths</h1><br><br>
+          <ul>
+            <li class="fragment" style="list-style-type: disc;">Can be used within the current website</li>
+            <li class="fragment" style="list-style-type: disc;">index.html</li>
+            <li class="fragment" style="list-style-type: disc;">/photos/tall-drink-of-water.jpg</li>
+            <li class="fragment" style="list-style-type: disc;">/about/squid-game.html</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Absolute Paths</h1><br><br>
+          <ul>
+            <li class="fragment" style="list-style-type: disc;">Always names the domain</li>
+            <li class="fragment" style="list-style-type: disc;">Links to other sites</li>
+            <li class="fragment" style="list-style-type: disc;">Can be used on same domain as well</li>
+            <li class="fragment" style="list-style-type: disc;">https://awkwardfamilyphotos.com/coach/</li>
+          </ul>
+        </section>
+<!-- break slide -->
+        <section>
+          <h1>The DOM</h1>
+          <img src="/images/html-session/the-dom.jpg" alt="The DOM" width="65%"/>
+        </section>
+        <section>
+          <h2>HTML Structure (Revisited)</h2>
+          <br>
+          <div class="fill-row" style="align-items: flex-start;">
+            <div style="width:50%;">
+              <code class="fragment" data-fragment-index="1">&lt;!DOCTYPE html&gt;
+                <div data-fragment-index="2">&lt;html&gt;</div>
+                  <div data-fragment-index="3">&nbsp;&nbsp;&lt;head&gt;...&lt;/head&gt;</div>
+                  <div data-fragment-index="4">&nbsp;&nbsp;&lt;body&gt;...&lt;/body&gt;</div>
+                <div data-fragment-index="2">&lt;/html&gt;</div>
+              </code>
+            </div>
+            <img class="fragment" data-fragment-index="5" src="/images/html-session/anatomy-xml.png" style="width:30%;"/>
+          </div>
+        </section>
+        <section>
+          <h3>The Document Object Model</h3>
+          <img src="/images/html-session/dom-model.svg" height="85%"/>
+        </section>
+        <section>
+            <br>
+            <img src="/images/html-session/client-server.png" height="80%" width="80%"/>
+        </section>
+        <section>
+          <h1>What Browsers Do</h1><br>
+          <ol class="normal">
+            <li class="fragment">Download the HTML file (Server -> Client)</li>
+            <li class="fragment">Parse the HTML (code -> DOM)</li>
+            <li class="fragment">Load and apply CSS</li>
+            <li class="fragment">Load and apply Javascript</li>
+            <li class="fragment">Render the DOM visually *</li>
+          </ol>
+        </section>
+        <section>
+          <h4>What could possibly go wrong?</h4><br>
+          <ol class="normal">
+            <li class="fragment">Can't find HTML file on server</li>
+            <li class="fragment">Parse error: Missing end tag</li>
+            <li class="fragment">Can't find CSS file on server</li>
+            <li class="fragment">Can't find JS file on server</li>
+            <li class="fragment">Parse error in <font style="font-style: italic">those</font> files</li>
+          </ol>
+        </section>
+        <section>
+          <h1>When you're stuck</h1><br>
+          <p class="fragment">Pay attention to your IDE<br>(syntax highlighting and linter warnings)</p><br>
+          <p class="fragment">Use a validator</p><br>
+          <p class="fragment">Look for missing end tags (indent!)</p><br>
+          <p class="fragment">Peers, co-workers, KCWiT Slack</p><br>
+          <p class="fragment"><a href="http://stackoverflow.com" target="_blank"/>stackoverflow.com</a></p><br>
+        </section>
+        <!-- part 1-->
+        <section>
+          <h1>Introduction</h1>
+          <img src="/images/html-session/introduction.jpg" height="80%" alt="Introduction"/>
+        </section>
+        <section>
+          <h1>What is it?</h1>
+          <br>
+          <br>
+          <p class="fragment">
+            Architecture is conceptual...<br>
+            <font class="fragment">
+              how files are organized
+            </font>
+          </p>
+          <br>
+          <br>
+          <p class="fragment">
+            Building a house requires good architecture...<br>
+            <font class="fragment">
+              the same applies to apps/sites
+            </font>
+          </p>
+        </section>
+        <section>
+          <h1>What is it?</h1>
+          <br>
+          <p class="fragment" data-fragment-index="1">
+            A toolshed is not like a baseball stadium...<br>
+          </p>
+          <img src="/images/html-session/shed.jpg" alt="Shed" class="fragment current-visible" data-fragment-index="1">
+          <img src="/images/html-session/baseball-stadium.jpg" alt="Baseball Stadium" class="fragment" data-fragment-index="2">
+          <p class="fragment" data-fragment-index="2">
+            different apps/sites require different structures
+          </p>
+        </section>
+        <section>
+          <h1 style="font-size: 10vh;">Concepts &amp; Preferences</h1>
+          <br>
+          <p style="margin-left: 40px;">
+            Architecture can vary based on:
+          </p>
+          <br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Project requirements</li>
+            <li class="fragment">Technologies chosen</li>
+            <li class="fragment">Team preferences</li>
+            <ul>
+              <li class="fragment" type="disc" style="margin: 0.25em 0;"><code style="display: inline; padding: 5px; font-size: 0.75em;">imgs</code> vs <code style="display: inline; padding: 5px; font-size: 0.75em;">images</code></li>
+              <li class="fragment" type="disc" style="margin: 0.25em 0;"><code style="display: inline; padding: 5px; font-size: 0.75em;">app/about/css</code> vs <code style="display: inline; padding: 5px; font-size: 0.75em;">app/css/about</code></li>
+              <li class="fragment" type="disc" style="margin: 0.25em 0;"><code style="display: inline; padding: 5px; font-size: 0.75em;">dashed-names</code> vs <code style="display: inline; padding: 5px; font-size: 0.75em;">underscore_names</code></li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>The Structure</h1>
+          <img src="/images/html-session/the-structure.jpg" alt="The Structure" />
+        </section>
+        <section>
+          <h1 style="font-size: 9vh;">Ahh... that's more like it</h1>
+          <img src="/images/html-session/the-structure2.jpg" alt="The Structure"/>
+        </section>
+  <!-- Section 2 -->
+        <section>
+          <h1 style="font-size: 10vh;">Other Important Things</h1>
+          <img src="/images/html-session/other-things.jpg" alt="Other things" />
+        </section>
+        <section>
+          <h1>It's not about you</h1>
+          <br>
+          <img src="/images/html-session/other-things2.jpg" alt="Other things" height="50%" />
+        </section>
+        <section>
+          <h2 style="font-size: 9vh;">Helpful Conventions</h2>
+          <br>
+          <p>Documentation:</p>
+          <img src="/images/html-session/grandmas-recipe.jpg" alt="Grandmas recipe card" height="50%">
+          <p>Helps others build and understand the project</p>
+        </section>
+        <section>
+          <h2 style="font-size: 9vh;">Helpful Conventions</h2>
+          <br>
+          <p>Naming Conventions:</p>
+            <img src="/images/html-session/namingThings.jpg" alt="Programmer's Hardest Tasks" height="70%">
+        </section>
+        <section>
+          <h2 style="font-size: 9vh;">Helpful Conventions</h2>
+          <br>
+          <p>Build Tools:</p>
+          <img src="/images/html-session/coffee-tools.jpg" alt="Aeropress Coffee Setup">
+          <p>
+            Simplify proceses<br>(running tests, minifying code, etc)
+          </p>
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ol class="normal">
+            <li class="fragment">Find a friend</li>
+            <li class="fragment">Take <a href="https://forms.gle/RsVzHeF1LV7NoyjP6" target="_blank">the quiz</a></li>
+            <li class="fragment">Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a></li>
+            <li class="fragment">Finish <a href="http://bit.ly/cnchtmlwork" target="_blank">tonight's worksheet</a></li>
+            <li class="fragment">Find an <a href="http://lmgtfy.com/?q=Front+End+Architecture+tutorial" target="_blank">online tutorial on Front End Architecture</a></li>
+            <li class="fragment">Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank">next month's event</a></li>
+          </ol>
+          <img src="/images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">codingandcocktails.kcwomenintech.org</a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank"><img src="/images/shared/fb.png" width="120"/></a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank"><img src="/images/shared/eventbrite.png" width="350"/></a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank"><img src="/images/shared/meetup.png" width="190"/></a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank"><img src="/images/shared/twitter.png" width="150"/></a>
+          <br><br>
+          <div class="fragment">
+            <p>#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT</p>
+            <br>
+            <p>#CodingAndCocktailsKC</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="/lib/js/head.min.js"></script>
+    <script src="/js/reveal.js"></script>
+    <script src="/js/custom.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+	</body>
+</html>
