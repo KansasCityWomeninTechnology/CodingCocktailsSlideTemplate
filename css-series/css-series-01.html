@@ -90,7 +90,7 @@
         <section>
             <h1 style="font-size: 10vh;">What is CSS?</h1>
             <br>
-            <h2 class="fragment" style="font-size: 6vh;">CSS stands for Cascading Style Sheets.  It allows us to make the website look however we want!</h1>
+            <p class="fragment" style="font-size: 6vh;">CSS stands for Cascading Style Sheets.  It allows us to make the website look however we want!</p>
             <br>
             <h2 class="fragment" style="float: left; font-size: 6vh;">So what can we change?</h2>
             <br>
@@ -102,7 +102,7 @@
             </ol>
             <br>
             <br>
-            <h2 class="fragment" style="float: left; font-size: 6vh;">We need CSS to make our website look pretty!</h1>
+            <p class="fragment" style="float: left; font-size: 6vh;">We need CSS to make our website look pretty!</p>
         </section>
         <section>
             <h1 style="font-size: 10vh;">A few Examples!</h1>
@@ -143,13 +143,13 @@
             <h1 style="font-size: 10vh;">External CSS Files</h1>
             <br>
             <br>
-            <h2 class="fragment" style="float: left; font-size: 6vh;">CSS (AKA Stylesheets) have the file extension .CSS</h2>
+            <p class="fragment" style="float: left; font-size: 6vh;">CSS (AKA Stylesheets) have the file extension .CSS</p>
             <br>
             <br>
-            <h2 class="fragment" style="float: left; font-size: 6vh;">When following best front-end practices .css files will live in a folder specifically for stylesheets</h2>
+            <p class="fragment" style="float: left; font-size: 6vh;">When following best front-end practices .css files will live in a folder specifically for stylesheets</p>
             <br>
             <br>
-            <h2 class="fragment" style="float: left; font-size: 6vh;">Example to add a stylesheet to our HTML</h2>
+            <p class="fragment" style="float: left; font-size: 6vh;">Example to add a stylesheet to our HTML</p>
             <br>
             <br>
             <code class="fragment" style="width:75%;margin: 0 auto;">&lt;link rel="stylesheet" href"styles/styles.css" &gt;</code>
@@ -227,6 +227,29 @@
             <p class="fragment" style="font-size: 6vh;">You don't need to memorize them all, you just need to know how to look it up.</p><br>
             <p class="fragment" style="font-size: 6vh;">A wonderful resource for this: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</p><br>
             <p class="fragment" style="font-size: 6vh;">In addition to tonight's worksheet, you can start out with CSS Diner - http://flukeout.github.io - to practice CSS</p><br>
+        </section>
+        <section>
+            <h1>The Cascade</h1><br>
+            <p class="fragment" style="font-size: 6vh;">Order Matters!</p><br>
+            <p class="fragment" style="font-size: 5vh;">Properties override properties but whole rules dont override whole rules.</p><br>
+            <p class="fragment" style="font-size: 5vh;">Later rules override earlier rules if the rule follows the same specificity</p><br>
+            <ol class="fragment" style="margin: 0 0 0 60px;" type="a">What makes a selector specific? 
+                <li class="fragment" style="font-size: 4vh;">Element selectors (IE: a selector for all p tags) -- lowest priority</li>
+                <li class="fragment" style="font-size: 4vh;">Class selectors (IE: you create a custom CSS class) -- next priority</li>
+                <li class="fragment" style="font-size: 4vh;">Combining selectors to make a rule more specific, we will cover this more in the next section.</li>
+                <li class="fragment" style="font-size: 4vh;"><code style="width:75%; font-size:3vh;">!important</code> is used when all else fails.  If a line of CSS is marked as !important, it will always win.  <strong>This should be used sparingly and it is bad practice.</strong>  A better option is to use a more specific selector instead.</li>
+            </ol>
+        </section>
+        <section>
+            <h1>Even More Information!</h1><br>
+            <p class="fragment" style="font-size: 6vh;">Normalize your CSS. Each browser has its own set of default styles. If we leave those as is, our site would look slightly different depending on the users browser. We can normalize our CSS to remedy this.</p> <br>
+            <p class="fragment" style="font-size: 6vh;">Some browsers have limitations in what CSS they allow. Browser prefixes are sometimes necessary and there are tools such as CanIUse to help us determine if we need a prefix.</p><br>
+            <p class="fragment" style="font-size: 6vh;">Like most coding languages, CSS allows for comments.  A comment in CSS looks like: <code class="fragment">/* This is a comment */</code></p>
+        </section>
+        <section>
+            <h1>Thank you!</h1>
+            <p style="font-size: 7vh;">Have a great time making the web more beautiful!</p><br><br>
+            <img src="/images/CSS-session/cheers.gif" alt="image man saying cheers" />
         </section>
       </div>
     </div>
