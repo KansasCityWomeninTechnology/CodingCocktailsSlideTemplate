@@ -104,23 +104,6 @@
         <p class="fragment" style="float: left; font-size: 6vh;">We need CSS to make our website look pretty!</p>
       </section>
       <section>
-        <h1 style="font-size: 10vh;">A few Examples!</h1>
-        <br>
-        <h2 class="fragment" style="font-size: 6vh;">Font Colors and Size</h1>
-          <code class="fragment"
-            style="width:75%;margin: 0 auto;">&lt;p style="color: #484e78; font-size: 14px;"&gt;Hey girl&lt;/p&gt;</code>
-          <h2 class="fragment" style="font-size: 6vh;">General Size of Image</h1>
-            <code class="fragment"
-              style="width:75%;margin: 0 auto;">&lt;img src="some/image/path" height="400" width="200"&gt;Hey girl&lt;/img&gt;</code>
-            <h2 class="fragment" style="font-size: 6vh;">Margin, Float and Padding</h2>
-            <code class="fragment"
-              style="width:75%;margin: 0 auto;">&lt;p style="margin-top: 10px; margin-left: 10px;"&gt;Hey girl&lt;/p&gt;</code>
-            <code class="fragment"
-              style="width:75%;margin: 0 auto;">&lt;p style="padding-top: 5px; padding-left:6px;"&gt;Hey girl&lt;/p&gt;</code>
-            <code class="fragment"
-              style="width:75%;margin: 0 auto;">&lt;p style="float: left;"&gt;Hey girl&lt;/p&gt;</code>
-      </section>
-      <section>
         <h1 style="font-size: 10vh;">What happens if we dont have CSS?</h1>
         <img src="/images/CSS-session/bbc-css.webp" alt="bbc no css vs css" height="76%" />
       </section>
@@ -458,6 +441,43 @@
         <h1>Work Time</h1>
         <p style="font-size: 7vh;">See you soon!</p><br><br>
         <img src="/images/CSS-session/catType.gif" alt="image cat typing" />
+      </section>
+      <section>
+        <h1>Box Model</h1>
+        <p style="font-size: 7vh;">The Box Model is a great way to visualize spacing on our site.</p><br>
+        <img src="/images/CSS-session/boxModel.png" alt="image of the box model" />
+        <p class="fragment" style="font-size: 7vh;">Other important layout properties: </p> <br>
+        <p class="fragment" style="font-size: 5vh;">display - specifies the display behavior of the element. Typically it will have either the value of "inline", meaning the element does not create a new line, or "block" meaning the element does create a new block.</p>
+      </section>
+      <section>
+        <h1 style="font-size: 10vh;">Text CSS Options</h1>
+        <br>
+        <h2 class="fragment" style="font-size: 6vh;">Font Colors</h1>
+        <code class="fragment"
+          style="width:75%;margin: 0 auto;">&lt;p style="color: #484e78;"&gt;Hey girl&lt;/p&gt;</code>
+        <h2 class="fragment" style="font-size: 6vh;">Font Size</h1>
+        <code class="fragment"
+          style="width:75%;margin: 0 auto;">&lt;p style="font-size: 4vh;"&gt;Hey girl&lt;/p&gt;</code>
+        <h2 class="fragment" style="font-size: 6vh;">Text Alignment - can be left, right, center, justify</h2>
+        <code class="fragment"
+          style="width:75%;margin: 0 auto;">&lt;p style="text-align: left;"&gt;Hey girl&lt;/p&gt;</code>
+        <h2 class="fragment" style="font-size: 6vh;">Font Family</h2>
+        <code class="fragment"
+          style="width:75%;margin: 0 auto;">&lt;p style="font-family: Roboto, sans-serif;"&gt;Hey girl&lt;/p&gt;</code>
+      </section>
+      <section>
+        <h1>Adding Icons to Selectors</h1><br>
+        <p class="fragment" style="font-size: 5vh">We can even use CSS to add icons to our site!</p><br>
+        <p class="fragment" style="font-size: 5vh">There are tools such as <a href="http://fontawesome.io/">Font Awesome</a> where we can get icons to use for free.</p><br>
+        <p class="fragment" style="font-size: 5vh">If used, tools like font awesome will need to be either imported in the css file or linked in the &lt;head&gt; of the HTML.</p><br>
+        <p class="fragment" style="font-size: 5vh">We talked about pseudo-elements earlier. This is the prime time to use one!</p><br>
+        <code class="fragment" style="font-size: 3vh;">
+          <div>&nbsp; &nbsp; p::before {</div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; font: var(--fa-font-solid);</div>
+          <div>&nbsp; &nbsp; &nbsp; &nbsp; content: "\f57b";</div>
+          <div>&nbsp; &nbsp; }</div>
+        </code> <br>
+        <p class="fragment" style="font-size: 5vh">In short, the above snippet will put the icon from Font Awesome before any &lt;p&gt; elements.</p><br>
       </section>
       <section>
         <h1>Thank you!</h1>
