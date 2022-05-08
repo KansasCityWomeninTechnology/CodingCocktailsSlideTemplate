@@ -2,254 +2,536 @@
 <html>
   <head>
     <title>CSS Basics - Coding &amp; Cocktails KC</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course."/>
-    <meta name="author" content="Kansas City Women in Technology"/>
-    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course." />
+    <meta name="author" content="Kansas City Women in Technology" />
+    <meta name="keywords"
+      content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development" />
     <meta property="og:title" content="Front End Architecture - Coding &amp; Cocktails KC" />
-    <meta property="og:type" content="website"/>
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
-    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
-    <meta property="og:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
-    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
-    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
-    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org" />
+    <meta property="og:description"
+      content="This is the official Coding &amp; Cocktails Front End Architecture course." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org" />
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology" />
+    <meta name="twitter:description"
+      content="This is the official Coding &amp; Cocktails Front End Architecture course." />
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="/css/reveal.css"/>
-    <link rel="stylesheet" href="/css/theme/codingandcocktails.css" id="theme"/>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/reveal.css" />
+    <link rel="stylesheet" href="/css/theme/codingandcocktails.css" id="theme" />
   </head>
+
   <body>
     <div class="reveal">
       <div class="slides">
         <section>
           <h3>CSS Basics</h3>
-          <img src="/images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+          <img src="/images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo" />
         </section>
         <section>
           <h1>Join us on...</h1>
           <a href="https://kcwit.slack.com" target="_blank" class="fragment">
-            <img src="/images/shared/slack-logo-white.png" alt="Slack" width="60%"/>
+            <img src="/images/shared/slack-logo-white.png" alt="Slack" width="60%" />
           </a>
           <br>
           <br>
           <div class="row-line-slack" style="margin-left: -0.5em;">
             <span class="row-line-slack fragment">
-              <a href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
+              <a
+                href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
                 <img src="/images/slack-previews/slack-genx.jpg" alt="Carolyn Westhoff" />
               </a>
               <p class="slack-label">#generation-x</p>
             </span>
             <span class="row-line-slack fragment">
-              <img src="/images/slack-previews/slack-tabletop.jpg"/>
+              <img src="/images/slack-previews/slack-tabletop.jpg" />
               <p class="slack-label">#tabletop</p>
             </span>
             <span class="row-line-slack fragment">
-              <img src="/images/slack-previews/slack-movies.gif"/>
+              <img src="/images/slack-previews/slack-movies.gif" />
               <p class="slack-label">#movies</p>
             </span>
             <span class="row-line-slack fragment">
-              <img src="/images/slack-previews/slack-catsdoggos.jpg"/>
+              <img src="/images/slack-previews/slack-catsdoggos.jpg" />
               <p class="slack-label">#cats_and_doggos</p>
             </span>
           </div>
           <div>
         </section>
         <section>
-            <h2>Our mentors</h2>
-            <img src="/images/10-oct/mentors.gif" alt="Mentors" height="70%" style="margin: 15px auto;" />
-            <h4>are super heroes!</h4>
+          <h2>Our mentors</h2>
+          <img src="/images/10-oct/mentors.gif" alt="Mentors" height="70%" style="margin: 15px auto;" />
+          <h4>are super heroes!</h4>
         </section>
         <section>
-            <h1>Tonight's Agenda: CSS</h1>
-            <br>
-            <ol style="margin-left: 40px;">
-                <li class="fragment">Overview of CSS
-                <ol style="margin: 0 0 0 60px;" type="a">
-                    <li class="fragment">What is CSS?</li>
-                    <li class="fragment">Why do we need CSS?</li>
-                </ol>
-                </li>
-                <li class="fragment">The Basics
-                    <ol style="margin: 0 0 0 60px;" type="a">
-                        <li class="fragment">How to include CSS in a project.</li>
-                        <li class="fragment">How to write CSS.</li>
-                        <li class="fragment">Best naming practices.</li>
-                        <li class="fragment">Basic properties and their values.</li>
-                        <li class="fragment">What does cascade actually mean?</li>
-                    </ol>
-                </li>
-            </ol>
+          <h1>Tonight's Agenda: CSS</h1>
+          <br>
+          <ol style="margin-left: 40px;">
+            <li class="fragment">Overview of CSS</li>
+            <li class="fragment">The Basics</li>
+            <li class="fragment">Selectors</li>
+            <li class="fragment">Box Model</li>
+            <li class="fragment">Text</li>
+            <li class="fragment">Icons</li>
+          </ol>
         </section>
         <section>
-            <h1 style="font-size: 10vh;">What is CSS?</h1>
-            <br>
-            <p class="fragment" style="font-size: 6vh;">CSS stands for Cascading Style Sheets.  It allows us to make the website look however we want!</p>
-            <br>
-            <h2 class="fragment" style="float: left; font-size: 6vh;">So what can we change?</h2>
-            <br>
-            <br>
-            <ol style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">Font Color</li>
-                <li class="fragment">Size</li>
-                <li class="fragment">Element placement on the page</li>
-            </ol>
-            <br>
-            <br>
-            <p class="fragment" style="float: left; font-size: 6vh;">We need CSS to make our website look pretty!</p>
+          <h1 style="font-size: 10vh;">What is CSS?</h1>
+          <br>
+          <p class="fragment" style="font-size: 6vh;">CSS stands for Cascading Style Sheets. It allows us to make the
+            website look however we want!</p>
+          <br>
+          <h2 class="fragment" style="float: left; font-size: 6vh;">So what can we change?</h2>
+          <br>
+          <br>
+          <ol style="margin: 0 0 0 60px;" type="a">
+            <li class="fragment">Font Color</li>
+            <li class="fragment">Size</li>
+            <li class="fragment">Element placement on the page</li>
+          </ol>
+          <br>
+          <br>
+          <p class="fragment" style="float: left; font-size: 6vh;">We need CSS to make our website look pretty!</p>
         </section>
         <section>
-            <h1 style="font-size: 10vh;">A few Examples!</h1>
-            <br>
-            <h2 class="fragment" style="font-size: 6vh;">Font Colors and Size</h1>
-            <code class="fragment" style="width:75%;margin: 0 auto;">&lt;p style="color: #484e78; font-size: 14px;"&gt;Hey girl&lt;/p&gt;</code>
-            <h2 class="fragment" style="font-size: 6vh;">General Size of Image</h1>
-            <code class="fragment" style="width:75%;margin: 0 auto;">&lt;img src="some/image/path" height="400" width="200"&gt;Hey girl&lt;/img&gt;</code>
-            <h2 class="fragment" style="font-size: 6vh;">Margin, Float and Padding</h2>
-            <code class="fragment" style="width:75%;margin: 0 auto;">&lt;p style="margin-top: 10px; margin-left: 10px;"&gt;Hey girl&lt;/p&gt;</code>
-            <code class="fragment" style="width:75%;margin: 0 auto;">&lt;p style="padding-top: 5px; padding-left:6px;"&gt;Hey girl&lt;/p&gt;</code>
-            <code class="fragment" style="width:75%;margin: 0 auto;">&lt;p style="float: left;"&gt;Hey girl&lt;/p&gt;</code>
+          <h1 style="font-size: 10vh;">What happens if we dont have CSS?</h1>
+          <img src="/images/CSS-session/bbc-css.webp" alt="bbc no css vs css" height="76%" />
         </section>
         <section>
-            <h1 style="font-size: 10vh;">What happens if we dont have CSS?</h1>
-            <img src="/images/CSS-session/bbc-css.webp" alt="bbc no css vs css" height="76%"/>
+          <h1 style="font-size: 10vh;">How do we include CSS in a project?</h1>
+          <br>
+          <h2 class="fragment" style="font-size: 6vh;">Three ways to do it!</h2>
+          <ol style="margin: 0 0 0 60px;" type="a">
+            <li class="fragment">Inline on HTML element.</li>
+            <li class="fragment">Internal to HTML file by adding to style tag on HTML
+              <br>
+              <br>
+              <code class="fragment" style="width:75%;margin: 0 auto;">
+                  <div>&lt;style&gt;</div>
+                  <div>&nbsp; &nbsp; p {</div>
+                  <div>&nbsp; &nbsp; &nbsp; &nbsp; font-size: 15px;</div>
+                  <div>&nbsp; &nbsp; }</div>
+                  <div> &lt;/style&gt</div>
+                </code>
+            </li>
+            <li class="fragment">External CSS Files... Hint: this is the best practice!!</li>
+          </ol>
         </section>
         <section>
-            <h1 style="font-size: 10vh;">How do we include CSS in a project?</h1>
-            <br>
-            <h2 class="fragment" style="font-size: 6vh;">Three ways to do it!</h2>
-            <ol style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">Inline on HTML element.</li>
-                <li class="fragment">Internal to HTML file by adding to style tag on HTML
-                    <br>
-                    <code class="fragment" style="width:75%;margin: 0 auto;">
-                        <div class="fragment">&lt;style&gt;</div>
-                        <div class="fragment">&nbsp; &nbsp; p {</div>
-                        <div class="fragment">&nbsp; &nbsp; &nbsp; &nbsp; font-size: 15px;</div>
-                        <div class="fragment">&nbsp; &nbsp; &nbsp;}</div>
-                        <div class="fragment"> &lt;/style&gt</div>
-                    </code>
-                </li>
-                <li class="fragment">External CSS Files... Hint: this is the best practice!!</li>
-            </ol>
+          <h1 style="font-size: 10vh;">External CSS Files</h1>
+          <br>
+          <br>
+          <p class="fragment" style="float: left; font-size: 6vh;">CSS (AKA Stylesheets) have the file extension .CSS</p>
+          <br>
+          <br>
+          <p class="fragment" style="float: left; font-size: 6vh;">When following best front-end practices .css files will
+            live in a folder specifically for stylesheets</p>
+          <br>
+          <br>
+          <p class="fragment" style="float: left; font-size: 6vh;">Example to add a stylesheet to our HTML</p>
+          <br>
+          <br>
+          <code class="fragment"
+            style="width:75%;margin: 0 auto;">&lt;link rel="stylesheet" href"styles/styles.css" &gt;</code>
+          <br>
+          <p class="fragment" style="float: left; font-size: 5vh;">The link tag links to an external file, in this case,
+            is our stylesheet. The rel attribute tells the browser that the link is a stylesheet. The href tells the
+            browser the location of the files.</p>
+          <p class="fragment" style="float: left; font-size: 5vh;">You can use multiple stylesheets for one project. We
+            can include as many links as we want. However, for this session, we will only use one.</p>
         </section>
         <section>
-            <h1 style="font-size: 10vh;">External CSS Files</h1>
-            <br>
-            <br>
-            <p class="fragment" style="float: left; font-size: 6vh;">CSS (AKA Stylesheets) have the file extension .CSS</p>
-            <br>
-            <br>
-            <p class="fragment" style="float: left; font-size: 6vh;">When following best front-end practices .css files will live in a folder specifically for stylesheets</p>
-            <br>
-            <br>
-            <p class="fragment" style="float: left; font-size: 6vh;">Example to add a stylesheet to our HTML</p>
-            <br>
-            <br>
-            <code class="fragment" style="width:75%;margin: 0 auto;">&lt;link rel="stylesheet" href"styles/styles.css" &gt;</code>
-            <br>
-            <p class="fragment" style="float: left; font-size: 5vh;">The link tag links to an external file, in this case, is our stylesheet.  The rel attribute tells the browser that the link is a stylesheet.  The href tells the browser the location of the files.</p>
-            <p class="fragment" style="float: left; font-size: 5vh;">You can use multiple stylesheets for one project.  We can include as many links as we want.  However, for this session, we will only use one.</p>
-        </section>
-        <section>
-            <h1>Stylesheet General Information</h1>
-            <br><br>
-            <p class="fragment" style="text-align: left; font-size: 7vh;">
-                First, a few quick vocabulary words:<br>
-                <span class="fragment">Selector: the element weare creating the styles for. </span><br>
-                <span class="fragment">Property: the part of the element we are styling (ie: color)</span><br>
-                <span class="fragment">Value: the style we want (ie: for color we might use "blue")</span><br>
-            </p>
-            <br>
-            <code class="fragment" style="width:75%;margin: 0 auto;">
-                <div class="fragment">&nbsp; &nbsp; selector {</div>
-                <div class="fragment">&nbsp; &nbsp; &nbsp; &nbsp; property: value;</div>
-                <div class="fragment">&nbsp; &nbsp; &nbsp;}</div>
+          <h1>Stylesheet General Information</h1>
+          <br><br>
+          <p class="fragment" style="text-align: left; font-size: 7vh;">
+            First, a few quick vocabulary words:<br>
+            <span class="fragment">Selector: the element weare creating the styles for. </span><br>
+            <span class="fragment">Property: the part of the element we are styling (ie: color)</span><br>
+            <span class="fragment">Value: the style we want (ie: for color we might use "blue")</span><br>
+          </p>
+          <br>
+          <code class="fragment" style="width:75%;margin: 0 auto;">
+              <div>&nbsp; &nbsp; selector {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; property: value;</div>
+              <div>&nbsp; &nbsp; }</div>
             </code>
         </section>
         <section>
-            <h1>Different Types of Selectors</h1><br>
-            <h2 class="fragment" style="float: left; font-size: 5vh;">Element Selectors - Styles all instances of that element</h2>
-            <code class="fragment" style="width:75%;">
-                <div class="fragment">&nbsp; &nbsp; h2 {</div>
-                <div class="fragment">&nbsp; &nbsp; &nbsp; &nbsp; color: green;</div>
-                <div class="fragment">&nbsp; &nbsp; &nbsp;}</div>
+          <h1>Different Types of Selectors</h1><br>
+          <h2 class="fragment" style="font-size: 4vh;">Element Selectors - Styles all instances of that
+            element</h2>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+              <div>&nbsp; &nbsp; h2 {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: green;</div>
+              <div>&nbsp; &nbsp; }</div>
             </code>
-            <h2 class="fragment" style="float: left; font-size: 5vh;">Class Selectors - Styles all elements marked with that class</h2>
-            <code class="fragment" style="width:75%;">
-                <div class="fragment">&nbsp; &nbsp; .cocktail {</div>
-                <div class="fragment">&nbsp; &nbsp; &nbsp; &nbsp; color: pink;</div>
-                <div class="fragment">&nbsp; &nbsp; &nbsp;}</div>
+          <h2 class="fragment" style="font-size: 4vh;">Class Selectors - Styles all elements marked with that
+            class</h2>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+              <div>&nbsp; &nbsp; .cocktail {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: pink;</div>
+              <div>&nbsp; &nbsp; }</div>
             </code>
-            <code class="fragment" style="width:75%;">&lt;p class="cocktail"&gt;Hey girl&lt;/p&gt;</code>
-            <p class="fragment" style="font-size: 4vh;">You can also style elements differently based on element state.  IE: We can change the look of an element if the user hovers over the element.</p>
+          <code class="fragment" style="width:75%; font-size: 3vh;">&lt;p class="cocktail"&gt;Hey girl&lt;/p&gt;</code>
+          <p class="fragment" style="font-size: 4vh;">You can also style elements differently based on element state. IE:
+            We can change the look of an element if the user hovers over the element.</p>
         </section>
         <section>
-            <h1>Class Naming Best Practices</h1><br><br>
-            <h2 class="fragment" style="float: left; font-size: 7vh;">Name classes based on what the class <font style="color:#c7bc75">is</font> not what the class <font style="color:#c7bc75">looks like</font></h2>
-            <ol class="fragment" style="margin: 0 0 0 60px;" type="a"> 
-                <li class="fragment">Allows for a clearer meaning of what the class is for.</li>
-                <li class="fragment">Makes maintaining the CSS easier.</li>
-                <li class="fragment">For responsive sites, (IE: sites that look different on mobile/tablet/desktop) how something looks may change between the various sizes.  This would make a class based on how somethign looks make sense on one but not the other.</li>
-            </ol>
+          <h1>Class Naming Best Practices</h1><br><br>
+          <h2 class="fragment" style="float: left; font-size: 7vh;">Name classes based on what the class <font
+              style="color:#c7bc75">is</font> not what the class <font style="color:#c7bc75">looks like</font>
+          </h2>
+          <ol class="fragment" style="margin: 0 0 0 60px;" type="a">
+            <li class="fragment" style="font-size: 6vh;">Allows for a clearer meaning of what the class is for.</li>
+            <li class="fragment" style="font-size: 6vh;">Makes maintaining the CSS easier.</li>
+            <li class="fragment" style="font-size: 6vh;">For responsive sites, (IE: sites that look different on
+              mobile/tablet/desktop) how
+              something looks may change between the various sizes. This would make a class based on how somethign looks
+              make sense on one but not the other.</li>
+          </ol>
         </section>
         <section>
-            <h1>Units of Measurement</h1><br>
-            <h2 class="fragment" style="font-size: 7vh;">Absolute - the size is the size regardless of parent.</h2>
-            <p class="fragment" style="font-size: 5vh;">Pixels are the most common. There are others, but mostly will see pixels.</p>
-            <br>
-            <h2 class="fragment" style="font-size: 7vh;">Relative - the size is depenedant on the parents size.</h2>
-            <p class="fragment" style="font-size: 5vh;">Percent - will make the element X% size bigger / smaller than the parent element.</p>
-            <p class="fragment" style="font-size: 5vh;">rem/em - will make the element X times size bigger / smaller than the parent element.</p>
-            <p class="fragment" style="font-size: 5vh;">vh/vw - will make the element take up X amount of the viewport height or width</p>
+          <h1>Units of Measurement</h1><br>
+          <h2 class="fragment" style="font-size: 7vh;">Absolute - the size is the size regardless of parent.</h2>
+          <p class="fragment" style="font-size: 5vh;">Pixels are the most common. There are others, but mostly will see
+            pixels.</p>
+          <br>
+          <h2 class="fragment" style="font-size: 7vh;">Relative - the size is depenedant on the parents size.</h2>
+          <p class="fragment" style="font-size: 5vh;">Percent - will make the element X% size bigger / smaller than the
+            parent element.</p>
+          <p class="fragment" style="font-size: 5vh;">rem/em - will make the element X times size bigger / smaller than
+            the parent element.</p>
+          <p class="fragment" style="font-size: 5vh;">vh/vw - will make the element take up X amount of the viewport
+            height or width</p>
         </section>
         <section>
-            <h1>Colors</h1><br>
-            <p class="fragment" style="font-size: 6vh;">Important note: Keep accessibility in mind when selecting colors. A big thing to note, is contrast being high enough. There are a lot of great tools to help with this.</p>
-            <br><p class="fragment" style="font-size: 6vh;">RGB - rgb(Red, Green, Blue)</p> <br>
-            <p class="fragment" style="font-size: 5vh">Each number passed into rgb is based on intensity. The higher the intensity, the more the color will be represented.</p>
-            <p class="fragment" style="font-size: 5vh">White: rgb(255, 255, 255)</p>
-            <p class="fragment" style="font-size: 5vh">Black: rgb(0, 0, 0)</p>
-            <p class="fragment" style="font-size: 5vh">Red: rgb(255, 0, 0)</p>
-            <br><p class="fragment" style="font-size: 6vh;">Hexadecimal Numbers <font style="color:#beb66d">(#beb66d)</font> - another way to represent colors.</p>
-            <p class="fragment" style="font-size: 5vh;">https://htmlcolorcodes.com/color-picker/ can be used to get the hex value for any color!</p> <br>
+          <h1>Colors</h1><br>
+          <p class="fragment" style="font-size: 6vh;">Important note: Keep accessibility in mind when selecting colors. A
+            big thing to note, is contrast being high enough. There are a lot of great tools to help with this.</p>
+          <br>
+          <p class="fragment" style="font-size: 6vh;">RGB - rgb(Red, Green, Blue)</p> <br>
+          <p class="fragment" style="font-size: 4vh">Each number passed into rgb is based on intensity. The higher the
+            intensity, the more the color will be represented.</p>
+          <p class="fragment" style="font-size: 4vh">White: rgb(255, 255, 255)</p>
+          <p class="fragment" style="font-size: 4vh">Black: rgb(0, 0, 0)</p>
+          <p class="fragment" style="font-size: 4vh">Red: rgb(255, 0, 0)</p>
+          <br>
+          <p class="fragment" style="font-size: 6vh;">Hexadecimal Numbers <font style="color:#beb66d">(#beb66d)</font> -
+            another way to represent colors.</p>
+          <p class="fragment" style="font-size: 4vh;"><a href="https://htmlcolorcodes.com/color-picker/">Color Picker</a>
+            can be used to get the hex
+            value for any color!</p> <br>
         </section>
         <section>
-            <h1>Other Properties</h1><br>
-            <p class="fragment" style="font-size: 6vh;">There are > 300 different propeties in CSS & ~infinite number of values!</p><br>
-            <p class="fragment" style="font-size: 6vh;">Each property has a specific set of valid values, but dont worry!</p><br>
-            <p class="fragment" style="font-size: 6vh;">You don't need to memorize them all, you just need to know how to look it up.</p><br>
-            <p class="fragment" style="font-size: 6vh;">A wonderful resource for this: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</p><br>
-            <p class="fragment" style="font-size: 6vh;">In addition to tonight's worksheet, you can start out with CSS Diner - http://flukeout.github.io - to practice CSS</p><br>
+          <h1>Other Properties</h1><br>
+          <p class="fragment" style="font-size: 6vh;">There are > 300 different propeties in CSS & ~infinite number of
+            values!</p><br>
+          <p class="fragment" style="font-size: 6vh;">Each property has a specific set of valid values, but dont worry!
+          </p><br>
+          <p class="fragment" style="font-size: 6vh;">You don't need to memorize them all, you just need to know how to
+            look it up.</p><br>
+          <p class="fragment" style="font-size: 6vh;">A wonderful resource for this:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla CSS Documentation</a>
+          </p><br>
+          <p class="fragment" style="font-size: 6vh;">In addition to tonight's worksheet, you can start out with <a
+              href="http://flukeout.github.io">CSS Diner</a> - to practice CSS</p><br>
         </section>
         <section>
-            <h1>The Cascade</h1><br>
-            <p class="fragment" style="font-size: 6vh;">Order Matters!</p><br>
-            <p class="fragment" style="font-size: 5vh;">Properties override properties but whole rules dont override whole rules.</p><br>
-            <p class="fragment" style="font-size: 5vh;">Later rules override earlier rules if the rule follows the same specificity</p><br>
-            <ol class="fragment" style="margin: 0 0 0 60px;" type="a">What makes a selector specific? 
-                <li class="fragment" style="font-size: 4vh;">Element selectors (IE: a selector for all p tags) -- lowest priority</li>
-                <li class="fragment" style="font-size: 4vh;">Class selectors (IE: you create a custom CSS class) -- next priority</li>
-                <li class="fragment" style="font-size: 4vh;">Combining selectors to make a rule more specific, we will cover this more in the next section.</li>
-                <li class="fragment" style="font-size: 4vh;"><code style="width:75%; font-size:3vh;">!important</code> is used when all else fails.  If a line of CSS is marked as !important, it will always win.  <strong>This should be used sparingly and it is bad practice.</strong>  A better option is to use a more specific selector instead.</li>
-            </ol>
+          <h1>The Cascade</h1><br>
+          <p class="fragment" style="font-size: 6vh;">Order Matters!</p><br>
+          <p class="fragment" style="font-size: 5vh;">Properties override properties but whole rules dont override whole
+            rules.</p><br>
+          <p class="fragment" style="font-size: 5vh;">Later rules override earlier rules if the rule follows the same
+            specificity</p><br>
+          <ol class="fragment" style="margin: 0 0 0 60px;" type="a">What makes a selector specific?
+            <li class="fragment" style="font-size: 4vh;">Element selectors (IE: a selector for all p tags) -- lowest
+              priority</li>
+            <li class="fragment" style="font-size: 4vh;">Class selectors (IE: you create a custom CSS class) -- next
+              priority</li>
+            <li class="fragment" style="font-size: 4vh;">Combining selectors to make a rule more specific, we will cover
+              this more in the next section.</li>
+            <li class="fragment" style="font-size: 4vh;"><code style="width:75%; font-size:3vh;">!important</code> is used
+              when all else fails. If a line of CSS is marked as !important, it will always win. <strong>This should be
+                used sparingly and it is bad practice.</strong> A better option is to use a more specific selector
+              instead.</li>
+          </ol>
         </section>
         <section>
-            <h1>Even More Information!</h1><br>
-            <p class="fragment" style="font-size: 6vh;">Normalize your CSS. Each browser has its own set of default styles. If we leave those as is, our site would look slightly different depending on the users browser. We can normalize our CSS to remedy this.</p> <br>
-            <p class="fragment" style="font-size: 6vh;">Some browsers have limitations in what CSS they allow. Browser prefixes are sometimes necessary and there are tools such as CanIUse to help us determine if we need a prefix.</p><br>
-            <p class="fragment" style="font-size: 6vh;">Like most coding languages, CSS allows for comments.  A comment in CSS looks like: <code class="fragment">/* This is a comment */</code></p>
+          <h1>Even More Information!</h1><br>
+          <p class="fragment" style="font-size: 6vh;">Normalize your CSS. Each browser has its own set of default styles.
+            If we leave those as is, our site would look slightly different depending on the users browser. We can
+            normalize our CSS to remedy this.</p> <br>
+          <p class="fragment" style="font-size: 6vh;">Some browsers have limitations in what CSS they allow. Browser
+            prefixes are sometimes necessary and there are tools such as <a href="https://caniuse.com/">CanIUse</a> to
+            help us determine if we need a prefix.</p><br>
+          <p class="fragment" style="font-size: 6vh;">Like most coding languages, CSS allows for comments. A comment in
+            CSS looks like: <code class="fragment">/* This is a comment */</code></p>
         </section>
         <section>
-            <h1>Thank you!</h1>
-            <p style="font-size: 7vh;">Have a great time making the web more beautiful!</p><br><br>
-            <img src="/images/CSS-session/cheers.gif" alt="image man saying cheers" />
+          <h1>Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p><br><br>
+          <img src="/images/CSS-session/catType.gif" alt="image cat typing" />
+        </section>
+        <section>
+          <h1>Grouping Selectors</h1><br>
+          <p class="fragment" style="font-size: 5vh">We can group multiple selectors and apply one style broadly across
+            the site. This works with both element selectors and class selectors.</p>
+          <code class="fragment" style="width:75%;">
+              <div>&nbsp; &nbsp; h1, h2, h3, h4 {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: green;</div>
+              <div>&nbsp; &nbsp;  }</div>
+            </code> <br>
+          <code class="fragment" style="width:75%;">
+              <div>&nbsp; &nbsp; .cocktail, .coding {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: pink;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code>
+        </section>
+        <section>
+          <h1>Combining Selectors</h1><br>
+          <p class="fragment" style="font-size: 5vh">We can increase specificity by combining selectors. This allows us to
+            be able to style targeted elements.</p><br>
+          <code class="fragment">
+              <div>&lt;p class="status"&gt;Coding with a cocktail on the side.&lt;/p&gt;</div>
+              <div>&lt;p class="learning"&gt;I am learning CSS and web development.&lt;/p&gt;</div>
+            </code>
+          <code class="fragment">
+              <div>&nbsp; &nbsp; p {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: purple;</div>
+              <div>&nbsp; &nbsp; }</div>
+              <br>          
+              <div>&nbsp; &nbsp; p.status {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: seagreen;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code> <br>
+        </section>
+        <section>
+          <h1>Another Example</h1><br>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>&lt;p class="about learning"&gt;I am learning CSS and web development.&lt;/p&gt;</div>
+              <div>&lt;p class="about pets"&gt;I have 2 pets - a goofy dog and a grumpy cat.&lt;/p&gt;</div>
+            </code>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>&nbsp; &nbsp; p.about {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: purple;</div>
+              <div>&nbsp; &nbsp; }</div>
+              <br>          
+              <div>&nbsp; &nbsp; p.about.pets {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: seagreen;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code> <br>
+          <p class="fragment" style="font-size: 5vh;">Combinig selectors lets us have so much control over our styles!!
+          </p>
+        </section>
+        <section>
+          <h1>Attribute Selectors</h1><br>
+          <p class="fragment" style="font-size: 5vh">We can use attribute selectors to target elements with a specific
+            attribute.</p><br>
+          <code class="fragment">
+              <div>&lt;a href="https://example.com"&gt;Example&lt;/a&gt;</div>
+            </code>
+          <code class="fragment">
+              <div>&nbsp; &nbsp; a[href="https://example.com"] {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; background-color: wine;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code><br>
+          <p class="fragment" style="font-size: 5vh">The snippets above will find any &lt;a&gt; element with an href
+            attribute that matches "https://example.com" and give it a wine background.</p>
+        </section>
+        <section>
+          <h1>Location Based Selectors</h1><br>
+          <p class="fragment" style="font-size: 5vh">We can define selectors based on the location of the element in the
+            DOM (browsers turn the HTML we write into the DOM)</p>
+          <p class="fragment" style="font-size: 5vh">Location selectors use the elements' relationships to eachother to
+            navigate.</p><br>
+          <p class="fragment" style="font-size: 5vh">Elements relationships? What?</p><br>
+          <code class="fragment">
+              <div>
+                <div>&lt;parent&gt;</div>
+                <div>&nbsp;&nbsp;&lt;child&gt;</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;grandchild&gt;&lt;/grandchild&gt;</div>
+                <div>&nbsp;&nbsp;&lt;/child&gt;</div>
+                <div>&nbsp;&nbsp;&lt;child&gt;&lt;/child&gt;</div>
+                <div>&lt;/parent&gt;</div>
+              </div>
+            </code>
+        </section>
+        <section>
+          <h1>Applying Location and Relationships to CSS</h1><br>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>
+                <div>&lt;ul&gt;</div>
+                <div>&nbsp;&nbsp;&lt;li&gt;</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;em&gt;Most Important Item&lt;/em&gt;</div>
+                <div>&nbsp;&nbsp;&lt;/li&gt;</div>
+                <div>&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;</div>
+                <div>&lt;/ul&gt;</div>
+              </div>
+            </code>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>&nbsp; &nbsp; li em {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: freshair;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code><br>
+          <p class="fragment" style="font-size: 5vh">Note the space between the selectors. This rule will tell the browser
+            to change the text color to freshair for all &lt;em&gt; elements that have &lt;li&gt; as an ancestor.</p>
+        </section>
+        <section>
+          <h1>Combinators</h1><br>
+          <p class="fragment" style="font-size: 4vh">Combinators is a fancy word for combining selectors. There are a few
+            different combinators.</p><br>
+          <p class="fragment" style="font-size: 4vh">Our last slide covered one of these, a Descendant Combinator... But
+            thats not all!</p><br>
+          <p class="fragment" style="font-size: 4vh">Children Combinator: &gt; it must match an existing parent child
+            relationship in the DOM.</p><br>
+          <p class="fragment" style="font-size: 4vh">Valid as &lt;em&gt; is a child of &lt;li&gt;</p>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>&nbsp; &nbsp; li &gt; em {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: vividtangerine;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code> <br>
+          <p class="fragment" style="font-size: 4vh">Invalid as &lt;em&gt; is <strong>NOT</strong> a child of &lt;ul&gt;
+          </p>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>&nbsp; &nbsp; ul &gt; em {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: vividtangerine;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code> <br>
+        </section>
+        <section>
+          <h1>More Combinators</h1><br>
+          <p class="fragment" style="font-size: 6vh">Adjacent Combinator</p><br>
+          <p class="fragment" style="font-size: 5vh">We can use the + in our rules to apply style to the second element in
+            the DOM. Sticking with our list example:</p>
+          <code class="fragment" style="font-size: 4vh;">
+              <div>&nbsp; &nbsp; li + li {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: electriclime;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code> <br>
+          <p class="fragment" style="font-size: 6vh">This will style our second list item to have lime green as the text
+            color.</p>
+          <p class="fragment" style="font-size: 6vh">There are other combinators! Here is a great reference for <a
+              href="https://www.w3schools.com/css/css_combinators.asp">combinators.</a></p>
+        </section>
+        <section>
+          <h1>State Based Selectors</h1><br>
+          <p class="fragment" style="font-size: 4vh">We can change the style of an element based on the state of the
+            element. So for example, an element may look different based on if the user hovers over the element.</p><br>
+          <p class="fragment" style="font-size: 4vh">The general syntax to create a state based selector is to use a colon
+            between the selector and the state.</p><br>
+          <p class="fragment" style="font-size: 4vh">If there is no state with the selector, it is just the base style of
+            the element.</p><br>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>&nbsp; &nbsp; button {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: red;</div>
+              <div>&nbsp; &nbsp; }</div>
+              <div>&nbsp; &nbsp; button:hover {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: blue;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code> <br>
+          <p class="fragment" style="font-size: 4vh">The button in this CSS will have red text, but if a user hovers over
+            it the text will turn blue.</p>
+        </section>
+        <section>
+          <h1>Styling specific parts of a selector</h1><br>
+          <p class="fragment" style="font-size: 4vh">We have learned ways to get more and more specific with our CSS. We
+            can even style certain parts of a selector.</p><br>
+          <p class="fragment" style="font-size: 4vh">We do this by using pseudo-elements. Pseudo-elements tell the browser
+            what part of the selector to style.</p><br>
+          <p class="fragment" style="font-size: 4vh">The general syntax for this is selector::pseudo-element, but lets
+            look at an example.</p><br>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>&nbsp; &nbsp; p::first-line {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: blue;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code> <br>
+          <p class="fragment" style="font-size: 4vh">The snippet above will make the first line of all &lt;p&gt; elements
+            have blue text.</p>
+          <p class="fragment" style="font-size: 4vh">A few other common pseudo-elements are <em>before</em> and
+            <em>after</em> this will just add some style before or after a selector.</p>
+        </section>
+        <section>
+          <h1>Debugging in Chrome</h1><br>
+          <p class="fragment" style="font-size: 4vh">Browsers are where our site will be viewed, it is also where we can
+            debug our CSS and HTML.</p><br>
+          <img class="fragment" src="/images/CSS-session/chromeCSSInspect.png" alt="image of chrome inspector"
+            height="70%" style="margin: 15px auto;" />
+        </section>
+        <section>
+          <h1>Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p><br><br>
+          <img src="/images/CSS-session/catType.gif" alt="image cat typing" />
+        </section>
+        <section>
+          <h1>Box Model</h1>
+          <p style="font-size: 7vh;">The Box Model is a great way to visualize spacing on our site.</p><br>
+          <img src="/images/CSS-session/boxModel.png" alt="image of the box model" />
+          <p class="fragment" style="font-size: 7vh;">Other important layout properties: </p> <br>
+          <p class="fragment" style="font-size: 5vh;">display - specifies the display behavior of the element. Typically
+            it will have either the value of "inline", meaning the element does not create a new line, or "block" meaning
+            the element does create a new block.</p>
+        </section>
+        <section>
+          <h1>Margin, Padding, Border, Display Example</h1>
+          <code class="fragment" style="font-size: 4vh;">
+              <div>&nbsp; &nbsp; .example {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; display: block;</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; margin: 50px;</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; padding-left: 60px;</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; border-style: dotted;</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; border-color: green;</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code>
+          <img class="fragment" src="/images/CSS-session/cssBorderMargin.png"
+            alt="image heading with border and margin" />
+        </section>
+        <section>
+          <h1 style="font-size: 10vh;">Text CSS Options</h1>
+          <br>
+          <h2 class="fragment" style="font-size: 6vh;">Font Colors</h1>
+            <code class="fragment"
+              style="width:75%;margin: 0 auto;">&lt;p style="color: #484e78;"&gt;Hey girl&lt;/p&gt;</code>
+            <h2 class="fragment" style="font-size: 6vh;">Font Size</h1>
+              <code class="fragment"
+                style="width:75%;margin: 0 auto;">&lt;p style="font-size: 5em;"&gt;Hey girl&lt;/p&gt;</code>
+              <h2 class="fragment" style="font-size: 6vh;">Text Alignment - can be left, right, center, justify</h2>
+              <code class="fragment"
+                style="width:75%;margin: 0 auto;">&lt;p style="text-align: left;"&gt;Hey girl&lt;/p&gt;</code>
+              <h2 class="fragment" style="font-size: 6vh;">Font Family</h2>
+              <code class="fragment"
+                style="width:75%;margin: 0 auto;">&lt;p style="font-family: Roboto, sans-serif;"&gt;Hey girl&lt;/p&gt;</code>
+        </section>
+        <section>
+          <h1>Adding Icons to Selectors</h1><br>
+          <p class="fragment" style="font-size: 5vh">We can even use CSS to add icons to our site!</p><br>
+          <p class="fragment" style="font-size: 5vh">There are tools such as <a href="http://fontawesome.io/">Font
+              Awesome</a> where we can get icons to use for free.</p><br>
+          <p class="fragment" style="font-size: 5vh">If used, tools like font awesome will need to be either imported in
+            the css file or linked in the &lt;head&gt; of the HTML.</p><br>
+          <p class="fragment" style="font-size: 5vh">We talked about pseudo-elements earlier. This is the prime time to
+            use one!</p><br>
+          <code class="fragment" style="font-size: 3vh;">
+              <div>&nbsp; &nbsp; p::before {</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; font: var(--fa-font-solid);</div>
+              <div>&nbsp; &nbsp; &nbsp; &nbsp; content: "\f57b";</div>
+              <div>&nbsp; &nbsp; }</div>
+            </code> <br>
+          <p class="fragment" style="font-size: 5vh">In short, the above snippet will put the icon from Font Awesome
+            before any &lt;p&gt; elements.</p><br>
+        </section>
+        <section>
+          <h1>Thank you!</h1>
+          <p style="font-size: 7vh;">Have a great time making the web more beautiful!</p><br><br>
+          <img src="/images/CSS-session/cheers.gif" alt="image man saying cheers" />
         </section>
       </div>
     </div>
@@ -268,9 +550,9 @@
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
         ]
       });
     </script>
-	</body>
+  </body>
 </html>
