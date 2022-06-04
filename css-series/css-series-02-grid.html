@@ -259,6 +259,76 @@
           </p>
         </section>
         <section>
+          <h1 style="font-size: 8vh;">Naming Lines</h1><br>
+          <p class="fragment" style="font-size: 6vh">Sometimes we want to add more context or descriptions for our lines in the css code.
+            [] - Square brackets denote the name. For example: 
+          </p>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: [col-1-start] 1fr [col-2-start] 1fr [col-2-end];</div>
+            <div>}</div>
+          </code>
+          <p class="fragment" style="font-size: 6vh;">Once the lines have names, we can use that in later css codes to place elements more precisely.
+            We will take a deeper at this in a future slide. 
+          </p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Positioning Elements</h1><br>
+          <p class="fragment" style="font-size: 6vh">In our previous examples we have let everything flow and wrap. What if we want to skip a column or a row? 
+          </p>
+          <br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 1fr 1fr 1fr;</div>
+            <div>&nbsp; &nbsp; grid-template-rows: 1fr 1fr 1fr;</div>
+            <div>}</div>
+            <br>
+            <div>.grid-item {</div>
+            <div>&nbsp; &nbsp; grid-column-start: 1;</div>
+            <div>&nbsp; &nbsp; grid-column-end: 4;</div>
+            <div>&nbsp; &nbsp; grid-row-start: 1;</div>
+            <div>&nbsp; &nbsp; grid-row-end: 3;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Positioning Elements With Named Columns and Rows</h1><br>
+          <p class="fragment" style="font-size: 6vh">We can accomplish the same thing as our last example with named lines.
+          </p>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: [start-col] 1fr [mid-1-col] 1fr [mid-2-col] 1fr [end-col];</div>
+            <div>&nbsp; &nbsp; grid-template-rows: [start-row] 1fr [mid-row] 1fr [end-row];</div>
+            <div>}</div>
+            <br>
+            <div>.grid-item {</div>
+            <div>&nbsp; &nbsp; grid-column-start: start-col;</div>
+            <div>&nbsp; &nbsp; grid-column-end: end-col; /* span across 3 columns for this item */</div>
+            <div>&nbsp; &nbsp; grid-row-start: start-row;</div>
+            <div>&nbsp; &nbsp; grid-row-end: mid-row;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Shorthand Notation for Positioning</h1><br>
+          <p class="fragment" style="font-size: 6vh">Like most things in coding, we have found a way to cut down on typing. There is a shorthand notation for line positioning.
+            We can use a a few new properties, grid-column and grid-row. 
+          </p>
+          <br>
+          <p class="fragment" style="font-size: 6vh">The value will be two part. The syntax is start-line / end-line. 
+          </p>
+          <br>
+          <code class="fragment" style="width:90%; font-size: 4vh;">
+            <div>.grid-item {</div>
+            <div>&nbsp; &nbsp; grid-column: 1 / 4; /* start on line 1 end on line 4 */;</div>
+            <div>&nbsp; &nbsp; grid-row: 1;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
           <p style="font-size: 7vh;">See you soon!</p><br><br>
           <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
