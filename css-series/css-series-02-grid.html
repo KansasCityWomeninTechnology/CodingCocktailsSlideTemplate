@@ -78,7 +78,8 @@
           <ol style="margin-left: 40px;">
             <li class="fragment">CSS Layout Systems</li>
             <li class="fragment">Grid Container</li>
-            <li class="fragment">Tracks (Explicit Columns and Explicit Rows)</li>
+            <li class="fragment">Tracks</li>
+            <li class="fragment">Areas</li>
             <li class="fragment">Grid Specific CSS Functions</li>
           </ol>
           <br>
@@ -297,7 +298,7 @@
           <h1 style="font-size: 8vh;">Positioning Elements With Named Columns and Rows</h1><br>
           <p class="fragment" style="font-size: 6vh">We can accomplish the same thing as our last example with named lines.
           </p>
-          <code class="fragment" style="width:75%; font-size: 3vh;">
+          <code class="fragment" style="font-size: 3vh;">
             <div>.container {</div>
             <div>&nbsp; &nbsp; display: grid;</div>
             <div>&nbsp; &nbsp; grid-template-columns: [start-col] 1fr [mid-1-col] 1fr [mid-2-col] 1fr [end-col];</div>
@@ -334,251 +335,105 @@
           <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
         </section>
         <section>
-          <h1 style="font-size: 8vh;">Grouping Selectors</h1><br>
-          <p class="fragment" style="font-size: 5vh">We can group multiple selectors and apply one style broadly across
-            the site. This works with both element selectors and class selectors.</p>
-          <code class="fragment" style="width:75%;">
-              <div>&nbsp; &nbsp; h1, h2, h3, h4 {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: green;</div>
-              <div>&nbsp; &nbsp;  }</div>
-            </code> <br>
-          <code class="fragment" style="width:75%;">
-              <div>&nbsp; &nbsp; .cocktail, .coding {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: pink;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Combining Selectors</h1><br>
-          <p class="fragment" style="font-size: 5vh">We can increase specificity by combining selectors. This allows us to
-            be able to style targeted elements.</p><br>
-          <code class="fragment">
-              <div>&lt;p class="status"&gt;Coding with a cocktail on the side.&lt;/p&gt;</div>
-              <div>&lt;p class="learning"&gt;I am learning CSS and web development.&lt;/p&gt;</div>
-            </code>
-          <code class="fragment">
-              <div>&nbsp; &nbsp; p {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: purple;</div>
-              <div>&nbsp; &nbsp; }</div>
-              <br>          
-              <div>&nbsp; &nbsp; p.status {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: seagreen;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code> <br>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Another Example</h1><br>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>&lt;p class="about learning"&gt;I am learning CSS and web development.&lt;/p&gt;</div>
-              <div>&lt;p class="about pets"&gt;I have 2 pets - a goofy dog and a grumpy cat.&lt;/p&gt;</div>
-            </code>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>&nbsp; &nbsp; p.about {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: purple;</div>
-              <div>&nbsp; &nbsp; }</div>
-              <br>          
-              <div>&nbsp; &nbsp; p.about.pets {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: seagreen;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code> <br>
-          <p class="fragment" style="font-size: 5vh;">Combinig selectors lets us have so much control over our styles!!
+          <h1 style="font-size: 8vh;">Areas</h1><br>
+          <p class="fragment" style="font-size: 7vh">
+          We can also define areas and to set up positioning. A <strong>Grid Area</strong> is when 
+          grid items span across multiple columns and / or rows. It simplifies creating and updating positioning.
           </p>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Attribute Selectors</h1><br>
-          <p class="fragment" style="font-size: 5vh">We can use attribute selectors to target elements with a specific
-            attribute.</p><br>
-          <code class="fragment">
-              <div>&lt;a href="https://example.com"&gt;Example&lt;/a&gt;</div>
-            </code>
-          <code class="fragment">
-              <div>&nbsp; &nbsp; a[href="https://example.com"] {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; background-color: wine;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code><br>
-          <p class="fragment" style="font-size: 5vh">The snippets above will find any &lt;a&gt; element with an href
-            attribute that matches "https://example.com" and give it a wine background.</p>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Location Based Selectors</h1><br>
-          <p class="fragment" style="font-size: 5vh">We can define selectors based on the location of the element in the
-            DOM (browsers turn the HTML we write into the DOM)</p>
-          <p class="fragment" style="font-size: 5vh">Location selectors use the elements' relationships to eachother to
-            navigate.</p><br>
-          <p class="fragment" style="font-size: 5vh">Elements relationships? What?</p><br>
-          <code class="fragment">
-              <div>
-                <div>&lt;parent&gt;</div>
-                <div>&nbsp;&nbsp;&lt;child&gt;</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;grandchild&gt;&lt;/grandchild&gt;</div>
-                <div>&nbsp;&nbsp;&lt;/child&gt;</div>
-                <div>&nbsp;&nbsp;&lt;child&gt;&lt;/child&gt;</div>
-                <div>&lt;/parent&gt;</div>
-              </div>
-            </code>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Applying Location and Relationships to CSS</h1><br>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>
-                <div>&lt;ul&gt;</div>
-                <div>&nbsp;&nbsp;&lt;li&gt;</div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&lt;em&gt;Most Important Item&lt;/em&gt;</div>
-                <div>&nbsp;&nbsp;&lt;/li&gt;</div>
-                <div>&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;</div>
-                <div>&lt;/ul&gt;</div>
-              </div>
-            </code>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>&nbsp; &nbsp; li em {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: freshair;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code><br>
-          <p class="fragment" style="font-size: 5vh">Note the space between the selectors. This rule will tell the browser
-            to change the text color to freshair for all &lt;em&gt; elements that have &lt;li&gt; as an ancestor.</p>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Combinators</h1><br>
-          <p class="fragment" style="font-size: 4vh">Combinators is a fancy word for combining selectors. There are a few
-            different combinators.</p><br>
-          <p class="fragment" style="font-size: 4vh">Our last slide covered one of these, a Descendant Combinator... But
-            thats not all!</p><br>
-          <p class="fragment" style="font-size: 4vh">Children Combinator: &gt; it must match an existing parent child
-            relationship in the DOM.</p><br>
-          <p class="fragment" style="font-size: 4vh">Valid as &lt;em&gt; is a child of &lt;li&gt;</p>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>&nbsp; &nbsp; li &gt; em {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: vividtangerine;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code> <br>
-          <p class="fragment" style="font-size: 4vh">Invalid as &lt;em&gt; is <strong>NOT</strong> a child of &lt;ul&gt;
-          </p>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>&nbsp; &nbsp; ul &gt; em {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: vividtangerine;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code> <br>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">More Combinators</h1><br>
-          <p class="fragment" style="font-size: 6vh">Adjacent Combinator</p><br>
-          <p class="fragment" style="font-size: 5vh">We can use the + in our rules to apply style to the second element in
-            the DOM. Sticking with our list example:</p>
-          <code class="fragment" style="font-size: 4vh;">
-              <div>&nbsp; &nbsp; li + li {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: electriclime;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code> <br>
-          <p class="fragment" style="font-size: 6vh">This will style our second list item to have lime green as the text
-            color.</p>
-          <p class="fragment" style="font-size: 6vh">There are other combinators! Here is a great reference for <a
-              href="https://www.w3schools.com/css/css_combinators.asp">combinators.</a></p>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">State Based Selectors</h1><br>
-          <p class="fragment" style="font-size: 4vh">We can change the style of an element based on the state of the
-            element. So for example, an element may look different based on if the user hovers over the element.</p><br>
-          <p class="fragment" style="font-size: 4vh">The general syntax to create a state based selector is to use a colon
-            between the selector and the state.</p><br>
-          <p class="fragment" style="font-size: 4vh">If there is no state with the selector, it is just the base style of
-            the element.</p><br>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>&nbsp; &nbsp; button {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: red;</div>
-              <div>&nbsp; &nbsp; }</div>
-              <div>&nbsp; &nbsp; button:hover {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: blue;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code> <br>
-          <p class="fragment" style="font-size: 4vh">The button in this CSS will have red text, but if a user hovers over
-            it the text will turn blue.</p>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Styling specific parts of a selector</h1><br>
-          <p class="fragment" style="font-size: 4vh">We have learned ways to get more and more specific with our CSS. We
-            can even style certain parts of a selector.</p><br>
-          <p class="fragment" style="font-size: 4vh">We do this by using pseudo-elements. Pseudo-elements tell the browser
-            what part of the selector to style.</p><br>
-          <p class="fragment" style="font-size: 4vh">The general syntax for this is selector::pseudo-element, but lets
-            look at an example.</p><br>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>&nbsp; &nbsp; p::first-line {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; color: blue;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code> <br>
-          <p class="fragment" style="font-size: 4vh">The snippet above will make the first line of all &lt;p&gt; elements
-            have blue text.</p>
-          <p class="fragment" style="font-size: 4vh">A few other common pseudo-elements are <em>before</em> and
-            <em>after</em> this will just add some style before or after a selector.</p>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Debugging in Chrome</h1><br>
-          <p class="fragment" style="font-size: 4vh">Browsers are where our site will be viewed, it is also where we can
-            debug our CSS and HTML.</p><br>
-          <img class="fragment" src="../images/CSS-session/chromeCSSInspect.png" alt="image of chrome inspector"
-            height="70%" style="margin: 15px auto;" />
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Work Time</h1>
-          <p style="font-size: 7vh;">See you soon!</p><br><br>
-          <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Box Model</h1>
-          <p style="font-size: 7vh;">The Box Model is a great way to visualize spacing on our site.</p><br>
-          <img src="../images/CSS-session/boxModel.png" alt="image of the box model" />
-          <p class="fragment" style="font-size: 7vh;">Other important layout properties: </p> <br>
-          <p class="fragment" style="font-size: 5vh;">display - specifies the display behavior of the element. Typically
-            it will have either the value of "inline", meaning the element does not create a new line, or "block" meaning
-            the element does create a new block.</p>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Margin, Padding, Border, Display Example</h1>
-          <code class="fragment" style="font-size: 4vh;">
-              <div>&nbsp; &nbsp; .example {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; display: block;</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; margin: 50px;</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; padding-left: 60px;</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; border-style: dotted;</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; border-color: green;</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code>
-          <img class="fragment" src="../images/CSS-session/cssBorderMargin.png"
-            alt="image heading with border and margin" />
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">Text CSS Options</h1>
           <br>
-          <h2 class="fragment" style="font-size: 6vh;">Font Colors</h1>
-            <code class="fragment"
-              style="width:75%;margin: 0 auto;">&lt;p style="color: #484e78;"&gt;Hey girl&lt;/p&gt;</code>
-            <h2 class="fragment" style="font-size: 6vh;">Font Size</h1>
-              <code class="fragment"
-                style="width:75%;margin: 0 auto;">&lt;p style="font-size: 5em;"&gt;Hey girl&lt;/p&gt;</code>
-              <h2 class="fragment" style="font-size: 6vh;">Text Alignment - can be left, right, center, justify</h2>
-              <code class="fragment"
-                style="width:75%;margin: 0 auto;">&lt;p style="text-align: left;"&gt;Hey girl&lt;/p&gt;</code>
-              <h2 class="fragment" style="font-size: 6vh;">Font Family</h2>
-              <code class="fragment"
-                style="width:75%;margin: 0 auto;">&lt;p style="font-family: Roboto, sans-serif;"&gt;Hey girl&lt;/p&gt;</code>
+          <br>
+          <img height="35%" class="fragment" src="../images/CSS-session/areas.png" alt="grid example" />
         </section>
         <section>
-          <h1 style="font-size: 8vh;">Adding Icons to Selectors</h1><br>
-          <p class="fragment" style="font-size: 5vh">We can even use CSS to add icons to our site!</p><br>
-          <p class="fragment" style="font-size: 5vh">There are tools such as <a href="http://fontawesome.io/">Font
-              Awesome</a> where we can get icons to use for free.</p><br>
-          <p class="fragment" style="font-size: 5vh">If used, tools like font awesome will need to be either imported in
-            the css file or linked in the &lt;head&gt; of the HTML.</p><br>
-          <p class="fragment" style="font-size: 5vh">We talked about pseudo-elements earlier. This is the prime time to
-            use one!</p><br>
-          <code class="fragment" style="font-size: 3vh;">
-              <div>&nbsp; &nbsp; p::before {</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; font: var(--fa-font-solid);</div>
-              <div>&nbsp; &nbsp; &nbsp; &nbsp; content: "\f57b";</div>
-              <div>&nbsp; &nbsp; }</div>
-            </code> <br>
-          <p class="fragment" style="font-size: 3vh">In short, the above snippet will put the icon from Font Awesome
-            before any &lt;p&gt; elements.</p><br>
+          <h1 style="font-size: 8vh;">How it Works</h1><br>
+          <p class="fragment" style="font-size: 3vh">
+          Lets say we want header across the top, footer across the bottom, and in the middle row, we have a content and a side navigation.
+          </p><br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>/* display, grid-template-columns, and grid-template-rows from above */</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 200px 1fr;</div>
+            <div>&nbsp; &nbsp; grid-template-rows: 100px 1fr 150px;</div>
+            <div>}</div>
+            <br>
+          </code>
+          <p class="fragment" style="font-size: 3vh">Then we will use the property grid-template-areas to define. White space and new lines are used to position in columns and rows.
+            We can use a . to skip a grid cell.
+          </p><br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; grid-template-areas: "header" "header"</div>
+            <div>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"sidenav" "content"</div>
+            <div>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"footer" "footer";</div>
+             <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Matching HTML tags to grid areas</h1><br>
+          <p class="fragment" style="font-size: 5vh">We have defined how sections should fit together in the grid, 
+            now we need to tell the html which tags will be those sections.
+          </p><br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>header {</div>
+            <div>&nbsp; &nbsp; grid-area: header;</div>
+            <div>}</div>
+          </code>
+          <br>
+          <br>
+          <p class="fragment" style="font-size: 5vh">We would further need to define the matching html tags for sidenav, content, and footer.</p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Grid CSS Functions</h1><br>
+          <p class="fragment" style="font-size: 5vh">Grid also has functions to help set up grids and sizing.</p><br>
+          <p class="fragment" style="font-size: 5vh"><strong>Repeat</strong>: Simplify setting up grid colums or rows by  using repeat. 
+            It will be easier to write, maintain, and read the code. The general syntax is <code style="font-size: 3vh;">repeat(number of rows or columns, size)</code></p>
+          <code class="fragment" style=" font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 150px 1fr 1fr 1fr auto;</div>
+            <div>}</div>
+          </code>
+          <code class="fragment" style=" font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 150px repeat(3, 1fr) auto;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Flexing Track Size</h1><br>
+          <p class="fragment" style="font-size: 5vh">With the exception of auto, all our examples had specific sizes. We can also define a range of size using the CSS function specifically for grid called minmax.</p><br>
+          <code class="fragment" style="font-size: 3vh;">minmax(minimum size, maximum size)</code>
+          <code class="fragment" style=" font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; minmax(20px, auto) 1fr 1fr;</div>
+            <div>}</div>
+          </code>
+          <p class="fragment" style="font-size: 5vh">This example will let column 1 be smaller than 20px, but take up the rest of the allowed space.</p><br>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Resources and Practice</h1><br>
+          <h2 class="fragment" style="font-size: 6vh">Resources</h2><br>
+          <ol style="margin-left: 40px; ">
+            <li style="font-size: 5vh;" class="fragment"><a  href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">MDN</a>
+            </li>
+            <li style="font-size: 5vh;" class="fragment"><a href="https://learncssgrid.com/">Learn CSS Grid</a>
+            </li>
+            <li style="font-size: 5vh;"  class="fragment"><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks Guide to Grid</a>
+            </li>            
+          </ol>
+          <br>
+          <h2 class="fragment" style="font-size: 5vh">Practice</h2><br>
+          <ol style="margin-left: 40px;">
+            <li style="font-size: 5vh;" class="fragment"><a href="https://cssgridgarden.com/">Grid Garden</a>
+            </li>
+            <li style="font-size: 5vh;" class="fragment"><a href="https://gridbyexample.com/examples/">Grid by Examples</a>
+            </li>          
+          </ol>
         </section>
         <section>
           <h1 style="font-size: 8vh;">Thank you!</h1>
