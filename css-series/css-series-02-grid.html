@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Basics - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course." />
+    <meta name="author" content="Kansas City Women in Technology" />
+    <meta name="keywords"
+      content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development" />
+    <meta property="og:title" content="Front End Architecture - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org" />
+    <meta property="og:description"
+      content="This is the official Coding &amp; Cocktails Front End Architecture course." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org" />
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology" />
+    <meta name="twitter:description"
+      content="This is the official Coding &amp; Cocktails Front End Architecture course." />
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/reveal.css" />
+    <link rel="stylesheet" href="../css/theme/codingandcocktails.css" id="theme" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>The Garnish | CSS Grid</h3>
+          <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo" />
+        </section>
+        <section>
+          <h1 style="font-size: 6vh;">Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="../images/shared/slack-logo-white.png" alt="Slack" width="60%" />
+          </a>
+          <br>
+          <br>
+          <div class="row-line-slack" style="margin-left: -0.5em;">
+            <span class="row-line-slack fragment">
+              <a
+                href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
+                <img src="../images/slack-previews/slack-genx.jpg" alt="Carolyn Westhoff" />
+              </a>
+              <p class="slack-label">#generation-x</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-tabletop.jpg" />
+              <p class="slack-label">#tabletop</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-movies.gif" />
+              <p class="slack-label">#movies</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-catsdoggos.jpg" />
+              <p class="slack-label">#cats_and_doggos</p>
+            </span>
+          </div>
+          <div>
+        </section>
+        <section>
+          <h2>Our mentors</h2>
+          <img src="../images/10-oct/mentors.gif" alt="Mentors" height="70%" style="margin: 15px auto;" />
+          <h4>are super heroes!</h4>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Tonight's Agenda: CSS Grid</h1>
+          <br>
+          <ol style="margin-left: 40px;">
+            <li class="fragment">CSS Layout Systems</li>
+            <li class="fragment">Grid Container</li>
+            <li class="fragment">Tracks</li>
+            <li class="fragment">Areas</li>
+            <li class="fragment">Grid Specific CSS Functions</li>
+          </ol>
+          <br>
+          <br>
+          <img class="fragment" src="../images/CSS-session/grid.png" height="300"  alt="image cat typing" />
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Layout System Basics</h1>
+          <br>
+          <p class="fragment" style="font-size: 6vh;">CSS Grid and similarly CSS Flexbox give us powerful layout mechanisms out of the box.</p>
+          <br>
+          <h2 class="fragment" style="float: left; font-size: 6vh;">What are the benefits to a Layout System?</h2>
+          <br>
+          <br>
+          <ol style="margin: 0 0 0 60px;" type="a">
+            <li class="fragment">Handles more complex layout needs.</li>
+            <li class="fragment">Handles wrapping and flexibility for different screen sizes.</li>
+            <li class="fragment">Allows for more maintainable code as we are no longer needing workarounds and hacks.</li>
+            <li class="fragment">It has grown in popularity so much its basically the industry standard.</li>
+          </ol>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">CSS Flexbox VS CSS Grid</h1>
+          <br>
+          <img src="../images/CSS-session/gridvflexbox.png" alt="flexbox vs grid" height="76%" />
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">The Great Battle??</h1>
+          <br>
+          <h2 class="fragment" style="font-size: 6vh;">No.. Not really just different systems for different situations.</h2>
+          <br>
+          <p class="fragment" style="font-size: 5vh">We can even use Grid and Flexbox together! They complement eachother.</p>
+          <br>
+          <p class="fragment" style="font-size: 5vh">We use Flexbox when we need to have elements layout in one-dimension. 
+            IE: either a row or a column. Elements can wrap into multiple rows or columns but cannot be in both at one time. 
+            <a href="https://codepen.io/chriscoyier/full/PoPwPbE">Flexbox Example</a>
+          </p>
+          <br>
+          <p class="fragment" style="font-size: 5vh">We use Grid when we need element layouts in two-dimensions. 
+            IE: Elements aligned in both rows and columns. <a href="https://codepen.io/chriscoyier/full/ZEpPWKO">Grid Example</a></p>        
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Let's see what Grid can do!</h1>
+          <br>
+          <br>
+          <p class="fragment" style="font-size: 6vh;">Here are a few examples of what we can make using Grid</p>
+          <br>
+          <p class="fragment" style="float: left; font-size: 6vh;"><a href="https://codepen.io/oliviale/full/QWKNvex">Grid Advent Calendar </a>Interesting Note: this layout has rows that do not exactly line up with the columns!</p>
+          <p class="fragment" style="padding-top: 50px; float: left; font-size: 6vh;"><a href="https://codepen.io/ramenhog/full/MpORPa">Grid Nom Nom Gallery </a>
+            Interesting Note: this layout has a defined height for the first couple of rows. Later each row has dynamic heights. Grid is so flexible!
+          </p>
+          <p class="fragment" style="padding-top: 50px; float: left; font-size: 4vh">With the sunsetting of Internet Explorer Grid is even more available for use! If ever in doubt check <a href="caniuse.com">CanIUse</a></p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">What Browsers Support Grid?</h1>
+          <br><br>
+          <p class="fragment" style="font-size: 7vh;">
+           Pretty much all of them now! Internet Explore was sunsetted by Microsoft and most other browser support Grid. If in doubt, check <a href="caniuse.com">CanIUse</a>.
+          </p>
+          <br>
+          <p class="fragment" style="font-size: 7vh;">If necessary, we can use CSS Feature Queries using the @supports selector to add support for Grid.</p>
+          <br>
+          <code class="fragment" style="width:75%;margin: 0 auto;">
+              <div>@supports(display: grid) {</div>
+              <div>&nbsp; &nbsp; /* do cool grid work */</div>
+              <div>}</div>
+            </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">How do we add CSS Grid to a project?</h1><br>
+          <h2 class="fragment" style="font-size: 4vh;">Start by creating a parent container with a class to style.</h2>
+          <br> 
+          <p class="fragment" style="font-size: 3vh;">Common parent containers include main, header, footer, form, section, article, div. Keep Semantic HTML in mind. 
+            Use div when necessary but try to use one the others when possible.</p>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+              <div>&lt;section class="container&gt;</div>
+              <div>&nbsp; &lt;!--child elements here -- &gt; </div>
+              <div>&lt;/section class="container&gt;</div>
+          </code>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+              <div>.container {</div>
+              <div>&nbsp; &nbsp; display: grid;</div>
+              <div>}</div>
+          </code>
+          <p class="fragment" style="font-size: 3vh;">The default is display:block. By overriding the display to use grid, we are telling the
+            site that all elements inside of the conainer should be grid items. 
+        </p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Our First Grid Container</h1><br>
+          <p class="fragment" style="font-size: 5vh">Lets take a look at a Grid layout</p>
+          <br>
+          <img height="25%" class="fragment" src="../images/CSS-session/gridExample.png" alt="grid example" />
+          <br>
+          <p class="fragment" style="font-size: 5vh">Note the defined columns and rows! A grid track is the space between any two lines in a grid.</p>
+          <br>
+          <p class="fragment" style="font-size: 5vh">In this example we have 2 rows and 3 columns. The first row spans 3 columns. The top row, highlighted in green, is the first row track.</p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Tracks: Explicit Columns</h1><br>
+          <p class="fragment" style="font-size: 5vh;">Define columns using grid-template-columns property to define the size of each column.</p>
+          <br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 200px 200px;</div>
+            <div>}</div>
+          </code>
+          <br>
+          <p class="fragment" style="font-size: 5vh;">In the example, we created two columns that are each 200px. 
+            We used pixel size but we can use any unit of measurement we want.</p>
+          <br>
+          <p class="fragment" style="font-size: 5vh;">If there are more elements than defined columns, the element will wrap to the next row.</p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Tracks: Explicit Rows</h1><br>
+          <p class="fragment" style="font-size: 5vh;">Define rows using grid-template-rows property to define the size of each row.</p>
+          <br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-rows: 200px 200px;</div>
+            <div>}</div>
+          </code>
+          <br>
+          <p class="fragment" style="font-size: 5vh;">In the example, we created two rows that are each 200px. 
+            We used pixel size but we can use any unit of measurement we want.</p>
+          <br>
+          <p class="fragment" style="font-size: 5vh;">If there are more elements than defined rows, the element will wrap to the next column.</p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Implicit Tracks</h1><br>
+          <p class="fragment" style="font-size: 5vh;">In our previous examples we used absolute size in our style definition. 
+            We can also use implicit sizing and let grid items use available space using the value auto.
+          </p>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: auto auto;</div>
+            <div>}</div>
+          </code>
+          <br>
+          <p class="fragment" style="font-size: 5vh;">We can even mix implicit and explicit sizes. 
+            For example, to create a 2 column grid where we fix the size of one column to 250px and let the other fill the space- 
+          </p>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: auto 250px;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Relative Sizing</h1><br>
+          <p class="fragment" style="font-size: 5vh;">Grid gives us a new unit of measure to work with, fr. 
+            The fr unit allows sizing relative to other tracks and is an abbreviation for "frame". This allows us to
+            define size relative to a base size.
+          </p>
+          <br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 2fr 1fr;</div>
+            <div>}</div>
+          </code>
+          <br>
+          <p class="fragment" style="font-size: 5vh;">In this example, the first column will be twice the size (or take up two frames)
+            as the second column. We can combine all of the various sizing techniques for ultimate control! 
+          </p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Identifying Lines</h1><br>
+          <p class="fragment" style="font-size: 6vh;">Lines that make up the borders of tracks are numbered for easier reference.
+          </p> 
+          <br>
+          <img height="35%" class="fragment" src="../images/CSS-session/lineNumbers.png" alt="grid example" />
+          <p class="fragment" style="font-size: 4vh;">Lines are numbered in increasing sequence from left to right and top to bottom
+          </p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Naming Lines</h1><br>
+          <p class="fragment" style="font-size: 6vh">Sometimes we want to add more context or descriptions for our lines in the css code.
+            [] - Square brackets denote the name. For example: 
+          </p>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: [col-1-start] 1fr [col-2-start] 1fr [col-2-end];</div>
+            <div>}</div>
+          </code>
+          <p class="fragment" style="font-size: 6vh;">Once the lines have names, we can use that in later css codes to place elements more precisely.
+            We will take a deeper at this in a future slide. 
+          </p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Positioning Elements</h1><br>
+          <p class="fragment" style="font-size: 6vh">In our previous examples we have let everything flow and wrap. What if we want to skip a column or a row? 
+          </p>
+          <br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 1fr 1fr 1fr;</div>
+            <div>&nbsp; &nbsp; grid-template-rows: 1fr 1fr 1fr;</div>
+            <div>}</div>
+            <br>
+            <div>.grid-item {</div>
+            <div>&nbsp; &nbsp; grid-column-start: 1;</div>
+            <div>&nbsp; &nbsp; grid-column-end: 4;</div>
+            <div>&nbsp; &nbsp; grid-row-start: 1;</div>
+            <div>&nbsp; &nbsp; grid-row-end: 3;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Positioning Elements With Named Columns and Rows</h1><br>
+          <p class="fragment" style="font-size: 6vh">We can accomplish the same thing as our last example with named lines.
+          </p>
+          <code class="fragment" style="font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: [start-col] 1fr [mid-1-col] 1fr [mid-2-col] 1fr [end-col];</div>
+            <div>&nbsp; &nbsp; grid-template-rows: [start-row] 1fr [mid-row] 1fr [end-row];</div>
+            <div>}</div>
+            <br>
+            <div>.grid-item {</div>
+            <div>&nbsp; &nbsp; grid-column-start: start-col;</div>
+            <div>&nbsp; &nbsp; grid-column-end: end-col; /* span across 3 columns for this item */</div>
+            <div>&nbsp; &nbsp; grid-row-start: start-row;</div>
+            <div>&nbsp; &nbsp; grid-row-end: mid-row;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Shorthand Notation for Positioning</h1><br>
+          <p class="fragment" style="font-size: 6vh">Like most things in coding, we have found a way to cut down on typing. There is a shorthand notation for line positioning.
+            We can use a a few new properties, grid-column and grid-row. 
+          </p>
+          <br>
+          <p class="fragment" style="font-size: 6vh">The value will be two part. The syntax is start-line / end-line. 
+          </p>
+          <br>
+          <code class="fragment" style="width:90%; font-size: 4vh;">
+            <div>.grid-item {</div>
+            <div>&nbsp; &nbsp; grid-column: 1 / 4; /* start on line 1 end on line 4 */;</div>
+            <div>&nbsp; &nbsp; grid-row: 1;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p><br><br>
+          <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Areas</h1><br>
+          <p class="fragment" style="font-size: 7vh">
+          We can also define areas and to set up positioning. A <strong>Grid Area</strong> is when 
+          grid items span across multiple columns and / or rows. It simplifies creating and updating positioning.
+          </p>
+          <br>
+          <br>
+          <img height="35%" class="fragment" src="../images/CSS-session/areas.png" alt="grid example" />
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">How it Works</h1><br>
+          <p class="fragment" style="font-size: 3vh">
+          Lets say we want header across the top, footer across the bottom, and in the middle row, we have a content and a side navigation.
+          </p><br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>/* display, grid-template-columns, and grid-template-rows from above */</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 200px 1fr;</div>
+            <div>&nbsp; &nbsp; grid-template-rows: 100px 1fr 150px;</div>
+            <div>}</div>
+            <br>
+          </code>
+          <p class="fragment" style="font-size: 3vh">Then we will use the property grid-template-areas to define. White space and new lines are used to position in columns and rows.
+            We can use a . to skip a grid cell.
+          </p><br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; grid-template-areas: "header" "header"</div>
+            <div>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"sidenav" "content"</div>
+            <div>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+              &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"footer" "footer";</div>
+             <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Matching HTML tags to grid areas</h1><br>
+          <p class="fragment" style="font-size: 5vh">We have defined how sections should fit together in the grid, 
+            now we need to tell the html which tags will be those sections.
+          </p><br>
+          <code class="fragment" style="width:75%; font-size: 3vh;">
+            <div>header {</div>
+            <div>&nbsp; &nbsp; grid-area: header;</div>
+            <div>}</div>
+          </code>
+          <br>
+          <br>
+          <p class="fragment" style="font-size: 5vh">We would further need to define the matching html tags for sidenav, content, and footer.</p>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Grid CSS Functions</h1><br>
+          <p class="fragment" style="font-size: 5vh">Grid also has functions to help set up grids and sizing.</p><br>
+          <p class="fragment" style="font-size: 5vh"><strong>Repeat</strong>: Simplify setting up grid colums or rows by  using repeat. 
+            It will be easier to write, maintain, and read the code. The general syntax is <code style="font-size: 3vh;">repeat(number of rows or columns, size)</code></p>
+          <code class="fragment" style=" font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 150px 1fr 1fr 1fr auto;</div>
+            <div>}</div>
+          </code>
+          <code class="fragment" style=" font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; grid-template-columns: 150px repeat(3, 1fr) auto;</div>
+            <div>}</div>
+          </code>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Flexing Track Size</h1><br>
+          <p class="fragment" style="font-size: 5vh">With the exception of auto, all our examples had specific sizes. We can also define a range of size using the CSS function specifically for grid called minmax.</p><br>
+          <code class="fragment" style="font-size: 3vh;">minmax(minimum size, maximum size)</code>
+          <code class="fragment" style=" font-size: 3vh;">
+            <div>.container {</div>
+            <div>&nbsp; &nbsp; display: grid;</div>
+            <div>&nbsp; &nbsp; minmax(20px, auto) 1fr 1fr;</div>
+            <div>}</div>
+          </code>
+          <p class="fragment" style="font-size: 5vh">This example will let column 1 be smaller than 20px, but take up the rest of the allowed space.</p><br>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Resources and Practice</h1><br>
+          <h2 class="fragment" style="font-size: 6vh">Resources</h2><br>
+          <ol style="margin-left: 40px; ">
+            <li style="font-size: 5vh;" class="fragment"><a  href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">MDN</a>
+            </li>
+            <li style="font-size: 5vh;" class="fragment"><a href="https://learncssgrid.com/">Learn CSS Grid</a>
+            </li>
+            <li style="font-size: 5vh;"  class="fragment"><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Tricks Guide to Grid</a>
+            </li>            
+          </ol>
+          <br>
+          <h2 class="fragment" style="font-size: 5vh">Practice</h2><br>
+          <ol style="margin-left: 40px;">
+            <li style="font-size: 5vh;" class="fragment"><a href="https://cssgridgarden.com/">Grid Garden</a>
+            </li>
+            <li style="font-size: 5vh;" class="fragment"><a href="https://gridbyexample.com/examples/">Grid by Examples</a>
+            </li>          
+          </ol>
+        </section>
+        <section>
+          <h1 style="font-size: 8vh;">Thank you!</h1>
+          <p style="font-size: 7vh;">Have a great time making the web more beautiful!</p><br><br>
+          <img src="../images/CSS-session/cheers.gif" alt="image man saying cheers" />
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../js/reveal.js"></script>
+    <script src="../js/custom.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
