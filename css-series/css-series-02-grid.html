@@ -40,7 +40,7 @@
         <section>
           <h1 style="font-size: 6vh;">Join us on...</h1>
           <a href="https://kcwit.slack.com" target="_blank" class="fragment">
-            <img src="../images/shared/slack-logo-white.png" alt="Slack" width="60%" />
+            <img src="../images/shared/slack-logo-white.png" alt="Slack" width="40%" height="20%" />
           </a>
           <br>
           <br>
@@ -82,8 +82,6 @@
             <li class="fragment">Areas</li>
             <li class="fragment">Grid Specific CSS Functions</li>
           </ol>
-          <br>
-          <br>
           <img class="fragment" src="../images/CSS-session/grid.png" height="300"  alt="image cat typing" />
         </section>
         <section>
@@ -98,18 +96,13 @@
             <li class="fragment">Handles more complex layout needs.</li>
             <li class="fragment">Handles wrapping and flexibility for different screen sizes.</li>
             <li class="fragment">Allows for more maintainable code as we are no longer needing workarounds and hacks.</li>
-            <li class="fragment">It has grown in popularity so much its basically the industry standard.</li>
+            <li class="fragment">It has grown in popularity so much it's basically the industry standard.</li>
           </ol>
-        </section>
-        <section>
-          <h1 style="font-size: 8vh;">CSS Flexbox VS CSS Grid</h1>
-          <br>
-          <img src="../images/CSS-session/gridvflexbox.png" alt="flexbox vs grid" height="76%" />
         </section>
         <section>
           <h1 style="font-size: 8vh;">The Great Battle??</h1>
           <br>
-          <h2 class="fragment" style="font-size: 6vh;">No.. Not really. They are just different systems for different situations.</h2>
+          <h2 class="fragment" style="font-size: 6vh;">No... Not really. They are just different systems for different situations.</h2>
           <br>
           <p class="fragment" style="font-size: 5vh">We can even use Grid and Flexbox together! They complement eachother.</p>
           <br>
@@ -131,16 +124,16 @@
           <p class="fragment" style="padding-top: 50px; float: left; font-size: 6vh;"><a href="https://codepen.io/ramenhog/full/MpORPa">Grid Nom Nom Gallery- </a>
             Interesting Note: this layout has a defined height for the first couple of rows. Later each row has dynamic heights. Grid is so flexible!
           </p>
-          <p class="fragment" style="padding-top: 50px; float: left; font-size: 4vh">With the sunsetting of Internet Explorer Grid is even more available for use! If ever in doubt check <a href="caniuse.com">CanIUse</a>.</p>
+          <p class="fragment" style="padding-top: 50px; float: left; font-size: 4vh">With the sunsetting of Internet Explorer Grid is even more available for use! If ever in doubt check <a href="https://caniuse.com">CanIUse</a>.</p>
         </section>
         <section>
           <h1 style="font-size: 8vh;">What Browsers Support Grid?</h1>
           <br><br>
           <p class="fragment" style="font-size: 7vh;">
-           Pretty much all of them now! Internet Explore was sunsetted by Microsoft and most other browser support Grid. If in doubt, check <a href="caniuse.com">CanIUse</a>.
+           Pretty much all of them now! Internet Explore was sunsetted by Microsoft and most other browser support Grid. If in doubt, check <a href="https://https://caniuse.com">CanIUse</a>.
           </p>
           <br>
-          <p class="fragment" style="font-size: 7vh;">If necessary, we can use CSS Feature Queries using the @supports selector to add support for Grid.</p>
+          <p class="fragment" style="font-size: 7vh;">If necessary, we can use CSS Feature Queries using the <code style="display: inline;">@supports</code> selector to add support for Grid.</p>
           <br>
           <code class="fragment" style="width:75%;margin: 0 auto;">
               <div>@supports(display: grid) {</div>
@@ -152,8 +145,8 @@
           <h1 style="font-size: 8vh;">How do we add CSS Grid to a project?</h1><br>
           <h2 class="fragment" style="font-size: 4vh;">Start by creating a parent container with a class to style.</h2>
           <br> 
-          <p class="fragment" style="font-size: 3vh;">Common parent containers include main, header, footer, form, section, article, div. Keep Semantic HTML in mind. 
-            Use div when necessary but try to use one the others when possible.</p>
+          <p class="fragment" style="font-size: 3vh;">Common parent containers include main, header, footer, form, section, article, and div. 
+            Use div when necessary, but try to keep <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Semantic HTML</a> in mind.</p>
           <code class="fragment" style="width:75%; font-size: 3vh;">
               <div>&lt;section class="container&gt;</div>
               <div>&nbsp; &lt;!--child elements here -- &gt; </div>
@@ -164,7 +157,7 @@
               <div>&nbsp; &nbsp; display: grid;</div>
               <div>}</div>
           </code>
-          <p class="fragment" style="font-size: 3vh;">The default is display:block. By overriding the display to use grid, we are telling the
+          <p class="fragment" style="font-size: 3vh; line-height: 2;">The default is <code style="display: inline; font-size: 2vh;">display:block</code>. By overriding the <code style="display: inline; font-size: 2vh;">display</code> to use <code style="display: inline; font-size: 2vh;">grid</code>, we are telling the
             site that all elements inside of the conainer should be grid items. 
         </p>
         </section>
@@ -180,7 +173,7 @@
         </section>
         <section>
           <h1 style="font-size: 8vh;">Tracks: Explicit Columns</h1><br>
-          <p class="fragment" style="font-size: 5vh;">Define columns using grid-template-columns property to define the size of each column.</p>
+          <p class="fragment" style="font-size: 5vh; line-height: 1.5;">Define columns using <code style="display: inline; font-size: 3vh;">grid-template-columns</code> property to define the size of each column.</p>
           <br>
           <code class="fragment" style="width:75%; font-size: 3vh;">
             <div>.container {</div>
@@ -196,7 +189,7 @@
         </section>
         <section>
           <h1 style="font-size: 8vh;">Tracks: Explicit Rows</h1><br>
-          <p class="fragment" style="font-size: 5vh;">Define rows using grid-template-rows property to define the size of each row.</p>
+          <p class="fragment" style="font-size: 5vh;">Define rows using <code style="display: inline; font-size: 3vh;">grid-template-rows</code> property to define the size of each row.</p>
           <br>
           <code class="fragment" style="width:75%; font-size: 3vh;">
             <div>.container {</div>
@@ -234,8 +227,8 @@
         </section>
         <section>
           <h1 style="font-size: 8vh;">Relative Sizing</h1><br>
-          <p class="fragment" style="font-size: 5vh;">Grid gives us a new unit of measure to work with, fr. 
-            The fr unit allows sizing relative to other tracks and is an abbreviation for "frame". This allows us to
+          <p class="fragment" style="font-size: 5vh; line-height: 1.5;">Grid gives us a new unit of measure to work with, <code style="display: inline; font-size: 3vh;">fr</code>. 
+            The <code style="display: inline; font-size: 3vh;">fr</code> unit allows sizing relative to other tracks and is an abbreviation for "frame". This allows us to
             define size relative to a base size.
           </p>
           <br>
@@ -256,6 +249,10 @@
           </p> 
           <br>
           <img height="35%" class="fragment" src="../images/CSS-session/lineNumbers.png" alt="grid example" />
+          <br>
+          <a class="fragment" style="float: left; font-size: 3vh;" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Image from MDN</a>
+          <br>
+          <br>
           <p class="fragment" style="font-size: 4vh;">Lines are numbered in increasing sequence from left to right and top to bottom.
           </p>
         </section>
@@ -288,9 +285,9 @@
             <br>
             <div>.grid-item {</div>
             <div>&nbsp; &nbsp; grid-column-start: 1;</div>
-            <div>&nbsp; &nbsp; grid-column-end: 4;</div>
+            <div>&nbsp; &nbsp; grid-column-end: 4; /* span across 3 columns for this item */</div>
             <div>&nbsp; &nbsp; grid-row-start: 1;</div>
-            <div>&nbsp; &nbsp; grid-row-end: 3;</div>
+            <div>&nbsp; &nbsp; grid-row-end: 3; /* span across 2 rows for this item */</div>
             <div>}</div>
           </code>
         </section>
@@ -316,7 +313,7 @@
         <section>
           <h1 style="font-size: 8vh;">Shorthand Notation for Positioning</h1><br>
           <p class="fragment" style="font-size: 6vh">Like most things in coding, we have found a way to cut down on typing. There is a shorthand notation for line positioning.
-            We can use a a few new properties, grid-column and grid-row. 
+            We can use a a few new properties, <code style="display: inline; font-size: 3vh;">grid-column</code> and <code style="display: inline; font-size: 3vh;">grid-row</code>. 
           </p>
           <br>
           <p class="fragment" style="font-size: 6vh">The value will be two part. The syntax is start-line / end-line. 
@@ -331,6 +328,7 @@
         </section>
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">Head to <a href="https://cssgridgarden.com/">Grid Garden</a> and do 1-6. You can continue past 6 if there is time, but we will cover that content in the next section.</p><br><br>
           <p style="font-size: 7vh;">See you soon!</p><br><br>
           <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
         </section>
@@ -341,28 +339,29 @@
           grid items span across multiple columns and / or rows. It simplifies creating and updating positioning.
           </p>
           <br>
-          <br>
           <img height="35%" class="fragment" src="../images/CSS-session/areas.png" alt="grid example" />
+          <br>
+          <p class="fragment" style="float: left; font-size: 3vh;" ><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas">Image from MDN</a></p>
         </section>
         <section>
           <h1 style="font-size: 8vh;">How it Works</h1><br>
           <p class="fragment" style="font-size: 3vh">
           Lets say we want header across the top, footer across the bottom, and in the middle row, we have a content and a side navigation.
-          </p><br>
+          </p>
           <code class="fragment" style="width:75%; font-size: 3vh;">
             <div>.container {</div>
-            <div>/* display, grid-template-columns, and grid-template-rows from above */</div>
             <div>&nbsp; &nbsp; display: grid;</div>
             <div>&nbsp; &nbsp; grid-template-columns: 200px 1fr;</div>
             <div>&nbsp; &nbsp; grid-template-rows: 100px 1fr 150px;</div>
             <div>}</div>
             <br>
           </code>
-          <p class="fragment" style="font-size: 3vh">Then we will use the property grid-template-areas to define. White space and new lines are used to position in columns and rows.
-            We can use a . to skip a grid cell.
+          <p class="fragment" style="font-size: 3vh; line-height: 1.5;">Then we will use the property <code style="display: inline; font-size: 2vh;">grid-template-areas</code> to define. White space and new lines are used to position in columns and rows.
+            We can use a <code style="display: inline; font-size: 2vh;">.</code> to skip a grid cell.
           </p><br>
           <code class="fragment" style="width:75%; font-size: 3vh;">
             <div>.container {</div>
+            <div>/* display, grid-template-columns, and grid-template-rows from above */</div>
             <div>&nbsp; &nbsp; grid-template-areas: "header" "header"</div>
             <div>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
               &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"sidenav" "content"</div>
@@ -388,7 +387,7 @@
         <section>
           <h1 style="font-size: 8vh;">Grid CSS Functions</h1><br>
           <p class="fragment" style="font-size: 5vh">Grid also has functions to help set up grids and sizing.</p><br>
-          <p class="fragment" style="font-size: 5vh"><strong>Repeat</strong>: Simplify setting up grid colums or rows by  using repeat. 
+          <p class="fragment" style="font-size: 5vh; line-height: 1.5;"><strong>Repeat</strong>: Simplify setting up grid colums or rows by using <code style="display: inline; font-size: 3vh;">repeat</code>. 
             It will be easier to write, maintain, and read the code. The general syntax is <code style="font-size: 3vh;">repeat(number of rows or columns, size)</code></p>
           <code class="fragment" style=" font-size: 3vh;">
             <div>.container {</div>
@@ -405,7 +404,7 @@
         </section>
         <section>
           <h1 style="font-size: 8vh;">Flexing Track Size</h1><br>
-          <p class="fragment" style="font-size: 5vh">With the exception of auto, all our examples had specific sizes. We can also define a range of size using the CSS function specifically for grid called minmax.</p><br>
+          <p class="fragment" style="font-size: 5vh">With the exception of auto, all our examples had specific sizes. We can also define a range of size using the CSS function specifically for grid called <code style="display: inline; font-size: 3vh;">minmax.</code></p><br>
           <code class="fragment" style="font-size: 3vh;">minmax(minimum size, maximum size)</code>
           <code class="fragment" style=" font-size: 3vh;">
             <div>.container {</div>
