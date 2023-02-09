@@ -32,6 +32,10 @@
           <h3>HTML And Front-end Architecture</h3>
           <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
         </section>
+        <!-- These sections are auto loaded from js/custom.js -->
+        <section id="leadership-section"></section>
+        <section id="host-section"></section>
+        <section id="drink-section"></section>
         <section>
           <h1>Join us on...</h1>
           <a href="https://kcwit.slack.com" target="_blank" class="fragment">
@@ -77,35 +81,19 @@
         </section>
         <!-- Agenda -->
         <section>
-          <h1>Tonight's Agenda: Front-End Architecture &amp; HTML</h1>
+          <h1>Tonight's Agenda: <br>Front-End Architecture &amp; HTML</h1>
           <br>
           <ul style="margin-left: 40px;">
-            <li class="fragment">What is Web Development &amp; Intro to HTML
-              <ul style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">Intro &amp; Structure</li>
-              </ul>
-            </li>
-            <li class="fragment">HTML Content Tags
-              <ul style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">Using tags, semantic HTML, best practices, &amp; debugging </li>
-              </ul>
-            </li>
-            <li class="fragment">HTML Attributes & the DOM
-              <ul style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">Global, element, and custom attributes &amp; DOM</li>
-              </ul>
-            </li>
+            <li class="fragment">What is Web Development &amp; Intro to HTML</li>
+            <li class="fragment">HTML Content Tags</li>
+            <li class="fragment">HTML Attributes & the DOM</li>
             <li class="fragment">Accessibility (A11y)</li>
-            <li class="fragment">Intro to Font-End Architecture
-              <ul style="margin: 0 0 0 60px;" type="a">
-                <li class="fragment">File organization</li>
-              </ul>
-            </li>
+            <li class="fragment">Intro to Font-End Architecture</li>
           </ul>
         </section>
         <!-- SESSION TOPIC: Web Development/HTML -->
         <section>
-          <h1>What is Web Development &amp; Into to HTML</h1>
+          <h1>What is Web Development &amp; Intro to HTML</h1>
           <br><br>
           <ul style="margin-left: 40px;">
             <li class="fragment">What is a Website?</li>
@@ -118,16 +106,16 @@
           <h1>What is a Website?</h1>
           <br><br>
           <p class="fragment">
-            Websites are a collection of special files that browsers understand and turn into websites we use every day.
+            Collection of special files that browsers understand and turn into websites we use every day
           </p>
-          <br>
-          <p class="fragment">
-            Website files include:
-            <ul style="margin-left: 40px;">
-              <li class="fragment">Code files: HTML, CSS, JavaScript</li>
-              <li class="fragment">Extra files: images &amp; videos</li>
-            </ul>
-          </p>
+        </section>
+        <section>
+          <h1>Website files include:</h1>
+          <br><br>
+          <ul style="margin-left: 40px;">
+            <li class="fragment">Code files: HTML, CSS, JavaScript</li>
+            <li class="fragment">Extra files: images &amp; videos</li>
+          </ul>
         </section>
         <section>
           <h1>The Code Files</h1>
@@ -142,42 +130,45 @@
           <h1>HTML</h1>
           <br><br>
           <p class="fragment">Contains content you see</p>
-          <ul class="margin-left: 40px;">
-            <li class="fragment">Defines the structure of the content (navigation, header, footer, lists)</li>
-            <!-- Speech note: NOT the layout, but the organization of the content-->
-            <li class="fragment">Boring to look at by itself</li>
-            <li class="fragment">Our focus for today</li>
-          </ul>
+          <br>
+          <p class="fragment">Defines the structure of the content (navigation, header, footer, lists)</p>
+          <!-- Speech note: NOT the layout, but the organization of the content-->
+          <br>
+          <p class="fragment">Boring to look at by itself</p>
+          <br>
+          <p class="fragment">Our focus for today</p>
         </section>
         <section>
           <h1>CSS</h1>
           <br><br>
           <p class="fragment">Styles for the site</p>
-          <ul class="margin-left: 40px;">
-            <li class="fragment">Decorates HTML content by adding visual appeal</li>
-            <li class="fragment">Handles layout of content</li>
-            <li class="fragment">Join us for our next session to dive into CSS!</li>
-          </ul>
+          <br>
+          <p class="fragment">Decorates HTML content by adding visual appeal</p>
+          <br>
+          <p class="fragment">Handles layout of content</p>
+          <br>
+          <p class="fragment">Join us for our next session to dive into CSS!</p>
         </section>
         <section>
           <h1>JavaScript</h1>
           <br><br>
           <p class="fragment">Defines behavior of the website</p>
-          <ul class="margin-left: 40px;">
-            <li class="fragment">Muscles that power a website</li>
-            <li class="fragment">Handles interactions, such as button clicks</li>
-            <li class="fragment">Gets dynamic content, so you have the most up-to-date information</li>
-            <li class="fragment">Join us later this year when we cover JavaScript</li>
-          </ul>
+          <br>
+          <p class="fragment">Muscles that power a website</p>
+          <br>
+          <p class="fragment">Handles interactions, such as button clicks</p>
+          <br>
+          <p class="fragment">Gets dynamic content, so you have the most up-to-date information</p>
+          <br>
+          <p class="fragment">Join us later this year when we cover JavaScript</p>
         </section>
         <section>
-          <h1>How Do HTML, CSS, &amp; JavaScript Fit Together?</h1>
-          <img class="fragment" src="../images/front-end-html/html+css+javascript.gif" alt="HTML, CSS, and JavaScript working together" />
+          <img src="../images/front-end-html/html+css+javascript.gif" alt="HTML, CSS, and JavaScript working together" height="100%"/>
         </section>
         <!-- HTML Basics -->
         <section>
           <h1>HTML Basics</h1>
-          <img src="../images/octocats/octocat-happy.png" alt="Happy Octocat" height="auto"/>
+          <img src="../images/octocats/octocat-happy.png" alt="Happy Octocat" height="75%"/>
         </section>
         <section>
           <h1>What is HTML?</h1>
@@ -186,11 +177,11 @@
           <p class="fragment"><font style="color:#c7bc75">T</font>ext</p>
           <p class="fragment"><font style="color:#c7bc75">M</font>arkup</p>
           <p class="fragment"><font style="color:#c7bc75">L</font>anguage</p>
-          <img src="../images/octocats/octocat-confused.png" alt="Confused Octocat" height="auto"/>
+          <img src="../images/octocats/octocat-confused.png" alt="Confused Octocat" height="500"/>
         </section>
         <section>
-          <h1>What is HTML Continued...</h1>
-          <p class="fragment">
+          <br>
+          <p>
             Most fundamental building block of web pages
           </p>
           <br>
@@ -201,6 +192,8 @@
           <p class="fragment">
             Used for the <i>meaning</i> of the content, not how it is formatted
           </p>
+        </section>
+        <section>
           <br>
           <p class="fragment">
             Type (header, body) versus style (font, color, background, branding)
@@ -217,25 +210,24 @@
           </p>
         </section>
         <section>
-          <h1>Where Would You See HTML?</h1>
+          <h1>Where in the World Would You See HTML?</h1>
           <br><br>
           <p class="fragment">
-            Each website has at least one <i><strong>index.html</strong></i> file.
+            Each website has at least one <i><strong>index.html</strong></i> file
           </p>
           <br>
           <p class="fragment">
-            This is the main entry to a website, like your website homepage.
+            This is the main entry to a website, like your website homepage
           </p>
           <br>
           <p class="fragment">
-            We'll see an example of this in our project tonight.
+            We'll see an example of this in our project tonight
           </p>
-          <img src="../images/octocats/octocat-excellent.png" alt="Mischievous Octocat" height="auto"/>
         </section>
         <!-- HTML Syntax -->
         <section>
           <h1>HTML Syntax</h1>
-          <img src="../images/octocats/octocat-happy.png" alt="Happy Octocat" height="auto"/>
+          <img src="../images/octocats/octocat-happy.png" alt="Happy Octocat" height="75%"/>
         </section>
         <section>
           <h1>Open/Close Tags</h1>
@@ -247,43 +239,48 @@
           <p class="fragment">
             Think of tags as <strong>book-ends</strong> (In most cases, you have to have a pair: an opening tag and closing tag)
           </p>
-          <br>
+        </section>
+        <section>
+          <h1>Open/Close Tags</h1>
+          <br><br>
           <p class="fragment">
             The opening tag has the tag name in angle brackets (&lt; &gt; )
           </p>
+          <br>
           <p class="fragment">
             The closing tag has a forward slash (/) before the tag name (&lt;/ &gt;)
           </p>
         </section>
         <section>
-          <h1>Open/Closed Tags Continued</h1>
+          <h1>Open/Closed Tags</h1>
           <br><br>
-          <p class="fragment">
+          <p>
             Example from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="new">MDN</a>:
           </p>
           <img src="../images/front-end-html/htmlOpeningClosingTag.png" alt="Opening closing tag example" height="auto"/>
         </section>
         <section>
+          <br><br><br>
           <p>My cat is very grumpy.</p>
         </section>
         <section>
           <h1>More About Open and Close Tags</h1>
           <br><br>
-          <p class="fragment">
+          <p class="fragment" data-fragment-index="1" >
             Between open/close tags: can be more HTML &amp; line breaks
           </p>
           <br>
-          <p class="fragment">
+          <p class="fragment" data-fragment-index="2" >
             Example from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="new">MDN</a>:
           </p>
           <br>
           <p class="fragment">
             <div class="fill-row" style="align-items: flex-start;">
-              <code class="fragment" data-fragment-index="1" style="flex: none; flex-basis: 50%; vertical-align: top;">&lt;div&gt;
-                <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;p&gt;</div>
-                  <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&nbsp;&nbsp;My cat is very &lt;em&gt;very&lt;em&gt; grumpy.</div>
-                  <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;/p&gt;</div>
-                <div class="fragment" data-fragment-index="2">&lt;/div&gt;</div>
+              <code class="fragment" data-fragment-index="3" style="flex: none; flex-basis: 50%; vertical-align: top;">&lt;div&gt;
+                <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;p&gt;</div>
+                  <div class="fragment" data-fragment-index="6">&nbsp;&nbsp;&nbsp;&nbsp;My cat is very &lt;em&gt;very&lt;em&gt; grumpy.</div>
+                  <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;/p&gt;</div>
+                <div class="fragment" data-fragment-index="4">&lt;/div&gt;</div>
               </code>
             </div>
           </p>
@@ -295,8 +292,10 @@
         </section>
         <section>
           <div>
+            <br><br>
             <p>My cat is <em>very</em> grumpy.</p>
           </div>
+          <br>
           <img src="../images/front-end-html/grumpy_cat.png" alt="Grumpy cat" height="auto"/>
         </section>
         <section>
@@ -339,43 +338,64 @@
           </p>
           <br>
           <p class="fragment">
-            Wrapper of <code>&lt;head&gt;</code> &  <code>&lt;body&gt;</code> elements
+            Wrapper of &lt;head&gt; & &lt;body&gt; elements
           </p>
         </section>
         <section>
           <h1><code>&lt;head&gt;</code></h1>
           <br><br>
           <p class="fragment">
-            First element inside of a <code>&lt;html&gt;</code> tag
+            First element inside of a &lt;html&gt; tag
           </p>
           <br>
           <p class="fragment">
             Content is invisible to the reader
           </p>
+          <br>
           <p class="fragment">
             Gives the browser important infomation about how to interpret the HTML on the page
           </p>
+        </section>
+        <section>
           <br>
-          <p class="fragment">
-            Other valid tags inside of <code>&lt;head&gt;</code>:
+          <p>
+            Other valid tags inside of &lt;head&gt;:
+            <br><br>
             <ul class="fragment">
-              <li class="fragment"><code>&lt;title&gt;</code> - Text that displays in browser tab</li>
-              <li class="fragment"><code>&lt;meta charset="utf-8"&gt;</code> - Character encoding that can be explicitly set or <strong>UTF-8</strong></li>
-              <li class="fragment"><code>&lt;link&gt;</code> - linked files</li>
-              <ul class="fragment">
-                <li class="fragment"><code>&lt;link rel="stylesheet" href="/css/style.css"&gt;</code> - Add CSS linked files</li>
-                <li class="fragment"><code>&lt;script src="/javascript-file.js"&gt;&lt;/script&gt;</code> - Add JavaScript linked files</li>
-              </ul>
+              <li class="fragment">&lt;title&gt; Text that displays in browser tab</li>
+              <br>
+              <li class="fragment">
+                &lt;meta charset="utf-8"&gt;<br>
+                Character encoding that can be explicitly set/<strong>UTF-8</strong>
+              </li>
+              <br>
               <li class="fragment">Metadata for search engines and more</li>
+              <br>
+              <li class="fragment">&lt;link&gt; Linked files</li>
+              <br>
             </ul>
           </p>
+        </section>
+        <section>
+          <h1>Valid Tags Related to Linked Files</h1>
+          <br><br>
+          <ul class="fragment">
+            <li class="fragment">&lt;link rel="stylesheet" href="/css/style.css"&gt;<br><br>
+              Add CSS linked files
+            </li>
+            <br><br>
+            <li class="fragment">&lt;script src="/javascript-file.js"&gt;&lt;/script&gt;<br><br>
+              Add JavaScript linked files
+            </li>
+          </ul>
         </section>
         <section>
           <h1><code>&lt;body&gt;</code></h1>
           <br><br>
           <p class="fragment">
-            Element within <code>&lt;html&gt;</code> and after <code>&lt;head&gt;</code>
+            Element within &lt;html&gt; and after &lt;head&gt;
           </p>
+          <br>
           <p class="fragment">
             All the content you want to display in the browser window
           </p>
@@ -384,18 +404,18 @@
           <h1 style="font-size: 8vh;">Work Time</h1>
           <p style="font-size: 7vh;">See you soon!</p>
           <br><br>
-          <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
         <!-- Top discussion: HTML Content Tags-->
         <section>
           <h1>HTML Content Tags</h1>
-          <img src="../images/octocats/octocat-happy.png" alt="Happy cat" />
+          <img src="../images/octocats/octocat-happy.png" alt="Happy cat" height="75%"/>
         </section>
         <section>
           <h1>HTML Content Tags</h1>
           <br>
           <p class="fragment" data-fragment-index="0">
-            Live inside the <code>&lt;body&gt;</code> to give your content structure and meaning
+            Live inside the &lt;body&gt; to give your content structure and meaning
           </p>
           <br>
           <p class="fragment">Examples include:</p>
@@ -404,12 +424,21 @@
             <li class="fragment">Hyperlinks, Images, Videos, Audio</li>
             <li class="fragment">Tables, Figures</li>
             <li class="fragment">Interactive elements such as Buttons, Inputs, Selects</li>
+          </ul>
+        </section>
+        <section>
+          <h1>HTML Content Tag Examples Included</h1>
+          <br>
+          <br>
+          <ul class="margin-left: 40px;">
             <li class="fragment">Logical groups of related content such as:</li>
             <ul class="margin-left: 40px;">
               <li class="fragment">Navigation, Footer, Address, Quotations, Articles, and Sections</li>
             </ul>
+            <br><br>
             <li class="fragment">Containers that group content such as Divider or Span</li>
-            <li class="fragment">Content for notes or reminders: <code>&lt;!-- Comment --&gt;</code></li>
+            <br>
+            <li class="fragment">Content for notes or reminders: &lt;!-- Comment --&gt;</li>
           </ul>
         </section>
         <!-- Semantic HTML -->
@@ -417,19 +446,32 @@
           <h1>Semantic HTML</h1>
           <br><br>
           <p class="fragment">
-            Means you organize your content into tags that best convey the meaning of the content.
+            Means you organize your content into tags that best convey the meaning of the content
           </p>
+        </section>
+        <section>
+          <h1>Semantic HTML</h1>
+          <br><br>
           <p class="fragment">
-            For example, you can quote Masala Yousafzai using a <code>&lt;span&gt;</code> or semantically correct <code>&lt;q&gt;</code> tag:
+            For example, you can quote Masala Yousafzai using a &lt;span&gt;
+            or semantically correct &lt;q&gt; tag:
           </p>
-          <code class="fragment"  style="width:75%;margin: 0 auto;" data-fragment-index="1">&lt;span&gt;We realize the importance of our voices only when we are silenced.&lt;/span&gt;</code>
-          <code class="fragment" style="width: 75%; margin: 0 auto;" data-fragment-index="1">
-            <div data-fragment-index="2">&lt;q cite="https://www.goodreads.com/book/show/17851885-i-am-malala"&gt;<br>
-              We realize the importance of our voices only when we are silenced.<br></div>
+          <br>
+          <code class="fragment"  style="width:75%;margin: 0 auto;">
+            &lt;span&gt;<br>
+            &nbsp;&nbsp;We realize the importance of our voices only <br>&nbsp;&nbsp;when we are silenced.
+            <br>&lt;/span&gt;
+          </code>
+          <br>
+          <code class="fragment" style="width: 75%; margin: 0 auto;">
+            <div>
+              &lt;q cite="https://www.goodreads.com/book/malala"&gt;<br>
+              &nbsp;&nbsp;We realize the importance of our voices only <br>&nbsp;&nbsp;when we are silenced.<br></div>
               &lt;/q&gt;<br>
           </code>
         </section>
         <section>
+          <br><br><br><br><br>
           <span>We realize the importance of our voices only when we are silenced.</span>
           <br><br>
           <q cite="https://www.goodreads.com/book/show/17851885-i-am-malala">
@@ -437,15 +479,24 @@
           </q>
         </section>
         <section>
-          <h1>Why is Semantics Important?</h1>
+          <h1>Why are Semantics Important?</h1>
           <br><br>
           <p class="fragment">
-            Using semantic HTML is a web development best practice because:
+            It's a web development best practice because:
           </p>
+          <br>
           <ul class="margin-left: 40px;">
-            <li class="fragment" style="list-style-type: disc;">Necessary for search engines and discoverability (SEO)</li>
-            <li class="fragment" style="list-style-type: disc;">Necessary for accessibility and creating inclusive websites</li>
-            <li class="fragment" style="list-style-type: disc;">Helps developers organize their code</li>
+            <li class="fragment" style="list-style-type: disc;">
+              Necessary for search engines and discoverability (SEO)
+            </li>
+            <br>
+            <li class="fragment" style="list-style-type: disc;">
+              Necessary for accessibility and creating inclusive websites
+            </li>
+            <br>
+            <li class="fragment" style="list-style-type: disc;">
+              Helps developers organize their code
+            </li>
           </ul>
         </section>
         <section>
@@ -453,26 +504,44 @@
           <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment" style="list-style-type: disc;">Case sensitivity</li>
+            <br>
             <li class="fragment" style="list-style-type: disc;">Indent nested tags</li>
-            <ul class="margin-left: 40px;">
-              <li class="frament" style="list-style-type: circle;">Every tag should have a close tag that coordinates with an open tag (with the exception of self-closing tags)</li>
+            <br>
+            <ul class="fragment margin-left: 40px;">
+              <li class="frament" style="list-style-type: circle;">
+                Every tag should have a close tag that coordinates with an open tag
+                (with the exception of self-closing tags)
+              </li>
             </ul>
-            <li class="fragment" style="list-style-type: disc;">Use enough line breaks in your code to be readable - don't try to mash code together</li>
+          </ul>
+        </section>
+        <section>
+          <h1>HTML Standards &amp; Best Practices</h1>
+            <br><br>
+            <li class="fragment" style="list-style-type: disc;">
+              Use enough line breaks in your code to be readable <br>(don't try to mash code together)
+            </li>
+            <br>
             <li class="fragment" style="list-style-type: disc;">Be semantic!</li>
           </ul>
         </section>
         <section>
           <code class="fragment" style="width: 75%; margin: 0 auto;" data-fragment-index="1">
             &lt;div&gt;
-            <div data-fragment-index="2">&nbsp;&nbsp;&lt;h1&gt;Watermelon Moscow Mule&lt;/h1&gt;</div>
-            <div data-fragment-index="3">&nbsp;&nbsp;&lt;h6&gt;A fruity twist on a classic cocktail&lt;/h6&gt;</div>
-            <div data-fragment-index="4">&nbsp;&nbsp;&lt;p&gt;</div>
-            <div data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;This is one of my favorites! I find it refreshing on a hot day. The garnish adds a hint of sofistication met with pure enlightenment.</div>
-            <div data-fragment-index="4">&nbsp;&nbsp;&lt;/p&gt;</div>
-            <div data-fragment-index="5">&nbsp;&nbsp;&lt;div&gt;<br>
-              <div data-fragment-index="6">&nbsp;&nbsp;&nbsp;&nbsp;&lt;h6&gt;This drink consists of:&lt;/h6&gt;</div>
-              <div data-fragment-index="6">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
-                <div data-fragment-index="7">
+            <div class="fragment" data-fragment-index="2">&nbsp;&nbsp;&lt;h1&gt;Watermelon Moscow Mule&lt;/h1&gt;</div>
+            <div class="fragment" data-fragment-index="3">&nbsp;&nbsp;&lt;h6&gt;A fruity twist on a classic cocktail&lt;/h6&gt;</div>
+            <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&lt;p&gt;</div>
+            <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;
+              This is one of my favorites! I find it <br>&nbsp;&nbsp;&nbsp;&nbsp;
+              refreshing on a hot day. The garnish adds a <br>&nbsp;&nbsp;&nbsp;&nbsp;
+              hint of sofistication met with pure <br>&nbsp;&nbsp;&nbsp;&nbsp;
+              enlightenment.
+            </div>
+            <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&lt;/p&gt;</div>
+            <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;div&gt;<br>
+              <div class="fragment" data-fragment-index="6">&nbsp;&nbsp;&nbsp;&nbsp;&lt;h6&gt;This drink consists of:&lt;/h6&gt;</div>
+              <div class="fragment" data-fragment-index="7">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                <div class="fragment" data-fragment-index="8">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Watermelon&lt;/li&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Vodka&lt;/li&gt;<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Lime juice&lt;/li&gt;<br>
@@ -485,12 +554,15 @@
           </code>
         </section>
         <section>
-          <div>
+          <ul class="text-align: left;">
             <h1>Watermelon Moscow Mule</h1>
+            <br>
             <h6>A fruity twist on a Classic Cocktail</h6>
+            <br>
             <p>
               This is one of my favorites! I find it refreshing on a hot day. The garnish adds a hint of sofistication met with pure enlightenment.
             </p>
+            <br>
             <div>
               <h6>This drink consists of:</h6>
               <ul class="margin-left: 40px;">
@@ -499,7 +571,7 @@
                 <li>Lime juice</li>
               </ul>
             </div>
-          </div>
+          </ul>
         </section>
         <!-- Quick check in -->
         <section>
@@ -511,21 +583,28 @@
         <section>
           <h1>Debugging Tools</h1>
           <br><br>
-          <p class="fragment">We make mistakes -- typos, forgotten closing tags...</p>
+          <img src="../images/octocats/octocat-overwhelmed.png" alt="Overwhelmed cat" height="75%"/>
+        </section>
+        <section>
+          <h1>Debugging Tools</h1>
+          <br><br>
+          <p class="fragment">We make mistakes <br>(typos, forgotten closing tags...)</p>
+          <br>
           <p class="fragment">But we have tools that help us troubleshoot when things don't turn out as expected</p>
-          <img src="../images/octocats/octocat-overwhelmed.png" alt="Overwhelmed cat" height="auto"/>
         </section>
         <section>
           <h1>Dev Tools in Browser</h1>
           <br><br>
           <p class="fragment">
-            You can inspect elements on any webpage <i>(Might be illegal in MO per
+            You can inspect elements on any webpage <br><i>(Might be illegal in MO per
             <a href="https://twitter.com/govparsonmo/status/1448697768311132160">
               Governor Parson
             </a>)</i>
           </p>
+          <br>
           <p class="fragment">Ways you can inspect elements:</p>
-          <ul class="margin-left: 40px;">
+          <br>
+          <ul class="fragment margin-left: 40px;">
             <li class="frament">Right click &amp; inspect</li>
             <li class="frament">Windows: CTRL + SHIFT + I</li>
             <li class="frament">Mac: CMD + OPT + I</li>
@@ -538,7 +617,8 @@
           <p class="fragment">
             W3C HTML Validator - <a href="https://validator.w3.org/">https://validator.w3.org/</a>
           </p>
-          <p class="fragment">Scan HTML for mistakes - via direct URL, file upload, or direct input (copy/paste)</p>
+          <br>
+          <p class="fragment">Scans HTML for mistakes<br>via direct URL, file upload, or direct input (copy/paste)</p>
         </section>
         <section>
           <h1>Look It Up</h1>
@@ -546,14 +626,19 @@
           <p class="fragment">
             Even those of us in development jobs don't know <i>everything</i>...
           </p>
+          <br>
           <p class="fragment">
             ...but we do know how to utilize resources to find out what we need to know to solve a specific issue
           </p>
+        </section>
+        <section>
+          <h1>Resources to Look It Up</h1>
+          <br><br>
           <ul class="margin-left: 40px;">
-            <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN</a></li>
-            <li class="fragment"><a href="https://www.google.com/">Google</a></li>
-            <li class="fragment"><a href="http://www.w3schools.com/">W3 Schools</a></li>
-            <li class="fragment"><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+            <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN</a></li><br>
+            <li class="fragment"><a href="https://www.google.com/">Google</a></li><br>
+            <li class="fragment"><a href="http://www.w3schools.com/">W3 Schools</a></li><br>
+            <li class="fragment"><a href="http://stackoverflow.com/">Stack Overflow</a></li><br>
             <!-- Speech note: 1st search for your question to see if someone hasn't already asked it. -->
             <!-- Speech note: If you cannot find the question asked, ask your own question and have it answered by other developers. -->
             <li class="fragment">Peers: ask co-workers or KCWiT on Slack!</li>
@@ -562,71 +647,112 @@
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
           <p style="font-size: 7vh;">See you soon!</p><br><br>
-          <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
         <!-- TOP TOPIC: HTML Tag Attributes -->
         <section>
           <h1>HTML Tag Attributes</h1>
-          <img src="../images/octocats/octocat-yummy.png" alt="Yummy cat" height="auto"/>
+          <img src="../images/octocats/octocat-yummy.png" alt="Yummy cat" height="75%"/>
         </section>
         <section>
-          <h1>Atrributes</h1>
+          <h1>Attributes</h1>
           <br><br>
-          <p class="fragmant">Values added to HTML elements that configure the element by changing or adjusting the element's behavior</p>
+          <p class="fragment">Values added to HTML elements that configure the element by changing or adjusting the element's behavior</p>
           <br>
           <p class="fragment">
             Set as a property name and value inside the opening tag (including self-closing tags):
           </p>
           <code class="fragment">attributeName="value here"</code>
-          <br>
-          <p class="fragment">There are standard attributes that are:</p>
+        </section>
+        <section>
+          <h1>Standard attributes:</h1>
+          <br><br>
           <ul class="margin-left: 40px;">
-            <li class="fragment">Supported in all HTML elements</li>
-            <li class="fragment">Only apply to specific elements</li>
+            <li class="fragment">Supported in all HTML elements</li><br>
+            <li class="fragment">Only apply to specific elements</li><br>
             <li class="fragment">Custom attributes used for unique needs</li>
           </ul>
         </section>
         <section>
           <h1>Important Attributes</h1>
           <br><br>
-          <p class="fragment">
-            <b>id:</b> supported in all HTML elements to uniquely identify an element
-          </p>
+          <ul>
+            <li class="fragment">id</li>
+            <br>
+            <li class="fragment">class</li>
+            <br>
+            <li class="fragment">href</li>
+            <br>
+            <li class="fragment">src</li>
+            <br>
+            <li class="fragment">data-*:</li>
+          </ul>
+        </section>
+        <section>
+          <h1>id</h1>
+          <br><br>
+          <p class="fragment">Supported in all HTML elements</p>
+          <br>
+          <p class="fragment">Uniquely identifies an element</p>
+          <br>
           <code class="fragment">
             &lt;p id="#hot-toddy"&gt;&lt;/p&gt;
           </code>
-          <br>
+        </section>
+        <section>
+          <h1>class</h1>
+          <br><br>
           <p class="fragment">
-            <b>class:</b> supported in all HTML elements to apply CSS classes for styling
+            Supported in all HTML elements
           </p>
+          <br>
+          <p class="fragment">Applies CSS classes for styling</p>
+          <br>
           <code class="fragment">
             &lt;h1 class="site-header"&gt;&lt;/h1&gt;
           </code>
           <!-- Speech note: Use class over id -->
           <!-- Speech note: Shameless plug for next session! -->
+        </section>
+        <section>
+          <h1>href</h1>
+          <br><br>
           <p class="fragment">
-            <b>href:</b> specific to hyperlink element
+            Specific to hyperlink element
           </p>
+          <br>
           <code class="fragment">
             &lt;a href="https://arc.net/"&gt;Click here to learn about Arc&lt;/a&gt;
           </code>
           <br>
+          <a class="fragment" href="https://arc.net/">Click here to learn about Arc</a>
+        </section>
+        <section>
+          <h1>src</h1>
+          <br><br>
           <p class="fragment">
-            <b>src:</b> specific to image element
+            Specific to image element
           </p>
+          <br>
           <code class="fragment">
             &lt;img src="https://arc.net/images/arc-logo.png" alt="Arc logo"&gt;
           </code>
-          <br>
+        </section>
+        <section>
+          <h1>data-*</h1>
+          <br><br>
           <p class="fragment">
-            <b>data-*:</b> custom attributes that are specific to a website's needs
+            Custom attributes that are specific to a website's needs
           </p>
+          <br>
           <code class="fragment">
             &lt;div data-menuItem="3"&gt;Hot Toddy&lt;/div&gt;
           </code>
-          <br>
+        </section>
+        <section>
+          <h1>Helpful attribute list:</h1>
+          <br><br>
           <p class="fragment">
-            Helpful attribute list:
             <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">
               MDN Attributes
             </a>
@@ -635,14 +761,17 @@
         <section>
           <h1>Helpful Tip About Paths</h1>
           <br><br>
-          <p class="fragment">HTML tags take a path (to an image, file, different page or website)</p>
+          <p class="fragment">HTML tags take a path <br>(to an image, file, different page or website)</p>
+          <br>
           <p class="fragment">Paths can be <b>absolute</b> or <b>relative</b></p>
         </section>
         <section>
           <h1>Relative Paths</h1>
           <br><br>
           <p class="fragment">Relative paths are relative to the current page</p>
+          <br>
           <p class="fragment">Used for images, files, and links to other pages on the current website domain</p>
+          <br>
           <ul class="margin-left: 40px;">
             <li class="fragment"><code>index.html</code></li>
             <li class="fragment"><code>/about/stars.html</code></li>
@@ -653,7 +782,12 @@
           <h1>Absolute Paths</h1>
           <br><br>
           <p class="fragment">Absolute Paths always include the domain</p>
-          <p class="fragment">These are usually page/files on a different website, but <i>can</i> be used for the current website as well</p>
+          <br>
+          <p class="fragment">
+            These are usually page/files on a different website, but <i>can</i>
+            be used for the current website as well
+          </p>
+          <br>
           <ul class="margin-left: 40px;">
             <li class="fragment"><code>http://heygirl.io/</code></li>
             <li class="fragment"><code>https://awkwardfamilyphotos.com/coach/</code></li>
@@ -667,9 +801,8 @@
         <!-- DOM -->
         <section>
           <h1>DOM</h1>
-          <br><br>
           <h2>Document Object Model</h2>
-          <img src="../images/octocats/octocat-battle.png" alt="Battle cat" height="auto"/>
+          <img src="../images/octocats/octocat-battle.png" alt="Battle cat" height="75%"/>
         </section>
         <section>
           <h1>Document Object Model</h1>
@@ -678,14 +811,18 @@
           <br>
           <p class="fragment">Browser parses the HTML you write and turns it into the DOM</p>
           <br>
-          <p class="fragment">Reviews the entire HTML structure (the anatomy) and see all the pieces we just talked about</p>
+
         </section>
         <section>
           <h1>DOM continuted...</h1>
           <br><br>
-          <p class="fragment">Visual representation of the DOM will match the HTML code you wrote</p>
+          <p class="fragment">Reviews the entire HTML structure (the anatomy) and see all the pieces we just talked about</p>
           <br>
-          <p class="fragment">Reasons that could make the DOM different from the HTML code:</p>
+          <p class="fragment">Visual representation of the DOM will match the HTML code you wrote</p>
+        </section>
+        <section>
+          <h1>Reasons that could make the DOM different from the HTML code:</h1>
+          <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment">Mistakes in your HTML</li>
             <ul class="margin-left: 40px;">
@@ -704,13 +841,13 @@
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
           <p style="font-size: 7vh;">See you soon!</p><br><br>
-          <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
         <!-- TOP Topic: A11y -->
         <!-- pronunciation: "ahl-lee" -->
         <section>
           <h1>A11y</h1>
-          <img src="../images/octocats/octocat-help.png" alt="A11y love" height="auto"/>
+          <img src="../images/octocats/octocat-help.png" alt="A11y love" height="75%"/>
         </section>
         <!-- What is it? -->
         <section>
@@ -719,15 +856,28 @@
           <ul class="margin-left: 40px;">
             <!-- Speech note: "NU - mer - nIm"-->
             <li class="fragment">A11y is a numeronym (type of abbreviation) for <b>accessibility</b></li>
+            <br>
             <li class="fragment">
-              Numeronym: takes the first and last letters of a word &amp; replaces the letters inside with a number representing the letters replaced
+              Numeronym: takes the first and last letters of a word &amp;
+              replaces the letters inside with a number representing the letters replaced
             </li>
-            <ul class="margin-left: 40px;">
-              <li class="fragment">In this case: 11</li>
-              <li class="fragment">Another common numeronym is <b>i18n</b> for internationalization</li>
-            </ul>
-            <li class="fragment">Accessibility: making things more usable by members of the disabled community</li>
           </ul>
+        </section>
+        <section>
+          <h1>Numeronym</h1>
+          <br><br>
+          <ul class="margin-left: 40px;">
+            <li class="fragment">accessibility</li>
+            <br>
+            <li class="fragment">11 letters between the "a" and "y"</li>
+            <br>
+            <li class="fragment">Another common numeronym is <b>i18n</b> for internationalization</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Accessibility</h1>
+          <br><br>
+          <p class="fragment">Making things more usable by members of the disabled community</li>
         </section>
         <!-- Why be accessible? -->
         <section>
@@ -735,7 +885,9 @@
           <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment">A better experience for <b>ALL</b> your users</li>
+            <br>
             <li class="fragment">Legal obligations (such as ADA) depending on your website</li>
+            <br>
             <li class="fragment">Expands your audience</li>
           </ul>
         </section>
@@ -743,7 +895,7 @@
         <section>
           <h1>What is POUR?</h1>
           <br><br>
-          <p class="fragment">POUR is a mnemonic for the four principles to increase accessibility</p>
+          <p class="fragment">POUR is a mnemonic for the four principles to increase accessibility</p><br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment">Perceivable</li>
             <li class="fragment">Operable</li>
@@ -756,8 +908,10 @@
           <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment">Provide text alternatives for any non-text content</li>
+            <br>
             <li class="fragment">Pay attention to things like contrast, especially in text</li>
-            <li class="fragment">Include alternative ways to interact with things like video (captions, video descriptions, sign language, etc)</li>
+            <br>
+            <li class="fragment">Include alternative ways to interact with things like video <br>(captions, video descriptions, sign language, etc)</li>
           </ul>
         </section>
         <section>
@@ -765,8 +919,11 @@
           <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment">Allow your website to be operated with keyboard commands, especially tab navigation</li>
+            <br>
             <li class="fragment">Consider other input methods</li>
+            <br>
             <li class="fragment">Don't include things that could trigger seizures or other reactions</li>
+            <br>
             <ul class="margin-left: 40px;">
               <li class="fragment">Alternatively, include a way to turn them off like "reduce motion"</li>
             </ul>
@@ -777,7 +934,9 @@
           <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment">Use predictable and consistent navigation &amp; actionable components</li>
+            <br>
             <li class="fragment">Include useful feedback and error handling</li>
+            <br>
             <li class="fragment">
               Include help where needed, such as tooltips (remember to make sure they're accessible to those who don't use a mouse!)
             </li>
@@ -796,11 +955,23 @@
           <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment">Follow HTML standards and use semantic HTML</li>
+            <br>
             <li class="fragment">Include information like "alt" text on images</li>
+            <br>
             <li class="fragment">Allow UI controls to be controlled by keyboard (keep it super simple and allow the browser to do its job)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>How Can We Be More Accessible?</h1>
+          <br><br>
+          <ul class="margin-left: 40px;">
             <li class="fragment">Check your website with an accessibility checker:</li>
+            <br>
             <ul class="margin-left: 40px;">
-              <li class="fragment"> <a href="https://www.accessibilitychecker.org/">https://www.accessibilitychecker.org/</a></li>
+              <li class="fragment">
+                <a href="https://www.accessibilitychecker.org/">https://www.accessibilitychecker.org/</a>
+              </li>
+              <br>
               <li class="fragment">
                 <a href="https://developer.chrome.com/docs/lighthouse/overview/#:~:text=Lighthouse%20is%20an%20open%2Dsource,apps%2C%20SEO%2C%20and%20more.">
                   Lighthouse Chrome Tool
@@ -808,7 +979,14 @@
               </li>
               <!-- Speech note: add quick demo of Lighthouse (us.shein.com for bad and arc.net for good) -->
             </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>How Can We Be More Accessible?</h1>
+          <br><br>
+          <ul class="margin-left: 40px;">
             <li class="fragment">Use ARIA attributes to provide semantic meaning to content (No ARIA is better than bad ARIA)</li>
+            <br>
             <ul class="margin-left: 40px;">
               <li class="fragment">
                 More info:
@@ -817,6 +995,7 @@
                 </a>
               </li>
             </ul>
+            <br><br>
             <li class="fragment">
               More information about accessible HTML:
               <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">
@@ -829,12 +1008,12 @@
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
           <p style="font-size: 7vh;">See you soon!</p><br><br>
-          <img src="../images/CSS-session/catType.gif" alt="image cat typing" />
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
         <!-- Top Topic: Introduction to Front-End Architecture -->
         <section>
           <h1>Introduction to Front-End Architecture</h1>
-          <img src="../images/octocats/octocat-build.png" alt="Paint cat" height="auto"/>
+          <img src="../images/octocats/octocat-build.png" alt="Paint cat" height="75%"/>
         </section>
         <section>
           <h1>Introduction</h1>
@@ -845,8 +1024,13 @@
           <br>
           <!-- Speech note: Just as structures of a house varies from the structure of a baseball stadium... -->
           <p class="fragment">Different applications/websites can require different structures</p>
-          <p class="fragment">We'll cover basics that can be reused for most of your projects</p>
+          <br>
+        </section>
+        <section>
+          <h1>Introduction</h1>
           <br><br>
+          <p class="fragment">We'll cover basics that can be reused for most of your projects</p>
+          <br>
           <p class="fragment"><i>Of course you can customize as your project requires</i></p>
         </section>
         <!-- What is Front-End Architecture? -->
@@ -862,8 +1046,10 @@
           <p class="fragment">
             Relatively speaking, it's easy to write code, but it's really hard to write maintainable code as:
           </p>
+          <br>
           <ul class="margin-left: 40px;">
             <li class="fragment">New features are added</li>
+            <br>
             <li class="fragment">Size of your team scales</li>
           </ul>
         </section>
@@ -873,24 +1059,39 @@
           <br><br>
           <p class="fragment">Mostly conceptual</p>
           <br>
-          <p class="fragment">While the basic pieces/ideas are the same, architecture may vary based on:</p>
-          <ol>
+          <p class="fragment">While the basic pieces/ideas are the same, architecture may vary</p>
+        </section>
+        <section>
+          <h1>Architecture May Vary Based On:</h1>
+          <br><br>
+          <ul>
             <li class="fragment">Individual/Team Preferences</li>
+            <br>
             <ul class="margin-left: 40px;">
               <li class="fragment">
                 Directory namings such as <b><i>imgs</i></b> vs <b><i>images</i></b>
               </li>
+              <br>
               <li class="fragment">
                 Organizing by section of site or type of asset, such as <b><i>app/about/css</i></b> vs <b><i>app/css/about</i></b>
               </li>
             </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>Architecture May Vary Based On:</h1>
+          <br><br>
+          <ul class="margin-left: 40px;">
             <li class="fragment">Project Requirements</li>
+            <br>
             <ul class="margin-left: 40px;">
               <li class="fragment">
                 Supporting mobile &amp; desktop? How do you support different styles/assets for various device widths?
               </li>
             </ul>
+            <br><br>
             <li class="fragment">Tools/Processes</li>
+            <br>
             <ul class="margin-left: 40px;">
               <li class="fragment">Different web frameworks might have their own recommmendations</li>
             </ul>
