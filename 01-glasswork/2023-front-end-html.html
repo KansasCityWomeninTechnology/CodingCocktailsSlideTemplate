@@ -28,14 +28,104 @@
   <body>
     <div class="reveal">
       <div class="slides">
+        <!-- Show as attendees enter and get settled in  -->
+        <section>
+          <h1>Welcome!</h1>
+          <br>
+          <ul>
+            <!-- <h6>WiFI access:</h6> -->
+            <!-- <li>SSID + password</li> -->
+            <br>
+            <h6>
+              Presentation Link
+            </h6>
+            <li>
+              <a href="https://bit.ly/kcwit-html-slides" target="_blank">
+                https://bit.ly/kcwit-html-slides
+              </a>
+            </li>
+            <br><br>
+            <h6>Worksheet Link</h6>
+            <li>
+              <a href="https://bit.ly/kcwit-html-worksheet" target="_blank">
+               https://bit.ly/kcwit-html-worksheet
+              </a>
+            </li>
+            <br><br>
+            <h6>
+              Be sure to have these tools ready:
+            </h6>
+            <li>Chrome and GitHub</li>
+          </ul>
+          <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
+        </section>
         <section>
           <h3>HTML And Front-end Architecture</h3>
           <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
         </section>
-        <!-- These sections are auto loaded from js/custom.js -->
-        <section id="leadership-section"></section>
-        <section id="host-section"></section>
-        <section id="drink-section"></section>
+        <!-- Leadership Section -->
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <div class="new-team">
+            <!-- Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/Amy.jpg" alt="Amy Norris" />
+              <p>Amy Norris</p>
+              <p>Director</p>
+            </div>
+            <!-- Co-Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/alex_herron.jpg" alt="Alex Herron" />
+              <p>Alex Herron</p>
+              <p>Co-Director</p>
+            </div>
+            <!-- Technical Materials Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/hyunsu.jpeg" alt="Hyunsu Kim" />
+              <p>Hyunsu Kim</p>
+              <p>Technical Materials Director</p>
+            </div>
+            <!-- Mentor Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/gabi_cropped.jpg" alt="Gabi Dombrowski" />
+              <p>Gabi Dombrowski</p>
+              <p>Mentor Director</p>
+            </div>
+            <!-- Marketing Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/kim.jpg" alt="Kim Watt" />
+              <p>Kim Watt</p>
+              <p>Marketing Director</p>
+            </div>
+            <!-- Presentation Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/nessa.jpg" alt="Nessa Shultz" />
+              <p>Nessa Shultz</p>
+              <p>Presentation Director</p>
+            </div>
+            <!-- Curriculum Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/eyebrows.gif" alt="eyebrows" height="350"/>
+              <p><i>Open position!</i></p>
+              <p>Curriculum Director</p>
+            </div>
+          </div>
+        </section>
+        <!-- Host Section -->
+        <section>
+          <h1>Our Host this Evening</h1>
+          <div class="fill-row">
+            <a href="https://www.vmlyr.com/en-us/united-states" target="_blank">
+              <img src="../images/shared/vmlyr-logo-black.png" alt="VML" style="margin-top: -5em;" />
+            </a>
+          </div>
+        </section>
+        <!-- Drink Section -->
+        <section>
+          <h2>Formerly Logistics &amp; Libations</h2>
+          <img src="../images/shared/libations.jpg" alt="Laura Kozak" height="50%" />
+          <h4>Served by the lovely Laura Kozak!</h4>
+        </section>
         <section>
           <h1>Join us on...</h1>
           <a href="https://kcwit.slack.com" target="_blank" class="fragment">
@@ -79,21 +169,35 @@
             <img src="../images/10-oct/mentors.gif" alt="Mentors" height="70%" style="margin: 15px auto;" />
             <h4>are super heroes!</h4>
         </section>
+        <!-- Disclaimer -->
+        <section>
+          <h1>But WAIT!</h1>
+          <br>
+          <h3>This stuff is a challenge!</h3>
+          <br>
+          <p class="fragment">
+            Don’t be discouraged if you don’t finish each worksheet section before the next presentation section begins.
+          </p>
+          <br>
+          <p class="fragment">
+            We cover a lot of difficult material that will take time to understand. We are here (and on Slack after the session) to help!
+          </p>
+        </section>
         <!-- Agenda -->
         <section>
-          <h1>Tonight's Agenda: <br>Front-End Architecture &amp; HTML</h1>
+          <h1>Tonight's Agenda: <br>HTML &amp; Front-end Architecture</h1>
           <br>
           <ul style="margin-left: 40px;">
             <li class="fragment">What is Web Development &amp; Intro to HTML</li>
             <li class="fragment">HTML Content Tags</li>
             <li class="fragment">HTML Attributes & the DOM</li>
             <li class="fragment">Accessibility (A11y)</li>
-            <li class="fragment">Intro to Font-End Architecture</li>
+            <li class="fragment">Intro to Front-End Architecture</li>
           </ul>
         </section>
         <!-- SESSION TOPIC: Web Development/HTML -->
         <section>
-          <h1>What is Web Development &amp; Intro to HTML</h1>
+          <h1>What is Web Development</h1>
           <br><br>
           <ul style="margin-left: 40px;">
             <li class="fragment">What is a Website?</li>
@@ -121,9 +225,9 @@
           <h1>The Code Files</h1>
           <br><br>
           <ul class="margin-left: 40px;">
-            <li class="fragment">HTML - contains content you see</li>
-            <li class="fragment">CSS - styles for the site</li>
-            <li class="fragment">JavaScript - defines behavior of the website</li>
+            <li class="fragment"><span style="color:#c7bc75">HTML</span> - contains content you see</li>
+            <li class="fragment"><span style="color:#c7bc75">CSS</span> - styles for the site</li>
+            <li class="fragment"><span style="color:#c7bc75">JavaScript</span> - defines behavior of the website</li>
           </ul>
         </section>
         <section>
@@ -163,7 +267,7 @@
           <p class="fragment">Join us later this year when we cover JavaScript</p>
         </section>
         <section>
-          <img src="../images/front-end-html/html+css+javascript.gif" alt="HTML, CSS, and JavaScript working together" height="100%"/>
+          <img src="../images/front-end-html/html+css+javascript.gif" alt="HTML, CSS, and JavaScript working together" height="85%"/>
         </section>
         <!-- HTML Basics -->
         <section>
@@ -173,11 +277,10 @@
         <section>
           <h1>What is HTML?</h1>
           <br><br>
-          <p class="fragment"><font style="color:#c7bc75">H</font>yper</p>
-          <p class="fragment"><font style="color:#c7bc75">T</font>ext</p>
-          <p class="fragment"><font style="color:#c7bc75">M</font>arkup</p>
-          <p class="fragment"><font style="color:#c7bc75">L</font>anguage</p>
-          <img src="../images/octocats/octocat-confused.png" alt="Confused Octocat" height="500"/>
+          <p class="fragment"><span style="color:#c7bc75">H</span>yper</p>
+          <p class="fragment"><span style="color:#c7bc75">T</span>ext</p>
+          <p class="fragment"><span style="color:#c7bc75">M</span>arkup</p>
+          <p class="fragment"><span style="color:#c7bc75">L</span>anguage</p>
         </section>
         <section>
           <br>
@@ -261,7 +364,7 @@
         </section>
         <section>
           <br><br><br>
-          <p>My cat is very grumpy.</p>
+          <p>My cat is <i>very</i> grumpy.</p>
         </section>
         <section>
           <h1>More About Open and Close Tags</h1>
@@ -269,6 +372,8 @@
           <p class="fragment" data-fragment-index="1" >
             Between open/close tags: can be more HTML &amp; line breaks
           </p>
+        </section>
+        <section>
           <br>
           <p class="fragment" data-fragment-index="2" >
             Example from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" target="new">MDN</a>:
@@ -278,7 +383,7 @@
             <div class="fill-row" style="align-items: flex-start;">
               <code class="fragment" data-fragment-index="3" style="flex: none; flex-basis: 50%; vertical-align: top;">&lt;div&gt;
                 <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;p&gt;</div>
-                  <div class="fragment" data-fragment-index="6">&nbsp;&nbsp;&nbsp;&nbsp;My cat is very &lt;em&gt;very&lt;em&gt; grumpy.</div>
+                  <div class="fragment" data-fragment-index="6">&nbsp;&nbsp;&nbsp;&nbsp;My cat is very &lt;i&gt;very&lt;i&gt; grumpy.</div>
                   <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;/p&gt;</div>
                 <div class="fragment" data-fragment-index="4">&lt;/div&gt;</div>
               </code>
@@ -293,7 +398,7 @@
         <section>
           <div>
             <br><br>
-            <p>My cat is <em>very</em> grumpy.</p>
+            <p>My cat is <i>very</i> grumpy.</p>
           </div>
           <br>
           <img src="../images/front-end-html/grumpy_cat.png" alt="Grumpy cat" height="auto"/>
@@ -324,11 +429,6 @@
           <p class="fragment">
             Tells the browser what version of HTML is being used
           </p>
-          <br>
-          <p class="fragment">
-            Older versions of doctype were long and ridiculous:
-            <code class="frament">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code>
-          </p>
         </section>
         <section>
           <h1><code>&lt;html&gt;</code></h1>
@@ -338,7 +438,7 @@
           </p>
           <br>
           <p class="fragment">
-            Wrapper of &lt;head&gt; & &lt;body&gt; elements
+            Wrapper of <span style="color:#c7bc75">&lt;head&gt;</span> & <span style="color:#c7bc75">&lt;body&gt;</span> elements
           </p>
         </section>
         <section>
@@ -362,16 +462,16 @@
             Other valid tags inside of &lt;head&gt;:
             <br><br>
             <ul class="fragment">
-              <li class="fragment">&lt;title&gt; Text that displays in browser tab</li>
+              <li class="fragment"><span style="color:#c7bc75">&lt;title&gt;</span> Text that displays in browser tab</li>
               <br>
               <li class="fragment">
-                &lt;meta charset="utf-8"&gt;<br>
+                <span style="color:#c7bc75">&lt;meta charset="utf-8"&gt;</span><br>
                 Character encoding that can be explicitly set/<strong>UTF-8</strong>
               </li>
               <br>
               <li class="fragment">Metadata for search engines and more</li>
               <br>
-              <li class="fragment">&lt;link&gt; Linked files</li>
+              <li class="fragment"><span style="color:#c7bc75">&lt;link&gt;</span> Linked files</li>
               <br>
             </ul>
           </p>
@@ -380,11 +480,11 @@
           <h1>Valid Tags Related to Linked Files</h1>
           <br><br>
           <ul class="fragment">
-            <li class="fragment">&lt;link rel="stylesheet" href="/css/style.css"&gt;<br><br>
+            <li class="fragment"><span style="color:#c7bc75">&lt;link rel="stylesheet" href="/css/style.css"&gt;</span><br><br>
               Add CSS linked files
             </li>
             <br><br>
-            <li class="fragment">&lt;script src="/javascript-file.js"&gt;&lt;/script&gt;<br><br>
+            <li class="fragment"><span style="color:#c7bc75">&lt;script src="/javascript-file.js"&gt;&lt;/script&gt;</span><br><br>
               Add JavaScript linked files
             </li>
           </ul>
@@ -393,7 +493,7 @@
           <h1><code>&lt;body&gt;</code></h1>
           <br><br>
           <p class="fragment">
-            Element within &lt;html&gt; and after &lt;head&gt;
+            Element within <span style="color:#c7bc75">&lt;html&gt;</span> and after <span style="color:#c7bc75">&lt;head&gt;</span>
           </p>
           <br>
           <p class="fragment">
@@ -403,6 +503,10 @@
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
           <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
@@ -415,9 +519,13 @@
           <h1>HTML Content Tags</h1>
           <br>
           <p class="fragment" data-fragment-index="0">
-            Live inside the &lt;body&gt; to give your content structure and meaning
+            Live inside the <span style="color:#c7bc75">&lt;body&gt;</span> to give your content structure and meaning
           </p>
           <br>
+        </section>
+        <section>
+          <h1>HTML Content Tags</h1>
+          <br><br>
           <p class="fragment">Examples include:</p>
           <ul class="margin-left: 40px;">
             <li class="fragment">Headings, Paragraphs, Ordered/Unordered Lists</li>
@@ -438,7 +546,7 @@
             <br><br>
             <li class="fragment">Containers that group content such as Divider or Span</li>
             <br>
-            <li class="fragment">Content for notes or reminders: &lt;!-- Comment --&gt;</li>
+            <li class="fragment">Content for notes or reminders: <span style="color:#c7bc75">&lt;!-- Comment --&gt;</span></li>
           </ul>
         </section>
         <!-- Semantic HTML -->
@@ -453,8 +561,8 @@
           <h1>Semantic HTML</h1>
           <br><br>
           <p class="fragment">
-            For example, you can quote Masala Yousafzai using a &lt;span&gt;
-            or semantically correct &lt;q&gt; tag:
+            For example, you can quote Malala Yousafzai using a <span style="color:#c7bc75">&lt;span&gt;</span>
+            or semantically correct <span style="color:#c7bc75">&lt;q&gt;</span> tag:
           </p>
           <br>
           <code class="fragment"  style="width:75%;margin: 0 auto;">
@@ -504,6 +612,8 @@
           <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment" style="list-style-type: disc;">Case sensitivity</li>
+            <!-- Speech note: HTML is case insensitive. However, best practice is to have either all uppercase or lowercase.
+              Lowercase is considered easier to read and you don't have toggle CAPS LOCK. -->
             <br>
             <li class="fragment" style="list-style-type: disc;">Indent nested tags</li>
             <br>
@@ -534,7 +644,7 @@
             <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&nbsp;&nbsp;
               This is one of my favorites! I find it <br>&nbsp;&nbsp;&nbsp;&nbsp;
               refreshing on a hot day. The garnish adds a <br>&nbsp;&nbsp;&nbsp;&nbsp;
-              hint of sofistication met with pure <br>&nbsp;&nbsp;&nbsp;&nbsp;
+              hint of sophistication met with pure <br>&nbsp;&nbsp;&nbsp;&nbsp;
               enlightenment.
             </div>
             <div class="fragment" data-fragment-index="4">&nbsp;&nbsp;&lt;/p&gt;</div>
@@ -560,15 +670,15 @@
             <h6>A fruity twist on a Classic Cocktail</h6>
             <br>
             <p>
-              This is one of my favorites! I find it refreshing on a hot day. The garnish adds a hint of sofistication met with pure enlightenment.
+              This is one of my favorites! I find it refreshing on a hot day. The garnish adds a hint of sophistication met with pure enlightenment.
             </p>
             <br>
             <div>
               <h6>This drink consists of:</h6>
               <ul class="margin-left: 40px;">
-                <li>Watermelon</li>
-                <li>Vodka</li>
-                <li>Lime juice</li>
+                <li style="list-style-type: disc;">Watermelon</li>
+                <li style="list-style-type: disc;">Vodka</li>
+                <li style="list-style-type: disc;">Lime juice</li>
               </ul>
             </div>
           </ul>
@@ -596,10 +706,7 @@
           <h1>Dev Tools in Browser</h1>
           <br><br>
           <p class="fragment">
-            You can inspect elements on any webpage <br><i>(Might be illegal in MO per
-            <a href="https://twitter.com/govparsonmo/status/1448697768311132160">
-              Governor Parson
-            </a>)</i>
+            You can inspect elements on any webpage
           </p>
           <br>
           <p class="fragment">Ways you can inspect elements:</p>
@@ -646,7 +753,12 @@
         </section>
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
-          <p style="font-size: 7vh;">See you soon!</p><br><br>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
         <!-- TOP TOPIC: HTML Tag Attributes -->
@@ -665,11 +777,11 @@
           <code class="fragment">attributeName="value here"</code>
         </section>
         <section>
-          <h1>Standard attributes:</h1>
+          <h1>Standard attributes can be:</h1>
           <br><br>
           <ul class="margin-left: 40px;">
             <li class="fragment">Supported in all HTML elements</li><br>
-            <li class="fragment">Only apply to specific elements</li><br>
+            <li class="fragment">Only applied to specific elements</li><br>
             <li class="fragment">Custom attributes used for unique needs</li>
           </ul>
         </section>
@@ -677,15 +789,15 @@
           <h1>Important Attributes</h1>
           <br><br>
           <ul>
-            <li class="fragment">id</li>
+            <li class="fragment"><code>id</code></li>
             <br>
-            <li class="fragment">class</li>
+            <li class="fragment"><code>class</code></li>
             <br>
-            <li class="fragment">href</li>
+            <li class="fragment"><code>href</code></li>
             <br>
-            <li class="fragment">src</li>
+            <li class="fragment"><code>src</code></li>
             <br>
-            <li class="fragment">data-*:</li>
+            <li class="fragment"><code>data-*:</code></li>
           </ul>
         </section>
         <section>
@@ -840,7 +952,12 @@
         </section>
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
-          <p style="font-size: 7vh;">See you soon!</p><br><br>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
         <!-- TOP Topic: A11y -->
@@ -918,15 +1035,9 @@
           <h1>Operable</h1>
           <br><br>
           <ul class="margin-left: 40px;">
-            <li class="fragment">Allow your website to be operated with keyboard commands, especially tab navigation</li>
+            <li class="fragment">Think how everyone can operate on your site</li>
             <br>
-            <li class="fragment">Consider other input methods</li>
-            <br>
-            <li class="fragment">Don't include things that could trigger seizures or other reactions</li>
-            <br>
-            <ul class="margin-left: 40px;">
-              <li class="fragment">Alternatively, include a way to turn them off like "reduce motion"</li>
-            </ul>
+            <li class="fragment">Avoid things that could trigger seizures or other reactions</li>
           </ul>
         </section>
         <section>
@@ -957,8 +1068,6 @@
             <li class="fragment">Follow HTML standards and use semantic HTML</li>
             <br>
             <li class="fragment">Include information like "alt" text on images</li>
-            <br>
-            <li class="fragment">Allow UI controls to be controlled by keyboard (keep it super simple and allow the browser to do its job)</li>
           </ul>
         </section>
         <section>
@@ -981,33 +1090,15 @@
             </ul>
           </ul>
         </section>
-        <section>
-          <h1>How Can We Be More Accessible?</h1>
-          <br><br>
-          <ul class="margin-left: 40px;">
-            <li class="fragment">Use ARIA attributes to provide semantic meaning to content (No ARIA is better than bad ARIA)</li>
-            <br>
-            <ul class="margin-left: 40px;">
-              <li class="fragment">
-                More info:
-                <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles">
-                  https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
-                </a>
-              </li>
-            </ul>
-            <br><br>
-            <li class="fragment">
-              More information about accessible HTML:
-              <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">
-                https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
-              </a>
-            </li>
-          </ul>
-        </section>
-        <!-- Chill time -->
+        <!-- Work time -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
-          <p style="font-size: 7vh;">See you soon!</p><br><br>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
         <!-- Top Topic: Introduction to Front-End Architecture -->
@@ -1111,7 +1202,7 @@
           <ul class="normal">
             <li class="fragment">Find a friend</li>
             <li class="fragment">Take
-              <a href="https://kansascitywomenintechnology.github.io/cocktails-worksheets/#/html/quiz" target="_blank">
+              <a href="https://forms.gle/dXM6akigp7tVRQPf7" target="_blank">
                 the quiz
               </a>
             </li>
