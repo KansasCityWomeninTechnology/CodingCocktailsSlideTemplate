@@ -28,7 +28,6 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- Show as attendees enter and get settled in  -->
         <section>
           <h3>HTML And Front-end Architecture</h3>
           <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
@@ -141,9 +140,9 @@
         </section>
         <!-- Disclaimer -->
         <section>
-          <h1>But WAIT!</h1>
+          <h1>Before We Get Started...</h1>
           <br>
-          <h3>This stuff is a challenge!</h3>
+          <h3 class="fragment">This stuff is a challenge!</h3>
           <br>
           <p class="fragment">
             Don’t be discouraged if you don’t finish each worksheet section before the next presentation section begins.
@@ -271,13 +270,15 @@
           <p class="fragment">
             Type (header, body) versus style (font, color, background, branding)
           </p>
-          <br>
+          <br><br>
           <p class="fragment">
             HTML files have a .html extension
           </p>
-          <br>
+          <br><br>
           <p class="fragment">
-            Edited with <i>plain test editor</i> / IDE (Integrated Development Environment)
+            Edited with <i>plain text editor</i> / IDE (Integrated Development Environment)
+            <br><br>
+            <i>Windows Notepad or Mac TextEditor</i>
             <!-- Speech note: NOT microsoft word. Notepad for Windows or TextEditor for Mac are okay. -->
             <!-- Speech note: Preferred are editors like VS Code that provide syntax highlighting & other helpful features -->
           </p>
@@ -334,7 +335,7 @@
         </section>
         <section>
           <br><br><br>
-          <p>My cat is <i>very</i> grumpy.</p>
+          <p>My cat is very grumpy.</p>
         </section>
         <section>
           <h1>More About Open and Close Tags</h1>
@@ -353,7 +354,7 @@
             <div class="fill-row" style="align-items: flex-start;">
               <code class="fragment" data-fragment-index="3" style="flex: none; flex-basis: 50%; vertical-align: top;">&lt;div&gt;
                 <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;p&gt;</div>
-                  <div class="fragment" data-fragment-index="6">&nbsp;&nbsp;&nbsp;&nbsp;My cat is very &lt;i&gt;very&lt;i&gt; grumpy.</div>
+                  <div class="fragment" data-fragment-index="6">&nbsp;&nbsp;&nbsp;&nbsp;My cat is very &lt;i&gt;very&lt;/i&gt; grumpy.</div>
                   <div class="fragment" data-fragment-index="5">&nbsp;&nbsp;&lt;/p&gt;</div>
                 <div class="fragment" data-fragment-index="4">&lt;/div&gt;</div>
               </code>
@@ -415,7 +416,7 @@
           <h1><code>&lt;head&gt;</code></h1>
           <br><br>
           <p class="fragment">
-            First element inside of a &lt;html&gt; tag
+            First element inside of a <span style="color:#c7bc75">&lt;html&gt;</span> tag
           </p>
           <br>
           <p class="fragment">
@@ -429,7 +430,7 @@
         <section>
           <br>
           <p>
-            Other valid tags inside of &lt;head&gt;:
+            Other valid tags inside of <span style="color:#c7bc75">&lt;head&gt;</span>:
             <br><br>
             <ul class="fragment">
               <li class="fragment"><span style="color:#c7bc75">&lt;title&gt;</span> Text that displays in browser tab</li>
@@ -757,7 +758,7 @@
         </section>
         <section>
           <h1>Important Attributes</h1>
-          <br><br>
+          <br>
           <ul>
             <li class="fragment"><code>id</code></li>
             <br>
@@ -817,8 +818,9 @@
           </p>
           <br>
           <code class="fragment">
-            &lt;img src="https://arc.net/images/arc-logo.png" alt="Arc logo"&gt;
+            &lt;img src="https://arc.net/images/logo.png" alt="Arc logo" /&gt;
           </code>
+          <br>
         </section>
         <section>
           <h1>data-*</h1>
@@ -889,7 +891,7 @@
         <section>
           <h1>Document Object Model</h1>
           <br><br>
-          <p class="fragment">Structure and content of a web deocument as data representation</p>
+          <p class="fragment">Structure and content of a web document as data representation</p>
           <br>
           <p class="fragment">Browser parses the HTML you write and turns it into the DOM</p>
           <br>
@@ -1019,7 +1021,7 @@
             <li class="fragment">Include useful feedback and error handling</li>
             <br>
             <li class="fragment">
-              Include help where needed, such as tooltips (remember to make sure they're accessible to those who don't use a mouse!)
+              Include help where needed, such as tooltips
             </li>
           </ul>
         </section>
@@ -1161,7 +1163,7 @@
         <section>
           <h1>How We Applied Front-End Architecture Tonight</h1>
           <br><br>
-          <p class="fragment">We organied image assets</p>
+          <p class="fragment">We organized image assets</p>
           <br>
           <p class="fragment">We'll continue to practice Front-End Architecture concepts</p>
         </section>
