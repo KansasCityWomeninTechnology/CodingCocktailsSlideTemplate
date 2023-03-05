@@ -1,0 +1,2299 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Basics - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course." />
+    <meta name="author" content="Kansas City Women in Technology" />
+    <meta name="keywords"
+      content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development" />
+    <meta property="og:title" content="Front End Architecture - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org" />
+    <meta property="og:description"
+      content="This is the official Coding &amp; Cocktails Front End Architecture course." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org" />
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology" />
+    <meta name="twitter:description"
+      content="This is the official Coding &amp; Cocktails Front End Architecture course." />
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/reveal.css" />
+    <link rel="stylesheet" href="../css/theme/codingandcocktails.css" id="theme" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Show hidden slide found in /shared/welcome-slide as attendees enter and get settled in  -->
+        <section>
+          <h3>CSS Basics</h3>
+          <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+        </section>
+        <!-- Leadership Section -->
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <div class="new-team">
+            <!-- Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/Amy.jpg" alt="Amy Norris" />
+              <p>Amy Norris</p>
+              <p>Director</p>
+            </div>
+            <!-- Co-Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/alex_herron.jpg" alt="Alex Herron" />
+              <p>Alex Herron</p>
+              <p>Co-Director</p>
+            </div>
+            <!-- Technical Materials Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/hyunsu.jpeg" alt="Hyunsu Kim" />
+              <p>Hyunsu Kim</p>
+              <p>Technical Materials Director</p>
+            </div>
+            <!-- Mentor Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/gabi_cropped.jpg" alt="Gabi Dombrowski" />
+              <p>Gabi Dombrowski</p>
+              <p>Mentor Director</p>
+            </div>
+            <!-- Marketing Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/kim.jpg" alt="Kim Watt" />
+              <p>Kim Watt</p>
+              <p>Marketing Director</p>
+            </div>
+            <!-- Presentation Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/nessa.jpg" alt="Nessa Shultz" />
+              <p>Nessa Shultz</p>
+              <p>Presentation Director</p>
+            </div>
+            <!-- Curriculum Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/eyebrows.gif" alt="eyebrows" height="350"/>
+              <p><i>Open position!</i></p>
+              <p>Curriculum Director</p>
+            </div>
+          </div>
+        </section>
+        <!-- Host Section -->
+        <section>
+          <h1>Our Host this Evening</h1>
+          <div class="fill-row">
+            <a href="https://www.vmlyr.com/en-us/united-states" target="_blank">
+              <img src="../images/shared/vmlyr-logo-black.png" alt="VML" style="margin-top: -5em;" />
+            </a>
+          </div>
+        </section>
+        <!-- Drink Section -->
+        <section>
+          <h2>Formerly Logistics &amp; Libations</h2>
+          <img src="../images/shared/libations.jpg" alt="Laura Kozak" height="50%" />
+          <h4>Served by the lovely Laura Kozak!</h4>
+        </section>
+        <section>
+          <h1>Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="../images/shared/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <br>
+          <div class="row-line-slack" style="margin-left: -0.5em;">
+            <span class="row-line-slack fragment">
+              <a href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
+                <img src="../images/slack-previews/slack-genx.jpg" alt="Carolyn Westhoff" />
+              </a>
+              <p class="slack-label">#generation-x</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-tabletop.jpg"/>
+              <p class="slack-label">#tabletop-games</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-movies.gif"/>
+              <p class="slack-label">#movies</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-catsdoggos.jpg"/>
+              <p class="slack-label">#cats_and_doggos</p>
+            </span>
+          </div>
+        </section>
+        <!-- KCWiT job board-->
+        <!-- TODO: Include when the job board is back up and running -->
+        <!-- <section>
+          <h2>KC Women In Technology Job Board</h2>
+          <a href="http://kcwomenintech.org/jobs/" target="_blank" style="font-size: 72px;">
+            <img src="../images/shared/job-board.png" alt="KC Women In Technology Job Board" width="60%"/>
+            kcwomenintech.org/jobs
+          </a>
+        </section> -->
+        <!-- Mentors -->
+        <section>
+            <h2>Our mentors</h2>
+            <img src="../images/10-oct/mentors.gif" alt="Mentors" height="70%" style="margin: 15px auto;" />
+            <h4>are super heroes!</h4>
+        </section>
+        <!-- Disclaimer -->
+        <section>
+          <h1>Before We Get Started...</h1>
+          <br>
+          <h3 class="fragment">This stuff is a challenge!</h3>
+          <br>
+          <p class="fragment">
+            Don’t be discouraged if you don’t finish each worksheet section before the next presentation section begins.
+          </p>
+          <br>
+          <p class="fragment">
+            We cover a lot of difficult material that will take time to understand. We are here (and on Slack after the session) to help!
+          </p>
+        </section>
+        <!-- Agenda -->
+        <section>
+          <h1>Tonight's Agenda: <br>CSS Basics</h1>
+          <br>
+          <ul style="list-style: disc; margin-left: 40px;">
+            <li class="fragment">CSS Basics</li><br>
+            <li class="fragment">Grouping &amp; Types of Selectors</li><br>
+            <li class="fragment">Box Model &amp; Layout</li><br>
+            <li class="fragment">Text &amp; Icons</li><br>
+            <li class="fragment">Extending Beyond Basic CSS</li><br>
+          </ul>
+        </section>
+        <!-- Presentation Slides -->
+        <!-- TOP TOPIC: CSS Basics-->
+        <section>
+          <h1>CSS Basics</h1>
+          <br>
+          <img src="../images/octocats/octocat-happy.png" alt="CSS Basics" height="75%" />
+        </section>
+        <section>
+          <h1>What Is CSS?</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Cascading Style Sheets</li>
+            <br>
+            <li class="fragment">Controls how elements:</li>
+            <br>
+            <ul style="list-style:disc; margin-left: 80px;">
+              <li class="fragment">Look</li>
+              <br>
+              <li class="fragment">Are positioned</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>CSS Controls How Elements Look</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Font, color, size of HTML elements of the same type</li>
+            <br>
+            <li class="fragment">All <span style="color:#c7bc75">h3</span> elements will be blue, 14 point, Times New Roman</li>
+          </ul>
+        </section>
+        <section>
+          <h1>CSS Controls Layout</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Text alignment</li>
+            <br>
+            <li class="fragment">Size of images</li>
+            <br>
+            <li class="fragment">Placement of image caption</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Why Do We Care About CSS?</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Makes your webpages look pretty!</li>
+            <br>
+            <li class="fragment">Default styling vs. styled page</li>
+          </ul>
+        </section>
+        <section>
+          <h1 style="font-size: 10vh;">What happens if we dont have CSS?</h1>
+          <img src="../images/CSS-session/bbc-css.webp" alt="bbc no css vs css" height="76%" />
+        </section>
+        <section>
+          <h1>How To Include CSS in Your Project</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Inline on element</li>
+            <br>
+            <li class="fragment">Internal to HTML files by adding style tag in head</li>
+            <br>
+            <li class="fragment">External CSS file</li>
+            <!-- Speech note: focus on last one -->
+          </ul>
+        </section>
+        <section>
+          <h1>External CSS File</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment"><strong>.css</strong> file extension</li>
+            <br>
+            <li class="fragment">Follow front-end architecture best practices:</li>
+            <br>
+            <ul style="list-style:disc; margin-left: 80px;">
+              <li class="fragment">CSS files in folder for styles</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h1>Linking HTML &amp; CSS File</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Link to CSS file in HTML head section</li>
+            <br>
+            <code class="fragment" style="width:75%;margin: 0 auto;">
+              &lt;link rel="stylesheet" href="styles/styles.css" &gt;
+            </code>
+            <br>
+            <li class="fragment"><span style="color: #c7bc75;">&lt;link&gt;</span> tag links external file (our stylesheet)</li>
+            <br>
+            <li class="fragment"><span style="color: #c7bc75;">rel</span> attribute tells browser the linked file is for styles</li>
+            <br>
+            <li class="fragment"><span style="color: #c7bc75;">href</span> attribute tells browser the location of the file</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Note about CSS files:</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Possible to have multiple style files for your project</li>
+            <br>
+            <li class="fragment">Possible to link multiple style files to one HTML file</li>
+            <br>
+            <li class="fragment">We will only use one style file in this session</li>
+          </ul>
+        </section>
+        <section>
+          <h1>How to Write CSS</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Define a style for a selector</li>
+            <br>
+            <li class="fragment">Looks like this:</li>
+            <br>
+            <code class="fragment" style="width:75%;margin: 0 auto;">
+              selector {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;property: value;<br>
+              }
+            </code>
+            <br>
+            <li class="fragment">Property: color property</li>
+            <li class="fragment">Value: red value</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Selectors</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">How you target the HTML to style</li>
+            <br>
+            <li class="fragment">Element selector</li>
+            <br>
+            <li class="fragment">Class selector</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Element Selector</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Selects all elements of a given type</li>
+            <br>
+            <li class="fragment">Example: <span style="color: #c7bc75;">h1</span> selector</li>
+            <br>
+            <li class="fragment">Selects and styles all <span style="color: #c7bc75;">h1</span> elements</li>
+            <br>
+            <li class="fragment">Good for base styles</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Element Selector Example</h1>
+          <br><br>
+          <code>
+            h1 {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color: rebeccapurple;<br>
+            }
+          </code>
+          <!-- Speech note: Story about rebecca purple at https://medium.com/@valgaze/the-hidden-purple-memorial-in-your-web-browser-7d84813bb416.-->
+        </section>
+        <section>
+          <h1>Class Selector</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Styles HTML elements with matching attribute name</li>
+            <br>
+            <li class="fragment">Classname can be used multiple times on one page (and multiple pages)</li>
+            <br>
+            <li class="fragment">Good for styling specific elements</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Class Selector Example</h1>
+          <br><br>
+          <p class="fragment">HTML:</p>
+          <br>
+          <code class="fragment">
+            &lt;h1 class="cocktail"&gt;Cosmopolitan&lt;/h1&gt;
+          </code>
+          <br><br>
+          <p class="fragment">CSS:</p>
+          <br>
+          <code class="fragment">
+            .cocktail {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;color: rebeccapurple;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <h1 style="color: #663399;">Cosmopolitan</h1>
+        </section>
+        <section>
+          <h1>Selectors Can Also Include:</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">HTML element attributes (for interactive elements such as input type)</li>
+            <br>
+            <li class="fragment">Location of the elements in HTML</li>
+            <br>
+            <li class="fragment">Element state (such as visited or hover)</li>
+            <br>
+            <li class="fragment">Combination of multiple selectors</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Selector Note</h1>
+          <br><br>
+          <p class="fragment">
+            We will talk about different ways to select elements and how to build up a set of style rules for your site.
+          </p>
+        </section>
+        <section>
+          <h1>Semantic Class Names</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">
+              Choose a name that describes what element <em>is</em>, not how it <em>looks or behaves</em>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Why is Semantic Class Names Important?</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Provide clearer meaning</li>
+            <br>
+            <li class="fragment">Easier to maintain</li>
+            <br>
+            <li class="fragment">Responsive websites may change how element looks</li>
+            <!-- Speech Note: Responsive is mobile, tablet, desktop -->
+            <br>
+            <li class="fragment"><span style="color: #c7bc75;">.white-nav</span> makes sense in desktop but not when blue in mobile</li>
+          </ul>
+        </section>
+        <section>
+          <img src="https://media.giphy.com/media/ji6zzUZwNIuLS/giphy.gif" alt="Awkward look" height="75%" />
+        </section>
+        <section>
+          <h1>Basic Properties &amp; Their Values</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Units of Measurement</li>
+            <br>
+            <li class="fragment">Color</li>
+            <br>
+            <li class="fragment">Properties</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Units of Measurement</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Absolute</li>
+            <br>
+            <li class="fragment">Relative</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Absolute</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">pixels [px]</li>
+            <br>
+            <li class="fragment">There are other absolute units, but they aren't common</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Relative</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Percent [%]</li>
+            <br>
+            <li class="fragment">rem / em</li>
+            <br>
+            <li class="fragment">vh / vw</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Percent [%]</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Relative to parent element</li>
+            <br>
+            <li class="fragment">Can be used for width, height, margin, padding, font-size</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Percent Example</h1>
+          <br><br>
+          <code class="fragment">
+            ul {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;margin: 18px;<br>
+            }
+          </code>
+          <br><br>
+          <code class="fragment">
+            li {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;margin: 100%;&nbsp;&nbsp;// 100% of 18px = 18px<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>rem / em</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Relative to root element</li>
+            <br>
+            <li class="fragment">If root element is 16px, 1rem for an element = 16px</li>
+            <br>
+            <li class="fragment">Can be used for width, height, margin, padding, font-size</li>
+          </ul>
+        </section>
+        <section>
+          <h1>REM Example</h1>
+          <br><br>
+          <code class="fragment">
+            html {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;font-size: 18px;<br>
+            }
+          </code>
+          <br><br>
+          <code class="fragment">
+            h1 {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;font-size: 2rem;&nbsp;&nbsp;// 2 * 18px = 36px<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>vh / vw</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Relative to viewport height / width</li>
+            <br>
+            <li class="fragment">Can be used for width, height, margin, padding, font-size</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Color</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Keep accessibility in mind when selecting colors (provide enough contrast)</li>
+            <br>
+            <li class="fragment">Lighthouse is built into Chrome DevTools to see where accessibility can be improved</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Color</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Hexadecimal</li>
+            <br>
+            <li class="fragment">RGB</li>
+          </ul>
+        </section>
+        <section>
+          <h1>RGB</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">3-digit RGB code</li>
+            <br>
+            <li class="fragment">Each digit represents 256 values (0-255)</li>
+            <br>
+            <li class="fragment">Each pair of digits represents a color (red, green, blue)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>RGB</h1>
+          <br><br>
+          <p class="fragment">rgb(<span style="color: #c7bc75;">red</span>, <span style="color: #c7bc75;">green</span>, <span style="color: #c7bc75;">blue</span>)</p>
+          <br><br>
+          <p class="fragment">Each being a number based on insitity: `0-255`</p>
+        </section>
+        <section>
+          <h1>RGB</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">rgb(255, 0, 0) = red</li>
+            <br>
+            <li class="fragment">rgb(0, 255, 0) = green</li>
+            <br>
+            <li class="fragment">rgb(0, 0, 255) = blue</li>
+            <br>
+            <li class="fragment">white: rgb(255, 255, 255)</li>
+            <br>
+            <li class="fragment">black: rgb(0, 0, 0)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>rebeccapurple</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">rgb: rgb(102, 51, 153)</li>
+            <br>
+            <li class="fragment">40% red: 40% of 255 = 102</li>
+            <br>
+            <li class="fragment">20% green: 20% of 255 = 51</li>
+            <br>
+            <li class="fragment">60% blue: 60% of 255 = 153</li>
+          </ul>
+        </section>
+        <section>
+          <h1>RGB Example</h1>
+          <br><br>
+          <code class="fragment">
+            h1 {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: rgb(255, 0, 0);&nbsp;&nbsp;// red<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Hexidecimal Numbers</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Hexadecimal is a base 16 number system</li>
+            <br>
+            <li class="fragment">Each digit represents 16 values (0-9, A-F)</li>
+            <br>
+            <li class="fragment">Each pair of digits represents a color (red, green, blue)</li>
+            <!-- Speech note: reference to talk about base 16 on whiteboard: https://www.youtube.com/watch?v=4EJay-6Bioo -->
+          </ul>
+        </section>
+        <section>
+          <h1>white</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">#ffffff</li>
+            <br>
+            <li class="fragment">red: 'ff'</li>
+            <br>
+            <li class="fragment">15 * 16 = 240</li>
+            <br>
+            <li class="fragment">15 * 1 = 15</li>
+            <br>
+            <li class="fragment">240 + 15 = 255</li>
+            <br>
+            <li class="fragment">red: 255</li>
+            <br>
+            <li class="fragment">red in RGB: 255 or 100% red</li>
+            <br>
+            <li class="fragment">rgb: rgb(255, 255, 255)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>rebeccapurple</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">hex: #663399</li>
+            <br>
+            <li class="fragment">red: '66'</li>
+            <br>
+            <li class="fragment">6 * 16 = 96</li>
+            <br>
+            <li class="fragment">6 * 1 = 6</li>
+            <br>
+            <li class="fragment">96 + 6 = 102</li>
+            <br>
+            <li class="fragment">red: 102</li>
+            <br>
+            <li class="fragment">red in RGB: 102 or 40% red</li>
+            <br>
+            <li class="fragment">rgba(102, 51, 153)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Hex Example</h1>
+          <br><br>
+          <code class="fragment">
+            h1 {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #ff0000;&nbsp;&nbsp;// red<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Quick Note About Hex</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">You can use shorthand hex</li>
+            <br>
+            <li class="fragment">#ffffff = #fff</li>
+            <br>
+            <li class="fragment">#663399 = #639</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Properties</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">color</li>
+            <br>
+            <li class="fragment">background-color</li>
+            <br>
+            <li class="fragment">border-color</li>
+            <br>
+            <li class="fragment">outline-color</li>
+            <br>
+            <li class="fragment">box-shadow</li>
+            <br>
+            <li class="fragment"><em>>300 diifferent properties in CSS with ~ infinite values</em></li>
+          </ul>
+        </section>
+        <section>
+          <br><br>
+          <img src="../images/octocats/octocat-confused.png" alt="confused" height="75%" />
+        </section>
+        <section>
+          <h1>Properties</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">You don't have to remember them all, just how to look up a property or value</li>
+            <br>
+            <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a></li>
+            <br>
+            <li class="fragment">Each proiperty has a specific set of valid values</li>
+            <br>
+            <li class="fragment">In addition to the worksheet, you can practice with the resources &amp; homework we'll provide, including fun games for honing your skills with CSS.</li>
+        </section>
+        <section>
+          <h1>The Cascade</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Process of combining multiple stylesheets and resolving conflicts between different CSS rules and declarations</li>
+            <br>
+            <li class="fragment">Order of CSS rules matter - there's a hierarchy to the cascade</li>
+        </section>
+        <section>
+          <h1>Source Order</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Later rules win over earlier rules (of the same specificity)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Specificity</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">More specific rules win over less specific rules</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Order of Specificity (lowest to highest)</h1>
+          <ol style="margin-left: 80px;">
+            <li class="fragment">Universal selector (*)</li>
+            <br>
+            <li class="fragment">Element selectors (p, h1)</li>
+            <br>
+            <li class="fragment">Classes (.myClass)</li>
+            <br>
+            <li class="fragment">IDs (#myId)</li>
+            <br>
+            <li class="fragment">Combining selectors to make rules more specific</li>
+            <!-- Speech note: We'll see examples of this in the next section. -->
+            <br>
+            <li class="fragment">!important <em>(WARNING: Bad practice)</em></li>
+            <!-- Speech note: You usually can write a more specific selector instead of using !important -->
+            <!-- Speech note: Just because you can, doesn't mean you should. -->
+          </ol>
+        </section>
+        <section>
+          <h1>Specificity Example</h1>
+          <br><br>
+          <code class="fragment">
+            &lt;h1 class="myClass" id="myId"&gt;Hey Girl!&lt;/h1&gt;
+          </code>
+          <code class="fragment">
+            h1 {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+            }<br>
+            .myClass {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br>
+            }<br>
+            #myId {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>
+            }
+          </code>
+          <br>
+          <p class="fragment">What color will 'Hey Girl!'' be?</p>
+          <!-- Answer: green -->
+        </section>
+        <section>
+          <h1>Inheritance</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Children inherit traits from their parents: tall parent will likely have a tall child</li>
+            <br>
+            <li class="fragment">Parent's properties may be inherited by child element</li>
+            <br>
+            <li class="fragment">If you don't specify a property for an element, it will inherit the value from its parent</li>
+        </section>
+        <section>
+          <h1>Inheritance Example</h1>
+          <br><br>
+          <code class="fragment">
+            &lt;div class="parentDiv"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Parent div<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="childDiv"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child div<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &lt;/div&gt;
+          </code>
+          <br><br>
+          <code class="fragment">
+            .parentDiv {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #c7bc75;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <div style="color: #c7bc75;">Parent div
+            <div>Child div</div>
+          </div>
+        </section>
+        <section>
+          <h1>Inheritance Example</h1>
+          <br><br>
+          <code class="fragment">
+            &lt;div class="parentDiv"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Parent div<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="childDiv"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child div<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &lt;/div&gt;
+          </code>
+          <br><br>
+          <code class="fragment">
+            .parentDiv {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #c7bc75;<br>
+            }<br>
+            .childDiv {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #f5f5f5;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <div style="color: #c7bc75;">Parent div
+            <div style="color: #f5f5f5;">Child div</div>
+          </div>
+        </section>
+        <section>
+          <h1>Note About Inheritance</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Don't build your champagne fountain on a waterbed</li>
+            <br>
+            <li class="fragment">Start styling by elements (such as <span style="color: #c7bc75;">&lt;body&gt;</span> or <span style="color: #c7bc75;">&lt;h1&gt;</span></li>
+            <br>
+            <li class="fragment">Then override by adding more specificity</li>
+          </ul>
+        </section>
+        <section>
+          <br><br>
+          <img src="../images/CSS-session/champagnePyramid.png" alt="tallest champagne pyramid" height="80%" />
+          <!-- Speech note: Dubai Hotel with Guinness World Record for alrgest champagne pyramid -->
+          <!-- 54,740 glasses -->
+          <!-- 27 feet high -->
+          <!-- <a href="https://www.travelandleisure.com/travel-news/guinness-world-record-largest-champagne-glass-pyramid-atlantis-palm-hotel-dubai#:~:text=Dubai's%20Atlantis%2C%20The%20Palm%20hotel,hotel%20shared%20with%20Travel%20%2B%20Leisure.">https://www.travelandleisure.com/travel-news/guinness-world-record-largest-champagne-glass-pyramid-atlantis-palm-hotel-dubai#:~:text=Dubai's%20Atlantis%2C%20The%20Palm%20hotel,hotel%20shared%20with%20Travel%20%2B%20Leisure.</a> -->
+        </section>
+        <section>
+          <h1>Comments</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Comments are not displayed in the browser</li>
+            <br>
+            <li class="fragment">Comments are used to explain code, and to prevent execution when testing alternative code</li>
+            <br>
+            <li class="fragment">Comments can be used to prevent execution of code</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Comments</h1>
+          <br><br>
+          <code class="fragment">
+            /* This is a comment */
+          </code>
+        </section>
+        <section>
+          <h1>Browser Prefixes (or CSS Vendor Prefixes)</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Not all browsers can support all CSS properties</li>
+            <br>
+            <li class="fragment">Use <a href="https://caniuse.com/">CanIUse</a> to determine if prefixes are needed</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Browser Prefixes</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">To make sure your code works in all browsers, you can use a browser prefix</li>
+            <br>
+            <li class="fragment">The prefix tells the browser to use a different syntax for the property</li>
+            <br>
+            <li class="fragment">For example, the <span style="color: #c7bc75;">border-radius</span> property is not supported in Internet Explorer 8 and earlier</li>
+            <!-- Speech note: We're not going to talk too much about prefixes, but wanted to let you know it's out there -->
+          </ul>
+        </section>
+        <section>
+          <h1>Prefix Example</h1>
+          <br><br>
+          <code class="fragment">
+            .sample-parent-container {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 10px;<br>
+            }
+          </code>
+          <br>
+          <code class="fragment">
+            .sample-parent-container {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;-moz-border-radius: 10px;<br> <!-- Firefox -->
+              &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-top-left-radius: 10px;<br> <!-- Android/Chrome & iOS/Safari -->
+              &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-bottom-right-radius: 10px;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-top-right-radius: 10px;<br> <!-- Internet Explorer (microsoft) -->
+              &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-bottom-left-radius: 10px;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 10px;<br>
+            }
+          </code>
+          <!-- Speech note: Best practice to list out prefix versions, then the standard. -->
+          <!-- Speech note: Before border-radius was supported in all browsers, this is how you would do it -->
+        </section>
+        <!-- Work slide: -->
+        <section>
+          <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
+        </section>
+        <!-- TOP SESSION: Selectors -->
+        <section>
+          <h1>Selectors</h1>
+          <img src="../images/octocats/octocat-battle.png" alt="battle selectors" height="80%" />
+        </section>
+        <section>
+          <h1>CSS Is Powerful</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Apply set of styles as broadly or as specific as you desire across your site</li>
+            <br>
+            <li class="fragment">i.e. All elements of the site have blue text versus one single header</li>
+            <br>
+            <li class="fragment">Selectors are used to "find" HTML elements</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Selector Simple Recap</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <code class="fragment" style="width:75%;margin: 0 auto;">
+              selector {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;property: value;<br>
+              }
+            </code>
+            <br>
+            <li class="fragment">Property: color property</li>
+            <li class="fragment">Value: red value</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Grouping Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Grouping selectors is a way to apply the same style to multiple elements</li>
+            <br>
+            <li class="fragment">Separate each selector with a comma</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Two Ways to Group Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Multiple Selectors for more generalized styles</li>
+            <br>
+            <li class="fragment">Combining Selectors for more specific styles</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Multiple Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Multiple selectors are used to apply the same style to multiple elements</li>
+            <br>
+            <li class="fragment">Separate each selector with a comma</li>
+            <br>
+            <li class="fragment">Allows you to apply styles more broadly</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Multiple Selectors Example</h1>
+          <br><br>
+          <code class="fragment">
+            &lt;h1&gt;H1&lt;/h1&gt;<br>
+            &lt;h2&gt;H2&lt;/h2&gt;<br>
+            &lt;h3&gt;H3&lt;/h3&gt;<br>
+            &lt;h4&gt;H4&lt;/h4&gt;<br>
+            &lt;h5&gt;H5&lt;/h5&gt;<br>
+            &lt;h6&gt;H6&lt;/h6&gt;<br>
+          </code>
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <h1>H1</h1>
+          <h2>H2</h2>
+          <h3>H3</h3>
+          <h4>H4</h4>
+          <h5>H5</h5>
+          <h6>H6</h6>
+        </section>
+        <section>
+          <h1>Multiple Selectors Example</h1>
+          <br><br>
+          <p>Goal: Make all headers "wild strawberry"</p>
+          <code class="fragment">
+            h1, h2, h3, h4, h5, h6 {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #ff43a4;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <h1 style="color: #ff43a4;">H1</h1>
+          <h2 style="color: #ff43a4;">H2</h2>
+          <h3 style="color: #ff43a4;">H3</h3>
+          <h4 style="color: #ff43a4;">H4</h4>
+          <h5 style="color: #ff43a4;">H5</h5>
+          <h6 style="color: #ff43a4;">H6</h6>
+        </section>
+        <section>
+          <h1>Multiple Selectors Example</h1>
+          <br><br>
+          <code>
+            &lt;p class="status"&gt;Coding with a cocktail on the side.&lt;/p&gt;<br><br>
+            &lt;p&gt;I'm an unstyled paragraph.&lt;/p&gt;<br><br>
+            &lt;p class="learning"&gt;I am learning CSS and web development.&lt;/p&gt;<br><br>
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <p class="status">Coding with a cocktail on the side.</p><br>
+          <p>I'm an unstyled paragraph.</p><br>
+          <p class="learning">I am learning CSS and web development.</p><br>
+        </section>
+        <section>
+          <h1>Multiple Selectors Example</h1>
+          <br><br>
+          <p>Goal: Make paragraph text with class of status and learning "peach"</p>
+          <code class="fragment">
+            .status, .learning {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #ffaa88;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <p class="status" style="color: #ffaa88;">Coding with a cocktail on the side.</p><br>
+          <p>I'm an unstyled paragraph.</p><br>
+          <p class="learning" style="color: #ffaa88;">I am learning CSS and web development.</p><br>
+        </section>
+        <section>
+          <h1>Combining Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Combining selectors are used to apply the same style to multiple elements</li>
+            <br>
+            <li class="fragment">Allows you to apply styles more specifically</li>
+            <br>
+            <li class="fragment">Notice no space between HTML element and class</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Combining Selectors Example</h1>
+          <br><br>
+          <code>
+            &lt;p class="status"&gt;Coding with a cocktail on the side.&lt;/p&gt;<br><br>
+            &lt;p class="learning"&gt;I am learning CSS and web development.&lt;/p&gt;<br><br>
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <p class="status">Coding with a cocktail on the side.</p><br>
+          <p class="learning">I am learning CSS and web development.</p><br>
+        </section>
+        <section>
+          <h1>Combining Selectors Example</h1>
+          <br><br>
+          <p>Goal: Make paragraph text with class of status "seagreen"</p>
+          <code class="fragment">
+            p {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
+            }<br><br>
+            p.learning {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #20b2aa;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <p class="status" style="color: #fff;">Coding with a cocktail on the side.</p><br>
+          <p class="learning" style="color: #20b2aa;">I am learning CSS and web development.</p><br>
+        </section>
+        <section>
+          <h1>Combinng Selectors Example</h1>
+          <br><br>
+          <code>
+            &lt;p class="about learning"&gt;I am learning CSS and web development.&lt;/p&gt;<br><br>
+            &lt;p class="about pets"&gt;I have one goofy dog and three grumpy cats.&lt;/p&gt;<br><br>
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <p class="about learning">I am learning CSS and web development.</p><br>
+          <p class="about pets">I have one goofy dog and three grumpy cats.</p><br>
+        </section>
+        <section>
+          <h1>Combinng Selectors Example: Double Class Selector</h1>
+          <br><br>
+          <p>Goal: Make paragraph text with class of about "seagreen" and text about pets "red"</p>
+          <code class="fragment">
+            p.about {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #20b2aa;<br>
+            }<br><br>
+            p.about.pets {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #f00;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <img src="/images/front-end-html/grumpy_cat.png" alt="Grumpy Cat" />
+        </section>
+        <section>
+          <br><br>
+          <p class="about learning" style="color: #20b2aa;">I am learning CSS and web development.</p><br>
+          <p class="about pets" style="color: #f00;">I have one goofy dog and three grumpy cats.</p><br>
+        </section>
+        <section>
+          <h1>Recap of Types of Selectors Thus Far</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Element Selector</li>
+            <br>
+            <li class="fragment">Class Selector</li>
+            <br>
+            <li class="fragment">Multiple Selector</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Attribute Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Spcial HTML element attribute for styling</li>
+            <br>
+            <li class="fragment">Allows for even more specifically in styling</li>
+            <br>
+            <li class="fragment">Attributes have different syntax of <span style="color: #c7bc75;">[ ]</span></li>
+            <!-- Speech note: Syntax in English is "word order", so syntax in code is "code order "-->
+          </ul>
+        </section>
+        <section>
+          <h1>Attribute Selectors Example</h1>
+          <br><br>
+          <code>
+            &lt;!-- HTML --&gt;<br>
+            &lt;a href="https://www.kcwit.org"&gt;KCWIT&lt;/a&gt;<br><br>
+            &lt;!-- CSS --&gt;<br>
+            a[href="https://www.kcwit.org"] {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #20b2aa;<br>
+            }<br><br>
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <a href="https://www.kcwit.org" style="color: #20b2aa;">KCWIT</a><br>
+        </section>
+        <section>
+          <h1>Attribute Selectors Example</h1>
+          <br><br>
+          <code>
+            &lt;!-- HTML --&gt;<br>
+            &lt;a href="https://www.kcwit.org"&gt;KCWIT&lt;/a&gt;<br><br>
+            &lt;!-- CSS --&gt;<br>
+            a[href="https://www.kcwit.org"] {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #20b2aa;<br>
+            }<br><br>
+          </code>
+        </section>
+        <section>
+          <h1>Attribute Selectors Example</h1>
+          <code>
+            &lt;fieldset&gt;<br>
+            &nbsp;&nbsp;&lt;legend&gt;Select a pet&lt;/legend&gt;<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="pet" value="dog" id="dog"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="dog"&gt;Doggos&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="pet" value="cat" id="cat"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="cat"&gt;Cattos&lt;/label&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &lt;/fieldset&gt;
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <img src="/images/CSS-session/cat_doggo_fieldset.png" alt="Cat and Doggo Fieldset" height="35%"/>
+        </section>
+        <section>
+          <h1>Attribute Selectors Example</h1>
+          <br>
+          <p class="fragment">Goal: Make the dog label of the radio button skyblue</p>
+          <code class="fragment">
+            ...<br>
+            &lt;input type="radio" name="pet" value="dog" id="dog"&gt;<br>
+            &lt;label for="dog"&gt;Doggos&lt;/label&gt;<br>
+            ...
+          </code>
+          <br>
+          <code class="fragment">
+            label[for="dog"] {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: #87ceeb;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <img src="/images/CSS-session/cat_doggo_fieldset_styled.png" alt="Cat and Doggo Fieldset" height="35%"/>
+        </section>
+        <section>
+          <h1>Location-based Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Selects elements based on their location in the HTML document</li>
+            <br>
+            <li class="fragment">Examples: <span style="color: #c7bc75;">:first-child</span>, <span style="color: #c7bc75;">:last-child</span>, <span style="color: #c7bc75;">:nth-child()</span></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Location-based Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">
+              You can define selectors based on element location within the
+              <span style="color: #c7bc75">DOM</span> (<span style="color: #c7bc75;">D</span>ocument <span style="color: #c7bc75;">O</span>bject <span style="color: #c7bc75;">M</span>odel)
+            </li>
+            <br>
+            <li class="fragment">Following image from
+              <a href="https://en.wikipedia.org/wiki/Document_Object_Model">
+                https://en.wikipedia.org/wiki/Document_Object_Model
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <img src="/images/CSS-session/DOM-model.png" alt="DOM" height="95%"/>
+        </section>
+        <section>
+          <h1>What Do We Mean By Location?</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Browser tunrs
+              <span style="color: #c7bc75">
+                HTML
+              </span>
+               into the
+               <span style="color: #c7bc75">
+                DOM
+              </span>
+            </li>
+            <br>
+            <li class="fragment">Specify a selector based on where the HTML is</li>
+            <br>
+            <li class="fragment">Examples: House address</li>
+            <!-- Speech note: Sometimes you can tell someone the exact address to your house,
+              and sometimes you can tell someone how to get there
+              (go north until you see Sephora,
+              then turn east on Main street.
+               5th house on the right).
+               Identifying the HTML element location in the DOM is the same idea.
+            -->
+          </ul>
+        </section>
+        <section>
+          <h1>Location-based Selectors: Relationship</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Directions: Instead of north &amp; south, use relationshipts (like a family tree)</li>
+            <br>
+            <li class="fragment">Relationships: child, parent, sibling, descendant, ancestor</li>
+            <br>
+            <li class="fragment">Amount of nesting in HTML element roughly describes that relationship</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Location-based Selectors: Relationship</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Child: Direct descendant</li>
+            <br>
+            <li class="fragment">Parent: Direct ancestor</li>
+            <br>
+            <li class="fragment">Sibling: Same parent</li>
+            <br>
+            <li class="fragment">Descendant: Any descendant</li>
+            <br>
+            <li class="fragment">Ancestor: Any ancestor</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Relationship Example</h1>
+          <br><br>
+          <code>
+            &lt;parent&gt;<br>
+            &nbsp;&nbsp;&lt;child&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;grandchild&gt;&lt;/grandchild&gt;<br>
+            &nbsp;&nbsp;&lt;/child&gt;<br>
+            &nbsp;&nbsp;&lt;child&gt;&lt;/child&gt;<br>
+            &nbsp;&nbsp;&lt;child&gt;&lt;/child&gt;<br>
+            &lt;/parent&gt;
+          </code>
+        </section>
+        <section>
+          <h1>Location-based Selectors</h1>
+          <br><br>
+          <code class="fragment">
+            &lt;ul&gt;<br><br>
+            &nbsp;&nbsp;&lt;li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;em&gt;Most important item&lt;/em&gt;<br>
+            &nbsp;&nbsp;&lt;/li&gt;<br><br>
+            &nbsp;&nbsp;&lt;li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Second most important item<br>
+            &nbsp;&nbsp;&lt;/li&gt;<br><br>
+            &lt;/ul&gt;
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <ul>
+            <li style="font-style: italic;"><em>Most important item</em></li>
+            <li>Second most important item</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Location-based Selectors</h1>
+          <code class="fragment">
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;em&gt;Most important item&lt;/em&gt;<br>
+            &nbsp;&nbsp;&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Second most important item<br>
+            &nbsp;&nbsp;&lt;/li&gt;<br>
+            &lt;/ul&gt;
+          </code>
+          <code class="fragment">
+            li em {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <ul>
+            <li style="font-style: italic; color:lime;"><em>Most important item</em></li>
+            <li>Second most important item</li>
+          </ul>
+        </section>
+        <section>
+          <h1>A Closer Look at the CSS</h1>
+          <code class="fragment">
+            li em {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }
+          </code>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Note the space between the selectors</li>
+            <br>
+            <li class="fragment">Space means: "select all <span style="color: #c7bc75;">em</span> elements that has <span style="color:#c7bc75">li</span> as an ancestor"</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Selectors Relationship</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Relationship between two selectors do NOT need to be adjacent</li>
+            <br>
+            <li class="fragment">You can skip levels</li>
+          </ul>
+        </section>
+        <section>
+          <h1>What Color This Is:</h1>
+          <code>
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;&lt;em&gt;Most important item&lt;/em&gt;&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Second most important item&lt;/li&gt;<br>
+            &lt;/ul&gt;
+          </code>
+          <br>
+          <code>
+            ul em {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }<br><br>
+            em {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: aqua;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Answer</h1>
+          <br><br>
+          <ul>
+            <li><em style="color: lime; font-style: italic;">Most important item</em></li>
+            <li>Second most important item</li>
+          </ul>
+        </section>
+        <!-- Quick check in -->
+        <section>
+          <br>
+          <p>Hey girl</p>
+          <img src="../images/html-session/gosling.gif" alt="Hey Girl" height="76%"/>
+        </section>
+        <section>
+          <h1>Debugging</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Use the browser's developer tools</li>
+            <br>
+            <li class="fragment">You can edit styles inside of the DevTools</li>
+            <br>
+            <!-- TODO: find a different site as this one is expired. -->
+            <li class="fragment"><a href="https://cdpn.io/alisaduncan/debug/KQpemN/YvAgOwZwqzbA">Example</a></li>
+            <!-- Speech note: go to this website and give a demonstration of the location path to "HOME" navigation at the bottom:
+              html body nav.navbar ul li a
+            -->
+          </ul>
+        </section>
+        <section>
+          <h1>Combinators</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Fancy word meaning to combine selectors</li>
+            <br>
+            <li class="fragment">Combining selectors allow us to apply styles as broadly or as specifically as we need</li>
+            <br>
+            <li class="fragment">There are three combinators: descendant, child, and adjacent sibling</li>
+        </section>
+        <section>
+          <h1>Descendant combinator</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Has space between two selectors</li>
+            <br>
+            <li class="fragment">Our example before had a path <span style="color:#c7bc75;">ul li em</span></li>
+            <br>
+            <li class="fragment">With the descendant combinator, we can say:</li>
+          </ul>
+          <code class="fragment">
+            ul em {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Child combinator</h1>
+          <br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Must be an exact child path</li>
+            <br>
+            <li class="fragment">Has > between two selectors</li>
+            <br>
+            <li class="fragment">With the child combinator, we can say:</li>
+          </ul>
+          <code class="fragment">
+            li > em {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }
+          </code>
+          <code class="fragment">
+            &lt;!-- Does not exist --&gt;<br>
+            ul > em {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Adjacent sibling combinator</h1>
+          <br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Must be an exact sibling path</li>
+            <!-- Speech note: must be next to each other -->
+            <br>
+            <li class="fragment">Can be dissimilar elements (such as <span style="color: #c7bc75;">h1 + p</span>)</li>
+            <br>
+            <li class="fragment">Has + between two selectors</li>
+            <br>
+            <li class="fragment">Applies color of lime to the second item on the list</li>
+          </ul>
+          <code class="fragment">
+            li + li {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>State-based Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Allows us to style elements based on their state</li>
+            <br>
+            <li class="fragment">Also called <span style="color: #c7bc75;">pseudo-class</span> Selectors</li>
+            <br>
+            <li class="fragment">Syntax is a single colon:
+              <span style="color: #c7bc75;">selector:state</span>
+            </li>
+        </section>
+        <section>
+          <h1>State-based Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">:hover</li>
+            <br>
+            <li class="fragment">:active</li>
+            <br>
+            <li class="fragment">:focus</li>
+            <br>
+            <li class="fragment">:visited</li>
+        </section>
+        <section>
+          <h1>State-based Selectors Example</h1>
+          <br><br>
+          <code class="fragment">
+            button:hover {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }
+          </code>
+          <br><br>
+          <code class="fragment">
+            a:visited {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Styling Specific Parts of Selector</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Psudo-elements: keyword added to a selector to style part of the specified element</li>
+            <br>
+            <li class="fragment">Syntax (double colons):</li>
+            <br>
+          </ul>
+          <code class="fragment">
+            selector::pseudo-element {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;property: value;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Styling Example</h1>
+          <br><br>
+          <code>
+            a::before {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;content: "🔗";<br>
+            }
+          </code>
+          <br><br>
+          <p class="fragment">Try out <a href="www.arc.net">🔗arc.net</a></p>
+          <!-- example: https://developer.mozilla.org/en-US/docs/Web/CSS/::before -->
+        </section>
+        <section>
+          <h1>Other examples of psuedo-elements</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">::first-letter</li>
+            <br>
+            <li class="fragment">::first-line</li>
+            <br>
+            <li class="fragment">::selection</li>
+            <br>
+            <li class="fragment">::after</li>
+          </ul>
+        </section>
+        <!-- Work slide: -->
+        <section>
+          <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
+        </section>
+        <!-- TOP Topic: Box Model & Layout -->
+        <section>
+          <h1>Box Model &amp; Layout</h1>
+          <br><br>
+          <img src="/images/octocats/octocat-build.png" alt="octocat build" height="75%" />
+        </section>
+        <section>
+          <h1>Box Model</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Every element on a page is a rectangular box</li>
+            <br>
+            <li class="fragment">Spacing inside the box, outside the box, and the cardboard itself takes up space</li>
+            <br>
+            <li class="fragment">Box has 4 parts: content, padding, border, margin</li>
+            <br>
+            <li class="fragment">Can be styled with CSS</li>
+            <br>
+            <li class="fragment">Spacing has standardized vocabulary called "The Box Model" in CSS</li>
+          </ul>
+        </section>
+        <section>
+          <h1>The Box Model in Terms of Pizza</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Content: the pizza</li>
+            <br>
+            <li class="fragment">Padding: the space between the pizza &amp; the box</li>
+            <br>
+            <li class="fragment">Border: the cardboard box</li>
+            <br>
+            <li class="fragment">Margin: the space outside the pizza box (and the space between the pizza box and another box)</li>
+          </ul>
+        </section>
+        <section>
+          <img src="/images/CSS-session/pizza-box-model.png" alt="pizza box model" height="100%" />
+        </section>
+        <section>
+          <br><br>
+          <img src="/images/CSS-session/boxModel.png" alt="box model" height="75%" />
+        </section>
+        <section>
+          <img src="/images/CSS-session/box-model-code.jpg" alt="box model" height="95%" />
+        </section>
+        <section>
+          <img src="/images/CSS-session/box-model-code-2.jpg" alt="box model" height="100%" />
+        </section>
+        <section>
+          <h1>Box Model Properties</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Each spacing property can be broken up for each side of the box</li>
+          </ul>
+        </section>
+        <section>
+          <h1>1-value Syntax</h1>
+          <br><br>
+          <p class="fragment">All edges</p>
+          <code class="fragment">margin: 1em;</code>
+          <br>
+          <img class="fragment" src="/images/CSS-session/box-model/all-sides.png" alt="box model" height="50%" />
+        </section>
+        <section>
+          <h1>2-value Syntax</h1>
+          <br><br>
+          <p class="fragment">Vertical horizontal</p>
+          <code class="fragment">margin: 1em 2em;</code>
+          <br>
+          <img class="fragment" src="/images/CSS-session/box-model/2-values.png" alt="box model" height="50%" />
+        </section>
+        <section>
+          <h1>3-value Syntax</h1>
+          <br><br>
+          <p class="fragment">Top Horizontal Bottom</p>
+          <code class="fragment">margin: 1em 2em 3em;</code>
+          <br>
+          <img class="fragment" src="/images/CSS-session/box-model/3-values.png" alt="box model" height="50%" />
+        </section>
+        <section>
+          <h1>4-value Syntax</h1>
+          <br><br>
+          <p class="fragment">Top Right Bottom Left (Clockwise)</p>
+          <code class="fragment">margin: 1em 2en 3em 4em;</code>
+          <br>
+          <img class="fragment" src="/images/CSS-session/box-model/4-values.png" alt="box model" height="50%" />
+        </section>
+        <section>
+          <h1>Source:</h1>
+          <br><br>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties</a>
+        </section>
+        <section>
+          <h1>Layout &amp; Layout Systems</h1>
+        </section>
+        <section>
+          <h1>Basics of Layout in CSS</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Layout is the arrangement of elements on a page</li>
+            <br>
+            <li class="fragment">Display / Inline</li>
+            <br>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li class="fragment">Inline vs. Block</li>
+              <br>
+              <li class="fragment">None vs. Visibility</li>
+              <br>
+            </ul>
+            <li class="fragment">Z-Index</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Z-Index</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Z-index is a property that controls which element is on top</li>
+            <br>
+            <li class="fragment">The higher the number, the higher the element is on the page</li>
+            <br>
+            <li class="fragment">The default value is 0</li>
+            <br>
+            <li class="fragment">Negative values are allowed</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Layout Systems</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Most sites use layout systems</li>
+            <br>
+            <li class="fragment">Why? More poserful than basic CSS layout and allows for responsive design</li>
+            <br>
+            <li class="fragment">Olden days of the internet, developers used HTML tables for layout</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Why were HTML tables bad for layout?</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Very limited layout</li>
+            <br>
+            <li class="fragment">Non-responsive</li>
+            <br>
+            <li class="fragment">Non accessible</li>
+            <br>
+            <li class="fragment">HTML is NOT for layout &amp; styling, but for content (Don't forget your front-end architecture!)</li>
+            <!-- Speech note: Front-end architecture says to have specified purposes
+              (don't use a dresser as a kitchen table - "no one is going to come up to the dresser and be like, oh yeah, you eat here")
+            -->
+          </ul>
+        </section>
+        <section>
+          <h1>Layout Systems</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">CSS Grid</li>
+            <br>
+            <li class="fragment">Flexbox</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Advantages of Flexbox and CSS Grid</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Handles complex layout needs</li>
+            <br>
+            <li class="fragment">Handles wrapping and flexibility for different display sizes (phones, smart displays, tablets, big tv's)</li>
+            <br>
+            <li class="fragment">Maintainable code - no need to employ workarounds and hacks for layout</li>
+            <br>
+            <li class="fragment">Now the standard way of adding layout</li>
+          </ul>
+        </section>
+        <section>
+          <h1>When to Use CSS Flexbox and Grid</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">1-dimensional layout</li>
+            <br>
+            <li class="fragment">2-dimensional layout</li>
+          </ul>
+        </section>
+        <section>
+          <h1>1-dimensional Layout</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Use CSS Flexbox</li>
+            <br>
+            <li class="fragment">Elements lay out next to each other in either row or column (but not both)</li>
+            <br>
+            <li class="fragment">Elements can wrap to multiple rows or columns</li>
+            <br>
+            <li class="fragment"><a href="https://codepen.io/chriscoyier/full/PoPwPbE">Example</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>2-dimensional Layout</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Use CSS Grid</li>
+            <br>
+            <li class="fragment">Elements lay out horizontally and vertically from each other in both rows and columns</li>
+            <br>
+            <li class="fragment">Used more often</li>
+            <br>
+            <li class="fragment"><a href="https://codepen.io/chriscoyier/full/ZEpPWKO">Example</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Flexbox &amp; Grid</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Flexbox is 1-dimensional</li>
+            <br>
+            <li class="fragment">Grid is 2-dimensional</li>
+            <br>
+            <li class="fragment">They are not an either/or layout system</li>
+            <br>
+            <li class="fragment">You can use <em>BOTH</em> when styling</li>
+          </ul>
+        </section>
+        <section>
+          <h1><a href="https://codepen.io/ramenhog/full/MpORPa">CSS Grid Nom Nom Gallery</a></h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Shows grid with definted height (1st row) and dynamic heights (3rd row and on) in masonry pattern</li>
+            <br>
+            <li class="fragment">Responsive</li>
+            <br>
+            <li class="fragment">Type of layout is very painful without grid</li>
+            <br>
+            <li class="fragment">Flexbox handles the responsiveness</li>
+          </ul>
+        </section>
+        <section>
+          <h1>How to Use a Layout System</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">HTML: create a parent container with a class to style</li>
+            <br>
+            <li class="fragment">Define the styling to add grid and/or flexbox</li>
+          </ul>
+        </section>
+        <section>
+          <h1>HTML</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Common parent containers:
+              <span style="color: #c7bc75;">main</span>,
+              <span style="color: #c7bc75;">header</span>,
+              <span style="color: #c7bc75;">footer</span>,
+              <span style="color: #c7bc75;">form</span>,
+              <span style="color: #c7bc75;">section</span>,
+              <span style="color: #c7bc75;">article</span>,
+              <span style="color: #c7bc75;">div</span>
+            </li>
+          </ul>
+          <code class="fragment">
+            &lt;section class="container"&gt;<br>
+            &nbsp;&nbsp;&lt;!-- Child elements here --&gt;<br>
+            &lt;/section&gt;
+          </code>
+        </section>
+        <section>
+          <h1>CSS</h1>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">In the styles for the container, add the following:</li>
+          </ul>
+          <code class="fragment">display: grid;</code><br>
+          <code class="fragment">display: flex;</code><br>
+          <code class="fragment">display: inline-grid; display: inline-flex;</code><br>
+          <code class="fragment">
+            .container {<br>
+            &nbsp;&nbsp;display: grid;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Grid/Flexbox Note</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Default is <span style="color: #c7bc75;">display: block</span></li>
+            <br>
+            <li class="fragment">We are overriding the display to use grid for elements inside container</li>
+            <br>
+            <li class="fragment">Aka, all child elements of <span style="color: #c7bc75;">&lt;section&gt;</span> are grid items</li>
+            <br>
+            <li class="fragment">Worksheet will go into more details on how to use Grid/Flexbox</li>
+          </ul>
+        </section>
+        <!-- Work slide: -->
+        <section>
+          <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
+        </section>
+        <!-- TOP TOPIC: Text & Icons -->
+        <section>
+          <h1>Text &amp; Icons</h1>
+          <br><br>
+          <img src="/images/octocats/octocat-yummy.png" alt="octocat" height="75%" />
+        </section>
+        <section>
+          <h1>Common CSS Properties</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">color</li>
+            <br>
+            <li class="fragment">text-align</li>
+            <br>
+            <li class="fragment">font-size</li>
+            <br>
+            <li class="fragment">font-family</li>
+          </ul>
+        </section>
+        <section>
+          <h1>font-family</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Find fonts online (such as Google fonts, which is free)</li>
+            <br>
+            <li class="fragment">Link in <span style="color: #c7bc75;">HEAD</span> or use <span style="color: #c7bc75;">@import</span></li>
+            <br>
+            <li class="fragment">List preferred web safe font and a backup:</li>
+            <code class="fragment">
+              font-family: 'Roboto', sans-serif;
+            </code>
+            <br>
+            <li class="fragment">Use quotes for fonts with two words:</li>
+            <code class="fragment">
+              font-family: 'Comic Sans', cursive;
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Icons</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Find icons online (such as <a href="http://fontawesome.io/">Font-Awesome</a>, Google icons, or Heroicons)</li>
+            <br>
+            <li class="fragment">Link in <span style="color: #c7bc75;">HEAD</span> or use <span style="color: #c7bc75;">@import</span></li>
+          </ul>
+        </section>
+        <section>
+          <h1><a href="http://fontawesome.io/">Font-Awesome</a></h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Once included in your project, use class name <span style="color: #c7bc75;">`fas fa-code`</span> for the <a href="http://fontawesome.io/icon/code/">code icon</a> in your html</li>
+            <br>
+            <li class="fragment">Use <span style="color: #c7bc75;">`::before`</span> pseudo element to add the icon</li>
+            <br>
+            <li class="fragment">Add <span style="color: #c7bc75;">class</span> attribute</li>
+          </ul>
+        </section>
+        <!-- Work slide: -->
+        <section>
+          <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
+        </section>
+        <!-- TOP Discussion: Extending Beyond Basic CSS -->
+        <section>
+          <h1>Extending Beyond Basic CSS</h1>
+          <img src="/images/octocats/octocat-excellent.png" alt="octocat" height="75%" />
+        </section>
+        <section>
+          <h1>Queries</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Media queries</li>
+            <br>
+            <li class="fragment">CSS Feature Queries</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Media Queries</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Can specify different CSS for printing, mobile, and for different screen widths</li>
+            <br>
+            <li class="fragment">Syntax <span style="color: #c7bc75;">@media(when-applicable) {styles}</span></li>
+          </ul>
+        </section>
+        <section>
+          <br><br>
+          <code>
+            @media not|only <em>mediatype</em> and (expressions) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;CSS-Code;<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Media Types</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment"><span style="color: #c7bc75;">all</span> - used for all media type devices</li>
+            <br>
+            <li class="fragment"><span style="color: #c7bc75;">print</span> - used for printers</li>
+            <br>
+            <li class="fragment"><span style="color: #c7bc75;">screen</span> - used for computer screens, tablets, smart phones, etc.</li>
+            <br>
+            <li class="fragment"><span style="color: #c7bc75;">speech</span> - used for screenreaders that "reads" the page out loud</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Media Query Example</h1>
+          <code class="fragment">
+            body {<br>
+            &nbsp;&nbsp;background-color: tan;<br>
+            }
+          </code>
+          <code class="fragment">
+            @media screen and (max-width: 992px) {<br>
+            &nbsp;&nbsp;body {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: blue;<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </code>
+          <code class="fragment">
+            @media screen and (max-width: 600px) {<br>
+            &nbsp;&nbsp;body {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: green;<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </code>
+        </section>
+        <section>
+          <br><br>
+          <img src="/images/CSS-session/media-query.png" alt="media query" height="75%" />
+        </section>
+        <section>
+          <h1>Media Query</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Useful, but many mobile-friedle content uses layout systems instead of solely relying on media queries</li>
+            <br>
+            <li class="fragment">Most useful for printing at specific sizes</li>
+          </ul>
+        </section>
+        <section>
+          <h1>CSS Feature Queries</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Uses <span style="color: #c7bc75;">@supports</span> selector to define fallback styles</li>
+          </ul>
+          <br><br>
+          <code class="fragment">
+            @supports (display: grid) {<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;/* do cool grid thing */<br><br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>CSS Compilers</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Used by many development teams</li>
+            <br>
+            <li class="fragment">Also called pre- &amp; post- processors</li>
+            <br>
+            <li class="fragment">Allows you to write CSS faster and cleaner</li>
+            <br>
+            <li class="fragment">Gives CSS superpowers</li>
+            <br>
+            <li class="fragment">Browsers only understand CSS, so we have to convert from one format to plain CSS</li>
+          </ul>
+        </section>
+        <section>
+          <h1>CSS Compilers</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Common precomilers: Sass &amp; Less</li>
+            <br>
+            <li class="fragment">Write code using the superpowers that pre-processors provide</li>
+            <br>
+            <li class="fragment">Use a compiler to take the pre-processed code [Wonder Woman] to compile the code to plain old CSS [Diana Prince] for the browser</li>
+          </ul>
+        </section>
+        <section>
+           <iframe src="https://giphy.com/embed/S4efrgIUqyzIY" width="1100" height="1100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
+        </section>
+        <section>
+          <h1>CSS Frameworks</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Many development teams use CSS frameworks instead of writing their own CSS</li>
+            <br>
+            <li class="fragment">Collection of pre-written CSS code that you can use to style your website wiht pre-defined styles</li>
+            <br>
+            <li class="fragment">Some CSS frameworks allow you to customize the styles, too</li>
+            <br>
+            <li class="fragment">Useful for quickly styling a website</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Why Use CSS Framework?</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Allows developers to focus on application features rather than styles</li>
+            <br>
+            <li class="fragment">Styling sites becomes much faster</li>
+            <br>
+            <li class="fragment">CSS frameworks are designed to be responsive</li>
+            <br>
+            <li class="fragment">Downside: Learning curve of learning the styles of the framework</li>
+          </ul>
+        </section>
+        <section>
+          <h1>How Does This Work?</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Import the framework into your site:</li>
+            <br>
+            <code class="fragment">
+              &lt;!doctype html&gt;<br>
+              &lt;html&gt;<br>
+                &lt;head&gt;<br>
+                  &lt;meta charset="UTF-8"&gt;<br>
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                  &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;<br>
+                &lt;/head&gt;<br>
+              &lt;/html&gt;
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>How Does This Work?</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Use the styles provided by the framework:</li>
+            <br>
+            <code class="fragment">
+              &lt;h1&gt;Hello world!<br><br>
+              &lt;h1&gt; class="text-3xl font-bold underline text-pink-500 background-pink-50"&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;Hello world!<br>
+              &lt;/h1&gt;
+            </code>
+          </ul>
+        </section>
+        <section>
+          <br><br>
+          <h1 style="color: #000;">Hello world!</h1>
+          <br><br>
+          <h1 style="font-weight: bold; background-color: #fdf2f8; color: #be185d; text-decoration: underline; padding-top: 0.5em; padding-bottom: 0.5em; font-size: 200px;">Hello world!</h1>
+        </section>
+        <section>
+          <h1>Popular CSS Frameworks</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">CSS Bootstrap</li>
+            <br>
+            <li class="fragment">Tailwind</li>
+            <br>
+            <li class="fragment">Materialize</li>
+            <br>
+            <li class="fragment">Bulma</li>
+          </ul>
+          <!-- Speech note: Whatever you use, use the docs to your advantage -->
+        </section>
+        <section>
+          <h1>Awesome CSS</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">CSS can be mind-blowing</li>
+            <br>
+            <li class="fragment">Check out incredible examples on <a href="https://cssdeck.com/">#CSSis {beautiful}</a></li>
+            <br>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li class="fragment">Book cover opening/closing: <a href="https://codepen.io/_fbrz/pen/whxbF">code</a> and <a href="https://codepen.io/_fbrz/full/whxbF">live site</a></li>
+              <br>
+              <li class="fragment"><a href="http://www.romancortes.com/ficheros/css-coke.html">Rolling Coke Can</a></li>
+            </ul>
+          </ul>
+        </section>
+
+        <!-- Final Section  -->
+        <section>
+          <h1>Resources &amp; Homework Ideas</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px">
+            <li class="fragment">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                MDN
+              </a>
+            </li>
+            <br>
+            <li class="fragment">
+              <a href="https://web.dev/learn/css/" target="_blank">
+                web.dev
+              </a>
+            </li>
+            <br>
+            <li class="fragment">
+              <a href="https://css-tricks.com/" target="_blank">
+                CSS Tricks
+              </a>
+              or
+              <a href="https://www.youtube.com/user/realcsstricks" target="_blank">
+                YouTube
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Play Games to Learn More About CSS</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px">
+            <li class="fragment">
+              <a href="https://flukeout.github.io/" target="_blank">
+                CSS Diner
+              </a>
+            </li>
+            <br>
+            <li class="fragment">
+              <a href="https://flexboxfroggy.com/" target="_blank">
+                Flexbox Froggy
+              </a>
+            </li>
+            <br>
+            <li class="fragment">
+              <a href="https://flexboxdefense.com/" target="_blank">
+                Flexbox Defense
+              </a>
+            </li>
+            <li class="fragment">
+              <a href="https://cssgridgarden.com/" target="_blank">
+                CSS Grid Garden
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Take a Free Course</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px">
+            <li class="fragment">
+              <a href="https://www.freecodecamp.org/news/learn-css-in-11-hours/" target="_blank">
+                FreeCodeCamp
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ul class="normal">
+            <li class="fragment">Networks!</li>
+            <li class="fragment">Take
+              <a href="https://forms.gle/dXM6akigp7tVRQPf7" target="_blank">
+                the quiz
+              </a>
+            </li>
+            <li class="fragment">
+              Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a>
+            </li>
+            <li class="fragment">Finish
+              <a href="https://kansascitywomenintechnology.github.io/cocktails-worksheets/#/html/" target="_blank">
+                tonight's worksheet
+              </a>
+            </li>
+            <li class="fragment">
+              Find an
+              <a href="http://lmgtfy.com/?q=Front+End+Architecture+tutorial" target="_blank">
+                online tutorial on Front End Architecture
+              </a>
+            </li>
+            <li class="fragment">
+              Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank"> next month's event</a>
+              </li>
+          </ul>
+          <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">
+            codingandcocktails.kcwomenintech.org
+          </a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank">
+            <img src="../images/shared/fb.png" width="120"/>
+          </a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank">
+            <img src="../images/shared/eventbrite.png" width="350"/>
+          </a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank">
+            <img src="../images/shared/meetup.png" width="190"/>
+          </a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank">
+            <img src="../images/shared/twitter.png" width="150"/>
+          </a>
+          <br><br>
+          <div class="fragment">
+            <p>#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT</p>
+            <br>
+            <p>#CodingAndCocktailsKC</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../js/reveal.js"></script>
+    <script src="../js/custom.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+	</body>
+</html>
