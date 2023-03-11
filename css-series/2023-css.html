@@ -195,9 +195,7 @@
           <h1>CSS Controls How Elements Look</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Font, color, size of HTML elements of the same type</li>
-            <br>
-            <li class="fragment">All <span style="color:#c7bc75">h3</span> elements will be blue, 14 point, Times New Roman</li>
+            <li class="fragment">Font, color, size of HTML elements</li>
           </ul>
         </section>
         <section>
@@ -208,7 +206,7 @@
             <br>
             <li class="fragment">Size of images</li>
             <br>
-            <li class="fragment">Placement of image caption</li>
+            <li class="fragment">Placement of elements</li>
           </ul>
         </section>
         <section>
@@ -221,8 +219,8 @@
           </ul>
         </section>
         <section>
-          <h1 style="font-size: 10vh;">What happens if we dont have CSS?</h1>
-          <img src="../images/CSS-session/bbc-css.webp" alt="bbc no css vs css" height="76%" />
+          <br>
+          <img src="../images/CSS-session/bbc-css.webp" alt="bbc no css vs css" height="90%" />
         </section>
         <section>
           <h1>How To Include CSS in Your Project</h1>
@@ -500,7 +498,7 @@
           <br><br>
           <code class="fragment">
             h1 {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;font-size: 2rem;&nbsp;&nbsp;// 2 * 18px = 36px<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;font-size: 0.5rem;&nbsp;&nbsp;// 0.5 * 18px = 9px<br>
             }
           </code>
         </section>
@@ -526,9 +524,9 @@
           <h1>Color</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Hexadecimal</li>
-            <br>
             <li class="fragment">RGB</li>
+            <br>
+            <li class="fragment">Hexadecimal</li>
           </ul>
         </section>
         <section>
@@ -568,7 +566,7 @@
           <h1>rebeccapurple</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">rgb: rgb(102, 51, 153)</li>
+            <li class="fragment">rgb(102, 51, 153)</li>
             <br><br><br>
             <li class="fragment">red: 102 / 255 = 40%</li>
             <br>
@@ -599,17 +597,17 @@
           </ul>
         </section>
         <section>
-          <h1>white</h1>
+          <h1>red</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">#ffffff or #fff</li>
-            <li class="fragment">" ff ff ff " or #fff</li>
+            <li class="fragment">#ff0000 or #f00</li>
+            <li class="fragment">" ff 00 00 " or #f00</li>
             <li class="fragment">red: 'ff'</li>
             <li class="fragment">ff in base 16 = 255</li>
             <li class="fragment">red: 255</li>
             <li class="fragment">red in RGB: 255 or 100% red</li>
             <br>
-            <li class="fragment">rgb: rgb(255, 255, 255)</li>
+            <li class="fragment">rgb: rgb(255, 0, 0)</li>
           </ul>
         </section>
         <section>
@@ -617,7 +615,7 @@
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">hex: #663399 or #639</li>
-            <li class="fragment">" 66 33 99" or #639</li>
+            <li class="fragment">" 66 33 99 " or #639</li>
             <li class="fragment">red: '66'</li>
             <li class="fragment">66 in base 16 = 102</li>
             <li class="fragment">red: 102</li>
@@ -826,7 +824,7 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Comments are not displayed in the browser</li>
             <br>
-            <li class="fragment">Comments are used to explain code, and to prevent execution when testing alternative code</li>
+            <li class="fragment">Comments are used to explain code</li>
             <br>
             <li class="fragment">Comments can be used to prevent execution of code</li>
           </ul>
@@ -996,12 +994,14 @@
         </section>
         <section>
           <br><br>
+          <div style="background-color: white;">
           <h1 style="color: #ff43a4;">H1</h1>
           <h2 style="color: #ff43a4;">H2</h2>
           <h3 style="color: #ff43a4;">H3</h3>
           <h4 style="color: #ff43a4;">H4</h4>
           <h5 style="color: #ff43a4;">H5</h5>
           <h6 style="color: #ff43a4;">H6</h6>
+        </div>
         </section>
         <section>
           <h1>Multiple Selectors Example</h1>
@@ -1075,7 +1075,7 @@
           <p class="learning" style="color: #20b2aa;">I am learning CSS and web development.</p><br>
         </section>
         <section>
-          <h1>Combinng Selectors Example</h1>
+          <h1>Combing Selectors Example</h1>
           <br><br>
           <code>
             &lt;p class="about learning"&gt;
@@ -1092,7 +1092,7 @@
           <p class="about pets">I have one goofy dog and three grumpy cats.</p><br>
         </section>
         <section>
-          <h1>Combinng Selectors Example: Double Class Selector</h1>
+          <h1>Combing Selectors Example: Double Class Selector</h1>
           <br><br>
           <p>Goal: Make paragraph text with class of about "seagreen" and text about pets "red"</p>
           <code class="fragment">
@@ -1302,7 +1302,7 @@
         </section>
         <section>
           <br><br>
-          <ul>
+          <ul style="list-style: disc; margin-left: 80px;">
             <li style="font-style: italic;"><em>Most important item</em></li>
             <li>Second most important item</li>
           </ul>
