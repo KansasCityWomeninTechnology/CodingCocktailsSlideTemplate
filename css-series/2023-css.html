@@ -159,7 +159,7 @@
         </section>
         <!-- Agenda -->
         <section>
-          <h1>Tonight's Agenda: <br>CSS Basics</h1>
+          <h1>Tonight's Agenda:</h1>
           <br>
           <ul style="list-style: disc; margin-left: 40px;">
             <li class="fragment">CSS Basics</li><br>
@@ -256,12 +256,12 @@
             <li class="fragment">Link to CSS file in HTML head section</li>
             <br>
             <code class="fragment" style="width:75%;margin: 0 auto;">
-              &lt;link rel="stylesheet" href="styles/styles.css" &gt;
+              &lt;link rel="stylesheet" href="../styles/styles.css" /&gt;
             </code>
             <br>
             <li class="fragment"><span style="color: #c7bc75;">&lt;link&gt;</span> tag links external file (our stylesheet)</li>
             <br>
-            <li class="fragment"><span style="color: #c7bc75;">rel</span> attribute tells browser the linked file is for styles</li>
+            <li class="fragment"><span style="color: #c7bc75;">rel</span> attribute describes the relationship between the current and linked file to the browser (in this case, styles)</li>
             <br>
             <li class="fragment"><span style="color: #c7bc75;">href</span> attribute tells browser the location of the file</li>
           </ul>
@@ -323,11 +323,25 @@
           <h1>Element Selector Example</h1>
           <br><br>
           <code>
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+          </code>
+          <br>
+          <code>
             h1 {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;color: rebeccapurple;<br>
             }
           </code>
-          <!-- Speech note: Story about rebecca purple at https://medium.com/@valgaze/the-hidden-purple-memorial-in-your-web-browser-7d84813bb416.-->
+          <!-- Speech note: Story about rebecca purple at https://medium.com/@valgaze/the-hidden-purple-memorial-in-your-web-browser-7d84813bb416. -->
+          <!-- Rebecca Meyer passed away a few hours after her 6th birthday from a brain tumor. -->
+          <!-- Her father, Eric Meyer, was a pioneer in CSS Standards and had kept everyone informed of Rebecca's battle online. -->
+          <!-- Designer Jeffrey Zeldman created the color #663399becca for everyone to use as a Twitter hashtag campaign. -->
+          <!-- Her father later requested it to be changed to #rebeccapurple since Rebecca had informed everyone -->
+          <!-- right before her 6th birthday that Becca was a baby name and wanted everyone to call her Rebecca when she turned 6. -->
+          <!-- The color was changed to rebeccapurple in June of 2014. -->
+        </section>
+        <section>
+          <br><br>
+          <h1 style="color: rebeccapurple;">Hello World</h1>
         </section>
         <section>
           <h1>Class Selector</h1>
@@ -373,13 +387,6 @@
             <br>
             <li class="fragment">Combination of multiple selectors</li>
           </ul>
-        </section>
-        <section>
-          <h1>Selector Note</h1>
-          <br><br>
-          <p class="fragment">
-            We will talk about different ways to select elements and how to build up a set of style rules for your site.
-          </p>
         </section>
         <section>
           <h1>Semantic Class Names</h1>
@@ -540,7 +547,7 @@
           <br><br>
           <p class="fragment">rgb(<span style="color: #c7bc75;">red</span>, <span style="color: #c7bc75;">green</span>, <span style="color: #c7bc75;">blue</span>)</p>
           <br><br>
-          <p class="fragment">Each being a number based on insitity: `0-255`</p>
+          <p class="fragment">Each being a number based on intensity: `0-255`</p>
         </section>
         <section>
           <h1>RGB</h1>
@@ -562,12 +569,12 @@
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">rgb: rgb(102, 51, 153)</li>
+            <br><br><br>
+            <li class="fragment">red: 102 / 255 = 40%</li>
             <br>
-            <li class="fragment">40% red: 40% of 255 = 102</li>
+            <li class="fragment">green: 51 / 255 = 20%</li>
             <br>
-            <li class="fragment">20% green: 20% of 255 = 51</li>
-            <br>
-            <li class="fragment">60% blue: 60% of 255 = 153</li>
+            <li class="fragment">blue: 153 / 255 = 60%</li>
           </ul>
         </section>
         <section>
@@ -595,18 +602,11 @@
           <h1>white</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">#ffffff</li>
-            <br>
+            <li class="fragment">#ffffff or #fff</li>
+            <li class="fragment">" ff ff ff " or #fff</li>
             <li class="fragment">red: 'ff'</li>
-            <br>
-            <li class="fragment">15 * 16 = 240</li>
-            <br>
-            <li class="fragment">15 * 1 = 15</li>
-            <br>
-            <li class="fragment">240 + 15 = 255</li>
-            <br>
+            <li class="fragment">ff in base 16 = 255</li>
             <li class="fragment">red: 255</li>
-            <br>
             <li class="fragment">red in RGB: 255 or 100% red</li>
             <br>
             <li class="fragment">rgb: rgb(255, 255, 255)</li>
@@ -616,18 +616,11 @@
           <h1>rebeccapurple</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">hex: #663399</li>
-            <br>
+            <li class="fragment">hex: #663399 or #639</li>
+            <li class="fragment">" 66 33 99" or #639</li>
             <li class="fragment">red: '66'</li>
-            <br>
-            <li class="fragment">6 * 16 = 96</li>
-            <br>
-            <li class="fragment">6 * 1 = 6</li>
-            <br>
-            <li class="fragment">96 + 6 = 102</li>
-            <br>
+            <li class="fragment">66 in base 16 = 102</li>
             <li class="fragment">red: 102</li>
-            <br>
             <li class="fragment">red in RGB: 102 or 40% red</li>
             <br>
             <li class="fragment">rgba(102, 51, 153)</li>
@@ -667,7 +660,7 @@
             <br>
             <li class="fragment">box-shadow</li>
             <br>
-            <li class="fragment"><em>>300 diifferent properties in CSS with ~ infinite values</em></li>
+            <li class="fragment"><em>>300 different properties in CSS with ~ infinite values</em></li>
           </ul>
         </section>
         <section>
@@ -682,7 +675,7 @@
             <br>
             <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a></li>
             <br>
-            <li class="fragment">Each proiperty has a specific set of valid values</li>
+            <li class="fragment">Each property has a specific set of valid values</li>
             <br>
             <li class="fragment">In addition to the worksheet, you can practice with the resources &amp; homework we'll provide, including fun games for honing your skills with CSS.</li>
         </section>
@@ -731,22 +724,27 @@
           <h1>Specificity Example</h1>
           <br><br>
           <code class="fragment">
-            &lt;h1 class="myClass" id="myId"&gt;Hey Girl!&lt;/h1&gt;
+            &lt;h1 class="gif" id="ryan-gosling"&gt;Hey Girl!&lt;/h1&gt;
           </code>
           <code class="fragment">
             h1 {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
             }<br>
-            .myClass {<br>
+            .gif {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br>
             }<br>
-            #myId {<br>
+            #ryan-gosling {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>
             }
           </code>
           <br>
-          <p class="fragment">What color will 'Hey Girl!'' be?</p>
+          <p class="fragment">What color will 'Hey Girl!' be?</p>
           <!-- Answer: green -->
+        </section>
+        <section>
+          <h1 style="color: green; background-color: white;">Hey Girl!</h1>
+          <br>
+          <img src="../images/html-session/gosling.gif" alt="Hey Girl" height="76%"/>
         </section>
         <section>
           <h1>Inheritance</h1>
@@ -760,54 +758,48 @@
         </section>
         <section>
           <h1>Inheritance Example</h1>
-          <br><br>
           <code class="fragment">
-            &lt;div class="parentDiv"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Parent div<br>
+            &lt;div class="parentDiv"&gt;<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Parent div<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="childDiv"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child div<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br><br>
             &lt;/div&gt;
           </code>
-          <br><br>
           <code class="fragment">
             .parentDiv {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;color: #c7bc75;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: yellow;<br>
             }
           </code>
         </section>
         <section>
           <br><br>
-          <div style="color: #c7bc75;">Parent div
-            <div>Child div</div>
-          </div>
+          <h1 style="color: yellow;">Parent div</h1>
+          <h1 style="color: yellow;">Child div</h1>
         </section>
         <section>
           <h1>Inheritance Example</h1>
-          <br><br>
           <code class="fragment">
-            &lt;div class="parentDiv"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Parent div<br>
+            &lt;div class="parentDiv"&gt;<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Parent div<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="childDiv"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child div<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br><br>
             &lt;/div&gt;
           </code>
-          <br><br>
           <code class="fragment">
             .parentDiv {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;color: #c7bc75;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: yellow;<br>
             }<br>
             .childDiv {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;color: #f5f5f5;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: black;<br>
             }
           </code>
         </section>
         <section>
           <br><br>
-          <div style="color: #c7bc75;">Parent div
-            <div style="color: #f5f5f5;">Child div</div>
-          </div>
+          <h1 style="color: yellow;">Parent div</h1>
+          <h1 style="color: black;">Child div</h1>
         </section>
         <section>
           <h1>Note About Inheritance</h1>
@@ -815,7 +807,7 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Don't build your champagne fountain on a waterbed</li>
             <br>
-            <li class="fragment">Start styling by elements (such as <span style="color: #c7bc75;">&lt;body&gt;</span> or <span style="color: #c7bc75;">&lt;h1&gt;</span></li>
+            <li class="fragment">Start styling by elements (such as <span style="color: #c7bc75;">&lt;body&gt;</span> or <span style="color: #c7bc75;">&lt;h1&gt;</span>)</li>
             <br>
             <li class="fragment">Then override by adding more specificity</li>
           </ul>
@@ -823,7 +815,7 @@
         <section>
           <br><br>
           <img src="../images/CSS-session/champagnePyramid.png" alt="tallest champagne pyramid" height="80%" />
-          <!-- Speech note: Dubai Hotel with Guinness World Record for alrgest champagne pyramid -->
+          <!-- Speech note: Dubai Hotel with Guinness World Record for largest champagne pyramid -->
           <!-- 54,740 glasses -->
           <!-- 27 feet high -->
           <!-- <a href="https://www.travelandleisure.com/travel-news/guinness-world-record-largest-champagne-glass-pyramid-atlantis-palm-hotel-dubai#:~:text=Dubai's%20Atlantis%2C%20The%20Palm%20hotel,hotel%20shared%20with%20Travel%20%2B%20Leisure.">https://www.travelandleisure.com/travel-news/guinness-world-record-largest-champagne-glass-pyramid-atlantis-palm-hotel-dubai#:~:text=Dubai's%20Atlantis%2C%20The%20Palm%20hotel,hotel%20shared%20with%20Travel%20%2B%20Leisure.</a> -->
@@ -843,10 +835,21 @@
           <h1>Comments</h1>
           <br><br>
           <code class="fragment">
-            /* This is a comment */
+            /* This is a comment in CSS */
           </code>
         </section>
         <section>
+          <h1>Last Note about Comments</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Place your cursor on the line(s) you wish to comment out</li>
+            <br>
+            <li class="fragment">Mac: <span style="color: #c7bc75;">CMD + /</span></li>
+            <br>
+            <li class="fragment">PC: <span style="color: #c7bc75;">CTRL + SHIFT + /</span></li>
+          </ul>
+        </section>
+        <!-- <section>
           <h1>Browser Prefixes (or CSS Vendor Prefixes)</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
@@ -863,9 +866,9 @@
             <br>
             <li class="fragment">The prefix tells the browser to use a different syntax for the property</li>
             <br>
-            <li class="fragment">For example, the <span style="color: #c7bc75;">border-radius</span> property is not supported in Internet Explorer 8 and earlier</li>
+            <li class="fragment">For example, the <span style="color: #c7bc75;">border-radius</span> property is not supported in Internet Explorer 8 and earlier</li> -->
             <!-- Speech note: We're not going to talk too much about prefixes, but wanted to let you know it's out there -->
-          </ul>
+          <!-- </ul>
         </section>
         <section>
           <h1>Prefix Example</h1>
@@ -878,24 +881,24 @@
           <br>
           <code class="fragment">
             .sample-parent-container {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;-moz-border-radius: 10px;<br> <!-- Firefox -->
-              &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-top-left-radius: 10px;<br> <!-- Android/Chrome & iOS/Safari -->
+              &nbsp;&nbsp;&nbsp;&nbsp;-moz-border-radius: 10px;<br> // Firefox
+              &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-top-left-radius: 10px;<br> // Android/Chrome & iOS/Safari
               &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-bottom-right-radius: 10px;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-top-right-radius: 10px;<br> <!-- Internet Explorer (microsoft) -->
+              &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-top-right-radius: 10px;<br> // Internet Explorer (microsoft)
               &nbsp;&nbsp;&nbsp;&nbsp;-webkit-border-bottom-left-radius: 10px;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 10px;<br>
             }
-          </code>
+          </code> -->
           <!-- Speech note: Best practice to list out prefix versions, then the standard. -->
           <!-- Speech note: Before border-radius was supported in all browsers, this is how you would do it -->
-        </section>
+        <!-- </section> -->
         <!-- Work slide: -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
           <p style="font-size: 7vh;">See you soon!</p>
           <br>
           <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+            <a href="https://bit.ly/kcwit-cc-worksheet">https://bit.ly/kcwit-cc-worksheet</a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -934,7 +937,7 @@
           <h1>Grouping Selectors</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Grouping selectors is a way to apply the same style to multiple elements</li>
+            <li class="fragment">Way to apply the same style to multiple elements</li>
             <br>
             <li class="fragment">Separate each selector with a comma</li>
           </ul>
@@ -952,7 +955,7 @@
           <h1>Multiple Selectors</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Multiple selectors are used to apply the same style to multiple elements</li>
+            <li class="fragment">Used to apply the same style to multiple elements</li>
             <br>
             <li class="fragment">Separate each selector with a comma</li>
             <br>
@@ -1035,8 +1038,6 @@
           <h1>Combining Selectors</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Combining selectors are used to apply the same style to multiple elements</li>
-            <br>
             <li class="fragment">Allows you to apply styles more specifically</li>
             <br>
             <li class="fragment">Notice no space between HTML element and class</li>
@@ -1058,7 +1059,7 @@
         <section>
           <h1>Combining Selectors Example</h1>
           <br><br>
-          <p>Goal: Make paragraph text with class of status "seagreen"</p>
+          <p>Goal: Make paragraph text with class of learning "seagreen"</p>
           <code class="fragment">
             p {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
@@ -1077,8 +1078,12 @@
           <h1>Combinng Selectors Example</h1>
           <br><br>
           <code>
-            &lt;p class="about learning"&gt;I am learning CSS and web development.&lt;/p&gt;<br><br>
-            &lt;p class="about pets"&gt;I have one goofy dog and three grumpy cats.&lt;/p&gt;<br><br>
+            &lt;p class="about learning"&gt;
+            <br>&nbsp;&nbsp;I am learning CSS and web development.<br>
+            &lt;/p&gt;<br><br>
+            &lt;p class="about pets"&gt;
+            <br>&nbsp;&nbsp;I have one goofy dog and three grumpy cats.
+            <br>&lt;/p&gt;<br><br>
           </code>
         </section>
         <section>
@@ -1101,12 +1106,12 @@
         </section>
         <section>
           <br><br>
-          <img src="../images/front-end-html/grumpy_cat.png" alt="Grumpy Cat" />
+          <p class="about learning" style="color: #20b2aa; background-color: white;">I am learning CSS and web development.</p><br>
+          <p class="about pets" style="color: #f00; background-color: white;">I have one goofy dog and three grumpy cats.</p><br>
         </section>
         <section>
           <br><br>
-          <p class="about learning" style="color: #20b2aa;">I am learning CSS and web development.</p><br>
-          <p class="about pets" style="color: #f00;">I have one goofy dog and three grumpy cats.</p><br>
+          <img src="../images/front-end-html/grumpy_cat.png" alt="Grumpy Cat" />
         </section>
         <section>
           <h1>Recap of Types of Selectors Thus Far</h1>
@@ -1117,6 +1122,8 @@
             <li class="fragment">Class Selector</li>
             <br>
             <li class="fragment">Multiple Selector</li>
+            <br>
+            <li class="fragment">Combining Selector</li>
           </ul>
         </section>
         <section>
@@ -1127,43 +1134,30 @@
             <br>
             <li class="fragment">Allows for even more specifically in styling</li>
             <br>
-            <li class="fragment">Attributes have different syntax of <span style="color: #c7bc75;">[ ]</span></li>
+            <li class="fragment">Have different syntax of <span style="color: #c7bc75;">[ ]</span></li>
             <!-- Speech note: Syntax in English is "word order", so syntax in code is "code order "-->
           </ul>
         </section>
         <section>
           <h1>Attribute Selectors Example</h1>
           <br><br>
+          <p>HTML:</p>
           <code>
-            &lt;!-- HTML --&gt;<br>
-            &lt;a href="https://www.kcwit.org"&gt;KCWIT&lt;/a&gt;<br><br>
-            &lt;!-- CSS --&gt;<br>
+            &lt;a href="https://www.kcwit.org"&gt;KCWIT&lt;/a&gt;
+          </code>
+          <br><br>
+          <p>CSS:</p>
+          <code>
             a[href="https://www.kcwit.org"] {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: #20b2aa;<br>
-            }<br><br>
+            }
           </code>
         </section>
         <section>
-          <br><br>
-          <a href="https://www.kcwit.org" style="color: #20b2aa;">KCWIT</a><br>
-        </section>
-        <section>
-          <h1>Attribute Selectors Example</h1>
-          <br><br>
+          <h1>Attribute Selectors</h1>
           <code>
-            &lt;!-- HTML --&gt;<br>
-            &lt;a href="https://www.kcwit.org"&gt;KCWIT&lt;/a&gt;<br><br>
-            &lt;!-- CSS --&gt;<br>
-            a[href="https://www.kcwit.org"] {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;color: #20b2aa;<br>
-            }<br><br>
-          </code>
-        </section>
-        <section>
-          <h1>Attribute Selectors Example</h1>
-          <code>
-            &lt;fieldset&gt;<br>
-            &nbsp;&nbsp;&lt;legend&gt;Select a pet&lt;/legend&gt;<br><br>
+            &lt;fieldset&gt;<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Select a pet&lt;/legend&gt;<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="pet" value="dog" id="dog"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="dog"&gt;Doggos&lt;/label&gt;<br>
@@ -1171,7 +1165,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="pet" value="cat" id="cat"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="cat"&gt;Cattos&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br><br>
             &lt;/fieldset&gt;
           </code>
         </section>
@@ -1218,11 +1212,10 @@
               <span style="color: #c7bc75">DOM</span> (<span style="color: #c7bc75;">D</span>ocument <span style="color: #c7bc75;">O</span>bject <span style="color: #c7bc75;">M</span>odel)
             </li>
             <br>
-            <li class="fragment">Following image from
-              <a href="https://en.wikipedia.org/wiki/Document_Object_Model">
+            <li class="fragment">Image from</li>
+              <a class="fragment" href="https://en.wikipedia.org/wiki/Document_Object_Model">
                 https://en.wikipedia.org/wiki/Document_Object_Model
               </a>
-            </li>
           </ul>
         </section>
         <section>
@@ -1232,7 +1225,7 @@
           <h1>What Do We Mean By Location?</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Browser tunrs
+            <li class="fragment">Browser turns
               <span style="color: #c7bc75">
                 HTML
               </span>
@@ -1258,7 +1251,7 @@
           <h1>Location-based Selectors: Relationship</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Directions: Instead of north &amp; south, use relationshipts (like a family tree)</li>
+            <li class="fragment">Directions: Instead of north &amp; south, use relationships (like a family tree)</li>
             <br>
             <li class="fragment">Relationships: child, parent, sibling, descendant, ancestor</li>
             <br>
@@ -1403,7 +1396,7 @@
             <li class="fragment">You can edit styles inside of the DevTools</li>
             <br>
             <!-- TODO: find a different site as this one is expired. -->
-            <li class="fragment"><a href="https://cdpn.io/alisaduncan/debug/KQpemN/YvAgOwZwqzbA">Example</a></li>
+            <!-- <li class="fragment"><a href="https://cdpn.io/alisaduncan/debug/KQpemN/YvAgOwZwqzbA">Example</a></li> -->
             <!-- Speech note: go to this website and give a demonstration of the location path to "HOME" navigation at the bottom:
               html body nav.navbar ul li a
             -->
@@ -1417,7 +1410,12 @@
             <br>
             <li class="fragment">Combining selectors allow us to apply styles as broadly or as specifically as we need</li>
             <br>
-            <li class="fragment">There are three combinators: descendant, child, and adjacent sibling</li>
+            <li class="fragment">There are three combinators: </li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li class="fragment">Descendant</li>
+              <li class="fragment">Child</li>
+              <li class="fragment">Adjacent sibling</li>
+            </ul>
         </section>
         <section>
           <h1>Descendant combinator</h1>
@@ -1463,18 +1461,17 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Must be an exact sibling path</li>
             <!-- Speech note: must be next to each other -->
-            <br>
             <li class="fragment">Can be dissimilar elements (such as <span style="color: #c7bc75;">h1 + p</span>)</li>
-            <br>
             <li class="fragment">Has + between two selectors</li>
-            <br>
             <li class="fragment">Applies color of lime to the second item on the list</li>
+            <li class="fragment"><span style="color: #c7bc75;">li</span> following a sibling <span style="color: #c7bc75;">li</span></li>
           </ul>
           <code class="fragment">
             li + li {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
             }
           </code>
+          <!-- Speech note: Good example here https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_pluss -->
         </section>
         <section>
           <h1>State-based Selectors</h1>
@@ -1482,7 +1479,7 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Allows us to style elements based on their state</li>
             <br>
-            <li class="fragment">Also called <span style="color: #c7bc75;">pseudo-class</span> Selectors</li>
+            <li class="fragment">Also called <span style="color: #c7bc75;">pseudo-class</span> selectors</li>
             <br>
             <li class="fragment">Syntax is a single colon:
               <span style="color: #c7bc75;">selector:state</span>
@@ -1561,7 +1558,7 @@
           <p style="font-size: 7vh;">See you soon!</p>
           <br>
           <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+            <a href="https://bit.ly/kcwit-cc-worksheet">https://bit.ly/kcwit-cc-worksheet</a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -1624,7 +1621,7 @@
           <h1>1-value Syntax</h1>
           <br><br>
           <p class="fragment">All edges</p>
-          <code class="fragment">margin: 1em;</code>
+          <code class="fragment">margin: 1px;</code>
           <br>
           <img class="fragment" src="../images/CSS-session/box-model/all-sides.png" alt="box model" height="50%" />
         </section>
@@ -1632,7 +1629,7 @@
           <h1>2-value Syntax</h1>
           <br><br>
           <p class="fragment">Vertical horizontal</p>
-          <code class="fragment">margin: 1em 2em;</code>
+          <code class="fragment">margin: 1px 2px;</code>
           <br>
           <img class="fragment" src="../images/CSS-session/box-model/2-values.png" alt="box model" height="50%" />
         </section>
@@ -1640,7 +1637,7 @@
           <h1>3-value Syntax</h1>
           <br><br>
           <p class="fragment">Top Horizontal Bottom</p>
-          <code class="fragment">margin: 1em 2em 3em;</code>
+          <code class="fragment">margin: 1px 2px 3px;</code>
           <br>
           <img class="fragment" src="../images/CSS-session/box-model/3-values.png" alt="box model" height="50%" />
         </section>
@@ -1648,7 +1645,7 @@
           <h1>4-value Syntax</h1>
           <br><br>
           <p class="fragment">Top Right Bottom Left (Clockwise)</p>
-          <code class="fragment">margin: 1em 2en 3em 4em;</code>
+          <code class="fragment">margin: 1px 2px 3px 4px;</code>
           <br>
           <img class="fragment" src="../images/CSS-session/box-model/4-values.png" alt="box model" height="50%" />
         </section>
@@ -1697,7 +1694,7 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Most sites use layout systems</li>
             <br>
-            <li class="fragment">Why? More poserful than basic CSS layout and allows for responsive design</li>
+            <li class="fragment">Why? More powerful than basic CSS layout and allows for responsive design</li>
             <br>
             <li class="fragment">Olden days of the internet, developers used HTML tables for layout</li>
           </ul>
@@ -1710,7 +1707,7 @@
             <br>
             <li class="fragment">Non-responsive</li>
             <br>
-            <li class="fragment">Non accessible</li>
+            <li class="fragment">Non-accessible</li>
             <br>
             <li class="fragment">HTML is NOT for layout &amp; styling, but for content (Don't forget your front-end architecture!)</li>
             <!-- Speech note: Front-end architecture says to have specified purposes
@@ -1792,7 +1789,7 @@
           <h1><a href="https://codepen.io/ramenhog/full/MpORPa">CSS Grid Nom Nom Gallery</a></h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Shows grid with definted height (1st row) and dynamic heights (3rd row and on) in masonry pattern</li>
+            <li class="fragment">Shows grid with defined height (1st row) and dynamic heights (3rd row and on) in masonry pattern</li>
             <br>
             <li class="fragment">Responsive</li>
             <br>
@@ -1863,7 +1860,7 @@
           <p style="font-size: 7vh;">See you soon!</p>
           <br>
           <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+            <a href="https://bit.ly/kcwit-cc-worksheet">https://bit.ly/kcwit-cc-worksheet</a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -1875,7 +1872,7 @@
           <img src="../images/octocats/octocat-yummy.png" alt="octocat" height="75%" />
         </section>
         <section>
-          <h1>Common CSS Properties</h1>
+          <h1>Common CSS Properties for Text</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">color</li>
@@ -1897,12 +1894,12 @@
             <br>
             <li class="fragment">List preferred web safe font and a backup:</li>
             <code class="fragment">
-              font-family: 'Roboto', sans-serif;
+              font-family: Roboto, sans-serif;
             </code>
             <br>
             <li class="fragment">Use quotes for fonts with two words:</li>
             <code class="fragment">
-              font-family: 'Comic Sans', cursive;
+              font-family: "Gochi Hand", cursive;
             </code>
           </ul>
         </section>
@@ -1932,7 +1929,7 @@
           <p style="font-size: 7vh;">See you soon!</p>
           <br>
           <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+            <a href="https://bit.ly/kcwit-cc-worksheet">https://bit.ly/kcwit-cc-worksheet</a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -1989,6 +1986,7 @@
             }
           </code>
           <code class="fragment">
+            <!-- tablet -->
             @media screen and (max-width: 992px) {<br>
             &nbsp;&nbsp;body {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;background-color: blue;<br>
@@ -1996,7 +1994,8 @@
             }
           </code>
           <code class="fragment">
-            @media screen and (max-width: 600px) {<br>
+            <!-- mobile -->
+            @media screen and (max-width: 400px) {<br>
             &nbsp;&nbsp;body {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;background-color: green;<br>
             &nbsp;&nbsp;}<br>
@@ -2011,10 +2010,21 @@
           <h1>Media Query</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Useful, but many mobile-friedle content uses layout systems instead of solely relying on media queries</li>
+            <li class="fragment">Useful, but many mobile-friendly content uses layout systems instead of solely relying on media queries</li>
             <br>
             <li class="fragment">Most useful for printing at specific sizes</li>
           </ul>
+        </section>
+        <section>
+          <h1>Media Query Print Example</h1>
+          <br><br>
+          <code class="fragment">
+            @media print {<br>
+            &nbsp;&nbsp;body {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;background-color: pink;<br>
+            &nbsp;&nbsp;}<br>
+            }
+          </code>
         </section>
         <section>
           <h1>CSS Feature Queries</h1>
@@ -2109,8 +2119,8 @@
             <li class="fragment">Use the styles provided by the framework:</li>
             <br>
             <code class="fragment">
-              &lt;h1&gt;Hello world!<br><br>
-              &lt;h1&gt; class="text-3xl font-bold underline text-pink-500 background-pink-50"&gt;<br>
+              &lt;h1&gt;Hello world!&lt;/h1&gt;<br><br>
+              &lt;h1 class="text-3xl font-bold underline text-pink-500 background-pink-50"&gt;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;Hello world!<br>
               &lt;/h1&gt;
             </code>
@@ -2224,9 +2234,9 @@
           <h1>What's Next</h1>
           <br>
           <ul class="normal">
-            <li class="fragment">Networks!</li>
+            <li class="fragment">Network!</li>
             <li class="fragment">Take
-              <a href="https://forms.gle/dXM6akigp7tVRQPf7" target="_blank">
+              <a href="https://forms.gle/scdkXVc14J4ktW9U7" target="_blank">
                 the quiz
               </a>
             </li>
