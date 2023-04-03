@@ -1,0 +1,1420 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Front End Architecture And Introduction to HTML - Coding &amp; Cocktails KC</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="This is the official Coding &amp; Cocktails Front End Architecure course."/>
+    <meta name="author" content="Kansas City Women in Technology"/>
+    <meta name="keywords" content="Kansas City Women in Technology, kcwit, women engineers, learn to code, girls in tech, women in tech, coding and cocktails, learn front-end development"/>
+    <meta property="og:title" content="Front End Architecture - Coding &amp; Cocktails KC" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png" />
+    <meta property="og:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta property="og:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:url" content="http://codingandcocktails.kcwomenintech.org"/>
+    <meta name="twitter:title" content="Coding And Cocktails by Kansas City Women in Technology"/>
+    <meta name="twitter:description" content="This is the official Coding &amp; Cocktails Front End Architecture course."/>
+    <meta name="twitter:image" content="http://codingandcocktails.kcwomenintech.org/images/logo.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/reveal.css" />
+    <link rel="stylesheet" href="../css/theme/codingandcocktails.css" id="theme" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Show hidden slide found in /shared/welcome-slide as attendees enter and get settled in  -->
+        <section>
+          <h3>JavaScript</h3>
+          <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+        </section>
+        <!-- Leadership Section -->
+        <section>
+          <h1>Meet the C&amp;C #LadyDevs</h1>
+          <div class="new-team">
+            <!-- Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/Amy.jpg" alt="Amy Norris" />
+              <p>Amy Norris</p>
+              <p>Director</p>
+            </div>
+            <!-- Co-Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/alex_herron.jpg" alt="Alex Herron" />
+              <p>Alex Herron</p>
+              <p>Co-Director</p>
+            </div>
+            <!-- Technical Materials Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/hyunsu.jpeg" alt="Hyunsu Kim" />
+              <p>Hyunsu Kim</p>
+              <p>Technical Materials Director</p>
+            </div>
+            <!-- Mentor Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/gabi_cropped.jpg" alt="Gabi Dombrowski" />
+              <p>Gabi Dombrowski</p>
+              <p>Mentor Director</p>
+            </div>
+            <!-- Marketing Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/kim.jpg" alt="Kim Watt" />
+              <p>Kim Watt</p>
+              <p>Marketing Director</p>
+            </div>
+            <!-- Presentation Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/nessa.jpg" alt="Nessa Shultz" />
+              <p>Nessa Shultz</p>
+              <p>Presentation Director</p>
+            </div>
+            <!-- Curriculum Director -->
+            <div class="team-member fragment">
+              <img src="../images/shared/eyebrows.gif" alt="eyebrows" height="350"/>
+              <p><i>Open position!</i></p>
+              <p>Curriculum Director</p>
+            </div>
+          </div>
+        </section>
+        <!-- Host Section -->
+        <section>
+          <h1>Our Host this Evening</h1>
+          <div class="fill-row">
+            <a href="https://www.vmlyr.com/en-us/united-states" target="_blank">
+              <img src="../images/shared/vmlyr-logo-black.png" alt="VML" style="margin-top: -5em;" />
+            </a>
+          </div>
+        </section>
+        <!-- Drink Section -->
+        <section>
+          <h2>Drink Served</h2>
+          <img src="../images/shared/libations.jpg" alt="Laura Kozak" height="50%" />
+          <h4>Laura Kozak</h4>
+        </section>
+        <section>
+          <h1>Join us on...</h1>
+          <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+            <img src="../images/shared/slack-logo-white.png" alt="Slack" width="60%"/>
+          </a>
+          <br>
+          <br>
+          <div class="row-line-slack" style="margin-left: -0.5em;">
+            <span class="row-line-slack fragment">
+              <a href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
+                <img src="../images/slack-previews/slack-genx.jpg" alt="Carolyn Westhoff" />
+              </a>
+              <p class="slack-label">#generation-x</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-tabletop.jpg"/>
+              <p class="slack-label">#tabletop-games</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-movies.gif"/>
+              <p class="slack-label">#movies</p>
+            </span>
+            <span class="row-line-slack fragment">
+              <img src="../images/slack-previews/slack-catsdoggos.jpg"/>
+              <p class="slack-label">#cats_and_doggos</p>
+            </span>
+          </div>
+        </section>
+        <!-- KCWiT job board-->
+        <!-- TODO: Include when the job board is back up and running -->
+        <!-- <section>
+          <h2>KC Women In Technology Job Board</h2>
+          <a href="http://kcwomenintech.org/jobs/" target="_blank" style="font-size: 72px;">
+            <img src="../images/shared/job-board.png" alt="KC Women In Technology Job Board" width="60%"/>
+            kcwomenintech.org/jobs
+          </a>
+        </section> -->
+        <!-- Mentors -->
+        <section>
+            <h2>Our mentors</h2>
+            <img src="../images/10-oct/mentors.gif" alt="Mentors" height="70%" style="margin: 15px auto;" />
+            <h4>are super heroes!</h4>
+        </section>
+        <!-- Disclaimer -->
+        <section>
+          <h1>Before We Get Started...</h1>
+          <br>
+          <h3 class="fragment">This stuff is a challenge!</h3>
+          <br>
+          <p class="fragment">
+            The material we cover tonight is different than what we've done in the past. Don't be discouraged if you're having trouble understanding it.
+          </p>
+          <br>
+          <p class="fragment">
+            This takes time to understand. We are here (and on Slack after the session) to help!
+          </p>
+        </section>
+        <!-- Agenda -->
+        <section>
+          <h1>Tonight's Agenda: <br>HTML &amp; Front-end Architecture</h1>
+          <br>
+          <ul style="margin-left: 40px;">
+            <li class="fragment">Intro to JS</li>
+            <li class="fragment">Functions</li>
+            <li class="fragment">Arrays/Loops</li>
+            <li class="fragment">Events</li>
+          </ul>
+        </section>
+        <!-- Presentation Slides -->
+        <section>
+          <h1>Intro to JavaScript, Primitive Values, Variables, &amp; Operations</h1>
+          <br>
+          <img src="../images/octocats/octocat-excellent.png" alt="Octocat Excellent" height="50%" />
+        </section>
+        <section>
+          <h1>Introduction to JavaScript</h1>
+          <br>
+          <p><span style="color: #c7bc7a;">JS</span> aka JavaScript</p>
+        </section>
+        <section>
+          <h1>What Does JavaScript Give Us?</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Improve user experience</li>
+            <br>
+            <li class="fragment">Provide dynamic functionality</li>
+            <br>
+            <li class="fragment">Reduce reliance on server</li>
+          </ul>
+        </section>
+        <section>
+          <h1>History</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Developed in 1995</li>
+            <br>
+            <li class="fragment">History of names:</li>
+            <br>
+            <ul style="list-style:disc; margin-left: 80px;">
+              <li class="fragment">Mocha</li>
+              <li class="fragment">LiveScript</li>
+              <li class="fragment">JavaScript</li>
+            </ul>
+            <br><br>
+            <li class="fragment">ECMAScript is the official language</li>
+            <br>
+            <li class="fragment">JS is one implementation of the standard</li>
+          </ul>
+        </section>
+        <section>
+          <h1>JavaScript is NOT Java</h1>
+          <br><br>
+          <img src="../images/octocats/octocat-confused.png" alt="Octocat Confused" height="75%" />
+        </section>
+        <section>
+          <h1>JavaScript versus Java</h1>
+          <br><br>
+          <table>
+            <tr>
+              <th style="color: #c7bc7a; font-size: 80px;">JavaScript</th>
+              <th style="color: #c7bc7a; font-size: 80px;">Java</th>
+            </tr>
+            <tr>
+              <td>Netscape</td>
+              <td>Sun Microsystems</td>
+            </tr>
+            <tr>
+              <td>Object Oriented Scripting Language</td>
+              <td>Object Oriented Programming Language</td>
+            </tr>
+            <tr>
+              <td>Primarily Client-Side [Node.js is server-side JS]</td>
+              <td>Server-Side</td>
+            </tr>
+            <tr>
+              <td>Loosely Typed</td>
+              <td>Strictly Typed</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h1>Link JavaScript files to your HTML</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Usually in <span style="color:#c7bc7a;">&lt;head&gt;</span>, but can also be added before closing <span style="color:#c7bc7a;">&lt;/body&gt;</span></li>
+            <br>
+            <li class="fragment">Use the <span style="color:#c7bc7a;">&lt;script&gt;</span> tag</li>
+            <br>
+            <li class="fragment">Use the <span style="color:#c7bc7a;">src</span> attribute to link to the file</li>
+            <br>
+            <li class="fragment">Use the <span style="color:#c7bc7a;">type</span> attribute to specify the language</li>
+        </section>
+        <section>
+          <h1>Adding JavaScript</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Add Javascript directly to files</li>
+            <br>
+            <code class="fragment">
+              &lt;script type="text/javascript"&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;const myJSVariable = "hey ladies!"<br>
+              &lt;/script&gt;
+            </code>
+            <br>
+            <li class="fragment">BEST PRACTICE: Link to JS file</li>
+            <br>
+            <code class="fragment">
+              &lt;script src="assets/js/my-javascript-file.js"&gt;&lt;/script&gt;
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>DOM: Document Object Model</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">A webpage is a document</li>
+            <br>
+            <li class="fragment">Browser parses HTML to create the DOM</li>
+            <br>
+            <li class="fragment">DOM: Object-oriented representation of the webpage</li>
+            <br>
+            <li class="fragment">JS can manipulate DOM</li>
+          </ul>
+        </section>
+        <section>
+          <h1>JS Manipulates the DOM</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Changing colors</li>
+            <br>
+            <li class="fragment">Add/change/remove text</li>
+            <br>
+            <li class="fragment">Animate HTML elements</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Primitive Values</h1>
+          <br><br>
+          <img src="../images/octocats/octocat-battle.png" alt="Octocat Battle" height="75%" />
+        </section>
+        <section>
+          <h1>Basic Data Types in JS</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Strings</li>
+            <br>
+            <li class="fragment">Booleans</li>
+            <br>
+            <li class="fragment">Numbers</li>
+            <br>
+            <li class="fragment">Undefined</li>
+            <br>
+            <li class="fragment">Null</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Strings</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Sequence of characters</li>
+            <br>
+            <li class="fragment">Enclosed in single or double quotes</li>
+            <br>
+            <li class="fragment">Can concatenate with the + operator</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Strings</h1>
+          <br><br>
+          <code>
+            const double = "Hello World!";<br><br><br>
+            const single = 'Hello World!';<br><br><br>
+            typeof(double); // string<br>
+          </code>
+        </section>
+        <section>
+          <h1>String Concatenation</h1>
+          <br><br>
+          <code class="fragment">
+            const hello = "Hello";<br><br><br>
+            const world = "World!";<br><br><br>
+            const helloWorld = hello + " " + world;<br><br><br>
+            // "Hello World!"
+          </code>
+        </section>
+        <section>
+          <h1>Booleans</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">True or False</li>
+            <br>
+            <li class="fragment">Used in conditional statements</li>
+            <br>
+          </ul>
+          <code class="fragment">
+            const isTrue = true;<br>
+            const isFalse = false;<br>
+            typeof(isTrue); // boolean
+          </code>
+        </section>
+        <section>
+          <h1>Numbers</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Also commonly called integers</li>
+            <br>
+            <li class="fragment">Can include decimals</li>
+            <br>
+            <li class="fragment">Can use arithmetic operators</li>
+            <br>
+            <li class="fragment">Can use comparison operators</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Numbers</h1>
+          <br><br>
+          <code>
+            const num = 5;<br><br><br>
+            const decimal = 5.5;<br><br><br>
+            typeof(num); // number
+          </code>
+        </section>
+        <section>
+          <h1>Programming Nugget</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Numbers wrapped in quotes are strings</li>
+            <br>
+          </ul>
+          <code class="fragment">
+            const num = "5";<br>
+            typeof(num); // string
+          </code>
+        </section>
+        <section>
+          <h1>Other Primitive Values</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Undefined</li>
+            <br>
+            <li class="fragment">Null</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Undefined</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">A variable that has been declared, but has no value</li>
+            <br>
+            <li class="fragment">Can be assigned a value later</li>
+          </ul>
+          <code class="fragment">
+            const x;<br>
+            typeof(x); // undefined<br>
+          </code>
+        </section>
+        <section>
+          <h1>null</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Explicitly set a variable to null, as a representation that the variable has no value</li>
+          </ul>
+          <code class="fragment">
+            const x = null;<br>
+            typeof(x); // object
+          </code>
+        </section>
+        <section>
+          <h1>Variables</h1>
+          <img src="../images/octocats/octocat-build.png" alt="Octocat Build" height="75%" />
+        </section>
+        <section>
+          <h1>Variables</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Placeholder to story values/data</li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                const
+              </span>
+              and
+              <span style="color: #c7bc7a">
+                let
+              </span>
+              : good practice is to always set a variable using one of these keywords
+            </li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                var
+              </span>
+              : avoid using this keyword since ES6
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1><span style="color: #c7bc7a">const</span> and <span style="color: #c7bc7a">let</span></h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                const
+              </span>
+              : variable that cannot be reassigned
+            </li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                let
+              </span>
+              : variable that can be reassigned
+            </li>
+          </ul>
+          <code class="fragment">
+            const myName = "John";<br>
+            myName = "Jane"; // TypeError: Assignment to constant variable.<br><br><br>
+            let myName = "John";<br>
+            myName = "Jane"; // "Jane"
+          </code>
+        </section>
+        <section>
+          <h1>Variable Naming</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">
+              JavaScript is case-sensitive: use same case you used when creating the variable to reference said variable</li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                myVariable
+              </span>
+               is not the same as
+              <span style="color: #c7bc7a">
+                MyVariable
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Variable Name Rules</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Must start with a letter [upper or lowercase], _, or $</li>
+            <br>
+            <li class="fragment">Subsequent characters may contain letters, numbers, _, or $</li>
+            <br>
+            <li class="fragment">Best practice: camelCase</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Camel Case</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">First word is lowercase</li>
+            <br>
+            <li class="fragment">Subsequent words are capitalized</li>
+            <br>
+            <li class="fragment"><span style="color: #c7bc7a">const myVeryFirstVariable</span></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Coding Example</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Set a variable</li>
+            <br>
+            <code class="fragment">
+              const myVariable = 5;
+            </code>
+            <br>
+            <li class="fragment">Reference that variable by name</li>
+            <br>
+            <code class="fragment">
+              myVariable;
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Operators</h1>
+        </section>
+        <section>
+          <h1>Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Math (Arithmetic)</li>
+            <br>
+            <li class="fragment">Comparison</li>
+            <br>
+            <li class="fragment">Logical</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Math Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Addition (+)</li>
+            <br>
+            <code class="fragment">
+              const myAge = 21 + 10; // 31
+            </code>
+            <br>
+            <li class="fragment">Subtraction (-)</li>
+            <br>
+            <code class="fragment">
+              const agePeopleThinkIAm = 31 - 6; // 25
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Math Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Multiplication (*)</li>
+            <br>
+            <code class="fragment">
+              const myDogsAge = 38 * 38; // 1444
+            </code>
+            <br>
+            <li class="fragment">Division (/)</li>
+            <br>
+            <code class="fragment">
+              const ozWineBottleSplitFourWays = 25.4 / 4; // 6.35
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Math Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Modulus (%)</li>
+            <br>
+            <code class="fragment">
+              const cookiesLeftAfterThreeKidsSplitCookiesEquallyYeahRight = 25 % 3; // 1
+            </code>
+            <br>
+            <li class="fragment">Think remainder that you learned with long division</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Math Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Increment (++)</li>
+            <br>
+            <code class="fragment">
+              const myAge = 21;<br>
+              myAge++; // 22
+            </code>
+            <br>
+            <li class="fragment">Decrement (--)</li>
+            <br>
+            <code class="fragment">
+              const tenPlusOne = 10++; // 11
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Adding Strings and Numbers</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Adding 2 numbers gives you a sum</li>
+            <br>
+            <code class="fragment">
+              const thirtyFive = 10 + 25; // 35
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Adding Strings and Numbers</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">You can add strings together</li>
+            <br>
+            <code class="fragment">
+              const textString = 'happy' + 'birthday'; // happybirthday
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Adding Strings and Numbers</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">If you add a string and a number, the result will be a string</li>
+            <br>
+            <code class="fragment">
+              const textAndNumberString = 'happy' + 35 + 'birthday'; // happy35birthday
+            </code>
+            <br>
+            <code class="fragment">
+              const numberAndTextString = 'happy' + ' ' + 35 + ' ' + 'birthday'; // happy 35 birthday
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Adding Strings and Numbers</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <code class="fragment">
+              const gotcha = '10' + 25; // 1025
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Programming Nugget</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Adding strings is called Concatenation</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Comparison Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Equal to (==)</li>
+            <br>
+            <code class="fragment">
+              const myAge = 21;<br>
+              myAge == 21; // true
+            </code>
+            <br>
+            <li class="fragment">Not equal to (!=)</li>
+            <br>
+            <code class="fragment">
+              const myAge = 21;<br>
+              myAge != 21; // false
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Comparison Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Strict equal to (===): type specific</li>
+            <br>
+            <code class="fragment">
+              const number = 0;<br>
+              const string = '0';<br>
+              number === string; // false
+            </code>
+            <br>
+            <code class="fragment">
+              const number = 0;<br>
+              const string = '0';<br>
+              number == string; // true
+            </code>
+            <br>
+            <li class="fragment">Strict not equal to (!==)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Comparison Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Greater than (>)</li>
+            <br>
+            <code class="fragment">
+              const myAge = 21;<br>
+              myAge > 21; // false
+            </code>
+            <br>
+            <li class="fragment">Less than (<)</li>
+            <br>
+            <code class="fragment">
+              const myAge = 21;<br>
+              myAge < 21; // false
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Comparison Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Greater than or equal to (&gt;=)</li>
+            <br>
+            <li class="fragment">Less than or equal to (&lt;=)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Comparison Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Ternary</li>
+            <br>
+            <li class="fragment">Condition ? expr1 : expr2;</li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7ac7b;">
+                {condition}
+              </span>
+               ?
+               <span style="color: #c7ac7b;">
+                {what happens if true}
+              </span>
+               :
+               <span style="color: #c7ac7b;">
+                {what happens if false}
+              </span>
+              ;
+            </li>
+            <br>
+            <code class="fragment">
+              const myAge = 21;<br>
+              myAge > 21 ? 'You are older than me' : 'You are younger than me'; // You are younger than me
+            </code>
+          </ul>
+        </section>
+        <!-- Work slide: -->
+        <section>
+          <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
+        </section>
+        <!-- TOP SECTION: Functions, Conditionals, and Debugging -->
+        <section>
+          <h1>Functions, Conditionals, and Debugging</h1>
+          <br>
+          <img src="../images/octocat/octocat-yummy.png" alt="octocat" height="75%" />
+        </section>
+        <section>
+          <h1>Functions</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Aka Methods</li>
+            <br>
+            <li class="fragment">Takes input [parameters], processes the input and produces output</li>
+          </ul>
+        </section>
+        <section>
+          <br><br>
+          <img src="../images/javascript/function.png" alt="function" height="75%" />
+        </section>
+        <section>
+          <h1>Reusable bits of code</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Instead of writing the same logic over and over...</li>
+            <br>
+            <li class="fragment">Place logic in a function and use that function over and over</li>
+          </ul>
+          <code class="fragment">
+            function sayHello() {<br>
+              &nbsp;&nbsp;console.log('Hello!');<br>
+            }<br>
+            <br>
+            sayHello(); // Hello!
+          </code>
+        </section>
+        <section>
+          <h1>Programming Nugget</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">DRY programming</li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7ac7b">D</span>on't{' '}
+              <span style="color: #c7ac7b">R</span>epeat{' '}
+              <span style="color: #c7ac7b">Y</span>ourself
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Function Parameters</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Functions can pass 0 to many parameters (separated by commas)</li>
+            <br>
+          </ul>
+        </section>
+        <section>
+          <h1>Set to a Variable Value</h1>
+          <br><br>
+          <code class="fragment">
+            const functionName = function(optional, parameters, here) {<br>
+              &nbsp;&nbsp;// function logic here<br>
+            };<br>
+            <br>
+            functionName();<br>
+            functionName('hello');<br>
+          </code>
+        </section>
+        <section>
+          <h1>Example</h1>
+          <br><br>
+          <code class="fragment">
+            //with 1 parameter<br>
+            const orderDrink = function(drinkName) {<br>
+              &nbsp;&nbsp;return 'I would like a ' + drinkName + ' please.';<br>
+            };<br>
+            <br>
+            orderDrink('gin and tonic');<br>
+            //'I would like a gin and tonic please.';
+          </code>
+        </section>
+        <section>
+          <h1>Function Declaration</h1>
+          <br><br>
+          <code class="fragment">
+            function functionName() {<br>
+              &nbsp;&nbsp;//function logic here<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Function Expression</h1>
+          <br><br>
+          <code class="fragment">
+            //without parameters<br>
+            function orderMyFavoriteDrink() {<br>
+            &nbsp;&nbsp;return 'I want a margarita.';<br>
+            }<br>
+            <br>
+            orderMyFavoriteDrink();<br>
+            //'I want a margarita.'
+          </code>
+        </section>
+        <section>
+          <h1>Arrow Functions</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Arrow functions are a shorter way to write functions</li>
+            <br>
+          </ul>
+          <code class="fragment">
+            const sayHello = (name) => {<br>
+              &nbsp;&nbsp;console.log('Hello ' + name + '!');<br>
+            }<br>
+            <br>
+            sayHello('KC Wit'); // Hello KC Wit!
+          </code>
+        </section>
+        <section>
+          <h1>Return Statement is Optional</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">JS engine needs a return to know that the function is done and it can move on to the next bit of code</li>
+            <br>
+            <li class="fragment">If you don't use a return statement, the function will return undefined</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Example</h1>
+          <br><br>
+          <code class="fragment">
+            let drink; // declares variable but doesn't set<br>
+            <br>
+            function setDrink (cocktail) {<br>
+              &nbsp;&nbsp;drink = cocktail;<br>
+            }<br>
+            <br>
+            setDrink('martini');<br>
+            //undefined is returned but drink variable is now set to 'martini'
+          </code>
+          <br>
+          <code class="fragment">
+            alert('My current drink of choice is a ' + drink);<br>
+            //alert will display 'My current drink of choice is a martini'
+          </code>
+        </section>
+        <section>
+          <h1>Conditionals</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">JavaScript executes from top to bottom (synchronously)</li>
+            <br>
+            <li class="fragment">Conditionals allow us to control the flow of our code</li>
+            <br>
+            <li class="fragment">Sometimes you only want to execute code if something is <em>true</em> or <em>false</em></li>
+            <br>
+            <li class="fragment">JavaScript has different types of conditionals with the most common being if/else</li>
+          </ul>
+        </section>
+        <section>
+          <h1>if/else</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Used to execute code if a condition is true or false</li>
+            <br>
+            <li class="fragment">if/else statements can be nested together to create more complex logic</li>
+            <br>
+          </ul>
+          <code class="fragment">
+            if (condition) {<br>
+              &nbsp;&nbsp;// code to execute if condition is true<br>
+            } else {<br>
+              &nbsp;&nbsp;// code to execute if condition is false<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>Example</h1>
+          <br><br>
+          <code class="fragment">
+            const age = 21;<br>
+            <br>
+            if (age >= 21) {<br>
+              &nbsp;&nbsp;console.log('You can drink!');<br>
+            } else {<br>
+              &nbsp;&nbsp;console.log('You can\'t drink!');<br>
+            }<br>
+            // You can drink!
+          </code>
+        </section>
+        <section>
+          <h1>Complex Example</h1>
+          <br><br>
+          <code class="fragment">
+            const usersName = 'Heidi';<br>
+            <br>
+            if (usersName.length > 0) {<br>
+              &nbsp;&nbsp;submitDrinkOrder();<br>
+            } else {<br>
+              &nbsp;&nbsp;alert('Please enter your name before submitting your drink order.');<br>
+            }<br>
+            // You can drink!
+          </code>
+        </section>
+        <section>
+          <h1>Programming Nugget</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment"><span style="color: #c7ac7b;">else</span> is optional</li>
+            <br>
+            <code class="fragment">
+              if (condition) {<br>
+                &nbsp;&nbsp;// code to execute if condition is true<br>
+              }
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Values that are 'Falsy'</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">false</li>
+            <li class="fragment">0</li>
+            <li class="fragment">'' (empty string)</li>
+            <li class="fragment">null</li>
+            <li class="fragment">undefined</li>
+            <li class="fragment">NaN</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Debugging</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Process of finding and fixing errors in your code</li>
+            <br>
+            <li class="fragment">Skill that takes time to develop</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Debugging Tools</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Browser Developer Tools</li>
+            <br>
+            <li class="fragment">console.log()</li>
+            <br>
+            <li class="fragment">Debugger</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Browser Developer Tools</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Inspect element</li>
+            <br>
+            <li class="fragment">Chrome Lighthouse</li>
+          </ul>
+        </section>
+        <section>
+          <h1><span style="color: #c7ac7b;">console.log()</span></h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Prints output to the console</li>
+            <br>
+            <li class="fragment">Useful for debugging</li>
+            <br>
+            <li class="fragment">Can be used to print out the value of variables</li>
+          </ul>
+        </section>
+        <section>
+          <h1><span style="color: #c7ac7b;">console.log()</span> Examples</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">With variable</li>
+            <br>
+            <code class="fragment">
+              const name = 'Heidi';<br>
+              console.log(name);<br>
+              // Heidi
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1><span style="color: #c7ac7b;">console.log()</span> Examples</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">With function</li>
+            <br>
+            <code class="fragment">
+              getSquareFeet = function(height, width) {<br>
+                &nbsp;&nbsp;return height * width;<br>
+              }<br>
+              <br>
+              console.log(getSquareFeet(10, 15));<br>
+              // 5
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1><span style="color: #c7ac7b;">console.log()</span> Examples</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">With description</li>
+            <br>
+            <code class="fragment">
+              console.log('name', name);<br>
+              console.log('square feet', getSquareFeet(13, 20);
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Debugger</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Stops the execution of your code</li>
+            <br>
+            <li class="fragment">Allows you to step through your code line by line</li>
+          </ul>
+        </section>
+        <!-- Work slide: -->
+        <section>
+          <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
+        </section>
+        <section>
+          <h1>Arrays &amp; Loops</h1>
+          <br><br>
+          <img src="../images/octocats/octocat-confused.png" alt="confused octocat" height="75%" />
+        </section>
+        <section>
+          <h1>Arrays</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">A list of data items</li>
+            <br>
+            <li class="fragment">Items are separated by commas</li>
+            <br>
+            <li class="fragment">Items can be accessed by index</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Array Examples</h1>
+          <br><br>
+          <code class="fragment">
+            const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br><br>
+            const drinksIveConsumed = [0, 1, 2, 3, 4, 5, 6, 7, 'none of the above'];
+          </code>
+        </section>
+        <section>
+          <h1>Create an Array</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Use <span class="color: #c7ac7b">new Array()</span></li>
+            <br>
+            <li class="fragment">Initialize with an empty string <span class="color: #c7ac7b">[]</span></li>
+            <br>
+            <code class="fragment">
+              const cocktails = new Array();<br>
+              const drinksIveConsumed = [];
+            </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Zero-based Index</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Grab items in the array via their index</li>
+            <br>
+            <li class="fragment">First item in an array is at index 0</li>
+            <br>
+            <li class="fragment">Second item in an array is at index 1</li>
+            <br>
+            <li class="fragment">Last item is one less than the length of the array (number of items in the array)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Array Example</h1>
+          <br><br>
+          <code class="fragment">
+            const cocktails = ['Code on the Beach', 'jQuery Sour', 'Silicon Valley', 'JS on Rocks'];<br><br>
+            console.log(cocktails[0]);<br>
+            // Code on the Beach<br><br>
+            console.log(cocktails[1]);<br>
+            // jQuery Sour<br><br>
+            console.log(cocktails[cocktails.length - 1]);<br>
+            // JS on Rocks
+          </code>
+        </section>
+        <section>
+          <h1>Things you can do to an Array</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Loop through an array</li>
+            <br>
+            <li class="fragment">Add / Remove items from the array</li>
+            <br>
+            <li class="fragment">And more...</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Loops</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">A way to repeat a block of code, as long as specified condition returns true</li>
+            <br>
+            <li class="fragment">JS supports multiple types of loops, but we'll cover the 'for' loop today</li>
+          </ul>
+        </section>
+        <section>
+          <h1>For Loops Structure</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Increment increases the value set in initialization</li>
+            <br>
+            <li class="fragment">Eventually condition is false so that eventually condition is false...</li>
+            <br>
+            <li class="fragment">And loops stop executing</li>
+            <br>
+            <li class="fragment">(Don't get caught in an infinite loop!)</li>
+          </ul>
+          <br>
+          <code class="fragment">
+            for (initialization; condition; increment) {<br>
+            &nbsp;&nbsp;// code to execute while condition is true<br>
+            }
+          </code>
+        </section>
+        <section>
+          <h1>For Each</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">A loop that iterates through an array</li>
+            <br>
+            <li class="fragment">Takes a callback function as an argument</li>
+            <br>
+            <li class="fragment">Callback function takes 3 arguments: currentValue, index, array</li>
+            <br>
+            <li class="fragment">An array method that executes a given function once for each array element</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Loops Example</h1>
+          <code class="fragment">
+            const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br>
+            for (let i = 0; i < cocktails.length; i++) {<br>
+            &nbsp;&nbsp;console.log(cocktails[i], i);<br>
+            }<br><br>
+            // Code on the Beach 0<br>
+            // jQuery Sour 1
+          </code>
+          <br>
+          <code class="fragment">
+            cocktails.forEach(function(cocktail, index) {<br>
+            &nbsp;&nbsp;console.log(cocktail, index);<br>
+            });<br><br>
+            // Code on the Beach 0<br>
+            // jQuery Sour 1
+          </code>
+        </section>
+        <section>
+          <h1>Add Item to End of Array</h1>
+          <br><br>
+          <code class="fragment">
+            const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br>
+            cocktails.push('Silicon Valley');<br><br>
+            console.log(cocktails);<br>
+            // ['Code on the Beach', 'jQuery Sour', 'Silicon Valley']
+          </code>
+        </section>
+        <section>
+          <h1>Remove Item from End of Array</h1>
+          <br><br>
+          <code class="fragment">
+            const cocktails = ['Code on the Beach', 'jQuery Sour', 'Silicon Valley'];<br><br>
+            cocktails.pop();<br><br>
+            console.log(cocktails);<br>
+            // ['Code on the Beach', 'jQuery Sour']
+          </code>
+        </section>
+        <section>
+          <h1>Add Item to Beginning of Array</h1>
+          <br><br>
+          <code class="fragment">
+            const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br>
+            cocktails.unshift('Silicon Valley');<br><br>
+            console.log(cocktails);<br>
+            // ['Silicon Valley', 'Code on the Beach', 'jQuery Sour']
+          </code>
+        </section>
+        <section>
+          <h1>Remove from Beginning of Array</h1>
+          <br><br>
+          <code class="fragment">
+            const cocktails = ['Code on the Beach', 'jQuery Sour', 'Silicon Valley'];<br><br>
+            cocktails.shift();<br><br>
+            console.log(cocktails);<br>
+            // ['jQuery Sour', 'Silicon Valley']
+          </code>
+        </section>
+        <!-- Work slide: -->
+        <section>
+          <h1 style="font-size: 8vh;">Work Time</h1>
+          <p style="font-size: 7vh;">See you soon!</p>
+          <br>
+          <p style="font-size: 7vh;">
+            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+          </p>
+          <br><br>
+          <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
+        </section>
+        <!-- Resources -->
+        <section>
+          <h1>Resources</h1>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                Mozilla Developer Network
+              </a>
+            </li>
+            <li class="fragment">
+              <a href="https://www.w3schools.com/js/js_loop_forin.asp" target="_blank">
+                W3Schools - For/In Loop
+              </a>
+            </li>
+            <li class="fragment">
+              <a href="https://github.com/airbnb/javascript" target="_blank">
+                Airbnb JavaScript Style Guide
+              </a>
+            </li>
+            <li class="fragment">
+              <a href="http://javascriptissexy.com/" target="_blank">
+                JavaScript is Sexy
+              </a>
+            </li>
+            <li class="fragment">
+              <a href="http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/" target="_blank">
+                OOP In JavaScript: What You NEED to Know
+              </a>
+            </li>
+            <li class="fragment">
+              <a href="https://www.freecodecamp.com/" target="_blank">
+                Free Code Camp
+              </a>
+            </li>
+            <li class="fragment">
+              <a href="http://youmightnotneedjquery.com/" target="_blank">
+                You Might Not Need jQuery
+              </a>
+               [Shows jQuery code vs. JavaScript & browser support]
+            </li>
+            <li class="fragment">
+              <a href="https://www.w3schools.com/js/js_popup.asp" target="_blank">
+                JavaScript Popup Boxes
+              </a>
+               [Alert, Confirm & Prompt]
+            </li>
+          </ul>
+        </section>
+        <!-- Final Section  -->
+        <section>
+          <h1>What's Next</h1>
+          <br>
+          <ul class="normal">
+            <li class="fragment">Find a friend</li>
+            <li class="fragment">Take
+              <a href="https://forms.gle/dXM6akigp7tVRQPf7" target="_blank">
+                the quiz
+              </a>
+            </li>
+            <li class="fragment">
+              Join <a href="https://kcwit.slack.com/messages/generalchat/" target="_blank">Slack</a>
+            </li>
+            <li class="fragment">Finish
+              <a href="https://kansascitywomenintechnology.github.io/cocktails-worksheets/#/html/" target="_blank">
+                tonight's worksheet
+              </a>
+            </li>
+            <li class="fragment">
+              Find an
+              <a href="http://lmgtfy.com/?q=Front+End+Architecture+tutorial" target="_blank">
+                online tutorial on Front End Architecture
+              </a>
+            </li>
+            <li class="fragment">
+              Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank"> next month's event</a>
+              </li>
+          </ul>
+          <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
+        </section>
+        <section>
+          <h1>Keep up with us</h1>
+          <br><br>
+          <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">
+            codingandcocktails.kcwomenintech.org
+          </a>
+          <br><br>
+          <a class="fragment" href="https://www.facebook.com/KCWomenInTech/" target="_blank">
+            <img src="../images/shared/fb.png" width="120"/>
+          </a>
+          <a class="fragment" href="https://www.eventbrite.com/o/kansas-city-women-in-technology-4568105457" target="_blank">
+            <img src="../images/shared/eventbrite.png" width="350"/>
+          </a>
+          <a class="fragment" href="https://www.meetup.com/Kansas-City-Women-in-Technology/" target="_blank">
+            <img src="../images/shared/meetup.png" width="190"/>
+          </a>
+          <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank">
+            <img src="../images/shared/twitter.png" width="150"/>
+          </a>
+          <br><br>
+          <div class="fragment">
+            <p>#LadyDevs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#KCWiT</p>
+            <br>
+            <p>#CodingAndCocktailsKC</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="../lib/js/head.min.js"></script>
+    <script src="../js/reveal.js"></script>
+    <script src="../js/custom.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        width: '100%',
+        height: '100%',
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+	</body>
+</html>
