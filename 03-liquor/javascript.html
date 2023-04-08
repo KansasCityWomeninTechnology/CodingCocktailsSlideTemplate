@@ -106,13 +106,13 @@
           <div class="row-line-slack" style="margin-left: -0.5em;">
             <span class="row-line-slack fragment">
               <a href="https://www.goodhousekeeping.com/life/inspirational-stories/g19502123/women-changing-the-world-at-age-50/?slide=3">
-                <img src="../images/slack-previews/slack-genx.jpg" alt="Carolyn Westhoff" />
+                <img src="../images/slack-previews/bookclub.jpg" />
               </a>
-              <p class="slack-label">#generation-x</p>
+              <p class="slack-label">#bookclub</p>
             </span>
             <span class="row-line-slack fragment">
-              <img src="../images/slack-previews/slack-tabletop.jpg"/>
-              <p class="slack-label">#tabletop-games</p>
+              <img src="../images/slack-previews/beauty.png"/>
+              <p class="slack-label">#beauty</p>
             </span>
             <span class="row-line-slack fragment">
               <img src="../images/slack-previews/slack-movies.gif"/>
@@ -136,7 +136,7 @@
         <!-- Mentors -->
         <section>
             <h2>Our mentors</h2>
-            <img src="../images/10-oct/mentors.gif" alt="Mentors" height="70%" style="margin: 15px auto;" />
+            <iframe src="https://giphy.com/embed/TH1doTnuEWR2Ntdnyy" width="700" height="700" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             <h4>are super heroes!</h4>
         </section>
         <!-- Disclaimer -->
@@ -155,12 +155,15 @@
         </section>
         <!-- Agenda -->
         <section>
-          <h1>Tonight's Agenda: <br>HTML &amp; Front-end Architecture</h1>
+          <h1>Tonight's Agenda: <br>JavaScript</h1>
           <br>
           <ul style="margin-left: 40px;">
             <li class="fragment">Intro to JS</li>
+            <br>
             <li class="fragment">Functions</li>
+            <br>
             <li class="fragment">Arrays/Loops</li>
+            <br>
             <li class="fragment">Events</li>
           </ul>
         </section>
@@ -174,6 +177,15 @@
           <h1>Introduction to JavaScript</h1>
           <br>
           <p><span style="color: #c7bc7a;">JS</span> aka JavaScript</p>
+          <br>
+          <p>JScript</p>
+          <br>
+          <p>ECMAScript</p>
+        </section>
+        <section>
+          <h1>HTML + CSS + JS</h1>
+          <br>
+          <img src="../images/front-end-html/html+css+javascript.gif" alt="HTML + CSS + JS" height="75%" />
         </section>
         <section>
           <h1>What Does JavaScript Give Us?</h1>
@@ -190,7 +202,7 @@
           <h1>History</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Developed in 1995</li>
+            <li class="fragment">Developed in 1995 at Netscape</li>
             <br>
             <li class="fragment">History of names:</li>
             <br>
@@ -206,35 +218,35 @@
           </ul>
         </section>
         <section>
+          <!-- Speech Note: https://www.youtube.com/watch?v=nAdxWX7s3PY -->
           <h1>JavaScript is NOT Java</h1>
           <br><br>
           <img src="../images/octocats/octocat-confused.png" alt="Octocat Confused" height="75%" />
         </section>
         <section>
           <h1>JavaScript versus Java</h1>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment"><span style="color: #c7ac7b">JavaScript</span>: Developed at Netscape</li>
+            <li class="fragment"><span style="color: #c7ac7b">Java</span>: Developed at Sun Microsystems</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b">JavaScript</span>: Object Oriented Scripting Language</li>
+            <li class="fragment"><span style="color: #c7ac7b">Java</span>: Object Oriented Programming Language</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b">JavaScript</span>: Primarily Client-Side [Node.js is server-side JS]</li>
+            <!-- Speech note: Node.JS is a JavaScript runtime environment that allows us to run JS outside of the browser. -->
+            <li class="fragment"><span style="color: #c7ac7b">Java</span>: Server-Side</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b">JavaScript</span>: Loosely Typed</li>
+            <li class="fragment"><span style="color: #c7ac7b">Java</span>: Strictly Typed</li>
+            <!-- Speech note: Loosely Types means it doesn't require a variable to be typed. -->
+          </ul>
+          <!-- Every scripting language is a programming language, but not every programming language is a scripting language. -->
+          <!-- Scripting languages are translated and cannot be converted into an executable file, whereas programming languages are generally compiled and created to executable the file. -->
+        </section>
+        <section>
+          <h1>Now How Do We Actually Use JavaScript</h1>
           <br><br>
-          <table>
-            <tr>
-              <th style="color: #c7bc7a; font-size: 80px;">JavaScript</th>
-              <th style="color: #c7bc7a; font-size: 80px;">Java</th>
-            </tr>
-            <tr>
-              <td>Netscape</td>
-              <td>Sun Microsystems</td>
-            </tr>
-            <tr>
-              <td>Object Oriented Scripting Language</td>
-              <td>Object Oriented Programming Language</td>
-            </tr>
-            <tr>
-              <td>Primarily Client-Side [Node.js is server-side JS]</td>
-              <td>Server-Side</td>
-            </tr>
-            <tr>
-              <td>Loosely Typed</td>
-              <td>Strictly Typed</td>
-            </tr>
-          </table>
+          <img src="../images/octocats/octocat-confused.png" alt="Octocat What" height="65%" />
         </section>
         <section>
           <h1>Link JavaScript files to your HTML</h1>
@@ -252,7 +264,7 @@
           <h1>Adding JavaScript</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Add Javascript directly to files</li>
+            <li class="fragment">Add JavaScript directly to files</li>
             <br>
             <code class="fragment">
               &lt;script type="text/javascript"&gt;<br>
@@ -266,6 +278,9 @@
               &lt;script src="assets/js/my-javascript-file.js"&gt;&lt;/script&gt;
             </code>
           </ul>
+        </section>
+        <section>
+          <img src="../images/CSS-session/DOM-model.png" alt="DOM Model" height="85%" />
         </section>
         <section>
           <h1>DOM: Document Object Model</h1>
@@ -289,6 +304,117 @@
             <li class="fragment">Add/change/remove text</li>
             <br>
             <li class="fragment">Animate HTML elements</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Variables</h1>
+          <img src="../images/octocats/octocat-build.png" alt="Octocat Build" height="75%" />
+        </section>
+        <section>
+          <h1>Variables</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Placeholder to story values/data</li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                const
+              </span>
+              and
+              <span style="color: #c7bc7a">
+                let
+              </span>
+              : good practice is to always set a variable using one of these keywords
+            </li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                var
+              </span>
+              : avoid using this keyword since ES6
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1><span style="color: #c7bc7a">const</span> and <span style="color: #c7bc7a">let</span></h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                let
+              </span>
+              : variable that can be reassigned
+            </li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                const
+              </span>
+              : variable that cannot be reassigned
+            </li>
+          </ul>
+          <code class="fragment">
+            let myName = "John";<br>
+            myName = "Jane"; // "Jane"<br><br><br>
+            const myName = "John";<br>
+            myName = "Jane"; // TypeError: Assignment to constant variable.
+          </code>
+        </section>
+        <section>
+          <h1>Variable Naming</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">
+              JavaScript is case-sensitive: use same case you used when creating the variable to reference said variable</li>
+            <br>
+            <li class="fragment">
+              <span style="color: #c7bc7a">
+                myVariable
+              </span>
+               is not the same as
+              <span style="color: #c7bc7a">
+                MyVariable
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Variable Name Rules</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Must start with a letter [upper or lowercase], _, or $</li>
+            <br>
+            <li class="fragment">Subsequent characters may contain letters, numbers, _, or $</li>
+            <br>
+            <li class="fragment">Best practice: camelCase</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Camel Case</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">First word is lowercase</li>
+            <br>
+            <li class="fragment">Subsequent words have have their first letter capitalized, followed by all lowercase</li>
+            <br>
+            <li class="fragment"><span style="color: #c7bc7a">const myVeryFirstVariable</span></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Coding Example</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Set a variable</li>
+            <br>
+            <code class="fragment">
+              const myVariable = 5;
+            </code>
+            <br>
+            <li class="fragment">Reference that variable by name</li>
+            <br>
+            <code class="fragment">
+              myVariable;
+            </code>
           </ul>
         </section>
         <section>
@@ -320,6 +446,7 @@
             <li class="fragment">Enclosed in single or double quotes</li>
             <br>
             <li class="fragment">Can concatenate with the + operator</li>
+            <!-- Speech note: "Con" is together; "catena" is chain; "chain together" -->
           </ul>
         </section>
         <section>
@@ -329,6 +456,7 @@
             const double = "Hello World!";<br><br><br>
             const single = 'Hello World!';<br><br><br>
             typeof(double); // string<br>
+            <!-- Speech note: typeof is an OPERATOR (not function) -->
           </code>
         </section>
         <section>
@@ -408,7 +536,7 @@
             <li class="fragment">Can be assigned a value later</li>
           </ul>
           <code class="fragment">
-            const x;<br>
+            let x;<br>
             typeof(x); // undefined<br>
           </code>
         </section>
@@ -419,123 +547,14 @@
             <li class="fragment">Explicitly set a variable to null, as a representation that the variable has no value</li>
           </ul>
           <code class="fragment">
-            const x = null;<br>
+            let x = null;<br>
             typeof(x); // object
           </code>
         </section>
         <section>
-          <h1>Variables</h1>
-          <img src="../images/octocats/octocat-build.png" alt="Octocat Build" height="75%" />
-        </section>
-        <section>
-          <h1>Variables</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Placeholder to story values/data</li>
-            <br>
-            <li class="fragment">
-              <span style="color: #c7bc7a">
-                const
-              </span>
-              and
-              <span style="color: #c7bc7a">
-                let
-              </span>
-              : good practice is to always set a variable using one of these keywords
-            </li>
-            <br>
-            <li class="fragment">
-              <span style="color: #c7bc7a">
-                var
-              </span>
-              : avoid using this keyword since ES6
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h1><span style="color: #c7bc7a">const</span> and <span style="color: #c7bc7a">let</span></h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">
-              <span style="color: #c7bc7a">
-                const
-              </span>
-              : variable that cannot be reassigned
-            </li>
-            <br>
-            <li class="fragment">
-              <span style="color: #c7bc7a">
-                let
-              </span>
-              : variable that can be reassigned
-            </li>
-          </ul>
-          <code class="fragment">
-            const myName = "John";<br>
-            myName = "Jane"; // TypeError: Assignment to constant variable.<br><br><br>
-            let myName = "John";<br>
-            myName = "Jane"; // "Jane"
-          </code>
-        </section>
-        <section>
-          <h1>Variable Naming</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">
-              JavaScript is case-sensitive: use same case you used when creating the variable to reference said variable</li>
-            <br>
-            <li class="fragment">
-              <span style="color: #c7bc7a">
-                myVariable
-              </span>
-               is not the same as
-              <span style="color: #c7bc7a">
-                MyVariable
-              </span>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h1>Variable Name Rules</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Must start with a letter [upper or lowercase], _, or $</li>
-            <br>
-            <li class="fragment">Subsequent characters may contain letters, numbers, _, or $</li>
-            <br>
-            <li class="fragment">Best practice: camelCase</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Camel Case</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">First word is lowercase</li>
-            <br>
-            <li class="fragment">Subsequent words are capitalized</li>
-            <br>
-            <li class="fragment"><span style="color: #c7bc7a">const myVeryFirstVariable</span></li>
-          </ul>
-        </section>
-        <section>
-          <h1>Coding Example</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Set a variable</li>
-            <br>
-            <code class="fragment">
-              const myVariable = 5;
-            </code>
-            <br>
-            <li class="fragment">Reference that variable by name</li>
-            <br>
-            <code class="fragment">
-              myVariable;
-            </code>
-          </ul>
-        </section>
-        <section>
           <h1>Operators</h1>
+          <br><br>
+          <img src="../images/octocats/octocat-help.png" height="75%"/>
         </section>
         <section>
           <h1>Operators</h1>
@@ -589,7 +608,7 @@
             <li class="fragment">Modulus (%)</li>
             <br>
             <code class="fragment">
-              const cookiesLeftAfterThreeKidsSplitCookiesEquallyYeahRight = 25 % 3; // 1
+              const cookiesLeftAfterThreeKidsSplitCookiesEquallyYeahRight = 16 % 3; // 1
             </code>
             <br>
             <li class="fragment">Think remainder that you learned with long division</li>
@@ -602,14 +621,15 @@
             <li class="fragment">Increment (++)</li>
             <br>
             <code class="fragment">
-              const myAge = 21;<br>
+              let myAge = 21;<br>
               myAge++; // 22
             </code>
             <br>
             <li class="fragment">Decrement (--)</li>
             <br>
             <code class="fragment">
-              const tenPlusOne = 10++; // 11
+              let cookies = 5;<br>
+              cookies--; // 4
             </code>
           </ul>
         </section>
@@ -654,8 +674,12 @@
           <h1>Adding Strings and Numbers</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
+            <code class="fragment" style="width: 1000px;">
+              const gotcha = '10' + 25;
+            </code>
+            <br>
             <code class="fragment">
-              const gotcha = '10' + 25; // 1025
+              // 1025
             </code>
           </ul>
         </section>
@@ -692,18 +716,18 @@
             <li class="fragment">Strict equal to (===): type specific</li>
             <br>
             <code class="fragment">
-              const number = 0;<br>
-              const string = '0';<br>
-              number === string; // false
-            </code>
-            <br>
-            <code class="fragment">
-              const number = 0;<br>
-              const string = '0';<br>
-              number == string; // true
+              const cookies = 0;<br>
+              const drinks = '0';<br>
+              cookies === drinks; // false
             </code>
             <br>
             <li class="fragment">Strict not equal to (!==)</li>
+            <br>
+            <code class="fragment">
+              const cookies = 0;<br>
+              const drinks = '0';<br>
+              cookies !== drinks; // true
+            </code>
           </ul>
         </section>
         <section>
@@ -713,15 +737,15 @@
             <li class="fragment">Greater than (>)</li>
             <br>
             <code class="fragment">
-              const myAge = 21;<br>
+              const myAge = 18;<br>
               myAge > 21; // false
             </code>
             <br>
             <li class="fragment">Less than (<)</li>
             <br>
             <code class="fragment">
-              const myAge = 21;<br>
-              myAge < 21; // false
+              const myAge = 18;<br>
+              myAge < 21; // true
             </code>
           </ul>
         </section>
@@ -758,7 +782,7 @@
             </li>
             <br>
             <code class="fragment">
-              const myAge = 21;<br>
+              const myAge = 18;<br>
               myAge > 21 ? 'You are older than me' : 'You are younger than me'; // You are younger than me
             </code>
           </ul>
@@ -769,7 +793,7 @@
           <p style="font-size: 7vh;">See you soon!</p>
           <br>
           <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+            <a href="https://bit.ly/js-worksheet">https://bit.ly/js-worksheet</a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -778,7 +802,7 @@
         <section>
           <h1>Functions, Conditionals, and Debugging</h1>
           <br>
-          <img src="../images/octocat/octocat-yummy.png" alt="octocat" height="75%" />
+          <img src="../images/octocats/octocat-yummy.png" alt="octocat" height="75%" />
         </section>
         <section>
           <h1>Functions</h1>
@@ -816,8 +840,8 @@
             <li class="fragment">DRY programming</li>
             <br>
             <li class="fragment">
-              <span style="color: #c7ac7b">D</span>on't{' '}
-              <span style="color: #c7ac7b">R</span>epeat{' '}
+              <span style="color: #c7ac7b">D</span>on't
+              <span style="color: #c7ac7b">R</span>epeat
               <span style="color: #c7ac7b">Y</span>ourself
             </li>
           </ul>
@@ -959,7 +983,7 @@
             if (age >= 21) {<br>
               &nbsp;&nbsp;console.log('You can drink!');<br>
             } else {<br>
-              &nbsp;&nbsp;console.log('You can\'t drink!');<br>
+              &nbsp;&nbsp;console.log('You can't drink!');<br>
             }<br>
             // You can drink!
           </code>
@@ -975,7 +999,24 @@
             } else {<br>
               &nbsp;&nbsp;alert('Please enter your name before submitting your drink order.');<br>
             }<br>
-            // You can drink!
+            // Submits a drink order
+          </code>
+        </section>
+        <section>
+          <h1>Nested Example</h1>
+          <code class="fragment">
+            const usersName = 'Heidi';<br>
+            const usersAge = 21;<br>
+            <br>
+            if (usersName.length > 0) {<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;if (usersAge >= 21) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;submitDrinkOrder();<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('You must be 21 to submit a drink order.');<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+            } else {<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;alert('Please enter your name.');<br><br>
+            }
           </code>
         </section>
         <section>
@@ -984,11 +1025,36 @@
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment"><span style="color: #c7ac7b;">else</span> is optional</li>
             <br>
-            <code class="fragment">
+            <code class="fragment" style="width: 1500px">
               if (condition) {<br>
                 &nbsp;&nbsp;// code to execute if condition is true<br>
               }
             </code>
+          </ul>
+        </section>
+        <section>
+          <h1>Truthy and Falsy</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Every value in JavaScript has an inherent truthiness or falsiness</li>
+            <br>
+            <li class="fragment">Truthy values are values that are considered true when encountered in a boolean context</li>
+            <br>
+            <li class="fragment">Falsy values are values that are considered false when encountered in a boolean context</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Values that are 'Truthy'</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">true</li>
+            <li class="fragment">any number that is not 0</li>
+            <li class="fragment">any non-empty string (e.g., 'hello')</li>
+            <li class="fragment">any array</li>
+            <li class="fragment">any object</li>
+            <li class="fragment">function</li>
+            <li class="fragment">'0' (a string containing a single zero)</li>
+            <li class="fragment">'false' (a string containing the text “false”)</li>
           </ul>
         </section>
         <section>
@@ -1001,6 +1067,7 @@
             <li class="fragment">null</li>
             <li class="fragment">undefined</li>
             <li class="fragment">NaN</li>
+            <!-- Speech note: failed number conversions, math operations that aren't real numbers, indeterminate form (like infinity), etc. -->
           </ul>
         </section>
         <section>
@@ -1042,47 +1109,54 @@
             <br>
             <li class="fragment">Can be used to print out the value of variables</li>
           </ul>
+          <!--
+            Show in javascript compiler:
+              const baskets = 5;
+              const balls = 13
+              const numberOfBallsPerBasket = balls / baskets;
+              console.log('how many balls per basket', numberOfBallsPerBasket);
+          -->
         </section>
         <section>
           <h1><span style="color: #c7ac7b;">console.log()</span> Examples</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">With variable</li>
-            <br>
-            <code class="fragment">
-              const name = 'Heidi';<br>
-              console.log(name);<br>
-              // Heidi
-            </code>
           </ul>
+          <br>
+          <code class="fragment">
+            const name = 'Heidi';<br>
+            console.log(name);<br>
+            // Heidi
+          </code>
         </section>
         <section>
           <h1><span style="color: #c7ac7b;">console.log()</span> Examples</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">With function</li>
-            <br>
-            <code class="fragment">
-              getSquareFeet = function(height, width) {<br>
-                &nbsp;&nbsp;return height * width;<br>
-              }<br>
-              <br>
-              console.log(getSquareFeet(10, 15));<br>
-              // 5
-            </code>
           </ul>
+          <br>
+          <code class="fragment">
+            getSquareFeet = function(height, width) {<br>
+              &nbsp;&nbsp;return height * width;<br>
+            }<br>
+            <br>
+            console.log(getSquareFeet(10, 15));<br>
+            // 5
+          </code>
         </section>
         <section>
           <h1><span style="color: #c7ac7b;">console.log()</span> Examples</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">With description</li>
-            <br>
-            <code class="fragment">
-              console.log('name', name);<br>
-              console.log('square feet', getSquareFeet(13, 20);
-            </code>
           </ul>
+          <br>
+          <code class="fragment">
+            console.log('name', name);<br>
+            console.log('square feet', getSquareFeet(13, 20);
+          </code>
         </section>
         <section>
           <h1>Debugger</h1>
@@ -1099,7 +1173,7 @@
           <p style="font-size: 7vh;">See you soon!</p>
           <br>
           <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+            <a href="https://bit.ly/js-worksheet">https://bit.ly/js-worksheet</a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -1132,9 +1206,9 @@
           <h1>Create an Array</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Use <span class="color: #c7ac7b">new Array()</span></li>
+            <li class="fragment">Use <span style="color: #c7ac7b">new Array()</span></li>
             <br>
-            <li class="fragment">Initialize with an empty string <span class="color: #c7ac7b">[]</span></li>
+            <li class="fragment">Initialize with an empty string <span style="color: #c7ac7b">[]</span></li>
             <br>
             <code class="fragment">
               const cocktails = new Array();<br>
@@ -1194,9 +1268,9 @@
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">Increment increases the value set in initialization</li>
             <br>
-            <li class="fragment">Eventually condition is false so that eventually condition is false...</li>
+            <li class="fragment">Eventually condition is false so that...</li>
             <br>
-            <li class="fragment">And loops stop executing</li>
+            <li class="fragment">The loop stop executing</li>
             <br>
             <li class="fragment">(Don't get caught in an infinite loop!)</li>
           </ul>
@@ -1212,10 +1286,6 @@
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">A loop that iterates through an array</li>
-            <br>
-            <li class="fragment">Takes a callback function as an argument</li>
-            <br>
-            <li class="fragment">Callback function takes 3 arguments: currentValue, index, array</li>
             <br>
             <li class="fragment">An array method that executes a given function once for each array element</li>
           </ul>
@@ -1242,6 +1312,10 @@
         <section>
           <h1>Add Item to End of Array</h1>
           <br><br>
+          <p class="fragment">Use the <span style="color: #c7ac7b">push()</span> method</p>
+          <br>
+          <p class="fragment">(some array)<span style="color: #c7ac7b;">.push(</span>...some item<span style="color: #c7ac7b;">)</span></p>
+          <br>
           <code class="fragment">
             const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br>
             cocktails.push('Silicon Valley');<br><br>
@@ -1252,6 +1326,10 @@
         <section>
           <h1>Remove Item from End of Array</h1>
           <br><br>
+          <p class="fragment">Use the <span style="color: #c7ac7b">pop()</span> method</p>
+          <br>
+          <p class="fragment">(some array)<span style="color: #c7ac7b;">.pop()</span></p>
+          <br>
           <code class="fragment">
             const cocktails = ['Code on the Beach', 'jQuery Sour', 'Silicon Valley'];<br><br>
             cocktails.pop();<br><br>
@@ -1262,6 +1340,10 @@
         <section>
           <h1>Add Item to Beginning of Array</h1>
           <br><br>
+          <p class="fragment">Use the <span style="color: #c7ac7b">unshift()</span> method</p>
+          <br>
+          <p class="fragment">(some array)<span style="color: #c7ac7b;">.unshift(</span>...some item<span style="color: #c7ac7b;">)</span></p>
+          <br>
           <code class="fragment">
             const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br>
             cocktails.unshift('Silicon Valley');<br><br>
@@ -1272,6 +1354,10 @@
         <section>
           <h1>Remove from Beginning of Array</h1>
           <br><br>
+          <p class="fragment">Use the <span style="color: #c7ac7b">shift()</span> method</p>
+          <br>
+          <p class="fragment">(some array)<span style="color: #c7ac7b;">.shift()</span></p>
+          <br>
           <code class="fragment">
             const cocktails = ['Code on the Beach', 'jQuery Sour', 'Silicon Valley'];<br><br>
             cocktails.shift();<br><br>
@@ -1285,52 +1371,120 @@
           <p style="font-size: 7vh;">See you soon!</p>
           <br>
           <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-html-worksheet">https://bit.ly/kcwit-html-worksheet</a>
+            <a href="https://bit.ly/js-worksheet">https://bit.ly/js-worksheet</a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
+        </section>
+        <section>
+          <h1>Events</h1>
+          <br><br>
+          <img src="../images/octocats/octocat-yummy.png" alt="octocat" height="75%" />
+        </section>
+        <section>
+          <h1>Events</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">HTML Events: things that happen to HTML elements</li>
+            <br>
+            <li class="fragment">Event: anytime user or browser interacts with the webpage</li>
+            <br>
+            <li class="fragment">JS can "react" to these events</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Common Events</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment"><span style="color: #c7ac7b;">onchange</span>: Webpage finishes loading</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">onclick</span>: User clicks an HTML element (such as button)</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">onmouseover</span>: User hovers over an HTML element</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">onchange</span>: HTML element changed in some way</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">onkeydown</span>: User presses a key</li>
+          </ul>
+        </section>
+        <section>
+          <h1>JS Reacting</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">JS can execute code when "events" happen</li>
+          </ul>
+        </section>
+        <section>
+          <h1>JS Events Examples</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Button click => closes window</li>
+            <br>
+            <li class="fragment">Mouse over text => information box provides more context</li>
+            <br>
+            <li class="fragment">Button click => validates a form</li>
+            <br>
+            <li class="fragment">Mouse over picture => picture becomes magnified</li>
+          </ul>
+        </section>
+        <section>
+          <h1>JS Event Code Examples</h1>
+          <p class="fragment">HTML</p>
+          <code class="fragment">
+            &lt;button<br>
+            &nbsp;&nbsp;id="cocktail-section"<br>
+            &nbsp;&nbsp;onclick="clickHandler('Hi there LadyDev!')"<br>
+            &gt;&lt;/button&gt;
+          </code>
+          <br><br>
+          <p class="fragment">JS</p>
+          <code class="fragment">
+            const clickHandler = function (text) {<br>
+            &nbsp;&nbsp;alert(text);<br>
+            };
+          </code>
         </section>
         <!-- Resources -->
         <section>
           <h1>Resources</h1>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">
+            <li>
               <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
                 Mozilla Developer Network
               </a>
             </li>
-            <li class="fragment">
+            <li>
               <a href="https://www.w3schools.com/js/js_loop_forin.asp" target="_blank">
                 W3Schools - For/In Loop
               </a>
             </li>
-            <li class="fragment">
+            <li>
               <a href="https://github.com/airbnb/javascript" target="_blank">
                 Airbnb JavaScript Style Guide
               </a>
             </li>
-            <li class="fragment">
+            <li>
               <a href="http://javascriptissexy.com/" target="_blank">
                 JavaScript is Sexy
               </a>
             </li>
-            <li class="fragment">
+            <li>
               <a href="http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/" target="_blank">
                 OOP In JavaScript: What You NEED to Know
               </a>
             </li>
-            <li class="fragment">
+            <li>
               <a href="https://www.freecodecamp.com/" target="_blank">
                 Free Code Camp
               </a>
             </li>
-            <li class="fragment">
+            <li>
               <a href="http://youmightnotneedjquery.com/" target="_blank">
                 You Might Not Need jQuery
               </a>
                [Shows jQuery code vs. JavaScript & browser support]
             </li>
-            <li class="fragment">
+            <li>
               <a href="https://www.w3schools.com/js/js_popup.asp" target="_blank">
                 JavaScript Popup Boxes
               </a>
@@ -1345,7 +1499,7 @@
           <ul class="normal">
             <li class="fragment">Find a friend</li>
             <li class="fragment">Take
-              <a href="https://forms.gle/dXM6akigp7tVRQPf7" target="_blank">
+              <a href="https://forms.gle/asyQ4HDyxLCuu3Me7" target="_blank">
                 the quiz
               </a>
             </li>
@@ -1358,14 +1512,14 @@
               </a>
             </li>
             <li class="fragment">
-              Find an
-              <a href="http://lmgtfy.com/?q=Front+End+Architecture+tutorial" target="_blank">
+              Look through the resources
+              <!-- <a href="http://lmgtfy.com/?q=Front+End+Architecture+tutorial" target="_blank">
                 online tutorial on Front End Architecture
-              </a>
+              </a> -->
             </li>
             <li class="fragment">
               Register for <a href="http://codingandcocktails.kcwomenintech.org/#signup" target="_blank"> next month's event</a>
-              </li>
+            </li>
           </ul>
           <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
         </section>
