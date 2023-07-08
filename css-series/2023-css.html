@@ -89,16 +89,16 @@
         <section>
           <h1>Our Host this Evening</h1>
           <div class="fill-row">
-            <a href="https://www.vmlyr.com/en-us/united-states" target="_blank">
-              <img src="../images/shared/vmlyr-logo-black.png" alt="VML" style="margin-top: -5em;" />
+            <a href="https://dimin.com/" target="_blank">
+              <img src="../images/shared/temp_di_logo.png" alt="DI logo" style="margin-top: -5em; height: 700px;" />
             </a>
           </div>
         </section>
         <!-- Drink Section -->
         <section>
-          <h2>Formerly Logistics &amp; Libations</h2>
+          <h2>Drink Served</h2>
           <img src="../images/shared/libations.jpg" alt="Laura Kozak" height="50%" />
-          <h4>Served by the lovely Laura Kozak!</h4>
+          <h4>Laura Kozak</h4>
         </section>
         <section>
           <h1>Join us on...</h1>
@@ -168,6 +168,11 @@
             <li class="fragment">Text &amp; Icons</li><br>
             <li class="fragment">Extending Beyond Basic CSS</li><br>
           </ul>
+        </section>
+        <section>
+          <h1>First, we drink!</h1>
+          <br>
+          <img src="../images/shared/libations.jpg" alt="Laura Kozak" height="50%" />
         </section>
         <!-- Presentation Slides -->
         <!-- TOP TOPIC: CSS Basics-->
@@ -320,10 +325,12 @@
         <section>
           <h1>Element Selector Example</h1>
           <br><br>
+          <p>html</p>
           <code>
             &lt;h1&gt;Hello World&lt;/h1&gt;
           </code>
           <br>
+          <p>css</p>
           <code>
             h1 {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;color: rebeccapurple;<br>
@@ -355,13 +362,13 @@
         <section>
           <h1>Class Selector Example</h1>
           <br><br>
-          <p class="fragment">HTML:</p>
+          <p class="fragment">html</p>
           <br>
           <code class="fragment">
             &lt;h1 class="cocktail"&gt;Cosmopolitan&lt;/h1&gt;
           </code>
           <br><br>
-          <p class="fragment">CSS:</p>
+          <p class="fragment">css</p>
           <br>
           <code class="fragment">
             .cocktail {<br>
@@ -412,6 +419,7 @@
         <section>
           <img src="https://media.giphy.com/media/ji6zzUZwNIuLS/giphy.gif" alt="Awkward look" height="75%" />
         </section>
+
         <section>
           <h1>Basic Properties &amp; Their Values</h1>
           <br><br>
@@ -480,7 +488,9 @@
           <h1>rem / em</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Relative to root element</li>
+            <li class="fragment">EM: Relative to PARENT element</li>
+            <br>
+            <li class="fragment">REM: Relative to ROOT element</li>
             <br>
             <li class="fragment">If root element is 16px, 1rem for an element = 16px</li>
             <br>
@@ -567,22 +577,7 @@
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">rgb(102, 51, 153)</li>
-            <br><br><br>
-            <li class="fragment">red: 102 / 255 = 40%</li>
-            <br>
-            <li class="fragment">green: 51 / 255 = 20%</li>
-            <br>
-            <li class="fragment">blue: 153 / 255 = 60%</li>
           </ul>
-        </section>
-        <section>
-          <h1>RGB Example</h1>
-          <br><br>
-          <code class="fragment">
-            h1 {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;color: rgb(255, 0, 0);&nbsp;&nbsp;// red<br>
-            }
-          </code>
         </section>
         <section>
           <h1>Hexidecimal Numbers</h1>
@@ -601,13 +596,6 @@
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">#ff0000 or #f00</li>
-            <li class="fragment">" ff 00 00 " or #f00</li>
-            <li class="fragment">red: 'ff'</li>
-            <li class="fragment">ff in base 16 = 255</li>
-            <li class="fragment">red: 255</li>
-            <li class="fragment">red in RGB: 255 or 100% red</li>
-            <br>
-            <li class="fragment">rgb: rgb(255, 0, 0)</li>
           </ul>
         </section>
         <section>
@@ -615,23 +603,9 @@
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">hex: #663399 or #639</li>
-            <li class="fragment">" 66 33 99 " or #639</li>
-            <li class="fragment">red: '66'</li>
-            <li class="fragment">66 in base 16 = 102</li>
-            <li class="fragment">red: 102</li>
-            <li class="fragment">red in RGB: 102 or 40% red</li>
             <br>
             <li class="fragment">rgba(102, 51, 153)</li>
           </ul>
-        </section>
-        <section>
-          <h1>Hex Example</h1>
-          <br><br>
-          <code class="fragment">
-            h1 {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;color: #ff0000;&nbsp;&nbsp;// red<br>
-            }
-          </code>
         </section>
         <section>
           <h1>Quick Note About Hex</h1>
@@ -893,10 +867,15 @@
         <!-- Work slide: -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
-          <p style="font-size: 7vh;">See you soon!</p>
-          <br>
-          <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-cc-worksheet">https://bit.ly/kcwit-cc-worksheet</a>
+          <p>Presentation:
+            <a href="https://bit.ly/kcwit-cc-css" target="_blank">
+              https://bit.ly/kcwit-cc-css
+            </a>
+          </p>
+          <p>Worksheet:
+            <a href="https://bit.ly/kcwit-cc-worksheet" target="_blank">
+              https://bit.ly/kcwit-cc-worksheet
+            </a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -905,17 +884,6 @@
         <section>
           <h1>Selectors</h1>
           <img src="../images/octocats/octocat-battle.png" alt="battle selectors" height="80%" />
-        </section>
-        <section>
-          <h1>CSS Is Powerful</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Apply set of styles as broadly or as specific as you desire across your site</li>
-            <br>
-            <li class="fragment">i.e. All elements of the site have blue text versus one single header</li>
-            <br>
-            <li class="fragment">Selectors are used to "find" HTML elements</li>
-          </ul>
         </section>
         <section>
           <h1>Selector Simple Recap</h1>
@@ -1046,19 +1014,6 @@
         <section>
           <h1>Combining Selectors Example</h1>
           <br><br>
-          <code>
-            &lt;p class="status"&gt;Coding with a cocktail on the side.&lt;/p&gt;<br><br>
-            &lt;p class="learning"&gt;I am learning CSS and web development.&lt;/p&gt;<br><br>
-          </code>
-        </section>
-        <section>
-          <br><br>
-          <p class="status">Coding with a cocktail on the side.</p><br>
-          <p class="learning">I am learning CSS and web development.</p><br>
-        </section>
-        <section>
-          <h1>Combining Selectors Example</h1>
-          <br><br>
           <p>Goal: Make paragraph text with class of learning "seagreen"</p>
           <code class="fragment">
             p {<br>
@@ -1073,23 +1028,6 @@
           <br><br>
           <p class="status" style="color: #fff;">Coding with a cocktail on the side.</p><br>
           <p class="learning" style="color: #20b2aa;">I am learning CSS and web development.</p><br>
-        </section>
-        <section>
-          <h1>Combing Selectors Example</h1>
-          <br><br>
-          <code>
-            &lt;p class="about learning"&gt;
-            <br>&nbsp;&nbsp;I am learning CSS and web development.<br>
-            &lt;/p&gt;<br><br>
-            &lt;p class="about pets"&gt;
-            <br>&nbsp;&nbsp;I have one goofy dog and three grumpy cats.
-            <br>&lt;/p&gt;<br><br>
-          </code>
-        </section>
-        <section>
-          <br><br>
-          <p class="about learning">I am learning CSS and web development.</p><br>
-          <p class="about pets">I have one goofy dog and three grumpy cats.</p><br>
         </section>
         <section>
           <h1>Combing Selectors Example: Double Class Selector</h1>
@@ -1347,16 +1285,7 @@
           </ul>
         </section>
         <section>
-          <h1>Selectors Relationship</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Relationship between two selectors do NOT need to be adjacent</li>
-            <br>
-            <li class="fragment">You can skip levels</li>
-          </ul>
-        </section>
-        <section>
-          <h1>What Color This Is:</h1>
+          <h1>What Color Is This:</h1>
           <code>
             &lt;ul&gt;<br>
             &nbsp;&nbsp;&lt;li&gt;&lt;em&gt;Most important item&lt;/em&gt;&lt;/li&gt;<br>
@@ -1555,10 +1484,15 @@
         <!-- Work slide: -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
-          <p style="font-size: 7vh;">See you soon!</p>
-          <br>
-          <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-cc-worksheet">https://bit.ly/kcwit-cc-worksheet</a>
+          <p>Presentation:
+            <a href="https://bit.ly/kcwit-cc-css" target="_blank">
+              https://bit.ly/kcwit-cc-css
+            </a>
+          </p>
+          <p>Worksheet:
+            <a href="https://bit.ly/kcwit-cc-worksheet" target="_blank">
+              https://bit.ly/kcwit-cc-worksheet
+            </a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -1580,8 +1514,6 @@
             <li class="fragment">Box has 4 parts: content, padding, border, margin</li>
             <br>
             <li class="fragment">Can be styled with CSS</li>
-            <br>
-            <li class="fragment">Spacing has standardized vocabulary called "The Box Model" in CSS</li>
           </ul>
         </section>
         <section>
@@ -1672,10 +1604,10 @@
               <li class="fragment">None vs. Visibility</li>
               <br>
             </ul>
-            <li class="fragment">Z-Index</li>
+            <!-- <li class="fragment">Z-Index</li> -->
           </ul>
         </section>
-        <section>
+        <!-- <section>
           <h1>Z-Index</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
@@ -1687,7 +1619,7 @@
             <br>
             <li class="fragment">Negative values are allowed</li>
           </ul>
-        </section>
+        </section> -->
         <section>
           <h1>Layout Systems</h1>
           <br><br>
@@ -1804,7 +1736,7 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">HTML: create a parent container with a class to style</li>
             <br>
-            <li class="fragment">Define the styling to add grid and/or flexbox</li>
+            <li class="fragment">CSS: Define the styling to add grid and/or flexbox</li>
           </ul>
         </section>
         <section>
@@ -1834,7 +1766,6 @@
           </ul>
           <code class="fragment">display: grid;</code><br>
           <code class="fragment">display: flex;</code><br>
-          <code class="fragment">display: inline-grid; display: inline-flex;</code><br>
           <code class="fragment">
             .container {<br>
             &nbsp;&nbsp;display: grid;<br>
@@ -1857,10 +1788,15 @@
         <!-- Work slide: -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
-          <p style="font-size: 7vh;">See you soon!</p>
-          <br>
-          <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-cc-worksheet">https://bit.ly/kcwit-cc-worksheet</a>
+          <p>Presentation:
+            <a href="https://bit.ly/kcwit-cc-css" target="_blank">
+              https://bit.ly/kcwit-cc-css
+            </a>
+          </p>
+          <p>Worksheet:
+            <a href="https://bit.ly/kcwit-cc-worksheet" target="_blank">
+              https://bit.ly/kcwit-cc-worksheet
+            </a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -1919,17 +1855,20 @@
             <li class="fragment">Once included in your project, use class name <span style="color: #c7bc75;">`fas fa-code`</span> for the <a href="http://fontawesome.io/icon/code/">code icon</a> in your html</li>
             <br>
             <li class="fragment">Use <span style="color: #c7bc75;">`::before`</span> pseudo element to add the icon</li>
-            <br>
-            <li class="fragment">Add <span style="color: #c7bc75;">class</span> attribute</li>
           </ul>
         </section>
         <!-- Work slide: -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
-          <p style="font-size: 7vh;">See you soon!</p>
-          <br>
-          <p style="font-size: 7vh;">
-            <a href="https://bit.ly/kcwit-cc-worksheet">https://bit.ly/kcwit-cc-worksheet</a>
+          <p>Presentation:
+            <a href="https://bit.ly/kcwit-cc-css" target="_blank">
+              https://bit.ly/kcwit-cc-css
+            </a>
+          </p>
+          <p>Worksheet:
+            <a href="https://bit.ly/kcwit-cc-worksheet" target="_blank">
+              https://bit.ly/kcwit-cc-worksheet
+            </a>
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
@@ -2007,68 +1946,6 @@
           <img src="../images/CSS-session/media-query.png" alt="media query" height="75%" />
         </section>
         <section>
-          <h1>Media Query</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Useful, but many mobile-friendly content uses layout systems instead of solely relying on media queries</li>
-            <br>
-            <li class="fragment">Most useful for printing at specific sizes</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Media Query Print Example</h1>
-          <br><br>
-          <code class="fragment">
-            @media print {<br>
-            &nbsp;&nbsp;body {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;background-color: pink;<br>
-            &nbsp;&nbsp;}<br>
-            }
-          </code>
-        </section>
-        <section>
-          <h1>CSS Feature Queries</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Uses <span style="color: #c7bc75;">@supports</span> selector to define fallback styles</li>
-          </ul>
-          <br><br>
-          <code class="fragment">
-            @supports (display: grid) {<br><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;/* do cool grid thing */<br><br>
-            }
-          </code>
-        </section>
-        <section>
-          <h1>CSS Compilers</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Used by many development teams</li>
-            <br>
-            <li class="fragment">Also called pre- &amp; post- processors</li>
-            <br>
-            <li class="fragment">Allows you to write CSS faster and cleaner</li>
-            <br>
-            <li class="fragment">Gives CSS superpowers</li>
-            <br>
-            <li class="fragment">Browsers only understand CSS, so we have to convert from one format to plain CSS</li>
-          </ul>
-        </section>
-        <section>
-          <h1>CSS Compilers</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Common precomilers: Sass &amp; Less</li>
-            <br>
-            <li class="fragment">Write code using the superpowers that pre-processors provide</li>
-            <br>
-            <li class="fragment">Use a compiler to take the pre-processed code [Wonder Woman] to compile the code to plain old CSS [Diana Prince] for the browser</li>
-          </ul>
-        </section>
-        <section>
-           <iframe src="https://giphy.com/embed/S4efrgIUqyzIY" width="1100" height="1100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
-        </section>
-        <section>
           <h1>CSS Frameworks</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
@@ -2128,9 +2005,9 @@
         </section>
         <section>
           <br><br>
-          <h1 style="color: #000;">Hello world!</h1>
+          <h1 style="color: #000; text-transform: none;">Hello world!</h1>
           <br><br>
-          <h1 style="font-weight: bold; background-color: #fdf2f8; color: #be185d; text-decoration: underline; padding-top: 0.5em; padding-bottom: 0.5em; font-size: 200px;">Hello world!</h1>
+          <h1 style="text-transform: none; font-weight: bold; background-color: #fdf2f8; color: #be185d; text-decoration: underline; padding-top: 0.5em; padding-bottom: 0.5em; font-size: 200px;">Hello world!</h1>
         </section>
         <section>
           <h1>Popular CSS Frameworks</h1>
