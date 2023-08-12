@@ -75,8 +75,8 @@
             </div>
             <!-- Curriculum Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/eyebrows.gif" alt="eyebrows" height="350"/>
-              <p><i>Open position!</i></p>
+              <img src="../images/shared/welcome.jpg" alt="eyebrows" height="350"/>
+              <p><i>Lulu Cao</i></p>
               <p>Curriculum Director</p>
             </div>
           </div>
@@ -85,8 +85,8 @@
         <section>
           <h1>Our Host this Evening</h1>
           <div class="fill-row">
-            <a href="https://www.vmlyr.com/en-us/united-states" target="_blank">
-              <img src="../images/shared/vmlyr-logo-black.png" alt="VML" style="margin-top: -5em;" />
+            <a href="https://dimin.com/" target="_blank">
+              <img src="../images/shared/temp_di_logo.png" alt="DI logo" style="margin-top: -5em; height: 700px;" />
             </a>
           </div>
         </section>
@@ -166,6 +166,11 @@
             <br>
             <li class="fragment">Events</li>
           </ul>
+        </section>
+        <section>
+          <h1>First, we drink!</h1>
+          <br>
+          <img src="../images/shared/libations.jpg" alt="Laura Kozak" height="50%" />
         </section>
         <!-- Presentation Slides -->
         <section>
@@ -701,18 +706,6 @@
               myAge == 21; // true
             </code>
             <br>
-            <li class="fragment">Not equal to (!=)</li>
-            <br>
-            <code class="fragment">
-              const myAge = 21;<br>
-              myAge != 21; // false
-            </code>
-          </ul>
-        </section>
-        <section>
-          <h1>Comparison Operators</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">Strict equal to (===): type specific</li>
             <br>
             <code class="fragment">
@@ -720,13 +713,25 @@
               const drinks = '0';<br>
               cookies === drinks; // false
             </code>
-            <br>
+          </ul>
+        </section>
+        <section>
+          <h1>Comparison Operators</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">Strict not equal to (!==)</li>
             <br>
             <code class="fragment">
               const cookies = 0;<br>
               const drinks = '0';<br>
               cookies !== drinks; // true
+            </code>
+            <br>
+            <li class="fragment">Not equal to (!=)</li>
+            <br>
+            <code class="fragment">
+              const myAge = 21;<br>
+              myAge != 21; // false
             </code>
           </ul>
         </section>
@@ -1033,6 +1038,23 @@
           </ul>
         </section>
         <section>
+          <h1>Programming Nugget</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment"><span style="color: #c7ac7b;">if else</span></li>
+            <br>
+            <code class="fragment" style="width: 1500px">
+              if (condition) {<br>
+                &nbsp;&nbsp;// code to execute if condition is true<br>
+              } else if (condition) {<br>
+                &nbsp;&nbsp;// code to execute if first condition false, but second true<br>
+              } else {<br>
+                &nbsp;&nbsp;// code to execute if condition is false<br>
+              }
+            </code>
+          </ul>
+        </section>
+        <section>
           <h1>Truthy and Falsy</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
@@ -1138,7 +1160,7 @@
           </ul>
           <br>
           <code class="fragment">
-            getSquareFeet = function(height, width) {<br>
+            const getSquareFeet = (height, width) => {<br>
               &nbsp;&nbsp;return height * width;<br>
             }<br>
             <br>
