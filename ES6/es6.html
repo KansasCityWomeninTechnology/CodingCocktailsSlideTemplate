@@ -538,7 +538,7 @@
             const arr = [1, 2, 3, 4, 5, 6];<br><br>
             const first = arr[0]; // Extracting the first element<br>
             // first = [1]<br><br>
-            const rest = arr.slice(1);<br>
+            cosnt rest = arr.slice(1);<br>
             // Collecting the rest of the elements<br>
             // rest = [2, 3, 4, 5, 6]
           </code>
@@ -604,7 +604,7 @@
               let text2 = 'Hello';
             </code>
             <br>
-            <li class="fragment">Use <span style="color: #c7ac7b;">+</span> to combine strings</li>
+            <li class="fragment">Use + to combine strings</li>
             <br>
             <code class="fragment">
               let numCookies = "10";<br>
@@ -618,17 +618,17 @@
           <h1>ES6: String Literals</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Strings literals allow us to access variables inside of a string without using the <span style="color: #c7ac7b;">+</span></li>
-            <br>
-            <li class="fragment"><span style="color: #c7ac7b;">`</span> (backtick) represents the string</li>
-            <br>
-            <li class="fragment"><span style="color: #c7ac7b;">${}</span> represents the js variable</li>
+            <li class="fragment">Strings literals allow us to access variables inside of a string without using the +</li>
             <br>
             <code class="fragment">
               let numCookies = "10";<br>
               console.log(`I plan to eat ${numCookies} cookies!`);<br>
               // I plan to eat 10 cookies!
             </code>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">`</span> (backtick) represents the string</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">${}</span> represents the js variable</li>
           </ul>
         </section>
         <section>
@@ -648,7 +648,7 @@
             <br>
             <li class="fragment">Key (aka property) will always be stringified behind the scenes)</li>
             <br>
-            <li class="fragment">Value can be anything (string, number, another object, function, etc.)</li>
+            <li class="fragment">Value can be anything (string, bumber, another object, function, etc.)</li>
           </ul>
         </section>
         <section>
@@ -727,7 +727,7 @@
           <br><br>
         </section>
         <section>
-          <h1>ES6 introduces some array helper methods:</h1>
+          <h1>ES6 intoduces some array helper methods:</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment"><span style="color: #c7ac7b;">indexOf</span></li>
@@ -750,7 +750,7 @@
             <li class="fragment">If item is not found in an array, <span style="color: #c7ac7b;">-1</span> is returned</li>
           </ul>
           <code class="fragment">
-            const garnishes = ["orange peel", "lime wedge", "tahini"];<br><br>
+            const garishes = ["orange peel", "lime wedge", "tahini"];<br><br>
             garnishes.indexOf("tahini");<br>
             // 3
             <br><br>
@@ -767,7 +767,7 @@
             <li class="fragment"><span style="color: #c7ac7b;">array.forEach((name) => {function(name)}</span></li>
           </ul>
           <code class="fragment">
-            const garnishes = ["orange peel", "lime wedge", "tahini"];<br><br>
+            const garishes = ["orange peel", "lime wedge", "tahini"];<br><br>
             garnishes.forEach((garnish) => console.log(`Garnish drink with ${garnish}));<br><br>
             // Garnish drink with orange peel.<br>
             // Garnish drink with lime wedge.<br>
@@ -783,7 +783,7 @@
             <li class="fragment"><span style="color: #c7ac7b;">array.forEach((name) => {function(name)}</span></li>
           </ul>
           <code class="fragment">
-            const garnishes = ["orange peel", "lime wedge", "tahini"];<br><br>
+            const garishes = ["orange peel", "lime wedge", "tahini"];<br><br>
             const drinkToppings = garnishes.map((garnish) => `${garnish} topping));<br><br>
             console.log(drinkToppings);<br>
             // ["orange peel topping", "lime wedge topping", "tahini topping"]
@@ -803,7 +803,7 @@
         <section>
           <h1>Filter example</h1>
           <code class="fragment">
-            const garnishes = [<br>
+            const garishes = [<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "orange peel", ready: true},<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "lime wedge", ready: false},<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "tahini", ready: true}<br>
@@ -832,7 +832,7 @@
         <section>
           <h1>Find example</h1>
           <code class="fragment">
-            const garnishes = [<br>
+            const garishes = [<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "orange peel", ready: true},<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "lime wedge", ready: false},<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "tahini", ready: true}<br>
@@ -847,6 +847,7 @@
           <br><br>
           <img src="../images/es6/map_filter_find_example.jpg" alt="map filter find example" height="50%" />
         </section>
+
         <!-- Work slide: -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
@@ -863,508 +864,12 @@
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
-
         <section>
           <h1>Functions</h1>
           <br><br>
           <img src="../images/octocats/octocat-excellent.png" height="75%"/>
         </section>
-        <section>
-          <h1>Function definition</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">A block of code designed to perform a particular task</li>
-            <br>
-            <li class="fragment">The code is executed when it’s “called”</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Function example</h1>
-          <code class="fragment">
-            function makeCocktail(number) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(`I am making ${number} cocktails.`);<br>
-            }<br>
-            <br>
-            // Call the function<br>
-            makeCocktail(2);<br><br>
-            // I am making 2 cocktails.
-          </code>
-        </section>
-        <section>
-          <h1>ES6 Arrow Functions</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">ES6 introduced arrow functions</li>
-            <br>
-            <li class="fragment">"Regular" functions and Arrow functions are <em>mostly</em> the same</li>
-            <br>
-            <li class="fragment">Difference is that regular functions have their own context, which arrow functions do not</li>
-            <!-- Impacts when using global 'this' -->
-            <br>
-            <li class="fragment">Essentially, we're saving the variable as a function</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Arrow Function example</h1>
-          <code class="fragment">
-            function makeCocktail(number) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(`I am making ${number} cocktails.`);<br>
-            }<br>
-            <br>
-            // Arrow function<br>
-            const makeCocktail2 = (number) => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(`I am making ${number} cocktails.`);<br>
-            }
-          </code>
-        </section>
-        <section>
-          <h1>Arrow Function with no parameters</h1>
-          <code class="fragment">
-            const makeCocktail2 = () => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(`I am making cocktails.`);<br>
-            }
-          </code>
-        </section>
-        <section>
-          <h1>Arrow Functions are Super Cool!</h1>
-          <br>
-          <img src="/images/es6/arrow.gif" height="60%" />
-        </section>
-        <section>
-          <h1>ES6 Default Parameters</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Allows us to set a default parameter if no parameters are passed in a function</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Default Parameters</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Say we have the following method:</li>
-            <br>
-            <code class="fragment">
-              const serve = (drink) => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return `Here's your ${drink}!`;<br>
-              }<br><br>
-              serve("martini");<br>
-              // Here's your martini!
-            </code>
-          </ul>
-        </section>
-        <section>
-          <h1>Default Parameters</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Say we want to have a basic drink that can be automatically "served" when we call the method</li>
-            <br>
-            <code class="fragment">
-              const serve = (drink = "wine") => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return `Here's your ${drink}!`;<br>
-              }<br><br>
-              serve();<br>
-              // Here's your wine!
-            </code>
-            <br>
-            <li class="fragment">Notice that if we do NOT pass in a parameter, the "default" will be wine</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Overwriting default parameters</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Note that we still can override this default if we pass in a parameter</li>
-            <br>
-            <code class="fragment">
-              const serve = (drink = "wine") => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return `Here's your ${drink}!`;<br>
-              }<br><br>
-              serve("cosmopolitan");<br>
-              // Here's your cosmopolitan!
-            </code>
-          </ul>
-        </section>
-        <section>
-          <h1>Anonymous Functions</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">A function without a name</li>
-            <br>
-            <code class="fragment">
-              function(a, b) {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return a - b;<br>
-              }
-            </code>
-          </ul>
-        </section>
-        <section>
-          <h1>Anonymous Functions</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">We then assign it to a variable to call the anonymous function later</li>
-            <br>
-            <code class="fragment">
-              let subtract = function(a, b) {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return a - b;<br>
-              }
-            </code>
-            <br>
-            <li class="fragment">AKA, "Subtract" variable is calling the anonymous function</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Arrow Functions vs Anonymous Functions?</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Arrow functions are always Anonymous Functions</li>
-            <br>
-            <li class="fragment">i.e. A variable is assigned to an anonymous function</li>
-            <code class="fragment">
-              const subtract = (a, b) => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return a - b;<br>
-              }
-            </code>
-            <br>
-            <code class="fragment">
-              const subtract = <span style="color: #c7ac7b;">(a, b) => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return a - b;<br>
-              }</span>
-            </code>
-          </ul>
-        </section>
-        <section>
-          <h1>Arrow Functions vs Anonymous Functions?</h1>
-          <br><br>
-            <code class="fragment">
-              const getCat = () => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return this.cat;<br>
-              }
-            </code>
-            <code class="fragment">
-              const getCat = <span style="color: #c7ac7b;">() => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return this.cat;<br>
-              }</span>
-            </code>
-        </section>
-        <section>
-          <h1>Time for some comic relief...</h1>
-        </section>
-        <section>
-          <img src="/images/es6/comic_relief.jpeg" height="95%" />
-        </section>
-        <section>
-          <h1>Callbacks</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Function that is passed as an argument to another function</li>
-          </ul>
-            <img class="fragment" src="/images/es6/what.gif" height="40%" />
-            <br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment"><em>Read it again... it's not as complicated as you think</em></li>
-          </ul>
-        </section>
-        <section>
-          <h1>Order of Execution</h1>
-          <br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">
-              Functions will always execute in the order that they are called, not in the order that they are defined
-            </li>
-          </ul>
-        </section>
-        <section>
-          <code>
-            const first = () => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Hello');<br>
-            }<br>
-            <br>
-            const second = () => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;console.log('World');<br>
-            }<br>
-            <br>
-            second();<br>
-            first();<br>
-            <br>
-            // World<br>
-            // Hello
-          </code>
-        </section>
-        <section>
-          <h1>Goal...</h1>
-          <br><br>
-          <p class="fragment">Let's say we want a calculation function that returns a sum of two numbers.</p>
-          <br>
-          <p class="fragment">Then we want to log out that sum through a logging function.</p>
-        </section>
-        <section>
-          <h1>Attempt #1</h1>
-          <br>
-          <code class="fragment">
-            const displayLog = (value) => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
-            }<br>
-            <br>
-            const calculator = (num1, num2) => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;let sum = num1 + num2;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;return sum;<br>
-            }<br>
-            <br>
-            let result = calculator(5, 10);<br>
-            displayLog(result);<br>
-            // 15
-          </code>
-        </section>
-        <section>
-          <h1>Issues with this code</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">We must call two functions in order to show the result</li>
-            <br>
-            <li class="fragment">So let's get rid of calling 2 separate functions...</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Attempt #2</h1>
-          <br>
-          <p>Call
-            <span style="color: #c7ac7b;">displayLog</span>
-             in our
-             <span style="color: #c7ac7b;">calculator</span>
-              function
-            </p>
-          <code class="fragment">
-            const displayLog = (value) => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
-            }<br>
-            <br>
-            const calculator = (num1, num2) => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;let sum = num1 + num2;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;displayLog(sum);<br>
-            }<br>
-            <br>
-            calculator(5, 10);<br>
-            // 15
-          </code>
-        </section>
-        <section>
-          <h1>Issues with this code</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">
-              We cannot stop
-              <span style="color: #c7ac7b;">calculator</span>
-               function from logging the result
-            </li>
-            <br>
-            <li class="fragment">
-              This is because we call
-              <span style="color: #c7ac7b;">displayLog</span>
-              inside of our
-              <span style="color: #c7ac7b;">calculator</span>
-               function
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h1>So what do we do????</h1>
-          <br>
-          <img src="/images/es6/what_do_we_do.gif" height="75%" />
-        </section>
-        <section>
-          <h1>Use Callbacks!</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Remember: Callback is just a function that is passed in as a parameter</li>
-            <br>
-            <li class="fragment">
-              Allows you to execute
-              <span style="color: #c7ac7b;">calculator</span>
-               alongside a callback
-            </li>
-            <br>
-            <li class="fragment">
-              i.e.
-              <span style="color: #c7ac7b;">calculator</span>
-               will run it's calculation function before running in the passed-in function
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h1>Callback Solution</h1>
-          <br>
-          <code class="fragment">
-            // In this example, displayLog will act as a callback function
-            const displayLog = (value) => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
-            }<br>
-            <br>
-            // That is passed to calculator as an argument
-            const calculator = (num1, num2, callbackFunction) => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;let sum = num1 + num2;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;callbackFunction(sum);<br>
-            }<br>
-            <br>
-            calculator(5, 10, displayLog);<br>
-            // 15
-          </code>
-        </section>
-        <section>
-          <h1>Wait what??</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Remember: functions are objects in JavaScript</li>
-            <br>
-            <li class="fragment">
-              We are simply passing in
-              <span style="color: #c7ac7b;">displayLog</span>
-              function to our
-              <span style="color: #c7ac7b;">calculator</span>
-               function
-            </li>
-            <br>
-            <li class="fragment">This allows us to change how we want to handle the resulting sum</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Leveraging Callback!</h1>
-          <br>
-          <p class="fragment">On the next page because it's a lot of code...</p>
-          <img class="fragment" src="/images/es6/oops.gif" height="65%" />
-        </section>
-        <section>
-          <code style="width: fit-content;">
-            // One possible callback function<br>
-            const displayLog = (value) => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
-            }<br>
-            <br>
-            // Another possible callback function<br>
-            const displayAlert = (value) => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
-            }<br>
-            <br>
-            const calculator = (num1, num2, callbackFunction) => {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;let sum = num1 + num2;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;callbackFunction(sum);<br>
-            }<br>
-            <br>
-            // So we can now change how we display the sum (in a log or alert)<br>
-            calculator(5, 10, displayLog); // logs out 15<br>
-            calculator(5, 10, displayAlert); // alert popup showing 15
-          </code>
-        </section>
-        <section>
-          <h1>You may have seen this in...</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment"><span style="color: #c7ac7b;">addEventListener</span></li>
-            <br>
-            <code class="fragment">
-              element.addEventListener("click", myFunction);<br>
-              <br>
-              function myFunction() {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML = "Hello World";<br>
-              }
-            </code>
-            <br>
-            <li class="fragment">When "click" happens on the element,
-              <span style="color: #c7ac7b;">myFunction</span>
-               is executed
-            </li>
-          </ul>
-        </section>
-        <section>
-          <img src="/images/es6/are_you_alive.gif" height="95%" />
-        </section>
-        <section>
-          <h1>...Nemo Mom Theory??<br>
-            <a href="https://www.instagram.com/reel/C7UcXmaOrcb/">CLICK HERE</a>
-          </h1>
-          <img src="/images/es6/click.gif" height="65%" />
-        </section>
-        <section>
-          <h1>Synchronous vs Asynchronous</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Synchronous will run operations in the order that operations are called</li>
-            <br>
-            <li class="fragment">Asynchronous will run operations until an asynchronous function is reached, where executions will split off</li>
-            <br>
-            <li class="fragment">An asynchronous function will be ran while the rest of the code executes</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Synchronous Function Example</h1>
-          <code>
-            console.log(`a`);<br>
-            console.log(`b`);<br>
-            <br>
-            // a<br>
-            // b
-          </code>
-        </section>
-        <section>
-          <h1>Async Functions</h1>
-          <br><br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Where one function will be ran along with the rest of the code</li>
-            <br>
-            <li class="fragment">Async will make a function return a promise (more on promises next section)</li>
-            <br>
-            <li class="fragment">An asynchronous function will be ran while the rest of the code executes</li>
-            <br>
-            <li class="fragment">Callback functions can be useful in async functions</li>
-            <br>
-            <li class="fragment">Common async function:
-              <span style="color: #c7ac7b;">setTimeout()</span>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <img src="/images/es6/hang_in_there.gif" height="95%" />
-        </section>
-        <section>
-          <h1 style="text-transform: none; color: #c7ac7b;">setTimeout()</h1>
-          <br>
-          <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Specify a callback function to be executed after a certain number of milliseconds</li>
-            <br>
-            <li class="fragment" style="color: #c7ac7b;">setTimeout(someFunction, # milliseconds to wait to execute);</li>
-            <br>
-            <code class="fragment">
-              setTimeout(drink, 3000);<br>
-              <br>
-              function drink() {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;console.log("I'd like a cocktail!");<br>
-              }<br>
-              <br>
-              // Prints: "I'd like a cocktail!" after a 3000 millisecond (or 3 second) delay
-            </code>
-          </ul>
-        </section>
-        <section>
-          <h1>Async Function example with <span style="color: #c7ac7b; text-transform: none;">setTimeout</span></h1>
-          <code>
-            // our async function<br>
-            setTimeout(() => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Async");<br>
-            }, 1000);<br>
-            <br>
-            console.log(`a`);<br>
-            console.log(`b`);<br>
-            <br>
-            // a<br>
-            // b<br>
-            // Async
-          </code>
-          <p class="fragment">Notice that async log is called first, but is actually last to execute due to the delay</p>
-        </section>
-        <section>
-          <h1>Hard section done? Check!!</h1>
-          <br>
-          <img src="/images/es6/dance.gif" height="65%" />
-        </section>
+        <!-- TODO Add function slides -->
         <!-- Work slide: -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
@@ -1381,12 +886,382 @@
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
+<!--TODO Promises Section | Alicia working on-->
         <section>
           <h1>Promises</h1>
           <br><br>
           <img src="../images/octocats/octocat-help.png" height="75%"/>
         </section>
-        <!-- TODO Add Promises slides -->
+        <section>
+          <h1>Promises</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Represent asynchronous operations (if JavaScript has to wait for an operation to complete, it will execute the rest of the code while waiting)</li>
+            <br>
+            <li class="fragment">A <span style="color: #c7ac7b;">promise</span> can be in one of three states: pending, fulfilled, or rejected</li>
+            <br>
+            <li class="fragment">A <span style="color: #c7ac7b;">promise</span> method MUST be used to handle promises; properties state and result cannot be accessed directly</li>
+          </ul>
+        </section>
+            
+        <section>
+          <h1>In <span style="color: #c7ac7b;">myPromise.state</span>:</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment"><span style="color: #c7ac7b;">Pending</span>: The operation is ongoing; 
+            <br> 
+            <span style="color: #c7ac7b;">myPromise.result</span>:  undefined
+            </li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">Fulfilled</span>: The operation completed successfully; 
+              <br>  
+              <span style="color: #c7ac7b;">myPromise.result</span>:  a value
+              </li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">Rejected</span>: The operation failed; 
+              <br>  
+              <span style="color: #c7ac7b;">myPromise.result</span>:  an error object
+              </li>
+          </ul>
+        </section>
+        <section>
+          <img src="../images/es6/promises_promises.gif" height=90%"/>
+        </section>
+        <section>
+          <h1>Basic Promise Syntax</h1>
+          <br><br>
+          <code class="fragment">
+            myPromise.then(
+            <br>
+            &nbsp; function(resolve) { 
+              <br>
+              &nbsp; &nbsp; // if successful, this code
+              <br>
+              &nbsp; },
+            <br>
+            &nbsp; function(reject) { 
+              &nbsp; &nbsp; 
+              <br>
+              &nbsp; &nbsp; // if errors, this code
+              <br>
+              &nbsp; }
+            <br>
+             };           
+            <br>
+          </code>        
+        </section>
+        <section>
+          <img src="../images/es6/promises_lame.gif" height="90%"/>
+        </section>
+        <section>
+          <h1>Promises continued...</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment"><span style="color: #c7ac7b;">Promise.then( )</span> accepts two parameters:
+              <br>
+            success and failure callbacks</li>
+            <br>
+            <li class="fragment">Both callbacks are optional</li>
+            </ul>
+        </section>
+        <section>
+          <h1><span style="color: #c7ac7b;">Promise.then( )</span> example:</h1>
+          <br><br>
+          <code class="fragment">
+            <span style="color: #c7ac7b;">const </span> promiseMakeCocktail = new Promise((resolve, reject) => {
+              <br>
+              <span style="color: #c7ac7b;"> &nbsp; let </span> cocktailCompleted = true;
+            <br><br>
+            &nbsp; //The producing code (this may take some time)
+            <br>
+            &nbsp; if (cocktailCompleted) {
+            <br>
+            &nbsp; &nbsp; resolve(“Cocktails are ready!”);
+            <br>
+            &nbsp; } else {
+            <br>
+            &nbsp; &nbsp; reject(“Not making cocktails anymore!”);
+            <br>
+            &nbsp; }
+            <br>
+            });
+        <br><br>
+        &nbsp; promiseMakeCocktail.then(
+          <br>
+          &nbsp; &nbsp; res => {console.log(res);}, 
+          <br>
+          &nbsp; &nbsp; rej => {console.log(rej);}
+          <br>
+          &nbsp; );
+          <br>
+          </code>
+        </section>
+        <section>
+          <h1><span style="color: #c7ac7b;">Promise.then( )</span> output:</h1>
+          <br><br>
+          <code class="fragment">            
+            // Prints: “Cocktails are ready!”  
+            <br>
+            because cocktailCompleted = true
+            <br>
+          </code> 
+            <img class="fragment" src="../images/es6/its_true.gif" height="60%"/>
+          <br>          
+        </section>
+        <section>
+          <h1><span style="color: #c7ac7b;">Promise.then( )</span> output:</h1>
+          <br><br>
+          <code class="fragment">            
+            // If cocktailCompleted = false,
+            <br>
+            then “Not making cocktails anymore!” would print
+          </code> 
+            <img class="fragment" src="../images/es6/false.gif" height="50%"/>
+          <br> 
+        </section>
+        <section>
+          <h1>Async Example:</h1>
+          <br><br>
+          <code class="fragment">            
+            setTimeout(drink, 3000);
+            <br><br>
+            function drink() {
+            <br>
+            &nbsp; console.log("I’d like a cocktail please!!");
+            <br>
+          };  
+          </code>
+          <br>
+          </section>
+          <section>
+            <h1>Async Output:</h1>
+            <br><br>
+          <code class="fragment">
+            //Prints: “I’d like a cocktail please!!” 
+            <br>
+            after a 3000 millisecond (or 3 second) delay
+          </code> 
+          <img class="fragment" src="../images/es6//happened_so_fast.gif" height="60%">
+          <br>
+          </section>
+          <section>
+            <h1>Async with Callback example:</h1>
+            <br><br>
+            <ul style="list-style:disc; margin-left: 80px;">
+              <li class="fragment">String: “I’d like a cocktail please!!” = value</li>
+              <br>
+              <code class="fragment">
+                setTimeout(function() {drink(“I’d like a cocktail please!!”);}, 3000);
+                <br><br>
+                function drink(value) {
+                <br>
+                &nbsp; console.log(value);
+                <br>
+                };
+                <br>
+              </code>
+              <br>
+            </section>
+            <section>
+              <h1>Async with Callback...</h1>
+            <br><br>
+            <code class="fragment">
+              //Prints: “I’d like a cocktail please!!” after a 3000 millisecond (or 3 second) delay
+            </code>
+            <img class="fragment" src="../images/es6/call_me.gif" height="50%"> 
+            <br> 
+            </section>
+            <section>
+              <h1>Promises with Async/Await</h1>
+              <br><br>
+              <ul style="list-style:disc; margin-left: 80px;">
+                <li class="fragment">keywords <span style="color: #c7ac7b;">async</span> and <span style="color: #c7ac7b;">await</span> make promises easier to write
+                </li>
+                <br>
+                <li class="fragment">Using <span style="color: #c7ac7b;">async</span> before a function makes the function return a promise:
+                </li>
+                <br>
+                <code class="fragment">
+                  async function orderDrink() {
+                    <br>
+                    &nbsp; return “I’d like a cocktail please!!”;
+                    <br>
+                  };
+                </code>
+              </section>
+              <section>
+                <h1>Async/Await continued...</h1>
+              <br><br>
+              <ul style="list-style:disc; margin-left: 80px;">
+                <li class="fragment">
+                  Equivalent to:
+                </li>
+                <br>
+                <code class="fragment">
+                  function orderDrink() {
+                    <br>
+                    &nbsp; return Promise.resolve(“I’d like a cocktail please!!”);
+                    <br>
+                  };
+                  <br>
+                </code>
+              </section>
+              <section>
+                <h1>Async/Await continued...</h1>
+              <br><br>
+              <ul style="list-style:disc; margin-left: 80px;">
+                <li class="fragment">
+                  With a promise:
+                </li>
+                <br>
+                <code class="fragment">
+                  orderDrink().then(
+                    <br>
+                    &nbsp; function(resolve) { 
+                      <br>
+                      &nbsp; &nbsp; // if successful this code  
+                    <br>
+                   },
+                    <br>
+                    &nbsp; function (reject) { 
+                      <br>
+                      &nbsp; &nbsp; // if error this code 
+                    <br>
+                   }
+                    <br>
+                  };
+                  <br>
+                </code>
+              </section>
+              <section>
+                <h1>All together now...</h1>
+                <h2 class="fragment">without the rejection</h2>
+              <br><br>
+              <code class="fragment">
+                async function myCocktail() {
+                <br>
+                &nbsp; let myPromise = new Promise(function(resolve, reject) {
+                  <br>
+                  &nbsp; &nbsp; resolve("I’d like a cocktail please!!");
+                <br>
+              &nbsp; });
+              <br>
+              &nbsp; console.log(await myPromise);
+              <br>
+                }
+                <br>
+              myCocktail();
+                <br>
+                //Prints: I’d like a cocktail please!!
+              <br>
+              </code>
+            </section>
+            <section>
+              <img src="../images/es6/rejection.gif" height="90%">              
+            </section>
+            <section>
+              <h1><span style="color:#c7bc75">Await</span></h1>
+              <br><br>
+              <ul style="list-style:disc; margin-left: 80px;">
+                <li class="fragment">
+                  Pauses the execution & awaits a resolved <span style="color:#c7bc75">promise</span>
+                </li>
+                </ul>
+                <code class="fragment">
+                  async function myCocktail() {
+                    <br> 
+                    &nbsp; let myPromise = new Promise(function(resolve, reject) {
+                      <br> 
+                      &nbsp; &nbsp; resolve("I’d like a cocktail please!!");
+                      <br>
+                    &nbsp; });
+                    <br>
+                    &nbsp; console.log(await myPromise);
+                    <br>
+                  }
+                  <br>
+                  myCocktail();
+                  <br><br>
+                  //Prints: I’d like a cocktail please!!
+                  <br>
+                </code>
+            </section>
+            <section>
+              <h1>#</h1>
+              <br><br>
+              <ul style="list-style:disc; margin-left: 80px;">
+                <li class="fragment">
+                  JavaScript pre-defines two arguments for promises:
+                  <br>
+                  <span style="color:#c7bc75">resolve</span> &amp; <span style="color:#c7bc75">reject</span>.
+                </li>    
+                <br>            
+                <li class="fragment">We don't create them ourselves</li>
+                <br>
+                <li class="fragment">We invoke them when the executor function is ready</li>
+                <br>
+                <li class="fragment">Often, the <span style="color:#c7bc75">reject</span>  function won't even be necessary</li>
+                </ul>
+            </section>
+            <section>
+              <img src="../images/es6/dont_reject_me.gif" height="90%"> 
+            <br> 
+            </section>
+            <section>
+              <h1>#</h1>
+              <br><br>
+              <ul style="list-style:disc; margin-left: 80px;">
+              <li class="fragment">Example without reject:
+              </li>
+              </ul>
+              <code class="fragment">
+                async function myCocktail() {
+                  <br>
+                  &nbsp; let myPromise = new Promise(function(resolve) {
+                    <br>
+                     &nbsp; &nbsp; resolve("I’d like a cocktail please!!");
+                    <br>
+                  &nbsp; });
+                  <br>
+                  &nbsp; console.log(await myPromise);
+                  <br>
+                }
+                <br> 
+                myCocktail();
+                  <br>
+                  //Prints: I’d like a cocktail please!!
+                  <br>
+              </code>
+              </section>
+              <section>
+                <h1>#</h1>
+                <br><br>
+                <ul style="list-style:disc; margin-left: 80px;">
+                  <li class="fragment">Example of async and await with a Timeout:
+                  </li>
+                  <br>
+                  </ul>
+                  <code class="fragment">
+                    async function myCocktail() {
+                      <br>
+                      &nbsp; let myPromise = new Promise(function(resolve) {
+                        <br>
+                         &nbsp; &nbsp; setTimeout(function() {resolve(“I’d like a cocktail please!!”);}, 3000);
+                        <br>
+                      &nbsp; });
+                      <br>
+                      &nbsp; console.log(await myPromise);
+                      };
+                      <br>
+                      myCocktail();
+                    <br> 
+                    //Prints: “I’d like a cocktail please!!” after a 3000 millisecond (or 3 second) delay
+                  </code>
+              </section>
+              <section>
+              <img src="../images/es6/accomplished.gif" height="90%"> 
+            <br> 
+              </section>
         <!-- Work slide: -->
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
@@ -1404,6 +1279,12 @@
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
         <!-- Final Section  -->
+        <section>
+          <h1>Cheers to you!!!</h1>
+          <br><br>
+        <img class="fragment" src="../images/es6/tay_celebrate.gif" height="75%"> 
+      <br> 
+        </section>
         <section>
           <h1>What's Next</h1>
           <br>
