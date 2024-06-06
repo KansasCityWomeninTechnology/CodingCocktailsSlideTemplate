@@ -538,7 +538,7 @@
             const arr = [1, 2, 3, 4, 5, 6];<br><br>
             const first = arr[0]; // Extracting the first element<br>
             // first = [1]<br><br>
-            cosnt rest = arr.slice(1);<br>
+            const rest = arr.slice(1);<br>
             // Collecting the rest of the elements<br>
             // rest = [2, 3, 4, 5, 6]
           </code>
@@ -604,7 +604,7 @@
               let text2 = 'Hello';
             </code>
             <br>
-            <li class="fragment">Use + to combine strings</li>
+            <li class="fragment">Use <span style="color: #c7ac7b;">+</span> to combine strings</li>
             <br>
             <code class="fragment">
               let numCookies = "10";<br>
@@ -618,17 +618,17 @@
           <h1>ES6: String Literals</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Strings literals allow us to access variables inside of a string without using the +</li>
+            <li class="fragment">Strings literals allow us to access variables inside of a string without using the <span style="color: #c7ac7b;">+</span></li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">`</span> (backtick) represents the string</li>
+            <br>
+            <li class="fragment"><span style="color: #c7ac7b;">${}</span> represents the js variable</li>
             <br>
             <code class="fragment">
               let numCookies = "10";<br>
               console.log(`I plan to eat ${numCookies} cookies!`);<br>
               // I plan to eat 10 cookies!
             </code>
-            <br>
-            <li class="fragment"><span style="color: #c7ac7b;">`</span> (backtick) represents the string</li>
-            <br>
-            <li class="fragment"><span style="color: #c7ac7b;">${}</span> represents the js variable</li>
           </ul>
         </section>
         <section>
@@ -648,7 +648,7 @@
             <br>
             <li class="fragment">Key (aka property) will always be stringified behind the scenes</li>
             <br>
-            <li class="fragment">Value can be anything (string, bumber, another object, function, etc.)</li>
+            <li class="fragment">Value can be anything (string, number, another object, function, etc.)</li>
           </ul>
         </section>
         <section>
