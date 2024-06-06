@@ -886,7 +886,6 @@
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
         </section>
-<!--TODO Promises Section | Alicia working on-->
         <section>
           <h1>Promises</h1>
           <br><br>
@@ -896,30 +895,42 @@
           <h1>Promises</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Represent asynchronous operations (if JavaScript has to wait for an operation to complete, it will execute the rest of the code while waiting)</li>
+            <li class="fragment">ES6 introduced the Promise object</li>
+          </ul>
+          <br><br>
+          <img class="fragment" src="../images/es6/one_of_us.gif" height="60%" />
+        </section>
+        <section>
+          <h1>Promises</h1>
+          <br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Represent asynchronous operations</li>
             <br>
+            <ul style="list-style:disc; margin-left: 80px;">
+              <li class="fragment">If JavaScript has to wait for an operation to complete, it will execute the rest of the code while this Promise operation is still executing</li>
+            </ul>
+            <br><br>
             <li class="fragment">A <span style="color: #c7ac7b;">promise</span> can be in one of three states: pending, fulfilled, or rejected</li>
             <br>
             <li class="fragment">A <span style="color: #c7ac7b;">promise</span> method MUST be used to handle promises; properties state and result cannot be accessed directly</li>
           </ul>
         </section>
-            
         <section>
           <h1>In <span style="color: #c7ac7b;">myPromise.state</span>:</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment"><span style="color: #c7ac7b;">Pending</span>: The operation is ongoing; 
-            <br> 
+            <li class="fragment"><span style="color: #c7ac7b;">Pending</span>: The operation is ongoing;
+            <br>
             <span style="color: #c7ac7b;">myPromise.result</span>:  undefined
             </li>
             <br>
-            <li class="fragment"><span style="color: #c7ac7b;">Fulfilled</span>: The operation completed successfully; 
-              <br>  
+            <li class="fragment"><span style="color: #c7ac7b;">Fulfilled</span>: The operation completed successfully;
+              <br>
               <span style="color: #c7ac7b;">myPromise.result</span>:  a value
               </li>
             <br>
-            <li class="fragment"><span style="color: #c7ac7b;">Rejected</span>: The operation failed; 
-              <br>  
+            <li class="fragment"><span style="color: #c7ac7b;">Rejected</span>: The operation failed;
+              <br>
               <span style="color: #c7ac7b;">myPromise.result</span>:  an error object
               </li>
           </ul>
@@ -933,22 +944,22 @@
           <code class="fragment">
             myPromise.then(
             <br>
-            &nbsp; function(resolve) { 
+            &nbsp; function(resolve) {
               <br>
               &nbsp; &nbsp; // if successful, this code
               <br>
               &nbsp; },
             <br>
-            &nbsp; function(reject) { 
-              &nbsp; &nbsp; 
+            &nbsp; function(reject) {
+              &nbsp; &nbsp;
               <br>
               &nbsp; &nbsp; // if errors, this code
               <br>
               &nbsp; }
             <br>
-             };           
+             };
             <br>
-          </code>        
+          </code>
         </section>
         <section>
           <img src="../images/es6/promises_lame.gif" height="90%"/>
@@ -965,12 +976,11 @@
             </ul>
         </section>
         <section>
-          <h1><span style="color: #c7ac7b;">Promise.then( )</span> example:</h1>
-          <br><br>
+          <h1><span style="color: #c7ac7b; text-transform: none;">Promise.then( )</span> example:</h1>
           <code class="fragment">
             <span style="color: #c7ac7b;">const </span> promiseMakeCocktail = new Promise((resolve, reject) => {
-              <br>
-              <span style="color: #c7ac7b;"> &nbsp; let </span> cocktailCompleted = true;
+            <br>
+            <span style="color: #c7ac7b;"> &nbsp; let </span> cocktailCompleted = true;
             <br><br>
             &nbsp; //The producing code (this may take some time)
             <br>
@@ -983,114 +993,112 @@
             &nbsp; &nbsp; reject(“Not making cocktails anymore!”);
             <br>
             &nbsp; }
+            <br><br>
+            });<br><br>
+            promiseMakeCocktail.then(<br>
+            &nbsp; &nbsp; res => {console.log(res);},<br>
+            &nbsp; &nbsp; rej => {console.log(rej);}
             <br>
-            });
-        <br><br>
-        &nbsp; promiseMakeCocktail.then(
-          <br>
-          &nbsp; &nbsp; res => {console.log(res);}, 
-          <br>
-          &nbsp; &nbsp; rej => {console.log(rej);}
-          <br>
-          &nbsp; );
-          <br>
+            );
           </code>
         </section>
         <section>
-          <h1><span style="color: #c7ac7b;">Promise.then( )</span> output:</h1>
-          <br><br>
-          <code class="fragment">            
-            // Prints: “Cocktails are ready!”  
-            <br>
-            because cocktailCompleted = true
-            <br>
-          </code> 
-            <img class="fragment" src="../images/es6/its_true.gif" height="60%"/>
-          <br>          
+          <h1><span style="color: #c7ac7b; text-transform: none;">Promise.then( )</span> Success:</h1>
+          <br>
+          <p class="fragment">
+            <span style="color: #c7ac7b;">cocktailCompleted</span> is true
+          </p>
+          <code class="fragment">
+            // Prints: “Cocktails are ready!”
+          </code>
+          <img class="fragment" src="../images/es6/its_true.gif" height="60%"/>
         </section>
         <section>
-          <h1><span style="color: #c7ac7b;">Promise.then( )</span> output:</h1>
-          <br><br>
-          <code class="fragment">            
-            // If cocktailCompleted = false,
-            <br>
-            then “Not making cocktails anymore!” would print
-          </code> 
-            <img class="fragment" src="../images/es6/false.gif" height="50%"/>
-          <br> 
+          <h1>
+            <span style="color: #c7ac7b; text-transform: none;">Promise.then( )</span>
+             Failure:
+          </h1>
+          <br>
+          <p class="fragment">
+            <span style="color: #c7ac7b;">cocktailCompleted</span> is false
+          </p>
+          <code class="fragment">
+            // Prints “Not making cocktails anymore!”
+          </code>
+          <img class="fragment" src="../images/es6/false.gif" height="50%"/>
         </section>
         <section>
           <h1>Async Example:</h1>
           <br><br>
-          <code class="fragment">            
+          <code class="fragment">
             setTimeout(drink, 3000);
             <br><br>
             function drink() {
-            <br>
-            &nbsp; console.log("I’d like a cocktail please!!");
-            <br>
-          };  
+              <br>
+              &nbsp; console.log("I’d like a cocktail please!!");
+              <br>
+            };
           </code>
+        </section>
+        <section>
+          <h1>Output:</h1>
           <br>
-          </section>
-          <section>
-            <h1>Async Output:</h1>
-            <br><br>
+          <p class="fragment">
+            After a 3000 millisecond (or 3 second) delay...
+          </p>
           <code class="fragment">
-            //Prints: “I’d like a cocktail please!!” 
-            <br>
-            after a 3000 millisecond (or 3 second) delay
-          </code> 
+            // Prints: “I’d like a cocktail please!!”
+          </code>
           <img class="fragment" src="../images/es6//happened_so_fast.gif" height="60%">
-          <br>
+        </section>
+        <section>
+          <h1>Async with Callback example:</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">String: “I’d like a cocktail please!!” = value</li>
+            <br>
+            <code class="fragment">
+              setTimeout(function() {<br>
+              &nbsp;&nbsp;drink(“I’d like a cocktail please!!”);<br>
+              }, 3000);
+              <br><br>
+              function drink(value) {<br>
+              &nbsp;&nbsp;console.log(value);<br>
+              };
+              <br>
+            </code>
           </section>
           <section>
-            <h1>Async with Callback example:</h1>
+            <h1>Output with Callback...</h1>
+            <br><br>
+            <p class="fragment">
+              After a 3000 millisecond (or 3 second) delay...
+            </p>
+            <code class="fragment">
+              // Prints: “I’d like a cocktail please!!”
+            </code>
+            <img class="fragment" src="../images/es6/call_me.gif" height="50%">
+          </section>
+          <section>
+            <h1>Promises with Async/Await</h1>
             <br><br>
             <ul style="list-style:disc; margin-left: 80px;">
-              <li class="fragment">String: “I’d like a cocktail please!!” = value</li>
+              <li class="fragment">keywords <span style="color: #c7ac7b;">async</span> and <span style="color: #c7ac7b;">await</span> make promises easier to write
+              </li>
+              <br>
+              <li class="fragment">Using <span style="color: #c7ac7b;">async</span> before a function makes the function return a promise:
+              </li>
               <br>
               <code class="fragment">
-                setTimeout(function() {drink(“I’d like a cocktail please!!”);}, 3000);
-                <br><br>
-                function drink(value) {
-                <br>
-                &nbsp; console.log(value);
-                <br>
+                async function orderDrink() {
+                  <br>
+                  &nbsp; return “I’d like a cocktail please!!”;
+                  <br>
                 };
-                <br>
               </code>
-              <br>
             </section>
             <section>
-              <h1>Async with Callback...</h1>
-            <br><br>
-            <code class="fragment">
-              //Prints: “I’d like a cocktail please!!” after a 3000 millisecond (or 3 second) delay
-            </code>
-            <img class="fragment" src="../images/es6/call_me.gif" height="50%"> 
-            <br> 
-            </section>
-            <section>
-              <h1>Promises with Async/Await</h1>
-              <br><br>
-              <ul style="list-style:disc; margin-left: 80px;">
-                <li class="fragment">keywords <span style="color: #c7ac7b;">async</span> and <span style="color: #c7ac7b;">await</span> make promises easier to write
-                </li>
-                <br>
-                <li class="fragment">Using <span style="color: #c7ac7b;">async</span> before a function makes the function return a promise:
-                </li>
-                <br>
-                <code class="fragment">
-                  async function orderDrink() {
-                    <br>
-                    &nbsp; return “I’d like a cocktail please!!”;
-                    <br>
-                  };
-                </code>
-              </section>
-              <section>
-                <h1>Async/Await continued...</h1>
+              <h1>Async/Await continued...</h1>
               <br><br>
               <ul style="list-style:disc; margin-left: 80px;">
                 <li class="fragment">
@@ -1108,27 +1116,24 @@
               </section>
               <section>
                 <h1>Async/Await continued...</h1>
-              <br><br>
-              <ul style="list-style:disc; margin-left: 80px;">
-                <li class="fragment">
-                  With a promise:
-                </li>
+                <br><br>
+                <ul style="list-style:disc; margin-left: 80px;">
+                  <li class="fragment">
+                    With a promise:
+                  </li>
+                </ul>
                 <br>
                 <code class="fragment">
                   orderDrink().then(
-                    <br>
-                    &nbsp; function(resolve) { 
-                      <br>
-                      &nbsp; &nbsp; // if successful this code  
-                    <br>
-                   },
-                    <br>
-                    &nbsp; function (reject) { 
-                      <br>
-                      &nbsp; &nbsp; // if error this code 
-                    <br>
-                   }
-                    <br>
+                  <br>
+                  &nbsp;&nbsp;function(resolve) {<br>
+                  &nbsp; &nbsp;&nbsp;&nbsp;// if successful this code
+                  <br>
+                  &nbsp;&nbsp;},<br><br>
+                  &nbsp;&nbsp;function (reject) {<br>
+                  &nbsp; &nbsp;&nbsp;&nbsp;// if error this code<br>
+                  &nbsp;&nbsp;}
+                  <br>
                   };
                   <br>
                 </code>
@@ -1136,133 +1141,125 @@
               <section>
                 <h1>All together now...</h1>
                 <h2 class="fragment">without the rejection</h2>
-              <br><br>
-              <code class="fragment">
-                async function myCocktail() {
-                <br>
-                &nbsp; let myPromise = new Promise(function(resolve, reject) {
-                  <br>
-                  &nbsp; &nbsp; resolve("I’d like a cocktail please!!");
-                <br>
-              &nbsp; });
-              <br>
-              &nbsp; console.log(await myPromise);
-              <br>
-                }
-                <br>
-              myCocktail();
-                <br>
-                //Prints: I’d like a cocktail please!!
-              <br>
-              </code>
-            </section>
-            <section>
-              <img src="../images/es6/rejection.gif" height="90%">              
-            </section>
-            <section>
-              <h1><span style="color:#c7bc75">Await</span></h1>
-              <br><br>
-              <ul style="list-style:disc; margin-left: 80px;">
-                <li class="fragment">
-                  Pauses the execution & awaits a resolved <span style="color:#c7bc75">promise</span>
-                </li>
-                </ul>
+                <br><br>
                 <code class="fragment">
                   async function myCocktail() {
-                    <br> 
-                    &nbsp; let myPromise = new Promise(function(resolve, reject) {
-                      <br> 
-                      &nbsp; &nbsp; resolve("I’d like a cocktail please!!");
-                      <br>
-                    &nbsp; });
-                    <br>
-                    &nbsp; console.log(await myPromise);
-                    <br>
-                  }
                   <br>
+                  &nbsp;&nbsp;let myPromise = new Promise(function(resolve, reject) {
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;resolve("I’d like a cocktail please!!");
+                  <br>
+                  &nbsp;&nbsp;});
+                  <br><br>
+                  &nbsp;&nbsp;console.log(await myPromise);
+                  <br>
+                  }
+                  <br><br>
                   myCocktail();
                   <br><br>
                   //Prints: I’d like a cocktail please!!
                   <br>
                 </code>
-            </section>
-            <section>
-              <h1>#</h1>
-              <br><br>
-              <ul style="list-style:disc; margin-left: 80px;">
-                <li class="fragment">
-                  JavaScript pre-defines two arguments for promises:
-                  <br>
-                  <span style="color:#c7bc75">resolve</span> &amp; <span style="color:#c7bc75">reject</span>.
-                </li>    
-                <br>            
-                <li class="fragment">We don't create them ourselves</li>
-                <br>
-                <li class="fragment">We invoke them when the executor function is ready</li>
-                <br>
-                <li class="fragment">Often, the <span style="color:#c7bc75">reject</span>  function won't even be necessary</li>
+              </section>
+              <section>
+                <img src="../images/es6/rejection.gif" height="90%">
+              </section>
+              <section>
+                <h1><span style="color:#c7bc75">Await</span></h1>
+                <br><br>
+                <ul style="list-style:disc; margin-left: 80px;">
+                 <li class="fragment">
+                   Pauses the execution & awaits a resolved <span style="color:#c7bc75">promise</span>
+                 </li>
                 </ul>
-            </section>
-            <section>
-              <img src="../images/es6/dont_reject_me.gif" height="90%"> 
-            <br> 
-            </section>
-            <section>
-              <h1>#</h1>
-              <br><br>
-              <ul style="list-style:disc; margin-left: 80px;">
-              <li class="fragment">Example without reject:
-              </li>
-              </ul>
-              <code class="fragment">
-                async function myCocktail() {
+                <code class="fragment">
+                  async function myCocktail() {
                   <br>
-                  &nbsp; let myPromise = new Promise(function(resolve) {
+                  &nbsp;&nbsp;let myPromise = new Promise(function(resolve, reject) {
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;resolve("I’d like a cocktail please!!");
+                  <br>
+                  &nbsp;&nbsp;});
+                  <br><br>
+                  &nbsp;&nbsp;console.log(await myPromise);
+                  <br>
+                  }
+                  <br><br>
+                  myCocktail();
+                  <br><br>
+                  //Prints: I’d like a cocktail please!!
+                  <br>
+                </code>
+              </section>
+              <section>
+                <h1>Promise Arguments</h1>
+                <br><br>
+                <ul style="list-style:disc; margin-left: 80px;">
+                  <li class="fragment">
+                    JavaScript pre-defines two arguments for promises:
                     <br>
-                     &nbsp; &nbsp; resolve("I’d like a cocktail please!!");
-                    <br>
-                  &nbsp; });
+                    <span style="color:#c7bc75">resolve</span> &amp; <span style="color:#c7bc75">reject</span>.
+                  </li>
                   <br>
-                  &nbsp; console.log(await myPromise);
+                  <li class="fragment">We don't create them ourselves</li>
                   <br>
-                }
-                <br> 
-                myCocktail();
+                  <li class="fragment">We invoke them when the executor function is ready</li>
+                  <br>
+                  <li class="fragment">Often, the <span style="color:#c7bc75">reject</span>  function won't even be necessary</li>
+                </ul>
+              </section>
+              <section>
+                <img src="../images/es6/dont_reject_me.gif" height="90%">
+              </section>
+              <section>
+                <h1>Example without reject</h1>
+                <br><br>
+                <code class="fragment">
+                  async function myCocktail() {
+                  <br>
+                  &nbsp;&nbsp;let myPromise = new Promise(function(resolve) {
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;resolve("I’d like a cocktail please!!");
+                  <br>
+                  &nbsp;&nbsp;});
+                  <br><br>
+                  &nbsp;&nbsp;console.log(await myPromise);
+                  <br>
+                  }
+                  <br><br>
+                  myCocktail();
                   <br>
                   //Prints: I’d like a cocktail please!!
                   <br>
-              </code>
+                </code>
               </section>
               <section>
-                <h1>#</h1>
-                <br><br>
-                <ul style="list-style:disc; margin-left: 80px;">
-                  <li class="fragment">Example of async and await with a Timeout:
-                  </li>
+                <h1>Async & Await Example</h1>
+                <br>
+                <code class="fragment">
+                  async function myCocktail() {
                   <br>
-                  </ul>
-                  <code class="fragment">
-                    async function myCocktail() {
-                      <br>
-                      &nbsp; let myPromise = new Promise(function(resolve) {
-                        <br>
-                         &nbsp; &nbsp; setTimeout(function() {resolve(“I’d like a cocktail please!!”);}, 3000);
-                        <br>
-                      &nbsp; });
-                      <br>
-                      &nbsp; console.log(await myPromise);
-                      };
-                      <br>
-                      myCocktail();
-                    <br> 
-                    //Prints: “I’d like a cocktail please!!” after a 3000 millisecond (or 3 second) delay
-                  </code>
+                  &nbsp;&nbsp;let myPromise = new Promise(function(resolve) {
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;setTimeout(function() {<br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve(“I’d like a cocktail please!!”);<br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;}, 3000);
+                  <br>
+                  &nbsp;&nbsp;});
+                  <br><br>
+                  &nbsp;&nbsp;console.log(await myPromise);<br>
+                  };
+                  <br><br>
+                  myCocktail();
+                  <br>
+                  //Prints: “I’d like a cocktail please!!” after a 3000 millisecond (or 3 second) delay
+                </code>
               </section>
               <section>
-              <img src="../images/es6/accomplished.gif" height="90%"> 
-            <br> 
+              <img src="../images/es6/accomplished.gif" height="90%">
+            <br>
               </section>
-        <!-- Work slide: -->
+        <!-- Work slide:
         <section>
           <h1 style="font-size: 8vh;">Work Time</h1>
           <p>Presentation:
@@ -1277,13 +1274,13 @@
           </p>
           <br><br>
           <img src="../images/CSS-session/catType.gif" alt="cat typing" height="50%" />
-        </section>
+        </section> -->
         <!-- Final Section  -->
         <section>
           <h1>Cheers to you!!!</h1>
-          <br><br>
-        <img class="fragment" src="../images/es6/tay_celebrate.gif" height="75%"> 
-      <br> 
+          <br>
+        <img class="fragment" src="../images/es6/tay_celebrate.gif" height="75%">
+      <br>
         </section>
         <section>
           <h1>What's Next</h1>
