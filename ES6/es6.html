@@ -244,7 +244,7 @@
           </ul>
         </section>
         <section>
-          <img class="fragment" src="../images/es6/shiny.gif" height="90%"/>
+          <img src="../images/es6/shiny.gif" height="90%"/>
         </section>
         <section>
           <h1>New Features in ES6</h1>
@@ -646,7 +646,7 @@
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">Objects are a key/value data store</li>
             <br>
-            <li class="fragment">Key (aka property) will always be stringified behind the scenes)</li>
+            <li class="fragment">Key (aka property) will always be stringified behind the scenes</li>
             <br>
             <li class="fragment">Value can be anything (string, bumber, another object, function, etc.)</li>
           </ul>
@@ -727,7 +727,7 @@
           <br><br>
         </section>
         <section>
-          <h1>ES6 intoduces some array helper methods:</h1>
+          <h1>ES6 introduces some array helper methods:</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment"><span style="color: #c7ac7b;">indexOf</span></li>
@@ -750,9 +750,9 @@
             <li class="fragment">If item is not found in an array, <span style="color: #c7ac7b;">-1</span> is returned</li>
           </ul>
           <code class="fragment">
-            const garishes = ["orange peel", "lime wedge", "tahini"];<br><br>
+            const garnishes = ["orange peel", "lime wedge", "tahini"];<br><br>
             garnishes.indexOf("tahini");<br>
-            // 3
+            // 2
             <br><br>
             garnishes.indexOf("mint");<br>
             // -1 because not in array
@@ -767,7 +767,7 @@
             <li class="fragment"><span style="color: #c7ac7b;">array.forEach((name) => {function(name)}</span></li>
           </ul>
           <code class="fragment">
-            const garishes = ["orange peel", "lime wedge", "tahini"];<br><br>
+            const garnishes = ["orange peel", "lime wedge", "tahini"];<br><br>
             garnishes.forEach((garnish) => console.log(`Garnish drink with ${garnish}));<br><br>
             // Garnish drink with orange peel.<br>
             // Garnish drink with lime wedge.<br>
@@ -783,7 +783,7 @@
             <li class="fragment"><span style="color: #c7ac7b;">array.forEach((name) => {function(name)}</span></li>
           </ul>
           <code class="fragment">
-            const garishes = ["orange peel", "lime wedge", "tahini"];<br><br>
+            const garnishes = ["orange peel", "lime wedge", "tahini"];<br><br>
             const drinkToppings = garnishes.map((garnish) => `${garnish} topping));<br><br>
             console.log(drinkToppings);<br>
             // ["orange peel topping", "lime wedge topping", "tahini topping"]
@@ -803,7 +803,7 @@
         <section>
           <h1>Filter example</h1>
           <code class="fragment">
-            const garishes = [<br>
+            const garnishes = [<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "orange peel", ready: true},<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "lime wedge", ready: false},<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "tahini", ready: true}<br>
@@ -832,12 +832,12 @@
         <section>
           <h1>Find example</h1>
           <code class="fragment">
-            const garishes = [<br>
+            const garnishes = [<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "orange peel", ready: true},<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "lime wedge", ready: false},<br>
             &nbsp;&nbsp;&nbsp;&nbsp;{name: "tahini", ready: true}<br>
             ];<br><br>
-            const completedGarnishes = garnishes.filter((garnish) => garnish.ready);<br><br>
+            const completedGarnishes = garnishes.find((garnish) => garnish.ready);<br><br>
             console.log(completedGarnishes);<br>
             // {name: "orange peel", ready: true}
           </code>
@@ -1194,12 +1194,12 @@
           <h1>Callback Solution</h1>
           <br>
           <code class="fragment">
-            // In this example, displayLog will act as a callback function
+            // In this example, displayLog will act as a callback function<br>
             const displayLog = (value) => {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
             }<br>
             <br>
-            // That is passed to calculator as an argument
+            // That is passed to calculator as an argument<br>
             const calculator = (num1, num2, callbackFunction) => {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;let sum = num1 + num2;<br>
               &nbsp;&nbsp;&nbsp;&nbsp;callbackFunction(sum);<br>
