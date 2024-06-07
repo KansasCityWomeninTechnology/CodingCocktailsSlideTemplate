@@ -1336,13 +1336,15 @@
           <h1>Before we get into Promises, though...</h1>
           <br><br>
           <p class="fragment">
-            We have to explain synchronous versus asynchronous functions
+            We have to explain synchronous versus asynchronous functions.
           </p>
           <br>
           <p class="fragment">
-            Note we're talking about asynchronous functions, which is different than the
-            anonymous functions in the previous section.
+            Note we're talking about asynchronous functions, which is different than the anonymous functions in the previous section.
           </p>
+        </section>
+        <section>
+          <img src="../images/es6/comprehend.gif" height="95%" />
         </section>
         <section>
           <h1>Synchronous vs Asynchronous</h1>
@@ -1362,6 +1364,7 @@
             // a<br>
             // b
           </code>
+          <img class="fragment" src="../images/es6/go_on.gif" height="40%" />
         </section>
         <section>
           <h1>Async Functions</h1>
@@ -1397,6 +1400,9 @@
           </ul>
         </section>
         <section>
+          <img src="../images/es6/happened_so_fast.gif" height="95%" />
+        </section>
+        <section>
           <h1>Async Function example</h1>
           <code>
             // our async function<br>
@@ -1414,17 +1420,21 @@
           <p class="fragment">Notice that async log is called first, but is actually last to execute due to the delay</p>
         </section>
         <section>
+          <img src="../images/es6/makes_sense.gif" height="95%" />
+        </section>
+        <section>
           <h1>Promises</h1>
           <br>
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">Represent the eventual completion (or failure) of an asynchronous function and it's resulting value</li>
           </ul>
-        </section>
-        <section>
-          <img src="../images/es6/promises_lame.gif" height="90%"/>
+          <br><br>
+          <img class="fragment" src="../images/es6/promises_lame.gif" height="50%"/>
         </section>
         <section>
           <h1>Let's make this more interesting...</h1>
+          <br><br>
+          <img src="../images/es6/curious.gif" height="60%"/>
         </section>
         <section>
           <h1>Imagine this scenario:</h1>
@@ -1443,9 +1453,9 @@
           <h1>Notice...</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">You can't drink the martini until Laura has served you the martini.</li>
+            <li class="fragment">You can't drink the martini until Laura has served you the martini</li>
             <br>
-            <li class="fragment">This is how promises work.</li>
+            <li class="fragment">This is how promises work</li>
           </ul>
         </section>
         <section>
@@ -1454,9 +1464,9 @@
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">If you ask an API to return some data...</li>
             <br>
-            <li class="fragment">The task gives a "promise" to eventually return either completed or failed.</li>
+            <li class="fragment">The task gives a "promise" to eventually return either completed or failed</li>
             <br>
-            <li class="fragment">In other works, a task with a promise will "promise" to return in the future.</li>
+            <li class="fragment">In other words, a task with a promise will "promise" to return in the future</li>
           </ul>
         </section>
         <section>
@@ -1497,6 +1507,7 @@
             &nbsp;&nbsp;// do this after the promise is returned successfully<br>
             )
           </code>
+          <img class="fragment" src="../images/es6/success.gif" height="40%"/>
         </section>
         <section>
           <h1><span style="color: #c7ac7b; text-transform: none;">.catch()</span></h1>
@@ -1510,6 +1521,7 @@
             &nbsp;&nbsp;// do this after the promise fails<br>
             )
           </code>
+          <img class="fragment" src="../images/es6/catch.gif" height="40%"/>
         </section>
         <section>
           <h1>Let's say...</h1>
@@ -1566,14 +1578,14 @@
             &nbsp;&nbsp;&nbsp;&nbsp;console.log(`ERROR! ${error}`);<br>
             &nbsp;&nbsp;})<br>
             <br>
-            console.log(`I love drinking!!`);
+            console.log(`Cheers to good vibes and great drinks!!`);
           </code>
         </section>
         <section>
           <h1>What about this last log?</h1>
           <br><br>
           <p class="fragment">Regardless of when the promise is returned,
-            <span style="color: #c7ac7b;">I love drinking!</span>
+            <span style="color: #c7ac7b;">Cheers to good vibes and great drinks!!</span>
              will print out as the promise is being ran.
           </p>
           <br>
@@ -1605,18 +1617,18 @@
             const axiosRequest = require('axios');<br>
             <br>
             // add request into an asynchronous function<br>
-            async getBestCocktails = () => {<br>
-            &nbsp;&nbsp;let response = <span style="color: #c7ac7b;">await</span> axiosRequest.get('https://cocktailsRule.com/best-cocktails');<br>
             <br>
-            &nbsp;&nbsp;// note that because we are <span style="color: #c7ac7b;">awaiting</span> the response, the following code won't fail<br>
-            &nbsp;&nbsp;console.log(`The best cocktails are: ${response.data}`);
+            <span style="color: #c7ac7b;">async</span> getBestCocktails = () => {<br><br>
+            &nbsp;&nbsp;let response = <span style="color: #c7ac7b;">await</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;axiosRequest.get('https://cocktails.com/best-cocktails');<br>
+            <br><br>
+            &nbsp;&nbsp;// note that because we are <span style="color: #c7ac7b;">awaiting</span> the response,<br>
+            &nbsp;&nbsp;// the following code won't fail<br>
+            &nbsp;&nbsp;console.log(`The best cocktails are: ${response.data}`);<br>
             }
             <br><br>
             // call our function<br>
             getBestCocktails();<br>
-            <br>
-            // and this won't run until the previous function is complete<br>
-            console.log(`I love drinking!!`);
           </code>
         </section>
         <section>
@@ -1634,11 +1646,12 @@
           </ul>
         </section>
         <section>
-          <code style="width: 110%;">
-            async getBestCocktails = () => {<br><br>
+          <code>
+            <span style="color: #c7ac7b;">async</span> getBestCocktails = () => {<br><br>
             &nbsp;&nbsp;try {<br><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;let response = <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c7ac7b;">await</span> axiosRequest.get('https://cocktailsRule.com/best-cocktails');<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;let response = <span style="color: #c7ac7b;">await</span> axiosRequest<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.get('https://cocktails.com/best-cocktails');<br>
+            <br>
             &nbsp;&nbsp;&nbsp;&nbsp;console.log(`The best cocktails are: ${response.data}`);<br><br>
             &nbsp;&nbsp;} catch (error) {<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;console.log(`ERROR! ${error}`);<br><br>
@@ -1648,12 +1661,15 @@
             getBestCocktails();
           </code>
         </section>
+        <section>
+          <h1>Congrats, you made it to the end!</h1>
+          <img src="../images/es6/accomplished.gif" height="70%">
+        </section>
         <!-- Final Section  -->
         <section>
           <h1>Cheers to you!!!</h1>
           <br>
-        <img class="fragment" src="../images/es6/tay_celebrate.gif" height="75%">
-      <br>
+        <img src="../images/es6/tay_celebrate.gif" height="75%">
         </section>
         <section>
           <h1>What's Next</h1>
@@ -1702,7 +1718,7 @@
             <img src="../images/shared/meetup.png" width="190"/>
           </a>
           <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank">
-            <img src="../images/shared/twitter.png" width="150"/>
+            <img src="../images/shared/x-logo.png" width="150"/>
           </a>
           <br><br>
           <div class="fragment">
