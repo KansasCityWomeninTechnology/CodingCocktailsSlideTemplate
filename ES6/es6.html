@@ -1617,18 +1617,18 @@
             const axiosRequest = require('axios');<br>
             <br>
             // add request into an asynchronous function<br>
-            async getBestCocktails = () => {<br>
-            &nbsp;&nbsp;let response = <span style="color: #c7ac7b;">await</span> axiosRequest.get('https://cocktailsRule.com/best-cocktails');<br>
             <br>
-            &nbsp;&nbsp;// note that because we are <span style="color: #c7ac7b;">awaiting</span> the response, the following code won't fail<br>
-            &nbsp;&nbsp;console.log(`The best cocktails are: ${response.data}`);
+            <span style="color: #c7ac7b;">async</span> getBestCocktails = () => {<br><br>
+            &nbsp;&nbsp;let response = <span style="color: #c7ac7b;">await</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;axiosRequest.get('https://cocktails.com/best-cocktails');<br>
+            <br><br>
+            &nbsp;&nbsp;// note that because we are <span style="color: #c7ac7b;">awaiting</span> the response,<br>
+            &nbsp;&nbsp;// the following code won't fail<br>
+            &nbsp;&nbsp;console.log(`The best cocktails are: ${response.data}`);<br>
             }
             <br><br>
             // call our function<br>
             getBestCocktails();<br>
-            <br>
-            // and this won't run until the previous function is complete<br>
-            console.log(`Cheers to good vibes and great drinks!!`);
           </code>
         </section>
         <section>
@@ -1645,13 +1645,13 @@
             <li class="fragment">The <span style="color: #c7ac7b;">catch block</span> will run if the try block has a failure</li>
           </ul>
         </section>
-        <!--TODO Nessa look at this code block to fit slide better-->
         <section>
-          <code style="width: 110%;">
-            async getBestCocktails = () => {<br><br>
+          <code>
+            <span style="color: #c7ac7b;">async</span> getBestCocktails = () => {<br><br>
             &nbsp;&nbsp;try {<br><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;let response = <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c7ac7b;">await</span> axiosRequest.get('https://cocktailsRule.com/best-cocktails');<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;let response = <span style="color: #c7ac7b;">await</span> axiosRequest<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.get('https://cocktails.com/best-cocktails');<br>
+            <br>
             &nbsp;&nbsp;&nbsp;&nbsp;console.log(`The best cocktails are: ${response.data}`);<br><br>
             &nbsp;&nbsp;} catch (error) {<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;console.log(`ERROR! ${error}`);<br><br>
@@ -1661,11 +1661,9 @@
             getBestCocktails();
           </code>
         </section>
-        <!--TODO clever headline needed to finish out-->
         <section>
-          <h1>#</h1>
-          <br>
-        <img src="../images/es6/accomplished.gif" height="75%">
+          <h1>Congrats, you made it to the end!</h1>
+          <img src="../images/es6/accomplished.gif" height="70%">
         </section>
         <!-- Final Section  -->
         <section>
@@ -1720,7 +1718,7 @@
             <img src="../images/shared/meetup.png" width="190"/>
           </a>
           <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank">
-            <img src="../images/shared/twitter.png" width="150"/>
+            <img src="../images/shared/x-logo.png" width="150"/>
           </a>
           <br><br>
           <div class="fragment">
