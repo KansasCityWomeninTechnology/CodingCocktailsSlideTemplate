@@ -409,7 +409,7 @@
             <li class="fragment">Allows us to merge, copy, or pass array elements to functions without explicitly iterating through them</li>
           </ul>
           <code class="fragment">
-            const arr = [1, 2, 3];<br>
+            const nums = [1, 2, 3];<br>
             // [1, 2, 3]
           </code>
         </section>
@@ -417,14 +417,14 @@
           <h1>Spread Operators cont.</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Goal: We want to create a new array that includes the existing array <span style="color: #c7bc7a">arr</span></li>
+            <li class="fragment">Goal: We want to create a new array that includes the existing array <span style="color: #c7bc7a">nums</span></li>
           </ul>
         </section>
         <section>
           <h1>Before spread operators:</h1>
           <br><br>
           <code class="fragment">
-            const newArr = [5, 6, arr[0], arr[1], arr[2]];<br>
+            const newNums = [5, 6, nums[0], nums[1], nums[2]];<br>
             // [5, 6, 1, 2, 3]
           </code>
         </section>
@@ -432,7 +432,7 @@
           <h1>Now with spread operators:</h1>
           <br><br>
           <code class="fragment">
-            const newArr = [5, 6, ...arr];<br>
+            const newNums = [5, 6, ...nums];<br>
             // [5, 6, 1, 2, 3]
           </code>
         </section>
@@ -440,7 +440,7 @@
           <h1>To prove we need the spread operator:</h1>
           <br><br>
           <code class="fragment">
-            const newArr = [5, 6, arr];<br>
+            const newNums = [5, 6, nums];<br>
             // [5, 6, [1, 2, 3]]
           </code>
         </section>
@@ -459,9 +459,9 @@
           <h1>Combine Arrays:</h1>
           <br><br>
           <code class="fragment">
-            const arr1 = [1, 2, 3];<br>
-            const arr2 = [4, 5, 6];<br>
-            const combinedArr = [...arr1, ...arr2];<br>
+            const nums1 = [1, 2, 3];<br>
+            const nums2 = [4, 5, 6];<br>
+            const combinedNums = [...nums1, ...nums2];<br>
             // [1, 2, 3, 4, 5, 6]
           </code>
         </section>
@@ -509,7 +509,7 @@
             }<br><br>
             const nums = [1, 2, 3];<br><br>
             const result = sum(...nums);<br>
-            // 5
+            // 6
           </code>
         </section>
         <section>
@@ -521,26 +521,26 @@
             <li class="fragment">By collecting remaining elements into a designated variable</li>
           </ul>
           <code class="fragment">
-            const arr = [1, 2, 3, 4, 5, 6];
+            const nums = [1, 2, 3, 4, 5, 6];
           </code>
         </section>
         <section>
           <h1>Rest Operators cont.</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">Goal: We want to destructure <span style="color: #c7bc7a">arr</span></li>
+            <li class="fragment">Goal: We want to destructure the first element from the rest of the elements in <span style="color: #c7bc7a">nums</span></li>
           </ul>
         </section>
         <section>
           <h1>Before rest operators:</h1>
           <br><br>
           <code class="fragment">
-            const arr = [1, 2, 3, 4, 5, 6];<br><br>
-            const first = arr[0]; // Extracting the first element<br>
-            // first = [1]<br><br>
-            const rest = arr.slice(1);<br>
+            const nums = [1, 2, 3, 4, 5, 6];<br><br>
+            const first = nums[0]; // Extracting the first element<br>
+            // first = 1<br><br>
+            const restNums = nums.slice(1);<br>
             // Collecting the rest of the elements<br>
-            // rest = [2, 3, 4, 5, 6]
+            // restNums = [2, 3, 4, 5, 6]
           </code>
         </section>
         </section>
@@ -548,8 +548,8 @@
           <h1>After rest operators:</h1>
           <br><br>
           <code class="fragment">
-            const arr = [1, 2, 3, 4, 5, 6];<br><br>
-            const [first, ...rest] = arr;<br><br>
+            const nums = [1, 2, 3, 4, 5, 6];<br><br>
+            const [first, ...rest] = nums;<br><br>
             // first = [1]<br>
             // rest = [2, 3, 4, 5, 6]
           </code>
@@ -847,7 +847,7 @@
         <section>
           <h1>Review</h1>
           <br><br>
-          <img src="../images/es6/map_filter_find_example.jpg" alt="map filter find example" height="50%" />
+          <img src="../images/es6/map_filter_find.png" alt="map filter find example" height="60%" />
         </section>
 
         <!-- Work slide: -->
@@ -903,7 +903,7 @@
             <li class="fragment">Difference is that regular functions have their own context, which arrow functions do not</li>
             <!-- Impacts when using global 'this' -->
             <br>
-            <li class="fragment">Essentially, we're saving the variable as a function</li>
+            <li class="fragment">Essentially, we're saving the function as a variable</li>
           </ul>
         </section>
         <section>
@@ -1261,7 +1261,7 @@
             <br>
             // Another possible callback function<br>
             const displayAlert = (value) => {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;console.log(value);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;alert(value);<br>
             }<br>
             <br>
             const calculator = (num1, num2, callbackFunction) => {<br>
@@ -1296,6 +1296,19 @@
         </section>
         <section>
           <img src="../images/es6/are_you_alive.gif" height="95%" />
+        </section>
+        <section>
+          <h1>Promises vs Callbacks</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Callbacks are useful with basic cases</li>
+            <br>
+            <li class="fragment">They become an issue when making multiple calls</li>
+            <br>
+            <li class="fragment">ES6 introduced promises to avoid these issues</li>
+            <br>
+            <li class="fragment">We'll go through promises in the next section</li>
+          </ul>
         </section>
         <section>
           <h1>Hard section done? Check!!</h1>
