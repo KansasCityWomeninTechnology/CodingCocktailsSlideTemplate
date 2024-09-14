@@ -33,6 +33,8 @@
     <div class="reveal">
       <div class="slides">
         <!-- Show hidden slide found in /shared/welcome-slide as attendees enter and get settled in  -->
+         <!-- Show as attendees enter and get settled in  -->
+
         <section>
           <h3>CSS Basics</h3>
           <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
@@ -43,49 +45,49 @@
           <div class="new-team">
             <!-- Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/Amy.jpg" alt="Amy Norris" />
+              <img src="../images/shared/Amy.jpg" alt="Amy Norris" height="550" width="450"/>
               <p>Amy Norris</p>
               <p>Director</p>
             </div>
             <!-- Co-Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/alex_herron.jpg" alt="Alex Herron" />
+              <img src="../images/shared/alex_herron.jpg" alt="Alex Herron" height="550" width="450"/>
               <p>Alex Herron</p>
               <p>Co-Director</p>
             </div>
             <!-- Curriculum Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/Julie.jpg" alt="Julie Batson" height="350px" />
+              <img src="../images/shared/Julie.jpg" alt="Julie Batson" height="550" width="450" />
               <p>Julie Batson</p>
               <p>Curriculum Director</p>
             </div>
             <!-- Mentor Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/gabi_cropped.jpg" alt="Gabi Dombrowski" />
+              <img src="../images/shared/gabi_cropped.jpg" alt="Gabi Dombrowski" height="550" width="450"/>
               <p>Gabi Dombrowski</p>
               <p>Mentor Director</p>
             </div>
             <!-- Marketing Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/kim.jpg" alt="Kim Watt" />
+              <img src="../images/shared/kim.jpg" alt="Kim Watt" height="550" width="450"/>
               <p>Kim Watt</p>
               <p>Marketing Director</p>
             </div>
             <!-- Presentation Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/nessa.jpg" alt="Vanessa Shultz" />
+              <img src="../images/shared/nessa.jpg" alt="Vanessa Shultz" height="550" width="450"/>
               <p>Vanessa Shultz</p>
               <p>Co-Presentation Director</p>
             </div>
             <!-- Presentation Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/Alicia.png" alt="Alicia Villegas" />
+              <img src="../images/shared/AliciaV.jpg" alt="Alicia Villegas" height="550" width="450" />
               <p>Alicia Villegas</p>
               <p>Co-Presentation Director</p>
             </div>
             <!-- Technical Materials Director -->
             <div class="team-member fragment">
-              <img src="../images/shared/Tracy.jpg" alt="Tracy Hockenhull" height="350px"/>
+              <img src="../images/shared/Tracy.jpg" alt="Tracy Hockenhull" height="550" width="450"/>
               <p>Tracy Hockenhull</p>
               <p>Technical Materials Director</p>
             </div>
@@ -199,6 +201,15 @@
         <section>
           <h1>What Is CSS?</h1>
           <br><br>
+          <p class="fragment"><span style="color:#c7bc75">C</span>ool</p>
+          <p class="fragment"><span style="color:#c7bc75">S</span>tyling</p>
+          <p class="fragment"><span style="color:#c7bc75">S</span>tuff</p>
+          <br><br>
+          <img class="fragment" src="../images/CSS-session/cool.gif" alt="Very cool" height="650" />
+        </section>
+        <section>
+          <h1>What Is CSS?</h1>
+          <br><br>
           <p class="fragment"><span style="color:#c7bc75">C</span>ascading</p>
           <p class="fragment"><span style="color:#c7bc75">S</span>tyle</p>
           <p class="fragment"><span style="color:#c7bc75">S</span>heet</p>
@@ -216,9 +227,9 @@
           <h1>Appearance...</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">CSS is similar to styling tools in MS Word. </li>
+            <li class="fragment">CSS is similar to styling tools in MS Word</li>
             <br>
-            <li class="fragment">Just as you can set the font color, size, and style for headings in Word, CSS lets you define these for elements on a webpage.</li>
+            <li class="fragment">Just as you can set the font color, size, and style for headings in Word, CSS lets you define these for elements on a webpage</li>
             </ul>
             
         </section>
@@ -226,9 +237,9 @@
           <h1>Layout...</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
-            <li class="fragment">CSS also controls how elements are arranged on the page, similar to how Word lets you organize text and images.</li>
+            <li class="fragment">CSS also controls how elements are arranged on the page, similar to how Word lets you organize text and images</li>
             <br>
-            <li class="fragment">With CSS, you can decide the number of columns, how items are aligned (horizontally or vertically), the size of images, and where image captions are placed, just like you would in Word.</li>
+            <li class="fragment">With CSS, you can decide the number of columns, how items are aligned (horizontally or vertically), the size of images, and where image captions are placed, just like you would in Word</li>
           </ul>
         </section>
         <section>
@@ -271,7 +282,7 @@
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">Inline on element</li>
             <br>
-            <li class="fragment">Internal to HTML files by adding style tag in head</li>
+            <li class="fragment">Internal to HTML files by adding in <span style="color: #c7bc75;">&lt;head&gt;</span></li>
             <br>
             <li class="fragment">External CSS file</li>
             <!-- Speech note: focus on last one -->
@@ -286,7 +297,7 @@
             <li class="fragment">Follow front-end architecture best practices:</li>
             <br>
             <ul style="list-style:disc; margin-left: 80px;">
-              <li class="fragment">CSS files in folder for styles</li>
+              <li class="fragment">Store CSS files in a dedicated "styles" folder.</li>
             </ul>
           </ul>
         </section>
@@ -297,7 +308,7 @@
             <br>
             <li class="fragment"><span style="color: #c7bc75;">&lt;link&gt;</span> tag connects an external file (our stylesheet)</li>
             <br>
-            <li class="fragment">Link to CSS file goes in HTML head section</li>
+            <li class="fragment">Link to CSS file goes in HTML <span style="color: #c7bc75;">&lt;head&gt;</span> section</li>
             <br><br>
             <code class="fragment" style="width:75%;margin: 0 auto;">
               &lt;link rel="stylesheet" href="../styles/styles.css" /&gt;
@@ -358,7 +369,10 @@
               <li class="fragment">Element selector</li>
               <br>
               <li class="fragment">Class selector</li>
-            </ul>           
+            </ul>  
+            <br><br>
+            <li class="fragment">Similar concept to how you use your mouse to select text and change its font style</li>
+            <br>         
           </ul>
         </section>
         <section>
@@ -409,6 +423,11 @@
             <li class="fragment">Classname can be used multiple times on one page (and multiple pages)</li>
             <br>
             <li class="fragment">Good for styling specific elements</li>
+            <br>
+            <li class="fragment">Syntax:</li>
+            <ul style="list-style:disc; margin-left: 80px;">
+              <li class="fragment"><ul style="list-style:disc; margin-left: 80px;">.classname</li>
+            </ul>
           </ul>
         </section>
         <section>
@@ -428,16 +447,33 @@
             }
           </code>
         </section>
-        <section>
+        <section>          
           <br><br>
           <h1 style="color: #663399;">Cosmopolitan</h1>
+        </section>
+        <section>
+          <h1>Class Selector</h1>
+          <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li class="fragment">Can also include:</li>
+            <br>
+            <ul style="list-style:disc; margin-left: 80px;">
+              <li class="fragment">Location of the element in the HTML</li>
+              <br>
+              <li class="fragment">Element state (such as visited or hover)</li>
+              <br>
+              <li class="fragment">Combinations of multiple selectors</li>
+            </ul> 
+            <br><br><br>
+            <li class="fragment">Tonight we will learn how to build a set of style rules for your site</li>
+          </ul>
         </section>
         <section>
           <h1>Semantic Class Names</h1>
           <br><br>
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">
-              Choose a name that describes what the HTML element is, not how it looks or behaves
+              Choose a name that describes what the HTML element represents, rather than how it looks or functions
             </li>
           </ul>
         </section>
@@ -447,13 +483,20 @@
           <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment">Provide clearer meaning</li>
             <br>
-            <li class="fragment">Responsive websites may change how element looks</li>
+            <li class="fragment">Makes maintenance easier</li>
+            <br>
+            <li class="fragment">Responsiveness (mobile, tablet, desktop)</li>
             <!-- Speech Note: Responsive is mobile, tablet, desktop -->
             <br>
-            <li class="fragment"><span style="color: #c7bc75;">.white-nav</span> makes sense in desktop but not when blue in mobile</li>
+            <li class="fragment">For example:</li>
+            <br>
+            <ul style="list-style:disc; margin-left: 80px;">             
+              <li class="fragment"><span style="color: #c7bc75;">.white-nav</span> makes sense on desktop, but not on mobile, when the nav is blue</li>
+            </ul>
           </ul>
         </section>
         <section>
+          <br><br>
           <img src="https://media.giphy.com/media/ji6zzUZwNIuLS/giphy.gif" alt="Awkward look" height="75%" />
         </section>
         <section>
@@ -462,23 +505,33 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">NOT displayed in the browser</li>
             <br>
-            <li class="fragment">Can be used to explain code</li>
+            <li class="fragment">Document the purpose/functionality of different sections of your code</li>
             <br>
             <li class="fragment">Can be used to prevent execution of code</li>
+            <br>
+            <li class="fragment">Debugging</li>
           </ul>
         </section>
         <section>
           <h1>Comments</h1>
           <br><br>
-          <code class="fragment">
-            /* This is a comment in CSS */
-          </code>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Using /* at the beginning and end of the comment causes the code to ignore it</li>
+            </ul>
+            <br><br>
+            <code class="fragment">
+              /* This is a comment in CSS */
+              <br><br>
+              .cocktail {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: rebeccapurple;<br>
+              }
+            </code>
         </section>
         <section>
           <h1>Last Note about Comments</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Place your cursor on the line(s) you wish to comment out</li>
+            <li class="fragment">Place your cursor on the line(s) you wish to comment/uncomment out</li>
             <br>
             <li class="fragment">Mac: <span style="color: #c7bc75;">CMD + /</span></li>
             <br>
@@ -518,16 +571,8 @@
             </code>
             <br>
             <li class="fragment">Property: color property</li>
-            <li class="fragment">Value: red value</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Grouping Selectors</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Way to apply the same style to multiple elements</li>
             <br>
-            <li class="fragment">Separate each selector with a comma</li>
+            <li class="fragment">Value: red value</li>
           </ul>
         </section>
         <section>
@@ -543,7 +588,7 @@
           <h1>Multiple Selectors</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Used to apply the same style to multiple elements for broader styling</li>
+            <li class="fragment">Way to apply the same style to multiple elements across your site</li>
             <br>
             <li class="fragment">Separate each selector with a comma</li>
           </ul>
@@ -575,7 +620,7 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Allows you to apply styles more specifically</li>
             <br>
-            <li class="fragment">Notice no space between HTML element and class</li>
+            <li class="fragment">No space between HTML element and class</li>
           </ul>
         </section>
         <section>
@@ -610,36 +655,28 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Special HTML element attribute for styling</li>
             <br>
-            <li class="fragment">Allows for even more specifically in styling</li>
+            <li class="fragment">Allows for even more specific styling</li>
             <br>
-            <li class="fragment">Have different syntax of <span style="color: #c7bc75;">[ ]</span></li>
+            <li class="fragment">Uses <span style="color: #c7bc75;">[ ]</span> and <span style="color: #c7bc75;"> = </span> syntax</li>
             <!-- Speech note: Syntax in English is "word order", so syntax in code is "code order "-->
           </ul>
         </section>
         <section>
           <h1>Attribute Selectors Example</h1>
           <br><br>
-          <p>HTML:</p>
-          <code>
+          <p class="fragment">HTML:</p>
+          <code class="fragment">
             &lt;a href="https://www.kcwit.org"&gt;KCWIT&lt;/a&gt;
           </code>
           <br><br>
-          <p>CSS:</p>
-          <code>
+          <p class="fragment">CSS:</p>
+          <code class="fragment">
             a[href="https://www.kcwit.org"] {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: #20b2aa;<br>
             }
           </code>
         </section>
-        <section>
-          <h1>Location-based Selectors</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Selects elements based on their location in the HTML document</li>
-            <br>
-            <li class="fragment">Examples: <span style="color: #c7bc75;">:first-child</span>, <span style="color: #c7bc75;">:last-child</span>, <span style="color: #c7bc75;">:nth-child()</span></li>
-          </ul>
-        </section>
+        
         <section>
           <h1>Location-based Selectors</h1>
           <br><br>
@@ -649,11 +686,11 @@
               <span style="color: #c7bc75">DOM</span> (<span style="color: #c7bc75;">D</span>ocument <span style="color: #c7bc75;">O</span>bject <span style="color: #c7bc75;">M</span>odel)
             </li>
             <br>
-            <li class="fragment">Image from</li>
-              <a class="fragment" href="https://en.wikipedia.org/wiki/Document_Object_Model">
-                https://en.wikipedia.org/wiki/Document_Object_Model
-              </a>
           </ul>
+        </section>
+          <section>
+            <br><br>
+          <img src="../images/CSS-session/DOM-model.png" alt="DOM tree" height="75%">
         </section>
         <section>
           <h1>What Do We Mean By Location?</h1>
@@ -671,7 +708,7 @@
             <br>
             <li class="fragment">Specify a selector based on where the HTML is</li>
             <br>
-            <li class="fragment">Examples: House address</li>
+            <li class="fragment">Examples: House address/directions</li>
             <!-- Speech note: Sometimes you can tell someone the exact address to your house,
               and sometimes you can tell someone how to get there
               (go north until you see Sephora,
@@ -681,9 +718,19 @@
             -->
           </ul>
         </section>
-        <section>
+        <!-- <section>
+          <h1>Location-based Selectors</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Selects elements based on their location in the HTML document</li>
+            <br>
+            <li class="fragment">Examples: <span style="color: #c7bc75;">:first-child</span>, <span style="color: #c7bc75;">:last-child</span>, <span style="color: #c7bc75;">:nth-child()</span></li>
+          </ul>
+        </section> -->
+        
+        <!-- <section>
           <img src="../images/CSS-session/DOM-model.png" alt="DOM" height="95%"/>
-        </section>
+        </section> -->
         <section>
           <h1>Location-based Selectors: Relationship</h1>
           <br><br>
@@ -727,14 +774,8 @@
           </code>
         </section>
         <section>
-          <br><br>
-          <ul>
-            <li style="font-style: italic; color:lime;"><em>Most important item</em></li>
-            <li>Second most important item</li>
-          </ul>
-        </section>
-        <section>
           <h1>A Closer Look at the CSS</h1>
+          <br><br>
           <code class="fragment">
             li em {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
@@ -742,9 +783,19 @@
           </code>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Space means: "select all <span style="color: #c7bc75;">em</span> elements that has <span style="color:#c7bc75">li</span> as an ancestor"</li>
+            <li class="fragment">Space means: "select all <span style="color: #c7bc75;">em</span> elements that has <span style="color:#c7bc75">li</span> as an ancestor & make the text color lime-green
+              "</li>
           </ul>
         </section>
+        <section>
+          <h1>Results:</h1>
+          <br><br>
+          <ul>
+            <li style="font-style: italic; color:lime;"><em>Most important item</em></li>
+            <li>Second most important item</li>
+          </ul>
+        </section>
+        
         <section>
           <h1>Combinators</h1>
           <br><br>
@@ -764,12 +815,13 @@
           <h1>Descendant combinator</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Has space between two selectors</li>
+            <li class="fragment">Uses space between two selectors</li>
             <br>
-            <li class="fragment">Our example before had a path <span style="color:#c7bc75;">ul li em</span></li>
+            <li class="fragment">Our example before had a path <span style="color:#c7bc75;">ul  li  em</span></li>
             <br>
-            <li class="fragment">With the descendant combinator, we can say:</li>
+            <li class="fragment">Descendant combinator looks like:</li>
           </ul>
+          <br><br>
           <code class="fragment">
             ul em {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
@@ -782,9 +834,9 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Must be an exact child path</li>
             <br>
-            <li class="fragment">Has > between two selectors</li>
+            <li class="fragment">Uses > between two selectors</li>
             <br>
-            <li class="fragment">With the child combinator, we can say:</li>
+            <li class="fragment">Child combinator looks like:</li>
           </ul>
           <code class="fragment">
             li > em {<br>
@@ -802,34 +854,42 @@
           <h1>Adjacent sibling combinator</h1>
           <br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Must be an exact sibling path</li>
-            <!-- Speech note: must be next to each other -->
+            <li class="fragment">Must be an exact sibling path (next to each other)</li>           
+            <br>
+            <li class="fragment">Uses + between two selectors</li>
+            <br>
             <li class="fragment">Can be dissimilar elements (such as <span style="color: #c7bc75;">h1 + p</span>)</li>
-            <li class="fragment">Has + between two selectors</li>
-            <li class="fragment">Applies color of lime to the second item on the list</li>
-            <li class="fragment"><span style="color: #c7bc75;">li</span> following a sibling <span style="color: #c7bc75;">li</span></li>
-          </ul>
+            </ul>            
+          <!-- Speech note: Good example here https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_pluss -->
+        </section>
+        <section>
+          <h1>Adjacent sibling combinator</h1>
+          <br><br>
           <code class="fragment">
             li + li {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
             }
           </code>
-          <!-- Speech note: Good example here https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_pluss -->
+          <ul style="list-style: disc; margin-left: 80px;"></ul>
+          <li class="fragment"><span style="color: #c7bc75;">li</span> following a sibling <span style="color: #c7bc75;">li</span></li>
+          <br>
+          <li class="fragment">Applies color of lime to the second item on the list</li>
+        </ul>
         </section>
         <section>
-          <h1>State-based Selectors</h1>
+          <h1>Pseudo-class Selectors</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Also known as <span style="color: #c7bc75;">State-based</span> selectors</li>
+            <br>
             <li class="fragment">Allows us to style elements based on their state</li>
-            <br>
-            <li class="fragment">Also called <span style="color: #c7bc75;">pseudo-class</span> selectors</li>
-            <br>
-            <li class="fragment">Syntax is a single colon:
-              <span style="color: #c7bc75;">selector:state</span>
+            <br>            
+            <li class="fragment">Syntax is a single colon: 
+              <span style="color: #c7bc75;">  selector : state</span>
             </li>
         </section>
         <section>
-          <h1>State-based Selectors</h1>
+          <h1>Pseudo-class Selectors</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">:hover</li>
@@ -841,7 +901,7 @@
             <li class="fragment">:visited</li>
         </section>
         <section>
-          <h1>State-based Selectors Example</h1>
+          <h1>Pseudo-class Selectors Example</h1>
           <br><br>
           <code class="fragment">
             button:hover {<br>
@@ -854,6 +914,35 @@
               &nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>
             }
           </code>
+        </section>
+        <section>
+          <h1>Pseudo-Elements</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">
+              Pseudo-element is an extension of a CSS selector that targets a specific part of an element
+            </li>
+            <br>
+            <li class="fragment">
+              Uses : : syntax
+            </li>
+          </ul>
+          <br><br>
+          <p class="fragment">Example:</p>
+          <code class="fragment">
+            p::first-letter {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;color: lime;<br>
+            }
+          </code>
+          <br>
+          <li class="fragment">
+            Selects the first letter of paragraphs and turns the letter lime green
+          </li>
+        </section>
+        <section>
+          <h1>Check In....</h1>
+          <br><br>
+          <img src="../images/CSS-session/doingGreat.gif" alt="you're doing great girl" height="950px">
         </section>
         <!-- Work slide: -->
         <section>
@@ -893,9 +982,19 @@
           <h1>Units of Measurement</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Absolute</li>
+            <li class="fragment">Absolute:
+              <br>
+              <ul style="list-style: disc; margin-left: 80px;"> 
+              <li class="fragment">a measurement that remains constant regardless of context</li>
+            </ul>
+          </li>
             <br>
-            <li class="fragment">Relative</li>
+            <li class="fragment">Relative:
+              <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li class="fragment">depends on another value or context, so its size can vary based on different factors</li> 
+                </ul>
+              </li>
           </ul>
         </section>
         <section>
@@ -959,7 +1058,7 @@
           <h1>vh / vw</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Relative to viewport height / width</li>
+            <li class="fragment">Relative to viewport height / width (% of viewport)</li>
             <br>
             <li class="fragment">Can be used for width, height, margin, padding, font-size</li>
           </ul>
@@ -1074,9 +1173,9 @@
           <h1>The Cascade</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Process of combining multiple stylesheets and resolving conflicts between different CSS rules and declarations</li>
+            <li class="fragment">Order of CSS rules are important - there's an hierarchy to the cascade that determines which rules are applied</li>
             <br>
-            <li class="fragment">Order of CSS rules matter - there's a hierarchy to the cascade</li>
+            <li class="fragment">Process of combining multiple stylesheets and resolving conflicts between different CSS rules and declarations</li>
         </section>
         <section>
           <h1>Source Order</h1>
@@ -1089,11 +1188,14 @@
           <h1>Specificity</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Algorithm that browsers use to decide which rule to apply when multiple selectors target the same element</li>
+            <br>
             <li class="fragment">More specific rules win over less specific rules</li>
           </ul>
         </section>
         <section>
           <h1>Order of Specificity (lowest to highest)</h1>
+          <br>
           <ol style="margin-left: 80px;">
             <li class="fragment">Universal selector (*)</li>
             <br>
@@ -1106,7 +1208,7 @@
             <li class="fragment">Combining selectors to make rules more specific</li>
             <!-- Speech note: We'll see examples of this in the next section. -->
             <br>
-            <li class="fragment">!important <em>(WARNING: Bad practice)</em></li>
+            <li class="fragment">!important <em>(WARNING: Overrides all other rules. Bad practice.)</em></li>
             <!-- Speech note: You usually can write a more specific selector instead of using !important -->
             <!-- Speech note: Just because you can, doesn't mean you should. -->
           </ol>
@@ -1133,15 +1235,16 @@
           <!-- Answer: green -->
         </section>
         <section>
+          <br><br>
           <h1 style="color: green; background-color: white;">Hey Girl!</h1>
-          <br>
-          <img src="../images/html-session/gosling.gif" alt="Hey Girl" height="76%"/>
+          <br><br>
+          <img src="../images/front-end-html/gosling.gif" alt="Hey Girl" height="55%"/>
         </section>
         <section>
           <h1>Inheritance</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Children inherit traits from their parents: tall parent will likely have a tall child</li>
+            <li class="fragment">Children inherit traits from their parents: height, eye color, hair color, etc.</li>
             <br>
             <li class="fragment">Parent's properties may be inherited by child element</li>
             <br>
@@ -1149,6 +1252,7 @@
         </section>
         <section>
           <h1>Inheritance Example</h1>
+          <br><br>
           <code class="fragment">
             &lt;div class="parentDiv"&gt;<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;Parent div<br><br>
@@ -1157,6 +1261,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br><br>
             &lt;/div&gt;
           </code>
+          <br>
           <code class="fragment">
             .parentDiv {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: yellow;<br>
@@ -1170,6 +1275,7 @@
         </section>
         <section>
           <h1>Inheritance Example</h1>
+          <br>
           <code class="fragment">
             &lt;div class="parentDiv"&gt;<br><br>
             &nbsp;&nbsp;&nbsp;&nbsp;Parent div<br><br>
@@ -1178,6 +1284,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br><br>
             &lt;/div&gt;
           </code>
+          <br>
           <code class="fragment">
             .parentDiv {<br>
               &nbsp;&nbsp;&nbsp;&nbsp;color: yellow;<br>
@@ -1264,11 +1371,14 @@
           <img src="../images/CSS-session/pizza-box-model.png" alt="pizza box model" height="100%" />
         </section>
         <section>
+          <h1>CSS Box Model</h1>
           <br><br>
           <img src="../images/CSS-session/boxModel.png" alt="box model" height="75%" />
         </section>
         <section>
-          <img src="../images/CSS-session/box-model-code.jpg" alt="box model" height="95%" />
+          <h1>See how it breaks down</h1>
+          <br><br>
+          <img src="../images/CSS-session/box-model-code.jpg" alt="box model" height="75%" />
         </section>
         <section>
           <img src="../images/CSS-session/box-model-code-2.jpg" alt="box model" height="100%" />
@@ -1291,7 +1401,7 @@
         <section>
           <h1>2-value Syntax</h1>
           <br><br>
-          <p class="fragment">Vertical horizontal</p>
+          <p class="fragment">Vertical/Horizontal</p>
           <code class="fragment">margin: 1px 2px;</code>
           <br>
           <img class="fragment" src="../images/CSS-session/box-model/2-values.png" alt="box model" height="50%" />
@@ -1299,7 +1409,7 @@
         <section>
           <h1>3-value Syntax</h1>
           <br><br>
-          <p class="fragment">Top Horizontal Bottom</p>
+          <p class="fragment">Top/Horizontal/Bottom</p>
           <code class="fragment">margin: 1px 2px 3px;</code>
           <br>
           <img class="fragment" src="../images/CSS-session/box-model/3-values.png" alt="box model" height="50%" />
@@ -1307,7 +1417,7 @@
         <section>
           <h1>4-value Syntax</h1>
           <br><br>
-          <p class="fragment">Top Right Bottom Left (Clockwise)</p>
+          <p class="fragment">Top/Right/Bottom/Left (Clockwise)</p>
           <code class="fragment">margin: 1px 2px 3px 4px;</code>
           <br>
           <img class="fragment" src="../images/CSS-session/box-model/4-values.png" alt="box model" height="50%" />
@@ -1323,7 +1433,7 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Layout is the arrangement of elements on a page</li>
             <br>
-            <li class="fragment">Display / Inline</li>
+            <li class="fragment">Display property</li>
             <br>
             <ul style="list-style: disc; margin-left: 80px;">
               <li class="fragment">Inline vs. Block</li>
@@ -1349,13 +1459,24 @@
         </section> -->
         <section>
           <h1>Layout Systems</h1>
-          <br><br>
+          <br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Most sites use layout systems</li>
             <br>
-            <li class="fragment">Why? More powerful than basic CSS layout and allows for responsive design</li>
+            <!-- <li class="fragment">Why? </li>
+            <br> -->
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li class="fragment">More advanced than basic CSS layout, and enables responsive design</li>
+            </ul>
+            <br><br>
+            <li class="fragment">Early days of the internet, developers used HTML tables for layout, which can be problematic</li>
             <br>
-            <li class="fragment">Olden days of the internet, developers used HTML tables for layout</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li class="fragment">Limited layout</li><br>
+              <li class="fragment">Not responsive</li><br>
+              <li class="fragment">Not accessible</li><br>
+            </ul>
+            </ul>
           </ul>
         </section>
         <section>
@@ -1373,7 +1494,9 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Handles complex layout needs</li>
             <br>
-            <li class="fragment">Handles wrapping and flexibility for different display sizes (phones, smart displays, tablets, big tv's)</li>
+            <li class="fragment">Manages wrapping and flexibility across various display sizes (phones, smart displays, tablets, big tv's)</li>
+            <br>
+            <li class="fragment">Providing maintainable code without needing workarounds or hacks</li>
             <br>
             <li class="fragment">Now the standard way of adding layout</li>
           </ul>
@@ -1388,7 +1511,8 @@
             <br>
             <li class="fragment">Elements can wrap to multiple rows or columns</li>
             <br>
-            <li class="fragment"><a href="https://codepen.io/chriscoyier/full/PoPwPbE">Example</a></li>
+            <li class="fragment">Example: <br>
+              <a href="https://codepen.io/chriscoyier/full/PoPwPbE">https://codepen.io/chriscoyier/full/PoPwPbE</a></li>
           </ul>
         </section>
         <section>
@@ -1401,7 +1525,7 @@
             <br>
             <li class="fragment">Used more often</li>
             <br>
-            <li class="fragment"><a href="https://codepen.io/chriscoyier/full/ZEpPWKO">Example</a></li>
+            <li class="fragment">Example: <br><a href="https://codepen.io/chriscoyier/full/ZEpPWKO">https://codepen.io/chriscoyier/full/ZEpPWKO</a></li>
           </ul>
         </section>
         <section>
@@ -1418,7 +1542,9 @@
           </ul>
         </section>
         <section>
-          <h1><a href="https://codepen.io/ramenhog/full/MpORPa">CSS Grid Nom Nom Gallery</a></h1>
+          <h1>CSS Grid Nom Nom Gallery</h1>
+          <br><br>
+          <a href="https://codepen.io/ramenhog/full/MpORPa">https://codepen.io/ramenhog/full/MpORPa</a>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Shows grid with defined height (1st row) and dynamic heights (3rd row and on) in masonry pattern</li>
@@ -1434,7 +1560,7 @@
           <h1>How to Use a Layout System</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">HTML: create a parent container with a class to style</li>
+            <li class="fragment">HTML: Create a parent container with a class to style</li>
             <br>
             <li class="fragment">CSS: Define the styling to add grid and/or flexbox</li>
           </ul>
@@ -1443,7 +1569,7 @@
           <h1>HTML</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Common parent containers:
+            <li class="fragment">Common parent containers: <br>
               <span style="color: #c7bc75;">main</span>,
               <span style="color: #c7bc75;">header</span>,
               <span style="color: #c7bc75;">footer</span>,
@@ -1453,6 +1579,7 @@
               <span style="color: #c7bc75;">div</span>
             </li>
           </ul>
+          <br><br>
           <code class="fragment">
             &lt;section class="container"&gt;<br>
             &nbsp;&nbsp;&lt;!-- Child elements here --&gt;<br>
@@ -1461,9 +1588,11 @@
         </section>
         <section>
           <h1>CSS</h1>
+          <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">In the styles for the container, add the following:</li>
           </ul>
+          <br>
           <code class="fragment">display: grid;</code><br>
           <code class="fragment">display: flex;</code><br>
           <code class="fragment">
@@ -1558,7 +1687,7 @@
             <br>
             <li class="fragment">Collection of pre-written CSS code that you can use to style your website with pre-defined styles</li>
             <br>
-            <li class="fragment">Some CSS frameworks allow you to customize the styles, too</li>
+            <li class="fragment">Some CSS frameworks allow for customization</li>
             <br>
             <li class="fragment">Useful for quickly styling a website</li>
           </ul>
@@ -1573,7 +1702,7 @@
             <br>
             <li class="fragment">CSS frameworks are designed to be responsive</li>
             <br>
-            <li class="fragment">Downside: Learning curve of learning the styles of the framework</li>
+            <li class="fragment">Downside: <br>Learning curve of learning the styles of the framework</li>
           </ul>
         </section>
         <section>
@@ -1634,14 +1763,20 @@
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">CSS can be mind-blowing</li>
             <br>
-            <li class="fragment">Check out incredible examples on <a href="https://cssdeck.com/">#CSSis {beautiful}</a></li>
+            <li class="fragment">Check out some incredible examples: <br></li> 
             <br>
             <ul style="list-style: disc; margin-left: 80px;">
+              <li class="fragment"><a href="https://cssdeck.com/">#CSSis {beautiful}</a></li>
+              <br>
               <li class="fragment">Book cover opening/closing: <a href="https://codepen.io/_fbrz/pen/whxbF">code</a> and <a href="https://codepen.io/_fbrz/full/whxbF">live site</a></li>
               <br>
               <li class="fragment"><a href="http://www.romancortes.com/ficheros/css-coke.html">Rolling Coke Can</a></li>
             </ul>
           </ul>
+        </section>
+        <section>
+          <br><br>
+          <img src="../images/CSS-session/CheersToYou.gif" alt="Cheers to you" height="1000px">
         </section>
 
         <!-- Final Section  -->
@@ -1744,7 +1879,7 @@
         </section>
         <section>
           <h1>Keep up with us</h1>
-          <br><br>
+          <br>
           <a class="fragment" href="http://codingandcocktails.kcwomenintech.org" target="_blank">
             codingandcocktails.kcwomenintech.org
           </a>
@@ -1759,7 +1894,7 @@
             <img src="../images/shared/meetup.png" width="190"/>
           </a>
           <a class="fragment" href="https://twitter.com/KCWomeninTech" target="_blank">
-            <img src="../images/shared/twitter.png" width="150"/>
+            <img src="../images/shared/x-logo.png" width="150"/>
           </a>
           <br><br>
           <div class="fragment">
@@ -1767,6 +1902,12 @@
             <br>
             <p>#CodingAndCocktailsKC</p>
           </div>
+          <br><br>
+          <div class="fragment">
+          <p>Register for October's Intro To JavaScript Class:</p>
+          <br>
+          <img class="fragment" src="../images/CSS-session/ClosingSLideQR.png" alt="JavaScript signup QR Code" height="350px">
+        </div>
         </section>
       </div>
     </div>
