@@ -244,6 +244,7 @@
     <section>
       <h1>How Do We Actually Use JavaScript</h1>
       <br><br>
+      <!-- Alicia help! -->
       <img src="../images/IntroJS-session/CoreUsesOfJS.png" alt="Core uses of JavaScript" height="800vh">
     </section>
     <section>
@@ -308,8 +309,9 @@
     </section>
     <section>
       <h1>Variables</h1>
+      <!--          TODO Alicia gif please!-->
       <br><br>
-<!--          TODO Alicia gif please!-->
+      <!--          TODO Alicia gif please!-->
       <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
     </section>
     <section>
@@ -355,6 +357,7 @@
           : variable that cannot be reassigned
         </li>
       </ul>
+      <br><br>
       <code class="fragment">
         let myName = "John";<br>
         myName = "Jane"; // "Jane"<br><br><br>
@@ -419,6 +422,10 @@
           myVariable;
         </code>
       </ul>
+    </section>
+    <section>
+      <br><br>
+      <img src="../images/IntroJS-session/MorpheusVariable.jpg" alt="Morpheus variable naming quote" height="800vh">
     </section>
     <section>
       <h1>Primitive Values</h1>
@@ -488,10 +495,6 @@
       </code>
     </section>
     <section>
-      <br><br><br>
-      <img src="../images/IntroJS-session/BooleanJoke.jpg" alt="Joke about Booleans" height="600vh">
-    </section>
-    <section>
       <h1>Numbers</h1>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
@@ -558,7 +561,6 @@
         typeof x; // object
       </code>
       <ul style="list-style:disc; margin-left: 80px;">
-        <br>
         <li class="fragment">Due to a legacy bug in the language.</li>
       </ul>
     </section>
@@ -728,8 +730,8 @@
     <section>
       <h1>More advanced section, here we go!</h1>
       <br>
-<!--          TODO alicia, gif please!-->
-          <img class="fragment" src="../images/IntroJS-session/NervousLaughter.gif" alt="Woman with nervous laughter" height="700vh">
+      <!--          TODO alicia, gif please!-->
+      <img class="fragment" src="../images/IntroJS-session/NervousLaughter.gif" alt="Woman with nervous laughter" height="700vh">
     </section>
     <section>
       <h1>Function Parameters</h1>
@@ -776,15 +778,6 @@
       </ul>
     </section>
     <section>
-      <h1>Functions Recap</h1>
-      <br><br>
-      <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Use functions to structure logic</li><br>
-        <li class="fragment">Declarations, expressions, and arrow functions are all valid forms</li><br>
-        <li class="fragment">Default parameters make functions more robust</li><br>
-      </ul>
-    </section>
-    <section>
       <h1>Conditionals</h1>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
@@ -807,7 +800,7 @@
         <li class="fragment">if/else statements can be nested together to create more complex logic</li>
         <br>
       </ul>
-      <code class="fragment">
+      <code class="fragment" style="width: 100%">
         if (condition) {<br>
         &nbsp;&nbsp;// code to execute if condition is true<br>
         } else {<br>
@@ -818,7 +811,7 @@
     <section>
       <h1>Example</h1>
       <br><br>
-      <code class="fragment">
+      <code class="fragment" style="width: 100%">
         const age = 21;<br>
         <br>
         if (age >= 21) {<br>
@@ -846,9 +839,9 @@
       <h1>Programming Nugget</h1>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment"><span style="color: #c7ac7b;">if else</span></li>
+        <li class="fragment"><span style="color: #c7ac7b;">Else if</span></li>
         <br>
-        <code class="fragment" style="width: 1500px">
+        <code class="fragment" style="width: 100%">
           if (condition) {<br>
           &nbsp;&nbsp;// code to execute if condition is true<br>
           } else if (condition) {<br>
@@ -866,9 +859,9 @@
         <li class="fragment">Condition ? expr1 : expr2;</li>
         <br>
         <li class="fragment">
-              <span style="color: #c7ac7b;">
-                {condition}
-              </span>
+                          <span style="color: #c7ac7b;">
+                        {condition}
+                        </span>
           ?
           <span style="color: #c7ac7b;">
                 {what happens if true}
@@ -882,7 +875,7 @@
         <br>
         <code class="fragment">
           const myAge = 18;<br>
-          const canDrink = myAge > 21 ? 'You are older than me' : 'You are younger than me'; // You are younger than me
+          const canDrink = myAge >= 21 ? 'Drink!' : 'Not yet!'; // Drink!
         </code>
       </ul>
     </section>
@@ -1025,6 +1018,10 @@
       </code>
     </section>
     <section>
+      <br><br>
+      <img src="../images/IntroJS-session/InfiniteMeme.jpg" alt="Meme of infinite memes" height="800vh">
+    </section>
+    <section>
       <h1>For Each</h1>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
@@ -1040,6 +1037,14 @@
         for (let i = 0; i < cocktails.length; i++) {<br>
         &nbsp;&nbsp;console.log(cocktails[i], i);<br>
         }<br><br>
+        // Code on the Beach 0<br>
+        // jQuery Sour 1
+      </code>
+      <br>
+      <code class="fragment">
+        cocktails.forEach(function(cocktail, index) {<br>
+        &nbsp;&nbsp;console.log(cocktail, index);<br>
+        });<br><br>
         // Code on the Beach 0<br>
         // jQuery Sour 1
       </code>
@@ -1080,40 +1085,40 @@
         <br>
         <li class="fragment">Types are either inferred or explicitly declared (with things like interfaces and types)</li>
       </ul>
-      </section>
+    </section>
     <section>
-      <h1>TypeScript Example</h1>
+      <h1>TypeScript Example: Implicit</h1>
+      <br><br>
+      <code class="fragment">
+        let userName = 'Heidi'; // string<br>
+        userName = 28; // ERROR<br><br>
+        let isMentor: boolean = true;
+      </code>
+    </section>
+    <section>
+      <h1>TypeScript Example: Explicit</h1>
       <br><br>
       <code class="fragment">
         let userName: string = 'Heidi';<br>
-        let age: number = 28;<br>
+        let age: number = 28;<br><br><br>
         let isMentor: boolean = true;
       </code>
-      </section>
-    <section>
-      <h1>TypeScript Function Example</h1>
-      <br><br>
-      <code class="fragment">
-        const greetUser = (name: string): void => {
-          console.log(`Hello, ${name}!`);
-        };
-
-        greetUser('Lady Dev'); // Hello, Lady Dev!
-      </code>
-      </section>
-      <section>
-        <br>
-        <h4>Think of TypeScript as JavaScript with superpowers!</h4>
-<!--        todo Alicia get me a good one!! -->
-<img class="fragment" src="../images/IntroJS-session/typescript.png" alt="TypeScript logo in Batman signal" height="700vh">
     </section>
-      <section>
-        <br>
-        <h4>
-          💡 Or a pain in the butt. <br>Either way.
-        </h4>
-        <br><br>
-        <img class="fragment" src="../images/IntroJS-session/TypeScriptRickMorty.jpg" alt="Rick & Morty TypeScript Joke" height="600vh">
+    <section>
+      <h4>
+        💡 Think of TypeScript as JavaScript with superpowers!
+      </h4>
+      <br><br>
+      <!--        todo Alicia get me a good one!! -->
+      <img class="fragment" src="../images/IntroJS-session/typescript.png" alt="TypeScript logo in Batman signal" height="700vh">
+    </section>
+    <section>
+      <h4>
+        💡 Or a pain in the butt. <br>Either way.
+      </h4>
+      <br><br>
+      <!--        todo Alicia get me a good one!! -->
+      <img class="fragment" src="../images/IntroJS-session/TypeScriptRickMorty.jpg" alt="Rick & Morty TypeScript Joke" height="600vh">
     </section>
     <!--Celebration Section-->
     <section>
@@ -1155,6 +1160,7 @@
     <!-- Next Month's Event Section  -->
     <section>
       <h1>Register For Next Month's Event</h1>
+      <br><br>
       <!--TODO | CHANGE QR MONTHLY-->
       <img src="../images/IntroJS-session/2025-05 Portfolio QR Code.png" alt="QR code" height="50%"/>
     </section>
