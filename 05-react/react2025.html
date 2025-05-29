@@ -36,7 +36,7 @@
 
 <!--Intro Section-->
 <section>
-  <h3>React</h3>
+  <h1>Intro to React</h1>
   <br><br>
   <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
 </section>
@@ -105,6 +105,12 @@
     </a>
   </div>
 </section>
+    <!-- Restroom Slide -->
+    <section>
+      <h1>Restroom</h1>
+      <br><br><br>
+      <img src="../images/shared/RestroomWhite.svg" height="600vh" alt="Restroom symbol">
+    </section>
 <!-- TODO | Change photo if Laura sends it  -->
 <!-- Drink Section -->
 <section>
@@ -114,7 +120,7 @@
   <br><br>
   <h4>Laura Kozak</h4>
 </section>
-<!-- Mentors -->
+<!-- Mentor Section -->
 <section>
   <h2>Our mentors</h2>
   <br>
@@ -127,19 +133,254 @@
   <h1>Before We Get Started...</h1>
   <br>
   <h3 class="fragment">This stuff is a challenge!</h3>
-  <br>
+  <br><br>
   <p class="fragment">
     Don’t be discouraged if you don’t finish each worksheet section before the next presentation section begins.
   </p>
   <br>
   <p class="fragment">
-    We cover a lot of difficult material that will take time to understand. We are here (and on Slack after the session) to help!
+    We cover a lot of difficult material that will take time to understand. We are here (and on Slack after the session) to help! 😅 
   </p>
 </section>
-
-<!-- TODO |  Add content slides -->
-
-<!-- TODO |  Work Slides need added at appropriate spots throughout content | verify bitly links are accurate | Update featured woman images monthly -->
+<!-- Agenda -->
+<section>
+  <h2>Tonight's Agenda</h2>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Intro to React</li><br>
+    <li class="fragment">JSX & Components</li><br>
+    <li class="fragment">Props vs State</li><br>
+    <li class="fragment">Event Handling & Conditional Rendering</li><br>
+    <li class="fragment">Best Practices & Component Organization</li><br>
+  </ul>
+</section>
+<section>
+  <h1>But wait...</h1>
+  <br><br>
+  <img class="fragment" src="../images/REACT-session/TheresMore.gif" alt="Lucy Hale in gold dress saying there's more" height="750vh" />
+</section>
+<section>
+  <h1>Stick Around For...</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+      <li class="fragment">🎟️ Prize Drawing 🤞</li><br>
+      <li class="fragment">Optional: <br>🤝 30 Minute Networking</li>
+      </ul><br><br>
+      <img class="fragment" src="../images/REACT-session/LeonaLewisClapping.gif" alt="Leona Lewis in pink dress clapping" height="450vh" />
+</section>
+<!-- #NESSA SPEAKER NOTE: 
+ Fun Fact:
+ Famous actress Hedy Lamarr has been dubbed “the mother of Wi-Fi” and other wireless communications like GPS and Bluetooth for the development of frequency hopping technology -->
+<section>
+  <h1>Cheers Ladies!</h1>
+  <br><br>
+  <img src="../images/REACT-session/HedyLamarL'chaim.gif" alt="Hedy Lamar L'Chaim" height="750vh">
+</section>
+<!-- TODO | Finish content slides -->
+ <!-- Topic Slide 1 -->
+<section>
+  <h1>Intro to React</h1>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Topic List Slide -->
+<section>
+  <h1>Intro to React</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">What is React?</li><br>
+    <li class="fragment">Why is React popular?</li><br>
+    <li class="fragment">Key Features of React</li>
+  </ul>
+</section>
+<!-- Placeholder Slide -->
+<section>
+  <h1>Intro to React</h1>
+  <br><br>
+  <ul>
+    <li>🍸 What is React?</li><br>
+    <li style="color: rebeccapurple">Why is React popular?</li><br>
+    <li style="color: rebeccapurple">Key Features of React</li>
+  </ul>
+</section>
+<!-- What is React section -->
+ <section>
+  <h1>What is React?</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Created by Facebook, used by Instagram, Airbnb, Netflix</li><br>
+    <li class="fragment">Focuses on building small, reusable components</li><br>
+    <li class="fragment">Library or Framework? 🤔</li><br>
+  </ul>
+ </section>
+ <section>
+  <h1>Library: </h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Collection of functions or modules to help solve specific tasks</li><br>
+    <li class="fragment">Developers call the library code when needed (you’re in control 🛠️)</li><br>
+    <li class="fragment">Typically focuses on a narrow scope of functionality</li>
+  </ul>
+ </section>
+ <section>
+  <h1>Framework: </h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Provides a skeleton or structure for your application</li><br>
+    <li class="fragment">Inverts control: the framework calls your code (“Inversion of Control”)</li><br>
+    <li class="fragment">“Opinionated”: Enforces architectural patterns, limiting flexibility to ensure consistency</li>
+  </ul>
+ </section>
+ <section>
+  <h1>Which one is React?</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Core React (react + react-dom): <br><br> 📚✨ A JavaScript library for building user interfaces (view layer only)</li><br>
+ </section>
+ <section>
+  <h1>In Practice:</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">React is often used as a framework because it shapes how you build UIs with components and a declarative style</li><br>
+    <li class="fragment">React Ecosystem (React Router, Redux, Vite/Cra, etc.) transforms React into a full framework-like experience for SPAs</li>
+ </section>
+ <section>
+  <h1>Summary:</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">On its own => Library</li><br>
+    <li class="fragment">In practice => Framework</li><br>
+    <li class="fragment">End of the day: doesn’t really matter</li>
+  </ul><br><br>
+  <img class="fragment" src="../images/REACT-session/JonahHillOkay.gif" alt="Jonah Hill saying okay" height="400vh" />
+ </section>
+<!-- Placeholder Slide -->
+<section>
+  <h1>Intro to React</h1>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple">What is React?</li><br>
+    <li>🍸 Why is React popular?</li><br>
+    <li style="color: rebeccapurple">Key Features of React</li>
+  </ul>
+</section>
+ <!-- Why is React popular section -->
+ <section>
+  <h1>Why React is Popular</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">✅ Easy to get started</li> <br>
+    <li class="fragment">♻️ Component-based = Reusable code</li> <br>
+    <li class="fragment">⚡ Fast updates</li> <br>
+    <li class="fragment">🌍 Huge community + job market</li> <br>
+    <li class="fragment">🤹  Makes JavaScript more declarative and fun</li>
+  </ul> 
+</section>
+ <section>
+  <h1>Easy to get started</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Uses the familiar HTML, CSS, and JavaScript</li>
+  </ul><br><br><br>
+  <img class="fragment" src="../images/REACT-session/Tim&EricMindBlown.gif" alt="Tim & Eric's mind blown gif" height="500vh" />
+ </section>
+ <section>
+<h1>💡 Think</h1>
+  <br><br>
+  <p class="fragment">React Components = LEGO Bricks</p><br><br>
+  <img class="fragment" src="../images/REACT-session/Lego Looking Away.gif" alt="LEGO monkey looking away gif" height="600vh" />  
+</section>
+<section>
+  <h1>React + LEGOs</h1>
+  <br>
+  <img src="../images/REACT-session/LegoBricks.gif" alt="LEGO bricks infinite cube building" height="300vh"><br>
+<ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Build your UI from <strong>small pieces</strong></li><br>
+    <li class="fragment">Reuse them anywhere</li><br>
+    <li class="fragment">Making development more efficient and maintainable</li>
+  </ul>
+</section>
+<section>
+  <br><br>
+  <img src="../images/REACT-session/LegoAwesome.jpg" alt="LEGO Movie Emmet saying Awesome" height="800vh" />
+</section>
+ <section>
+  <h1>Fast Updates: </h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Only updates parts of the page that change</li><br>
+    <li class="fragment">Instead of re-rendering entire pages</li>
+  </ul>
+ </section>
+<!-- Placeholder Slide -->
+<section>
+  <h1>Intro to React</h1>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple">What is React?</li><br>
+    <li style="color: rebeccapurple">Why is React popular?</li><br>
+    <li>🍸 Key Features of React</li>
+  </ul>
+</section>
+<!-- Key Features of React -->
+<section>
+  <h1>Key Features of React</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment"> Component-Based Architecture</li><br>
+    <li class="fragment"> Virtual DOM</li><br>
+    <li class="fragment"> Declarative UI</li>
+  </ul>
+</section>
+ <section>
+  <h1>Component-Based Architecture</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Apps built from small, reusable pieces</li><br>
+    </ul>
+ </section>
+ <!-- Separation of Concerns -->
+ <section>
+  <h1>Vertical Separation of Concerns: </h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+     <li class="fragment">Changes the focus from separating by file type (HTML, CSS, JS) to grouping by functionality — everything for a component (markup, styles, logic) lives together in one place</li><br>
+     <li class="fragment">Allows for component reusability </li>
+  </ul>
+ </section>
+ <section>
+  <br><br>
+  <img src="../images/REACT-session/SepOfConcerns.png" alt="Separation of concerns chart" height="800vh" />
+ </section>
+ <!-- Virtual DOM -->
+<section>
+  <h1>Virtual DOM</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">React keeps a draft (Virtual DOM)</li><br>
+    <li class="fragment">Updates <strong>only the changed parts</strong></li><br>
+    <li class="fragment">Makes apps <strong>faster and smoother</strong></li>
+  </ul>
+</section>
+<section>
+  <br><br>
+  <img src="../images/REACT-session/dom-model.svg" alt="Virtual DOM model" height="900vh">
+</section>
+<!-- Declarative UI -->
+<section>
+  <h1>Declarative UI</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Focus on what the UI should look like, not how to update it</li><br>
+    <li class="fragment">You describe what the UI should look like</li><br>
+    <li class="fragment">React figures out how to make it happen</li><br>
+    <li class="fragment">Simpler, readable code</li>
+  </ul>
+</section>
+<section>
+  <br><br>
+  <img src="../images/REACT-session/ZoePerrySoundSoEasy.gif" alt="Zoe Perry from Young Sheldon saying you make it sound so easy" height="800vh">
+</section>
  <!-- Work slide 1: -->
  <section>
   <h1 style="font-size: 8vh;">Work Time</h1>
@@ -153,8 +394,106 @@
   </p>
   <br>
 <!-- TODO | Change image monthly -->  
-  <img src="../images/shared/AnnieEasley1.png" alt="Annie Easley" height="600vh" />
+  <img src="../images/shared/GraceHopper1.jpg" alt="Grace Hopper" height="600vh" />
 </section>
+<!-- Topic Slide 2 -->
+<section>
+  <h1>JSX & Components</h1>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Topic List Slide -->
+<section>
+  <h1>JSX & Components</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">What is JSX?</li><br>
+    <li class="fragment">How is JSX different from HTML?</li><br>
+    <li class="fragment">Why JSX is awesome?</li>
+  </ul>
+</section>
+<!-- Placeholder Slides -->
+<section>
+  <h1>JSX & Components</h1>
+  <br><br>
+  <ul>
+    <li>🍸 What is JSX?</li><br>
+    <li style="color: rebeccapurple">How is JSX different from HTML?</li><br>
+    <li style="color: rebeccapurple">Why JSX is awesome?</li>
+  </ul>
+</section>
+<!-- What is JSX section -->
+<section>
+  <h1>What is JSX?</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">JSX = JavaScript XML</li><br>
+    <li class="fragment">A syntax extension for JavaScript</li><br>
+    <li class="fragment">Lets you write HTML-like code in JavaScript</li><br>
+    </ul><br><br>
+    <pre><code class="fragment">
+      const drink = "Margarita";
+      return &lt;h1&gt;I would like a {drink}, please!&lt;/h1&gt;</code></pre> 
+ </section>
+<!-- Placeholder Slides -->
+<section>
+  <h1>JSX & Components</h1>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple">What is JSX?</li><br>
+    <li>🍸 How is JSX different from HTML?</li><br>
+    <li style="color: rebeccapurple">Why JSX is awesome?</li>
+  </ul>
+</section>
+<!-- How is JSX different from HTML section -->
+<section>
+  <h1>How is JSX different from HTML?</h1>
+  <br><br>
+  <img src="../images/REACT-session/JSXvsHTMLtable.png" alt="JSXvsHTMLtable" height="600vh">
+ </section>
+<!-- Placeholder Slides -->
+<section>
+  <h1>JSX & Components</h1>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple">What is JSX?</li><br>
+    <li style="color: rebeccapurple">How is JSX different from HTML?</li><br>
+    <li>🍸 Why JSX is awesome?</li>
+  </ul>
+</section>
+<!-- Why JSX is awesome section -->
+<section>
+  <h1>Why JSX is awesome?</h1>
+  <br><br>
+    <p class="fragment">JSX Superpowers 🦸‍♀️</p><br><br>
+    <ul style="list-style: disc; margin-left: 80px;">
+      <li class="fragment">Cleaner code</li><br>
+      <li class="fragment">Blend layout + logic</li><br>
+      <li class="fragment">Dynamic and powerful</li>
+    </ul>     
+</section>
+ <section>
+  <h1>Cleaner code: </h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">JSX looks like HTML, so it's easier to read</li><br>
+    <li class="fragment">No need to switch between files</li><br>
+    <li class="fragment">See HTML-like layout and your logic in same file</li><br>
+  </ul>
+ </section>
+<section>
+  <h1>Dynamic: </h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">JSX lets you use JavaScript expressions inside curly braces</li><br>
+    <li class="fragment">Makes it easy to create dynamic content</li><br>
+    <li class="fragment">Example: </li><br>
+    </ul>
+    <pre><code class="fragment">
+      const drink = "Margarita";
+      return &lt;h2&gt;I'd like a {drink}, please!&lt;/h2&gt;;</code></pre> 
+</section>
+<!-- Basic component structure -->
 
 <!-- Work slide 2: -->
 <section>
@@ -169,9 +508,72 @@
   </p>
   <br>
 <!-- TODO | Change image monthly -->  
-  <img src="../images/shared/AnnieEasley2.png" alt="Annie Easley" height="600vh" />
+  <img src="../images/shared/GraceHopper2.jpg" alt="Grace Hopper" height="600vh" />
 </section>
+<!-- Topic Slide 3 -->
+<section>
+  <h1>Props vs State</h1>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Topic List Slide -->
+<section>
+  <h1>Props vs State</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment"></li><br>
+    <li class="fragment"></li><br>
+    <li class="fragment"></li>
+  </ul>
+</section>
+<!-- Placeholder Slides -->
+<section>
+  <h1>Props vs State</h1>
+  <br><br>
+  <ul>
+    <li>🍸 </li><br>
+    <li style="color: rebeccapurple"></li><br>
+    <li style="color: rebeccapurple"></li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
 
+<!-- Placeholder Slides -->
+<section>
+  <h1>Props vs State</h1>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple"></li><br>
+    <li>🍸 </li><br>
+    <li style="color: rebeccapurple"></li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
+
+<!-- Placeholder Slides -->
+<section>
+  <h1>Props vs State</h1>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple"></li><br>
+    <li style="color: rebeccapurple"></li><br>
+    <li>🍸 </li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
+ 
 <!-- Work slide 3: -->
 <section>
   <h1 style="font-size: 8vh;">Work Time</h1>
@@ -185,8 +587,76 @@
   </p>
   <br>
 <!-- TODO | Change image monthly -->  
-  <img src="../images/shared/AnnieEasley3.jpeg" alt="Annie Easley" height="600vh" />
+  <img src="../images/shared/GraceHopper3.jpg" alt="Grace Hopper" height="600vh" />
 </section>
+<!-- Topic Slide 4 -->
+<section>
+  <h1>Handling Events</h1>
+  <p>& Conditional Rendering</p>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Topic List Slide -->
+<section>
+  <h1>Handling Events</h1>
+  <p>& Conditional Rendering</p>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment"></li><br>
+    <li class="fragment"></li><br>
+    <li class="fragment"></li>
+  </ul>
+</section>
+<!-- Placeholder Slides -->
+<section>
+  <h1>Handling Events</h1>
+  <p>& Conditional Rendering</p>
+  <br><br>
+  <ul>
+    <li>🍸 </li><br>
+    <li style="color: rebeccapurple"></li><br>
+    <li style="color: rebeccapurple"></li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
+
+<!-- Placeholder Slides -->
+<section>
+  <h1>Handling Events</h1>
+  <p>& Conditional Rendering</p>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple"></li><br>
+    <li>🍸 </li><br>
+    <li style="color: rebeccapurple"></li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
+
+<!-- Placeholder Slides -->
+<section>
+  <h1>Handling Events</h1>
+  <p>& Conditional Rendering</p>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple"></li><br>
+    <li style="color: rebeccapurple"></li><br>
+    <li>🍸 </li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
 
 <!-- Work slide 4: -->
 <section>
@@ -201,57 +671,113 @@
   </p>
   <br>
 <!-- TODO | Change image monthly -->
-  <img src="../images/shared/AnnieEasley4.png" alt="Annie Easley" height="600vh" />
+  <img src="../images/shared/GraceHopper4.webp" alt="Grace Hopper" height="600vh" />
 </section>
+ 
+<!-- Topic Slide 5 -->
+<section>
+  <h1>Best Practices</h1>
+  <p>& Component Organization</p>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Topic List Slide -->
+<section>
+  <h1>Best Practices</h1>
+  <p>& Component Organization</p>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment"></li><br>
+    <li class="fragment"></li><br>
+    <li class="fragment"></li>
+  </ul>
+</section>
+<!-- Placeholder Slides -->
+<section>
+  <h1>Best Practices</h1>
+  <p>& Component Organization</p>
+  <br><br>
+  <ul>
+    <li>🍸 </li><br>
+    <li style="color: rebeccapurple"></li><br>
+    <li style="color: rebeccapurple"></li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
+
+<!-- Placeholder Slides -->
+<section>
+  <h1>Best Practices</h1>
+  <p>& Component Organization</p>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple"></li><br>
+    <li>🍸 </li><br>
+    <li style="color: rebeccapurple"></li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
+
+<!-- Placeholder Slides -->
+<section>
+  <h1>Best Practices</h1>
+  <p>& Component Organization</p>
+  <br><br>
+  <ul>
+    <li style="color: rebeccapurple"></li><br>
+    <li style="color: rebeccapurple"></li><br>
+    <li>🍸 </li>
+  </ul>
+</section>
+<!-- section -->
+<section>
+  <h1></h1>
+  <br><br>
+ </section>
+
 <!--Celebration Section-->    
 <section>
   <h1>Well Done LadyDevs!!</h1>
   <br><br>
   <img height="700vh" src="../images/CSS-session/WomenCanDoIt_Slow.gif" alt="Women Can Do It">
-</section>         
-<!-- Final Section  -->
-<!-- TODO | Check links are directed to correct location. These are currently set for HTML -->
-<section>
-<h1>What's Next</h1>
-<br><br><br>
-<ul class="normal">
-  <li class="fragment">Find a friend</li><br>
-  <li class="fragment">Take
-    <a href="https://forms.gle/dXM6akigp7tVRQPf7" target="_blank">
-      the quiz
-    </a>
-  </li><br>
-  <li class="fragment">Finish
-    <a href="https://kansascitywomenintechnology.github.io/cocktails-worksheets/#/html/" target="_blank">
-      tonight's worksheet
-    </a>
-  </li><br>
-  <li class="fragment">
-    Find an
-    <a href="http://lmgtfy.com/?q=Front+End+Architecture+tutorial" target="_blank">
-      online tutorial on React
-    </a>
-  </li><br>
-    </ul>
-    <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; top: 125px; right: 0px;" height="300vh" />
 </section>
+<!-- Resources Section -->
+<section>
+  <h1>React Resources</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+      <li><a href="https://react.dev/learn" target="_blank">React Official Docs – Learn React</a> (Free)</li><br>
+      <li><a href="https://scrimba.com/learn/learnreact" target="_blank">Scrimba – Learn React for Free</a> (Free course with optional upgrades)</li><br>
+      <li><a href="https://www.freecodecamp.org/learn/front-end-development-libraries/#react" target="_blank">freeCodeCamp – React Section</a> (Free)</li><br>
+      <li><a href="https://www.codecademy.com/learn/react-101" target="_blank">Codecademy – Learn React</a> (Some lessons free, full access requires Pro)</li><br>
+      <li><a href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor – React Challenges</a> (Free and paid options)</li>
+    </ul>
+    </section>    
 <!--Slack Section-->
 <section>
   <h1>Join us on...</h1>
-  <a href="https://kcwit.slack.com" target="_blank" class="fragment">
+  <a href="https://kcwit.slack.com" target="_blank">
     <img src="../images/shared/slack-logo-white.png" alt="Slack" width="30%"/>
   </a>
   <br>
   <br>
-  <p class="fragment">#codingandcocktails</p>
+  <p>#codingandcocktails</p>
   <br>
     <ul style="list-style:disc; margin-left: 80px;">             
-      <li class="fragment">#kc-jobs</li>
-      <li class="fragment">#generalchat</li>
-      <li class="fragment">#events</li>
-      <li class="fragment">#techtalks</li>
-      <li class="fragment">#announcements</li>
-      <li class="fragment">#interesting-times-initiative</li>             
+      <li>#kc-jobs</li>
+      <li>#generalchat</li>
+      <li>#events</li>
+      <li>#techtalks</li>
+      <li>#announcements</li>
+      <li>#interesting-times-initiative</li>             
     </ul>
 </section>      
 <!--Tech Talks Section-->  
@@ -259,10 +785,10 @@
 <section>
 <h1>Tech Talks</h1>
 <br><br>
-<img src="../images/CSS-session/TechTalksApr2025.png" alt="Tech Talks event" height="800vh">
+<!-- <img src="../images/shared/treadmillRooster.gif" alt="Tech Talks event" height="800vh"> -->
+ <p>#Don'tForgetToGetGraphicFromBonnie</p>
 </section>
 <!--Side Quest Section-->
-<!-- TO DO | Change graphic -->
 <section>
 <br><br>
 <img src="../images/front-end-html/SideQuestPresentation.png" alt="Side Quest Info" height="900vh" >
@@ -272,9 +798,29 @@
 <h1>Register For Next Month's Event</h1>
 <br><br>
 <!--TODO | CHANGE QR MONTHLY-->     
-<img src="../images/CSS-session/2025-04 CSS QR Code.png" alt="QR code" height="50%" />
+<img src="../images/REACT-session/2025-07 QR Code.png" alt="QR code" height="50%" />
 <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; bottom: 100px; right: 0px;" height="300vh" />
 </section>
+<!-- Signature Flight Slide -->
+<section>
+  <h1>Signature Flight Series</h1>
+  <br><br>
+  <p>#Don'tForgetToGetImageFromKim</p>
+ </section>
+<!-- Drawing Section -->
+<section>
+<h1>PRIZE DRAWING TIME</h1>
+<br><br>
+<img src="../images/REACT-session/DorothyShoesPrize.gif" alt="Buddy the Elf saying prizes are my favorite" height="700vh" />
+</section>
+<!-- Final next month's QR -->
+<section>
+  <h1>Register For Next Month's Event</h1>
+  <br><br>
+  <!--TODO | CHANGE QR MONTHLY-->     
+  <img src="../images/REACT-session/2025-07 QR Code.png" alt="QR code" height="50%" />
+  <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; bottom: 100px; right: 0px;" height="300vh" />
+  </section>
 </div>
 </div>
 <script src="../lib/js/head.min.js"></script>

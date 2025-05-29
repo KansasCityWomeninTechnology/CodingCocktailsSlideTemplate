@@ -1,0 +1,547 @@
+
+
+<section>
+  <h1>Why React Matters to YOU</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Build your own blog, portfolio, or app</li><br>
+    <li class="fragment">In-demand skill in tech</li><br>
+    <li class="fragment">Grow your confidence as a developer</li><br>
+    <li class="fragment">Build real-world projects from day one</li>
+  <ul>
+</section>
+
+
+
+
+
+<!-- Topic Slide -->
+<section>
+  <h1>Props vs State</h1>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Props -->
+<section>
+  <h1>What are Props?</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Short for <strong>properties</strong></li><br>
+    <li class="fragment">Passed from parent to child</li><br> 
+<code class="fragment">
+&lt;Cocktail liquor="tequila" mixer="grapefruit juice" /&gt;
+  </code><br>
+  <li class="fragment">Like ingredients for a recipe</li></ul>
+</section>
+<!-- Props in action -->
+<section>
+  <h1>Props in Action</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Reusable + flexible</li><br>
+    <li class="fragment">Can't be changed inside the component</li><br>
+    <li class="fragment">Think: “🔄 Inputs from outside the component”</li>
+  </ul>
+  <br><br>
+  <img class="fragment" src="../images/REACT-session/Thinking.gif" alt="thinking guy gif" height="400vh">
+</section>
+<section>
+  <h1>Components as Recipes</h1>
+  <br><br>
+  <pre><code class="fragment">
+&lt;Mojito lime="2 slices" mint="extra" /&gt;
+&lt;Mojito lime="1 slice" mint="light" /&gt;
+  </code></pre>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Components = cocktail recipes</li><br>
+    <li class="fragment">Props = custom ingredients</li><br>
+    <li class="fragment">Mix once, use everywhere</li>
+  </ul>
+</section>
+<section>
+  <br><br><br>
+  <img src="../images/REACT-session/GivingYouProps.jpg" alt="Yo Dawg meme giving you props" height="700vh">
+</section>
+<!-- React Component analogy -->
+<section>
+  <h1>React Component Analogy</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Bartender = Parent Component</li><br>
+    <li class="fragment">Drink = Child Component</li><br>
+    <li class="fragment">Customer = User</li>
+  </ul>
+</section>
+<!-- React Component analogy GIF -->
+<section>
+  <br><br>
+  <img src="../images/REACT-session/ShiningHeyNowYeah.gif" alt="The Shining Jack Nicholson saying 'Hey Now'" height="700vh">
+</section>
+<!-- Topic Slide -->
+<section>
+  <h1>States</h1>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- State -->
+<section>
+  <h1>What is State?</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">State = internal data that <strong>can change</strong></li><br><br>
+<code class="fragment">
+const [iceCubes, setIceCubes] = useState(10);
+  </code><br><br>
+  <li class="fragment">💡 Think: <br> What’s happening inside the bar</li>
+</ul>
+</section>
+<section>
+  <h1>State vs Props</h1>
+  <br><br><br>
+  <img src="../images/REACT-session/StateVsPropsTable.png" alt="Table showing differences between State & Props in React" height="450vh">
+</section>
+<!-- useState -->
+<section>
+  <h1>useState Hook</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Manages state in functional components</li><br>
+  <code class="fragment">
+const [count, setCount] = useState(0);
+  </code><br>
+  <li class="fragment">Updates trigger re-renders</li>
+</ul>
+</section>
+<!-- Lifting State up -->
+<section>
+  <h1>Lifting State Up</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Share state between components</li><br>
+    <li class="fragment">Move state to the <strong>closest common parent</strong></li><br>
+    <li class="fragment">Pass down data & callbacks as props</li>
+  </ul><br><br>
+    <img class="fragment" src="../images/REACT-session/StateMeme.jpeg" alt="So you're telling me meme about React State" height="450vh">
+</section>
+
+<section>
+  <h1>State vs Props</h1>
+  <br><br>
+  <p class="fragment">🍸 Continuing the bartender analogy:</p><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment"><strong>Props</strong> = What the customer asks for (external & fixed)</li><br>
+    <li class="fragment"><strong>State</strong> = What's happening behind the bar (internal & changeable)</li><br>
+  </ul>
+  </section>
+  <section>
+  <h1>In React:</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment"><strong>Props:</strong> Passed into a component from the parent</li><br>
+    <li class="fragment"><strong>State:</strong> Managed within the component and can change</li><br><br>
+  <code class="fragment">
+const [iceCubes, setIceCubes] = useState(10);
+  </code>
+</ul>
+  </section>
+  <section>
+  <h1>useState</h1>
+  <br><br>
+   <p class="fragment">useState to manage dynamic values like form input, toggles, and more!</p>
+   <br><br>
+   <img class="fragment" src="../images/REACT-session/ModeToggle.gif" alt="Dark mode toggle gif" height="500vh">
+</section>
+<section>
+  <h1>🪝 useState Hook</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">  
+  <li class="fragment">Used to manage local state inside functional components</li>
+<br>
+  <li class="fragment">The array destructuring syntax gives you the state value and a function to update it</li>
+</ul><br><br>
+    <img class="fragment" src="../images/REACT-session/CaptHook.gif" alt="Captain Hook" height="400vh">
+</section>
+<section>
+  <h1>useState Hook</h1>
+  <pre><code>
+    import { useState } from 'react';
+
+    function IceBucket() { 
+       const [iceCubes, setIceCubes] = useState(10); 
+    
+       const makeDrink = () => setIceCubes(iceCubes - 2);   
+       return ( 
+        &lt;div&gt; 
+          &lt;p&gt;Ice Cubes: {iceCubes}&lt;/p&gt;
+          &lt;button onClick={makeDrink}&gt;Make Drink&lt;/button&gt; 
+         &lt;/div&gt; <br>
+         ); 
+    }
+      </code></pre>
+</section>
+<!-- Lifting State up | TODO figure out if this goes with the previous slides -->
+<section>
+  <h1>Lifting State Up</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">When multiple components need access to the same state, move the state to their closest common parent</li><br>
+    <li class="fragment">🔄 This pattern ensures consistent, shared data across components</li>
+  </ul>
+</section>
+<section>
+  <h1>Lifting State Up</h1>
+  <br><br>
+  <pre><code>
+// Parent component
+function Bar() { 
+  const [drink, setDrink] = useState('Margarita');
+
+  return ( <br>
+    &lt;&gt; 
+      &lt;DrinkSelector onSelect={setDrink} /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;      &lt;DrinkDisplay drink={drink} /&gt; 
+    &lt;/&gt; 
+  ); 
+}
+</code></pre>
+</section>
+<!-- Topic Slide -->
+<section>
+  <h1>Event Handling</h1>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Event Handling -->
+<section>
+  <h1>Handling Events</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">🖱️ Use standard event names like onClick, onChange, etc.</li><br>
+  <pre><code class="fragment">
+function ClickMe() { 
+  const handleClick = () => alert('Cheers!'); 
+
+  return 
+   &lt;button onClick={handleClick}&gt;Click Me!&lt;/button&gt;; 
+}
+  </code></pre><br>
+  <li class="fragment">💡 Use event.target.value to access input data in handlers</li>
+</ul>
+</section>
+<!-- Topic Slide -->
+<section>
+  <h1>Conditional Rendering</h1>
+  <br>
+  <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Conditional Rendering -->
+<section>
+  <h1>Conditional Rendering</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🔀 Decide what to render based on state or props</li><br>
+  <li class="fragment">🎭 Show different UI based on user interaction or data</li>
+</ul>
+</section>
+<section>
+  <h1>Conditional Rendering</h1>
+  <pre><code class="language-js">
+// Option 1: if <br>
+if (isHappy) { <br>
+  return &lt;Smile /&gt;; 
+} else { 
+  return &lt;Frown /&gt;; 
+}
+
+// Option 2: ternary 
+ return isHappy ? &lt;Smile /&gt; : &lt;Frown /&gt;; 
+
+// Option 3: && <br>
+return isHappy && &lt;Smile /&gt;;
+</code></pre>
+</section>
+<!-- useEffect Hook -->
+<section>
+  <h1>🪝 useEffect Hook</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">Runs side effects in functional components (like fetching data)</li><br>
+  <li class="fragment">⏱️ Great for API calls, subscriptions, timers, and more</li>
+</section>
+<section>
+  <h1>useEffect Hook</h1>
+  <br><br>
+<pre><code class="language-js">
+import { useEffect, useState } from 'react'; 
+
+function App() { 
+  const [drink, setDrink] = useState(null); 
+
+  useEffect(() => { 
+fetch('/api/drink') 
+.then(res => res.json()) 
+.then(data => setDrink(data)) 
+.catch(err => console.error(err)); 
+  }, []); // empty array = run once on mount 
+}
+</code></pre>
+</section>
+<!-- Handling Events & Conditional Rendering -->
+<section>
+  <h1>Event Handling</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">onClick: When a User Orders a Drink</li><br>
+  <code class="fragment">
+&lt;button onClick={makeMojito}&gt;Make Mojito&lt;/button&gt;
+  </code><br>
+  <li class="fragment">Triggers a function when clicked (e.g., update state: “1 Mojito served!”)</li>
+</ul>
+</section>
+<section>
+  <h1>Event Handling</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">onChange: Choosing Ingredients</li><br>
+  <pre><code class="fragment">
+&lt;select onChange={(e) =&gt; setJuice(e.target.value)}&gt; 
+  &lt;option value="orange"&gt;Orange&lt;/option&gt; 
+  &lt;option value="pineapple"&gt;Pineapple&lt;/option&gt; 
+&lt;/select&gt;
+  </code></pre><br>
+  <li class="fragment">React updates the selected ingredient on change</li>
+</ul>
+</section>
+<section>
+  <h1>Event Handling</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">Form Inputs: Custom Cocktail Orders</li><br>
+  <li class="fragment">onChange tracks typing</li><br>
+  <li class="fragment">onSubmit handles the full form</li>
+</ul><br>
+<pre><code class="fragment">
+  &lt;form onSubmit={handleSubmit}&gt; 
+    &lt;input type="text" value={name} onChange={(e) =&gt; <br>&nbsp;&nbsp;&nbsp; setName(e.target.value)} /&gt; 
+    &lt;button type="submit"&gt;Place Order&lt;/button&gt; 
+  &lt;/form&gt;
+</code></pre>
+</section>
+<!-- Conditional Rendering -->
+ <section>
+  <h1>Conditional Rendering</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">1. if Statement — Choose a Cocktail Based on Mood</li>
+  </ul><br><br><br>
+    <img class="fragment" src="../images/REACT-session/moodSmiley.gif" alt="Mood changing smiley face" height="500vh">
+ </section>
+<section>
+  <h1>Conditional Rendering</h1>
+<pre><code class="language-jsx">
+function CocktailSuggestion({ mood }) { 
+ let suggestion; 
+
+   if (mood === 'relaxed') {
+   suggestion = 'Mojito'; 
+  } 
+   else if (mood === 'fun') { 
+        suggestion = 'Margarita'; 
+   } 
+      else { 
+          suggestion = 'Water'; 
+  } 
+    return &lt;h2&gt;Try a {suggestion}!&lt;/h2&gt;; 
+}
+  </code></pre>
+</section>
+<section>
+  <h1>Conditional Rendering</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">2. Ternary Operator — Choose Between Two Cocktails</li></ul><br><br>
+<pre><code class="fragment">
+function CocktailCheck({ age }) {  
+   return ( 
+    &lt;p&gt; 
+  &    {age >= 21 ? 'Here’s your Margarita!' : <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Here’s a nice Mocktail!'} 
+    &lt;/p&gt; 
+ &nbsp; ); 
+}
+</code></pre>
+</section>
+<section>
+  <h1>Conditional Rendering</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">3. Logical && — Show Only if Condition is True</li>
+</ul><br><br>
+<pre><code class="fragment">
+function OrderButton({ selectedDrink }) { 
+  return ( 
+   &lt;div&gt; 
+     {selectedDrink && &lt;button&gt;Place Order for <br>&nbsp;&nbsp;&nbsp;&nbsp; {selectedDrink}&lt;/button&gt;} 
+   &lt;/div&gt;
+
+ ); 
+}
+</code></pre>
+</section>
+<section>
+  <h1>useEffect Hook</h1>
+  <h2>& Fetching Data</h2>
+  <br><br>
+  <p class="fragment">What is useEffect?</p><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">Run code after render — fetch data, update DOM, start timers, listen for events</li><br>
+</ul>
+</section>
+<section>
+  <h1>Example:</h1>
+  <br><br>
+  <p>Make a Cocktail When Selected</p>
+<pre><code class="language-jsx">
+useEffect(() =&gt; { 
+  console.log(`Making a ${selectedDrink}... 🍹`);
+}, [selectedDrink]);
+</code></pre><br>
+  <p>Run Once on Mount</p>
+  <pre><code class="language-jsx">
+useEffect(() =&gt; {
+  console.log('Setting up the cocktail station...');
+}, []);
+  </code></pre>
+</section>
+<section>
+  <h1>Cleanup Example</h1>
+  <br><br>
+<pre><code class="language-jsx">
+useEffect(() =&gt; { 
+  const interval = setInterval(() =&gt; { 
+    console.log('Shaking the cocktail shaker... 🍸');
+  }, 1000); 
+
+  return () =&gt; { 
+   clearInterval(interval);
+   console.log('Bar is closed. No more shaking.'); 
+  }; 
+}, []);
+</code></pre>
+</section>
+<section>
+  <h1>Try/Catch Blocks</h1>
+  <br>
+  <p class="fragment">What is try/catch?</p><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">Try to run code</li><br>
+  <li class="fragment">Catch errors to prevent crashes</li>
+</ul>
+</section>
+<section>
+  <h1>Cocktail Example</h1>
+  <br>
+  <pre><code class="language-jsx">
+function MixCocktail({  ingredients }) { 
+  try { 
+   if (!ingredients.includes('lime')) <br> {throw new Error('We’re out of lime! 🍋');
+    } 
+    return &lt;p&gt;Here’s your perfectly mixed Mojito! 🍃&lt;/p&gt;; <br>
+  } catch (error) { 
+    return &lt;p&gt;Oops! {error.message}&lt;/p&gt;; 
+  } 
+}
+</code></pre>
+</section>
+<section>
+  <h1>Fetching Data with Error Handling</h1>
+  <h2></h2>
+  <pre><code class="language-jsx">
+useEffect(() =&gt; {
+  async function fetchCocktail() {
+    try {
+      const response = await <br>fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php');
+      const data = await response.json();
+      setDrink(data.drinks[0].strDrink);
+    } catch (err) {
+      setError('Could not fetch cocktail! 🍹');
+    }
+  }
+  fetchCocktail();
+}, []);
+  </code></pre>
+</section>
+<section>
+  <h1>Dependency Arrays</h1>
+  <h2>in useEffect</h2>
+<br><br>
+<p class="fragment">What is a Dependency Array?</p><br><br>
+<ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">Tells React when to run the effect</li><br>
+  </section>
+<section>
+  <h1>Examples</h1>
+  <br><br>
+  <ul>
+    <li><code>[]</code> — run once on mount (open the bar)</li><br>
+    <li><code>[selectedDrink]</code> — run when <code>selectedDrink</code> changes</li><br>
+  </ul>
+</section>
+<section>
+  <h3>Example</h3>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+  <li class="fragment">No array — runs every render (too much mixing!)</li>
+</ul><br><br>
+  <pre><code class="fragment">
+useEffect(() =&gt; {
+  console.log(`Mixing a ${selectedDrink}...`);
+}, [selectedDrink]);
+  </code></pre>
+</ul>
+</section>
+<section>
+  <h1>Summary: </h1>
+  <p>React Basics with a Cocktail Twist</p>
+  <br><br>
+  <img src="../images/REACT-session/ReactBasicsSummaryTable.png" alt="Table with summary of React basics" height="700vh">
+</section>
+<!-- Styling Components -->
+<section>
+  <h1>🎨 Styling in React</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment"><strong>Traditional CSS:</strong> Import a .css file</li><br>
+    <li class="fragment"><strong>CSS Modules:</strong> Scoped styles using .module.css</li><br>
+    <li class="fragment"><strong>Tailwind CSS:</strong> Utility-first class names</li><br>
+    <li class="fragment"><strong>Styled-components:</strong> Write styles in JS using template literals</li>
+  </ul>
+</section>
+<section>
+  <h1>Styling in React</h1>
+  <br><br>
+  <pre><code class="language-js">
+    // Example: styled-components
+    import styled from 'styled-components';
+    
+    const Button = styled.button`
+      background: hotpink;
+      color: white;
+    `;
+    
+    &lt;Button&gt;Order Drink&lt;/Button&gt;
+      </code></pre>
+</section>
+<!-- Best Practices -->
+<section>
+  <h1>React Best Practices</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">📁 Organize components in folders</li><br>
+    <li class="fragment">🔁 Keep components small and focused</li><br>
+    <li class="fragment">🔍 Separation of concerns: UI, logic, and state</li><br>
+    <li class="fragment">♻️ Reuse components with props</li><br>
+    <li class="fragment">💬 Add comments and meaningful names</li><br>
+    <li class="fragment">🧼 Keep JSX clean and readable</li>
+  </ul>
+</section>
