@@ -245,17 +245,21 @@
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
     <li class="fragment">Core React (react + react-dom): </li><br>
-    <ul><li class="fragment">📚✨ A JavaScript library for building user interfaces (🧐   view layer only)</li></ul><br>
+    <ul><li class="fragment">📚✨JavaScript library for building user interfaces</li></ul><br>
+<!--    True if only using for components, state, useEffect, ect -->
+  </ul>
  </section>
  <section>
   <h1>In Practice:</h1>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
+<!--    As soon as React structures your architecture, it's a framework -->
     <li class="fragment">React is often used as a framework because it shapes how you build UIs with components and a declarative style</li><br>
-    <li class="fragment">React Ecosystem 🔄   (React Router, Redux, Vite/Cra, etc.) transforms React into a full framework-like experience for SPAs</li>
+    <li class="fragment">React Ecosystem 🔄   (React Router, Redux, Vite, etc.) transforms React into a full framework-like experience</li>
+  </ul>
  </section>
  <section>
-  <h1>Summary:</h1>
+  <h1>tldr;</h1>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
     <li class="fragment">On its own => Library 📚</li><br>
@@ -283,7 +287,7 @@
     <li class="fragment">♻️ Component-based = Reusable code</li> <br>
     <li class="fragment">⚡ Fast updates</li> <br>
     <li class="fragment">🌍 Huge community + job market</li> <br>
-    <li class="fragment">🤹  Makes JavaScript more declarative and fun</li>
+    <li class="fragment">🤝🏻 Team Development</li>
   </ul> 
 </section>
  <section>
@@ -291,24 +295,15 @@
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
     <li class="fragment">Uses the familiar HTML, CSS, and JavaScript</li>
-  </ul><br><br><br>
-  <img class="fragment" src="../images/REACT-session/Tim&EricMindBlown.gif" alt="Tim & Eric's mind blown gif" height="500vh" />
+  </ul>
  </section>
  <section>
-<h1>💡 Think</h1>
-  <br><br>
-  <p class="fragment">React Components = LEGO Bricks</p><br><br>
-  <img class="fragment" src="../images/REACT-session/Lego Looking Away.gif" alt="LEGO monkey looking away gif" height="600vh" />  
-</section>
-<section>
-  <h1>React + LEGOs</h1>
-  <br>
-  <img src="../images/REACT-session/LegoBricks.gif" alt="LEGO bricks infinite cube building" height="300vh"><br>
-<ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">Build your UI from <strong>small pieces</strong></li><br>
-    <li class="fragment">Reuse them anywhere</li><br>
-    <li class="fragment">Making development more efficient and maintainable</li>
-  </ul>
+<h1>Component-based thinking</h1>
+   <ul style="list-style: disc; margin-left: 80px;">
+      <li class="fragment">Reuse components as “building blocks” (like LEGO)</li>
+      <li class="fragment">Build something one time (like “Button” or “Card”) and use it 20 times!</li>
+   </ul>
+   <img class="fragment" src="../images/REACT-session/buttonsExample.png" width="1500px"/>
 </section>
 <section>
   <br><br>
@@ -322,6 +317,24 @@
     <li class="fragment">Instead of re-rendering entire pages</li><br>
   </ul><br>
   <img class="fragment" src="../images/REACT-session/RachelMcAdamsSmart.gif" alt="Rachel McAdams saying 'Smart'" height="500vh" />
+ </section>
+ <section>
+  <h1>Huge community + job market:</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">High Job Demand</li><br>
+    <li class="fragment">Lots of tutorials</li><br>
+    <li class="fragment">Many discord/reddit groups</li><br>
+  </ul>
+ </section>
+ <section>
+  <h1>Team Development:</h1>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Allows for multiple people to build and test their pieces without messing up other’s code</li><br>
+    <li class="fragment">reusable UI components (like buttons, modals, forms) can be used consistently across the app</li><br>
+    <li class="fragment">Makes development more efficient and maintainable with large teams</li><br>
+  </ul>
  </section>
 <!-- Placeholder Slide -->
 <section>
@@ -344,28 +357,32 @@
   </ul>
 </section>
  <section>
-  <h1>Component-Based Architecture</h1>
+  <h1>1️⃣ Component-Based Architecture</h1>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
     <li class="fragment">Apps built from small, reusable pieces</li><br>
+    <li class="fragment">Example: Netflix</li><br>
+    <li class="fragment">Gives us Vertical Separation of Concerns</li><br>
     </ul>
  </section>
  <!-- Separation of Concerns -->
  <section>
   <h1>Vertical Separation of Concerns: </h1>
-  <br><br>
+  <br>
   <ul style="list-style: disc; margin-left: 80px;">
-     <li class="fragment">Changes the focus from separating by file type (HTML, CSS, JS) to grouping by functionality — everything for a component (markup, styles, logic) lives together in one place</li><br>
+     <li class="fragment">Changes the focus from separating by file type (HTML, CSS, JS)...</li><br>
+     <li class="fragment">...to grouping by functionality</li><br>
+     <li class="fragment">Everything for a component (content, styles, logic) lives together in one place</li><br>
      <li class="fragment">Allows for component reusability </li>
   </ul>
  </section>
  <section>
   <br><br>
-  <img src="../images/REACT-session/SepOfConcerns.png" alt="Separation of concerns chart" height="800vh" />
+  <img src="../images/REACT-session/SepOfConcerns.png" alt="Separation of concerns chart" height="850vh" />
  </section>
  <!-- Virtual DOM -->
 <section>
-  <h1>Virtual DOM</h1>
+  <h1>2️⃣ Virtual DOM</h1>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
     <li class="fragment">React keeps a draft (Virtual DOM)</li><br>
@@ -380,14 +397,14 @@
 </section>
 <!-- Declarative UI -->
 <section>
-  <h1>Declarative UI</h1>
+  <h1>3️⃣ Declarative UI</h1>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">Focus on what the UI should look like, not how to update it</li><br>
-    <li class="fragment">You describe what the UI should look like</li><br>
-    <li class="fragment">React figures out how to make it happen</li><br>
-    <li class="fragment">Simpler, readable code</li>
+    <li class="fragment">Focus on <i>what</i> the UI should look like, not <i>how</i> to update it</li><br>
+    <li class="fragment">i.e. You tell React what the UI should look like...</li><br><br>
   </ul>
+  <br>
+  <p class="fragment">React takes care of the rest behind the scenes</p>
 </section>
 <section>
   <br><br>
@@ -440,12 +457,13 @@
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
     <li class="fragment">JSX = JavaScript XML</li><br>
-    <li class="fragment">A syntax extension for JavaScript</li><br>
     <li class="fragment">Lets you write HTML-like code in JavaScript</li><br>
+    <li class="fragment">Notice the file extensions inside a React project: .jsx</li><br>
     </ul><br><br>
     <pre><code class="fragment">
       const drink = "Margarita";
-      return &lt;h1&gt;I would like a {drink}, please!&lt;/h1&gt;</code></pre> 
+      return &lt;h1&gt;I would like a {drink}, please!&lt;/h1&gt;
+    </code></pre>
  </section>
 <!-- Placeholder Slides -->
 <section>
