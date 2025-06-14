@@ -181,7 +181,7 @@
  Fun Fact:
  Famous actress Hedy Lamarr has been dubbed “the mother of Wi-Fi” and other wireless communications like GPS and Bluetooth for the development of frequency hopping technology -->
 <section>
-  <h1>Cheers Ladies!</h1>
+  <h1>Cheers Lady Devs!</h1>
   <br><br>
   <img src="../images/REACT-session/HedyLamarL'chaim.gif" alt="Hedy Lamar L'Chaim" height="750vh">
 </section>
@@ -193,6 +193,18 @@
   <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
 </section>
 <!-- Topic List Slide -->
+<!-- Progress Slide: Section 1 -->
+<section>
+  <h2>Tonight's Agenda</h2>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li style="color: orange; font-weight: bold;">🍹 Intro to React</li><br>
+    <li>JSX & Components</li><br>
+    <li>Props vs State</li><br>
+    <li>Event Handling & Conditional Rendering</li><br>
+    <li>Best Practices & Component Organization</li><br>
+  </ul>
+</section>
 <section>
   <h1>Intro to React</h1>
   <br><br>
@@ -212,6 +224,7 @@
     <li style="color: rebeccapurple">Key Features of React</li>
   </ul>
 </section>
+
 <!-- What is React section -->
  <section>
   <h1>What is React?</h1>
@@ -419,7 +432,7 @@
   </p>
   <br>
   <p style="font-size: 7vh;">
-    Slides: <a href="https://bit.ly/cc-js-slides">https://bit.ly/cc-js-slides</a>
+    Slides: <a href="https://bit.ly/cc-react-slides">https://bit.ly/cc-react-slides</a>
   </p>
   <br>
 <!-- TODO | Change image monthly -->  
@@ -430,6 +443,18 @@
   <h1>JSX & Components</h1>
   <br>
   <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+</section>
+<!-- Progress Slide: Section 2 -->
+<section>
+  <h2>Tonight's Agenda</h2>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li>Intro to React</li><br>
+    <li style="color: orange; font-weight: bold;">🍹 JSX & Components</li><br>
+    <li>Props vs State</li><br>
+    <li>Event Handling & Conditional Rendering</li><br>
+    <li>Best Practices & Component Organization</li><br>
+  </ul>
 </section>
 <!-- Topic List Slide -->
 <section>
@@ -493,12 +518,10 @@
 </section>
 <!-- Why JSX is awesome section -->
 <section>
-  <h1>Why JSX is awesome?</h1>
+  <h1>Why JSX is awesome? 🦸🏻</h1>
   <br><br>
-    <p class="fragment">JSX Superpowers 🦸‍♀️</p><br><br>
     <ul style="list-style: disc; margin-left: 80px;">
       <li class="fragment">Cleaner code</li><br>
-      <li class="fragment">Blend layout + logic</li><br>
       <li class="fragment">Dynamic and powerful</li>
     </ul>     
 </section>
@@ -515,13 +538,14 @@
   <h1>Dynamic: </h1>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">JSX lets you use JavaScript expressions inside curly braces</li><br>
-    <li class="fragment">Makes it easy to create dynamic content</li><br>
-    <li class="fragment">Example: </li><br>
+    <li class="fragment">Use real JavaScript in your UI:</li><br>
+    <li class="fragment">Use JavaScript expressions inside curly braces</li><br>
     </ul>
     <pre><code class="fragment">
       const drink = "Margarita";
-      return &lt;h2&gt;I'd like a {drink}, please!&lt;/h2&gt;;</code></pre> 
+
+      return &lt;h2&gt;I'd like a {drink}, please!&lt;/h2&gt;;
+    </code></pre>
 </section>
 
 <!-- Basic component structure -->
@@ -530,24 +554,30 @@
   <br><br>
  </section>
 
-<!-- React Component analogy -->
+<!-- Function Components -->
 <section>
-  <h1>React Component Analogy</h1>
-  <br><br>
+  <h1>Function Components</h1>
+  <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">👩🍹 Bartender = </li>
-      <ul><li class="fragment"> 🤰Parent Component</li></ul><br><br>
-    <li class="fragment">🍸 Drink = </li>
-    <ul><li class="fragment">👧 Child Component</li></ul><br><br>
-    <li class="fragment">🙋‍♀️💬 Customer = </li>
-      <ul> 
-        <li class="fragment">👩‍💻 User</li></ul>
+    <li class="fragment">🔧 Simplest way to create a React component</li><br>
+    <li class="fragment">📝 Components start with a capital letter</li><br>
+    <li class="fragment">🍸 Like creating a cocktail recipe!</li><br>
   </ul>
 </section>
-<!-- React Component analogy GIF -->
+
+<!-- Function Components Example -->
 <section>
-  <br><br>
-  <img src="../images/REACT-session/ShiningHeyNowYeah.gif" alt="The Shining Jack Nicholson saying 'Hey Now'" height="800vh">
+  <h2>Function Component Example</h2>
+  <pre><code data-trim data-noescape>
+    const CocktailCard = () => {
+      return (
+        &lt;div&gt;
+          &lt;h2&gt;Mojito&lt;/h2&gt;
+          &lt;p&gt;Minty and refreshing 🍃&lt;/p&gt;
+        &lt;/div&gt;
+      );
+    }
+  </code></pre>
 </section>
 
 <!-- Work slide 2: -->
@@ -559,7 +589,7 @@
   </p>
   <br>
   <p style="font-size: 7vh;">
-    Slides: <a href="https://bit.ly/cc-js-slides">https://bit.ly/kcwit-cc-css</a>
+    Slides: <a href="https://bit.ly/cc-react-slides">https://bit.ly/cc-react-slides</a>
   </p>
   <br>
 <!-- TODO | Change image monthly -->  
@@ -571,6 +601,18 @@
   <br>
   <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
 </section>
+        <!-- Progress Slide: Section 3 -->
+        <section>
+          <h2>Tonight's Agenda</h2>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>Intro to React</li><br>
+            <li>JSX & Components</li><br>
+            <li style="color: orange; font-weight: bold;">🍹 Props vs State</li><br>
+            <li>Event Handling & Conditional Rendering</li><br>
+            <li>Best Practices & Component Organization</li><br>
+          </ul>
+        </section>
 <!-- Topic List Slide -->
 <section>
   <h1>Props vs State</h1>
@@ -589,7 +631,7 @@
     <li>useEffect Hook</li>
   </ul>
 </section>
-<!-- Placeholder Slides -->
+<!-- Progress Slide 1: Props Focus -->
 <section>
   <h1>Props vs State</h1>
   <br><br>
@@ -608,160 +650,619 @@
   </ul>
 </section>
 
-<!-- section -->
-<section>
-  <h1></h1>
-  <br><br>
- </section>
+        <section>
+          <h1>Props vs State</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>Props: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>🍸 Data passed from parent to child</li>
+                <li>Component reusability</li>
+              </ul><br><br>
+            <li style="color: rebeccapurple">State: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Component’s local memory</li>
+                <li>useState hook basics</li>
+              </ul></li><br>
+            <li style="color: rebeccapurple">useEffect Hook</li>
+          </ul>
+        </section>
 
-<!-- Placeholder Slides -->
+        <!-- Props: Passing Data -->
+        <section>
+          <h1>🔸 Props: Passing Data</h1>
+          <br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">📦 Short for "properties"</li><br>
+            <li class="fragment">🥗 Like ingredients passed into a recipe</li><br>
+            <li class="fragment">👨‍👩‍👧 Props come from the parent</li><br>
+            <li class="fragment">🔒 Can't be changed by the child</li>
+          </ul>
+        </section>
+
+        <!-- Props Example Parent -->
+        <section>
+          <h2>Props Example (Parent)</h2>
+          <pre><code data-trim data-noescape>
+    &lt;Cocktail
+      liquor="tequila"
+      mixer="grapefruit juice"
+    /&gt;
+  </code></pre>
+          <br>
+          <p class="fragment">🍹 Parent passes ingredients to child!</p>
+        </section>
+
+        <!-- Props Example Child -->
+        <section>
+          <h2>Props Example (Child)</h2>
+          <pre><code data-trim data-noescape>
+    const Cocktail = ({ liquor, mixer }) => {
+      return (
+        &lt;p&gt;Your cocktail: {liquor} and {mixer}&lt;/p&gt;
+      );
+    }
+  </code></pre>
+          <br>
+          <p class="fragment">🎯 Child receives and uses the props!</p>
+        </section>
+
+        <section>
+          <h1>Props vs State</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>Props: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Data passed from parent to child</li>
+                <li>🍸 Component reusability</li>
+              </ul><br><br>
+            <li style="color: rebeccapurple">State: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Component’s local memory</li>
+                <li>useState hook basics</li>
+              </ul></li><br>
+            <li style="color: rebeccapurple">useEffect Hook</li>
+          </ul>
+        </section>
+
+        <!-- Component Reusability -->
+        <section>
+          <h1>Component Reusability</h1>
+          <br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">🍹 Components = Cocktail Recipes</li><br>
+            <li class="fragment">📋 Each recipe defines ingredients & presentation</li><br>
+            <li class="fragment">🔧 Ingredients = Props</li><br>
+            <li class="fragment">✨ Customize your component's "flavor"</li>
+          </ul>
+        </section>
+
+        <!-- Reusability Example -->
+        <section>
+          <h2>Same Recipe, Different Cocktails!</h2>
+          <pre><code data-trim data-noescape>
+    &lt;Mojito lime="2 slices" mint="extra" /&gt;
+    &lt;Mojito lime="1 slice" mint="light" /&gt;
+  </code></pre>
+          <br>
+          <p class="fragment">🎭 Same component, different results!</p>
+        </section>
+
+        <!-- Mix Once, Use Anywhere -->
+        <section>
+          <h1>Mix Once, Use Anywhere</h1>
+          <br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">📝 Write your Mojito component once</li><br>
+            <li class="fragment">🔄 Reuse it everywhere in your app</li><br>
+            <li class="fragment">🍹 Like using the same recipe at the bar</li><br>
+            <li class="fragment">⚡ No need to rewrite every time!</li>
+          </ul>
+        </section>
+
+        <!-- Make New Drinks from Old Ones -->
+        <section>
+          <h1>Make New Drinks from Old Ones</h1>
+          <br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">🧩 Combine smaller components</li><br>
+            <li class="fragment">🥃 SugarSyrup + Glass + Garnish = Complex Cocktail</li><br>
+            <li class="fragment">🏗️ Build UI from smaller building blocks</li><br>
+            <li class="fragment">🎨 Compose like a master bartender!</li>
+          </ul>
+        </section>
+
+        <!-- Why It's Awesome -->
+        <section>
+          <h1>Why It's Awesome 🎉</h1>
+          <br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">♻️ Reusable: One recipe, infinite cocktails</li><br>
+            <li class="fragment">🎛️ Customizable: Change ingredients (props) anytime</li><br>
+            <li class="fragment">🗂️ Organized: Keep your UI menu clean</li><br>
+            <li class="fragment">🍸 Design your app like a bartender!</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Props vs State</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>Props: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Data passed from parent to child</li>
+                <li>Component reusability</li>
+              </ul><br><br>
+            <li >🍸 State: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Component’s local memory</li>
+                <li>useState hook basics</li>
+              </ul></li><br>
+            <li style="color: rebeccapurple">useEffect Hook</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Props vs State</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>Props: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Data passed from parent to child</li>
+                <li>Component reusability</li>
+              </ul><br><br>
+            <li >State: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>🍸 Component’s local memory</li>
+                <li>useState hook basics</li>
+              </ul></li><br>
+            <li style="color: rebeccapurple">useEffect Hook</li>
+          </ul>
+        </section>
+
+<!-- What is State vs Props -->
 <section>
-  <h1>Props vs State</h1>
-  <br><br>
-<ul style="list-style: disc; margin-left: 80px;">
-    <li>Props: <br>
-      <ul style="list-style: disc; margin-left: 80px;">
-        <li>🍸 Data passed from parent to child</li>
-        <li style="color: rebeccapurple">Component reusability</li>
-      </ul><br><br>
-    <li style="color: rebeccapurple">State: <br> 
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>Component’s local memory</li>
-      <li>useState hook basics</li>
-    </ul></li><br>
-    <li style="color: rebeccapurple">useEffect Hook</li>
+  <h1>What is State vs Props?</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Going back to our bartender analogy...</p>
+</section>
+
+<!-- State Explanation -->
+<section>
+  <h1>🧠 State = What's happening inside the bar</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🧠 State is like a component's memory</li><br>
+    <li class="fragment">🧊 How many ice cubes you have left</li><br> 
+    <li class="fragment">🍃 Whether you're out of mint</li><br>
+    <li class="fragment">⚙️ If the blender is working</li>
   </ul>
- </section>
+</section>
 
-<!-- section -->
+<!-- State Example with Ice Cubes -->
 <section>
-  <h1></h1>
-  <br><br>
- </section>
-
- <!-- Placeholder Slides -->
- <section>
-    <h1>Props vs State</h1>
-  <br><br>
-<ul style="list-style: disc; margin-left: 80px;">
-    <li>Props: <br>
-      <ul style="list-style: disc; margin-left: 80px;">
-        <li style="color: rebeccapurple">Data passed from parent to child</li>
-        <li>🍸 Component reusability</li>
-      </ul><br><br>
-    <li style="color: rebeccapurple">State: <br> 
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>Component’s local memory</li>
-      <li>useState hook basics</li>
-    </ul></li><br>
-    <li style="color: rebeccapurple">useEffect Hook</li>
+  <h2>State Example: Ice Cubes 🧊</h2>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🧊 Start with 10 ice cubes in bucket</li><br>
+    <li class="fragment">🍹 Every drink removes 2 ice cubes</li><br>
+    <li class="fragment">📝 Number left = your state</li><br>
+    <li class="fragment">⏰ Changes over time!</li>
   </ul>
- </section>
+</section>
 
-<!-- section -->
+        <!-- Visual Example: Ice Bucket -->
+        <section>
+          <h2>What It Looks Like</h2>
+          <br>
+          <div style="border: 8px solid #333; padding: 80px; border-radius: 30px; background-color: #000000; max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 72px; margin: 40px 0; font-weight: bold;">🧊 Ice cubes: <span style="color: #0066cc;">10</span></p>
+            <button style="padding: 40px 80px; font-size: 48px; background-color: #4CAF50; color: white; border: none; border-radius: 20px; cursor: pointer; box-shadow: 0 8px 16px rgba(0,0,0,0.2); font-weight: bold;">Make Drink 🍹</button>
+          </div>
+          <br>
+          <p class="fragment" style="font-size: 6vh;">👆 Click button → ice decreases → warning appears at 0!</p>
+        </section>
+
+<!-- State in React Code -->
 <section>
-  <h1></h1>
-  <br><br>
- </section>
+  <h2>State in React</h2>
+  <pre><code data-trim data-noescape>
+    const IceBucket = () => {
+      const [iceCubes, setIceCubes] = useState(10);
+      
+      const makeDrink = () => {
+        setIceCubes(iceCubes - 2);
+      };
+      
+      return (
+        &lt;div&gt;
+          &lt;p&gt;Ice cubes: {iceCubes}&lt;/p&gt;
+          &lt;button onClick={makeDrink}&gt;Make Drink&lt;/button&gt;
+          {iceCubes === 0 && &lt;p&gt;🍧 Out of Ice!&lt;/p&gt;}
+        &lt;/div&gt;
+      );
+    };
+  </code></pre>
+</section>
 
- <!-- Placeholder Slides -->
-   <section>
-    <h1>Props vs State</h1>
-  <br><br>
-<ul style="list-style: disc; margin-left: 80px;">
-    <li style="color: rebeccapurple">Props: <br>
-      <ul style="list-style: disc; margin-left: 80px;">
-        <li style="color: rebeccapurple">Data passed from parent to child</li>
-        <li style="color: rebeccapurple">Component reusability</li>
-      </ul><br><br>
-    <li>🍸 State: <br> 
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>Component’s local memory</li>
-      <li>useState hook basics</li>
-    </ul></li><br>
-    <li style="color: rebeccapurple">useEffect Hook</li>
+<!-- State Characteristics -->
+<section>
+  <h1>State Characteristics</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🏠 Data lives inside a component</li><br>
+    <li class="fragment">✍️ Component can change it</li><br>
+    <li class="fragment">👆 Based on user clicks, timers, etc.</li><br>
+    <li class="fragment">🔄 Updates the UI automatically</li>
   </ul>
- </section>
+</section>
 
-<!-- section -->
+<!-- Putting it Together -->
 <section>
-  <h1></h1>
-  <br><br>
- </section>
+  <h1>Putting it Together</h1>
+  <br>
+  <div style="display: flex; justify-content: space-around;">
+    <div class="fragment">
+      <h3>🍹 Props</h3>
+      <p>What customer asks for</p>
+      <p>(external & fixed)</p>
+    </div>
+    <div class="fragment">
+      <h3>🧠 State</h3>
+      <p>What's happening behind the bar</p>
+      <p>(internal & changeable)</p>
+    </div>
+  </div>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">Both essential for great drinks & UIs! 🎉</p>
+</section>
 
- <!-- Placeholder Slides -->
-   <section>
-    <h1>Props vs State</h1>
+<!-- Fun GIF Section -->
+<section>
   <br><br>
-<ul style="list-style: disc; margin-left: 80px;">
-    <li style="color: rebeccapurple">Props: <br>
-      <ul style="list-style: disc; margin-left: 80px;">
-        <li style="color: rebeccapurple">Data passed from parent to child</li>
-        <li style="color: rebeccapurple">Component reusability</li>
-      </ul><br><br>
-    <li>State: <br> 
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>🍸 Component’s local memory</li>
-      <li style="color: rebeccapurple">useState hook basics</li>
-    </ul></li><br>
-    <li style="color: rebeccapurple">useEffect Hook</li>
+  <img src="../images/REACT-session/Tim&EricMindBlown.gif" alt="Mind blown reaction" height="600vh">
+</section>
+
+        <section>
+          <h1>Props vs State</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>Props: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Data passed from parent to child</li>
+                <li>Component reusability</li>
+              </ul><br><br>
+            <li >State: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Component’s local memory</li>
+                <li>🍸 useState hook basics</li>
+              </ul></li><br>
+            <li style="color: rebeccapurple">useEffect Hook</li>
+          </ul>
+        </section>
+
+<!-- useState Hook Introduction -->
+<section>
+  <h1>useState Hook</h1>
+  <p style="font-size: 6vh;">Managing local state in function components</p>
+</section>
+
+<!-- What is useState Hook -->
+<section>
+  <h1>What is the useState Hook?</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">📝 Gives function components memory</li><br>
+    <li class="fragment">📋 Like a bartender's notepad</li><br>
+    <li class="fragment">🔄 Updates UI when data changes</li><br>
+    <li class="fragment">⚡ Only updates what needs to change</li>
   </ul>
- </section>
+</section>
 
-<!-- section -->
+<!-- The Notepad Analogy -->
 <section>
-  <h1></h1>
-  <br><br>
- </section>
+  <h1>The Notepad = useState</h1>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">"Hey React, I need memory to track something!"</p>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">🍹 Track mojitos served at your virtual bar</p>
+</section>
 
-  <!-- Placeholder Slides -->
-   <section>
-    <h1>Props vs State</h1>
-  <br><br>
-<ul style="list-style: disc; margin-left: 80px;">
-    <li style="color: rebeccapurple">Props: <br>
-      <ul style="list-style: disc; margin-left: 80px;">
-        <li style="color: rebeccapurple">Data passed from parent to child</li>
-        <li style="color: rebeccapurple">Component reusability</li>
-      </ul><br><br>
-    <li>State: <br> 
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">Component’s local memory</li>
-      <li>🍸 useState hook basics</li>
-    </ul></li><br>
-    <li style="color: rebeccapurple">useEffect Hook</li>
+<!-- useState Example -->
+<section>
+  <h2>useState Example</h2>
+  <pre><code data-trim data-noescape>
+    const [iceCubeCount, setIceCubeCount] = useState(10);
+    
+    // iceCubeCount = current value (how many ice cubes left)
+    // setIceCubeCount = function to update number of ice cubes
+    
+    // When someone orders:
+    setIceCubeCount(iceCubeCount - 2);
+  </code></pre>
+  <br>
+  <p class="fragment">🎯 React updates the screen automatically!</p>
+</section>
+<!-- useState Example -->
+<section>
+  <h2>useState Example</h2>
+  <pre><code data-trim data-noescape>
+    const [mojitoCount, setMojitoCount] = useState(0);
+
+    // mojitoCount = current value (how many served)
+    // setMojitoCount = function to update it
+
+    // When someone orders:
+    setMojitoCount(mojitoCount + 1);
+  </code></pre>
+  <br>
+  <p class="fragment">🎯 React updates the screen automatically!</p>
+</section>
+
+<!-- How It Feels in Action -->
+<section>
+  <h1>How It Feels in Action</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🍹 Customer orders → mark it down</li><br>
+    <li class="fragment">📝 Update notepad (state)</li><br>
+    <li class="fragment">📺 Menu updates automatically</li><br>
+    <li class="fragment">⚡ Smooth and instant!</li>
   </ul>
- </section>
+</section>
 
-<!-- section -->
+<!-- Why useState is Awesome -->
 <section>
-  <h1></h1>
-  <br><br>
- </section>
-
-   <!-- Placeholder Slides -->
-   <section>
-    <h1>Props vs State</h1>
-  <br><br>
-<ul style="list-style: disc; margin-left: 80px;">
-    <li style="color: rebeccapurple">Props: <br>
-      <ul style="list-style: disc; margin-left: 80px;">
-        <li style="color: rebeccapurple">Data passed from parent to child</li>
-        <li style="color: rebeccapurple">Component reusability</li>
-      </ul><br><br>
-    <li style="color: rebeccapurple">State: <br> 
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">Component’s local memory</li>
-      <li style="color: rebeccapurple">useState hook basics</li>
-    </ul></li><br>
-    <li>🍸 useEffect Hook</li>
+  <h1>Why useState is Awesome 🎉</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🎯 Simple way to manage changing data</li><br>
+    <li class="fragment">⚙️ Works great in function components</li><br>
+    <li class="fragment">🔄 Keeps UI in sync with real-time updates</li><br>
+    <li class="fragment">👆 Handles clicks, forms, timers, etc.</li>
   </ul>
- </section>
- <!-- section -->
+</section>
+
+<!-- Lifting State Up Introduction -->
 <section>
-  <h1></h1>
+  <h1>Lifting State Up</h1>
+  <p style="font-size: 6vh;">How to share state between components</p>
+</section>
+
+<!-- What is Lifting State Up -->
+<section>
+  <h1>What is "Lifting State Up"?</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🤝 Two components need same info</li><br>
+    <li class="fragment">🏠 State can only live in one component</li><br>
+    <li class="fragment">⬆️ Move state to closest parent</li><br>
+    <li class="fragment">📤 Share with children via props</li>
+  </ul>
+</section>
+
+<!-- Two Bartenders Analogy -->
+<section>
+  <h1>Two Bartenders at the Bar</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">👩‍🍳 Bartender Alex mixes drinks</li><br>
+    <li class="fragment">🥛 Bartender Nessa manages glassware</li><br>
+    <li class="fragment">📊 Both need to know drink count</li><br>
+    <li class="fragment">🤔 Separate counts = confusion!</li>
+  </ul>
+</section>
+
+<!-- Shared Clipboard Solution -->
+<section>
+  <h1>Solution: Shared Clipboard 📋</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">👩‍💼 Bar Manager Tracy has the clipboard</li><br>
+    <li class="fragment">📝 Single source of truth</li><br>
+    <li class="fragment">👥 Both bartenders check same count</li><br>
+    <li class="fragment">🎯 Clipboard = lifted-up state!</li>
+  </ul>
+</section>
+
+<!-- Code Example: Before Lifting -->
+<section>
+  <h2>Before Lifting State</h2>
+  <pre><code data-trim data-noescape>
+    // State in one component
+    const [drinkCount, setDrinkCount] = useState(0);
+    
+    // But two components need it! 😢
+  </code></pre>
+</section>
+
+<!-- Code Example: After Lifting -->
+<section>
+  <h2>After Lifting State</h2>
+  <pre><code data-trim data-noescape>
+    // Move to parent component:
+    const [drinkCount, setDrinkCount] = useState(0);
+    
+    // Pass down as props:
+    &lt;DrinkMaker 
+      drinkCount={drinkCount} 
+      setDrinkCount={setDrinkCount}
+    /&gt;
+    &lt;GlassCleaner
+      drinkCount={drinkCount}
+    /&gt;
+  </code></pre>
+</section>
+
+<!-- Lifting State Summary -->
+<section>
+  <h1>Lifting State Up Summary</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">⬆️ Move shared state to parent</li><br>
+    <li class="fragment">📤 Pass down as props to children</li><br>
+    <li class="fragment">🎯 Single source of truth</li><br>
+    <li class="fragment">🍹 Like a well-run bar!</li>
+  </ul>
+</section>
+
+<!-- Final GIF -->
+<section>
   <br><br>
- </section>
+  <img src="../images/REACT-session/bartender-working.gif" alt="Bartender working efficiently" height="600vh">
+</section>
+
+        <section>
+          <h1>Props vs State</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>Props: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Data passed from parent to child</li>
+                <li>Component reusability</li>
+              </ul><br><br>
+            <li >State: <br>
+              <ul style="list-style: disc; margin-left: 80px;">
+                <li>Component’s local memory</li>
+                <li>useState hook basics</li>
+              </ul></li><br>
+            <li>🍸 useEffect Hook</li>
+          </ul>
+        </section>
+
+<!-- useEffect Hook Introduction -->
+<section>
+  <h1>useEffect Hook</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Managing side effects in React</p>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">🍸 Like telling the bartender when to prepare!</p>
+</section>
+
+<!-- What is useEffect -->
+<section>
+  <h1>What is useEffect?</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">⚡ Tells React to do something after rendering</li><br>
+    <li class="fragment">📡 Fetching data</li><br>
+    <li class="fragment">🔄 Updating the DOM</li><br>
+    <li class="fragment">⏰ Starting timers or listening for events</li>
+  </ul>
+</section>
+
+<!-- Bartender Analogy -->
+<section>
+  <h1>The Bartender Analogy</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">When someone picks a drink from the menu...</p>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">🍹 You automatically start making it!</p>
+</section>
+
+<!-- useEffect Example -->
+<section>
+  <h2>useEffect Example</h2>
+  <pre><code data-trim data-noescape>
+    import { useEffect, useState } from 'react';
+
+    const CocktailMaker = ({ selectedDrink }) => {
+
+      useEffect(() => {
+        console.log(`Making a ${selectedDrink}... 🍹`);
+      }, [selectedDrink]);
+
+      return &lt;h2&gt;Your {selectedDrink} will be ready soon!&lt;/h2&gt;;
+    };
+  </code></pre>
+  <p class="fragment">🎯 Every time the drink changes, make a new one!</p>
+</section>
+
+<!-- useEffect Runs When -->
+<section>
+  <h1>When Does useEffect Run?</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🏁 After component renders</li><br>
+    <li class="fragment">🔄 When dependencies change</li><br>
+    <li class="fragment">🧹 Before component unmounts (cleanup)</li><br>
+  </ul>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">Like a bartender who responds to orders! 🍸</p>
+</section>
+
+<!-- Only Run Once: On Mount -->
+<section>
+  <h1>Only Run Once: Bar Setup</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Setup the cocktail station when bartender starts shift</p>
+  <br>
+  <pre class="fragment"><code data-trim data-noescape>
+    useEffect(() => {
+      console.log('Setting up the cocktail station...');
+    }, []);
+  </code></pre>
+  <br>
+  <p class="fragment">📝 Empty array [] = "Run only once when component loads"</p>
+</section>
+
+<!-- Dependency Arrays -->
+<section>
+  <h1>Dependency Arrays</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">📋 Tell React when to run the effect</li><br>
+    <li class="fragment">⚡ Only run when these values change</li><br>
+  </ul>
+</section>
+
+<!-- Dependency Array Examples -->
+<section>
+  <h1>Dependency Array Examples</h1>
+  <br>
+  <div style="font-size: 4vh;">
+    <div class="fragment">
+      <p><strong>No array:</strong> useEffect(() => {...})</p>
+      <p style="color: orange;">⚠️ Runs on every render (too much mixing!)</p>
+    </div><br>
+    <div class="fragment">
+      <p><strong>Empty array:</strong> useEffect(() => {...}, [])</p>
+      <p style="color: deepskyblue;">✅ Runs once on mount (bar setup)</p>
+    </div><br>
+    <div class="fragment">
+      <p><strong>With dependencies:</strong> useEffect(() => {...}, [drink])</p>
+      <p style="color: deepskyblue;">✅ Runs when drink changes</p>
+    </div>
+  </div>
+</section>
+
+<!-- useEffect Summary -->
+<section>
+  <h1>useEffect Summary</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">⚡ Run code after component renders</li><br>
+    <li class="fragment">🎯 Control when effects run with dependencies</li><br>
+    <li class="fragment">🧹 Clean up when component unmounts</li><br>
+    <li class="fragment">🍹 Perfect for data fetching and side effects</li>
+  </ul>
+</section>
+
+<!-- useEffect Best Practices -->
+<section>
+  <h1>useEffect Best Practices</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">📝 Always include dependencies</li><br>
+    <li class="fragment">🎯 Keep effects focused on one task</li><br>
+    <li class="fragment">⚠️ Avoid infinite loops! (don't forget dependency arrays)</li>
+  </ul>
+</section>
+
+<!-- Cheers GIF -->
+<section>
+  <br><br>
+  <img src="../images/REACT-session/HedyLamarL'chaim.gif" alt="Hedy Lamar L'Chaim" height="700vh">
+</section>
 
 <!-- Work slide 3: -->
 <section>
@@ -772,7 +1273,7 @@
   </p>
   <br>
   <p style="font-size: 7vh;">
-    Slides: <a href="https://bit.ly/cc-js-slides">https://bit.ly/kcwit-cc-css</a>
+    Slides: <a href="https://bit.ly/cc-react-slides">https://bit.ly/cc-react-slides</a>
   </p>
   <br>
 <!-- TODO | Change image monthly -->  
@@ -786,160 +1287,412 @@
   <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
 </section>
 <!-- Topic List Slide -->
+
+<!-- Progress Slide: Section 4 -->
 <section>
-  <h1>Handling Events</h1>
-  <p>& Conditional Rendering</p>
+  <h2>Tonight's Agenda</h2>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li>User interactions:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>onClick</li>
-    </ul><br><br>
-    <li>Conditional rendering:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>if statements</li>
-      <li>Ternary operators</li>
-      <li>Logical &&</li>
-  </ul>
-</section>
-<!-- Placeholder Slides -->
-<section>
-  <h1>Handling Events</h1>
-  <p>& Conditional Rendering</p>
-  <br><br>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li>🍸 User interactions:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>onClick</li>
-    </ul><br><br>
-    <li style="color: rebeccapurple">Conditional rendering:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">if statements</li>
-      <li style="color: rebeccapurple">Ternary operators</li>
-      <li style="color: rebeccapurple">Logical &&</li>
+    <li>Intro to React</li><br>
+    <li>JSX & Components</li><br>
+    <li>Props vs State</li><br>
+    <li style="color: orange; font-weight: bold;">🍹 Event Handling & Conditional Rendering</li><br>
+    <li class="fragment">Best Practices & Component Organization</li><br>
   </ul>
 </section>
 
-<!-- section -->
-<section>
-  <h1></h1>
-  <br><br>
- </section>
+        <section>
+          <h1>Handling Events</h1>
+          <p>& Conditional Rendering</p>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>User interactions:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>onClick</li>
+            </ul><br><br>
+            <li>Conditional rendering:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>if statements</li>
+              <li>Ternary operators</li>
+              <li>Logical &&</li>
+            </ul>
+          </ul>
+        </section>
 
-<!-- Placeholder Slides -->
+        <section>
+          <h1>Handling Events</h1>
+          <p>& Conditional Rendering</p>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>🍸 User interactions:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>onClick</li>
+            </ul><br><br>
+            <li style="color: rebeccapurple">Conditional rendering:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li style="color: rebeccapurple">if statements</li>
+              <li style="color: rebeccapurple">Ternary operators</li>
+              <li style="color: rebeccapurple">Logical &&</li>
+            </ul>
+          </ul>
+        </section>
+
+<!-- Handling User Interactions -->
 <section>
-  <h1>Handling Events</h1>
-  <p>& Conditional Rendering</p>
-  <br><br>
+  <h1>Handling User Interactions</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Make your app interactive! 🎯</p>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">Building a virtual cocktail bar...</p>
+</section>
+
+<!-- onClick: When a User Orders a Drink -->
+<section>
+  <h1>onClick: When a User Orders a Drink</h1>
+  <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li>User interactions:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>🍸 onClick</li>
-    </ul><br><br>
-    <li style="color: rebeccapurple">Conditional rendering:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">if statements</li>
-      <li style="color: rebeccapurple">Ternary operators</li>
-      <li style="color: rebeccapurple">Logical &&</li>
+    <li class="fragment">👆 Customer clicks "Make Mojito" button</li><br>
+    <li class="fragment">⚡ React responds instantly</li><br>
+    <li class="fragment">🍹 Function runs: "1 Mojito served!"</li><br>
+    <li class="fragment">📈 State updates automatically</li>
   </ul>
 </section>
-<!-- section -->
-<section>
-  <h1></h1>
-  <br><br>
- </section>
 
-<!-- Placeholder Slides -->
+<!-- onClick Code Example -->
 <section>
-  <h1>Handling Events</h1>
-  <p>& Conditional Rendering</p>
-  <br><br>
+  <h2>onClick Example</h2>
+  <pre><code data-trim data-noescape>
+    &lt;button
+      onClick={makeMojito}
+    &gt;
+      Make Mojito
+    &lt;/button&gt;
+
+    
+    
+    const makeMojito = () => {
+
+      setMojitoCount(mojitoCount + 1);
+      console.log("1 Mojito served! 🍹");
+
+    }
+  </code></pre>
+  <br>
+  <p class="fragment">👆 Click → Function runs → UI updates!</p>
+</section>
+
+<!-- onChange: Choosing Ingredients -->
+<section>
+  <h1>onChange: Choosing Ingredients</h1>
+  <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li style="color: rebeccapurple">User interactions:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">onClick</li>
-    </ul><br><br>
-    <li>🍸 Conditional rendering:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>if statements</li>
-      <li>Ternary operators</li>
-      <li>Logical &&</li>
+    <li class="fragment">🥤 Customer selects "Pineapple Juice"</li><br>
+    <li class="fragment">📝 React listens for the change</li><br>
+    <li class="fragment">🔄 Updates selected ingredient</li><br>
+    <li class="fragment">🍸 Like picking what to mix!</li>
   </ul>
 </section>
-<!-- section -->
-<section>
-  <h1></h1>
-  <br><br>
- </section>
 
- <!-- Placeholder Slides -->
+<!-- onChange Code Example -->
 <section>
-  <h1>Handling Events</h1>
-  <p>& Conditional Rendering</p>
-  <br><br>
+  <h2>onChange Example</h2>
+  <pre><code data-trim data-noescape>
+    &lt;select onChange={(e) => setJuice(e.target.value)}&gt;
+      &lt;option value="orange"&gt;Orange&lt;/option&gt;
+      &lt;option value="pineapple"&gt;Pineapple&lt;/option&gt;
+    &lt;/select&gt;
+  </code></pre>
+  <br>
+  <p class="fragment">🎯 Every change updates the state!</p>
+</section>
+
+<!-- Form Inputs: Custom Cocktail Orders -->
+<section>
+  <h1>Form Inputs: Custom Cocktail Orders</h1>
+  <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li style="color: rebeccapurple">User interactions:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">onClick</li>
-    </ul><br><br>
-    <li>Conditional rendering:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li>🍸 if statements</li>
-      <li style="color: rebeccapurple">Ternary operators</li>
-      <li style="color: rebeccapurple">Logical &&</li>
+    <li class="fragment">📝 Customer enters their name</li><br>
+    <li class="fragment">🍹 Selects what they want to order</li><br>
+    <li class="fragment">📤 Submits the complete order</li><br>
+    <li class="fragment">👨‍🍳 Order goes to the bartender!</li>
   </ul>
 </section>
-<!-- section -->
-<section>
-  <h1></h1>
-  <br><br>
- </section>
 
-  <!-- Placeholder Slides -->
+<!-- Visual Form Example -->
 <section>
-  <h1>Handling Events</h1>
-  <p>& Conditional Rendering</p>
-  <br><br>
+  <h1>What the Form Looks Like</h1>
+  <br>
+  <div style="background-color: black; padding: 50px; border-radius: 20px; max-width: 800px; margin: 0 auto; font-size: 5vh;">
+    <div style="margin-bottom: 30px;">
+      <label style="color: white; display: block; margin-bottom: 10px;">Customer Name:</label>
+      <input type="text" placeholder="Enter your name" style="padding: 15px; font-size: 4vh; width: 500px; border-radius: 10px; border: none;">
+    </div>
+    <div style="margin-bottom: 30px;">
+      <label style="color: white; display: block; margin-bottom: 10px;">Select Drink:</label>
+      <select style="padding: 15px; font-size: 4vh; width: 540px; border-radius: 10px; border: none;">
+        <option>Choose a cocktail...</option>
+        <option>🍸 Martini</option>
+        <option>🍹 Mojito</option>
+        <option>🥃 Old Fashioned</option>
+      </select>
+    </div>
+    <button style="background-color: #ff6b6b; color: white; padding: 20px 40px; font-size: 4vh; border: none; border-radius: 10px; cursor: pointer;">
+      🍹 Place Order
+    </button>
+  </div>
+</section>
+
+<!-- Form Code Example -->
+<section>
+  <h2>Form Example</h2>
+  <pre><code data-trim data-noescape>
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input 
+        type="text" 
+        value={name} 
+        onChange={(e) => setName(e.target.value)} 
+      /&gt;
+      &lt;button type="submit"&gt;Place Order&lt;/button&gt;
+    &lt;/form&gt;
+  </code></pre>
+</section>
+
+<!-- Why This is Powerful -->
+<section>
+  <h1>Why This is Powerful 🎉</h1>
+  <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li style="color: rebeccapurple">User interactions:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">onClick</li>
-    </ul><br><br>
-    <li>Conditional rendering:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">if statements</li>
-      <li>🍸 Ternary operators</li>
-      <li style="color: rebeccapurple">Logical &&</li>
+    <li class="fragment">👆 Respond to clicks (drink buttons)</li><br>
+    <li class="fragment">📝 Track changes (ingredient selections)</li><br>
+    <li class="fragment">📋 Handle full orders (submitting requests)</li><br>
+    <li class="fragment">✨ From showing things... to doing things!</li>
   </ul>
 </section>
-<!-- section -->
-<section>
-  <h1></h1>
-  <br><br>
- </section>
 
- <!-- Placeholder Slides -->
+        <section>
+          <h1>Handling Events</h1>
+          <p>& Conditional Rendering</p>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>User interactions:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>onClick</li>
+            </ul><br><br>
+            <li>🍸 Conditional rendering:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>if statements</li>
+              <li>Ternary operators</li>
+              <li>Logical &&</li>
+            </ul>
+          </ul>
+        </section>
+
+<!-- Conditional Rendering Introduction -->
 <section>
-  <h1>Handling Events</h1>
-  <p>& Conditional Rendering</p>
-  <br><br>
+  <h1>Conditional Rendering</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Show different things based on conditions</p>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">🍸 if, ternary operators, &&</p>
+</section>
+
+        <section>
+          <h1>Handling Events</h1>
+          <p>& Conditional Rendering</p>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>User interactions:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>onClick</li>
+            </ul><br><br>
+            <li>🍸 Conditional rendering:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>🍸 if statements</li>
+              <li>Ternary operators</li>
+              <li>Logical &&</li>
+            </ul>
+          </ul>
+        </section>
+
+<!-- if Statement: Choose a Cocktail Based on Mood -->
+<section>
+  <h1>if Statement: Choose by Mood</h1>
+  <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li style="color: rebeccapurple">User interactions:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">onClick</li>
-    </ul><br><br>
-    <li>Conditional rendering:</li>
-    <ul style="list-style: disc; margin-left: 80px;">
-      <li style="color: rebeccapurple">if statements</li>
-      <li style="color: rebeccapurple">Ternary operators</li>
-      <li>🍸 Logical &&</li>
+    <li class="fragment">😌 Relaxed → Mojito</li><br>
+    <li class="fragment">🎉 Fun → Margarita</li><br>
+    <li class="fragment">🤷 Default → Water</li><br>
+    <li class="fragment">🧠 Just like regular JavaScript!</li>
   </ul>
 </section>
-<!-- section -->
+
+<!-- if Statement Code Example -->
 <section>
-  <h1></h1>
+  <h2>if Statement Example</h2>
+  <pre><code data-trim data-noescape>
+    const CocktailSuggestion = ({ mood }) => {
+      let suggestion;
+
+      if (mood === 'relaxed') {
+        suggestion = 'Mojito';
+      } else if (mood === 'fun') {
+        suggestion = 'Margarita';
+      } else {
+        suggestion = 'Water';
+      }
+
+      return &lt;h2&gt;Try a {suggestion}!&lt;/h2&gt;;
+    }
+  </code></pre>
+</section>
+
+        <section>
+          <h1>Handling Events</h1>
+          <p>& Conditional Rendering</p>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>User interactions:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>onClick</li>
+            </ul><br><br>
+            <li>🍸 Conditional rendering:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>if statements</li>
+              <li>🍸 Ternary operators</li>
+              <li>Logical &&</li>
+            </ul>
+          </ul>
+        </section>
+
+<!-- Ternary Operator: Choose Between Two -->
+<section>
+  <h1>Ternary Operator: Choose Between Two</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">❓ Yes/no questions</li><br>
+    <li class="fragment">🔞 "Are you 21 or older?"</li><br>
+    <li class="fragment">🍹 Yes → Margarita</li><br>
+    <li class="fragment">🥤 No → Mocktail</li>
+  </ul>
+</section>
+
+<!-- Ternary Operator Code Example -->
+<section>
+  <h2>Ternary Operator Example</h2>
+  <pre><code data-trim data-noescape>
+    const CocktailCheck = ({ age }) => {  
+      return (
+        &lt;p&gt;
+          {age >= 21 ? 'Here\'s your Margarita!' : 'Here\'s a nice Mocktail!'}
+        &lt;/p&gt;
+      );
+    }
+  </code></pre>
+  <br>
+  <p class="fragment">💡 Quick one-line if...else!</p>
+</section>
+
+        <section>
+          <h1>Handling Events</h1>
+          <p>& Conditional Rendering</p>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>User interactions:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>onClick</li>
+            </ul><br><br>
+            <li>🍸 Conditional rendering:</li>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li>if statements</li>
+              <li>Ternary operators</li>
+              <li>🍸 Logical &&</li>
+            </ul>
+          </ul>
+        </section>
+
+<!-- Logical && Only Show If True -->
+<section>
+  <h1>Logical && : Only Show If True</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🎯 Show something only if condition is true</li><br>
+    <li class="fragment">🍹 Only show "Place Order" if drink selected</li><br>
+    <li class="fragment">❌ No drink = no button</li><br>
+    <li class="fragment">✅ Drink selected = show button</li>
+  </ul>
+</section>
+
+<!-- Logical && Code Example -->
+<section>
+  <h2>Logical && Example</h2>
+  <pre><code data-trim data-noescape>
+    const OrderButton = ({ selectedDrink }) => {
+      return (
+        &lt;div&gt;
+          {selectedDrink && 
+            &lt;button&gt;Place Order for {selectedDrink}&lt;/button&gt;
+          }
+        &lt;/div&gt;
+      );
+    }
+  </code></pre>
+  <br>
+  <p class="fragment">💡 If no drink, React shows nothing!</p>
+</section>
+
+<!-- All Together: Final Example -->
+<section>
+  <h1>All Together: Final Example</h1>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">Combining if, ternary, and && operators</p>
+</section>
+
+<!-- Final Combined Code Example -->
+<section>
+  <h2>Complete Cocktail App</h2>
+  <pre><code data-trim data-noescape>
+    const CocktailApp = ({ mood, age, selectedDrink }) => {
+      let suggestion;
+
+      if (mood === 'relaxed') {
+        suggestion = 'Mojito';
+      } else if (mood === 'fun') {
+        suggestion = 'Margarita';
+      } else {
+        suggestion = 'Water';
+      }
+
+      return (
+        &lt;div&gt;
+          &lt;h1&gt;Cocktail Time!&lt;/h1&gt;
+          &lt;h2&gt;Suggestion: {suggestion}&lt;/h2&gt;
+          &lt;p&gt;{age >= 21 ? 'Adult Menu' : 'Mocktail Menu'}&lt;/p&gt;
+          {selectedDrink && 
+            &lt;button&gt;Place Order for {selectedDrink}&lt;/button&gt;
+          }
+        &lt;/div&gt;
+      );
+    }
+  </code></pre>
+</section>
+
+<!-- Summary of Conditional Rendering -->
+<section>
+  <h1>Conditional Rendering Summary</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">📋 if statements → Multiple conditions</li><br>
+    <li class="fragment">❓ Ternary → Two options (true/false)</li><br>
+    <li class="fragment">✅ && → Show only if true</li><br>
+    <li class="fragment">🎯 Perfect for dynamic UIs!</li>
+  </ul>
+</section>
+
+<!-- Celebration GIF -->
+<section>
   <br><br>
- </section>
+  <img src="../images/REACT-session/celebration.gif" alt="Celebration" height="600vh">
+</section>
 
 <!-- Work slide 4: -->
 <section>
@@ -950,81 +1703,303 @@
   </p>
   <br>
   <p style="font-size: 7vh;">
-    Slides: <a href="https://bit.ly/cc-js-slides">https://bit.ly/kcwit-cc-css</a>
+    Slides: <a href="https://bit.ly/cc-react-slides">https://bit.ly/cc-react-slides</a>
   </p>
   <br>
 <!-- TODO | Change image monthly -->
   <img src="../images/shared/GraceHopper4.webp" alt="Grace Hopper" height="600vh" />
 </section>
  
-<!-- Topic Slide 5 -->
+<!-- Why File Structure Matters -->
 <section>
   <h1>Best Practices</h1>
   <p>& Component Organization</p>
   <br>
   <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
 </section>
+        <section>
+          <h2>Tonight's Agenda</h2>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>Intro to React</li><br>
+            <li>JSX & Components</li><br>
+            <li>Props vs State</li><br>
+            <li>Event Handling & Conditional Rendering</li><br>
+            <li style="color: orange; font-weight: bold;">🍹 Best Practices & Component Organization</li><br>
+          </ul>
+        </section>
 <!-- Topic List Slide -->
 <section>
   <h1>Best Practices</h1>
   <p>& Component Organization</p>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li>Small, reusable components</li><br>
-    <li>Separation of concerns (SoC)</li><br>
-    <li>Basic file structure recommendations</li>
+    <li class="fragment">🍹 Organized bottles = organized files</li><br>
+    <li class="fragment">📋 Reusable recipes = reusable components</li><br>
+    <li class="fragment">🧹 Clean workspace = easier to maintain</li><br>
+    <li class="fragment">👥 Better for team collaboration</li>
   </ul>
 </section>
-<!-- Placeholder Slides -->
-<section>
-  <h1>Best Practices</h1>
-  <p>& Component Organization</p>
-  <br><br>
-  <ul>
-    <li>🍸 Small, reusable components</li><br>
-    <li style="color: rebeccapurple">Separation of concerns (SoC)</li><br>
-    <li style="color: rebeccapurple">Basic file structure recommendations</li>
-  </ul>
-</section>
-<!-- section -->
-<section>
-  <h1></h1>
-  <br><br>
- </section>
 
-<!-- Placeholder Slides -->
-<section>
-  <h1>Best Practices</h1>
-  <p>& Component Organization</p>
-  <br><br>
-  <ul>
-    <li style="color: rebeccapurple">Small, reusable components</li><br>
-    <li>🍸 Separation of concerns (SoC)</li><br>
-    <li style="color: rebeccapurple">Basic file structure recommendations</li>
-  </ul>
-</section>
-<!-- section -->
-<section>
-  <h1></h1>
-  <br><br>
- </section>
+<!-- Progress Slide: Section 5 -->
 
-<!-- Placeholder Slides -->
+
+<!-- Small, Reusable Components Introduction -->
 <section>
-  <h1>Best Practices</h1>
-  <p>& Component Organization</p>
-  <br><br>
-  <ul>
-    <li style="color: rebeccapurple">Small, reusable components</li><br>
-    <li style="color: rebeccapurple">Separation of concerns (SoC)</li><br>
-    <li>🍸 Basic file structure recommendations</li>
+  <h1>Small, Reusable Components</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Think like a bartender! 🍸</p>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">Don't make every drink from scratch...</p>
+</section>
+
+<!-- Cocktail Components Analogy -->
+<section>
+  <h1>Cocktail Components</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🍋 LimeSqueeze()</li><br>
+    <li class="fragment">🍃 MintLeaves()</li><br>
+    <li class="fragment">🧊 AddIce()</li><br>
+    <li class="fragment">🥃 PourRum()</li>
+  </ul>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">Combine these into any cocktail! ✨</p>
+</section>
+
+<!-- Bad Example: Giant Component -->
+<section>
+  <h1>❌ Bad: One Giant Component</h1>
+  <pre><code data-trim data-noescape>
+    const Mojito = () => {
+      return (
+        &lt;div className="card"&gt;
+          &lt;h2&gt;Mojito&lt;/h2&gt;
+          &lt;p&gt;Minty, fresh cocktail&lt;/p&gt;
+          &lt;img src="mojito.png" /&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Mint&lt;/li&gt;
+            &lt;li&gt;Lime&lt;/li&gt;
+            &lt;li&gt;Rum&lt;/li&gt;
+            &lt;li&gt;Sugar&lt;/li&gt;
+            &lt;li&gt;Soda&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      );
+    }
+  </code></pre>
+  <p class="fragment" style="color: red;">😞 Hard to read, can't reuse parts</p>
+</section>
+
+<!-- Good Example: Small Components -->
+<section>
+  <h1>✅ Good: Small, Reusable Components</h1>
+  <pre><code data-trim data-noescape>
+    const DrinkImage = ({ src }) => {
+      return &lt;img src={src} alt="cocktail" /&gt;;
+    }
+
+    const IngredientsList = ({ items }) => {
+      return (
+        &lt;ul&gt;
+          {items.map(i => &lt;li key={i}&gt;{i}&lt;/li&gt;)}
+        &lt;/ul&gt;
+      );
+    }
+  </code></pre>
+  <p class="fragment" style="color: green;">😊 Now reusable in any cocktail!</p>
+</section>
+
+<!-- Benefits of Small Components -->
+<section>
+  <h1>Benefits of Small Components</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🎯 Focus on One Job</li><br>
+    <li class="fragment">♻️ Reusable everywhere</li><br>
+    <li class="fragment">🧹 Cleaner, easier to read</li><br>
+    <li class="fragment">🧪 Easier to test</li>
   </ul>
 </section>
-<!-- section -->
+
+<!-- Separation of Concerns Introduction -->
 <section>
-  <h1></h1>
+  <h1>Separation of Concerns (SoC)</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Keep different responsibilities in different places</p>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">🍹 Like a well-organized bar team!</p>
+</section>
+
+<!-- Bar Team Analogy -->
+<section>
+  <h1>A Bar Team</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🍹 Bartender → Mixes the drinks</li><br>
+    <li class="fragment">🚶 Waiter → Brings drinks to table</li><br>
+    <li class="fragment">🎨 Designer → Decorates the drinks</li><br>
+    <li class="fragment">👩‍💼 Manager → Handles menu/pricing</li>
+  </ul>
+  <br>
+  <p class="fragment">💡 Everyone has their own job!</p>
+</section>
+
+<!-- SoC Bad Example -->
+<section>
+  <h1>❌ Bad: All-in-One (No SoC)</h1>
+  <pre><code data-trim data-noescape>
+    const MojitoCard = () => {
+      const ingredients = ['Mint', 'Lime', 'Rum'];
+
+      return (
+        &lt;div style={{ backgroundColor: 'green', padding: '20px' }}&gt;
+          &lt;h2&gt;Mojito&lt;/h2&gt;
+          &lt;ul&gt;{ingredients.map(i => &lt;li&gt;{i}&lt;/li&gt;)}&lt;/ul&gt;
+          &lt;button onClick={() => alert('Added!')}&gt;Order&lt;/button&gt;
+        &lt;/div&gt;
+      );
+    }
+  </code></pre>
+  <p class="fragment" style="color: red;">😞 Mixing data, UI, style, and logic!</p>
+</section>
+
+<!-- SoC Good Example -->
+<section>
+  <h1>✅ Good: Separated Concerns</h1>
+  <pre><code data-trim data-noescape>
+    // DrinkInfo.js - UI only
+    const DrinkInfo = ({ name, ingredients }) => {
+      return (
+        &lt;&gt;
+          &lt;h2&gt;{name}&lt;/h2&gt;
+          &lt;ul&gt;{ingredients.map(i => &lt;li&gt;{i}&lt;/li&gt;)}&lt;/ul&gt;
+        &lt;/&gt;
+      );
+    }
+
+    // DrinkCard.css - styling separate
+    .card { background-color: #e0ffe0; padding: 20px; }
+  </code></pre>
+  <p class="fragment" style="color: green;">😊 Clear structure and roles!</p>
+</section>
+
+<!-- File Structure Introduction -->
+<section>
+  <h1>File Structure Recommendations</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Organize like a professional bar! 🏪</p>
+  <br>
+  <p class="fragment" style="font-size: 5vh;">Each component gets its own "station"</p>
+</section>
+
+<!-- Recommended File Structure -->
+<section>
+  <h1>Recommended Structure</h1>
+  <pre><code data-trim data-noescape>
+    /src
+    │
+    ├── /components
+    │   ├── CocktailCard/
+    │   │   ├── CocktailCard.js
+    │   │   ├── CocktailCard.module.css
+    │   │   └── index.js
+    │   └── DrinkList/
+    │       ├── DrinkList.js
+    │       └── index.js
+    │
+    ├── /pages
+    │   ├── Home.js
+    │   └── About.js
+    │
+    └── App.js
+  </code></pre>
+</section>
+
+<!-- Component Types Introduction -->
+<section>
+  <h1>Component Types</h1>
+  <br>
+  <p class="fragment" style="font-size: 6vh;">Two main types in your bar! 🍸</p>
+  <br>
+  <div style="display: flex; justify-content: space-around;">
+    <div class="fragment">
+      <h3>📺 Presentational</h3>
+      <p>(Display only)</p>
+    </div>
+    <div class="fragment">
+      <h3>🧠 Container</h3>
+      <p>(Logic & data)</p>
+    </div>
+  </div>
+</section>
+
+<!-- Presentational Components -->
+<section>
+  <h1>📺 Presentational Components</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🎨 Display-only (like a pretty glass)</li><br>
+    <li class="fragment">📋 Shows drink info but no logic</li><br>
+    <li class="fragment">🔧 Example: CocktailCard, DrinkImage</li><br>
+  </ul>
+  <pre class="fragment"><code data-trim data-noescape>
+    const CocktailCard = ({ name, description }) => {
+      return (
+        &lt;div&gt;
+          &lt;h2&gt;{name}&lt;/h2&gt;
+          &lt;p&gt;{description}&lt;/p&gt;
+        &lt;/div&gt;
+      );
+    }
+  </code></pre>
+</section>
+
+<!-- Container Components -->
+<section>
+  <h1>🧠 Container Components</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🏗️ Hold logic, fetch data, manage state</li><br>
+    <li class="fragment">🍹 Like the bartender who makes drinks</li><br>
+    <li class="fragment">📋 Example: DrinkList fetches & renders cards</li><br>
+  </ul>
+  <pre class="fragment"><code data-trim data-noescape>
+    const DrinkList = () => {
+      const [cocktails, setCocktails] = useState([]);
+      
+      useEffect(() => {
+        setCocktails([{ name: 'Mojito', desc: 'Minty' }]);
+      }, []);
+
+      return (
+        &lt;div&gt;
+          {cocktails.map(drink => 
+            &lt;CocktailCard key={drink.name} {...drink} /&gt;
+          )}
+        &lt;/div&gt;
+      );
+    }
+  </code></pre>
+</section>
+
+<!-- Best Practices Summary -->
+<section>
+  <h1>Best Practices Summary 🏆</h1>
+  <br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">🧩 Keep components small & focused</li><br>
+    <li class="fragment">♻️ Make components reusable with props</li><br>
+    <li class="fragment">📁 Organize files like a professional bar</li><br>
+    <li class="fragment">🎯 Separate concerns (UI, logic, style)</li>
+  </ul>
+</section>
+
+<!-- Success GIF -->
+<section>
   <br><br>
- </section>
+  <img src="../images/REACT-session/success-celebration.gif" alt="Success celebration" height="600vh">
+</section>
 
  <!-- Best Practices -->
 <section>
@@ -1092,8 +2067,25 @@
 <section>
 <h1>Tech Talks</h1>
 <br><br>
-<!-- <img src="../images/shared/treadmillRooster.gif" alt="Tech Talks event" height="800vh"> -->
- <p>#Don'tForgetToGetGraphicFromBonnie</p>
+  <img src="../images/shared/TTSummerSeries.png" alt="Tech Talks event" height="800vh">Add commentMore actions
+</section>
+        <section>
+          <h1>June</h1>
+          <br><br>
+          <img src="../images/shared/TTJuneHelloWorld.png" alt="Tech Talks event" height="500vh"><br>
+          <img class="fragment" src="../images/shared/TTJuneHeadshot.png" alt="Tech Talks event" height="250vh">
+          <img class="fragment" src="../images/shared/TTJuneMockInterview.png" alt="Tech Talks event" height="250vh">
+          <img class="fragment" src="../images/shared/TTJuneResumeWS.png" alt="Tech Talks event" height="250vh">
+        </section>
+        <section>
+          <h1>July</h1>
+          <br><br>
+          <img src="../images/shared/TTJulyNowWhat.png" alt="Tech Talks event" height="800vh">
+        </section>
+        <section>
+          <h1>August</h1>
+          <br><br>
+          <img src="../images/shared/TTAugLoggingOff.png" alt="Tech Talks event" height="800vh">
 </section>
 <!--Side Quest Section-->
 <section>
