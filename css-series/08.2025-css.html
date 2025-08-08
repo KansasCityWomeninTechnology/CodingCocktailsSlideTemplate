@@ -1109,6 +1109,21 @@ h2 ~ p { <br>
           </ul>
         </section>
         <!-- Properties section -->
+
+        <section>
+          <h1>Properties</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Each property accepts certain valid values 🎯</li>
+            <br>
+            <li class="fragment">Over 500 properties 🤯</li><br> 
+            <li class="fragment">No need to memorize them all!! 😮‍💨 </li><br>
+            <li class="fragment">Key skill  🕵️‍♀️:</li><br>
+            <ul style="list-style: disc; margin-left: 80px;">
+              <li class="fragment">🔍 Knowing how to look up & use the right property or value</li>
+            </ul>
+          </ul>
+          </section>
         <!-- Text & Font Styling Section -->
         <section>
           <h1>Properties:</h1>
@@ -1188,6 +1203,22 @@ h2 ~ p { <br>
           </ul>
         </section>
         <section>
+          <h1 style="font-size: larger;">Pixels [px]</h1>
+          <code>
+            h1 { <br>
+  &nbsp;&nbsp;font-size: 32px; <br>
+  &nbsp;&nbsp;margin-bottom: 16px; <br>
+}
+          </code><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Most common absolute unit</li>
+            <br>
+            <li class="fragment">1px = 1 dot on the screen (varies by device)</li>
+            <br>
+            <li class="fragment">Can be used for: <br> width, height, margin, padding, font-size</li>
+          </ul>
+        </section>
+        <section>
           <h1>Relative</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
@@ -1201,75 +1232,113 @@ h2 ~ p { <br>
           </ul>
         </section>
         <section>
-          <h1>Percent [%]</h1>
-          <br><br>
+          <h1 style="font-size: larger;">Percent [%]</h1>
+          <code>
+            .container { <br>
+  &nbsp;&nbsp;width: 80%;       /* container takes 80% of its parent’s width */ <br>
+  &nbsp;&nbsp;padding: 5%;      /* padding is 5% of container’s width */ <br>
+  &nbsp;&nbsp;background-color: lightblue; <br>
+}
+
+          </code><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Relative to parent element</li>
             <br>
-            <li class="fragment">Can be used for width, height, margin, padding, font-size</li>
+            <li class="fragment">Can be used for: <br> width, height, margin, padding, font-size</li>
           </ul>
         </section>
         <section>
-          <h1>Percent Example</h1>
-          <br><br>
+          <h1 style="font-size: larger;">rem / em</h1>
           <code class="fragment">
-            ul {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;margin: 18px;<br>
-            }
+            /* Assuming root font-size is 16px */ <br>/* REM: Root | Em: Parent element */ <br><br>
+             h1 { <br>
+  &nbsp;&nbsp;font-size: 2rem; /* 2 * 16px = 32px */ <br>
+} <br><br>
+p { <br>
+  &nbsp;&nbsp;font-size: 1.5em; /* 1.5 * parent font-size */ <br>
+} 
           </code>
-          <br><br>
-          <code class="fragment">
-            li {<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;margin: 100%;&nbsp;&nbsp;// 100% of 18px = 18px<br>
-            }
-          </code>
-        </section>
-        <section>
-          <h1>rem / em</h1>
-          <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">EM: Relative to PARENT element</li>
-            <br>
-            <li class="fragment">REM: Relative to ROOT element</li>
-            <br>
             <li class="fragment">If root element is 16px, 1rem for an element = 16px</li>
             <br>
-            <li class="fragment">Can be used for width, height, margin, padding, font-size</li>
+            <li class="fragment">Can be used for: <br> width, height, margin, padding, font-size</li>
+
           </ul>
         </section>
         <section>
-          <h1>vh / vw</h1>
-          <br><br>
+          <h1 style="font-size: larger;">vh / vw</h1>
+          <code>
+            /* Goal: Make a full-screen hero section * /<br><br>
+            .hero { <br>
+  &nbsp;&nbsp;height: 100vh; /* 100% of viewport height */
+  <br>
+  &nbsp;&nbsp;width: 100vw; /* 100% of viewport width */
+  <br>  &nbsp;&nbsp;background-color: lightcoral; <br>
+}
+          </code><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Relative to viewport height / width (% of viewport)</li>
             <br>
-            <li class="fragment">Can be used for width, height, margin, padding, font-size</li>
+            <li class="fragment">Can be used for: <br> width, height, margin, padding, font-size</li>
           </ul>
         </section>
+        <!-- A11y reminder section -->
+         <section>
+          <h1>A11y Reminder 🦾</h1>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Use legible fonts with clear shapes & spacing 🔤</li><br>
+            <li class="fragment">Avoid very small font sizes — keep text readable 🔍 <br>(14px or larger)</li><br>
+            <li class="fragment">Avoid fixed sizes that can break layouts on different devices 📱💻</li><br>
+            <li class="fragment">Consider user zoom preferences <br>& screen readers 🧑‍🦯</li> 
+          </ul>
+        </section>
+        <!-- Color section -->
         <section>
           <h1>Color</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Keep accessibility in mind when selecting colors (provide enough contrast)</li>
+            <li class="fragment">Bring webpages to life with color 🌈 <br>(text, backgrounds, borders, & more!)</li>
             <br>
-            <li class="fragment">Lighthouse is built into Chrome DevTools to check for improvements in accessibility</li>
+            <li class="fragment">CSS offers many ways to define colors 🎨 <br>(named colors, hex codes, RGB, HSL, & transparency)</li><br>
+            <li class="fragment">Colors set the mood, improve readability, & make your designs pop! 💥</li>
           </ul>
-            <br><br><br>
-            <a class="fragment" href="https://developer.chrome.com/docs/lighthouse/overview">developer.chrome.com/lighthouse</a>
-          
         </section>
         <section>
-          <h1>Color</h1>
+          <h1>A11y Reminder 🦾</h1>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">RGB</li>
-            <br>
-            <li class="fragment">Hexadecimal</li>
+            <li class="fragment">Use sufficient contrast for readability 🌓</li><br>
+            <li class="fragment">Don’t use color alone to convey meaning — add labels or icons 🏷️</li><br>
+            <li class="fragment">Test colors with accessibility tools to support all users 🧪</li><br>
+            <li class="fragment">Design for color blindness & visual impairments 👓</li>  
           </ul>
         </section>
         <section>
-          <h1>RGB</h1>
+          <h1>Color Formats</h1>
           <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li class="fragment">Named Colors 🎨: <br>
+              Easy-to-remember color names (red, blue, teal)</li><br>
+            <li class="fragment">Hexadecimal (<span style="color: #c7bc75;">Hex</span>) #️⃣: <br> Starts with <span style="color: #c7bc75;">#</span> plus 3 or 6 hex digits (0–9, A–F) <br><span style="color: #c7bc75;">#ff6347</span> or shorthand <span style="color: #c7bc75;">#f63</span></li><br>
+            <li class="fragment">RGB 🎛️: <br>Defines colors by mixing red, green, & blue values from 0–255 <br> <span style="color: #c7bc75;">rgb(255, 99, 71)</span></li>
+        </section>
+        <section>
+          <br><br>
+          <ul style="list-style: disc; margin-left: 80px;">
+            <li>RGBA 🌫️: <br>Like RGB but adds alpha for transparency <br> <span style="color: #c7bc75;">rgba(255, 99, 71, 0.7)</span></li><br>
+            <li class="fragment">HSL 🌈: <br>Uses hue (color type), saturation (color intensity), & lightness (brightness) <br> <span style="color: #c7bc75;">hsl(9, 100%, 64%)</span></li><br>
+            <li class="fragment">HSLA 🌫️: <br>HSL with alpha transparency <br> <span style="color: #c7bc75;">hsla(9, 100%, 64%, 0.7)</span></li>
+          </ul>
+        </section>
+        <section>
+          <h1 style="font-size: larger;">RGB</h1>
+          <code>
+            /* Goal: Make all <span style="color: #c7bc75;">&lt;h1&gt;</span> elements red * /<br><br>
+            h1 {<br>
+              &nbsp;&nbsp;color: rgb(255, 0, 0);<br>
+            }
+          </code><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">3-digit RGB code</li>
             <br>
@@ -1279,87 +1348,33 @@ h2 ~ p { <br>
           </ul>
         </section>
         <section>
-          <h1>rebeccapurple</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">rgb(102, 51, 153)</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Hexidecimal Numbers</h1>
-          <br><br>
+          <h1 style="font-size: larger;">Hexidecimal Numbers</h1>
+          <code>
+            /* Goal: Make all <span style="color: #c7bc75;">&lt;h1&gt;</span> elements red * /<br><br>
+            h1 {<br>
+              &nbsp;&nbsp;color: #ff0000;<br>
+            } 
+          </code><br>
           <ul style="list-style: disc; margin-left: 80px;">
             <li class="fragment">Hexadecimal is a base 16 number system</li>
             <br>
             <li class="fragment">Each digit represents 16 values (0-9, A-F)</li>
             <br>
             <li class="fragment">Each pair of digits represents a color (red, green, blue)</li>
-            <!-- Speech note: reference to talk about base 16 on whiteboard: https://www.youtube.com/watch?v=4EJay-6Bioo -->
           </ul>
         </section>
         <section>
-          <h1>red</h1>
+          <h1>🤔 Quick Note:</h1>
+          <h2 style="font-size: larger;">About Hex 🧙‍♀️</h2>
           <br><br>
           <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">#ff0000</li>
+            <li class="fragment">Hex shorthand uses 3 digits instead of 6 to save space ✂️</li><br>
+            <li class="fragment">Each digit doubles to form the full 6-digit code 🔄 <br>(<span style="color: #c7bc75;">#f63</span> = <span style="color: #c7bc75;">#ff6633</span>)</li><br>
+            <li class="fragment">Works only when hex pairs are identical 👯‍♀️ <br>(<span style="color: #c7bc75;"><span style="color: #c7bc75;">ff</span>, <span style="color: #c7bc75;">66</span>, <span style="color: #c7bc75;">33</span></span>)</li><br>
+            <li class="fragment">Makes CSS cleaner & easier to read 🧼</li>
           </ul>
         </section>
-        <section>
-          <h1>rebeccapurple</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">hex: #663399</li>
-            <br>
-            <li class="fragment">rgba(102, 51, 153)</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Quick Note About Hex</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">You can use shorthand hex</li>
-            <br>
-            <li class="fragment">#ffffff = #fff</li>
-            <br>
-            <li class="fragment">#663399 = #639</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Properties</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">color</li>
-            <br>
-            <li class="fragment">background-color</li>
-            <br>
-            <li class="fragment">border-color</li>
-            <br>
-            <li class="fragment">outline-color</li>
-            <br>
-            <li class="fragment">box-shadow</li>
-            <br>
-            <li class="fragment"><em>>300 different properties in CSS with ~ infinite values</em></li>
-          </ul>
-        </section>
-        <section>
-          <h1>Properties</h1>
-          <br><br>
-          <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
-        </section>
-        <section>
-          <h1>Properties</h1>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li class="fragment">Each property has a specific set of valid values</li>
-            <br>
-            <li class="fragment">You don't have to remember them all!!</li>
-            <br>
-            <li class="fragment">Just know  how to look up a property or value</li>
-          </ul>
-            <br><br><br>
-            <p class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a></p>
-          
-        </section>
+        <!-- The Cascade section -->
         <section>
           <h1>The Cascade</h1>
           <br><br>
