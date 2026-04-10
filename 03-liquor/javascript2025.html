@@ -41,6 +41,11 @@
         <br><br>
         <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
       </section>
+    <!-- No Photo Section -->
+     <section>
+      <br><br>
+      <img src="../images/shared/NoPhotoGraphic.png" alt="No Photo" height="800vh"/>
+     </section>
     <!-- Host Section -->
 <section>
   <h1>Our Host this Evening</h1>
@@ -170,15 +175,14 @@
       <ul style="list-style: disc; margin-left: 80px;">
         <li class="fragment">Intro to JavaScript</li>
         <br>
-        <li class="fragment">Foundations of JavaScript</li>
-        <br>
         <li class="fragment">Functions</li>
         <br>
         <li class="fragment">Arrays &amp; Loops</li>
         <br>
-        <li class="fragment">Intro to TypeScript</li>
+        <li class="fragment">Accessibility with JavaScript</li>
         <br>
-        <li class="fragment">Accessibility Things to Consider</li>
+        <li class="fragment">Intro to TypeScript</li>
+  
 
       </ul>
     </section>
@@ -200,7 +204,7 @@
 </section>
 <!-- Spotlight Series Section -->
  <section>
-  <img src="../images/shared/alex_herron.jpg" alt="Leadership spotlight graphic" height="1000vh">
+  <img src="../images/shared/AlexH.png" alt="Leadership spotlight graphic" height="1000vh">
  </section>
 <section>
   <h1>Cheers Lady Devs! 🥂</h1>
@@ -212,8 +216,8 @@
 
  <!-- Flight Notes section -->
     <section>
-    <h1>Flight Notes:</h1>
-    <h2 style="font-size: larger;">🍹 The Garnish Recap</h2>
+    <h1>Flight Notes</h1>
+    <h2 style="font-size: larger;">🍹 CSS: The Garnish Recap</h2>
     <br><br>
     <ul style="list-style:disc; margin-left: 80px;">
       <li class="fragment">Sprinkled style with property-value pairs — the essential mix for your page</li><br>
@@ -238,15 +242,14 @@
       <ul style="list-style: disc; margin-left: 80px;">
         <li>🍸 Intro to JavaScript</li>
         <br>
-        <li style="color: #d0c675;">Foundations of JavaScript</li>
-        <br>
         <li style="color: #d0c675">Functions</li>
         <br>
         <li style="color: #d0c675">Arrays &amp; Loops</li>
         <br>
-        <li style="color: #d0c675">Intro to TypeScript</li>
+        <li style="color: #d0c675">Accessibility with JavaScript</li>
         <br>
-        <li style="color: #d0c675">Accessibility Things to Consider</li>
+        <li style="color: #d0c675">Intro to TypeScript</li>
+    
       </ul>
     </section>
     <!-- Intro to JavaScript Section -->
@@ -310,13 +313,14 @@
       <h1>Foundations</h1>
       <h2 style="font-size: larger;">of JavaScript</h2>
       <br>
-        <li class="fragment">Able to manipulate HTML content &amp; CSS styling on a webpage</li>
+        <ul style="list-style:disc; margin-left: 80px;">
+          <li class="fragment">Can change HTML content and CSS styles on a webpage</li>
         <br>
         <li class="fragment">Reacts to user interactions</li>
         <br>
-        <li class="fragment">Can send network requests</li>
+          <li class="fragment">Can send network requests</li>
         <br>
-          <li class="fragment">Can be used for server-side programming (Node.js)</li>
+          <li class="fragment">Can also be used for server-side programming with Node.js</li>
       </ul>
     </section>
     <!-- History of JavaScript Section -->
@@ -411,28 +415,30 @@
         <li class="fragment">Use the <span style="color:#d0c675">type</span> attribute to specify the language</li>
       </ul>
     </section>
-    <!-- TODO | Update title -->
     <section>
-      <h1>Adding JavaScript</h1>
+      <h1>How to</h1>
+      <h2 style="font-size: larger;">add JavaScript</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Add JavaScript directly to files</li>
-        <br>
-        <pre class="fragment"><code class="language-js" data-trim data-noescape>
+        <li class="fragment">You can write JavaScript directly inside an HTML file</li><br><br>
+        <code class="fragment language-js" data-trim data-noescape>
 &lt;script&gt;
   alert("Hello, JavaScript!");
 &lt;/script&gt;
         </code>
-        <!-- <br>
-        <li class="fragment">BEST PRACTICE: Link to JS file</li>
-        <br>
-        <code class="fragment">
-          &lt;script src="assets/js/my-javascript-file.js"&gt;&lt;/script&gt;
-        </code> -->
       </ul>
     </section>
+    <section>
+      <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+              <li>Most of the time, it is better to link to a separate JavaScript file</li><br><br>
+        <code class="fragment">
+          &lt;script src="assets/js/my-javascript-file.js"&gt;&lt;/script&gt;
+        </code>
+        </ul>
+    </section>
     <!-- File linking section -->
-        <section>
+<!--         <section>
               <h1>BEST PRACTICE</h1>
               <h2 style="font-size: larger;">Link to JS File</h2>
               <br>
@@ -441,7 +447,7 @@
         </code> <br>
             <ul style="list-style:disc; margin-left: 80px;">
             <li class="fragment"><span style="color: #d0c675;">src</span>: value must be the relative path to your file</li>
-        </section>
+        </section> -->
     <section>
       <h1>DOM</h1>
       <h2 style="font-size: larger;">(Document Object Model)</h2>
@@ -460,9 +466,9 @@
       <img src="../images/CSS-session/DOM-model.png" alt="DOM Model" height="85%"/>
     </section>
     <section>
-      <h1>How Does JavaScript</h1>
-      <h2 style="font-size: larger;">Manipulate the DOM?</h2>
-      <br>
+      <h1>How Does</h1>
+      <h2 style="font-size: larger;">JavaScript Manipulate the DOM?</h2>
+      <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
         <li class="fragment">Changing colors</li>
         <br>
@@ -509,22 +515,22 @@
               <span style="color:#d0c675">
                 const
               </span>
-          : variable that cannot be reassigned
+          <br> variable that cannot be reassigned
         </li><br>
         <li class="fragment">
               <span style="color:#d0c675">
                 let
               </span>
-          : variable that can be reassigned
+          <br> variable that can be reassigned
         </li>
-      </ul>
-      <br><br>
+      <br>
       <code class="fragment">
         let myName = "John";<br>
         myName = "Jane"; // "Jane"<br><br><br>
         const myName = "John";<br>
         myName = "Jane"; // TypeError: Assignment to constant variable.
       </code>
+      </ul>
     </section>
     <section>
       <h1>Variable</h1>
@@ -532,7 +538,8 @@
       <br>
       <ul style="list-style:disc; margin-left: 80px;">
         <li class="fragment">
-          JavaScript is case-sensitive: use same case you used when creating the variable to reference said variable
+          JavaScript is case-sensitive: 
+          <br>use same case you used when creating the variable to reference said variable
         </li>
         <br>
         <li class="fragment">
@@ -555,7 +562,7 @@
         <br>
         <li class="fragment">Subsequent characters may contain letters, numbers, _, or $</li>
         <br>
-        <li class="fragment">Best practice: camelCase</li>
+        <li class="fragment">Best practice: <br> camelCase</li>
       </ul>
     </section>
     <section>
@@ -591,8 +598,8 @@
       <img src="../images/IntroJS-session/MorpheusVariable.jpg" alt="Morpheus variable naming quote" height="800vh">
     </section>
     <section>
-      <h1>Primitive</h1>
-      <h2 style="font-size: larger;">Values</h2>
+      <h1>Data</h1>
+      <h2 style="font-size: larger;">Types</h2>
       <br>
       <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
     </section>
@@ -667,9 +674,7 @@
       <h1>Numbers</h1>
       <br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Also commonly called integers</li>
-        <br>
-        <li class="fragment">Can include decimals</li>
+        <li class="fragment">Can be whole numbers or decimals</li>
         <br>
         <li class="fragment">Can use arithmetic operators</li>
         <br>
@@ -701,9 +706,9 @@
       <h1>Undefined</h1>
       <br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">A variable that has been declared, but has no value</li>
+        <li class="fragment"><span style="color:#d0c675">undefined</span> means a variable exists, but it has not been given a value yet</li>
         <br>
-        <li class="fragment">Can be assigned a value later</li>
+        <li class="fragment">This often happens when you declare a variable and assign a value later</li>
       </ul>
       <code class="fragment">
         let x;<br>
@@ -712,16 +717,15 @@
     </section>
     <section>
       <h1>Null</h1>
-      <br>
+      <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Explicitly set a variable to null, as a representation that the variable has no value</li>
-      </ul>
-      <code class="fragment">
-        let x = null;<br>
-        typeof x; // object
-      </code>
-      <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Due to a legacy bug in the language.</li>
+        <li class="fragment">Use <span style="color:#d0c675">null</span> when you want to intentionally say, "this variable has no value right now"</li><br>
+        <li class="fragment"><span style="color:#d0c675">null</span> is its own primitive value, even though this can look confusing:</li><br>
+        <code class="fragment">
+          let x = null;<br>
+          typeof x; // object
+        </code><br>
+        <li class="fragment"><span style="color:#d0c675">typeof null</span> returns <span style="color:#d0c675">"object"</span> because of a legacy bug in JavaScript</li>
       </ul>
     </section>
     <section>
@@ -736,8 +740,8 @@
       </ul>
     </section>
     <section>
-      <h1>Math (Arithmetic)</h1>
-      <h2 style="font-size: larger;">Operators</h2>
+      <h1>Operators</h1>
+      <h2 style="font-size: larger;">Math (Arithmetic)</h2>
       <br>
       <ul style="list-style:disc; margin-left: 80px;">
         <li class="fragment">Addition/Subtraction</li>
@@ -784,18 +788,18 @@
       </ul>
     </section>
     <section>
-      <h1>Comparison</h1>
-      <h2 style="font-size: larger;">Operators</h2>
+      <h1>Operators</h1>
+      <h2 style="font-size: larger;">Comparison</h2>
       <br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Equal to (==)</li>
+        <li class="fragment">Loose equal to (==)</li>
         <br>
         <code class="fragment">
           const myAge = 21;<br>
           myAge == 21; // true
         </code>
         <br>
-        <li class="fragment">Strict equal to (===): type specific</li>
+        <li class="fragment">Strict equal to (===): checks value and type</li>
         <br>
         <code class="fragment">
           const cookies = 0;<br>
@@ -824,11 +828,28 @@
       <br>
       <!-- TODO | Change link monthly -->
       <p style="font-size: 7vh;">
-        Slides: <a href="https://bit.ly/cc-js-slides1" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">https://bit.ly/cc-js-slides1</a>
+        Slides: <a href="https://bit.ly/kcwit-JavaScript-slides" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">https://bit.ly/kcwit-JavaScript-slides</a>
       </p>
       <br>
       <!-- TODO | Change image monthly -->
       <img src="../images/shared/AnnieEasley1.png" alt="Annie Easley" height="600vh"/>
+    </section>
+  <!-- Placeholder Slide -->
+   <section>
+      <h1>🥃 The Liquor</h1>
+      <h2 style="font-size: larger;">Intro to JavaScript</h2>
+      <br><br>
+      <ul style="list-style: disc; margin-left: 80px;">
+        <li style="color: #d0c675">Intro to JavaScript</li>
+        <br>
+        <li>🍸 Functions</li>
+        <br>
+        <li style="color: #d0c675">Arrays &amp; Loops</li>
+        <br>
+        <li style="color: #d0c675">Accessibility with JavaScript</li>
+        <br>
+        <li style="color: #d0c675">Intro to TypeScript</li>
+      </ul>
     </section>
     <!-- Functions \-->
     <section>
@@ -837,7 +858,8 @@
       <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
     </section>
     <section>
-      <h1>What is a Function?</h1>
+      <h1>What is</h1>
+      <h2 style="font-size: larger;">a Function?</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
         <li class="fragment">Reusable block of code</li>
@@ -852,7 +874,8 @@
       <img src="../images/javascript/function.png" alt="function" height="75%"/>
     </section>
     <section>
-      <h1>Reusable Code</h1>
+      <h1>Reusable</h1>
+      <h2 style="font-size: larger;">Code</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
         <li class="fragment">Instead of writing the same logic over and over...</li>
@@ -877,7 +900,8 @@
       </ul>
     </section>
     <section>
-      <h1>Function Declaration</h1>
+      <h1>Function</h1>
+      <h2 style="font-size: larger;">Declaration</h2>
       <br><br>
       <code class="fragment">
         function greet() {<br>
@@ -889,7 +913,8 @@
       </code>
     </section>
     <section>
-      <h1>Advanced Functions</h1>
+      <h1>More About</h1>
+      <h2 style="font-size: larger;">Functions</h2>
       <br>
       <img class="fragment" src="../images/IntroJS-session/NervousLaughter.gif" alt="Woman with nervous laughter" height="700vh">
     </section>
@@ -899,7 +924,7 @@
       <br>
       <ul style="list-style:disc; margin-left: 80px;">
         <li class="fragment">Let you create flexible, reusable code</li><br>
-        <li class="fragment">Functions can pass 0 to many parameters (separated by commas)</li><br>
+        <li class="fragment">Functions can accept 0 to many parameters, separated by commas</li><br>
         <li class="fragment">Example:</li>
         <code class="fragment">
         const greet = function(name) {<br>
@@ -909,31 +934,34 @@
       </ul>
     </section>
     <section>
-      <h1>Set to a Variable Value</h1>
+      <h1>Function</h1>
+      <h2 style="font-size: larger;">Expression</h2>
       <br><br>
       <code class="fragment">
-        //with 1 parameter<br>
+        // assign a function to a variable<br>
         const orderDrink = function(drinkName) {<br>
         &nbsp;&nbsp;return 'I would like a ' + drinkName;<br>
         };<br>
         <br>
+        // call the function<br>
         orderDrink('gin and tonic');<br>
-        //'I would like a gin and tonic';
+        // 'I would like a gin and tonic'
       </code>
     </section>
     <section>
-      <h1>ES6 Arrow Functions</h1>
-      <br><br>
+      <h1>Arrow</h1>
+      <h2 style="font-size: larger;">Functions</h2>
+      <br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">ES6 introduced arrow functions</li>
+        <li class="fragment">ES6 introduced arrow functions as a shorter way to write functions</li>
         <br>
-        <li class="fragment">"Regular" functions and Arrow functions are <em>mostly</em> the same</li>
+        <li class="fragment">Arrow functions can take parameters and return values, just like regular functions</li>
         <br>
-        <li class="fragment">Difference is that regular functions have their own context, which arrow functions do not
+        <li class="fragment">One key difference: arrow functions do not create their own <span style="color:#d0c675">this</span> value like regular functions do
         </li>
         <!-- Impacts when using global 'this' -->
         <br>
-        <li class="fragment">Essentially, we're saving the function as a variable</li>
+        <li class="fragment">They are often assigned to a variable, but that is not what makes them an arrow function</li>
       </ul>
     </section>
     <section>
@@ -947,16 +975,16 @@
         <li class="fragment">Sometimes you only want to execute code if something is <em>true</em> or <em>false</em>
         </li>
         <br>
-        <li class="fragment">JavaScript has different types of conditionals with the most common being if/else</li>
+        <li class="fragment">JavaScript has different types of conditionals with the most common being <span style="color: #d0c675;">if/else</span></li>
       </ul>
     </section>
     <section>
       <h1>if/else</h1>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Used to execute code if a condition is true or false</li>
+        <li class="fragment">Statements used to execute code if a condition is true or false</li>
         <br>
-        <li class="fragment">if/else statements can be nested together to create more complex logic</li>
+        <li class="fragment">Can be nested together to create more complex logic</li>
         <br>
       </ul>
       <code class="fragment" style="width: 100%">
@@ -982,16 +1010,24 @@
       </code>
     </section>
     <section>
-      <h1>Else &amp; Else If</h1>
-      <br>
+      <h1>Else if</h1>
+      <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment"><span style="color: #c7ac7b;">else</span> (optional)</li>
+        <li class="fragment"><span style="color: #d0c675;">else if</span> lets you check another condition</li><br><br>
         <code class="fragment" style="width: 1500px">
           if (condition) {<br>
           &nbsp;&nbsp;// code to execute if condition is true<br>
+          } else if (anotherCondition) {<br>
+          &nbsp;&nbsp;// code to execute if the next condition is true<br>
           }
-        </code><br>
-        <li class="fragment"><span style="color: #c7ac7b;">Else if</span></li>
+        </code>
+      </ul>
+    </section>
+    <section>
+      <h1>Else</h1>
+      <br><br>
+      <ul style="list-style:disc; margin-left: 80px;">
+        <li><span style="color: #d0c675;">else</span> is the fallback when no earlier condition matches</li><br><br>
         <code class="fragment" style="width: 100%">
           if (condition) {<br>
           &nbsp;&nbsp;// code to execute if condition is true<br>
@@ -1001,32 +1037,34 @@
           &nbsp;&nbsp;// code to execute if condition is false<br>
           }
         </code>
-      </ul>
+        </ul>
     </section>
     <section>
-      <h1>Ternary Operators</h1>
+      <h1>Ternary</h1>
+      <h2 style="font-size: larger;">Operator</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Condition ? expr1 : expr2;</li>
+        <li class="fragment">A shorthand way to choose between two values based on a condition</li>
         <br>
         <li class="fragment">
-                          <span style="color: #c7ac7b;">
-                        {condition}
+                          <span style="color: #d0c675;">
+                        condition
                         </span>
           ?
-          <span style="color: #c7ac7b;">
-                {what happens if true}
+          <span style="color: #d0c675;">
+                value if true
               </span>
           :
-          <span style="color: #c7ac7b;">
-                {what happens if false}
+          <span style="color: #d0c675;">
+                value if false
               </span>
           ;
         </li>
         <br>
         <code class="fragment">
           const myAge = 18;<br>
-          const canDrink = myAge >= 21 ? 'Drink!' : 'Not yet!'; // Drink!
+          const canDrink = myAge >= 21 ? 'Drink!' : 'Not yet!';<br>
+          // 'Not yet!'
         </code>
       </ul>
     </section>
@@ -1040,13 +1078,13 @@
         <br>
         <li class="fragment">Can be used to print out the value of variables</li>
       </ul>
-      <!--
-        Show in javascript compiler:
-          const baskets = 5;
-          const balls = 13
-          const numberOfBallsPerBasket = balls / baskets;
-          console.log('how many balls per basket', numberOfBallsPerBasket);
-      -->
+      <code class="fragment">
+        const baskets = 5;<br>
+        const balls = 13;<br>
+        const numberOfBallsPerBasket = balls / baskets;<br><br>
+        console.log('Balls per basket:', numberOfBallsPerBasket);<br>
+        // Balls per basket: 2.6
+      </code>
     </section>
     <!-- Work slide 2: -->
     <section>
@@ -1056,52 +1094,51 @@
         Worksheet: <a href="https://bit.ly/cc-worksheets" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">https://bit.ly/cc-worksheets</a>
       </p>
       <br>
-      <!-- TODO | Change link monthly -->
       <p style="font-size: 7vh;">
-        Slides: <a href="https://bit.ly/cc-js-slides1" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">https://bit.ly/cc-js-slides1</a>
+        Slides: <a href="https://bit.ly/kcwit-JavaScript-slides" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">https://bit.ly/kcwit-JavaScript-slides</a>
       </p>
       <br>
       <!-- TODO | Change image monthly -->
       <img src="../images/shared/AnnieEasley2.png" alt="Annie Easley" height="600vh"/>
     </section>
-      <!-- Placeholder Slide -->
+  <!-- Placeholder Slide -->
    <section>
       <h1>🥃 The Liquor</h1>
       <h2 style="font-size: larger;">Intro to JavaScript</h2>
-      <br>
+      <br><br>
       <ul style="list-style: disc; margin-left: 80px;">
         <li style="color: #d0c675">Intro to JavaScript</li>
         <br>
-        <li style="color: #d0c675;">Foundations of JavaScript</li>
-        <br>
         <li style="color: #d0c675">Functions</li>
         <br>
-        <li >🍸 Arrays &amp; Loops</li>
+        <li>🍸 Arrays &amp; Loops</li>
+        <br>
+        <li style="color: #d0c675">Accessibility with JavaScript</li>
         <br>
         <li style="color: #d0c675">Intro to TypeScript</li>
-        <br>
-        <li style="color: #d0c675">Accessibility Things to Consider</li>
       </ul>
     </section>
     <!-- Arrays and Loops -->
     <section>
-      <h1>Arrays and Loops</h1>
-      <br><br>
+      <h1>Arrays</h1>
+      <h2 style="font-size: larger;">&amp; Loops</h2>
+      <br>
       <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
     </section>
     <section>
       <h1>Arrays</h1>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">A list of data items</li>
+        <li class="fragment">An array lets you store multiple values in a single variable</li>
         <br>
-        <li class="fragment">Items are separated by commas</li>
+        <li class="fragment">Array items are written inside square brackets and separated by commas</li>
         <br>
-        <li class="fragment">Items can be accessed by index</li>
+        <li class="fragment">Each item has a position called an index, starting at <span style="color:#d0c675">0</span></li>
       </ul>
     </section>
     <section>
-      <h1>Array Examples</h1>
+      <h1>Array</h1>
+      <h2 style="font-size: larger;">Examples</h2>
       <br><br>
       <code class="fragment">
         const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br><br>
@@ -1109,34 +1146,37 @@
       </code>
     </section>
     <section>
-      <h1>Create an Array</h1>
+      <h1>Create</h1>
+      <h2 style="font-size: larger;">an Array</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Use <span style="color:#d0c675">new Array()</span></li>
+        <li class="fragment">You can create an array with <span style="color:#d0c675">new Array()</span></li>
         <br>
-        <li class="fragment">Initialize with an empty string <span style="color:#d0c675">[]</span></li>
+        <li class="fragment">Most often, you will create an array with square brackets: <span style="color:#d0c675">[]</span></li>
         <br>
         <code class="fragment">
-          const cocktails = new Array();<br>
-          const drinksIveConsumed = [];
+          const cocktails = new Array(); // works<br>
+          const drinksIveConsumed = []; // most common
         </code>
       </ul>
     </section>
     <section>
-      <h1>Zero-based Index</h1>
+      <h1>Zero-based</h1>
+      <h2 style="font-size: larger;">Indexing</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Grab items in the array via their index</li>
+        <li class="fragment">You access items in an array by their index, or position</li>
         <br>
-        <li class="fragment">First item in an array is at index 0</li>
+        <li class="fragment">Because arrays are zero-based, the first item is at index <span style="color:#d0c675">0</span></li>
         <br>
-        <li class="fragment">Second item in an array is at index 1</li>
+        <li class="fragment">That means the second item is at index <span style="color:#d0c675">1</span></li>
         <br>
-        <li class="fragment">Last item is one less than the length of the array (number of items in the array)</li>
+        <li class="fragment">The last item is always at <span style="color:#d0c675">array.length - 1</span></li>
       </ul>
     </section>
     <section>
-      <h1>Array Example</h1>
+      <h1>Accessing</h1>
+      <h2 style="font-size: larger;">Items</h2>
       <br><br>
       <code class="fragment">
         const cocktails = ['Code on the Beach', 'jQuery Sour', 'Silicon Valley', 'JS on Rocks'];<br><br>
@@ -1149,60 +1189,69 @@
       </code>
     </section>
     <section>
-      <h1>Things you can do to an Array</h1>
+      <h1>What Can You Do</h1>
+      <h2 style="font-size: larger;">with an Array?</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Loop through an array</li>
+        <li class="fragment">Access items by index</li>
         <br>
-        <li class="fragment">Add / Remove items from the array</li>
+        <li class="fragment">Loop through all the items</li>
         <br>
-        <li class="fragment">And more...</li>
+        <li class="fragment">Add or remove items</li>
       </ul>
     </section>
     <section>
       <h1>Loops</h1>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">A way to repeat a block of code, as long as specified condition returns true</li>
+        <li class="fragment">A loop lets you repeat a block of code</li>
         <br>
-        <li class="fragment">JS supports multiple types of loops, but we'll cover the 'for' loop today</li>
+        <li class="fragment">JavaScript has several kinds of loops, but we will focus on the <span style="color:#d0c675">for</span> loop</li>
       </ul>
     </section>
     <section>
-      <h1>For Loops Structure</h1>
+      <h1>For Loop</h1>
+      <h2 style="font-size: larger;">Structure</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">Increment increases the value set in initialization</li>
+        <li class="fragment"><span style="color:#d0c675">initialization</span> sets the starting point</li>
         <br>
-        <li class="fragment">Eventually condition is false so that...</li>
+        <li class="fragment"><span style="color:#d0c675">condition</span> is checked before each loop</li>
         <br>
-        <li class="fragment">The loop stop executing</li>
-        <br>
-        <li class="fragment">(Don't get caught in an infinite loop!)</li>
+        <li class="fragment"><span style="color:#d0c675">increment</span> updates the value each time through the loop</li>
       </ul>
-      <br>
+    </section>
+    <section>
+      <br><br>
+          <ul style="list-style:disc; margin-left: 80px;">
+            <li>When the condition becomes false, the loop stops</li><br><br>
       <code class="fragment">
         for (initialization; condition; increment) {<br>
         &nbsp;&nbsp;// code to execute while condition is true<br>
         }
       </code>
+      </ul>
     </section>
     <section>
       <br><br>
       <img src="../images/IntroJS-session/InfiniteMeme.jpg" alt="Meme of infinite memes" height="800vh">
     </section>
     <section>
-      <h1>For Each</h1>
+      <h1>forEach()</h1>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">A loop that iterates through an array</li>
+        <li class="fragment"><span style="color:#d0c675">forEach()</span> is an array method for looping through array items</li>
         <br>
-        <li class="fragment">An array method that executes a given function once for each array element</li>
+        <li class="fragment">It runs a function once for each item in the array</li>
+        <br>
+        <li class="fragment">It is a convenient option when you want to work with every item in an array</li>
       </ul>
     </section>
     <section>
-      <h1>Loops Example</h1>
+      <h1>for Loop</h1>
+      <br><br>
       <code class="fragment">
+        // using a for loop<br>
         const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br>
         for (let i = 0; i < cocktails.length; i++) {<br>
         &nbsp;&nbsp;console.log(cocktails[i], i);<br>
@@ -1210,8 +1259,13 @@
         // Code on the Beach 0<br>
         // jQuery Sour 1
       </code>
-      <br>
+    </section>
+    <section>
+      <h1>forEach()</h1>
+      <br><br>
       <code class="fragment">
+        // using forEach()<br>
+        const cocktails = ['Code on the Beach', 'jQuery Sour'];<br><br>
         cocktails.forEach(function(cocktail, index) {<br>
         &nbsp;&nbsp;console.log(cocktail, index);<br>
         });<br><br>
@@ -1227,89 +1281,178 @@
         Worksheet: <a href="https://bit.ly/cc-worksheets" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">https://bit.ly/cc-worksheets</a>
       </p>
       <br>
-      <!-- TODO | Change link monthly -->
       <p style="font-size: 7vh;">
-        Slides: <a href="https://bit.ly/cc-js-slides1" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">https://bit.ly/cc-js-slides1</a>
+        Slides: <a href="https://bit.ly/kcwit-JavaScript-slides" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">https://bit.ly/kcwit-JavaScript-slides</a>
       </p>
       <br>
       <!-- TODO | Change image monthly -->
       <img src="../images/shared/AnnieEasley3.jpeg" alt="Annie Easley" height="600vh"/>
     </section>
-          <!-- Placeholder Slide -->
+  <!-- Placeholder Slide -->
    <section>
       <h1>🥃 The Liquor</h1>
       <h2 style="font-size: larger;">Intro to JavaScript</h2>
-      <br>
+      <br><br>
       <ul style="list-style: disc; margin-left: 80px;">
         <li style="color: #d0c675">Intro to JavaScript</li>
-        <br>
-        <li style="color: #d0c675;">Foundations of JavaScript</li>
         <br>
         <li style="color: #d0c675">Functions</li>
         <br>
         <li style="color: #d0c675">Arrays &amp; Loops</li>
         <br>
-        <li>🍸 Intro to TypeScript</li>
+        <li>🍸 Accessibility with JavaScript</li>
         <br>
-        <li style="color: #d0c675">Accessibility Things to Consider</li>
+        <li style="color: #d0c675">Intro to TypeScript</li>
       </ul>
     </section>
-    <!-- Typescript  -->
+    <!-- Accessibility section -->
     <section>
-      <h1>TypeScript</h1>
-      <br><br>
+      <h1>Accessibility</h1>
+      <h2 style="font-size: larger;">with JavaScript</h2>
+      <br>
       <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
     </section>
     <section>
-      <h1>TypeScript</h1>
+      <h1>Accessibility</h1>
+      <h2 style="font-size: larger;">with JavaScript</h2>
       <br><br>
       <ul style="list-style:disc; margin-left: 80px;">
-        <li class="fragment">TypeScript is a superset of JavaScript</li>
+        <li class="fragment">Why accessibility matters</li><br>
+      <ul style="list-style:disc; margin-left: 80px;">
+        <li class="fragment">JavaScript often controls menus, modals, tabs, and other interactive UI</li>
         <br>
-        <li class="fragment">It adds optional static typing</li>
-        <br>
-        <li class="fragment">Helps catch bugs before code runs</li>
-        <br>
-        <li class="fragment">Compiles down to regular JavaScript</li>
-        <br>
-        <li class="fragment">Types are either inferred or explicitly declared (with things like interfaces and types)</li>
+        <li class="fragment">That means JavaScript can improve accessibility or accidentally break it</li>
+      </ul>
       </ul>
     </section>
     <section>
-      <h1>TypeScript Example: Implicit</h1>
+      <br><br>
+      <ul style="list-style:disc; margin-left: 80px;">
+        <li>When adding interactivity, make sure the experience still works for keyboard and assistive technology users</li>
+      </ul>
+    </section>
+    <section>
+      <h1>Focus &amp;</h1>
+      <h2 style="font-size: larger;">Keyboard Access</h2>
+      <br><br>
+      <ul style="list-style:disc; margin-left: 80px;">
+        <li class="fragment">Use real interactive elements like <span style="color:#d0c675">&lt;button&gt;</span> whenever possible</li>
+        <br>
+        <li class="fragment">If JavaScript opens something like a menu or modal, move focus to the right place</li>
+        <br>
+        <li class="fragment">Users should be able to use interactive features without a mouse</li>
+      </ul>
+    </section>
+    <section>
+      <h1>Focus</h1>
+      <h2 style="font-size: larger;">Example</h2>
       <br><br>
       <code class="fragment">
-        let userName = 'Heidi'; // string<br>
-        userName = 28; // ERROR<br><br>
-        let isMentor: boolean = true;
+        openButton.addEventListener('click', function() {<br>
+        &nbsp;&nbsp;dialog.hidden = false;<br>
+        &nbsp;&nbsp;closeButton.focus();<br>
+        });
       </code>
     </section>
     <section>
-      <h1>TypeScript Example: Explicit</h1>
+      <h1>Dynamic</h1>
+      <h2 style="font-size: larger;">Updates</h2>
+      <br><br>
+      <ul style="list-style:disc; margin-left: 80px;">
+        <li class="fragment">If JavaScript changes content on the page, users need a clear way to notice that change</li>
+        <br>
+        <li class="fragment">This includes clear visual feedback and, when needed, helping screen readers announce updates</li>
+        <br>
+        <li class="fragment">Good accessible JavaScript preserves meaning, focus, and usability as the page changes</li>
+      </ul>
+    </section>
+      <!-- Placeholder Slide -->
+   <section>
+      <h1>🥃 The Liquor</h1>
+      <h2 style="font-size: larger;">Intro to JavaScript</h2>
+      <br><br>
+      <ul style="list-style: disc; margin-left: 80px;">
+        <li style="color: #d0c675">Intro to JavaScript</li>
+        <br>
+        <li style="color: #d0c675">Functions</li>
+        <br>
+        <li style="color: #d0c675">Arrays &amp; Loops</li>
+        <br>
+        <li style="color: #d0c675">Accessibility with JavaScript</li>
+        <br>
+        <li>🍸 Intro to TypeScript</li>
+      </ul>
+    </section>
+    <!-- TypeScript section  -->
+    <section>
+      <h1>Intro to</h1>
+      <h2 style="font-size: larger;">TypeScript</h2>
+      <br>
+      <img src="../images/shared/logo-large.png" alt="Coding &amp; Cocktails" id="intro-logo"/>
+    </section>
+    <section>
+      <br><br>
+      <img src="../images/IntroJS-session/TypeScriptRickMorty.jpg" alt="Rick & Morty TypeScript Joke" height="750vh">
+    </section>
+    <section>
+      <h1>Intro to</h1>
+      <h2 style="font-size: larger;">TypeScript</h2>
+      <br><br>
+      <ul style="list-style:disc; margin-left: 80px;">
+          <li class="fragment">TypeScript is JavaScript with extra type checking</li>
+        <br>
+          <li class="fragment">You can add types to variables, function parameters, and return values</li>
+        <br>
+          <li class="fragment">That helps catch certain mistakes before the code runs</li>
+      </ul>
+    </section>
+    <section>
+      <br><br>
+      <ul style="list-style:disc; margin-left: 80px;">
+          <li>You write TypeScript, but the browser still runs regular JavaScript</li>
+        <br>
+          <li class="fragment">TypeScript checks your code, then compiles it to JavaScript</li>
+          <br>
+          <li class="fragment">Types can be inferred automatically or written explicitly</li>
+      </ul>
+    </section>
+    <section>
+      <h1>Type</h1>
+      <h2 style="font-size: larger;">Inference</h2>
       <br><br>
       <code class="fragment">
-        let userName: string = 'Heidi';<br>
-        let age: number = 28;<br><br><br>
-        let isMentor: boolean = true;
+          let drinkName = 'Mojito'; // inferred as string<br>
+          drinkName = 42; // Error<br><br>
+          let isMocktail = true; // inferred as boolean
       </code>
     </section>
     <section>
-      <p>
-        💡 Think of TypeScript as JavaScript with superpowers!
-      </p>
+      <h1>Explicit</h1>
+      <h2 style="font-size: larger;">Types</h2>
+      <br><br>
+      <code class="fragment">
+          let drinkName: string = 'Mojito';<br>
+          let guestCount: number = 28;<br>
+          let isMocktail: boolean = true;
+      </code>
+    </section>
+    <section>
+      <h1>Why Use It?</h1>
+      <br><br>
+      <ul style="list-style:disc; margin-left: 80px;">
+          <li class="fragment">It helps catch type mistakes earlier</li>
+          <br>
+          <li class="fragment">It makes code easier to read because expected values are clearer</li>
+          <br>
+          <li class="fragment">It becomes especially helpful as projects grow</li>
+        </ul>
+    </section>
+    <section>
+      <h1 style="font-size: larger;">
+          Think of it as JavaScript <br> with type checking
+      </h1>
       <br><br>
       <img src="../images/IntroJS-session/typescript.png" alt="TypeScript logo in Batman signal" height="700vh">
-    </section>
-    <section>
-      <p>
-        💡 Or a pain in the butt...
-      </p>
-      <br><br>
-      <img src="../images/IntroJS-session/TypeScriptRickMorty.jpg" alt="Rick & Morty TypeScript Joke" height="600vh">
-      <br><br>
-       <p>
-        But it can be worth it for larger projects!
-      </p>
     </section>
      <section>
       <h1>Accessibility</h1>
@@ -1366,27 +1509,13 @@
 <br>
 <img src="../images/shared/Side Quest 2026.png" alt="Side Quest Info" height="900vh" >
 </section>
- <!--Slack Section-->
+ <!--Social Meida Section-->
 <section>
-  <h1>Join us on...</h1>
-  <a href="https://kcwit.slack.com" target="_blank" rel="noopener noreferrer">
-    <img src="../images/shared/slack-logo-white.png" alt="Slack" width="30%"/>
-  </a>
-  <br>
-  <br>
-  <p>🔗 <a href="https://kcwit.slack.com/archives/C0BGBKGG6" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">#codingandcocktails</a></p>
-  <br>
-    <ul style="list-style:disc; margin-left: 80px;">
-      <li>#kc-jobs</li>
-      <li>#generalchat</li>
-      <li>#events</li>
-      <li>#techtalks</li>
-      <li>#announcements</li>
-      <li>#interesting-times-initiative</li>
-    </ul>
-</section>
-<!-- TODO change graphic Monthly -->
-<!--Tech Talks Section-->
+  <br><br>
+    <img src="../images/shared/SocialMediaGraphic.png" alt="Social media " width="1500vh"/>
+</section> 
+<!-- TODO change graphic Monthly -->  
+<!--Tech Talks Section-->  
 <!-- <section>
 <h1>Tech Talks</h1>
 <br>
@@ -1405,8 +1534,8 @@
 <br>
 <p>For $5 off the next session use code:</p>
 <p>iLearnedJS</p><br>
-<!--TODO | CHANGE QR MONTHLY-->
-<img src="../images/shared/April2026JSQR.png" alt="QR code" height="500vh" />
+<!--TODO | CHANGE QR MONTHLY-->     
+<img src="../images/shared/ReactMay2026QR.png" alt="QR code" height="500vh" />
 <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; bottom: 100px; right: 0px;" height="300vh" />
 </section>
 
