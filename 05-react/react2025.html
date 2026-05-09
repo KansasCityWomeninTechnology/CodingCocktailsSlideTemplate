@@ -141,11 +141,11 @@
 <!-- Drink Section -->
 <section>
   <h1 style="font-size: larger;">Custom crafted cocktails & mocktails</h1>
-  <br><br>
-  <img src="../images/shared/treadmillRooster.gif" alt="Rooster wearing sunglasses on a treadmill" height="600vh" />
+  <br>
+  <img src="../images/shared/Kelly.jpg" alt="Image of guest bartender for the evening" height="600vh" />
   <br><br>
   <h2 style="font-size: larger;">Presented by:</h2>
-  <h3>Bev</h3>
+  <h3>Kelly</h3>
 </section>
 <!-- Agenda -->
 <section>
@@ -1017,24 +1017,16 @@
   </ul>
 </section>
 
-<!-- Handling User Interactions -->
+<!-- onClick: When a User Orders a Drink -->
 <section>
   <h1>Handling User Interactions</h1>
   <br>
-  <p class="fragment" style="font-size: 6vh;">Make your app interactive! 🎯</p>
-  <br>
-  <p class="fragment" style="font-size: 5vh;">Building a virtual cocktail bar...</p>
-</section>
-
-<!-- onClick: When a User Orders a Drink -->
-<section>
-  <h1>onClick: When a User Orders a Drink</h1>
+  <p>onClick: When a User Orders a Drink</p>
   <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">👆 Customer clicks "Make Mojito" button</li><br>
-    <li class="fragment">⚡ React responds instantly</li><br>
-    <li class="fragment">🍹 Function runs: "1 Mojito served!"</li><br>
-    <li class="fragment">📈 State updates automatically</li>
+    <li class="fragment">React listens for user interactions (clicks, typing, form submission)</li><br>
+    <li class="fragment">React responds instantly by running a function</li><br>
+    <li class="fragment">State updates automatically</li>
   </ul>
 </section>
 
@@ -1042,21 +1034,17 @@
 <section>
   <h2>onClick Example</h2>
   <pre><code data-trim data-noescape>
-    &lt;button
-      onClick={makeMojito}
-    &gt;
-      Make Mojito
-    &lt;/button&gt;
-
-
-
-    const makeMojito = () => {
-
+    const makeMojito = () =&gt; {
       setMojitoCount(mojitoCount + 1);
       console.log("1 Mojito served! 🍹");
+    };
 
-    }
+    &lt;button onClick={makeMojito}&gt;
+      Make Mojito
+    &lt;/button&gt;
   </code></pre>
+
+
   <br>
   <p class="fragment">👆 Click → Function runs → UI updates!</p>
 </section>
@@ -1066,9 +1054,9 @@
   <h1>onChange: Choosing Ingredients</h1>
   <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🥤 Customer selects "Pineapple Juice"</li><br>
-    <li class="fragment">📝 React listens for the change</li><br>
-    <li class="fragment">🔄 Updates selected ingredient</li><br>
+    <li class="fragment">noChange fires every time the selected option changes</li><br>
+    <li class="fragment">React listens for the change</li><br>
+    <li class="fragment">Updates the value of whatever the user selected</li><br>
     <li class="fragment">🍸 Like picking what to mix!</li>
   </ul>
 </section>
@@ -1078,8 +1066,8 @@
   <h2>onChange Example</h2>
   <pre><code data-trim data-noescape>
     &lt;select onChange={(e) => setJuice(e.target.value)}&gt;
-      &lt;option value="orange"&gt;Orange&lt;/option&gt;
-      &lt;option value="pineapple"&gt;Pineapple&lt;/option&gt;
+      &lt;option value="orange"&gt;Orange Juice&lt;/option&gt;
+      &lt;option value="pineapple"&gt;Pineapple Juice&lt;/option&gt;
     &lt;/select&gt;
   </code></pre>
   <br>
@@ -1091,10 +1079,10 @@
   <h1>Form Inputs: Custom Cocktail Orders</h1>
   <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">📝 Customer enters their name</li><br>
-    <li class="fragment">🍹 Selects what they want to order</li><br>
-    <li class="fragment">📤 Submits the complete order</li><br>
-    <li class="fragment">👨‍🍳 Order goes to the bartender!</li>
+    <li class="fragment">Customer enters their name</li><br>
+    <li class="fragment">Selects what they want to order</li><br>
+    <li class="fragment">Submits the complete order</li><br>
+    <li class="fragment">Order goes to the bartender!</li>
   </ul>
 </section>
 
@@ -1142,67 +1130,37 @@
   <h1>Why This is Powerful 🎉</h1>
   <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">👆 Respond to clicks (drink buttons)</li><br>
-    <li class="fragment">📝 Track changes (ingredient selections)</li><br>
-    <li class="fragment">📋 Handle full orders (submitting requests)</li><br>
-    <li class="fragment">✨ From showing things... to doing things!</li>
+    <li class="fragment">Respond to clicks (drink buttons)</li><br>
+    <li class="fragment">Track changes (ingredient selections)</li><br>
+    <li class="fragment">Handle full orders (submitting requests)</li><br>
+    <li class="fragment">From showing things... to doing things!</li>
   </ul>
 </section>
-
-        <section>
-          <h1>Handling Events</h1>
-          <p>& Conditional Rendering</p>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li>User interactions:</li>
-            <ul style="list-style: disc; margin-left: 80px;">
-              <li>onClick</li>
-            </ul><br><br>
-            <li>🍸 Conditional rendering:</li>
-            <ul style="list-style: disc; margin-left: 80px;">
-              <li>if statements</li>
-              <li>Ternary operators</li>
-              <li>Logical &&</li>
-            </ul>
-          </ul>
-        </section>
 
 <!-- Conditional Rendering Introduction -->
 <section>
   <h1>Conditional Rendering</h1>
   <br>
-  <p class="fragment" style="font-size: 6vh;">Show different things based on conditions</p>
   <br>
-  <p class="fragment" style="font-size: 5vh;">🍸 if, ternary operators, &&</p>
+   <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Used to show different things based on conditions</li><br>
+    <li class="fragment">React gives us three main tools for this</li><br>
+    <li class="fragment">🍸 if, ternary operators, &&</li><br>
+  </ul>
 </section>
 
-        <section>
-          <h1>Handling Events</h1>
-          <p>& Conditional Rendering</p>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li>User interactions:</li>
-            <ul style="list-style: disc; margin-left: 80px;">
-              <li>onClick</li>
-            </ul><br><br>
-            <li>🍸 Conditional rendering:</li>
-            <ul style="list-style: disc; margin-left: 80px;">
-              <li>🍸 if statements</li>
-              <li>Ternary operators</li>
-              <li>Logical &&</li>
-            </ul>
-          </ul>
-        </section>
 
 <!-- if Statement: Choose a Cocktail Based on Mood -->
 <section>
   <h1>if Statement: Choose by Mood</h1>
   <br>
+  <p class="fragment left-align">Use a regular if / else if / else when you have more than two possible outcomes:</p>
+  <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">😌 Relaxed → Mojito</li><br>
-    <li class="fragment">🎉 Fun → Margarita</li><br>
-    <li class="fragment">🤷 Default → Water</li><br>
-    <li class="fragment">🧠 Just like regular JavaScript!</li>
+    <li class="fragment">Relaxed → Mojito</li><br>
+    <li class="fragment">Fun → Margarita</li><br>
+    <li class="fragment">Default → Water</li><br>
+    <li class="fragment">Just like regular JavaScript!</li>
   </ul>
 </section>
 
@@ -1226,33 +1184,16 @@
   </code></pre>
 </section>
 
-        <section>
-          <h1>Handling Events</h1>
-          <p>& Conditional Rendering</p>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li>User interactions:</li>
-            <ul style="list-style: disc; margin-left: 80px;">
-              <li>onClick</li>
-            </ul><br><br>
-            <li>🍸 Conditional rendering:</li>
-            <ul style="list-style: disc; margin-left: 80px;">
-              <li>if statements</li>
-              <li>🍸 Ternary operators</li>
-              <li>Logical &&</li>
-            </ul>
-          </ul>
-        </section>
 
 <!-- Ternary Operator: Choose Between Two -->
 <section>
   <h1>Ternary Operator: Choose Between Two</h1>
   <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">❓ Yes/no questions</li><br>
-    <li class="fragment">🔞 "Are you 21 or older?"</li><br>
-    <li class="fragment">🍹 Yes → Margarita</li><br>
-    <li class="fragment">🥤 No → Mocktail</li>
+    <li class="fragment">Yes/no questions</li><br>
+    <li class="fragment">"Are you 21 or older?"</li><br>
+    <li class="fragment">Yes → Margarita</li><br>
+    <li class="fragment">No → Mocktail</li>
   </ul>
 </section>
 
@@ -1269,42 +1210,26 @@
     }
   </code></pre>
   <br>
-  <p class="fragment">💡 Quick one-line if...else!</p>
+  <p class="fragment">💡 Quick one-line if...else!</p><br>
+  <p class="fragment">The format is always: condition ? value if true : value if false</p>
 </section>
 
-        <section>
-          <h1>Handling Events</h1>
-          <p>& Conditional Rendering</p>
-          <br><br>
-          <ul style="list-style: disc; margin-left: 80px;">
-            <li>User interactions:</li>
-            <ul style="list-style: disc; margin-left: 80px;">
-              <li>onClick</li>
-            </ul><br><br>
-            <li>🍸 Conditional rendering:</li>
-            <ul style="list-style: disc; margin-left: 80px;">
-              <li>if statements</li>
-              <li>Ternary operators</li>
-              <li>🍸 Logical &&</li>
-            </ul>
-          </ul>
-        </section>
 
 <!-- Logical && Only Show If True -->
 <section>
   <h1>Logical && : Only Show If True</h1>
-  <br>
+  <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🎯 Show something only if condition is true</li><br>
-    <li class="fragment">🍹 Only show "Place Order" if drink selected</li><br>
-    <li class="fragment">❌ No drink = no button</li><br>
-    <li class="fragment">✅ Drink selected = show button</li>
+    <li class="fragment">Show something only if condition is true, no else needed</li><br>
+    <li class="fragment">Only show "Place Order" if drink selected</li><br>
+    <li class="fragment">No drink = no button</li><br>
+    <li class="fragment">Drink selected = show button</li>
   </ul>
 </section>
 
 <!-- Logical && Code Example -->
 <section>
-  <h2>Logical && Example</h2>
+  <h2>Logical && Example</h2><br>
   <pre><code data-trim data-noescape>
     const OrderButton = ({ selectedDrink }) => {
       return (
@@ -1319,52 +1244,39 @@
   <br>
   <p class="fragment">💡 If no drink, React shows nothing!</p>
 </section>
-
-<!-- All Together: Final Example -->
-<section>
-  <h1>All Together: Final Example</h1>
-  <br>
-  <p class="fragment" style="font-size: 5vh;">Combining if, ternary, and && operators</p>
-</section>
-
 <!-- Final Combined Code Example -->
-<section>
-  <h2>Complete Cocktail App</h2>
+ <section>
+  <h2>All together Example</h2>
   <pre><code data-trim data-noescape>
-    const CocktailApp = ({ mood, age, selectedDrink }) => {
-      let suggestion;
+  const CocktailApp = ({ mood, age, selectedDrink }) =&gt; {
+    let suggestion;
 
-      if (mood === 'relaxed') {
-        suggestion = 'Mojito';
-      } else if (mood === 'fun') {
-        suggestion = 'Margarita';
-      } else {
-        suggestion = 'Water';
-      }
+    if (mood === 'relaxed') { suggestion = 'Mojito'; }
+    else if (mood === 'fun') { suggestion = 'Margarita'; }
+    else { suggestion = 'Water'; }
 
-      return (
-        &lt;div&gt;
-          &lt;h1&gt;Cocktail Time!&lt;/h1&gt;
-          &lt;h2&gt;Suggestion: {suggestion}&lt;/h2&gt;
-          &lt;p&gt;{age >= 21 ? 'Adult Menu' : 'Mocktail Menu'}&lt;/p&gt;
-          {selectedDrink &&
-            &lt;button&gt;Place Order for {selectedDrink}&lt;/button&gt;
-          }
-        &lt;/div&gt;
-      );
-    }
-  </code></pre>
-</section>
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Welcome to the Cocktail Bar 🍸&lt;/h1&gt;
+        &lt;h2&gt;{age &gt;= 21 ? 'Adult Menu' : 'Mocktail Menu'}&lt;/h2&gt;
+        &lt;p&gt;Suggestion: {suggestion}&lt;/p&gt;
+        {selectedDrink &amp;&amp; &lt;button&gt;Order {selectedDrink}&lt;/button&gt;}
+      &lt;/div&gt;
+    );
+  };
+</code></pre>
+ </section>
+
 
 <!-- Summary of Conditional Rendering -->
 <section>
   <h1>Conditional Rendering Summary</h1>
   <br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">📋 if statements → Multiple conditions</li><br>
-    <li class="fragment">❓ Ternary → Two options (true/false)</li><br>
-    <li class="fragment">✅ && → Show only if true</li><br>
-    <li class="fragment">🎯 Perfect for dynamic UIs!</li>
+    <li class="fragment">if statements → Multiple conditions</li><br>
+    <li class="fragment">Ternary → Two options (true/false)</li><br>
+    <li class="fragment">&& → Show only if true</li><br>
+    <li class="fragment">Perfect for dynamic UIs!</li>
   </ul>
 </section>
 
@@ -1405,75 +1317,25 @@
             <li>JSX & Components</li><br>
             <li>Props vs State</li><br>
             <li>Event Handling & Conditional Rendering</li><br>
-            <li style="color: orange; font-weight: bold;">🍹 Best Practices & Component Organization</li><br>
+            <li style="color: #d0c675">🍹 Best Practices & Component Organization</li><br>
           </ul>
         </section>
-<!-- Topic List Slide -->
-<section>
-  <h1>Best Practices</h1>
-  <p>& Component Organization</p>
-  <br><br>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🍹 Organized bottles = organized files</li><br>
-    <li class="fragment">📋 Reusable recipes = reusable components</li><br>
-    <li class="fragment">🧹 Clean workspace = easier to maintain</li><br>
-    <li class="fragment">👥 Better for team collaboration</li>
-  </ul>
-</section>
 
-<!-- Progress Slide: Section 5 -->
-
-
-<!-- Small, Reusable Components Introduction -->
 <section>
   <h1>Small, Reusable Components</h1>
-  <br>
-  <p class="fragment" style="font-size: 6vh;">Think like a bartender! 🍸</p>
-  <br>
-  <p class="fragment" style="font-size: 5vh;">Don't make every drink from scratch...</p>
-</section>
-
-<!-- Cocktail Components Analogy -->
-<section>
-  <h1>Cocktail Components</h1>
-  <br>
+  <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🍋 LimeSqueeze()</li><br>
-    <li class="fragment">🍃 MintLeaves()</li><br>
-    <li class="fragment">🧊 AddIce()</li><br>
-    <li class="fragment">🥃 PourRum()</li>
+    <li class="fragment">Think like a bartender!</li><br>
+    <li class="fragment">Every component should have one clear job</li><br>
+    <li class="fragment">Don't make every drink from scratch</li><br>
   </ul>
   <br>
-  <p class="fragment" style="font-size: 5vh;">Combine these into any cocktail! ✨</p>
+  <p class="fragment">🎯 The goal is small, reusable pieces that can be dropped anywhere</p>
 </section>
 
-<!-- Bad Example: Giant Component -->
+<!-- Small Components -->
 <section>
-  <h1>❌ Bad: One Giant Component</h1>
-  <pre><code data-trim data-noescape>
-    const Mojito = () => {
-      return (
-        &lt;div className="card"&gt;
-          &lt;h2&gt;Mojito&lt;/h2&gt;
-          &lt;p&gt;Minty, fresh cocktail&lt;/p&gt;
-          &lt;img src="mojito.png" /&gt;
-          &lt;ul&gt;
-            &lt;li&gt;Mint&lt;/li&gt;
-            &lt;li&gt;Lime&lt;/li&gt;
-            &lt;li&gt;Rum&lt;/li&gt;
-            &lt;li&gt;Sugar&lt;/li&gt;
-            &lt;li&gt;Soda&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      );
-    }
-  </code></pre>
-  <p class="fragment" style="color: red;">😞 Hard to read, can't reuse parts</p>
-</section>
-
-<!-- Good Example: Small Components -->
-<section>
-  <h1>✅ Good: Small, Reusable Components</h1>
+  <h1>Example</h1>
   <pre><code data-trim data-noescape>
     const DrinkImage = ({ src }) => {
       return &lt;img src={src} alt="cocktail" /&gt;;
@@ -1487,200 +1349,68 @@
       );
     }
   </code></pre>
-  <p class="fragment" style="color: green;">😊 Now reusable in any cocktail!</p>
-</section>
-
-<!-- Benefits of Small Components -->
-<section>
-  <h1>Benefits of Small Components</h1>
-  <br>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🎯 Focus on One Job</li><br>
-    <li class="fragment">♻️ Reusable everywhere</li><br>
-    <li class="fragment">🧹 Cleaner, easier to read</li><br>
-    <li class="fragment">🧪 Easier to test</li>
-  </ul>
+  <p class="fragment">😊 Reusable in any cocktail!</p>
 </section>
 
 <!-- Separation of Concerns Introduction -->
 <section>
   <h1>Separation of Concerns (SoC)</h1>
   <br>
-  <p class="fragment" style="font-size: 6vh;">Keep different responsibilities in different places</p>
+  <p class="fragment">Keep different responsibilities in different places</p>
   <br>
-  <p class="fragment" style="font-size: 5vh;">🍹 Like a well-organized bar team!</p>
-</section>
-
-<!-- Bar Team Analogy -->
-<section>
-  <h1>A Bar Team</h1>
-  <br>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🍹 Bartender → Mixes the drinks</li><br>
-    <li class="fragment">🚶 Waiter → Brings drinks to table</li><br>
-    <li class="fragment">🎨 Designer → Decorates the drinks</li><br>
-    <li class="fragment">👩‍💼 Manager → Handles menu/pricing</li>
+    <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment"><span style="color: #d0c675">UI/Presentational:</span> displays data, no logic</li><br>
+    <li class="fragment"><span style="color: #d0c675">Logic/Container:</span> manages state, fetches data</li><br>
+    <li class="fragment"><span style="color: #d0c675">Styling:</span> visual appearance .css file</li>
   </ul>
   <br>
-  <p class="fragment">💡 Everyone has their own job!</p>
-</section>
-
-<!-- SoC Bad Example -->
-<section>
-  <h1>❌ Bad: All-in-One (No SoC)</h1>
-  <pre><code data-trim data-noescape>
-    const MojitoCard = () => {
-      const ingredients = ['Mint', 'Lime', 'Rum'];
-
-      return (
-        &lt;div style={{ backgroundColor: 'green', padding: '20px' }}&gt;
-          &lt;h2&gt;Mojito&lt;/h2&gt;
-          &lt;ul&gt;{ingredients.map(i => &lt;li&gt;{i}&lt;/li&gt;)}&lt;/ul&gt;
-          &lt;button onClick={() => alert('Added!')}&gt;Order&lt;/button&gt;
-        &lt;/div&gt;
-      );
-    }
-  </code></pre>
-  <p class="fragment" style="color: red;">😞 Mixing data, UI, style, and logic!</p>
-</section>
-
-<!-- SoC Good Example -->
-<section>
-  <h1>✅ Good: Separated Concerns</h1>
-  <pre><code data-trim data-noescape>
-    // DrinkInfo.js - UI only
-    const DrinkInfo = ({ name, ingredients }) => {
-      return (
-        &lt;&gt;
-          &lt;h2&gt;{name}&lt;/h2&gt;
-          &lt;ul&gt;{ingredients.map(i => &lt;li&gt;{i}&lt;/li&gt;)}&lt;/ul&gt;
-        &lt;/&gt;
-      );
-    }
-
-    // DrinkCard.css - styling separate
-    .card { background-color: #e0ffe0; padding: 20px; }
-  </code></pre>
-  <p class="fragment" style="color: green;">😊 Clear structure and roles!</p>
 </section>
 
 <!-- File Structure Introduction -->
 <section>
   <h1>File Structure Recommendations</h1>
-  <br>
-  <p class="fragment" style="font-size: 6vh;">Organize like a professional bar! 🏪</p>
-  <br>
-  <p class="fragment" style="font-size: 5vh;">Each component gets its own "station"</p>
+  <br><br>
+  <p class="fragment">Organize like a professional bar! 🏪</p>
+  <br><br>
+  <p class="fragment">Each component gets its own "station"</p>
 </section>
 
-<!-- Recommended File Structure -->
 <section>
-  <h1>Recommended Structure</h1>
-</section>
-        <section>
   <pre><code data-trim data-noescape>
     /src
     │
     ├── /components
-    │   ├── CocktailCard/
-    │   │   ├── CocktailCard.js
-    │   │   ├── CocktailCard.module.css
-    │   │   └── index.js
-    │   └── DrinkList/
-    │       ├── DrinkList.js
+    │   ├── /CocktailCard
+    │   │   ├── CocktailCard.jsx       ← Component logic + JSX
+    │   │   ├── CocktailCard.module.css ← Styles scoped to this component
+    │   │   └── index.js               ← Clean export
+    │   │
+    │   └── /DrinkList
+    │       ├── DrinkList.jsx
     │       └── index.js
     │
     ├── /pages
-    │   ├── Home.js
-    │   └── About.js
+    │   ├── Home.jsx
+    │   └── About.jsx
     │
-    └── App.js
+    └── App.jsx                        ← Root component
   </code></pre>
 </section>
 
-<!-- Component Types Introduction -->
-<section>
-  <h1>Component Types</h1>
-  <br>
-  <p class="fragment" style="font-size: 6vh;">Two main types in your bar! 🍸</p>
-  <br>
-  <div style="display: flex; justify-content: space-around;">
-    <div class="fragment">
-      <h3>📺 Presentational</h3>
-      <p>(Display only)</p>
-    </div>
-    <div class="fragment">
-      <h3>🧠 Container</h3>
-      <p>(Logic & data)</p>
-    </div>
-  </div>
-</section>
 
-<!-- Presentational Components -->
+
 <section>
-  <h1>📺 Presentational Components</h1>
-  <br>
+  <h1>React Best Practices</h1>
+  <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🎨 Display-only (like a pretty glass)</li><br>
-    <li class="fragment">📋 Shows drink info but no logic</li><br>
-    <li class="fragment">🔧 Example: CocktailCard, DrinkImage</li><br>
-  </ul>
-  </section>
-        <section>
-  <pre><code data-trim data-noescape>
-    const CocktailCard = ({ name, description }) => {
-      return (
-        &lt;div&gt;
-          &lt;h2&gt;{name}&lt;/h2&gt;
-          &lt;p&gt;{description}&lt;/p&gt;
-        &lt;/div&gt;
-      );
-    }
-  </code></pre>
-</section>
-
-<!-- Container Components -->
-<section>
-  <h1>🧠 Container Components</h1>
-  <br>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🏗️ Hold logic, fetch data, manage state</li><br>
-    <li class="fragment">🍹 Like the bartender who makes drinks</li><br>
-    <li class="fragment">📋 Example: DrinkList fetches & renders cards</li><br>
-  </ul>
-  </section>
-        <section>
-  <pre><code data-trim data-noescape>
-    const DrinkList = () => {
-      const [cocktails, setCocktails] = useState([]);
-
-      useEffect(() => {
-        setCocktails([{ name: 'Mojito', desc: 'Minty' }]);
-      }, []);
-
-      return (
-        &lt;div&gt;
-          {cocktails.map(drink =>
-            &lt;CocktailCard key={drink.name} {...drink} /&gt;
-          )}
-        &lt;/div&gt;
-      );
-    }
-  </code></pre>
-</section>
-
-<!-- Best Practices Summary -->
-<section>
-  <h1>Best Practices Summary 🏆</h1>
-  <br>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🧩 Keep components small & focused</li><br>
-    <li class="fragment">♻️ Make components reusable with props</li><br>
-    <li class="fragment">📁 Organize files like a professional bar</li><br>
-    <li class="fragment">🎯 Separate concerns (UI, logic, style)</li>
+    <li class="fragment">Organize components in folders</li><br>
+    <li class="fragment">Keep components small and focused</li><br>
+    <li class="fragment">Separation of concerns: UI, logic, and state</li><br>
+    <li class="fragment">Reuse components with props</li><br>
+    <li class="fragment">Add comments and meaningful names</li><br>
+    <li class="fragment">Keep JSX clean and readable</li>
   </ul>
 </section>
-
 <!-- Success GIF -->
 <section>
   <br><br>
@@ -1688,27 +1418,16 @@
 </section>
 
  <!-- Best Practices -->
-<section>
-  <h1>React Best Practices</h1>
-  <br><br>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">📁 Organize components in folders</li><br>
-    <li class="fragment">🔁 Keep components small and focused</li><br>
-    <li class="fragment">🔍 Separation of concerns: UI, logic, and state</li><br>
-    <li class="fragment">♻️ Reuse components with props</li><br>
-    <li class="fragment">💬 Add comments and meaningful names</li><br>
-    <li class="fragment">🧼 Keep JSX clean and readable</li>
-  </ul>
-</section>
+
  <!-- Why React matters to you -->
  <section>
   <h1>Why React Matters to YOU</h1>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">🖥️📱  Build your own blog, portfolio, or app</li><br>
-    <li class="fragment">📈🧠 In-demand skill in tech</li><br>
-    <li class="fragment">🌱👩‍💻  Grow your confidence as a developer</li><br>
-    <li class="fragment">🌍🗓️  Build real-world projects from day one</li>
+    <li class="fragment">🖥️ Build your own blog, portfolio, or app</li><br>
+    <li class="fragment">📈 In-demand skill in tech</li><br>
+    <li class="fragment">🌱 Grow your confidence as a developer</li><br>
+    <li class="fragment">🌍 Build real-world projects from day one</li>
   </ul>
 </section>
 <!--Celebration Section-->
@@ -1729,64 +1448,38 @@
       <li><a href="https://www.frontendmentor.io/challenges" target="_blank">Frontend Mentor – React Challenges</a> (Free and paid options)</li>
     </ul>
     </section>
-<!--Slack Section-->
+<!--Side Quest Section-->
 <section>
-  <h1>Join us on...</h1>
-  <a href="https://kcwit.slack.com" target="_blank">
-    <img src="../images/shared/slack-logo-white.png" alt="Slack" width="30%"/>
-  </a>
-  <br>
-  <br>
-  <p>#codingandcocktails</p>
-  <br>
-    <ul style="list-style:disc; margin-left: 80px;">
-      <li>#kc-jobs</li>
-      <li>#generalchat</li>
-      <li>#events</li>
-      <li>#techtalks</li>
-      <li>#announcements</li>
-      <li>#interesting-times-initiative</li>
-    </ul>
+<br>
+<img src="../images/shared/Side Quest 2026.png" alt="Side Quest Info" height="900vh" >
 </section>
-<!--Tech Talks Section-->
-<!-- TODO change graphic -->
-<!--<section>-->
-<!--<h1>Tech Talks</h1>-->
-<!--<br><br>-->
-<!--  <img src="../images/shared/TTSummerSeries.png" alt="Tech Talks event" height="800vh">Add commentMore actions-->
-<!--</section>-->
-<!--        <section>-->
-<!--          <h1>June</h1>-->
-<!--          <br><br>-->
-<!--          <img src="../images/shared/TTJuneHelloWorld.png" alt="Tech Talks event" height="500vh"><br>-->
-<!--          <img class="fragment" src="../images/shared/TTJuneHeadshot.png" alt="Tech Talks event" height="250vh">-->
-<!--          <img class="fragment" src="../images/shared/TTJuneMockInterview.png" alt="Tech Talks event" height="250vh">-->
-<!--          <img class="fragment" src="../images/shared/TTJuneResumeWS.png" alt="Tech Talks event" height="250vh">-->
-<!--        </section>-->
-<!--        <section>-->
-<!--          <h1>July</h1>-->
-<!--          <br><br>-->
-<!--          <img src="../images/shared/TTJulyNowWhat.png" alt="Tech Talks event" height="800vh">-->
-<!--        </section>-->
-<!--        <section>-->
-<!--          <h1>August</h1>-->
-<!--          <br><br>-->
-<!--          <img src="../images/shared/TTAugLoggingOff.png" alt="Tech Talks event" height="800vh">-->
-<!--</section>-->
-<!-- #NESSA SPEAKER NOTE:
- Mention that we are introducing advanced worksheets for the next series flight, so they can still participate and make sure they choose the advanced worksheet option. -->
-<!-- Signature Flight Slide -->
+ <!--Social Meida Section-->
 <section>
-  <h1>🗓️  Save The Dates</h1>
+  <br><br>
+    <img src="../images/shared/SocialMediaGraphic.png" alt="Social media " width="1500vh"/>
+</section>
+<!-- TODO change graphic Monthly -->
+<!--Tech Talks Section-->
+<!-- <section>
+<h1>Tech Talks</h1>
+<br>
+  <img src="../images/shared/Feb Night Out.png" alt="Tech Talks event" height="800vh">
+</section> -->
+<!-- Save The Dates -->
+ <section>
+  <h1>Save The Dates</h1>
   <br>
-  <img src="../images/REACT-session/The Signature Flight Menu - 2025 (Presentation).png" alt="2025 Coding & Cocktails Signature Flight Series menu" height="800vh"></img>
+  <img src="../images/shared/cocktailsClasses2026.png" alt="Graphic with list of 2026 Coding & Cocktails classes" height="850vh" width="1300vw"></img>
  </section>
 <!-- Next Month's Event Section  -->
 <section>
-<h1>Register For Next Month's Event</h1>
-<br><br>
+<h1>Register For</h1>
+<h2 style="font-size: larger;">Next Month's Event</h2>
+<br>
+<p>For $5 off the next session use code:</p>
+<p>iLearnedJS</p><br>
 <!--TODO | CHANGE QR MONTHLY-->
-<img src="../images/REACT-session/2025-11%20QR%20Code.png" alt="QR code" height="50%" />
+<img src="../images/shared/ReactMay2026QR.png" alt="QR code" height="500vh" />
 <img src="../images/shared/logo.png" alt="Coding &amp; Cocktails" style="position: absolute; bottom: 100px; right: 0px;" height="300vh" />
 </section>
 </div>
