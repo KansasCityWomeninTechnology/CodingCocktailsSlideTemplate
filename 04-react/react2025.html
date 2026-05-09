@@ -173,9 +173,9 @@
       <img class="fragment" src="../images/REACT-session/LeonaLewisClapping.gif" alt="Leona Lewis in pink dress clapping" height="450vh" />
 </section>
 <!-- Spotlight Series Section -->
- <section>
+ <!-- <section>
   <img src="../images/shared/Spotlight-Jessica.png" alt="Leadership spotlight graphic" height="1000vh">
- </section>
+ </section> -->
 <section>
   <h1>Cheers Lady Devs!</h1>
   <br><br>
@@ -206,62 +206,21 @@
   <h1>What is React?</h1>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">Created by Facebook, used by Instagram, Airbnb, Netflix</li><br>
+    <li class="fragment">Created by Facebook in 2013, used by Instagram, Airbnb, Netflix</li><br>
     <li class="fragment">Focuses on building small, reusable components</li><br>
     <li class="fragment">One of the most in demand frontend skills in the job market today</li><br>
   </ul>
  </section>
  <section>
   <h1>Library or Framework? </h1>
-  <br>
-  <p>Here's the difference:</p>
-  <br>
-  <p class="left-align bot-margin" style="margin-bottom: 35px; color: #d0c675;">Library:</p>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">A collection of pre-written code you can pull from when you need it</li><br>
-    <li class="fragment">You're in control, developers devide when and how to call it</li><br>
-    <li class="fragment">Focused on solving a specific, narrow problem</li>
-  </ul>
- </section>
- <section>
- <h1>Library or Framework? </h1>
-  <br>
-  <p class="left-align bot-margin" style="margin-bottom: 35px; color: #d0c675;">Framework:</p>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">Provides a skeleton or structure for your application</li><br>
-    <li class="fragment">Inverts control: the framework calls your code (“Inversion of Control”)</li><br>
-    <li class="fragment">“Opinionated”: it tells you how things should be built, limiting flexibility to ensure consistency</li>
-  </ul>
- </section>
- <section>
-  <h1>Which one is React?</h1>
-  <br>
-  <br>
-<p class="fragment left-align bot-margin" style="margin-bottom: 35px;">Core React (react + react-dom):</p>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">Technically, it's a JavaScript library</li><br>
-    <li class="fragment">It focuses specifically on building user interfaces</li>
-<!--    True if only using for components, state, useEffect, ect -->
-  </ul>
- </section>
- <section>
-  <h1>In Practice:</h1>
+  <br><br>
+  <p class="fragment">React is technically a JavaScript library</p>
   <br><br>
   <ul style="list-style: disc; margin-left: 80px;">
-<!--    As soon as React structures your architecture, it's a framework -->
-    <li class="fragment">React is often used as a framework because it shapes how you build UIs with components and a declarative style</li><br>
-    <li class="fragment">When you add tools from the React ecosystem (React Router, Redux, Vite, etc.) it becomes a full framework-like experience</li>
+    <li class="fragment">Focuses on one specific job, building interfaces</li><br>
+    <li class="fragment">In practice, it shapes how to structure your app</li><br>
+    <li class="fragment">So it really feels more like a framework</li>
   </ul>
- </section>
- <section>
-  <h1>tldr;</h1>
-  <br><br>
-  <ul style="list-style: disc; margin-left: 80px;">
-    <li class="fragment">On its own => Library</li><br>
-    <li class="fragment">In practice => Framework</li><br>
-    <li class="fragment">End of the day: doesn’t really matter</li>
-  </ul><br><br>
-  <img class="fragment" src="../images/REACT-session/JonahHillOkay.gif" alt="Jonah Hill saying okay" height="400vh" />
  </section>
  <!-- Why is React popular section -->
  <section>
@@ -364,10 +323,10 @@
   </ul><br><br>
   <img class="fragment" src="../images/REACT-session/SuperGirlSpeed.gif" alt="Super Girl running through a field at super speed" height="400vh">
 </section>
-<section>
+<!-- <section>
   <br><br>
   <img src="../images/REACT-session/dom-model.svg" alt="Virtual DOM model" height="900vh">
-</section>
+</section> -->
 <!-- Declarative UI -->
 <section>
   <h1>Declarative UI</h1>
@@ -383,6 +342,40 @@
   <br><br>
   <img src="../images/REACT-session/ZoePerrySoundSoEasy.gif" alt="Zoe Perry from Young Sheldon saying you make it sound so easy" height="800vh">
 </section>
+<section>
+  <h1>Anatamoy of a React File</h1>
+  <br><br>
+  <p class="fragment ">Every file follows the same three-part pattern</p>
+  <br><br>
+  <ul style="list-style: disc; margin-left: 80px;">
+    <li class="fragment">Imports at the very top</li><br>
+    <li class="fragment">The component in the middle </li><br>
+    <li class="fragment">The export at the bottom</li><br>
+  </ul>
+  <br>
+</section>
+<section>
+  <h1>Example</h1>
+  <pre><code data-trim data-noescape>
+// 1. IMPORTS — bring in what you need at the top
+import { useState, useEffect } from 'react';
+
+// 2. COMPONENT — your function
+const MyComponent = () =&gt; {
+  const [count, setCount] = useState(0);
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+// 3. EXPORT — make it available to the rest of your app
+export default MyComponent;
+</code></pre>
+</section>
+
+
  <!-- Work slide 1: -->
  <section>
   <h1 style="font-size: 8vh;">Work Time</h1>
@@ -1334,7 +1327,7 @@
 </section>
 
 <!-- Small Components -->
-<section>
+<!-- <section>
   <h1>Example</h1>
   <pre><code data-trim data-noescape>
     const DrinkImage = ({ src }) => {
@@ -1350,7 +1343,7 @@
     }
   </code></pre>
   <p class="fragment">😊 Reusable in any cocktail!</p>
-</section>
+</section> -->
 
 <!-- Separation of Concerns Introduction -->
 <section>
